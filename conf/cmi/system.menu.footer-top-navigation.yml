@@ -1,0 +1,10 @@
+uuid: ae4cf4be-a01b-4b0a-abf4-5e8fe25f16be
+langcode: und
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2hOSHqwYGp6jDaE7507hPlKjTfWiJ2IsbTLwSq6Jnek
+id: footer-top-navigation
+label: 'Footer - Top navigation'
+description: 'Top navigation for footer block.'
+locked: false

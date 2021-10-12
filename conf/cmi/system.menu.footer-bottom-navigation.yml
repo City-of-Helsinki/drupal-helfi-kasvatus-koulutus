@@ -1,0 +1,10 @@
+uuid: 72cb6ded-02b4-4394-b5d1-c6e18ab43ce0
+langcode: und
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dxUVACRvWlm9zM9csaLa-oBuQp_ZF2Cmgon1RJFT-Lk
+id: footer-bottom-navigation
+label: 'Footer - Bottom navigation'
+description: 'Bottom navigation for footer block.'
+locked: false

@@ -1,0 +1,17 @@
+uuid: 1bf46f84-1e82-4526-a736-229cc2e9674a
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+_core:
+  default_config_hash: mj0UGriEycIq3yk8tOz5QwjNr-QhtuKTixoBS2KImPU
+id: gallery
+label: Gallery
+icon_uuid: null
+icon_default: null
+description: 'Using this paragraph you can create galleries from multiple images.'
+behavior_plugins: {  }

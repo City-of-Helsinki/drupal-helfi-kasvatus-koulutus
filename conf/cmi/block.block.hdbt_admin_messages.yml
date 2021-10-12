@@ -1,0 +1,22 @@
+uuid: 63645c5a-9d88-4e42-bf36-7e30c83cd652
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hdbt_admin
+_core:
+  default_config_hash: lXicDCw1mJycXa-lVLg25akK5VJta8Mu9I503mW9uzg
+id: hdbt_admin_messages
+theme: hdbt_admin
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

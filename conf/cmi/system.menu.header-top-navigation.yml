@@ -1,0 +1,10 @@
+uuid: 43672fba-9407-48fc-8727-1f96a3fcb09e
+langcode: und
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wpvqfoJgIl4FK_ivAmaQ2XQBc7DDHtj3nXsfJKE9gTM
+id: header-top-navigation
+label: 'Header - Top navigation'
+description: 'Navigation that is located in the top part of header.'
+locked: false
