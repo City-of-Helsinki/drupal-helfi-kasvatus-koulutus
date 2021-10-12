@@ -1,6 +1,4 @@
-# Your Drupal 9 project
-
-Description of your project.
+# City of Helsinki - KASKO Drupal 9 project
 
 ## Environments
 
