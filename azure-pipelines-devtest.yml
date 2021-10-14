@@ -1,5 +1,3 @@
-# File: drupal-helfi/azure-pipelines.yml
-
 # Continuous integration (CI) triggers cause a pipeline to run whenever you push
 # an update to the specified branches or you push specified tags.
 trigger:
@@ -24,13 +22,26 @@ pr: none
 # By default, use self-hosted agents
 pool: Default
 
+# Image tag name for Fuse projects
+#parameters:
+#- name: imagetag
+#  displayName: Image tag to be built and/or deployed
+#  type: string
+#  default: latest
+
 resources:
   repositories:
   # Azure DevOps repository
-  - repository: drupal-REPLACEME
+  - repository: kasvatus-koulutus-pipelines
     type: git
-    # project/repository
-    name: drupal-helfi/drupal-REPLACEME
+    # Azure DevOps project/repository
+    name: kasvatus-koulutus/kasvatus-koulutus-pipelines
 
 extends:
-  template: azure-pipelines-drupal-master.yml@drupal-REPLACEME
+  # Filename in Azure DevOps Repository (note possible -ui or -api)
+  # Django example: azure-pipelines-kasvatus-koulutus-api-master.yml
+  # Drupal example: azure-pipelines-drupal-master.yml
+  template: azure-pipelines-kasvatus-koulutus-devtest.yml@kasvatus-koulutus-pipelines
+  # Image tag name for Fuse projects
+  #parameters:
+    #imagetag: ${{ parameters.imagetag }}
