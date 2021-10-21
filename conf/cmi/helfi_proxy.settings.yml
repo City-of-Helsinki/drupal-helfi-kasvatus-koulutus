@@ -1,0 +1,6 @@
+asset_path: kasko-assets
+prefixes:
+  en: kasko-en
+  fi: kasko-fi
+  sv: kasko-sv
+  ru: kasko-ru
