@@ -10,7 +10,17 @@ id: paragraph.content_liftup.default
 targetEntityType: paragraph
 bundle: content_liftup
 mode: default
-content: {  }
+content:
+  field_content_liftup_unit:
+    region: content
+    settings:
+      match_limit: 10
+      match_operator: CONTAINS
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    weight: 2
 hidden:
   created: true
   status: true
