@@ -2,8 +2,8 @@
 
 $config['helfi_proxy.settings']['asset_path'] = 'dev-kasko-assets';
 $config['helfi_proxy.settings']['prefixes'] = [
-  'en' => 'dev-kasko-en',
-  'fi' => 'dev-kasko-fi',
-  'sv' => 'dev-kasko-sv',
-  'ru' => 'dev-kasko-ru',
+  'en' => 'dev-childhood-and-education',
+  'fi' => 'dev-kasvatus-ja-koulutus',
+  'sv' => 'dev-fostran-och-utbildning',
+  'ru' => 'dev-childhood-and-education',
 ];
