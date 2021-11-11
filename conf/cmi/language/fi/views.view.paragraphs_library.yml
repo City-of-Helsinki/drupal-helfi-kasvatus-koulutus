@@ -27,6 +27,7 @@ display:
           label: Tyyppi
           separator: ', '
         paragraphs__target_id:
+          label: Lohkot
           separator: ', '
         langcode:
           label: Kieli
