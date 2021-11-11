@@ -1,0 +1,13 @@
+uuid: 67000b76-346d-4537-84ee-d7644497dda1
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+_core:
+  default_config_hash: 3Lx3Il7lVjmEiK4khzhaMP5jqpx3Mhx5GFwWkHuR4Sc
+id: tpr_errand_service_unpublish_action
+label: 'Unpublish errand service'
+type: tpr_errand_service
+plugin: 'entity:unpublish_action:tpr_errand_service'
+configuration: {  }

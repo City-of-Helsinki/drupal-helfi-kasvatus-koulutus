@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.content_liftup.field_content_liftup_unit
     - paragraphs.paragraphs_type.content_liftup
 _core:
   default_config_hash: YJo-TIdvyPiJJX4wEnY5rLCoDcpAVZD4KftOr6BEyAI
@@ -10,7 +11,17 @@ id: paragraph.content_liftup.default
 targetEntityType: paragraph
 bundle: content_liftup
 mode: default
-content: {  }
+content:
+  field_content_liftup_unit:
+    region: content
+    settings:
+      match_limit: 10
+      match_operator: CONTAINS
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    weight: 1
 hidden:
   created: true
   status: true
