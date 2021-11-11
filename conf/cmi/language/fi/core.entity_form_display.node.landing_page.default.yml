@@ -2,8 +2,8 @@ content:
   field_content:
     settings:
       title: Lohko
-      title_plural: Paragraphs
+      title_plural: Lohkot
   field_hero:
     settings:
       title: Lohko
-      title_plural: Paragraphs
+      title_plural: Lohkot

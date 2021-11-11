@@ -1,4 +1,4 @@
-label: 'Paragraphs library'
+label: 'Uudelleenkäytettävät lohkot'
 display:
   default:
     display_title: Oletus
@@ -27,7 +27,7 @@ display:
           label: Tyyppi
           separator: ', '
         paragraphs__target_id:
-          label: Paragraphs
+          label: Lohkot
           separator: ', '
         langcode:
           label: Kieli
@@ -49,6 +49,6 @@ display:
         type:
           expose:
             label: Tyyppi
-      title: 'Paragraphs library'
+      title: 'Uudelleenkäytettävät lohkot'
   page_1:
     display_title: Sivu

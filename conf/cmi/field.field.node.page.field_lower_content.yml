@@ -46,6 +46,7 @@ settings:
       banner: banner
       from_library: from_library
       remote_video: remote_video
+      unit_search: unit_search
     target_bundles_drag_drop:
       accordion:
         enabled: true
@@ -95,4 +96,7 @@ settings:
       text:
         enabled: true
         weight: -29
+      unit_search:
+        enabled: true
+        weight: -16
 field_type: entity_reference_revisions
