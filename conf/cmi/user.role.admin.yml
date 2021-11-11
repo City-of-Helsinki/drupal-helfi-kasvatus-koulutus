@@ -131,3 +131,4 @@ permissions:
   - 'view all tpr_unit revisions'
   - 'view tpr_service'
   - 'view tpr_unit'
+  - 'view any unpublished content'
