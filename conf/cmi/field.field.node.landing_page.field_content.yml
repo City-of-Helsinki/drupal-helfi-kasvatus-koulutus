@@ -40,6 +40,8 @@ settings:
       content_liftup: content_liftup
       from_library: from_library
       remote_video: remote_video
+      service_list: service_list
+      unit_search: unit_search
     target_bundles_drag_drop:
       accordion:
         weight: -22
@@ -86,7 +88,13 @@ settings:
       remote_video:
         enabled: true
         weight: 27
+      service_list:
+        enabled: true
+        weight: 36
       text:
         weight: -15
         enabled: false
+      unit_search:
+        enabled: true
+        weight: 28
 field_type: entity_reference_revisions

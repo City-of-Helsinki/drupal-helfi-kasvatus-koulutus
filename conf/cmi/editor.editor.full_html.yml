@@ -55,7 +55,7 @@ settings:
   plugins:
     drupallink:
       linkit_enabled: true
-      linkit_profile: helfi
+      linkit_profile: tpr_content
     language:
       language_list: un
     stylescombo:
