@@ -132,3 +132,8 @@ permissions:
   - 'view tpr_service'
   - 'view tpr_unit'
   - 'view any unpublished content'
+  - 'create hel_map media'
+  - 'delete any hel_map media'
+  - 'delete own hel_map media'
+  - 'edit any hel_map media'
+  - 'edit own hel_map media'
