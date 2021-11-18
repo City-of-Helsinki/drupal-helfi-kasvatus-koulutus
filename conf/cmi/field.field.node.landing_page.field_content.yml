@@ -42,6 +42,7 @@ settings:
       remote_video: remote_video
       service_list: service_list
       unit_search: unit_search
+      map: map
     target_bundles_drag_drop:
       accordion:
         weight: -22
@@ -85,6 +86,9 @@ settings:
       list_of_links_item:
         weight: -16
         enabled: false
+      map:
+        enabled: true
+        weight: -20
       remote_video:
         enabled: true
         weight: 27
