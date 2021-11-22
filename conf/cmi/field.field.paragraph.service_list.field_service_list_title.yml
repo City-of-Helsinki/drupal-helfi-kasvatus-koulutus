@@ -1,0 +1,21 @@
+uuid: d1e1a88b-e6c7-4d39-8670-900d5784a80e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_service_list_title
+    - paragraphs.paragraphs_type.service_list
+_core:
+  default_config_hash: oBzVKXOGVyK1Hf2Ndjf41frBNagrtCe9_a15bzOSPDs
+id: paragraph.service_list.field_service_list_title
+field_name: field_service_list_title
+entity_type: paragraph
+bundle: service_list
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

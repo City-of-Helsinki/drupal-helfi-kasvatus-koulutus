@@ -1,0 +1,14 @@
+uuid: add509f0-1eab-4e4f-8880-babbcfd17d6b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: IWvSKmxM6YS9noET0SzVZH1Z8brcnwBuE1iIKyR5k0g
+id: service_entity_pattern
+label: 'Service entity pattern'
+type: 'canonical_entities:tpr_service'
+pattern: '[tpr_service:menu-link-parents]/[tpr_service:label]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }
