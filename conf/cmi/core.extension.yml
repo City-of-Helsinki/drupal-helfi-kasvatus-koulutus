@@ -52,6 +52,7 @@ module:
   helfi_toc: 0
   helfi_tpr: 0
   helfi_tpr_config: 0
+  helfi_tunnistamo: 0
   image: 0
   image_style_quality: 0
   imagecache_external: 0
@@ -71,6 +72,7 @@ module:
   metatag_twitter_cards: 0
   migrate: 0
   node: 0
+  openid_connect: 0
   options: 0
   page_cache: 0
   paragraphs_asymmetric_translation_widgets: 0
@@ -90,6 +92,7 @@ module:
   select2_icon: 0
   simple_sitemap: 0
   social_media: 0
+  stage_file_proxy: 0
   system: 0
   taxonomy: 0
   telephone: 0
@@ -109,6 +112,7 @@ module:
   views_ui: 0
   pathauto: 1
   content_translation: 10
+  externalauth: 10
   views: 10
   paragraphs: 11
   minimal: 1000
