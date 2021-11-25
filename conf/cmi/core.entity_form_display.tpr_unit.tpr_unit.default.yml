@@ -12,6 +12,7 @@ dependencies:
     - media_library
     - metatag
     - paragraphs
+    - path
     - readonly_field_widget
 _core:
   default_config_hash: g-ZdiLH0rHr8Mv6vni5A3v5v2UQGRdwiwPxs88WA93E
@@ -53,7 +54,7 @@ content:
   address:
     type: readonly_field_widget
     region: content
-    weight: 14
+    weight: 15
     settings:
       label: above
       formatter_type: null
@@ -63,7 +64,7 @@ content:
   address_postal:
     type: readonly_field_widget
     region: content
-    weight: 16
+    weight: 17
     settings:
       label: above
       formatter_type: null
@@ -73,7 +74,7 @@ content:
   call_charge_info:
     type: readonly_field_widget
     region: content
-    weight: 15
+    weight: 16
     settings:
       label: above
       formatter_type: null
@@ -102,7 +103,7 @@ content:
     third_party_settings: {  }
   field_content:
     type: paragraphs
-    weight: 27
+    weight: 24
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -121,7 +122,7 @@ content:
     region: content
   field_lower_content:
     type: paragraphs
-    weight: 28
+    weight: 25
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -139,12 +140,19 @@ content:
     third_party_settings: {  }
     region: content
   field_metatags:
-    weight: 26
+    weight: 23
     settings:
       sidebar: false
     third_party_settings: {  }
     type: metatag_firehose
     region: content
+  hide_description:
+    type: boolean_checkbox
+    weight: 14
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 0
@@ -155,7 +163,7 @@ content:
   latitude:
     type: readonly_field_widget
     region: content
-    weight: 17
+    weight: 18
     settings:
       label: above
       formatter_type: null
@@ -165,7 +173,7 @@ content:
   longitude:
     type: readonly_field_widget
     region: content
-    weight: 18
+    weight: 19
     settings:
       label: above
       formatter_type: null
@@ -226,7 +234,7 @@ content:
   provided_languages:
     type: readonly_field_widget
     region: content
-    weight: 29
+    weight: 26
     settings:
       label: above
       formatter_type: null
@@ -236,7 +244,7 @@ content:
   service_map_embed:
     type: readonly_field_widget
     region: content
-    weight: 20
+    weight: 21
     settings:
       label: above
       formatter_type: null
@@ -246,7 +254,7 @@ content:
   services:
     type: readonly_field_widget
     region: content
-    weight: 21
+    weight: 22
     settings:
       label: above
       formatter_type: null
@@ -256,7 +264,7 @@ content:
   streetview_entrance_url:
     type: readonly_field_widget
     region: content
-    weight: 19
+    weight: 20
     settings:
       label: above
       formatter_type: null
