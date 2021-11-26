@@ -1,0 +1,27 @@
+uuid: 92ad2381-4228-4fe6-b3a7-76bbfede9322
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hs_search_description
+    - paragraphs.paragraphs_type.high_school_search
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    full_html: '0'
+    minimal: '0'
+    plain_text: '0'
+id: paragraph.high_school_search.field_hs_search_description
+field_name: field_hs_search_description
+entity_type: paragraph
+bundle: high_school_search
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

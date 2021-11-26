@@ -1,0 +1,48 @@
+uuid: 829f7d52-4bc4-45fc-8dae-402e1fc46a34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.high_school_search.field_hs_search_description
+    - field.field.paragraph.high_school_search.field_hs_search_meta_button
+    - field.field.paragraph.high_school_search.field_hs_search_title
+    - field.field.paragraph.high_school_search.field_hs_search_units
+    - paragraphs.paragraphs_type.high_school_search
+  module:
+    - text
+id: paragraph.high_school_search.default
+targetEntityType: paragraph
+bundle: high_school_search
+mode: default
+content:
+  field_hs_search_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_hs_search_meta_button:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_hs_search_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_hs_search_units:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: entity_reference_entity_id
+    region: content
+hidden: {  }

@@ -1,0 +1,22 @@
+uuid: 5260116b-a3bd-48f2-9fab-5c6574ae525d
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - hdbt_subtheme
+_core:
+  default_config_hash: exT4lfsQK-ekjJqsVu1l0uJ7eGvkRqcwOZdzEXQFBqw
+id: hdbt_subtheme_language_switcher
+theme: hdbt_subtheme
+region: header_branding
+weight: 2
+provider: null
+plugin: 'language_block:language_content'
+settings:
+  id: 'language_block:language_content'
+  label: 'Language switcher'
+  provider: language
+  label_display: '0'
+visibility: {  }

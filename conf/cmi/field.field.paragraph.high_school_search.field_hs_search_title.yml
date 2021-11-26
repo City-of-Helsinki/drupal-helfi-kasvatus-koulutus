@@ -1,0 +1,19 @@
+uuid: 3d2795d5-eaab-40b6-a539-4c2dcc9f7846
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hs_search_title
+    - paragraphs.paragraphs_type.high_school_search
+id: paragraph.high_school_search.field_hs_search_title
+field_name: field_hs_search_title
+entity_type: paragraph
+bundle: high_school_search
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

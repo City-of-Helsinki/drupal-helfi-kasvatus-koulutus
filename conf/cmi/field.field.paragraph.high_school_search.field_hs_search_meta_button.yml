@@ -1,0 +1,21 @@
+uuid: 512d62bb-b59b-409e-a079-9875de21e67e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hs_search_meta_button
+    - paragraphs.paragraphs_type.high_school_search
+id: paragraph.high_school_search.field_hs_search_meta_button
+field_name: field_hs_search_meta_button
+entity_type: paragraph
+bundle: high_school_search
+label: 'Search button'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Filter
+default_value_callback: ''
+settings: {  }
+field_type: string
