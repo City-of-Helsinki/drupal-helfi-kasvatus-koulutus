@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.tpr_unit.tpr_unit.field_content
+    - field.field.tpr_unit.tpr_unit.field_hs_educational_mission
+    - field.field.tpr_unit.tpr_unit.field_hs_emphasis
     - field.field.tpr_unit.tpr_unit.field_lower_content
     - field.field.tpr_unit.tpr_unit.field_metatags
   module:
@@ -102,6 +104,22 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_hs_educational_mission:
+    weight: 22
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_hs_emphasis:
+    weight: 21
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_lower_content:
     type: entity_reference_revisions_entity_view

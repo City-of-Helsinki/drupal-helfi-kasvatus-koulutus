@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.tpr_unit.teaser
     - field.field.tpr_unit.tpr_unit.field_content
+    - field.field.tpr_unit.tpr_unit.field_hs_educational_mission
+    - field.field.tpr_unit.tpr_unit.field_hs_emphasis
     - field.field.tpr_unit.tpr_unit.field_lower_content
     - field.field.tpr_unit.tpr_unit.field_metatags
   module:
@@ -70,6 +72,8 @@ hidden:
   description: true
   email: true
   field_content: true
+  field_hs_educational_mission: true
+  field_hs_emphasis: true
   field_lower_content: true
   field_metatags: true
   langcode: true

@@ -1,0 +1,30 @@
+uuid: 419bea26-e2e9-4171-a250-80cb2864acfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tpr_unit.field_hs_educational_mission
+    - taxonomy.vocabulary.educational_mission
+  module:
+    - helfi_tpr
+id: tpr_unit.tpr_unit.field_hs_educational_mission
+field_name: field_hs_educational_mission
+entity_type: tpr_unit
+bundle: tpr_unit
+label: 'Special educational mission'
+description: 'Used for high schools to sort them to different categories based on their special educational mission.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      educational_mission: educational_mission
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

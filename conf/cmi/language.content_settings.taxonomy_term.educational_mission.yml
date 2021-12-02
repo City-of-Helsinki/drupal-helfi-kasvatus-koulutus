@@ -1,0 +1,16 @@
+uuid: c64321f8-11b9-46e9-8b85-484498bdc4c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.educational_mission
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.educational_mission
+target_entity_type_id: taxonomy_term
+target_bundle: educational_mission
+default_langcode: fi
+language_alterable: true

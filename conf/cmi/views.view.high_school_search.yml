@@ -4,11 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.tpr_unit.teaser_with_image
+    - taxonomy.vocabulary.educational_mission
+    - taxonomy.vocabulary.emphasis
   module:
-    - address
     - helfi_tpr
+    - taxonomy
     - user
-    - views_infinite_scroll
 _core:
   default_config_hash: Qi_H9S0h8L3oK0pwRXFvyfqE1rtbScL6G5En1FHfQ9I
 id: high_school_search
@@ -51,27 +52,9 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: infinite_scroll
+        type: none
         options:
-          items_per_page: 5
           offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          views_infinite_scroll:
-            button_text: 'Load more results'
-            automatically_load_content: false
-            initially_load_all_pages: false
       style:
         type: default
         options:
@@ -85,12 +68,9 @@ display:
           view_mode: teaser_with_image
       fields:
         name:
+          id: name
           table: tpr_unit_field_data
           field: name
-          id: name
-          entity_type: null
-          entity_field: name
-          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
@@ -138,7 +118,7 @@ display:
           click_sort_column: value
           type: string
           settings: {  }
-          group_column: value
+          group_column: entity_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -148,74 +128,13 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        address__postal_code:
-          id: address__postal_code
-          table: tpr_unit_field_data
-          field: address__postal_code
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: langcode
-          type: address_default
-          settings: {  }
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: tpr_unit
-          entity_field: address
+          entity_type: null
+          entity_field: name
           plugin_id: field
-        address__address_line1:
-          id: address__address_line1
+        id:
+          id: id
           table: tpr_unit_field_data
-          field: address__address_line1
+          field: id
           relationship: none
           group_type: group
           admin_label: ''
@@ -260,11 +179,13 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: langcode
-          type: address_default
-          settings: {  }
-          group_column: ''
-          group_columns: {  }
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: entity_id
+          group_columns:
+            entity_id: entity_id
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -274,123 +195,9 @@ display:
           separator: ', '
           field_api_classes: false
           entity_type: tpr_unit
-          entity_field: address
-          plugin_id: field
-        address__address_line2:
-          id: address__address_line2
-          table: tpr_unit_field_data
-          field: address__address_line2
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: langcode
-          type: address_default
-          settings: {  }
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: tpr_unit
-          entity_field: address
+          entity_field: id
           plugin_id: field
       filters:
-        combine:
-          id: combine
-          table: views
-          field: combine
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: allwords
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: combine_op
-            label: Search
-            description: ''
-            use_operator: false
-            operator: combine_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: unit_search
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              admin: '0'
-              content_producer: '0'
-            placeholder: 'Type in unit name or address'
-          is_grouped: false
-          group_info:
-            label: 'Combine fields filter'
-            description: null
-            identifier: combine
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1: {  }
-              2: {  }
-              3: {  }
-          fields:
-            name: name
-            address__postal_code: address__postal_code
-            address__address_line1: address__address_line1
-            address__address_line2: address__address_line2
-          plugin_id: combine
         content_translation_status:
           id: content_translation_status
           table: tpr_unit_field_data
@@ -473,6 +280,269 @@ display:
           entity_type: tpr_unit
           entity_field: langcode
           plugin_id: language
+        langcode_1:
+          id: langcode_1
+          table: taxonomy_term_field_data
+          field: langcode
+          relationship: field_hs_emphasis
+          group_type: group
+          admin_label: ''
+          operator: empty
+          value:
+            '***LANGUAGE_language_content***': '***LANGUAGE_language_content***'
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
+        langcode_5:
+          id: langcode_5
+          table: taxonomy_term_field_data
+          field: langcode
+          relationship: field_hs_educational_mission
+          group_type: group
+          admin_label: ''
+          operator: empty
+          value: {  }
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
+        langcode_2:
+          id: langcode_2
+          table: taxonomy_term_field_data
+          field: langcode
+          relationship: field_hs_emphasis
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_content***': '***LANGUAGE_language_content***'
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
+        langcode_4:
+          id: langcode_4
+          table: taxonomy_term_field_data
+          field: langcode
+          relationship: field_hs_educational_mission
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_content***': '***LANGUAGE_language_content***'
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
+        field_hs_emphasis_target_id:
+          id: field_hs_emphasis_target_id
+          table: tpr_unit__field_hs_emphasis
+          field: field_hs_emphasis_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 3
+          exposed: true
+          expose:
+            operator_id: field_hs_emphasis_target_id_op
+            label: 'Select a special emphasis or study programme'
+            description: ''
+            use_operator: false
+            operator: field_hs_emphasis_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_hs_emphasis_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              admin: '0'
+              content_producer: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: emphasis
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_hs_educational_mission_target_id:
+          id: field_hs_educational_mission_target_id
+          table: tpr_unit__field_hs_educational_mission
+          field: field_hs_educational_mission_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 3
+          exposed: true
+          expose:
+            operator_id: field_hs_educational_mission_target_id_op
+            label: 'Select a special educational mission'
+            description: ''
+            use_operator: false
+            operator: field_hs_educational_mission_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_hs_educational_mission_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              admin: '0'
+              content_producer: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: educational_mission
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       sorts:
         name:
           id: name
@@ -519,7 +589,25 @@ display:
             value: 'No results'
             format: full_html
           plugin_id: text
-      relationships: {  }
+      relationships:
+        field_hs_emphasis:
+          id: field_hs_emphasis
+          table: tpr_unit__field_hs_emphasis
+          field: field_hs_emphasis
+          relationship: none
+          group_type: group
+          admin_label: 'field_hs_emphasis: Taxonomy term'
+          required: false
+          plugin_id: standard
+        field_hs_educational_mission:
+          id: field_hs_educational_mission
+          table: tpr_unit__field_hs_educational_mission
+          field: field_hs_educational_mission
+          relationship: none
+          group_type: group
+          admin_label: 'field_hs_educational_mission: Taxonomy term'
+          required: false
+          plugin_id: standard
       arguments:
         id:
           id: id
@@ -567,13 +655,20 @@ display:
           plugin_id: string
       display_extenders: {  }
       use_ajax: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+          2: OR
+          3: AND
+      group_by: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
+        - user
         - user.permissions
       tags: {  }
   block:
@@ -590,7 +685,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
+        - user
         - user.permissions
       tags: {  }
   entity_reference:
