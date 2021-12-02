@@ -59,7 +59,9 @@
     {% trans with {'context': 'High school search count'}%}result{% plural total_rows %}high schools{% endtrans %}
   </span>
 
-  {{ rows }}
+  <div class="unit-search__results">
+    {{ rows }}
+  </div>
 
   {{ empty }}
   {{ pager }}

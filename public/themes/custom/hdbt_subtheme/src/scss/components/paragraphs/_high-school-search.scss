@@ -1,0 +1,41 @@
+.unit-search--high-school .views--unit-search {
+
+  .views-exposed-form {
+
+    @include breakpoint($breakpoint-m) {
+      margin-left: -$spacing-and-half;
+    }
+
+    .form-item {
+      margin-bottom: $spacing-double;
+
+      @include breakpoint($breakpoint-m) {
+        margin-bottom: 0;
+        margin-left: $spacing-and-half;
+        width: 25%;
+      }
+    }
+
+    label {
+      font-weight: 500;
+      margin-bottom: $spacing-quarter;
+      display: block;
+    }
+
+    select {
+      width: 100%;
+    }
+  }
+
+  .unit-search__results {
+    margin-top: $spacing;
+
+    @include breakpoint($breakpoint-m) {
+      margin-top: $spacing-double;
+    }
+
+    & > .views-row + .views-row {
+      margin-top: $spacing;
+    }
+  }
+}
