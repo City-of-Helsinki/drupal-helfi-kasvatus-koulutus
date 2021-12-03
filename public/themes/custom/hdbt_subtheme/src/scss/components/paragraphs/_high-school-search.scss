@@ -1,7 +1,6 @@
 .unit-search--high-school .views--unit-search {
 
   .views-exposed-form {
-
     @include breakpoint($breakpoint-m) {
       margin-left: -$spacing-and-half;
     }
@@ -20,11 +19,6 @@
       font-weight: 500;
       margin-bottom: $spacing-quarter;
       display: block;
-    }
-
-    select {
-      height: 56px; // Height of the submit button
-      width: 100%;
     }
   }
 
