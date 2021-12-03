@@ -1,0 +1,28 @@
+label: Lukiohaku
+display:
+  default:
+    display_title: Oletus
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Käytä
+          reset_button_label: Palauta
+          exposed_sorts_label: Järjestä
+          sort_asc_label: Nouseva
+          sort_desc_label: Laskeva
+      filters:
+        field_hs_emphasis_target_id:
+          expose:
+            label: 'Valitse painotus tai linja'
+        field_hs_educational_mission_target_id:
+          expose:
+            label: 'Valitse erityistehtävä'
+      empty:
+        area:
+          content:
+            value: "<p>Ei tuloksia</p>\r\n"
+            format: full_html
+  block:
+    display_title: Lohko
+  entity_reference:
+    display_title: Entiteettiviittaus
