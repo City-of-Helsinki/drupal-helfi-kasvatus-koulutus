@@ -218,6 +218,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  hide_description: true
   langcode: true
   latitude: true
   longitude: true
