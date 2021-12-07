@@ -10,9 +10,13 @@ dependencies:
     - paragraphs.paragraphs_type.content_cards
     - paragraphs.paragraphs_type.content_liftup
     - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.high_school_search
     - paragraphs.paragraphs_type.liftup_with_image
     - paragraphs.paragraphs_type.list_of_links
+    - paragraphs.paragraphs_type.map
     - paragraphs.paragraphs_type.remote_video
+    - paragraphs.paragraphs_type.service_list
+    - paragraphs.paragraphs_type.unit_search
   module:
     - entity_reference_revisions
 _core:
@@ -32,17 +36,18 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
+      content_cards: content_cards
+      content_liftup: content_liftup
       columns: columns
       banner: banner
       list_of_links: list_of_links
       liftup_with_image: liftup_with_image
-      content_cards: content_cards
-      content_liftup: content_liftup
+      map: map
       from_library: from_library
       remote_video: remote_video
-      service_list: service_list
       unit_search: unit_search
-      map: map
+      high_school_search: high_school_search
+      service_list: service_list
     target_bundles_drag_drop:
       accordion:
         weight: -22
@@ -74,6 +79,9 @@ settings:
       hero:
         weight: -18
         enabled: false
+      high_school_search:
+        enabled: true
+        weight: 32
       image:
         weight: -17
         enabled: false
@@ -95,6 +103,9 @@ settings:
       service_list:
         enabled: true
         weight: 36
+      sidebar_text:
+        weight: 40
+        enabled: false
       text:
         weight: -15
         enabled: false

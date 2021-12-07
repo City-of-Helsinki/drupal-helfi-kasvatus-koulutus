@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains alterations for content.
+ */
+
+use Drupal\Core\Language\LanguageInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function helfi_kasko_content_form_views_exposed_form_alter(&$form, $form_state) {
+
+  // Handle only Unit search view form at this point.
+  if ($form['#id'] !== 'views-exposed-form-high-school-search-block') {
+    return;
+  }
+
+  // Get view from form state.
+  $view = $form_state->getStorage()['view'];
+  $current_language = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
+
+  // Apply the cached meta fields values to form values.
+  $cached = \Drupal::cache()->get(
+    $view->id() .
+    $view->current_display .
+    $current_language .
+    $view->args[0]
+  );
+
+  if ($cached) {
+    $meta_fields = $cached->data;
+    if (!empty($meta_fields['field_hs_search_meta_button'])) {
+      $form['actions']['submit']['#value'] = $meta_fields['field_hs_search_meta_button'];
+    }
+  }
+}

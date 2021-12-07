@@ -1,0 +1,20 @@
+uuid: 0313aabb-4274-4eaf-90f5-51cadaa9e8c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+    - taxonomy
+id: tpr_unit.field_hs_emphasis
+field_name: field_hs_emphasis
+entity_type: tpr_unit
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
