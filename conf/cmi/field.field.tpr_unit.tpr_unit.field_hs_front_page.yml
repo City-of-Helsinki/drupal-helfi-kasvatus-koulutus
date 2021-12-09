@@ -1,0 +1,30 @@
+uuid: 3cd59381-6aff-4c0f-af77-77f174acb784
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tpr_unit.field_hs_front_page
+    - node.type.page
+  module:
+    - helfi_tpr
+id: tpr_unit.tpr_unit.field_hs_front_page
+field_name: field_hs_front_page
+entity_type: tpr_unit
+bundle: tpr_unit
+label: 'High school front page'
+description: 'Notice: This field only applies for high schools. Select here the basic page that is used as the front page of this high school.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
