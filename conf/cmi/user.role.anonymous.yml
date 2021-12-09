@@ -13,8 +13,6 @@ permissions:
   - 'display eu cookie compliance popup'
   - 'view media'
   - 'view media'
-  - 'access content'
   - 'view remote entities'
-  - 'display eu cookie compliance popup'
   - 'view tpr_service'
   - 'view tpr_unit'
