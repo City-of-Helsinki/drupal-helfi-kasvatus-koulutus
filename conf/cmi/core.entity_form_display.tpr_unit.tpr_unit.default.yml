@@ -162,6 +162,13 @@ content:
         duplicate: duplicate
     third_party_settings: {  }
     region: content
+  hide_description:
+    type: boolean_checkbox
+    weight: 14
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: { }
   field_metatags:
     weight: 26
     settings:
