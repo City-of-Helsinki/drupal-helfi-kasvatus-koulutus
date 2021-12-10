@@ -145,3 +145,8 @@ permissions:
   - 'view tpr_service'
   - 'view tpr_unit'
   - 'view unpublished paragraphs'
+  - 'view any unpublished content'
+  - 'view unpublished tpr_errand_service'
+  - 'view unpublished tpr_service'
+  - 'view unpublished tpr_service_channel'
+  - 'view unpublished tpr_unit'
