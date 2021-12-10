@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.tpr_unit.field_hs_front_page
-    - node.type.page
+    - node.type.landing_page
   module:
     - helfi_tpr
 id: tpr_unit.tpr_unit.field_hs_front_page
@@ -21,7 +21,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      page: page
+      landing_page: landing_page
     sort:
       field: _none
       direction: ASC

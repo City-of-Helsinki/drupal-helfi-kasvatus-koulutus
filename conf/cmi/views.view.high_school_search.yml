@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.tpr_unit.teaser_with_image
+    - core.entity_view_mode.tpr_unit.high_school_card
     - taxonomy.vocabulary.educational_mission
     - taxonomy.vocabulary.emphasis
   module:
@@ -65,7 +65,7 @@ display:
         type: 'entity:tpr_unit'
         options:
           relationship: none
-          view_mode: teaser_with_image
+          view_mode: high_school_card
       fields:
         name:
           id: name
