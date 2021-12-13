@@ -104,26 +104,26 @@ module.exports = {
     new CleanWebpackPlugin({
       cleanAfterEveryBuildPatterns: ['dist']
     }),
-    new SVGSpritemapPlugin([
-      path.resolve(__dirname, 'src/icons/**/*.svg'),
-    ], {
-      output: {
-        filename: './icons/sprite.svg',
-        svg: {
-          sizes: false
-        }
-      },
-      sprite: {
-        prefix: false,
-        gutter: 0,
-        generate: {
-          title: false,
-          symbol: true,
-          use: true,
-          view: '-view'
-        }
-      },
-    }),
+    //new SVGSpritemapPlugin([
+    //  path.resolve(__dirname, 'src/icons/**/*.svg'),
+    //], {
+    //  output: {
+    //    filename: './icons/sprite.svg',
+    //    svg: {
+    //      sizes: false
+    //    }
+    //  },
+    //  sprite: {
+    //    prefix: false,
+    //    gutter: 0,
+    //    generate: {
+    //      title: false,
+    //      symbol: true,
+    //      use: true,
+    //      view: '-view'
+    //    }
+    //  },
+    //}),
     new MiniCssExtractPlugin({
       filename: 'css/[name].min.css',
     }),

@@ -65,5 +65,66 @@
     {% endblock accessibility_sentences_block %}
   {% endembed %}
 {% else %}
-  !!!!!!
+
+  {%
+    set classes = [
+    'unit',
+    'unit--high-school-card'
+  ]
+  %}
+
+  {% set image_attributes = create_attribute() %}
+
+  {% if content.picture_url_override|render or content.picture_url|render %}
+    {% set has_image = TRUE %}
+  {% endif %}
+
+  {%
+    set picture_classes = [
+    'unit__image',
+    has_image ? 'unit__image--image' : 'unit__image--placeholder'
+  ]
+  %}
+
+  <div{{ attributes.addClass(classes) }}>
+    {% if content.field_hs_front_page[0]["#plain_text"] is not empty %}
+      <a href="{{ url('entity.node.canonical', { 'node': content.field_hs_front_page[0]["#plain_text"] }) }}" class="unit__link">
+    {% else %}
+      <a href="{{ url('entity.tpr_unit.canonical', { 'tpr_unit': entity.id() }) }}" class="unit__link">
+    {% endif %}
+      <div{{ image_attributes.addClass(picture_classes) }}>
+        {% if content.picture_url_override|render %}
+          {{ content.picture_url_override }}
+        {% elseif content.picture_url|render %}
+          {{ content.picture_url }}
+        {% else %}
+          {% include "@hdbt/misc/image-placeholder.twig" ignore missing %}
+        {% endif %}
+      </div>
+      <div class="unit__text">
+        <div class="unit__text__content">
+            <h3 class="unit__title">
+              {% if content.field_hs_front_page[0]["#plain_text"] is not empty %}
+                {{ content.field_hs_front_page[0]["#plain_text"] }}
+              {% else %}
+                {{ entity.label }}
+              {% endif %}
+            </h3>
+            {% if content.address|render %}
+              <div class="unit__info-row unit__info-row--address">
+                {{ content.address }}
+              </div>
+            {% endif %}
+            {% if content.description_summary|render %}
+              <div class="unit__short-desc">
+                {{ content.description_summary }}
+              </div>
+            {% endif %}
+            <span class="unit__arrow">
+              {% include '@hdbt/misc/icon.twig' ignore missing with {icon: 'arrow-right'} %}
+            </span>
+        </div>
+      </div>
+    </a>
+  </div>
 {% endif %}
