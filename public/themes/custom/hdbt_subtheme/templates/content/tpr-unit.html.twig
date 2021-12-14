@@ -87,8 +87,8 @@
   %}
 
   <div{{ attributes.addClass(classes) }}>
-    {% if content.field_hs_front_page[0]["#plain_text"] is not empty %}
-      <a href="{{ url('entity.node.canonical', { 'node': content.field_hs_front_page[0]["#plain_text"] }) }}" class="unit__link">
+    {% if high_school_front_page_nid is not empty %}
+      <a href="{{ url('entity.node.canonical', { 'node': high_school_front_page_nid }) }}" class="unit__link">
     {% else %}
       <a href="{{ url('entity.tpr_unit.canonical', { 'tpr_unit': entity.id() }) }}" class="unit__link">
     {% endif %}
@@ -104,8 +104,8 @@
       <div class="unit__text">
         <div class="unit__text__content">
             <h3 class="unit__title">
-              {% if content.field_hs_front_page[0]["#plain_text"] is not empty %}
-                {{ content.field_hs_front_page[0]["#plain_text"] }}
+              {% if high_school_front_page_title is not empty %}
+                {{ high_school_front_page_title }}
               {% else %}
                 {{ entity.label }}
               {% endif %}
