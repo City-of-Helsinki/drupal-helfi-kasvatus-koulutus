@@ -72,8 +72,9 @@ $card_spacing: $spacing-and-half;
   .unit__arrow {
     display: block;
     line-height: 0;
+    margin-top: $spacing;
     // Pull the arrow a bit to the left to align with text.
-    margin: $spacing 0 0 -2px;
+    margin-left: -2px;
     padding-left: 0;
     transition: all .3s;
     width: 48px;
