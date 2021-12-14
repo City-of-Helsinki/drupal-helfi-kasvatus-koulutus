@@ -63,13 +63,50 @@ function helfi_kasko_content_preprocess_block(&$variables) {
   }
 
   if ((bool) $entity->get('field_has_hero')->value) {
-    // Handle only landing page.
-    if (isset($entity->get('field_content')->first()->entity)) {
-      // Check if the content field first paragraph is Unit search
+    if (
+      in_array($entity->getType(), ['landing_page', 'page']) &&
+      isset($entity->get('field_content')->first()->entity)
+    ) {
+
+      $first_paragraph_gray = &$variables['content']['hero_block']['#first_paragraph_grey'];
+
+      // Check if the content field first paragraph is High school search
       // and add classes accordingly.
       $paragraph = $entity->get('field_content')->first()->entity;
       if (!empty($paragraph) && $paragraph->getType() === 'high_school_search') {
-        $variables['content']['hero_block']['#first_paragraph_grey'] = 'has-first-gray-bg-block';
+        $first_paragraph_gray = 'has-first-gray-bg-block';
+
+        // If lead_in field has value, unset 1st gray paragraph class.
+        if ($entity->hasField('field_lead_in') && !$entity->field_lead_in->isEmpty()) {
+          $first_paragraph_gray = '';
+          return;
+        }
+
+        // If table of contents is enabled, unset 1st gray paragraph class.
+        if ($entity->hasField('toc_enabled') && $entity->toc_enabled->value == TRUE) {
+          $first_paragraph_gray = '';
+          return;
+        }
+
+        // Special cases if the node type is page.
+        if ($entity->getType() === 'page') {
+          // Load menu links for the current page entity.
+          $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
+          $menu_links = $menu_link_manager->loadLinksByRoute(
+            "entity.{$entity->getEntityTypeId()}.canonical",
+            [$entity->getEntityTypeId() => $entity->id()]
+          );
+
+          // If the page is in navigation set a different value for 1st gray
+          // paragraph class.
+          if (!empty($menu_links) && is_array($menu_links)) {
+            $menu_Link = reset($menu_links);
+
+            if ($menu_Link->isEnabled()) {
+              $first_paragraph_gray = 'has-first-gray-bg-block--desktop';
+            }
+          }
+        }
       }
     }
   }

@@ -1,7 +1,6 @@
 $card_spacing: $spacing-and-half;
 
 .unit-search--high-school .views--unit-search {
-
   .views-exposed-form {
     @include breakpoint($breakpoint-m) {
       margin-left: -$spacing-and-half;
@@ -40,5 +39,17 @@ $card_spacing: $spacing-and-half;
     @include breakpoint($breakpoint-m) {
       margin-top: $spacing-double;
     }
+  }
+}
+
+.has-navigation .component--unit-search {
+  margin-left: -$spacing-double;
+  margin-right: -$spacing-double;
+  padding-left: $spacing-double;
+  padding-right: $spacing-double;
+
+  @include breakpoint($breakpoint-l) {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
