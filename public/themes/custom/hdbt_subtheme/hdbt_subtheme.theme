@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Cache\Cache;
+use Drupal\helfi_tpr\Entity\Unit;
+use Drupal\node\Entity\Node;
 
 /**
  * Helper function to get the icons path.
@@ -140,5 +142,26 @@ function hdbt_subtheme_preprocess_paragraph(array &$variables) {
         );
       }
     }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function hdbt_subtheme_preprocess_tpr_unit(&$variables) {
+  if (!isset($variables['entity']) || !$variables['entity'] instanceof Unit) {
+    return;
+  }
+  $entity = $variables['entity'];
+
+  if (
+    $entity->hasField('field_hs_front_page') &&
+    !$entity->field_hs_front_page->isEmpty() &&
+    $entity->field_hs_front_page->entity instanceof Node
+  ) {
+    $nid = $entity->field_hs_front_page->entity->id();
+    $title = $entity->field_hs_front_page->entity->getTitle();
+    $variables['high_school_front_page_nid'] = $nid;
+    $variables['high_school_front_page_title'] = $title;
   }
 }
