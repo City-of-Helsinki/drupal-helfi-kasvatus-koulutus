@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: dqouFqVseNJNvEjsoYKxbinFOITuCxYhi4y2OTNQP_8
 all:
   - language_interface
   - language_content
@@ -35,5 +37,3 @@ negotiation:
       language-url: -8
       language-user: -4
       language-user-admin: -10
-_core:
-  default_config_hash: dqouFqVseNJNvEjsoYKxbinFOITuCxYhi4y2OTNQP_8

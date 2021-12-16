@@ -1,7 +1,29 @@
 uuid: e71f0d95-6c72-4824-b46a-24584ccb024b
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - media.type.file
+    - media.type.hel_map
+    - media.type.image
+    - media.type.remote_video
+    - media.type.soundcloud
+    - node.type.landing_page
+    - node.type.page
+    - taxonomy.vocabulary.keywords
+  module:
+    - content_translation
+    - file
+    - helfi_api_base
+    - helfi_tpr
+    - media
+    - node
+    - paragraphs
+    - scheduler
+    - system
+    - taxonomy
+    - toolbar
+    - view_unpublished
 _core:
   default_config_hash: EVzxFtbOrGVTXWw2GTh1fEzzqruPEqSo84k10-BF6eA
 id: content_producer
@@ -52,6 +74,8 @@ permissions:
   - 'update media'
   - 'view all media revisions'
   - 'view all revisions'
+  - 'view any unpublished landing_page content'
+  - 'view any unpublished page content'
   - 'view landing_page revisions'
   - 'view own unpublished content'
   - 'view own unpublished media'
@@ -60,3 +84,7 @@ permissions:
   - 'view scheduled content'
   - 'view the administration theme'
   - 'view unpublished paragraphs'
+  - 'view unpublished tpr_errand_service'
+  - 'view unpublished tpr_service'
+  - 'view unpublished tpr_service_channel'
+  - 'view unpublished tpr_unit'

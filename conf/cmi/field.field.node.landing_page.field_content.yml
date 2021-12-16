@@ -34,7 +34,6 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       content_cards: content_cards
       content_liftup: content_liftup
@@ -48,6 +47,7 @@ settings:
       unit_search: unit_search
       high_school_search: high_school_search
       service_list: service_list
+    negate: 0
     target_bundles_drag_drop:
       accordion:
         weight: -22
@@ -56,20 +56,20 @@ settings:
         weight: -21
         enabled: false
       banner:
-        enabled: true
         weight: -26
+        enabled: true
       columns:
-        enabled: true
         weight: -27
+        enabled: true
       content_cards:
-        enabled: true
         weight: -33
+        enabled: true
       content_liftup:
-        enabled: true
         weight: -32
-      from_library:
         enabled: true
+      from_library:
         weight: 21
+        enabled: true
       gallery:
         weight: -20
         enabled: false
@@ -80,29 +80,29 @@ settings:
         weight: -18
         enabled: false
       high_school_search:
-        enabled: true
         weight: 32
+        enabled: true
       image:
         weight: -17
         enabled: false
       liftup_with_image:
-        enabled: true
         weight: -24
-      list_of_links:
         enabled: true
+      list_of_links:
         weight: -25
+        enabled: true
       list_of_links_item:
         weight: -16
         enabled: false
       map:
-        enabled: true
         weight: -20
+        enabled: true
       remote_video:
-        enabled: true
         weight: 27
-      service_list:
         enabled: true
+      service_list:
         weight: 36
+        enabled: true
       sidebar_text:
         weight: 40
         enabled: false
@@ -110,6 +110,6 @@ settings:
         weight: -15
         enabled: false
       unit_search:
-        enabled: true
         weight: 28
+        enabled: true
 field_type: entity_reference_revisions
