@@ -1,0 +1,25 @@
+uuid: 22fb5d8d-f4c6-4789-8fe0-6611c5085a60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hs_search_units
+    - paragraphs.paragraphs_type.high_school_search
+id: paragraph.high_school_search.field_hs_search_units
+field_name: field_hs_search_units
+entity_type: paragraph
+bundle: high_school_search
+label: Units
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: unit_search
+      display_name: entity_reference
+      arguments: {  }
+field_type: entity_reference

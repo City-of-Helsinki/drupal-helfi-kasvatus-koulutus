@@ -1,0 +1,10 @@
+uuid: 54357a84-4026-40fe-aaf4-eb02a2326e7e
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+id: tpr_unit.high_school_card
+label: 'High school card'
+targetEntityType: tpr_unit
+cache: true

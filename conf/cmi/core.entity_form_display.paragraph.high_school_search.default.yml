@@ -1,0 +1,55 @@
+uuid: b2a49492-0854-4bef-a065-dadaaf082352
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.high_school_search.field_hs_search_description
+    - field.field.paragraph.high_school_search.field_hs_search_meta_button
+    - field.field.paragraph.high_school_search.field_hs_search_title
+    - field.field.paragraph.high_school_search.field_hs_search_units
+    - paragraphs.paragraphs_type.high_school_search
+  module:
+    - select2
+    - text
+id: paragraph.high_school_search.default
+targetEntityType: paragraph
+bundle: high_school_search
+mode: default
+content:
+  field_hs_search_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_hs_search_meta_button:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_hs_search_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_hs_search_units:
+    type: select2_entity_reference
+    weight: 2
+    region: content
+    settings:
+      width: 100%
+      autocomplete: false
+      match_operator: CONTAINS
+      match_limit: 10
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

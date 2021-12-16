@@ -1,0 +1,15 @@
+uuid: f883b61e-f6fc-428d-8c07-5a73a1ce31dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: high_school_search
+label: 'High school search'
+icon_uuid: null
+icon_default: null
+description: 'With high school search paragraph content editor can create a list of high schools with filters.'
+behavior_plugins: {  }

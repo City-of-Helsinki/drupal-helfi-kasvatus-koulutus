@@ -12,8 +12,11 @@ dependencies:
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.liftup_with_image
     - paragraphs.paragraphs_type.list_of_links
+    - paragraphs.paragraphs_type.map
+    - paragraphs.paragraphs_type.service_list
     - paragraphs.paragraphs_type.sidebar_text
     - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.unit_search
   module:
     - entity_reference_revisions
     - paragraphs_library
@@ -32,7 +35,6 @@ default_value_callback: ''
 settings:
   handler: default
   handler_settings:
-    negate: '0'
     target_bundles:
       accordion: accordion
       banner: banner
@@ -43,11 +45,12 @@ settings:
       image: image
       liftup_with_image: liftup_with_image
       list_of_links: list_of_links
+      service_list: service_list
       sidebar_text: sidebar_text
       text: text
-      service_list: service_list
       unit_search: unit_search
       map: map
+    negate: '0'
     target_bundles_drag_drop:
       accordion:
         enabled: '1'
@@ -91,22 +94,22 @@ settings:
       list_of_links_item:
         weight: '34'
         enabled: 0
+      map:
+        weight: '35'
+        enabled: 0
       remote_video:
         weight: '36'
         enabled: 0
+      service_list:
+        enabled: '1'
+        weight: '37'
       sidebar_text:
         enabled: '1'
         weight: '38'
       text:
         enabled: '1'
         weight: '39'
-      service_list:
-        enabled: '1'
-        weight: '37'
       unit_search:
         enabled: '1'
-        weight: '31'
-      map:
-        enabled: '1'
-        weight: '32'
+        weight: '40'
 field_type: entity_reference_revisions

@@ -1,0 +1,14 @@
+msgid ""
+msgstr ""
+
+msgctxt "High school search count"
+msgid "high school"
+msgid_plural "high schools"
+msgstr[0] "lukio"
+msgstr[1] "lukiota"
+
+msgid "Select a special emphasis or study programme"
+msgstr "Valitse painotus tai linja"
+
+msgid "Select a special educational mission"
+msgstr "Valitse erityistehtävä"
