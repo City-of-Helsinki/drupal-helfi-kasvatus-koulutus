@@ -1,0 +1,45 @@
+uuid: 0eebb95e-047a-4b1b-b752-d51df5147e75
+langcode: fi
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+id: tpr_ontology_word_details.tpr_ontology_word_details.default
+targetEntityType: tpr_ontology_word_details
+bundle: tpr_ontology_word_details
+mode: default
+content:
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  ontologyword_id:
+    type: string
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  school_details:
+    type: tpr_school_details
+    weight: 3
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  unit_id:
+    type: string
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  name_override: true
