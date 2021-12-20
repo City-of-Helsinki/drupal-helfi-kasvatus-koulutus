@@ -6,6 +6,7 @@ dependencies:
     - field.field.tpr_unit.tpr_unit.field_content
     - field.field.tpr_unit.tpr_unit.field_hs_educational_mission
     - field.field.tpr_unit.tpr_unit.field_hs_emphasis
+    - field.field.tpr_unit.tpr_unit.field_hs_front_page
     - field.field.tpr_unit.tpr_unit.field_lower_content
     - field.field.tpr_unit.tpr_unit.field_metatags
   module:
@@ -26,8 +27,8 @@ mode: default
 content:
   accessibility_email:
     type: readonly_field_widget
-    region: content
     weight: 9
+    region: content
     settings:
       label: above
       formatter_type: null
@@ -36,8 +37,8 @@ content:
     third_party_settings: {  }
   accessibility_phone:
     type: readonly_field_widget
-    region: content
     weight: 8
+    region: content
     settings:
       label: above
       formatter_type: null
@@ -46,8 +47,8 @@ content:
     third_party_settings: {  }
   accessibility_www:
     type: readonly_field_widget
-    region: content
     weight: 12
+    region: content
     settings:
       label: above
       formatter_type: null
@@ -56,8 +57,8 @@ content:
     third_party_settings: {  }
   address:
     type: readonly_field_widget
+    weight: 15
     region: content
-    weight: 14
     settings:
       label: above
       formatter_type: null
@@ -66,8 +67,8 @@ content:
     third_party_settings: {  }
   address_postal:
     type: readonly_field_widget
+    weight: 17
     region: content
-    weight: 16
     settings:
       label: above
       formatter_type: null
@@ -76,8 +77,8 @@ content:
     third_party_settings: {  }
   call_charge_info:
     type: readonly_field_widget
+    weight: 16
     region: content
-    weight: 15
     settings:
       label: above
       formatter_type: null
@@ -86,8 +87,8 @@ content:
     third_party_settings: {  }
   description:
     type: readonly_field_widget
-    region: content
     weight: 13
+    region: content
     settings:
       label: above
       formatter_type: null
@@ -96,8 +97,8 @@ content:
     third_party_settings: {  }
   email:
     type: readonly_field_widget
-    region: content
     weight: 7
+    region: content
     settings:
       label: above
       formatter_type: null
@@ -106,7 +107,8 @@ content:
     third_party_settings: {  }
   field_content:
     type: paragraphs
-    weight: 27
+    weight: 24
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -122,30 +124,40 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-    region: content
   field_hs_educational_mission:
-    weight: 31
+    type: select2_entity_reference
+    weight: 29
+    region: content
     settings:
+      width: 100%
+      autocomplete: false
       match_operator: CONTAINS
       match_limit: 10
-      autocomplete: false
-      width: 100%
     third_party_settings: {  }
-    type: select2_entity_reference
-    region: content
   field_hs_emphasis:
-    weight: 30
+    type: select2_entity_reference
+    weight: 28
+    region: content
+    settings:
+      width: 100%
+      autocomplete: false
+      match_operator: CONTAINS
+      match_limit: 10
+    third_party_settings: {  }
+  field_hs_front_page:
+    type: entity_reference_autocomplete
+    weight: 27
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
-      autocomplete: false
-      width: 100%
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: select2_entity_reference
-    region: content
   field_lower_content:
     type: paragraphs
-    weight: 28
+    weight: 25
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -161,14 +173,20 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-    region: content
   field_metatags:
-    weight: 26
+    type: metatag_firehose
+    weight: 23
+    region: content
     settings:
       sidebar: false
     third_party_settings: {  }
-    type: metatag_firehose
+  hide_description:
+    type: boolean_checkbox
+    weight: 14
     region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 0
@@ -178,8 +196,8 @@ content:
     third_party_settings: {  }
   latitude:
     type: readonly_field_widget
+    weight: 18
     region: content
-    weight: 17
     settings:
       label: above
       formatter_type: null
@@ -188,8 +206,8 @@ content:
     third_party_settings: {  }
   longitude:
     type: readonly_field_widget
+    weight: 19
     region: content
-    weight: 18
     settings:
       label: above
       formatter_type: null
@@ -197,8 +215,8 @@ content:
       show_description: false
     third_party_settings: {  }
   name:
-    weight: 1
     type: readonly_field_widget
+    weight: 1
     region: content
     settings:
       label: above
@@ -207,13 +225,13 @@ content:
       show_description: false
     third_party_settings: {  }
   name_override:
+    type: string_textfield
     weight: 2
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
   path:
     type: path
     weight: 11
@@ -222,8 +240,8 @@ content:
     third_party_settings: {  }
   phone:
     type: readonly_field_widget
-    region: content
     weight: 6
+    region: content
     settings:
       label: above
       formatter_type: null
@@ -249,8 +267,8 @@ content:
     third_party_settings: {  }
   provided_languages:
     type: readonly_field_widget
+    weight: 26
     region: content
-    weight: 29
     settings:
       label: above
       formatter_type: null
@@ -259,8 +277,8 @@ content:
     third_party_settings: {  }
   service_map_embed:
     type: readonly_field_widget
+    weight: 21
     region: content
-    weight: 20
     settings:
       label: above
       formatter_type: null
@@ -269,8 +287,8 @@ content:
     third_party_settings: {  }
   services:
     type: readonly_field_widget
+    weight: 22
     region: content
-    weight: 21
     settings:
       label: above
       formatter_type: null
@@ -279,8 +297,8 @@ content:
     third_party_settings: {  }
   streetview_entrance_url:
     type: readonly_field_widget
+    weight: 20
     region: content
-    weight: 19
     settings:
       label: above
       formatter_type: null
@@ -294,8 +312,8 @@ content:
     third_party_settings: {  }
   www:
     type: readonly_field_widget
-    region: content
     weight: 10
+    region: content
     settings:
       label: above
       formatter_type: null

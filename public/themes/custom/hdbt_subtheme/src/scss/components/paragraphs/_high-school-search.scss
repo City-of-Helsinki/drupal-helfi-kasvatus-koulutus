@@ -1,5 +1,6 @@
-.unit-search--high-school .views--unit-search {
+$card_spacing: $spacing-and-half;
 
+.unit-search--high-school .views--unit-search {
   .views-exposed-form {
     @include breakpoint($breakpoint-m) {
       margin-left: -$spacing-and-half;
@@ -24,13 +25,31 @@
 
   .unit-search__results {
     margin-top: $spacing;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+
+    @include breakpoint($breakpoint-s) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-left: -$card_spacing;
+      width: calc(100% + #{$card_spacing});
+    }
 
     @include breakpoint($breakpoint-m) {
       margin-top: $spacing-double;
     }
+  }
+}
 
-    & > .views-row + .views-row {
-      margin-top: $spacing;
-    }
+.has-navigation .component--unit-search {
+  margin-left: -$spacing-double;
+  margin-right: -$spacing-double;
+  padding-left: $spacing-double;
+  padding-right: $spacing-double;
+
+  @include breakpoint($breakpoint-l) {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
