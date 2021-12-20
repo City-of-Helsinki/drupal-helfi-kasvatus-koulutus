@@ -4093,16 +4093,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "2.3.0",
+            "version": "2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "1d6c7b77b0df1c344eceafdad0acd0628632a39e"
+                "reference": "b2636c206c046ab49ff8478782f474d5b6464109"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/1d6c7b77b0df1c344eceafdad0acd0628632a39e",
-                "reference": "1d6c7b77b0df1c344eceafdad0acd0628632a39e",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/b2636c206c046ab49ff8478782f474d5b6464109",
+                "reference": "b2636c206c046ab49ff8478782f474d5b6464109",
                 "shasum": ""
             },
             "require": {
@@ -4139,6 +4139,7 @@
                 "drupal/paragraphs": "^1.12",
                 "drupal/paragraphs_asymmetric_translation_widgets": "^1.0-beta4",
                 "drupal/pathauto": "^1.8",
+                "drupal/publication_date": "^2.0@beta",
                 "drupal/redirect": "^1.6",
                 "drupal/scheduler": "^1.3",
                 "drupal/search_api": "^1.0",
@@ -4179,6 +4180,9 @@
                     },
                     "drupal/linkit": {
                         "[#UHF-1872] Linkit support for link field": "https://www.drupal.org/files/issues/2021-08-20/avoid-linkit-CI-issue.patch"
+                    },
+                    "drupal/field_group": {
+                        "[#UHF-3268] Support for field group translations": "https://www.drupal.org/files/issues/2021-11-22/field_group_fix-translations_label_description-3111107-31.patch"
                     }
                 }
             },
@@ -4187,10 +4191,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/2.3.0",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/2.3.2",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2021-12-16T10:07:16+00:00"
+            "time": "2021-12-20T12:50:41+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -5141,6 +5145,70 @@
                 "source": "https://cgit.drupalcode.org/pathauto",
                 "issues": "https://www.drupal.org/project/issues/pathauto",
                 "documentation": "https://www.drupal.org/docs/8/modules/pathauto"
+            }
+        },
+        {
+            "name": "drupal/publication_date",
+            "version": "2.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/publication_date.git",
+                "reference": "8.x-2.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/publication_date-8.x-2.0-beta3.zip",
+                "reference": "8.x-2.0-beta3",
+                "shasum": "e1deac7f77d3b57b93f4f70661b97f70b3e22216"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.0-beta3",
+                    "datestamp": "1629791784",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Clever Age",
+                    "homepage": "https://www.drupal.org/user/547746"
+                },
+                {
+                    "name": "Sheldon Rampton",
+                    "homepage": "https://www.drupal.org/user/13085"
+                },
+                {
+                    "name": "dgtlmoon",
+                    "homepage": "https://www.drupal.org/user/25027"
+                },
+                {
+                    "name": "jstoller",
+                    "homepage": "https://www.drupal.org/user/99012"
+                },
+                {
+                    "name": "tmarly",
+                    "homepage": "https://www.drupal.org/user/159040"
+                },
+                {
+                    "name": "webflo",
+                    "homepage": "https://www.drupal.org/user/254778"
+                }
+            ],
+            "description": "Add a field containing the publication date.",
+            "homepage": "https://www.drupal.org/project/publication_date",
+            "support": {
+                "source": "https://git.drupalcode.org/project/publication_date"
             }
         },
         {
