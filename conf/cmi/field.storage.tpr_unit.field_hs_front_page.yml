@@ -1,0 +1,20 @@
+uuid: 256aad56-dbbf-4b9a-a5ce-904b02bacbaf
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+    - node
+id: tpr_unit.field_hs_front_page
+field_name: field_hs_front_page
+entity_type: tpr_unit
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

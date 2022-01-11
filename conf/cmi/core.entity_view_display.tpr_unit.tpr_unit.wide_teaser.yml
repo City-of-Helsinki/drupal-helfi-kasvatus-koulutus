@@ -7,6 +7,7 @@ dependencies:
     - field.field.tpr_unit.tpr_unit.field_content
     - field.field.tpr_unit.tpr_unit.field_hs_educational_mission
     - field.field.tpr_unit.tpr_unit.field_hs_emphasis
+    - field.field.tpr_unit.tpr_unit.field_hs_front_page
     - field.field.tpr_unit.tpr_unit.field_lower_content
     - field.field.tpr_unit.tpr_unit.field_metatags
   module:
@@ -23,60 +24,60 @@ mode: wide_teaser
 content:
   address:
     type: address_plain
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
     weight: 4
     region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   name:
     type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
     weight: 2
     region: content
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
   name_override:
     type: string
-    weight: 3
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 3
+    region: content
   opening_hours:
     type: tpr_connection
-    weight: 6
-    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 6
+    region: content
   phone:
     type: telephone_link
-    weight: 5
-    region: content
     label: hidden
     settings:
       title: ''
     third_party_settings: {  }
+    weight: 5
+    region: content
   picture_url:
     type: imagecache_external_responsive_image
-    weight: 0
-    region: content
     label: hidden
     settings:
       imagecache_external_responsive_style: image__3_2
       imagecache_external_link: ''
     third_party_settings: {  }
+    weight: 0
+    region: content
   picture_url_override:
     type: entity_reference_entity_view
-    weight: 1
-    region: content
     label: hidden
     settings:
       view_mode: image
       link: false
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   accessibility_email: true
   accessibility_phone: true
@@ -90,6 +91,7 @@ hidden:
   field_content: true
   field_hs_educational_mission: true
   field_hs_emphasis: true
+  field_hs_front_page: true
   field_lower_content: true
   field_metatags: true
   hide_description: true
