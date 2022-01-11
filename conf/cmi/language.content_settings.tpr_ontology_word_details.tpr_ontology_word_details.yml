@@ -1,0 +1,17 @@
+uuid: 5ebdbd8a-3d34-49c7-ab77-5f6b5c06cfc9
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - helfi_tpr
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: tpr_ontology_word_details.tpr_ontology_word_details
+target_entity_type_id: tpr_ontology_word_details
+target_bundle: tpr_ontology_word_details
+default_langcode: site_default
+language_alterable: true
