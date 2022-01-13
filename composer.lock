@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "481f12832ca88e279c31add3001a9b4c",
+    "content-hash": "e72eefe60a638ab204c82e157af7da06",
     "packages": [
         {
             "name": "City-of-Helsinki/php-hauki-client",
@@ -4242,16 +4242,16 @@
         },
         {
             "name": "drupal/helfi_tpr",
-            "version": "1.6.2",
+            "version": "1.6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr.git",
-                "reference": "489b0a61e22270234f5cf82291ae73d04555921f"
+                "reference": "0e66a1117bf4f2dda493c2fc019d90fdc09e65a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/489b0a61e22270234f5cf82291ae73d04555921f",
-                "reference": "489b0a61e22270234f5cf82291ae73d04555921f",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/0e66a1117bf4f2dda493c2fc019d90fdc09e65a6",
+                "reference": "0e66a1117bf4f2dda493c2fc019d90fdc09e65a6",
                 "shasum": ""
             },
             "require": {
@@ -4273,10 +4273,10 @@
             ],
             "description": "TPR integration",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/1.6.2",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/1.6.5",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/issues"
             },
-            "time": "2021-12-16T09:46:08+00:00"
+            "time": "2022-01-13T13:05:15+00:00"
         },
         {
             "name": "drupal/helfi_tunnistamo",
