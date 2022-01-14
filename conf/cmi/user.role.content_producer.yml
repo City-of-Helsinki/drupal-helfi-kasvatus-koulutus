@@ -15,6 +15,7 @@ dependencies:
     - content_translation
     - file
     - helfi_api_base
+    - helfi_school_addons
     - helfi_tpr
     - media
     - node
@@ -39,6 +40,7 @@ permissions:
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'access user profiles'
+  - 'admin school settings'
   - 'administer nodes'
   - 'cancel account'
   - 'change own username'

@@ -20,6 +20,7 @@ dependencies:
     - eu_cookie_compliance
     - file
     - helfi_api_base
+    - helfi_school_addons
     - helfi_tpr
     - locale
     - media
@@ -56,6 +57,7 @@ permissions:
   - 'access tpr_service overview'
   - 'access tpr_unit overview'
   - 'access user profiles'
+  - 'admin school settings'
   - 'administer blocks'
   - 'administer eu cookie compliance categories'
   - 'administer eu cookie compliance popup'
