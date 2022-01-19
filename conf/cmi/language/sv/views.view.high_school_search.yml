@@ -15,3 +15,6 @@ display:
         educational_mission_filter:
           expose:
             label: 'Välj specialuppgift'
+        study_programme_type_filter:
+          expose:
+            label: 'Välj allmänt gymnasium eller vuxengymnasium och -linje'

@@ -21,9 +21,12 @@ display:
       filters:
         emphasis_filter:
           expose:
-            label: 'Valitse painotus tai linja'
+            label: 'Valitse lukion painotus'
         educational_mission_filter:
           expose:
-            label: 'Valitse erityistehtävä'
+            label: 'Valitse erikoislukion painotus (erityistehtävä)'
+        study_programme_type_filter:
+          expose:
+            label: 'Valitse yleislukio tai aikuislukio tai -linja'
   entity_reference:
     display_title: Entiteettiviittaus
