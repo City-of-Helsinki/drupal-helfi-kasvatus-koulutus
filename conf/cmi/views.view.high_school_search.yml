@@ -594,8 +594,9 @@ display:
           operator: in
           value:
             all: all
-            globaalikansalainen: globaalikansalainen
+            'kansainvälisyys (globaalikansalainen)': 'kansainvälisyys (globaalikansalainen)'
             'kielet ja kansainvälisyys': 'kielet ja kansainvälisyys'
+            'luonnontieteet, yhteiskuntatieteet': 'luonnontieteet, yhteiskuntatieteet'
             'media ja yhteiskunta': 'media ja yhteiskunta'
             musiikki: musiikki
             teknologia: teknologia
@@ -611,7 +612,7 @@ display:
             operator: emphasis_filter_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: emphasis_filter
+            identifier: emphasis
             required: false
             remember: false
             multiple: false
@@ -651,7 +652,6 @@ display:
             kuvataide: kuvataide
             luonnontieteet: luonnontieteet
             musiikki: musiikki
-            'musik, bildkonst, humanekologi': 'musik, bildkonst, humanekologi'
             tanssi: tanssi
             urheilu: urheilu
           group: 2
@@ -664,7 +664,7 @@ display:
             operator: educational_mission_filter_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: educational_mission_filter
+            identifier: mission
             required: false
             remember: false
             multiple: false
@@ -711,7 +711,7 @@ display:
             operator: study_programme_type_filter_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: study_programme_type_filter
+            identifier: type
             required: false
             remember: false
             multiple: false
