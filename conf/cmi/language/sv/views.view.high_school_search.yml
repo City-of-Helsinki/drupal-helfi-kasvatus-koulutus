@@ -1,13 +1,6 @@
 display:
   default:
     display_options:
-      filters:
-        field_hs_emphasis_target_id:
-          expose:
-            label: 'Välj inriktning eller linje'
-        field_hs_educational_mission_target_id:
-          expose:
-            label: 'Välj specialuppgift'
       empty:
         area:
           content:
