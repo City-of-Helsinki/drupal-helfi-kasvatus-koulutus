@@ -1,0 +1,16 @@
+{% block paragraph %}
+  {% embed "@hdbt/misc/component.twig" with
+    {
+      component_classes: [ 'component--unit-search' ],
+      component_title: content.field_vs_search_title,
+      component_description: content.field_vs_search_description,
+      component_content_class: 'unit-search unit-search--vocational-school',
+    }
+  %}
+    {% block component_content %}
+
+      {{ drupal_view('vocational_school_search', 'block', vocational_school_search_arguments) }}
+
+    {% endblock component_content %}
+  {% endembed %}
+{% endblock paragraph %}

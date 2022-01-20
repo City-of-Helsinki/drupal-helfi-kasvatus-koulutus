@@ -1,0 +1,15 @@
+uuid: b2c2b80b-690d-4ddd-a821-a1f834578691
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: vocational_school_search
+label: 'Vocational School Search'
+icon_uuid: null
+icon_default: null
+description: 'With vocational school search paragraph content editor can create a list of vocational schools with filters.'
+behavior_plugins: {  }

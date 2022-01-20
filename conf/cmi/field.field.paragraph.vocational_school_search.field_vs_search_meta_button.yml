@@ -1,0 +1,21 @@
+uuid: b305f5d0-8236-4058-8790-439202f3e37b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vs_search_meta_button
+    - paragraphs.paragraphs_type.vocational_school_search
+id: paragraph.vocational_school_search.field_vs_search_meta_button
+field_name: field_vs_search_meta_button
+entity_type: paragraph
+bundle: vocational_school_search
+label: 'Search button'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Filter
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -94,52 +94,57 @@ function hdbt_subtheme_preprocess_paragraph(array &$variables) {
   $paragraph = $variables['paragraph'];
   $paragraph_type = $paragraph->getType();
 
-  // High school search paragraph.
-  if (
-    $paragraph_type == 'high_school_search' &&
-    $paragraph->hasField('field_hs_search_units')
-  ) {
-    // Get all unit ids what content producer has selected for the unit search
-    // view and set them as variables for the template.
-    $unit_ids = [];
-    $units = $paragraph->field_hs_search_units->getValue();
-    $ids = [];
-    foreach ($units as $unit) {
-      $ids[] = $unit['target_id'];
-      $unit_ids[] = 'tpr_unit:' . $unit['target_id'];
-    }
+  // High school & vocational school search paragraphs.
+  $search_types = array('high_school_search'=>'hs', 'vocational_school_search'=>'vs');
 
-    // Set the unit ids to a unit_search_arguments variable for the template.
-    $variables['high_school_search_arguments'] = implode(',', $ids);
-
-    // Get previously cached meta information field values and set them
-    // if no cached items are found.
-    $cached = \Drupal::cache()->get('high_school_search' . 'block' . $variables['current_langcode'] . $variables['high_school_search_arguments']);
-
-    if (!$cached) {
-      // Set meta information fields based on how content producer
-      // has defined the fields.
-      $meta = [];
-      $fields = [
-        'field_hs_search_meta_button',
-      ];
-
-      foreach ($fields as $field) {
-        if ($paragraph->hasField($field)) {
-          $meta[$field] = $paragraph->{$field}->value;
-        }
+  foreach ($search_types as $search_type => $search_type_prefix) {
+    if (
+      $paragraph_type == $search_type &&
+      $paragraph->hasField('field_' . $search_type_prefix . '_search_units')
+    ) {
+      // Get all unit ids what content producer has selected for the unit search
+      // view and set them as variables for the template.
+      $unit_ids = [];
+      $unit_field = 'field_' . $search_type_prefix . '_search_units';
+      $units = $paragraph->$unit_field->getValue();
+      $ids = [];
+      foreach ($units as $unit) {
+        $ids[] = $unit['target_id'];
+        $unit_ids[] = 'tpr_unit:' . $unit['target_id'];
       }
 
-      // Cache the meta fields based on view id and units.
-      if (!empty($meta) && !empty($unit_ids)) {
-        $tags = array_merge(['paragraph:' . $paragraph->id()], $unit_ids);
+      // Set the unit ids to a unit_search_arguments variable for the template.
+      $variables[$search_type . '_arguments'] = implode(',', $ids);
 
-        \Drupal::cache()->set(
-          'high_school_search' . 'block' . $variables['current_langcode'] . $variables['high_school_search_arguments'],
-          $meta,
-          Cache::PERMANENT,
-          $tags
-        );
+      // Get previously cached meta information field values and set them
+      // if no cached items are found.
+      $cached = \Drupal::cache()->get($search_type . 'block' . $variables['current_langcode'] . $variables[$search_type . '_arguments']);
+
+      if (!$cached) {
+        // Set meta information fields based on how content producer
+        // has defined the fields.
+        $meta = [];
+        $fields = [
+          'field_' . $search_type_prefix . '_search_meta_button',
+        ];
+
+        foreach ($fields as $field) {
+          if ($paragraph->hasField($field)) {
+            $meta[$field] = $paragraph->{$field}->value;
+          }
+        }
+
+        // Cache the meta fields based on view id and units.
+        if (!empty($meta) && !empty($unit_ids)) {
+          $tags = array_merge(['paragraph:' . $paragraph->id()], $unit_ids);
+
+          \Drupal::cache()->set(
+            $search_type . 'block' . $variables['current_langcode'] . $variables[$search_type . '_arguments'],
+            $meta,
+            Cache::PERMANENT,
+            $tags
+          );
+        }
       }
     }
   }

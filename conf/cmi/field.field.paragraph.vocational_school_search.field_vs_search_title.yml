@@ -1,0 +1,19 @@
+uuid: 161f61ab-678e-4ef0-8f1b-922f0ed6a143
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vs_search_title
+    - paragraphs.paragraphs_type.vocational_school_search
+id: paragraph.vocational_school_search.field_vs_search_title
+field_name: field_vs_search_title
+entity_type: paragraph
+bundle: vocational_school_search
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
