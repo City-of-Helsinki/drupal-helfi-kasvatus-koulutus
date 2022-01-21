@@ -1,6 +1,7 @@
 $card_spacing: $spacing-and-half;
 
-.unit.unit--high-school-card {
+.unit.unit--high-school-card,
+.unit.unit--vocational-school-card {
   margin-top: $spacing-and-half;
 
   @include breakpoint($breakpoint-s) {

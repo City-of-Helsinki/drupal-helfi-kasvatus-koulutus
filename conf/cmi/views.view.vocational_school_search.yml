@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.tpr_unit.high_school_card
+    - core.entity_view_mode.tpr_unit.vocational_school_card
   module:
     - helfi_tpr
     - user
@@ -363,7 +363,7 @@ display:
         type: 'entity:tpr_unit'
         options:
           relationship: none
-          view_mode: high_school_card
+          view_mode: vocational_school_card
       query:
         type: views_query
         options:
