@@ -39,7 +39,6 @@ function disableOtherSelects(selected) {
 // Listen to the change event on the high school search selects and trigger
 // the disableOtherSelects function if change is detected.
 document.addEventListener('DOMContentLoaded', function () {
-  console.log(selectElements);
   for (let select of selectElements) {
     select.addEventListener('change', function (){
       disableOtherSelects(this);
