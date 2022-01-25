@@ -11,35 +11,35 @@ mode: default
 content:
   name:
     type: string
-    weight: 0
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
+    region: content
   ontologyword_id:
     type: string
-    weight: 2
-    region: content
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 2
+    region: content
   school_details:
     type: tpr_school_details
-    weight: 3
-    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 3
+    region: content
   unit_id:
     type: string
-    weight: 1
-    region: content
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   langcode: true
   name_override: true

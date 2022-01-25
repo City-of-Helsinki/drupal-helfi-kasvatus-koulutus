@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.tpr_unit.high_school_card
   module:
+    - helfi_school_addons
     - helfi_tpr
     - user
 _core:
@@ -356,6 +357,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: tpr_unit
+          plugin_id: emphasis_filter
           operator: in
           value:
             all: all
@@ -399,8 +402,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: tpr_unit
-          plugin_id: emphasis_filter
         educational_mission_filter:
           id: educational_mission_filter
           table: tpr_unit
@@ -408,6 +409,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: tpr_unit
+          plugin_id: educational_mission_filter
           operator: in
           value:
             all: all
@@ -452,8 +455,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: tpr_unit
-          plugin_id: educational_mission_filter
       filter_groups:
         operator: AND
         groups:
@@ -498,8 +499,6 @@ display:
     display_plugin: block
     position: 1
     display_options:
-      rendering_language: '***LANGUAGE_entity_translation***'
-      display_extenders: {  }
       filters:
         content_translation_status:
           id: content_translation_status
@@ -590,11 +589,14 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: tpr_unit
+          plugin_id: emphasis_filter
           operator: in
           value:
             all: all
-            globaalikansalainen: globaalikansalainen
+            'kansainvälisyys (globaalikansalainen)': 'kansainvälisyys (globaalikansalainen)'
             'kielet ja kansainvälisyys': 'kielet ja kansainvälisyys'
+            'luonnontieteet, yhteiskuntatieteet': 'luonnontieteet, yhteiskuntatieteet'
             'media ja yhteiskunta': 'media ja yhteiskunta'
             musiikki: musiikki
             teknologia: teknologia
@@ -610,7 +612,7 @@ display:
             operator: emphasis_filter_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: emphasis_filter
+            identifier: emphasis
             required: false
             remember: false
             multiple: false
@@ -633,8 +635,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: tpr_unit
-          plugin_id: emphasis_filter
         educational_mission_filter:
           id: educational_mission_filter
           table: tpr_unit
@@ -642,6 +642,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: tpr_unit
+          plugin_id: educational_mission_filter
           operator: in
           value:
             all: all
@@ -650,7 +652,6 @@ display:
             kuvataide: kuvataide
             luonnontieteet: luonnontieteet
             musiikki: musiikki
-            'musik, bildkonst, humanekologi': 'musik, bildkonst, humanekologi'
             tanssi: tanssi
             urheilu: urheilu
           group: 2
@@ -663,7 +664,7 @@ display:
             operator: educational_mission_filter_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: educational_mission_filter
+            identifier: mission
             required: false
             remember: false
             multiple: false
@@ -686,16 +687,63 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        study_programme_type_filter:
+          id: study_programme_type_filter
+          table: tpr_unit
+          field: study_programme_type_filter
+          relationship: none
+          group_type: group
+          admin_label: ''
           entity_type: tpr_unit
-          plugin_id: educational_mission_filter
-      defaults:
-        filters: false
-        filter_groups: false
+          plugin_id: study_programme_type_filter
+          operator: in
+          value:
+            all: all
+            general: general
+            adult: adult
+          group: 2
+          exposed: true
+          expose:
+            operator_id: study_programme_type_filter_op
+            label: 'Select the general programme or the upper secondary school for adults and a study programme'
+            description: ''
+            use_operator: false
+            operator: study_programme_type_filter_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              admin: '0'
+              content_producer: '0'
+              read_only: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       filter_groups:
         operator: AND
         groups:
           1: AND
           2: AND
+      defaults:
+        filters: false
+        filter_groups: false
+      rendering_language: '***LANGUAGE_entity_translation***'
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:

@@ -4096,16 +4096,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "2.3.8",
+            "version": "2.3.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "d97ad5c9398ce4943fd601dbb74f7dfe2520f7d9"
+                "reference": "68cf9733b0954334c241171239672c8e8f2b9615"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/d97ad5c9398ce4943fd601dbb74f7dfe2520f7d9",
-                "reference": "d97ad5c9398ce4943fd601dbb74f7dfe2520f7d9",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/68cf9733b0954334c241171239672c8e8f2b9615",
+                "reference": "68cf9733b0954334c241171239672c8e8f2b9615",
                 "shasum": ""
             },
             "require": {
@@ -4163,7 +4163,7 @@
                     "drupal/core": {
                         "[#UHF-181] Hide untranslated menu links": "https://www.drupal.org/files/issues/2021-03-05/3091246-allow-menu-tree-manipulators-alter-12-1.patch",
                         "[#UHF-920] Token for base URL (https://www.drupal.org/project/drupal/issues/1088112).": "https://www.drupal.org/files/issues/2020-10-06/1088112-63.patch",
-                        "[#UHF-3812] Drupal.views.ajaxView is not initializing pagers in nested views (https://www.drupal.org/project/drupal/issues/2858890).": "https://www.drupal.org/files/issues/2021-12-15/2858890-71.patch",
+                        "[#UHF-3812] Drupal.views.ajaxView is not initializing pagers in nested views (https://www.drupal.org/project/drupal/issues/2858890).": "https://www.drupal.org/files/issues/2021-12-29/2858890-75.patch",
                         "[#UHF-3087] Non-published menu links as parent (https://www.drupal.org/project/drupal/issues/2807629)": "https://www.drupal.org/files/issues/2021-07-09/2807629-45.patch"
                     },
                     "drupal/default_content": {
@@ -4195,10 +4195,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/2.3.8",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/2.3.11",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2022-01-13T09:38:38+00:00"
+            "time": "2022-01-25T07:05:53+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -4242,16 +4242,16 @@
         },
         {
             "name": "drupal/helfi_tpr",
-            "version": "1.6.6",
+            "version": "1.6.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr.git",
-                "reference": "5ea45b6931521afc47a3832585b663c1a297e56e"
+                "reference": "250d17d8b3a7970ce8a866da19a1023267cf77d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/5ea45b6931521afc47a3832585b663c1a297e56e",
-                "reference": "5ea45b6931521afc47a3832585b663c1a297e56e",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/250d17d8b3a7970ce8a866da19a1023267cf77d9",
+                "reference": "250d17d8b3a7970ce8a866da19a1023267cf77d9",
                 "shasum": ""
             },
             "require": {
@@ -4273,10 +4273,10 @@
             ],
             "description": "TPR integration",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/1.6.6",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/1.6.7",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/issues"
             },
-            "time": "2022-01-18T15:45:15+00:00"
+            "time": "2022-01-25T07:31:56+00:00"
         },
         {
             "name": "drupal/helfi_tunnistamo",
