@@ -356,6 +356,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: tpr_unit
+          plugin_id: emphasis_filter
           operator: in
           value:
             all: all
@@ -399,8 +401,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: tpr_unit
-          plugin_id: emphasis_filter
         educational_mission_filter:
           id: educational_mission_filter
           table: tpr_unit
@@ -408,6 +408,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: tpr_unit
+          plugin_id: educational_mission_filter
           operator: in
           value:
             all: all
@@ -452,8 +454,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: tpr_unit
-          plugin_id: educational_mission_filter
       filter_groups:
         operator: AND
         groups:
@@ -498,8 +498,6 @@ display:
     display_plugin: block
     position: 1
     display_options:
-      rendering_language: '***LANGUAGE_entity_translation***'
-      display_extenders: {  }
       filters:
         content_translation_status:
           id: content_translation_status
@@ -590,6 +588,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: tpr_unit
+          plugin_id: emphasis_filter
           operator: in
           value:
             all: all
@@ -633,8 +633,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: tpr_unit
-          plugin_id: emphasis_filter
         educational_mission_filter:
           id: educational_mission_filter
           table: tpr_unit
@@ -642,6 +640,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: tpr_unit
+          plugin_id: educational_mission_filter
           operator: in
           value:
             all: all
@@ -686,16 +686,16 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: tpr_unit
-          plugin_id: educational_mission_filter
-      defaults:
-        filters: false
-        filter_groups: false
       filter_groups:
         operator: AND
         groups:
           1: AND
           2: AND
+      defaults:
+        filters: false
+        filter_groups: false
+      rendering_language: '***LANGUAGE_entity_translation***'
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:

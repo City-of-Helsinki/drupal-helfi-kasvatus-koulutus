@@ -10,13 +10,6 @@ display:
           exposed_sorts_label: Järjestä
           sort_asc_label: Nouseva
           sort_desc_label: Laskeva
-      filters:
-        field_hs_emphasis_target_id:
-          expose:
-            label: 'Valitse painotus tai linja'
-        field_hs_educational_mission_target_id:
-          expose:
-            label: 'Valitse erityistehtävä'
       empty:
         area:
           content:
