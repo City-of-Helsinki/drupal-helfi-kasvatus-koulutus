@@ -20,6 +20,7 @@ dependencies:
     - eu_cookie_compliance
     - file
     - helfi_api_base
+    - helfi_school_addons
     - helfi_tpr
     - locale
     - media
@@ -52,9 +53,11 @@ permissions:
   - 'access site in maintenance mode'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'access tpr_ontology_word_details overview'
   - 'access tpr_service overview'
   - 'access tpr_unit overview'
   - 'access user profiles'
+  - 'admin school settings'
   - 'administer blocks'
   - 'administer eu cookie compliance categories'
   - 'administer eu cookie compliance popup'
@@ -64,6 +67,7 @@ permissions:
   - 'administer pathauto'
   - 'administer redirects'
   - 'administer sitemap settings'
+  - 'administer tpr_ontology_word_details'
   - 'administer tpr_service'
   - 'administer tpr_unit'
   - 'administer url aliases'
@@ -153,10 +157,12 @@ permissions:
   - 'translate tpr_service_channel'
   - 'translate tpr_unit'
   - 'update any media'
+  - 'update any tpr_ontology_word_details'
   - 'update any tpr_service'
   - 'update any tpr_unit'
   - 'update content translations'
   - 'update media'
+  - 'update own tpr_ontology_word_details'
   - 'update own tpr_service'
   - 'update own tpr_unit'
   - 'view all media revisions'
@@ -174,6 +180,7 @@ permissions:
   - 'view remote entities'
   - 'view scheduled content'
   - 'view the administration theme'
+  - 'view tpr_ontology_word_details'
   - 'view tpr_service'
   - 'view tpr_unit'
   - 'view unpublished paragraphs'

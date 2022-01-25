@@ -24,5 +24,13 @@ display:
             format: full_html
   block:
     display_title: Lohko
+    display_options:
+      filters:
+        emphasis_filter:
+          expose:
+            label: 'Valitse painotus tai linja'
+        educational_mission_filter:
+          expose:
+            label: 'Valitse erityistehtävä'
   entity_reference:
     display_title: Entiteettiviittaus
