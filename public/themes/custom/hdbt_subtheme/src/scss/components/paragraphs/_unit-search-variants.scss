@@ -1,6 +1,7 @@
 $card_spacing: $spacing-and-half;
 
-.unit-search--high-school .views--unit-search {
+.unit-search--high-school .views--unit-search,
+.unit-search--vocational-school .views--unit-search {
   .views-exposed-form {
     @include breakpoint($breakpoint-m) {
       margin-left: -$spacing-and-half;

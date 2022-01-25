@@ -1,0 +1,25 @@
+uuid: 05d9c96b-8f20-44f2-9b34-ae31267b828a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vs_search_units
+    - paragraphs.paragraphs_type.vocational_school_search
+id: paragraph.vocational_school_search.field_vs_search_units
+field_name: field_vs_search_units
+entity_type: paragraph
+bundle: vocational_school_search
+label: Units
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: vocational_school_search
+      display_name: entity_reference
+      arguments: {  }
+field_type: entity_reference

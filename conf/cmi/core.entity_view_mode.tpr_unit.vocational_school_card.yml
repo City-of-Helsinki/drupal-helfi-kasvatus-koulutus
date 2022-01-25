@@ -1,0 +1,10 @@
+uuid: 6c9e28bc-28d9-4f0e-a340-2e2343fb15c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+id: tpr_unit.vocational_school_card
+label: 'Vocational school card'
+targetEntityType: tpr_unit
+cache: true

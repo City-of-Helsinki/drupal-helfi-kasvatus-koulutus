@@ -2,7 +2,8 @@ $card_spacing: $spacing-and-half;
 $unit-arrow-icon-size-mobile: 32px;
 $unit-arrow-icon-size-desktop: 48px;
 
-.unit.unit--high-school-card {
+.unit.unit--high-school-card,
+.unit.unit--vocational-school-card {
   margin-top: $spacing-and-half;
 
   @include breakpoint($breakpoint-s) {
