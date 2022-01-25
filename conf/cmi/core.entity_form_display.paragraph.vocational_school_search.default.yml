@@ -1,0 +1,55 @@
+uuid: 6146265a-5f3c-477a-a65d-4383ca09759b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.vocational_school_search.field_vs_search_description
+    - field.field.paragraph.vocational_school_search.field_vs_search_meta_button
+    - field.field.paragraph.vocational_school_search.field_vs_search_title
+    - field.field.paragraph.vocational_school_search.field_vs_search_units
+    - paragraphs.paragraphs_type.vocational_school_search
+  module:
+    - select2
+    - text
+id: paragraph.vocational_school_search.default
+targetEntityType: paragraph
+bundle: vocational_school_search
+mode: default
+content:
+  field_vs_search_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_vs_search_meta_button:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_vs_search_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_vs_search_units:
+    type: select2_entity_reference
+    weight: 2
+    region: content
+    settings:
+      width: 100%
+      autocomplete: false
+      match_operator: CONTAINS
+      match_limit: 10
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

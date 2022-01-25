@@ -19,6 +19,7 @@ dependencies:
     - paragraphs.paragraphs_type.remote_video
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.unit_search
+    - paragraphs.paragraphs_type.vocational_school_search
   module:
     - entity_reference_revisions
 _core:
@@ -51,6 +52,7 @@ settings:
       from_library: from_library
       high_school_search: high_school_search
       remote_video: remote_video
+      vocational_school_search: vocational_school_search
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -115,5 +117,8 @@ settings:
         enabled: true
       unit_search:
         weight: -16
+        enabled: true
+      vocational_school_search:
+        weight: 44
         enabled: true
 field_type: entity_reference_revisions

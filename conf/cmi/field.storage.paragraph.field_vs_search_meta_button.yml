@@ -1,0 +1,21 @@
+uuid: 5d937127-4121-42c5-87b9-2b770bec6690
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_vs_search_meta_button
+field_name: field_vs_search_meta_button
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
