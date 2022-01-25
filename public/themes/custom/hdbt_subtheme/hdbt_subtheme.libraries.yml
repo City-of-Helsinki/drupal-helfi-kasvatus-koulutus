@@ -4,3 +4,8 @@ global-styling:
     theme:
       dist/css/hdbt-subtheme-icons.css: {}
       dist/css/styles.min.css: {}
+
+high-school-search:
+  version: 1.x
+  js:
+    dist/js/high-school-search.min.js: { }
