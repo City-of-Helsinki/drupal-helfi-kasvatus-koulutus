@@ -1,6 +1,7 @@
 // Find all select elements inside high school search.
 const selectElements = document.querySelectorAll(
-  '.unit-search--high-school .form-select'
+  '.unit-search--high-school .js-form-item-emphasis .form-select, ' +
+  '.unit-search--high-school .js-form-item-mission .form-select'
 );
 
 // Disable all other selects except the one that has some OTHER option selected
