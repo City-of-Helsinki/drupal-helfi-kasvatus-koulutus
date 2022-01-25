@@ -7,13 +7,20 @@ $card_spacing: $spacing-and-half;
       margin-left: -$spacing-and-half;
     }
 
-    .form-item {
+    .form-item,
+    .form-actions {
       margin-bottom: $spacing-double;
 
       @include breakpoint($breakpoint-m) {
         margin-bottom: 0;
-        margin-left: $spacing-and-half;
+        padding-left: $spacing-and-half;
         width: 25%;
+      }
+    }
+
+    .form-actions .form-submit {
+      @include breakpoint($breakpoint-m) {
+        margin-left: 0;
       }
     }
 
@@ -53,4 +60,34 @@ $card_spacing: $spacing-and-half;
     margin-left: 0;
     margin-right: 0;
   }
+}
+
+// If there is sidebar on the basic page and the high school search is on the
+// upper content of the site the filters can't fit so they need to be adjusted.
+.has-sidebar .components--upper .unit-search--high-school .views--unit-search {
+  .views-exposed-form {
+    @include breakpoint($breakpoint-l) {
+      margin-left: 0;
+    }
+
+    @include breakpoint($breakpoint-xl) {
+      margin-left: -$spacing-and-half;
+    }
+
+    .form-item,
+    .form-actions {
+      @include breakpoint($breakpoint-l) {
+        margin-bottom: $spacing-double;
+        padding-left: 0;
+        width: 100%;
+      }
+
+      @include breakpoint($breakpoint-xl) {
+        margin-bottom: 0;
+        padding-left: $spacing-and-half;
+        width: 25%;
+      }
+    }
+  }
+
 }
