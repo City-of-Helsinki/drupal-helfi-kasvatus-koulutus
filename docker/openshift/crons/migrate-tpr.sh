@@ -8,7 +8,7 @@ function populate_variables {
   # migrate status
   MIGRATE_STATUS=$(drush migrate:status --format=json)
   php ./docker/openshift/crons/migrate-status.php \
-    tpr_unit,tpr_service,tpr_errand_service,tpr_service_channel \
+    tpr_unit,tpr_service,tpr_errand_service,tpr_service_channel,tpr_ontology_word_details \
     "$MIGRATE_STATUS" > /tmp/migrate-tpr-source.sh \
     $1
 
@@ -59,6 +59,10 @@ do
   if run_migrate "tpr_service_channel"; then
     echo "Running TPR Service Channel migrate: $(date)"
     PARTIAL_MIGRATE=1 drush migrate:import tpr_service_channel
+  fi
+  if run_migrate "tpr_ontology_word_details"; then
+    echo "Running TPR Ontology Word Details migrate: $(date)"
+    PARTIAL_MIGRATE=1 drush migrate:import tpr_ontology_word_details
   fi
   # Reset migrate status if migrate has been running for more
   # than 12 hours.
