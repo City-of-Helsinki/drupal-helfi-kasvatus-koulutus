@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Running TPR Migrations: $(date)"
+echo "Running Kasko TPR Migrations: $(date)"
 
 function populate_variables {
   # Generate variables used to control which migrates needs
@@ -8,15 +8,15 @@ function populate_variables {
   # migrate status
   MIGRATE_STATUS=$(drush migrate:status --format=json)
   php ./docker/openshift/crons/migrate-status.php \
-    tpr_unit,tpr_service,tpr_errand_service,tpr_service_channel \
-    "$MIGRATE_STATUS" > /tmp/migrate-tpr-source.sh \
+    tpr_ontology_word_details \
+    "$MIGRATE_STATUS" > /tmp/migrate-tpr-kasko-source.sh \
     $1
 
   # Contains variables:
   # - $RESET_STATUS
   # - $SKIP_MIGRATE
   # Both contains a space separated list of migrates
-  source /tmp/migrate-tpr-source.sh
+  source /tmp/migrate-tpr-kasko-source.sh
 }
 
 function reset_status {
@@ -36,35 +36,23 @@ function run_migrate {
 }
 
 # Populate variables for the first run after deploy and
-# default migrate interval to 6 hours.
-populate_variables 21600
+# default migrate interval to 12 hours.
+populate_variables 43200
 
 while true
 do
   # Reset stuck migrates.
   reset_status
 
-  if run_migrate "tpr_unit"; then
-    echo "Running TPR Unit migrate: $(date)"
-    PARTIAL_MIGRATE=1 drush migrate:import tpr_unit
-  fi
-  if run_migrate "tpr_service"; then
-    echo "Running TPR Service migrate: $(date)"
-    PARTIAL_MIGRATE=1 drush migrate:import tpr_service
-  fi
-  if run_migrate "tpr_errand_service"; then
-    echo "Running TPR Errand Service migrate: $(date)"
-    PARTIAL_MIGRATE=1 drush migrate:import tpr_errand_service
-  fi
-  if run_migrate "tpr_service_channel"; then
-    echo "Running TPR Service Channel migrate: $(date)"
-    PARTIAL_MIGRATE=1 drush migrate:import tpr_service_channel
+  if run_migrate "tpr_ontology_word_details"; then
+    echo "Running TPR Ontology Word Details migrate: $(date)"
+    PARTIAL_MIGRATE=1 drush migrate:import tpr_ontology_word_details
   fi
   # Reset migrate status if migrate has been running for more
   # than 12 hours.
   populate_variables 43200
   # Never skip migrate after first time.
   SKIP_MIGRATE=
-  # Sleep for 6 hours.
-  sleep 21600
+  # Sleep for 12 hours.
+  sleep 43200
 done
