@@ -1,4 +1,4 @@
-(function ($, Drupal, once) {
+(function (Drupal) {
   Drupal.behaviors.HighSchoolSearch = {};
 
   Drupal.behaviors.HighSchoolSearch.attach = function (context, settings) {
@@ -61,4 +61,4 @@
     }
   }
 
-})(jQuery, Drupal, once);
+})(Drupal);

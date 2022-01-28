@@ -10,5 +10,4 @@ high-school-search:
   js:
     dist/js/high-school-search.min.js: { }
   dependencies:
-    - core/jquery
     - core/drupal
