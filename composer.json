@@ -20,7 +20,7 @@
         "drupal/helfi_hauki": "^1.0",
         "drupal/helfi_linkedevents": "^1.0",
         "drupal/helfi_platform_config": "^2.0",
-        "drupal/helfi_proxy": "^1.2",
+        "drupal/helfi_proxy": "^2.0",
         "drupal/helfi_tpr": "^1.0",
         "drupal/helfi_tunnistamo": "^2.0",
         "drupal/stage_file_proxy": "^1.2",
