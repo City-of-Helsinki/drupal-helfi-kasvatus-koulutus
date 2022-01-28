@@ -19,6 +19,7 @@ dependencies:
     - content_translation
     - eu_cookie_compliance
     - file
+    - group
     - helfi_api_base
     - helfi_school_addons
     - helfi_tpr
@@ -48,6 +49,7 @@ permissions:
   - 'access content'
   - 'access content overview'
   - 'access files overview'
+  - 'access group overview'
   - 'access media overview'
   - 'access remote entities overview'
   - 'access site in maintenance mode'

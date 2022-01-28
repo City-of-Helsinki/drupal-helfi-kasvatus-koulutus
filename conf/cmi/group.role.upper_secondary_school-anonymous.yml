@@ -1,0 +1,14 @@
+uuid: 0786733f-447c-4688-bea4-33d2d5e0f86a
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+id: upper_secondary_school-anonymous
+label: Anonymous
+weight: -102
+internal: true
+audience: anonymous
+group_type: upper_secondary_school
+permissions_ui: true
+permissions: {  }
