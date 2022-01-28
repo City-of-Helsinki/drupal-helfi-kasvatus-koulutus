@@ -1,8 +1,0 @@
-uuid: eff6c203-337f-4412-b8b2-ddc6a95eade1
-langcode: und
-status: true
-dependencies: {  }
-name: 'Educational mission'
-vid: educational_mission
-description: 'High school educational mission such as dance.'
-weight: 0
