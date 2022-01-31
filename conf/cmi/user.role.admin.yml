@@ -11,8 +11,6 @@ dependencies:
     - node.type.announcement
     - node.type.landing_page
     - node.type.page
-    - taxonomy.vocabulary.educational_mission
-    - taxonomy.vocabulary.emphasis
     - taxonomy.vocabulary.keywords
   module:
     - block
@@ -87,8 +85,6 @@ permissions:
   - 'create remote entities'
   - 'create remote_video media'
   - 'create soundcloud media'
-  - 'create terms in educational_mission'
-  - 'create terms in emphasis'
   - 'create terms in keywords'
   - 'create url aliases'
   - 'delete all revisions'
@@ -115,8 +111,6 @@ permissions:
   - 'delete own soundcloud media'
   - 'delete page revisions'
   - 'delete remote entities'
-  - 'delete terms in educational_mission'
-  - 'delete terms in emphasis'
   - 'delete terms in keywords'
   - 'edit any announcement content'
   - 'edit any file media'
@@ -136,8 +130,6 @@ permissions:
   - 'edit own soundcloud media'
   - 'edit paragraph library item'
   - 'edit remote entities'
-  - 'edit terms in educational_mission'
-  - 'edit terms in emphasis'
   - 'edit terms in keywords'
   - 'revert all revisions'
   - 'revert all tpr_service revisions'
@@ -150,8 +142,6 @@ permissions:
   - 'translate any entity'
   - 'translate configuration'
   - 'translate editable entities'
-  - 'translate educational_mission taxonomy_term'
-  - 'translate emphasis taxonomy_term'
   - 'translate file media'
   - 'translate image media'
   - 'translate interface'
