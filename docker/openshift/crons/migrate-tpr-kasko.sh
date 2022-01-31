@@ -49,8 +49,8 @@ do
     PARTIAL_MIGRATE=1 drush migrate:import tpr_ontology_word_details
   fi
   # Reset migrate status if migrate has been running for more
-  # than 12 hours.
-  populate_variables 43200
+  # than 24 hours.
+  populate_variables 86400
   # Never skip migrate after first time.
   SKIP_MIGRATE=
   # Sleep for 12 hours.
