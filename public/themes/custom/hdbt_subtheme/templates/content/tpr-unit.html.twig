@@ -44,7 +44,7 @@
   <div{{ attributes.addClass(classes) }}>
   {% if view_mode == 'high_school_card' and high_school_front_page_nid is not empty %}
     <a href="{{ url('entity.node.canonical', { 'node': high_school_front_page_nid }) }}" class="unit__link">
-  {% elseif view_mode == 'high_school_card' and content.www is not empty %}
+  {% elseif view_mode == 'high_school_card' and content.www.0 is not empty %}
     <a href="{{ content.www.0 }}" class="unit__link">
   {% else %}
     <a href="{{ url('entity.tpr_unit.canonical', { 'tpr_unit': entity.id() }) }}" class="unit__link">
