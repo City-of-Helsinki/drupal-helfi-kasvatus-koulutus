@@ -12,3 +12,12 @@ msgstr "Valitse painotus tai linja"
 
 msgid "Select a special educational mission"
 msgstr "Valitse erityistehtävä"
+
+msgid "Filter on the form has been selected and some of the other filters might be dimmed because of your selection. To use the filters that were dimmed select the option All on the selected filter."
+msgstr "Olet tehnyt valinnan yhteen lomakkeen suodattimista ja tämä valinta on saattanut poistaa käytöstä muita suodattimia. Käyttääksesi käytöstä poistettuja suodattimia sinun tulee valita valittuun suodattimeen arvo Kaikki."
+
+msgctxt "Vocational school search count"
+msgid "unit"
+msgid_plural "units"
+msgstr[0] "toimipaikka"
+msgstr[1] "toimipaikkaa"

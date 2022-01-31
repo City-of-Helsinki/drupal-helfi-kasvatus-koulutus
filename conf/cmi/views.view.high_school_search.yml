@@ -4,11 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.tpr_unit.high_school_card
-    - taxonomy.vocabulary.educational_mission
-    - taxonomy.vocabulary.emphasis
   module:
+    - helfi_school_addons
     - helfi_tpr
-    - taxonomy
     - user
 _core:
   default_config_hash: Qi_H9S0h8L3oK0pwRXFvyfqE1rtbScL6G5En1FHfQ9I
@@ -352,194 +350,36 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        langcode_1:
-          id: langcode_1
-          table: taxonomy_term_field_data
-          field: langcode
-          relationship: field_hs_emphasis
-          group_type: group
-          admin_label: ''
-          entity_type: taxonomy_term
-          entity_field: langcode
-          plugin_id: language
-          operator: empty
-          value:
-            '***LANGUAGE_language_content***': '***LANGUAGE_language_content***'
-          group: 2
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        langcode_5:
-          id: langcode_5
-          table: taxonomy_term_field_data
-          field: langcode
-          relationship: field_hs_educational_mission
-          group_type: group
-          admin_label: ''
-          entity_type: taxonomy_term
-          entity_field: langcode
-          plugin_id: language
-          operator: empty
-          value: {  }
-          group: 2
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        langcode_2:
-          id: langcode_2
-          table: taxonomy_term_field_data
-          field: langcode
-          relationship: field_hs_emphasis
-          group_type: group
-          admin_label: ''
-          entity_type: taxonomy_term
-          entity_field: langcode
-          plugin_id: language
-          operator: in
-          value:
-            '***LANGUAGE_language_content***': '***LANGUAGE_language_content***'
-          group: 2
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        langcode_4:
-          id: langcode_4
-          table: taxonomy_term_field_data
-          field: langcode
-          relationship: field_hs_educational_mission
-          group_type: group
-          admin_label: ''
-          entity_type: taxonomy_term
-          entity_field: langcode
-          plugin_id: language
-          operator: in
-          value:
-            '***LANGUAGE_language_content***': '***LANGUAGE_language_content***'
-          group: 2
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        field_hs_emphasis_target_id:
-          id: field_hs_emphasis_target_id
-          table: tpr_unit__field_hs_emphasis
-          field: field_hs_emphasis_target_id
+        emphasis_filter:
+          id: emphasis_filter
+          table: tpr_unit
+          field: emphasis_filter
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: taxonomy_index_tid
-          operator: or
-          value: {  }
-          group: 3
+          entity_type: tpr_unit
+          plugin_id: emphasis_filter
+          operator: in
+          value:
+            all: all
+            globaalikansalainen: globaalikansalainen
+            'kielet ja kansainvälisyys': 'kielet ja kansainvälisyys'
+            'media ja yhteiskunta': 'media ja yhteiskunta'
+            musiikki: musiikki
+            teknologia: teknologia
+            tiede: tiede
+            yrittäjyys: yrittäjyys
+          group: 2
           exposed: true
           expose:
-            operator_id: field_hs_emphasis_target_id_op
-            label: 'Select a special emphasis or study programme'
-            description: ''
+            operator_id: emphasis_filter_op
+            label: 'Emphasis filter'
+            description: 'Select a special emphasis or study programme'
             use_operator: false
-            operator: field_hs_emphasis_target_id_op
+            operator: emphasis_filter_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_hs_emphasis_target_id
+            identifier: emphasis_filter
             required: false
             remember: false
             multiple: false
@@ -548,6 +388,7 @@ display:
               anonymous: '0'
               admin: '0'
               content_producer: '0'
+              read_only: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -561,33 +402,37 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          vid: emphasis
-          type: select
-          hierarchy: false
-          limit: true
-          error_message: true
-        field_hs_educational_mission_target_id:
-          id: field_hs_educational_mission_target_id
-          table: tpr_unit__field_hs_educational_mission
-          field: field_hs_educational_mission_target_id
+        educational_mission_filter:
+          id: educational_mission_filter
+          table: tpr_unit
+          field: educational_mission_filter
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: taxonomy_index_tid
-          operator: or
-          value: {  }
-          group: 3
+          entity_type: tpr_unit
+          plugin_id: educational_mission_filter
+          operator: in
+          value:
+            all: all
+            'englanninkielinen IB-opetus': 'englanninkielinen IB-opetus'
+            ilmaisutaito: ilmaisutaito
+            kuvataide: kuvataide
+            luonnontieteet: luonnontieteet
+            musiikki: musiikki
+            'musik, bildkonst, humanekologi': 'musik, bildkonst, humanekologi'
+            tanssi: tanssi
+            urheilu: urheilu
+          group: 2
           exposed: true
           expose:
-            operator_id: field_hs_educational_mission_target_id_op
+            operator_id: educational_mission_filter_op
             label: 'Select a special educational mission'
             description: ''
             use_operator: false
-            operator: field_hs_educational_mission_target_id_op
+            operator: educational_mission_filter_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_hs_educational_mission_target_id
+            identifier: educational_mission_filter
             required: false
             remember: false
             multiple: false
@@ -596,6 +441,7 @@ display:
               anonymous: '0'
               admin: '0'
               content_producer: '0'
+              read_only: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -609,18 +455,11 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          vid: educational_mission
-          type: select
-          hierarchy: false
-          limit: true
-          error_message: true
       filter_groups:
         operator: AND
         groups:
           1: AND
-          2: OR
-          3: AND
+          2: AND
       style:
         type: default
         options:
@@ -640,25 +479,7 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships:
-        field_hs_emphasis:
-          id: field_hs_emphasis
-          table: tpr_unit__field_hs_emphasis
-          field: field_hs_emphasis
-          relationship: none
-          group_type: group
-          admin_label: 'field_hs_emphasis: Taxonomy term'
-          plugin_id: standard
-          required: false
-        field_hs_educational_mission:
-          id: field_hs_educational_mission
-          table: tpr_unit__field_hs_educational_mission
-          field: field_hs_educational_mission
-          relationship: none
-          group_type: group
-          admin_label: 'field_hs_educational_mission: Taxonomy term'
-          plugin_id: standard
-          required: false
+      relationships: {  }
       use_ajax: true
       group_by: true
       header: {  }
@@ -670,7 +491,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
         - user.permissions
       tags: {  }
   block:
@@ -679,6 +499,249 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      filters:
+        content_translation_status:
+          id: content_translation_status
+          table: tpr_unit_field_data
+          field: content_translation_status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: tpr_unit
+          entity_field: content_translation_status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        langcode:
+          id: langcode
+          table: tpr_unit_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: tpr_unit
+          entity_field: langcode
+          plugin_id: language
+          operator: in
+          value:
+            '***LANGUAGE_language_content***': '***LANGUAGE_language_content***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        emphasis_filter:
+          id: emphasis_filter
+          table: tpr_unit
+          field: emphasis_filter
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: tpr_unit
+          plugin_id: emphasis_filter
+          operator: in
+          value:
+            all: all
+            'kansainvälisyys (globaalikansalainen)': 'kansainvälisyys (globaalikansalainen)'
+            'kielet ja kansainvälisyys': 'kielet ja kansainvälisyys'
+            'luonnontieteet, yhteiskuntatieteet': 'luonnontieteet, yhteiskuntatieteet'
+            'media ja yhteiskunta': 'media ja yhteiskunta'
+            musiikki: musiikki
+            teknologia: teknologia
+            tiede: tiede
+            yrittäjyys: yrittäjyys
+          group: 2
+          exposed: true
+          expose:
+            operator_id: emphasis_filter_op
+            label: 'Select a special emphasis or study programme'
+            description: ''
+            use_operator: false
+            operator: emphasis_filter_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: emphasis
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              admin: '0'
+              content_producer: '0'
+              read_only: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        educational_mission_filter:
+          id: educational_mission_filter
+          table: tpr_unit
+          field: educational_mission_filter
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: tpr_unit
+          plugin_id: educational_mission_filter
+          operator: in
+          value:
+            all: all
+            'englanninkielinen IB-opetus': 'englanninkielinen IB-opetus'
+            ilmaisutaito: ilmaisutaito
+            kuvataide: kuvataide
+            luonnontieteet: luonnontieteet
+            musiikki: musiikki
+            tanssi: tanssi
+            urheilu: urheilu
+          group: 2
+          exposed: true
+          expose:
+            operator_id: educational_mission_filter_op
+            label: 'Select a special educational mission'
+            description: ''
+            use_operator: false
+            operator: educational_mission_filter_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: mission
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              admin: '0'
+              content_producer: '0'
+              read_only: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        study_programme_type_filter:
+          id: study_programme_type_filter
+          table: tpr_unit
+          field: study_programme_type_filter
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: tpr_unit
+          plugin_id: study_programme_type_filter
+          operator: in
+          value:
+            all: all
+            general: general
+            adult: adult
+          group: 2
+          exposed: true
+          expose:
+            operator_id: study_programme_type_filter_op
+            label: 'Select the general programme or the upper secondary school for adults and a study programme'
+            description: ''
+            use_operator: false
+            operator: study_programme_type_filter_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              admin: '0'
+              content_producer: '0'
+              read_only: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+          2: AND
+      defaults:
+        filters: false
+        filter_groups: false
       rendering_language: '***LANGUAGE_entity_translation***'
       display_extenders: {  }
     cache_metadata:
@@ -687,7 +750,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
         - user.permissions
       tags: {  }
   entity_reference:

@@ -10,13 +10,6 @@ display:
           exposed_sorts_label: Järjestä
           sort_asc_label: Nouseva
           sort_desc_label: Laskeva
-      filters:
-        field_hs_emphasis_target_id:
-          expose:
-            label: 'Valitse painotus tai linja'
-        field_hs_educational_mission_target_id:
-          expose:
-            label: 'Valitse erityistehtävä'
       empty:
         area:
           content:
@@ -24,5 +17,16 @@ display:
             format: full_html
   block:
     display_title: Lohko
+    display_options:
+      filters:
+        emphasis_filter:
+          expose:
+            label: 'Valitse lukion painotus'
+        educational_mission_filter:
+          expose:
+            label: 'Valitse erikoislukion painotus (erityistehtävä)'
+        study_programme_type_filter:
+          expose:
+            label: 'Valitse yleislukio tai aikuislukio tai -linja'
   entity_reference:
     display_title: Entiteettiviittaus

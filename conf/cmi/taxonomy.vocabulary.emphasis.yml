@@ -1,8 +1,0 @@
-uuid: 0abffcac-cb9f-41a3-a5ac-7c8bc8695ec1
-langcode: und
-status: true
-dependencies: {  }
-name: Emphasis
-vid: emphasis
-description: 'High school emphasis such as media.'
-weight: 0
