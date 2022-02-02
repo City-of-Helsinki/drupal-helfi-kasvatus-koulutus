@@ -10,9 +10,7 @@ dependencies:
     - text
 third_party_settings:
   allowed_formats:
-    full_html: '0'
-    minimal: '0'
-    plain_text: '0'
+    allowed_formats: {  }
 id: paragraph.high_school_search.field_hs_search_description
 field_name: field_hs_search_description
 entity_type: paragraph

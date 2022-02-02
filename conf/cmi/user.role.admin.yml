@@ -8,10 +8,9 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - media.type.soundcloud
+    - node.type.announcement
     - node.type.landing_page
     - node.type.page
-    - taxonomy.vocabulary.educational_mission
-    - taxonomy.vocabulary.emphasis
     - taxonomy.vocabulary.keywords
   module:
     - block
@@ -74,6 +73,7 @@ permissions:
   - 'administer users'
   - 'cancel account'
   - 'change own username'
+  - 'create announcement content'
   - 'create content translations'
   - 'create file media'
   - 'create hel_map media'
@@ -85,11 +85,11 @@ permissions:
   - 'create remote entities'
   - 'create remote_video media'
   - 'create soundcloud media'
-  - 'create terms in educational_mission'
-  - 'create terms in emphasis'
   - 'create terms in keywords'
   - 'create url aliases'
   - 'delete all revisions'
+  - 'delete announcement revisions'
+  - 'delete any announcement content'
   - 'delete any file media'
   - 'delete any hel_map media'
   - 'delete any image media'
@@ -101,6 +101,7 @@ permissions:
   - 'delete content translations'
   - 'delete landing_page revisions'
   - 'delete media'
+  - 'delete own announcement content'
   - 'delete own file media'
   - 'delete own hel_map media'
   - 'delete own image media'
@@ -110,9 +111,8 @@ permissions:
   - 'delete own soundcloud media'
   - 'delete page revisions'
   - 'delete remote entities'
-  - 'delete terms in educational_mission'
-  - 'delete terms in emphasis'
   - 'delete terms in keywords'
+  - 'edit any announcement content'
   - 'edit any file media'
   - 'edit any hel_map media'
   - 'edit any image media'
@@ -120,6 +120,7 @@ permissions:
   - 'edit any page content'
   - 'edit any remote_video media'
   - 'edit any soundcloud media'
+  - 'edit own announcement content'
   - 'edit own file media'
   - 'edit own hel_map media'
   - 'edit own image media'
@@ -129,20 +130,18 @@ permissions:
   - 'edit own soundcloud media'
   - 'edit paragraph library item'
   - 'edit remote entities'
-  - 'edit terms in educational_mission'
-  - 'edit terms in emphasis'
   - 'edit terms in keywords'
   - 'revert all revisions'
   - 'revert all tpr_service revisions'
   - 'revert all tpr_unit revisions'
+  - 'revert announcement revisions'
   - 'revert landing_page revisions'
   - 'revert page revisions'
   - 'schedule publishing of nodes'
+  - 'translate announcement node'
   - 'translate any entity'
   - 'translate configuration'
   - 'translate editable entities'
-  - 'translate educational_mission taxonomy_term'
-  - 'translate emphasis taxonomy_term'
   - 'translate file media'
   - 'translate image media'
   - 'translate interface'
@@ -169,6 +168,7 @@ permissions:
   - 'view all revisions'
   - 'view all tpr_service revisions'
   - 'view all tpr_unit revisions'
+  - 'view announcement revisions'
   - 'view any unpublished content'
   - 'view any unpublished content'
   - 'view any unpublished content'

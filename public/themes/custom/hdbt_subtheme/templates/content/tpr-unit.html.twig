@@ -42,45 +42,47 @@
   %}
 
   <div{{ attributes.addClass(classes) }}>
-    {% if view_mode == 'high_school_card' and high_school_front_page_nid is not empty %}
+  {% if view_mode == 'high_school_card' and high_school_front_page_nid is not empty %}
     <a href="{{ url('entity.node.canonical', { 'node': high_school_front_page_nid }) }}" class="unit__link">
-      {% else %}
-      <a href="{{ url('entity.tpr_unit.canonical', { 'tpr_unit': entity.id() }) }}" class="unit__link">
+  {% elseif view_mode == 'high_school_card' and content.www.0 is not empty %}
+    <a href="{{ content.www.0 }}" class="unit__link">
+  {% else %}
+    <a href="{{ url('entity.tpr_unit.canonical', { 'tpr_unit': entity.id() }) }}" class="unit__link">
+  {% endif %}
+      <div{{ image_attributes.addClass(picture_classes) }}>
+        {% if content.picture_url_override|render %}
+          {{ content.picture_url_override }}
+        {% elseif content.picture_url|render %}
+          {{ content.picture_url }}
+        {% else %}
+          {% include "@hdbt/misc/image-placeholder.twig" ignore missing %}
         {% endif %}
-        <div{{ image_attributes.addClass(picture_classes) }}>
-          {% if content.picture_url_override|render %}
-            {{ content.picture_url_override }}
-          {% elseif content.picture_url|render %}
-            {{ content.picture_url }}
-          {% else %}
-            {% include "@hdbt/misc/image-placeholder.twig" ignore missing %}
+      </div>
+      <div class="unit__text">
+        <div class="unit__text__content">
+          <h3 class="unit__title">
+            {% if high_school_front_page_title is not empty %}
+              {{ high_school_front_page_title }}
+            {% else %}
+              {{ entity.label }}
+            {% endif %}
+          </h3>
+          {% if content.address|render %}
+            <div class="unit__info-row unit__info-row--address">
+              {{ content.address }}
+            </div>
           {% endif %}
+          {% if content.description_summary|render %}
+            <div class="unit__short-desc">
+              {{ content.description_summary }}
+            </div>
+          {% endif %}
+          <span class="unit__arrow">
+          {% include '@hdbt/misc/icon.twig' ignore missing with {icon: 'arrow-right'} %}
+        </span>
         </div>
-        <div class="unit__text">
-          <div class="unit__text__content">
-            <h3 class="unit__title">
-              {% if high_school_front_page_title is not empty %}
-                {{ high_school_front_page_title }}
-              {% else %}
-                {{ entity.label }}
-              {% endif %}
-            </h3>
-            {% if content.address|render %}
-              <div class="unit__info-row unit__info-row--address">
-                {{ content.address }}
-              </div>
-            {% endif %}
-            {% if content.description_summary|render %}
-              <div class="unit__short-desc">
-                {{ content.description_summary }}
-              </div>
-            {% endif %}
-            <span class="unit__arrow">
-            {% include '@hdbt/misc/icon.twig' ignore missing with {icon: 'arrow-right'} %}
-          </span>
-          </div>
-        </div>
-      </a>
+      </div>
+    </a>
   </div>
 
 {% else %}
