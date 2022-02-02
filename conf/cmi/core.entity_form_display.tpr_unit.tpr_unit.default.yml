@@ -156,7 +156,6 @@ content:
     region: content
     settings:
       sidebar: false
-      use_details: true
     third_party_settings: {  }
   hide_description:
     type: boolean_checkbox
