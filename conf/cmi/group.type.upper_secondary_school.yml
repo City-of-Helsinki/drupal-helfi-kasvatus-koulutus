@@ -7,5 +7,5 @@ label: 'Upper secondary school'
 description: ''
 new_revision: true
 creator_membership: true
-creator_wizard: true
+creator_wizard: false
 creator_roles: {  }

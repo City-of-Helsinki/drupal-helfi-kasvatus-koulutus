@@ -1,0 +1,37 @@
+display:
+  default:
+    display_options:
+      title: Toimipisteet
+      fields:
+        name:
+          label: Nimi
+        langcode:
+          label: Kieli
+        content_translation_status:
+          label: Tila
+        content_translation_changed:
+          label: Päivitetty
+        view_group_content:
+          text: 'Näytä relaatio'
+        edit_group_content:
+          text: 'Muokkaa relaatiota'
+        delete_group_content:
+          text: 'Poista relaatio'
+        edit_tpr_unit:
+          text: 'Muokkaa toimipistettä'
+        dropbutton:
+          label: Toimenpiteet
+      filters:
+        langcode:
+          expose:
+            label: Kieli
+      exposed_form:
+        options:
+          submit_button: Käytä
+      arguments:
+        gid:
+          title: '{{ arguments.gid|placeholder }} toimipisteet'
+  page_1:
+    display_options:
+      menu:
+        title: Toimipisteet
