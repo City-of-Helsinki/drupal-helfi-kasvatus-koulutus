@@ -43,7 +43,7 @@ _core:
   default_config_hash: 7RTyCpgMKCMdwkxYrpzYOCq7DQDHO0SrTjB7xwFaIyI
 id: admin
 label: Admin
-weight: 2
+weight: -8
 is_admin: null
 permissions:
   - 'access administration pages'
@@ -92,6 +92,7 @@ permissions:
   - 'create terms in educational_mission'
   - 'create terms in emphasis'
   - 'create terms in keywords'
+  - 'create upper_secondary_school group'
   - 'create url aliases'
   - 'delete all revisions'
   - 'delete announcement revisions'

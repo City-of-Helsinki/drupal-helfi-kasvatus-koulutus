@@ -1,0 +1,52 @@
+uuid: a8d1e5d9-788d-4346-a7e5-3a9f04c3fa81
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.file
+    - media.type.hel_map
+    - media.type.image
+    - media.type.remote_video
+    - media.type.soundcloud
+  module:
+    - file
+    - group
+    - media
+    - node
+    - system
+    - toolbar
+id: school_editor
+label: 'School editor'
+weight: -6
+is_admin: null
+permissions:
+  - 'access files overview'
+  - 'access group overview'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'cancel account'
+  - 'change own username'
+  - 'create file media'
+  - 'create hel_map media'
+  - 'create image media'
+  - 'create media'
+  - 'create remote_video media'
+  - 'create soundcloud media'
+  - 'delete media'
+  - 'delete own file media'
+  - 'delete own hel_map media'
+  - 'delete own image media'
+  - 'delete own remote_video media'
+  - 'delete own soundcloud media'
+  - 'edit own file media'
+  - 'edit own hel_map media'
+  - 'edit own image media'
+  - 'edit own remote_video media'
+  - 'edit own soundcloud media'
+  - 'update media'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'

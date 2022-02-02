@@ -14,6 +14,7 @@ dependencies:
   module:
     - content_translation
     - file
+    - group
     - helfi_api_base
     - helfi_school_addons
     - helfi_tpr
@@ -29,11 +30,12 @@ _core:
   default_config_hash: EVzxFtbOrGVTXWw2GTh1fEzzqruPEqSo84k10-BF6eA
 id: content_producer
 label: 'Content producer'
-weight: 3
+weight: -7
 is_admin: null
 permissions:
   - 'access content overview'
   - 'access files overview'
+  - 'access group overview'
   - 'access media overview'
   - 'access remote entities overview'
   - 'access site in maintenance mode'
@@ -53,6 +55,7 @@ permissions:
   - 'create remote_video media'
   - 'create soundcloud media'
   - 'create terms in keywords'
+  - 'create upper_secondary_school group'
   - 'delete media'
   - 'delete own file media'
   - 'delete own hel_map media'

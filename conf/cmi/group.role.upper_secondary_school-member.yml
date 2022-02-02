@@ -13,6 +13,8 @@ group_type: upper_secondary_school
 permissions_ui: true
 permissions:
   - 'access group_node overview'
+  - 'access group_tpr_unit overview'
+  - 'administer members'
   - 'create group_node:page content'
   - 'create group_node:page entity'
   - 'create group_tpr_unit content'
@@ -42,5 +44,6 @@ permissions:
   - 'view group_node:page entity'
   - 'view group_tpr_unit content'
   - 'view group_tpr_unit entity'
+  - 'view latest group version'
   - 'view own unpublished group'
   - 'view unpublished group_node:page entity'
