@@ -351,69 +351,16 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        view_group_content:
-          id: view_group_content
-          table: group_content
-          field: view_group_content
-          relationship: group_content
+        edit_tpr_unit:
+          id: edit_tpr_unit
+          table: tpr_unit
+          field: edit_tpr_unit
+          relationship: none
           group_type: group
-          admin_label: 'View relation link'
-          entity_type: group_content
-          plugin_id: entity_link
-          label: 'Link to Group content'
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          text: 'View relation'
-          output_url_as_text: false
-          absolute: false
-        edit_group_content:
-          id: edit_group_content
-          table: group_content
-          field: edit_group_content
-          relationship: group_content
-          group_type: group
-          admin_label: 'Edit relation link'
-          entity_type: group_content
+          admin_label: 'Edit unit link'
+          entity_type: tpr_unit
           plugin_id: entity_link_edit
-          label: 'Link to edit Group content'
+          label: 'Link to edit TPR - Unit'
           exclude: true
           alter:
             alter_text: false
@@ -454,7 +401,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: 'Edit relation'
+          text: 'Edit unit'
           output_url_as_text: false
           absolute: false
         delete_group_content:
@@ -507,60 +454,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: 'Delete relation'
-          output_url_as_text: false
-          absolute: false
-        edit_tpr_unit:
-          id: edit_tpr_unit
-          table: tpr_unit
-          field: edit_tpr_unit
-          relationship: none
-          group_type: group
-          admin_label: 'Edit unit link'
-          entity_type: tpr_unit
-          plugin_id: entity_link_edit
-          label: 'Link to edit TPR - Unit'
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          text: 'Edit unit'
+          text: 'Remove from group'
           output_url_as_text: false
           absolute: false
         dropbutton:

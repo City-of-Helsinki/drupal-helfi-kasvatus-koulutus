@@ -11,12 +11,8 @@ display:
           label: Tila
         content_translation_changed:
           label: Päivitetty
-        view_group_content:
-          text: 'Näytä relaatio'
-        edit_group_content:
-          text: 'Muokkaa relaatiota'
         delete_group_content:
-          text: 'Poista relaatio'
+          text: 'Poista ryhmästä'
         edit_tpr_unit:
           text: 'Muokkaa toimipistettä'
         dropbutton:
