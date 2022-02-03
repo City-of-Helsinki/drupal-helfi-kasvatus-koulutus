@@ -1,4 +1,4 @@
-uuid: 954cf230-5669-49d4-a828-9ba9ac92fedd
+uuid: 94e2859d-f6d0-428c-a984-17af2b7f096c
 langcode: en
 status: true
 dependencies:
@@ -14,5 +14,5 @@ group_type: upper_secondary_school
 content_plugin: group_tpr_unit
 plugin_config:
   group_cardinality: 0
-  entity_cardinality: 0
+  entity_cardinality: 1
   use_creation_wizard: false

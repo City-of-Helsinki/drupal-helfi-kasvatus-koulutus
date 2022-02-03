@@ -1,28 +1,32 @@
-uuid: a3446d75-a6b8-430c-bc12-74ef659499d4
+uuid: 23b83258-1235-4fdb-bb73-41c86a54b540
 langcode: en
 status: true
 dependencies:
   config:
     - group.type.upper_secondary_school
-id: upper_secondary_school-member
-label: Member
-weight: -100
-internal: true
+id: upper_secondary_school-admin
+label: 'School admin'
+weight: 6
+internal: false
 audience: member
 group_type: upper_secondary_school
 permissions_ui: true
 permissions:
   - 'access group_node overview'
   - 'access group_tpr_unit overview'
+  - 'administer group'
+  - 'administer members'
   - 'create group_node:page content'
   - 'create group_node:page entity'
   - 'create group_tpr_unit content'
   - 'delete any group_node:page content'
   - 'delete any group_node:page entity'
   - 'delete any group_tpr_unit content'
+  - 'delete group'
   - 'delete own group_node:page content'
   - 'delete own group_node:page entity'
   - 'delete own group_tpr_unit content'
+  - 'edit group'
   - 'leave group'
   - 'update any group_node:page content'
   - 'update any group_node:page entity'

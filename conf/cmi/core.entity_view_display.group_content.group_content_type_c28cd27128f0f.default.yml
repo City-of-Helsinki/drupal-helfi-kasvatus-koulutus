@@ -10,15 +10,22 @@ targetEntityType: group_content
 bundle: group_content_type_c28cd27128f0f
 mode: default
 content:
+  entity_id:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
   group_roles:
     type: entity_reference_label
     label: above
     settings:
       link: false
     third_party_settings: {  }
-    weight: -4
+    weight: 1
     region: content
 hidden:
-  entity_id: true
   langcode: true
   uid: true

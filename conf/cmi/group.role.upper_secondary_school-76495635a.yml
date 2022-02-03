@@ -8,7 +8,7 @@ dependencies:
     config:
       - user.role.content_producer
 id: upper_secondary_school-76495635a
-label: Sisällöntuottaja
+label: 'Content producer'
 weight: 3
 internal: true
 audience: outsider

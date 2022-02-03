@@ -64,6 +64,7 @@ permissions:
   - 'administer blocks'
   - 'administer eu cookie compliance categories'
   - 'administer eu cookie compliance popup'
+  - 'administer group'
   - 'administer menu'
   - 'administer nodes'
   - 'administer paragraphs library'

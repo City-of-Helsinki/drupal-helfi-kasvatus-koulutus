@@ -870,7 +870,7 @@ display:
           plugin_id: group_content_to_entity_reverse
           required: true
           group_content_plugins:
-            group_tpr_unit: '0'
+            group_tpr_unit: group_tpr_unit
       header: {  }
       footer: {  }
       display_extenders: {  }

@@ -8,7 +8,7 @@ dependencies:
     config:
       - user.role.read_only
 id: upper_secondary_school-97a902313
-label: 'Vain luku'
+label: 'Read only'
 weight: 4
 internal: true
 audience: outsider

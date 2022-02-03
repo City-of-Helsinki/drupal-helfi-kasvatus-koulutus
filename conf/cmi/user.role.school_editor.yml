@@ -9,8 +9,10 @@ dependencies:
     - media.type.remote_video
     - media.type.soundcloud
   module:
+    - content_translation
     - file
     - group
+    - helfi_tpr
     - media
     - node
     - system
@@ -44,9 +46,10 @@ permissions:
   - 'edit own image media'
   - 'edit own remote_video media'
   - 'edit own soundcloud media'
+  - 'translate editable entities'
   - 'update media'
   - 'view all media revisions'
-  - 'view all revisions'
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view the administration theme'
+  - 'view unpublished tpr_unit'
