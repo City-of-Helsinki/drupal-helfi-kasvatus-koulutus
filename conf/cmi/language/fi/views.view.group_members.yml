@@ -1,0 +1,41 @@
+display:
+  default:
+    display_options:
+      fields:
+        name:
+          label: Käyttäjä
+        group_roles:
+          label: Roolit
+        changed:
+          label: Päivitetty
+        created:
+          label: Liittynyt
+        edit_group_content:
+          text: 'Muokkaa jäsenyyttä'
+        delete_group_content:
+          text: 'Poista jäsenyys'
+        dropbutton:
+          label: Toimenpiteet
+      title: Jäsenet
+      pager:
+        options:
+          tags:
+            first: '« Ensimmäinen'
+            last: 'Viimeinen »'
+      exposed_form:
+        options:
+          submit_button: Käytä
+          reset_button_label: 'Tyhjennä valinnat'
+          exposed_sorts_label: Järjestele
+          sort_asc_label: Nouseva
+          sort_desc_label: Laskeva
+      empty:
+        area_text_custom:
+          content: 'Ei lisättyjä jäseniä.'
+      arguments:
+        gid:
+          title: '{{ arguments.gid|placeholder }} – jäsenet'
+  page_1:
+    display_options:
+      menu:
+        title: Jäsenet

@@ -9,6 +9,9 @@ display:
           label: Kieli
         content_translation_status:
           label: Tila
+          settings:
+            format_custom_false: Julkaisematon
+            format_custom_true: Julkaistu
         content_translation_changed:
           label: Päivitetty
         delete_group_content:
@@ -26,7 +29,7 @@ display:
           submit_button: Käytä
       arguments:
         gid:
-          title: '{{ arguments.gid|placeholder }} toimipisteet'
+          title: '{{ arguments.gid|placeholder }} – toimipisteet'
   page_1:
     display_options:
       menu:
