@@ -1,0 +1,19 @@
+uuid: a1c2fcfe-4bcc-4324-a304-3342ccd684bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+    - node.type.landing_page
+  module:
+    - gnode
+    - node
+id: group_content_type_cb62eb2a38c4f
+label: 'Upper secondary school: Group node (Laskeutumissivu)'
+description: 'Adds <em class="placeholder">Laskeutumissivu</em> content to groups both publicly and privately.'
+group_type: upper_secondary_school
+content_plugin: 'group_node:landing_page'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false
