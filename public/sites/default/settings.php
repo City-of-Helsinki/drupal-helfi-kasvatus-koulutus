@@ -196,9 +196,17 @@ if (
   $class_loader->addPsr4('Drupal\\redis\\', 'modules/contrib/redis/src');
   $redis_port = getenv('REDIS_PORT') ?: 6379;
 
+  if ($redis_password = getenv('REDIS_PASSWORD')) {
+    $settings['redis.connection']['password'] = $redis_password;
+  }
+
   // Force SSL on azure.
   if (getenv('AZURE_SQL_SSL_CA_PATH')) {
     $redis_host = 'tls://' . $redis_host;
+
+    if (!$redis_password) {
+      $settings['redis.connection']['password'] = 'undefined';
+    }
   }
 
   if ($redis_prefix = getenv('REDIS_PREFIX')) {
