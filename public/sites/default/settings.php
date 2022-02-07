@@ -213,9 +213,6 @@ if (
     $settings['cache_prefix']['default'] = $redis_prefix;
   }
 
-  if ($redis_password = getenv('REDIS_PASSWORD')) {
-    $settings['redis.connection']['password'] = $redis_password;
-  }
   $settings['redis.connection']['interface'] = 'PhpRedis';
   $settings['redis.connection']['host'] = $redis_host;
   $settings['redis.connection']['port'] = $redis_port;
