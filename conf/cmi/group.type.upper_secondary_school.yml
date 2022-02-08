@@ -5,7 +5,7 @@ dependencies: {  }
 id: upper_secondary_school
 label: 'Upper secondary school'
 description: ''
-new_revision: true
+new_revision: false
 creator_membership: true
 creator_wizard: false
 creator_roles:
