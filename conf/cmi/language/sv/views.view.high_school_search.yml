@@ -11,10 +11,10 @@ display:
       filters:
         emphasis_filter:
           expose:
-            label: 'Välj inriktning eller linje'
+            label: 'Välj betoning för gymnasium'
         educational_mission_filter:
           expose:
-            label: 'Välj specialuppgift'
+            label: 'Välj betoning för specialiseringsgymnasium (särskild utbildningsuppgift)'
         study_programme_type_filter:
           expose:
-            label: 'Välj allmänt gymnasium eller vuxengymnasium och -linje'
+            label: 'Välj allmänt gymnasium eller vuxengymnasium'
