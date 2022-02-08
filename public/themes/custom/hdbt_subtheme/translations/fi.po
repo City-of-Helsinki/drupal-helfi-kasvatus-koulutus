@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 
 msgctxt "High school search count"
-msgid "high school"
-msgid_plural "high schools"
+msgid "general upper secondary school"
+msgid_plural "general upper secondary schools"
 msgstr[0] "lukio"
 msgstr[1] "lukiota"
 
