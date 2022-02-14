@@ -15,6 +15,7 @@ dependencies:
   module:
     - block
     - config_translation
+    - content_lock
     - content_translation
     - eu_cookie_compliance
     - file
@@ -30,6 +31,7 @@ dependencies:
     - path
     - pathauto
     - redirect
+    - role_delegation
     - scheduler
     - simple_sitemap
     - system
@@ -71,6 +73,10 @@ permissions:
   - 'administer tpr_unit'
   - 'administer url aliases'
   - 'administer users'
+  - 'assign admin role'
+  - 'assign content_producer role'
+  - 'assign read_only role'
+  - 'break content lock'
   - 'cancel account'
   - 'change own username'
   - 'create announcement content'
@@ -188,6 +194,3 @@ permissions:
   - 'view unpublished tpr_service'
   - 'view unpublished tpr_service_channel'
   - 'view unpublished tpr_unit'
-  - 'assign admin role'
-  - 'assign content_producer role'
-  - 'assign read_only role'

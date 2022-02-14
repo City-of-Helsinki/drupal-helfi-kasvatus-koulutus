@@ -1,0 +1,11 @@
+uuid: 0a18fd1f-dc56-4be3-9e3e-0f8cbdd1002f
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_lock
+id: tpr_unit_break_lock_action
+label: 'Break lock tpr_unit'
+type: tpr_unit
+plugin: 'entity:break_lock:tpr_unit'
+configuration: {  }
