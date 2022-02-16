@@ -63,8 +63,22 @@ $unit-arrow-icon-size-desktop: 48px;
     margin-bottom: 0;
   }
 
-  .unit__info-row p {
-    margin: 0;
+  .unit__info-row {
+    margin-top: $spacing-half;
+
+    p {
+      margin: 0;
+    }
+
+    .address {
+      display: inline;
+      margin-top: 0;
+
+      .address-line1::after,
+      .address-line2::after {
+        content: ",";
+      }
+    }
   }
 
   .unit__short-desc {
