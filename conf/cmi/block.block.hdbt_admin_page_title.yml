@@ -9,7 +9,7 @@ _core:
 id: hdbt_admin_page_title
 theme: hdbt_admin
 region: content
-weight: -30
+weight: -5
 provider: null
 plugin: page_title_block
 settings:
