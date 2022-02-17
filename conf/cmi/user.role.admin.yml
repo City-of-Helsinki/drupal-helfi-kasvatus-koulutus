@@ -15,6 +15,7 @@ dependencies:
   module:
     - block
     - config_translation
+    - content_lock
     - content_translation
     - eu_cookie_compliance
     - file
@@ -30,17 +31,19 @@ dependencies:
     - path
     - pathauto
     - redirect
+    - role_delegation
     - scheduler
     - simple_sitemap
     - system
     - taxonomy
     - toolbar
     - view_unpublished
+    - content_lock
 _core:
   default_config_hash: 7RTyCpgMKCMdwkxYrpzYOCq7DQDHO0SrTjB7xwFaIyI
 id: admin
-label: Admin
-weight: 2
+label: Administrator
+weight: 5
 is_admin: null
 permissions:
   - 'access administration pages'
@@ -60,6 +63,7 @@ permissions:
   - 'administer blocks'
   - 'administer eu cookie compliance categories'
   - 'administer eu cookie compliance popup'
+  - 'administer hotjar settings'
   - 'administer menu'
   - 'administer nodes'
   - 'administer paragraphs library'
@@ -71,6 +75,11 @@ permissions:
   - 'administer tpr_unit'
   - 'administer url aliases'
   - 'administer users'
+  - 'assign admin role'
+  - 'assign content_producer role'
+  - 'assign editor role'
+  - 'assign read_only role'
+  - 'break content lock'
   - 'cancel account'
   - 'change own username'
   - 'create announcement content'
@@ -138,6 +147,9 @@ permissions:
   - 'revert landing_page revisions'
   - 'revert page revisions'
   - 'schedule publishing of nodes'
+  - 'set announcement published on date'
+  - 'set landing_page published on date'
+  - 'set page published on date'
   - 'translate announcement node'
   - 'translate any entity'
   - 'translate configuration'
@@ -164,13 +176,16 @@ permissions:
   - 'update own tpr_ontology_word_details'
   - 'update own tpr_service'
   - 'update own tpr_unit'
+  - 'update tpr_service'
+  - 'update tpr_unit'
+  - 'use menu link attributes'
+  - 'use text format full_html'
+  - 'use text format minimal'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view all tpr_service revisions'
   - 'view all tpr_unit revisions'
   - 'view announcement revisions'
-  - 'view any unpublished content'
-  - 'view any unpublished content'
   - 'view any unpublished content'
   - 'view landing_page revisions'
   - 'view media'
@@ -188,6 +203,8 @@ permissions:
   - 'view unpublished tpr_service'
   - 'view unpublished tpr_service_channel'
   - 'view unpublished tpr_unit'
-  - 'assign admin role'
-  - 'assign content_producer role'
-  - 'assign read_only role'
+  - 'create helfi_chart media'
+  - 'delete any helfi_chart media'
+  - 'delete own helfi_chart media'
+  - 'edit any helfi_chart media'
+  - 'edit own helfi_chart media'

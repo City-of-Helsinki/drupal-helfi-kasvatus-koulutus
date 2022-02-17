@@ -1,0 +1,112 @@
+$card_spacing: $spacing-and-half;
+$unit-arrow-icon-size-mobile: 32px;
+$unit-arrow-icon-size-desktop: 48px;
+
+.unit.unit--high-school-card,
+.unit.unit--vocational-school-card {
+  margin-top: $spacing-and-half;
+
+  @include breakpoint($breakpoint-s) {
+    padding-left: $card_spacing;
+    width: 50%;
+  }
+
+  @include breakpoint($breakpoint-l) {
+    width: 33.3333%;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:nth-child(-n+2) {
+    @include breakpoint($breakpoint-s) {
+      margin-top: 0;
+    }
+  }
+
+  &:nth-child(-n+3) {
+    @include breakpoint($breakpoint-l) {
+      margin-top: 0;
+    }
+  }
+
+  .unit__link {
+    background-color: $color-white;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      .unit__title {
+        text-decoration: underline;
+      }
+
+      .unit__arrow {
+        padding-left: $spacing;
+      }
+    }
+  }
+
+  .unit__image {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .unit__text {
+    padding: $spacing-and-half;
+  }
+
+  .unit__title {
+    @include font-size(24px, 28px);
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  .unit__info-row {
+    margin-top: $spacing-half;
+
+    p {
+      margin: 0;
+    }
+
+    .address {
+      display: inline;
+      margin-top: 0;
+
+      .address-line1::after,
+      .address-line2::after {
+        content: ",";
+      }
+    }
+  }
+
+  .unit__short-desc {
+    @include font-size(18px, 28px);
+    margin-top: $spacing;
+  }
+
+  .unit__arrow {
+    display: block;
+    line-height: 0;
+    margin-top: $spacing;
+    // Pull the arrow a bit to the left to align with text.
+    margin-left: -4px;
+    padding-left: 0;
+    transition: all .3s;
+    width: 48px;
+
+    @include breakpoint($breakpoint-s) {
+      // Pull the arrow a bit to the left to align with text.
+      margin-left: -7px;
+    }
+
+    .hel-icon {
+      --icon-size: #{$unit-arrow-icon-size-mobile};
+
+      @include breakpoint($breakpoint-s) {
+        --icon-size: #{$unit-arrow-icon-size-desktop};
+      }
+    }
+  }
+}
