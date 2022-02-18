@@ -1,0 +1,27 @@
+uuid: 194ee8c3-f3f9-4b77-973f-c6896a11631e
+langcode: en
+status: true
+dependencies:
+  config:
+    - group_content_menu.group_content_menu_type.upper_secondary_school
+  module:
+    - group_content_menu
+  theme:
+    - hdbt_subtheme
+id: uppersecondaryschool
+theme: hdbt_subtheme
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'group_content_menu:upper_secondary_school'
+settings:
+  id: 'group_content_menu:upper_secondary_school'
+  label: 'Upper secondary school menu'
+  label_display: '0'
+  provider: group_content_menu
+  context_mapping:
+    group: '@group.group_route_context:group'
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

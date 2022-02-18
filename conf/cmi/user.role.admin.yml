@@ -21,6 +21,7 @@ dependencies:
     - eu_cookie_compliance
     - file
     - group
+    - group_content_menu
     - helfi_api_base
     - helfi_school_addons
     - helfi_tpr
@@ -65,6 +66,7 @@ permissions:
   - 'administer eu cookie compliance categories'
   - 'administer eu cookie compliance popup'
   - 'administer group'
+  - 'administer group content menu types'
   - 'administer menu'
   - 'administer nodes'
   - 'administer paragraphs library'

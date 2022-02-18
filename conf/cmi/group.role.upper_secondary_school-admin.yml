@@ -12,6 +12,7 @@ audience: member
 group_type: upper_secondary_school
 permissions_ui: true
 permissions:
+  - 'access group content menu overview'
   - 'access group_node overview'
   - 'access group_tpr_unit overview'
   - 'administer group'
@@ -34,6 +35,7 @@ permissions:
   - 'delete own group_tpr_unit content'
   - 'edit group'
   - 'leave group'
+  - 'manage group_content_menu'
   - 'update any group_node:landing_page content'
   - 'update any group_node:landing_page entity'
   - 'update any group_node:page content'

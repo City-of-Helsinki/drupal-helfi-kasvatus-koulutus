@@ -36,6 +36,7 @@ module:
   gin_toolbar: 0
   gnode: 0
   group: 0
+  group_content_menu: 0
   hdbt_admin_editorial: 0
   hdbt_admin_tools: 0
   hdbt_component_library: 0

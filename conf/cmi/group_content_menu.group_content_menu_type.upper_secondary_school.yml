@@ -1,0 +1,6 @@
+uuid: 895d5dc5-cac7-4023-a965-2ce49cdfc15d
+langcode: en
+status: true
+dependencies: {  }
+id: upper_secondary_school
+label: 'Upper secondary school'

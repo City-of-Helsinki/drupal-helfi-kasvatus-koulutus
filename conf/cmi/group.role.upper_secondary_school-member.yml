@@ -12,6 +12,7 @@ audience: member
 group_type: upper_secondary_school
 permissions_ui: true
 permissions:
+  - 'access group content menu overview'
   - 'access group_node overview'
   - 'access group_tpr_unit overview'
   - 'create group_node:landing_page entity'
