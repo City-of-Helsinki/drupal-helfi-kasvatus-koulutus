@@ -4066,7 +4066,7 @@
             "dist": {
                 "type": "path",
                 "url": "public/modules/custom/helfi_group",
-                "reference": "5a0f6ce5260d894fe61bd75dedfd5e350a88a56b"
+                "reference": "a53888cee803e33736c451af1b7e748d370d309b"
             },
             "require": {
                 "drupal/group": "^1.4",
@@ -4077,7 +4077,8 @@
                 "patches": {
                     "drupal/group": {
                         "https://www.drupal.org/project/group/issues/2842630": "https://www.drupal.org/files/issues/2019-01-04/2842630-20.patch",
-                        "https://www.drupal.org/project/group/issues/2815971": "https://www.drupal.org/files/issues/2021-02-19/2815971-28.patch"
+                        "https://www.drupal.org/project/group/issues/2815971": "https://www.drupal.org/files/issues/2021-02-19/2815971-28.patch",
+                        "https://www.drupal.org/project/group/issues/3210808": "https://www.drupal.org/files/issues/2021-04-26/uasort-comparison-3210808-2.patch"
                     }
                 }
             },
