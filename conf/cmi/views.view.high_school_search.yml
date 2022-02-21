@@ -606,7 +606,7 @@ display:
           exposed: true
           expose:
             operator_id: emphasis_filter_op
-            label: 'Select a special emphasis or study programme'
+            label: 'Select a special emphasis'
             description: ''
             use_operator: false
             operator: emphasis_filter_op
@@ -658,7 +658,7 @@ display:
           exposed: true
           expose:
             operator_id: educational_mission_filter_op
-            label: 'Select a special educational mission'
+            label: 'Select a special educational task'
             description: ''
             use_operator: false
             operator: educational_mission_filter_op
@@ -705,7 +705,7 @@ display:
           exposed: true
           expose:
             operator_id: study_programme_type_filter_op
-            label: 'Select the general programme or the upper secondary school for adults and a study programme'
+            label: 'Select general programme or upper secondary school for adults'
             description: ''
             use_operator: false
             operator: study_programme_type_filter_op

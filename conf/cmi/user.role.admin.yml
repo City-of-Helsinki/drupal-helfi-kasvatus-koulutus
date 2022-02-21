@@ -11,12 +11,11 @@ dependencies:
     - node.type.announcement
     - node.type.landing_page
     - node.type.page
-    - taxonomy.vocabulary.educational_mission
-    - taxonomy.vocabulary.emphasis
     - taxonomy.vocabulary.keywords
   module:
     - block
     - config_translation
+    - content_lock
     - content_translation
     - eu_cookie_compliance
     - file
@@ -34,17 +33,19 @@ dependencies:
     - path
     - pathauto
     - redirect
+    - role_delegation
     - scheduler
     - simple_sitemap
     - system
     - taxonomy
     - toolbar
     - view_unpublished
+    - content_lock
 _core:
   default_config_hash: 7RTyCpgMKCMdwkxYrpzYOCq7DQDHO0SrTjB7xwFaIyI
 id: admin
-label: Admin
-weight: -8
+label: Administrator
+weight: 5
 is_admin: null
 permissions:
   - 'access administration pages'
@@ -67,6 +68,7 @@ permissions:
   - 'administer eu cookie compliance popup'
   - 'administer group'
   - 'administer group content menu types'
+  - 'administer hotjar settings'
   - 'administer menu'
   - 'administer nodes'
   - 'administer paragraphs library'
@@ -78,6 +80,11 @@ permissions:
   - 'administer tpr_unit'
   - 'administer url aliases'
   - 'administer users'
+  - 'assign admin role'
+  - 'assign content_producer role'
+  - 'assign editor role'
+  - 'assign read_only role'
+  - 'break content lock'
   - 'cancel account'
   - 'change own username'
   - 'create announcement content'
@@ -92,8 +99,6 @@ permissions:
   - 'create remote entities'
   - 'create remote_video media'
   - 'create soundcloud media'
-  - 'create terms in educational_mission'
-  - 'create terms in emphasis'
   - 'create terms in keywords'
   - 'create upper_secondary_school group'
   - 'create url aliases'
@@ -121,8 +126,6 @@ permissions:
   - 'delete own soundcloud media'
   - 'delete page revisions'
   - 'delete remote entities'
-  - 'delete terms in educational_mission'
-  - 'delete terms in emphasis'
   - 'delete terms in keywords'
   - 'edit any announcement content'
   - 'edit any file media'
@@ -142,8 +145,6 @@ permissions:
   - 'edit own soundcloud media'
   - 'edit paragraph library item'
   - 'edit remote entities'
-  - 'edit terms in educational_mission'
-  - 'edit terms in emphasis'
   - 'edit terms in keywords'
   - 'revert all revisions'
   - 'revert all tpr_service revisions'
@@ -152,12 +153,13 @@ permissions:
   - 'revert landing_page revisions'
   - 'revert page revisions'
   - 'schedule publishing of nodes'
+  - 'set announcement published on date'
+  - 'set landing_page published on date'
+  - 'set page published on date'
   - 'translate announcement node'
   - 'translate any entity'
   - 'translate configuration'
   - 'translate editable entities'
-  - 'translate educational_mission taxonomy_term'
-  - 'translate emphasis taxonomy_term'
   - 'translate file media'
   - 'translate image media'
   - 'translate interface'
@@ -180,13 +182,16 @@ permissions:
   - 'update own tpr_ontology_word_details'
   - 'update own tpr_service'
   - 'update own tpr_unit'
+  - 'update tpr_service'
+  - 'update tpr_unit'
+  - 'use menu link attributes'
+  - 'use text format full_html'
+  - 'use text format minimal'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view all tpr_service revisions'
   - 'view all tpr_unit revisions'
   - 'view announcement revisions'
-  - 'view any unpublished content'
-  - 'view any unpublished content'
   - 'view any unpublished content'
   - 'view landing_page revisions'
   - 'view media'
@@ -204,3 +209,8 @@ permissions:
   - 'view unpublished tpr_service'
   - 'view unpublished tpr_service_channel'
   - 'view unpublished tpr_unit'
+  - 'create helfi_chart media'
+  - 'delete any helfi_chart media'
+  - 'delete own helfi_chart media'
+  - 'edit any helfi_chart media'
+  - 'edit own helfi_chart media'

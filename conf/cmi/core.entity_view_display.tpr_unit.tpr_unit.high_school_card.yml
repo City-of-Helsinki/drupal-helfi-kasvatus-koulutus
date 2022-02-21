@@ -5,8 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.tpr_unit.high_school_card
     - field.field.tpr_unit.tpr_unit.field_content
-    - field.field.tpr_unit.tpr_unit.field_hs_educational_mission
-    - field.field.tpr_unit.tpr_unit.field_hs_emphasis
     - field.field.tpr_unit.tpr_unit.field_hs_front_page
     - field.field.tpr_unit.tpr_unit.field_lower_content
     - field.field.tpr_unit.tpr_unit.field_metatags
@@ -106,22 +104,6 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 19
-    region: content
-  field_hs_educational_mission:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 23
-    region: content
-  field_hs_emphasis:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 22
     region: content
   field_hs_front_page:
     type: entity_reference_entity_id
@@ -232,4 +214,5 @@ hidden:
   latitude: true
   longitude: true
   provided_languages: true
+  show_www: true
   streetview_entrance_url: true

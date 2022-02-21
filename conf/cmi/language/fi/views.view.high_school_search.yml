@@ -27,6 +27,6 @@ display:
             label: 'Valitse erikoislukion painotus (erityistehtävä)'
         study_programme_type_filter:
           expose:
-            label: 'Valitse yleislukio tai aikuislukio tai -linja'
+            label: 'Valitse yleislukio tai aikuislukio'
   entity_reference:
     display_title: Entiteettiviittaus
