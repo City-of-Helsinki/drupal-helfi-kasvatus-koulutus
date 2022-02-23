@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.full_html
+    - filter.format.minimal
     - media.type.file
     - media.type.hel_map
     - media.type.image
@@ -11,10 +13,12 @@ dependencies:
   module:
     - content_translation
     - file
+    - filter
     - group
     - helfi_tpr
     - media
     - node
+    - scheduler
     - system
     - toolbar
 id: school_editor
@@ -46,8 +50,11 @@ permissions:
   - 'edit own image media'
   - 'edit own remote_video media'
   - 'edit own soundcloud media'
+  - 'schedule publishing of nodes'
   - 'translate editable entities'
   - 'update media'
+  - 'use text format full_html'
+  - 'use text format minimal'
   - 'view all media revisions'
   - 'view own unpublished content'
   - 'view own unpublished media'
