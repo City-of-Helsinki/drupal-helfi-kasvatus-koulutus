@@ -1,13 +1,11 @@
-uuid: 83f99cca-a5ea-4cbc-aab8-bc3677c869bd
+uuid: e215f107-b95c-4c91-a68a-d8e1083577ae
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: 4wdjjmwWiYU5VvtxkfKJ9LRCXs61j6I7KKl3cN6Iacw
-id: paragraph.field_chart_title
-field_name: field_chart_title
+id: paragraph.field_remote_video_video_title
+field_name: field_remote_video_video_title
 entity_type: paragraph
 type: string
 settings:
