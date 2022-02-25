@@ -160,8 +160,6 @@ function hdbt_subtheme_preprocess_views_view(&$variables) {
       $unit_ids[] = $unit_id;
     }
 
-    $unit_id_string = implode(',', $unit_ids);
-
-    $variables['unit_id_string'] = $unit_id_string;
+    $variables['unit_ids'] = $unit_ids;
   }
 }
