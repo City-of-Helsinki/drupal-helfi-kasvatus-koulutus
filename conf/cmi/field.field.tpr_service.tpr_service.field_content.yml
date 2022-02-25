@@ -12,6 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.gallery
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.list_of_links
+    - paragraphs.paragraphs_type.remote_video
     - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
@@ -41,6 +42,7 @@ settings:
       content_cards: content_cards
       banner: banner
       from_library: from_library
+      remote_video: remote_video
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -52,12 +54,18 @@ settings:
       banner:
         weight: -21
         enabled: true
+      chart:
+        weight: 27
+        enabled: false
       columns:
         weight: -28
         enabled: true
       content_cards:
         weight: -23
         enabled: true
+      content_liftup:
+        weight: 30
+        enabled: false
       from_library:
         weight: 21
         enabled: true
@@ -69,6 +77,9 @@ settings:
         enabled: false
       hero:
         weight: -19
+        enabled: false
+      high_school_search:
+        weight: 35
         enabled: false
       image:
         weight: -26
@@ -82,10 +93,25 @@ settings:
       list_of_links_item:
         weight: -17
         enabled: false
+      map:
+        weight: 40
+        enabled: false
+      remote_video:
+        weight: 41
+        enabled: true
+      service_list:
+        weight: 42
+        enabled: false
+      sidebar_text:
+        weight: 43
+        enabled: false
       text:
         weight: -29
         enabled: true
       unit_search:
         weight: -16
+        enabled: false
+      vocational_school_search:
+        weight: 46
         enabled: false
 field_type: entity_reference_revisions
