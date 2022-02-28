@@ -8,6 +8,7 @@
 use Drupal\Core\Cache\Cache;
 use Drupal\helfi_tpr\Entity\Unit;
 use Drupal\node\Entity\Node;
+use Drupal\paragraphs\Entity\Paragraph;
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -68,60 +69,48 @@ function hdbt_subtheme_preprocess_paragraph(array &$variables) {
 
   // High school & vocational school search paragraphs.
   $search_types = [
-    'high_school_search'=>'hs',
-    'vocational_school_search'=>'vs'
+    'high_school_search' => 'hs',
+    'vocational_school_search' => 'vs',
   ];
 
   foreach ($search_types as $search_type => $search_type_prefix) {
+    $units_field = "field_{$search_type_prefix}_search_units";
     if (
       $paragraph_type == $search_type &&
-      $paragraph->hasField('field_' . $search_type_prefix . '_search_units')
+      $paragraph->hasField($units_field)
     ) {
       // Get all unit ids what content producer has selected for the unit search
       // view and set them as variables for the template.
-      $unit_ids = [];
-      $unit_field = 'field_' . $search_type_prefix . '_search_units';
-      $units = $paragraph->$unit_field->getValue();
-      $ids = [];
-      foreach ($units as $unit) {
-        $ids[] = $unit['target_id'];
-        $unit_ids[] = 'tpr_unit:' . $unit['target_id'];
-      }
-
-      // Set the unit ids to a unit_search_arguments variable for the template.
-      $variables[$search_type . '_arguments'] = implode(',', $ids);
-
-      // Get previously cached meta information field values and set them
-      // if no cached items are found.
-      $cached = \Drupal::cache()->get($search_type . 'block' . $variables['current_langcode'] . $variables[$search_type . '_arguments']);
-
-      if (!$cached) {
-        // Set meta information fields based on how content producer
-        // has defined the fields.
-        $meta = [];
-        $fields = [
-          'field_' . $search_type_prefix . '_search_meta_button',
-        ];
-
-        foreach ($fields as $field) {
-          if ($paragraph->hasField($field)) {
-            $meta[$field] = $paragraph->{$field}->value;
-          }
-        }
-
-        // Cache the meta fields based on view id and units.
-        if (!empty($meta) && !empty($unit_ids)) {
-          $tags = array_merge(['paragraph:' . $paragraph->id()], $unit_ids);
-
-          \Drupal::cache()->set(
-            $search_type . 'block' . $variables['current_langcode'] . $variables[$search_type . '_arguments'],
-            $meta,
-            Cache::PERMANENT,
-            $tags
-          );
-        }
-      }
+      $variables['search_parent_paragraph'] = $paragraph->id();
+      $variables[$search_type . '_list'] = implode(',', array_map(function ($unit) {
+        return $unit['target_id'];
+      }, $paragraph->$units_field->getValue()));
     }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function hdbt_subtheme_form_views_exposed_form_alter(&$form, $form_state) {
+
+  // Handle only High school search view form at this point.
+  if (!str_starts_with($form['#id'], 'views-exposed-form-high-school-search-block')) {
+    return;
+  }
+
+  // Get view from form state.
+  $view = $form_state->getStorage()['view'];
+  [, $paragraph_id] = $view->args + [NULL, NULL];
+
+  if (!$paragraph = Paragraph::load($paragraph_id)) {
+    return;
+  }
+
+  if ($paragraph->hasField('field_hs_search_meta_button')) {
+    $form['actions']['submit']['#value'] = $paragraph
+      ->get('field_hs_search_meta_button')
+      ->value;
   }
 }
 
