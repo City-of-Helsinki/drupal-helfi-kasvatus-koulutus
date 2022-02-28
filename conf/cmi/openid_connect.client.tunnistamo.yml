@@ -12,4 +12,7 @@ plugin: tunnistamo
 settings:
   client_id: placeholder
   client_secret: placeholder
-  is_production: 0
+  is_production: 1
+  auto_login: 0
+  client_scopes: ''
+  environment_url: ''
