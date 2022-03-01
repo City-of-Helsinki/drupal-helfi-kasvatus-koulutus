@@ -2,6 +2,9 @@
 
 declare(strict_types = 1);
 
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\helfi_group\UnitFormAlter;
+
 /**
  * Implements hook_preprocess_HOOK().
  *
@@ -49,4 +52,12 @@ function helfi_group_theme($existing, $type, $theme, $path) {
       'base hook' => 'menu__group_menu',
     ],
   ];
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function helfi_group_form_tpr_unit_form_alter(&$form, FormStateInterface $form_state) {
+  \Drupal::classResolver(UnitFormAlter::class)
+    ->alter($form, $form_state);
 }
