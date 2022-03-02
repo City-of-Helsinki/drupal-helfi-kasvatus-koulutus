@@ -43,7 +43,6 @@
 %}
 
 {{ attach_library('hdbt_subtheme/high-school-search') }}
-{{ attach_library('hdbt/tabs') }}
 
 <div{{attributes.addClass(classes)}}>
   {{ title_prefix }}
@@ -87,7 +86,7 @@
       <div class="tab__content"
            id="tab-1__content--{{ dom_id }}"
            role="tabpanel"
-           aria-labelledby="tab-1"
+           aria-labelledby="tab-1--{{ dom_id }}"
            aria-hidden="true"
            tabindex="0">
         <div class="unit-search__results--list">
@@ -100,7 +99,7 @@
       <div class="tab__content"
            id="tab-2__content--{{ dom_id }}"
            role="tabpanel"
-           aria-labelledby="tab-2"
+           aria-labelledby="tab-2--{{ dom_id }}"
            aria-hidden="true"
            tabindex="0">
         <div class="unit-search__results--map">
