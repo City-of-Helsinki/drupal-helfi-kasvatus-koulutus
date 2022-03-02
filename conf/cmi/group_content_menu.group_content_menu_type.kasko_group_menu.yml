@@ -1,0 +1,6 @@
+uuid: 0823ba69-1410-42bd-8948-9aa9dc69f39d
+langcode: en
+status: true
+dependencies: {  }
+id: kasko_group_menu
+label: 'Kasko group menu'
