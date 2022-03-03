@@ -53,18 +53,19 @@
   {{ exposed }}
   {{ attachment_before }}
 
-  <span class="unit-search__count-container">
-    <span class="unit-search__count">{{ total_rows }}</span>
-    {% trans with {'context': 'Vocational school search count'}%}unit{% plural total_rows %}units{% endtrans %}
-  </span>
-
   <div class="unit-search__results">
-    {{ rows }}
+    <span class="unit-search__count-container">
+      <span class="unit-search__count">{{ total_rows }}</span>
+      {% trans with {'context': 'Vocational school search count'}%}unit{% plural total_rows %}units{% endtrans %}
+    </span>
+
+    <div class="unit-search__result--list">
+      {{ rows }}
+    </div>
+
+    {{ empty }}
+    {{ pager }}
   </div>
-
-  {{ empty }}
-  {{ pager }}
-
   {{ attachment_after }}
   {{ more }}
 

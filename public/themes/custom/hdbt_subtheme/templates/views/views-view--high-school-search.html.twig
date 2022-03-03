@@ -58,56 +58,57 @@
   {{ exposed }}
   {{ attachment_before }}
 
-  <span class="unit-search__count-container">
-    <span class="unit-search__count">{{ total_rows }}</span>
-    {% trans with {'context': 'High school search count'}%}general upper secondary school{% plural total_rows %}general upper secondary schools{% endtrans %}
-  </span>
-
-  <div data-drupal-selector="tabbed-content" data-id-number="{{ dom_id }}">
-    <div class="tabs maps__tabs"
-         role="tablist"
-         aria-label="{{ 'Toggle between list and map view'|t({}, {'context': 'Tab-list of unit-search'}) }}">
-
-      <button class="tab"
-              id="tab-1--{{ dom_id }}"
-              role="tab"
-              aria-selected="false"
-              aria-controls="tab-1__content--{{ dom_id }}">
-        {{ 'Show results as a list'|t }}
-      </button>
-      <button class="tab"
-              id="tab-2--{{ dom_id }}"
-              role="tab"
-              aria-selected="false"
-              aria-controls="tab-2__content--{{ dom_id }}">
-        {{ 'Show results on a map'|t }}
-      </button>
-
-      <div class="tab__content"
-           id="tab-1__content--{{ dom_id }}"
-           role="tabpanel"
-           aria-labelledby="tab-1--{{ dom_id }}"
-           aria-hidden="true"
-           tabindex="0">
-        <div class="unit-search__results--list">
-          {{ rows }}
-        </div>
-        {{ empty }}
-        {{ pager }}
+  <div class="unit-search__results" data-drupal-selector="tabbed-content" data-id-number="{{ dom_id }}">
+    <div class="unit-search__result-actions">
+      <span class="unit-search__count-container">
+        <span class="unit-search__count">{{ total_rows }}</span>
+        {% trans with {'context': 'High school search count'}%}general upper secondary school{% plural total_rows %}general upper secondary schools{% endtrans %}
+      </span>
+      <div class="tabs tabs--unit-search"
+           role="tablist"
+           aria-label="{{ 'Toggle between list and map view'|t({}, {'context': 'Tab-list of unit-search'}) }}">
+        <button class="tab tab--list"
+                data-drupal-selector="tab-1--{{ dom_id }}"
+                id="tab-1--{{ dom_id }}"
+                role="tab"
+                aria-selected="false"
+                aria-controls="tab-1__content--{{ dom_id }}">{{ 'Show results as a list'|t }}</button>
+        <button class="tab tab--map"
+                data-drupal-selector="tab-2--{{ dom_id }}"
+                id="tab-2--{{ dom_id }}"
+                role="tab"
+                aria-selected="false"
+                aria-controls="tab-2__content--{{ dom_id }}">{{ 'Show results on a map'|t }}</button>
       </div>
-
-      <div class="tab__content"
-           id="tab-2__content--{{ dom_id }}"
-           role="tabpanel"
-           aria-labelledby="tab-2--{{ dom_id }}"
-           aria-hidden="true"
-           tabindex="0">
-        <div class="unit-search__results--map">
-          <iframe title="Palvelukartta - Etusivu"
-                  class="unit-search__map"
-                  src="https://palvelukartta.hel.fi/fi/embed/search?units={{ unit_ids|join(',') }}">
-          </iframe>
-        </div>
+    </div>
+    <div class="tab__content"
+         data-drupal-selector="tab-1__content--{{ dom_id }}"
+         id="tab-1__content--{{ dom_id }}"
+         role="tabpanel"
+         aria-labelledby="tab-1--{{ dom_id }}"
+         aria-hidden="true"
+         tabindex="0">
+      <div class="unit-search__result--list">
+        {{ rows }}
+      </div>
+      {{ empty }}
+      {{ pager }}
+    </div>
+    <div class="tab__content"
+         data-drupal-selector="tab-2__content--{{ dom_id }}"
+         id="tab-2__content--{{ dom_id }}"
+         role="tabpanel"
+         aria-labelledby="tab-2--{{ dom_id }}"
+         aria-hidden="true"
+         tabindex="0">
+      <div class="unit-search__result--map">
+        <iframe title="Palvelukartta - Etusivu"
+                class="unit-search__map"
+                src="https://palvelukartta.hel.fi/fi/embed/search?units={{ unit_ids|join(',') }}">
+        </iframe>
+      </div>
+      <div class="unit-search__map-actions">
+        <a href="https://palvelukartta.hel.fi/fi/embed/search?units={{ unit_ids|join(',') }}" class="link" target="_blank">{{ 'Open map in a new tab'|t }}</a>
       </div>
     </div>
   </div>
