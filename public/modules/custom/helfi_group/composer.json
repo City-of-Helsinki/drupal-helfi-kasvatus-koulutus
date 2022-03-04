@@ -2,6 +2,7 @@
     "name": "drupal/helfi_group",
     "description": "Provides Group module customization.",
     "type": "drupal-custom-module",
+    "version": "dev-main",
     "minimum-stability": "dev",
     "require": {
         "drupal/group": "^1.4",

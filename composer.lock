@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7588c4732faca92cfe253a529ceff7b",
+    "content-hash": "6b61f2b499289ac46673ad93fe54e13f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3916,7 +3916,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.1",
-                    "datestamp": "1625840228",
+                    "datestamp": "1625840906",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4141,11 +4141,11 @@
         },
         {
             "name": "drupal/helfi_group",
-            "version": "dev-UHF-4163-school-groups",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "public/modules/custom/helfi_group",
-                "reference": "a53888cee803e33736c451af1b7e748d370d309b"
+                "reference": "7bacd372ccad6eb95f496fa417eb2fcc81f12793"
             },
             "require": {
                 "drupal/group": "^1.4",
@@ -16272,7 +16272,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/flysystem_azure": 20,
-        "drupal/helfi_drupal_tools": 20
+        "drupal/helfi_drupal_tools": 20,
+        "drupal/helfi_group": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
