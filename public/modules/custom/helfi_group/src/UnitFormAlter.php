@@ -8,6 +8,7 @@ use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\group_content_menu\NodeFormAlter;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\menu_link_content\MenuLinkContentInterface;
 
 /**
  * Helper class to handle altering unit forms.
@@ -27,36 +28,66 @@ class UnitFormAlter extends NodeFormAlter {
    */
   public function alter(array &$form, FormStateInterface $form_state) {
     $unit = $form_state->getFormObject()->getEntity();
-    $groups = $this->getGroupsForEntity($form_state, $unit);
+    $groups = $this->getEntityGroups($form_state, $unit);
 
     if (empty($groups) || !isset($form['menu'])) {
       return;
     }
 
-    $group_menus = $this->getGroupMenus($groups);
-    $defaults = $this->getMenuLinkDefault($unit, array_keys($group_menus));
-    $default = $defaults['menu_name'] . ':' . $defaults['parent'];
+    $groupMenus = $this->getGroupMenus($groups);
+    $menuLink = $this->getDefaultMenuLink($unit, array_keys($groupMenus));
+    $form_state->set('menu_link', $menuLink);
+
+    // Alter the relevant menu parts.
+    $form['menu']['enabled'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Provide a menu link'),
+      '#default_value' => !$menuLink->isNew() && $menuLink->hasTranslation($unit->language()->getId()),
+    ];
+
+    $form['menu']['published'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Enabled'),
+      '#default_value' => $menuLink->isNew() || $menuLink->isPublished(),
+      '#states' => [
+        'invisible' => [
+          'input[name="menu[enabled]"]' => ['checked' => FALSE],
+        ],
+      ],
+      '#description' => t('All languages'),
+    ];
+
+    $form['menu']['link']['title'] = [
+      '#type' => 'textfield',
+      '#title' => t('Menu link title'),
+      '#default_value' => $menuLink->label(),
+    ];
+
+    $id = $menuLink->isNew() ? '' : $menuLink->getPluginId();
+    $default = $menuLink->getMenuName() . ':' . $menuLink->getParentId();
 
     // Replace the menu_parent options with group menu.
-    $form['menu']['link']['menu_parent'] = $this->menuParentSelector
-      ->parentSelectElement($default, $defaults['id'], $group_menus);
+    $form['menu']['link']['menu_parent'] = $this
+      ->menuParentSelector
+      ->parentSelectElement($default, $id, $groupMenus);
 
-    // Set menu access.
+    // Set group menu access.
     $form['menu']['#access'] = FALSE;
     if (!empty($form['menu']['link']['menu_parent']['#options'])) {
-      $context_id = '@group.group_route_context:group';
-      $contexts = $this->contextRepository->getRuntimeContexts([$context_id]);
-      $group = $contexts[$context_id]->getContextValue();
+      $contextId = '@group.group_route_context:group';
+      $contexts = $this->contextRepository->getRuntimeContexts([$contextId]);
+      $group = $contexts[$contextId]->getContextValue();
       if ($group && $group->hasPermission('manage group_content_menu', $this->currentUser)) {
         $form['menu']['#access'] = TRUE;
       }
     }
+
   }
 
   /**
-   * Get an entity's groups.
+   * Get entity's groups.
    *
-   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   * @param \Drupal\Core\Form\FormStateInterface $formState
    *   A form state object.
    * @param \Drupal\Core\Entity\ContentEntityInterface $entity
    *   An entity.
@@ -67,21 +98,21 @@ class UnitFormAlter extends NodeFormAlter {
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
-  protected function getGroupsForEntity(FormStateInterface $form_state, ContentEntityInterface $entity): array {
-    // Get group for new entity.
-    if ($group = $form_state->get('group')) {
+  protected function getEntityGroups(FormStateInterface $formState, ContentEntityInterface $entity): array {
+    // Get the group for new entity.
+    if ($group = $formState->get('group')) {
       return [$group];
     }
 
-    // Get groups for exising entity.
-    $group_contents = $this->entityTypeManager
+    // Get the groups for existing entity.
+    $groupContents = $this->entityTypeManager
       ->getStorage('group_content')
       ->loadByEntity($entity);
 
     $group_ids = [];
-    foreach ($group_contents as $group_content) {
-      /** @var \Drupal\group\Entity\GroupContent $group_content */
-      $group_ids[] = $group_content->getGroup()->id();
+    foreach ($groupContents as $groupContent) {
+      /** @var \Drupal\group\Entity\GroupContent $groupContent */
+      $group_ids[] = $groupContent->getGroup()->id();
     }
 
     return $this->entityTypeManager
@@ -90,60 +121,35 @@ class UnitFormAlter extends NodeFormAlter {
   }
 
   /**
-   * Returns the definition for a menu link for the given entity.
+   * Gets specific menu's default menu link for given translation.
    *
    * @param \Drupal\Core\Entity\ContentEntityInterface $entity
    *   The entity.
-   * @param array $menu_names
+   * @param array $menuNames
    *   The menu names.
    *
-   * @return array
-   *   An array that contains default values for the menu link form.
+   * @return \Drupal\menu_link_content\MenuLinkContentInterface
+   *   The menu link.
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
-  protected function getMenuLinkDefault(ContentEntityInterface $entity, array $menu_names): array {
-    $menu_name = 'main';
-    $defaults = [
-      'entity_id' => 0,
-      'id' => '',
-      'title' => '',
-      'title_max_length' => 128,
-      'description' => '',
-      'description_max_length' => 128,
-      'menu_name' => $menu_name,
-      'parent' => '',
-      'weight' => 0,
-    ];
-    if (empty($menu_names)) {
-      return $defaults;
-    }
+  protected function getDefaultMenuLink(ContentEntityInterface $entity, array $menuNames) : MenuLinkContentInterface {
+    /** @var \Drupal\menu_link_content\Entity\MenuLinkContent $menuLink */
+    if (!$menuLink = $entity->get('menu_link')->entity) {
+      $storage = $this->entityTypeManager
+        ->getStorage('menu_link_content');
 
-    if ($entity->id()) {
-      $query = \Drupal::entityQuery('menu_link_content')
+      $results = $storage->getQuery()
         ->condition('link.uri', sprintf('entity:%s/%s', $entity->getEntityTypeId(), $entity->id()))
-        ->condition('menu_name', $menu_names, 'IN')
-        ->sort('id', 'ASC')
-        ->range(0, 1);
-      $result = $query->execute();
+        ->condition('menu_name', $menuNames, 'IN')
+        ->sort('id')
+        ->range(0, 1)
+        ->execute();
 
-      $id = !empty($result) ? reset($result) : FALSE;
-      if ($id) {
-        /** @var \Drupal\menu_link_content\Entity\MenuLinkContent $menu_link */
-        $menu_link = MenuLinkContent::load($id);
-        $defaults = [
-          'entity_id' => $menu_link->id(),
-          'id' => $menu_link->getPluginId(),
-          'title' => $menu_link->getTitle(),
-          'title_max_length' => $menu_link->getFieldDefinitions()['title']->getSetting('max_length'),
-          'description' => $menu_link->getDescription(),
-          'description_max_length' => $menu_link->getFieldDefinitions()['description']->getSetting('max_length'),
-          'menu_name' => $menu_link->getMenuName(),
-          'parent' => $menu_link->getParentId(),
-          'weight' => $menu_link->getWeight(),
-        ];
-      }
+      $menuLink = empty($results) ? MenuLinkContent::create([]) : MenuLinkContent::load(reset($results));
     }
-
-    return $defaults;
+    return \Drupal::service('entity.repository')->getTranslationFromContext($menuLink);
   }
 
 }
