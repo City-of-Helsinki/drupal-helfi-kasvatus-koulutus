@@ -21,3 +21,6 @@ msgid "unit"
 msgid_plural "units"
 msgstr[0] "toimipaikka"
 msgstr[1] "toimipaikkaa"
+
+msgid "Open large version of the map"
+msgstr "Avaa suurempi versio kartasta"
