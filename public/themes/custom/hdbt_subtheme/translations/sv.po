@@ -12,3 +12,6 @@ msgid "unit"
 msgid_plural "units"
 msgstr[0] "enhet"
 msgstr[1] "enheter"
+
+msgid "Open large version of the map"
+msgstr "Öppna den stora versionen av kartan"

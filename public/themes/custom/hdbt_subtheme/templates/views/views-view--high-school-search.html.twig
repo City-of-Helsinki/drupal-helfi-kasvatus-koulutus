@@ -108,7 +108,14 @@
         </iframe>
       </div>
       <div class="unit-search__map-actions">
-        <a href="https://palvelukartta.hel.fi/fi/embed/search?units={{ unit_ids|join(',') }}" class="link" target="_blank">{{ 'Open map in a new tab'|t }}</a>
+        {% set link_href = 'https://palvelukartta.hel.fi/fi/embed/search?units=' ~ unit_ids|join(',') %}
+        {% set link_text = 'Open large version of the map'|t %}
+        {% set link_attributes = {
+          'class': [
+            'link',
+          ],
+        } %}
+        {{ link(link_text, link_href, link_attributes) }}
       </div>
     </div>
   </div>
