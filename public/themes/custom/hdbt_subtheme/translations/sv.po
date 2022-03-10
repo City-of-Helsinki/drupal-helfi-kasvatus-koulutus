@@ -13,5 +13,12 @@ msgid_plural "units"
 msgstr[0] "enhet"
 msgstr[1] "enheter"
 
+msgid "Show results on a map"
+msgstr "Visa resultat på en karta"
+
+msgid "Show results as a list"
+msgstr "Visa resultat på en lista"
+
 msgid "Open large version of the map"
 msgstr "Öppna den stora versionen av kartan"
+
