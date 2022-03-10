@@ -22,5 +22,11 @@ msgid_plural "units"
 msgstr[0] "toimipaikka"
 msgstr[1] "toimipaikkaa"
 
+msgid "Show results on a map"
+msgstr "Näytä tulokset kartalla"
+
+msgid "Show results as a list"
+msgstr "Näytä tulokset listana"
+
 msgid "Open large version of the map"
 msgstr "Avaa suurempi versio kartasta"
