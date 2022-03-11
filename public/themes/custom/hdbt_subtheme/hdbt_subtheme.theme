@@ -134,3 +134,21 @@ function hdbt_subtheme_preprocess_tpr_unit(&$variables) {
     $variables['high_school_front_page_title'] = $title;
   }
 }
+
+/**
+ * Implements template_preprocess_views_view().
+ */
+function hdbt_subtheme_preprocess_views_view(&$variables) {
+  $view = $variables['view'];
+
+  if ($view->id() == 'high_school_search') {
+    $unit_ids = [];
+
+    foreach ($view->result as $value) {
+      $unit_id = $value->_entity->get('id')->value;
+      $unit_ids[] = $unit_id;
+    }
+
+    $variables['unit_ids'] = $unit_ids;
+  }
+}
