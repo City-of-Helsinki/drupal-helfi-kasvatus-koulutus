@@ -1,0 +1,17 @@
+uuid: ecb52d00-d2e3-40cb-a1db-d6b8897d01cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+  module:
+    - user
+id: group_content_type_c28cd27128f0f
+label: 'Upper secondary school: Group membership'
+description: 'Adds users to groups as members.'
+group_type: upper_secondary_school
+content_plugin: group_membership
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

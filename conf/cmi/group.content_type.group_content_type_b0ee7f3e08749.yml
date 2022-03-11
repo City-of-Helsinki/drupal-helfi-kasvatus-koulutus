@@ -1,0 +1,19 @@
+uuid: a8786458-7028-41ae-b9fd-85ed2db06403
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+    - node.type.page
+  module:
+    - gnode
+    - node
+id: group_content_type_b0ee7f3e08749
+label: 'Upper secondary school: Group node (Basic page)'
+description: 'Adds <em class="placeholder">Basic page</em> content to groups both publicly and privately.'
+group_type: upper_secondary_school
+content_plugin: 'group_node:page'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

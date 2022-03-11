@@ -1,0 +1,10 @@
+name: 'HELfi Group'
+type: module
+description: 'Provides Group module customization.'
+package: HELfi
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - group
+  - group_content_menu
+  - helfi_tpr

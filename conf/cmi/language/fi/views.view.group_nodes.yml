@@ -1,0 +1,57 @@
+display:
+  default:
+    display_options:
+      title: Sisältö
+      fields:
+        title:
+          label: Otsikko
+        type:
+          label: Sisältötyyppi
+        status:
+          label: Tila
+          settings:
+            format_custom_false: Julkaisematon
+            format_custom_true: Julkaistu
+        changed:
+          label: Päivitetty
+        dropbutton:
+          label: Toimenpiteet
+        edit_node:
+          text: 'Muokkaa sisältöä'
+        delete_node:
+          text: 'Poista sisältö'
+      arguments:
+        gid:
+          title: '{{ arguments.gid|placeholder }} – sisältö'
+      pager:
+        options:
+          tags:
+            first: '« Ensimmäinen'
+            last: 'Viimeinen »'
+      exposed_form:
+        options:
+          submit_button: Käytä
+          reset_button_label: 'Tyhjennä valinnat'
+          exposed_sorts_label: Järjestä
+          sort_asc_label: Nouseva
+          sort_desc_label: Laskeva
+      empty:
+        area_text_custom:
+          content: 'Ei sisältöä.'
+      filters:
+        status:
+          group_info:
+            label: 'Julkaisun tila'
+            group_items:
+              1:
+                title: Julkaistu
+              2:
+                title: Julkaisematon
+        type:
+          expose:
+            label: Tyyppi
+  page_1:
+    display_options:
+      menu:
+        title: Sisältö
+    display_title: Sivu

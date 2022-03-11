@@ -1,0 +1,21 @@
+uuid: 780cbe0e-52af-40d0-af97-1f2eaf76a9cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - group_content_menu.group_content_menu_type.kasko_group_menu
+id: group_content_menu.kasko_group_menu.default
+targetEntityType: group_content_menu
+bundle: kasko_group_menu
+mode: default
+content:
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

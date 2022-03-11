@@ -1,0 +1,12 @@
+uuid: e7b04a85-f654-4b9e-a39a-87e11363998d
+langcode: en
+status: true
+dependencies: {  }
+id: upper_secondary_school
+label: 'Upper secondary school'
+description: ''
+new_revision: false
+creator_membership: true
+creator_wizard: false
+creator_roles:
+  - upper_secondary_school-admin

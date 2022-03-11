@@ -1,0 +1,22 @@
+uuid: 6bd0ac93-73b6-4ec3-830c-bff6d96ba3c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group_content.group_roles
+    - group.content_type.group_content_type_c28cd27128f0f
+id: group_content.group_content_type_c28cd27128f0f.group_roles
+field_name: group_roles
+entity_type: group_content
+bundle: group_content_type_c28cd27128f0f
+label: Roles
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'group_type:group_role'
+  handler_settings:
+    group_type_id: upper_secondary_school
+field_type: entity_reference

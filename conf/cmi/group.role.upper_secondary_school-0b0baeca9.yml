@@ -1,0 +1,17 @@
+uuid: 0326015a-c353-48b6-8544-e45d8925cdd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+  enforced:
+    config:
+      - user.role.editor
+id: upper_secondary_school-0b0baeca9
+label: Editor
+weight: 4
+internal: true
+audience: outsider
+group_type: upper_secondary_school
+permissions_ui: false
+permissions: {  }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d65cd150a88e3b4965a6b1e9193c55b0",
+    "content-hash": "6b61f2b499289ac46673ad93fe54e13f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3847,6 +3847,108 @@
             ]
         },
         {
+            "name": "drupal/group",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/group.git",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/group-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "385a70f421dc3142c9c91876ac8b35ae3afa107e"
+            },
+            "require": {
+                "drupal/core": "^8.9 || ^9",
+                "drupal/entity": "^1.2",
+                "drupal/variationcache": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1625063515",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Kristiaan Van den Eynde",
+                    "homepage": "https://www.drupal.org/u/kristiaanvandeneynde",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "This module allows you to group users, content and other entities",
+            "homepage": "http://drupal.org/project/group",
+            "support": {
+                "source": "https://git.drupalcode.org/project/group",
+                "issues": "https://drupal.org/project/issues/group"
+            }
+        },
+        {
+            "name": "drupal/group_content_menu",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/group_content_menu.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/group_content_menu-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "73972de25735e77079712536007193364cda9635"
+            },
+            "require": {
+                "drupal/core": "^8.6 | ^9.0",
+                "drupal/group": "^1.0@RC"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1625840906",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Lucas Hedding",
+                    "homepage": "https://www.drupal.org/u/heddn",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "heddn",
+                    "homepage": "https://www.drupal.org/user/1463982"
+                }
+            ],
+            "description": "Provides features for a menu per group",
+            "homepage": "https://www.drupal.org/project/group_content_menu",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/group_content_menu",
+                "issues": "https://www.drupal.org/project/issues/group_content_menu"
+            }
+        },
+        {
             "name": "drupal/hdbt",
             "version": "2.2.13",
             "source": {
@@ -3879,16 +3981,16 @@
         },
         {
             "name": "drupal/hdbt_admin",
-            "version": "1.4.7",
+            "version": "1.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt-admin.git",
-                "reference": "eff7b7e3772f99e63a1d6d9243ca574eee97a718"
+                "reference": "3302b1b4469224602d9173194c8aadc98ddf2a0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/eff7b7e3772f99e63a1d6d9243ca574eee97a718",
-                "reference": "eff7b7e3772f99e63a1d6d9243ca574eee97a718",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/3302b1b4469224602d9173194c8aadc98ddf2a0b",
+                "reference": "3302b1b4469224602d9173194c8aadc98ddf2a0b",
                 "shasum": ""
             },
             "require": {
@@ -3904,10 +4006,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/1.4.7",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/1.4.8",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/issues"
             },
-            "time": "2022-02-23T09:38:59+00:00"
+            "time": "2022-03-11T06:30:54+00:00"
         },
         {
             "name": "drupal/helfi_ahjo",
@@ -4036,6 +4138,33 @@
                 "issues": "https://github.com/City-of-Helsinki/drupal-tools/issues"
             },
             "time": "2022-03-09T10:47:55+00:00"
+        },
+        {
+            "name": "drupal/helfi_group",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "public/modules/custom/helfi_group",
+                "reference": "7bacd372ccad6eb95f496fa417eb2fcc81f12793"
+            },
+            "require": {
+                "drupal/group": "^1.4",
+                "drupal/group_content_menu": "^1.1"
+            },
+            "type": "drupal-custom-module",
+            "extra": {
+                "patches": {
+                    "drupal/group": {
+                        "https://www.drupal.org/project/group/issues/2842630": "https://www.drupal.org/files/issues/2019-01-04/2842630-20.patch",
+                        "https://www.drupal.org/project/group/issues/2815971": "https://www.drupal.org/files/issues/2021-02-19/2815971-28.patch",
+                        "https://www.drupal.org/project/group/issues/3210808": "https://www.drupal.org/files/issues/2021-04-26/uasort-comparison-3210808-2.patch"
+                    }
+                }
+            },
+            "description": "Provides Group module customization.",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "drupal/helfi_hauki",
@@ -6284,6 +6413,57 @@
             "homepage": "https://www.drupal.org/project/update_helper",
             "support": {
                 "source": "https://git.drupalcode.org/project/update_helper"
+            }
+        },
+        {
+            "name": "drupal/variationcache",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/variationcache.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/variationcache-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "302bcd0bc4d7c12a9d18ad4f531d1c65fdac65b1"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1588927568",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Kristiaan Van den Eynde",
+                    "homepage": "https://www.drupal.org/u/kristiaanvandeneynde",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Brad Jones",
+                    "homepage": "https://www.drupal.org/u/bradjones1",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "This project provides VariationCache, a redirect-aware caching implementation.",
+            "homepage": "http://drupal.org/project/variationcache",
+            "support": {
+                "source": "https://git.drupalcode.org/project/variationcache",
+                "issues": "https://drupal.org/project/issues/variationcache"
             }
         },
         {
@@ -16092,7 +16272,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/flysystem_azure": 20,
-        "drupal/helfi_drupal_tools": 20
+        "drupal/helfi_drupal_tools": 20,
+        "drupal/helfi_group": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
