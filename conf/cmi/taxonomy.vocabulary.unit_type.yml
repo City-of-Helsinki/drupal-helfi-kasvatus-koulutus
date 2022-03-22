@@ -1,0 +1,8 @@
+uuid: 0e3b579b-d29a-4a88-bcdc-b5c96ea467be
+langcode: und
+status: true
+dependencies: {  }
+name: 'Unit type'
+vid: unit_type
+description: 'You can use this vocabulary to categorise TPR-units so that they can be used in listings for example listing of daycare units.'
+weight: 0

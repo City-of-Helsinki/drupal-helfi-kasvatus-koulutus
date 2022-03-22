@@ -6,9 +6,11 @@ dependencies:
     - field.storage.node.field_content
     - node.type.landing_page
     - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.chart
     - paragraphs.paragraphs_type.columns
     - paragraphs.paragraphs_type.content_cards
     - paragraphs.paragraphs_type.content_liftup
+    - paragraphs.paragraphs_type.daycare_search
     - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.high_school_search
     - paragraphs.paragraphs_type.liftup_with_image
@@ -44,12 +46,13 @@ settings:
       liftup_with_image: liftup_with_image
       map: map
       from_library: from_library
+      chart: chart
       remote_video: remote_video
       unit_search: unit_search
+      daycare_search: daycare_search
       high_school_search: high_school_search
       service_list: service_list
       vocational_school_search: vocational_school_search
-      chart: chart
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -72,6 +75,9 @@ settings:
         enabled: true
       content_liftup:
         weight: -32
+        enabled: true
+      daycare_search:
+        weight: 32
         enabled: true
       from_library:
         weight: 21
