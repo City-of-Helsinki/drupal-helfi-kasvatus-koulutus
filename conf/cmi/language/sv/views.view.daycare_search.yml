@@ -1,0 +1,21 @@
+label: 'Dagis sök'
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          tags:
+            first: '« Först'
+            last: 'Sista »'
+          expose:
+            items_per_page_label: 'Inlägg per sida'
+            items_per_page_options_all_label: '- Alla -'
+      empty:
+        area:
+          content:
+            value: "<p>Inget resultat.</p>\r\n"
+            format: full_html
+      filters:
+        address_search:
+          expose:
+            label: 'Adress sök'
