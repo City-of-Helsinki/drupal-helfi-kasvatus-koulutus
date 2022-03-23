@@ -1,0 +1,30 @@
+label: 'Päiväkoti haku'
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          tags:
+            first: '« Ensimmäinen'
+            last: 'Viimeinen »'
+          expose:
+            items_per_page_label: 'Kohdetta per sivu'
+            items_per_page_options_all_label: '- Kaikki -'
+      exposed_form:
+        options:
+          submit_button: Hae
+          reset_button_label: Palauta
+          exposed_sorts_label: Järjestä
+          sort_asc_label: Nouseva
+          sort_desc_label: Laskeva
+      filters:
+        address_search:
+          expose:
+            label: Osoitehaku
+      empty:
+        area:
+          content:
+            value: "<p>Ei tuloksia.</p>\r\n"
+            format: full_html
+  block:
+    display_title: Lohko
