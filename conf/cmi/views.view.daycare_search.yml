@@ -151,7 +151,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: 'Search for a daycare centre'
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -211,7 +211,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Address search'
+            label: 'Sort daycare centres by address'
             description: ''
             use_operator: false
             operator: address_search_op

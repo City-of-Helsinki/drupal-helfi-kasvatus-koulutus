@@ -12,7 +12,7 @@ display:
             items_per_page_options_all_label: '- Kaikki -'
       exposed_form:
         options:
-          submit_button: Hae
+          submit_button: 'Hae päiväkotia'
           reset_button_label: Palauta
           exposed_sorts_label: Järjestä
           sort_asc_label: Nouseva
@@ -20,7 +20,7 @@ display:
       filters:
         address_search:
           expose:
-            label: Osoitehaku
+            label: 'Järjestä päiväkodit osoitteen perusteella'
       empty:
         area:
           content:
