@@ -24,7 +24,7 @@ display:
       empty:
         area:
           content:
-            value: "<p>Ei tuloksia.</p>\r\n"
+            value: "<p class=\"unit-search__no-results-title\">Valitsemillasi suodatuksilla ei löytynyt yhtään toimipistettä.</p>\r\n\r\n<p class=\"unit-search__no-results-desc\">Kokeile jotain toista valintaa.</p>\r\n"
             format: full_html
   block:
     display_title: Lohko

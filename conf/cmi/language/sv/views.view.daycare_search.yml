@@ -13,7 +13,7 @@ display:
       empty:
         area:
           content:
-            value: "<p>Inget resultat.</p>\r\n"
+            value: "<p class=\"unit-search__no-results-title\">Inga verksamhetsställen hittades med de filter du valt.</p>\r\n\r\n<p class=\"unit-search__no-results-desc\">Försök med ett annat val.</p>\r\n"
             format: full_html
       filters:
         address_search:

@@ -175,7 +175,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: 'No results.'
+            value: "<p class=\"unit-search__no-results-title\">No daycare units were found with the selected filters.</p>\r\n<p class=\"unit-search__no-results-desc\">Please try another selection.</p>"
             format: full_html
           tokenize: false
       sorts:
