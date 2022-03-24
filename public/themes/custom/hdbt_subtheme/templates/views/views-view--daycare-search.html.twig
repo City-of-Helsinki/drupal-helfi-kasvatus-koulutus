@@ -59,11 +59,9 @@
       <span class="unit-search__count">{{ total_rows }}</span>
       {% trans with {'context': 'Daycare search count'}%}unit{% plural total_rows %}units{% endtrans %}
     </span>
-    {% if sorted_by_proximity is empty %}
-    {# {% if sorted_by_proximity is not empty %} #}
+    {% if sorted_by_proximity is not empty %}
       <span class="unit-search__additional-information">
-        {# {{ sorted_by_proximity }} #}
-        Tulokset järjestettynä hakemasi osoitteen perusteella.
+        {{ sorted_by_proximity }}
       </span>
     {% endif %}
 

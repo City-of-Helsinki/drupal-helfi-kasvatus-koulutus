@@ -30,3 +30,9 @@ msgstr "Näytä tulokset listana"
 
 msgid "Open large version of the map"
 msgstr "Avaa suurempi versio kartasta"
+
+msgctxt "Daycare search count"
+msgid "unit"
+msgid_plural "units"
+msgstr[0] "toimipaikka"
+msgstr[1] "toimipaikkaa"
