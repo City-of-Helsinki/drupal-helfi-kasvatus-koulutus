@@ -9,8 +9,8 @@ dependencies:
     - gnode
     - node
 id: group_content_type_cb62eb2a38c4f
-label: 'Upper secondary school: Group node (Laskeutumissivu)'
-description: 'Adds <em class="placeholder">Laskeutumissivu</em> content to groups both publicly and privately.'
+label: 'Upper secondary school: Group node (Landing page)'
+description: 'Adds <em class="placeholder">Landing page</em> content to groups both publicly and privately.'
 group_type: upper_secondary_school
 content_plugin: 'group_node:landing_page'
 plugin_config:
