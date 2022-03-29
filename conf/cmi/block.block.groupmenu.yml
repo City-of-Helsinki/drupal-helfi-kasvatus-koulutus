@@ -1,0 +1,35 @@
+uuid: e067ff73-3a29-4fb6-a1bb-442994b3cbd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - group_content_menu.group_content_menu_type.kasko_group_menu
+  module:
+    - group
+    - group_content_menu
+  theme:
+    - hdbt_subtheme
+id: groupmenu
+theme: hdbt_subtheme
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'group_content_menu:kasko_group_menu'
+settings:
+  id: 'group_content_menu:kasko_group_menu'
+  label: 'Kasko group menu'
+  label_display: '0'
+  provider: group_content_menu
+  context_mapping:
+    group: '@group.group_route_context:group'
+  level: 2
+  depth: 2
+  expand_all_items: false
+visibility:
+  group_type:
+    id: group_type
+    group_types:
+      upper_secondary_school: upper_secondary_school
+    negate: false
+    context_mapping:
+      group: '@group.group_route_context:group'

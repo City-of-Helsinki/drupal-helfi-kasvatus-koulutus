@@ -14,7 +14,7 @@ _core:
 id: hdbt_subtheme_main_navigation_level_2
 theme: hdbt_subtheme
 region: sidebar_first
-weight: 0
+weight: -11
 provider: null
 plugin: 'menu_block_current_language:main'
 settings:

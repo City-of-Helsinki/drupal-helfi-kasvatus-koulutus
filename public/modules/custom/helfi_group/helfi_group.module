@@ -1,0 +1,63 @@
+<?php
+
+declare(strict_types = 1);
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\helfi_group\UnitFormAlter;
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Adds parent menu link's title and URL to the group menu.
+ */
+function helfi_group_preprocess_block(&$variables) {
+  if ($variables['base_plugin_id'] !== 'group_content_menu') {
+    return;
+  }
+
+  if (empty($variables['content']['#items'])) {
+    return;
+  }
+
+  $current_level_menu_item = reset($variables['content']['#items']);
+  if (!isset($current_level_menu_item['original_link'])) {
+    return;
+  }
+
+  $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
+
+  if ($parent = $current_level_menu_item['original_link']?->getParent()) {
+    if ($parent_item = $menu_link_manager->createInstance($parent)) {
+      $variables['menu_link_parent'] = [
+        'title' => $parent_item->getTitle(),
+        'url' => $parent_item->getUrlObject(),
+      ];
+    }
+  }
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Overrides templates.
+ */
+function helfi_group_theme($existing, $type, $theme, $path) {
+  return [
+    'block__group_content_menu' => [
+      'template' => 'block--group-content-menu',
+      'base hook' => 'block',
+    ],
+    'menu__group_menu' => [
+      'template' => 'menu--group-menu',
+      'base hook' => 'menu__group_menu',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function helfi_group_form_tpr_unit_form_alter(&$form, FormStateInterface $form_state) {
+  \Drupal::classResolver(UnitFormAlter::class)
+    ->alter($form, $form_state);
+}

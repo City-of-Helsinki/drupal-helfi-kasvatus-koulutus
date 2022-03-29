@@ -1,0 +1,14 @@
+uuid: cf2eaedb-bcbc-48d1-991f-aaa446edc51a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.school_editor
+  module:
+    - user
+id: user_remove_role_action.school_editor
+label: 'Remove the School editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: school_editor

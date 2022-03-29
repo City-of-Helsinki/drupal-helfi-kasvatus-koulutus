@@ -1,0 +1,18 @@
+uuid: 6e6f9807-110e-40e7-bdd7-d67bdae1204b
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+id: group.upper_secondary_school.label
+field_name: label
+entity_type: group
+bundle: upper_secondary_school
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

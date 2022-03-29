@@ -1,0 +1,17 @@
+uuid: 3f8c9486-6164-4233-a0fb-5a40d63ae16e
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+id: upper_secondary_school-outsider
+label: Outsider
+weight: -101
+internal: true
+audience: outsider
+group_type: upper_secondary_school
+permissions_ui: true
+permissions:
+  - 'view group_node:landing_page entity'
+  - 'view group_node:page entity'
+  - 'view group_tpr_unit entity'

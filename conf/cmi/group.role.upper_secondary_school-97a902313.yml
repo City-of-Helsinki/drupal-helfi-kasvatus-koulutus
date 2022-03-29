@@ -1,0 +1,17 @@
+uuid: 81cf1f11-3038-4208-899b-5df33f67ff16
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+  enforced:
+    config:
+      - user.role.read_only
+id: upper_secondary_school-97a902313
+label: 'Read only'
+weight: 4
+internal: true
+audience: outsider
+group_type: upper_secondary_school
+permissions_ui: false
+permissions: {  }

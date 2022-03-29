@@ -1,0 +1,5 @@
+services:
+  helfi_group.route_subscriber:
+    class: Drupal\helfi_group\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
