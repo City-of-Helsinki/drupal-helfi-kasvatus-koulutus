@@ -26,5 +26,13 @@ display:
           content:
             value: "<p class=\"unit-search__no-results-title\">Valitsemillasi suodatuksilla ei löytynyt yhtään toimipistettä.</p>\r\n\r\n<p class=\"unit-search__no-results-desc\">Kokeile jotain toista valintaa.</p>\r\n"
             format: full_html
+      header:
+        area_address_search_info:
+          succeed:
+            value: 'Tulokset järjestettynä hakemasi osoitteen perusteella.'
+            format: minimal
+          failed:
+            value: 'Voi harmi. Hakemaasi osoitetta ei löytynyt. Tarkista syöttämäsi osoite.'
+            format: minimal
   block:
     display_title: Lohko

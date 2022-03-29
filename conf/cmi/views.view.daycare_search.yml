@@ -251,7 +251,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            2: 2
+            1: 1
           group: 1
           exposed: false
           expose:
@@ -366,7 +366,22 @@ display:
           plugin_id: standard
           required: true
       use_ajax: true
-      header: {  }
+      header:
+        area_address_search_info:
+          id: area_address_search_info
+          table: views
+          field: area_address_search_info
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: address_search_info
+          empty: false
+          succeed:
+            value: 'Results sorted by the address.'
+            format: minimal
+          failed:
+            value: 'Given address was not found. Please check the address.'
+            format: minimal
       footer: {  }
       display_extenders: {  }
     cache_metadata:
