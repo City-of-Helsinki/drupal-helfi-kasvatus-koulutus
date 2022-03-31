@@ -5,12 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.tpr_unit.minimal
     - taxonomy.vocabulary.unit_type
-  content:
-    - 'taxonomy_term:unit_type:380b9751-ea75-4b35-bf98-e21eba9906cc'
   module:
     - helfi_address_search
     - helfi_tpr
     - taxonomy
+    - user
 id: daycare_search
 label: 'Daycare search'
 module: views
@@ -159,8 +158,9 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
@@ -352,7 +352,7 @@ display:
         options:
           query_comment: ''
           disable_sql_rewrite: false
-          distinct: false
+          distinct: true
           replica: false
           query_tags: {  }
       relationships:
@@ -391,6 +391,7 @@ display:
         - url
         - url.query_args
         - user
+        - user.permissions
       tags:
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.default'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.high_school_card'
@@ -413,6 +414,7 @@ display:
         - url
         - url.query_args
         - user
+        - user.permissions
       tags:
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.default'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.high_school_card'
