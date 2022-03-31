@@ -46,13 +46,13 @@ settings:
       liftup_with_image: liftup_with_image
       map: map
       from_library: from_library
-      chart: chart
       remote_video: remote_video
       unit_search: unit_search
       daycare_search: daycare_search
       high_school_search: high_school_search
       service_list: service_list
       vocational_school_search: vocational_school_search
+      chart: chart
     negate: 0
     target_bundles_drag_drop:
       accordion:
