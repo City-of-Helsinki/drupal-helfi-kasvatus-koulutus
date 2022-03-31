@@ -54,6 +54,7 @@ settings:
       high_school_search: high_school_search
       vocational_school_search: vocational_school_search
       chart: chart
+      contact_card_listing: contact_card_listing
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -70,6 +71,12 @@ settings:
         enabled: true
       columns:
         weight: -26
+        enabled: true
+      contact_card:
+        weight: 30
+        enabled: false
+      contact_card_listing:
+        weight: 31
         enabled: true
       content_cards:
         weight: -21
@@ -115,6 +122,9 @@ settings:
         enabled: false
       sidebar_text:
         weight: 40
+        enabled: false
+      social_media_link:
+        weight: 46
         enabled: false
       text:
         weight: -27
