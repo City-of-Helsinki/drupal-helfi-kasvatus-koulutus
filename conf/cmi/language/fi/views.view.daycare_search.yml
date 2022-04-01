@@ -29,10 +29,10 @@ display:
       header:
         area_address_search_info:
           succeed:
-            value: 'Tulokset järjestettynä hakemasi osoitteen perusteella.'
+            value: "<p>Tulokset järjestettynä hakemasi osoitteen perusteella. Etäisyys annettuun osoitteeseen on kerrottu toimipisteen osoitteen jälkeen tuloslistauksessa.</p>\r\n"
             format: minimal
           failed:
-            value: 'Voi harmi. Hakemaasi osoitetta ei löytynyt. Tarkista syöttämäsi osoite.'
+            value: "<p>Voi harmi. Hakemaasi osoitetta ei löytynyt. Tarkista syöttämäsi osoite.</p>\r\n"
             format: minimal
   block:
     display_title: Lohko

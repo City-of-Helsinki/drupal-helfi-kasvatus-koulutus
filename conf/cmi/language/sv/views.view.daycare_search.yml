@@ -22,3 +22,11 @@ display:
       exposed_form:
         options:
           submit_button: 'Sök daghem'
+      header:
+        area_address_search_info:
+          succeed:
+            value: "<p>Resultaten sorterade enligt adressen du sökte med. Avståndet till den angivna adressen står efter verksamhetsställets adress i resultatlistan.</p>\r\n"
+            format: minimal
+          failed:
+            value: "<p>Tyvärr kunde adressen du sökte inte hittas. Kontrollera adressen du uppgav.</p>\r\n"
+            format: minimal

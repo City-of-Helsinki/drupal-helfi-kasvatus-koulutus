@@ -377,7 +377,7 @@ display:
           plugin_id: address_search_info
           empty: false
           succeed:
-            value: 'Results sorted by the address.'
+            value: 'Results organised by the address you searched for. The distance to the address is indicated in the results list after the location’s address.'
             format: minimal
           failed:
             value: 'Given address was not found. Please check the address.'
