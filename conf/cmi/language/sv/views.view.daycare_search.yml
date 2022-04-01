@@ -2,14 +2,6 @@ label: 'Dagis sök'
 display:
   default:
     display_options:
-      pager:
-        options:
-          tags:
-            first: '« Först'
-            last: 'Sista »'
-          expose:
-            items_per_page_label: 'Inlägg per sida'
-            items_per_page_options_all_label: '- Alla -'
       empty:
         area:
           content:
@@ -30,3 +22,7 @@ display:
           failed:
             value: "<p>Tyvärr kunde adressen du sökte inte hittas. Kontrollera adressen du uppgav.</p>\r\n"
             format: minimal
+      pager:
+        options:
+          views_infinite_scroll:
+            button_text: 'Ladda fler enheter'

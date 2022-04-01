@@ -10,6 +10,7 @@ dependencies:
     - helfi_tpr
     - taxonomy
     - user
+    - views_infinite_scroll
 id: daycare_search
 label: 'Daycare search'
 module: views
@@ -127,17 +128,15 @@ display:
           empty_zero: false
           hide_alter_empty: true
       pager:
-        type: full
+        type: infinite_scroll
         options:
           offset: 0
           items_per_page: 50
           total_pages: null
           id: 0
           tags:
-            next: ››
-            previous: ‹‹
-            first: '« First'
-            last: 'Last »'
+            next: 'Next ›'
+            previous: '‹ Previous'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -146,7 +145,10 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 9
+          views_infinite_scroll:
+            button_text: 'Load more units'
+            automatically_load_content: false
+            initially_load_all_pages: false
       exposed_form:
         type: basic
         options:
