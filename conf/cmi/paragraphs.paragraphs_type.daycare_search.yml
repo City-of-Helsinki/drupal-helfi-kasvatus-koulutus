@@ -1,0 +1,10 @@
+uuid: 35c4180e-f291-4d16-b95e-5ec6cb6290b1
+langcode: en
+status: true
+dependencies: {  }
+id: daycare_search
+label: 'Daycare search'
+icon_uuid: null
+icon_default: null
+description: 'Paragraph that lists all units tagged in the term daycare.'
+behavior_plugins: {  }

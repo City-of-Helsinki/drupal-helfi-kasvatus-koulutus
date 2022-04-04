@@ -1,0 +1,19 @@
+uuid: 7f5fecdc-48ee-4e02-95a3-81ee0b0a8f23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_daycare_search_title
+    - paragraphs.paragraphs_type.daycare_search
+id: paragraph.daycare_search.field_daycare_search_title
+field_name: field_daycare_search_title
+entity_type: paragraph
+bundle: daycare_search
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

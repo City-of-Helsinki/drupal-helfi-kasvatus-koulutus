@@ -2,16 +2,13 @@ uuid: b5695452-07fc-4f90-a7de-f59206ab1cbe
 langcode: en
 status: true
 dependencies:
-  config:
-    - filter.format.full_html
-    - filter.format.minimal
   module:
     - eu_cookie_compliance
-    - filter
     - helfi_api_base
     - helfi_tpr
     - media
     - system
+    - toolbar
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
@@ -20,9 +17,9 @@ weight: -9
 is_admin: false
 permissions:
   - 'access content'
+  - 'access toolbar'
   - 'display eu cookie compliance popup'
   - 'view media'
   - 'view remote entities'
   - 'view tpr_service'
   - 'view tpr_unit'
-  - 'access toolbar'

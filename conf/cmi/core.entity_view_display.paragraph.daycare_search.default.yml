@@ -1,0 +1,31 @@
+uuid: 7c733f3f-9df0-44ce-9d00-ef9d1205ae81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.daycare_search.field_daycare_search_description
+    - field.field.paragraph.daycare_search.field_daycare_search_title
+    - paragraphs.paragraphs_type.daycare_search
+  module:
+    - text
+id: paragraph.daycare_search.default
+targetEntityType: paragraph
+bundle: daycare_search
+mode: default
+content:
+  field_daycare_search_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_daycare_search_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -8,7 +8,7 @@ dependencies:
     config:
       - user.role.admin
 id: upper_secondary_school-4200d0219
-label: Admin
+label: Administrator
 weight: 2
 internal: true
 audience: outsider
