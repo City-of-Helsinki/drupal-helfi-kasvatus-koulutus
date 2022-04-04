@@ -1,4 +1,4 @@
-KUBECTL_BIN := $(shell which kubectl || echo no)
+KUBECTL_BIN := $(shell command -v kubectl || echo no)
 KUBECTL_NAMESPACE ?= foobar-namespace
 KUBECTL_SHELL ?= sh
 KUBECTL_EXEC_FLAGS ?= -n $(KUBECTL_NAMESPACE) -c $(KUBECTL_CONTAINER)
@@ -13,7 +13,7 @@ ifeq ($(DUMP_SQL_EXISTS),no)
 	$(call kubectl_exec_to_file,$(POD),drush sql-dump --structure-tables-key=common --extra-dump=--no-tablespaces,$(DUMP_SQL_FILENAME))
 endif
 	$(call step,Import local SQL dump...)
-	$(call drush_on_${RUN_ON},sql-query --file=${DOCKER_PROJECT_ROOT}/$(DUMP_SQL_FILENAME))
+	$(call drush,sql-query --file=${DOCKER_PROJECT_ROOT}/$(DUMP_SQL_FILENAME))
 
 PHONY += kubectl-sync-files-tar
 kubectl-sync-files-tar: ## Sync files from Kubernetes using tar
