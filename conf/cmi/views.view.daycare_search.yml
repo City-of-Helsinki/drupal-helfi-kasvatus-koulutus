@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.tpr_unit.minimal
     - taxonomy.vocabulary.unit_type
+  content:
+    - 'taxonomy_term:unit_type:50c2db37-aad5-42da-9cfe-02d37fbd4431'
   module:
     - helfi_address_search
     - helfi_tpr
@@ -319,6 +321,45 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        status_extra:
+          id: status_extra
+          table: tpr_unit_field_data
+          field: status_extra
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: tpr_unit
+          plugin_id: tpr_status
+          operator: '='
+          value: ''
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
           is_grouped: false
           group_info:
             label: ''
