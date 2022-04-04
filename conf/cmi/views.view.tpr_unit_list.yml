@@ -1,3 +1,4 @@
+uuid: a134e0fd-94e5-4736-beeb-180decf216d8
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - helfi_tpr
     - user
     - views_bulk_operations
+_core:
+  default_config_hash: 0Q9MnLuLAYwltkBeCL-al8z-gc3-M2SFIWM50exDgxg
 id: tpr_unit_list
 label: 'TPR unit list'
 module: views

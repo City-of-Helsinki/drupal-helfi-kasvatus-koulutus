@@ -46,7 +46,6 @@ dependencies:
     - toolbar
     - view_unpublished
     - views_bulk_edit
-    - views_bulk_edit
 _core:
   default_config_hash: 7RTyCpgMKCMdwkxYrpzYOCq7DQDHO0SrTjB7xwFaIyI
 id: admin
@@ -223,4 +222,3 @@ permissions:
   - 'view unpublished tpr_service'
   - 'view unpublished tpr_service_channel'
   - 'view unpublished tpr_unit'
-  - 'use views bulk edit'
