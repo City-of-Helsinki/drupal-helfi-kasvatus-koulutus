@@ -5,8 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.tpr_unit.minimal
     - taxonomy.vocabulary.unit_type
-  content:
-    - 'taxonomy_term:unit_type:50c2db37-aad5-42da-9cfe-02d37fbd4431'
   module:
     - helfi_address_search
     - helfi_tpr
