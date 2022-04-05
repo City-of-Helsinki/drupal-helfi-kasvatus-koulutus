@@ -111,3 +111,18 @@ function helfi_kasko_content_preprocess_block(&$variables) {
     }
   }
 }
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function helfi_kasko_content_views_data_alter(array &$data) {
+  $data['tpr_unit__provided_languages']['provided_languages_filter'] = [
+    'title' => t('Provided languages filter'),
+    'filter' => [
+      'title' => t('Provided languages filter'),
+      'help' => 'Filters units by provided languages field.',
+      'field' => 'provided_languages_value',
+      'id' => 'provided_languages_filter',
+    ],
+  ];
+}

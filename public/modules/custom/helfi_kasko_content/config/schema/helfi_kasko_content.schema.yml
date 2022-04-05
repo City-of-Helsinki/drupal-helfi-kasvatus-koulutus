@@ -1,0 +1,4 @@
+# Schema definition for provided languages filter.
+views.filter.provided_languages_filter:
+  type: views.filter.in_operator
+  label: 'Allowed languages'
