@@ -1,0 +1,19 @@
+uuid: e3ceb31a-6348-49cd-ab9d-e8db7b8b226c
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+    - node.type.news_item
+  module:
+    - gnode
+    - node
+id: group_content_type_8cf71fbe8b0c4
+label: 'Upper secondary school: Group node (News item)'
+description: 'Adds <em class="placeholder">News item</em> content to groups both publicly and privately.'
+group_type: upper_secondary_school
+content_plugin: 'group_node:news_item'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

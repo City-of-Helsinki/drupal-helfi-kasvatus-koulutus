@@ -60,6 +60,7 @@ module:
   helfi_media: 0
   helfi_media_map: 0
   helfi_media_map_config: 0
+  helfi_news_item: 0
   helfi_platform_config: 0
   helfi_proxy: 0
   helfi_school_addons: 0
@@ -137,6 +138,7 @@ module:
   externalauth: 10
   views: 10
   paragraphs: 11
+  publication_date: 99
   minimal: 1000
   eu_cookie_compliance: 1001
 theme:

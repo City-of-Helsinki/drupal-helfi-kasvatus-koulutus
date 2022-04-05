@@ -27,6 +27,7 @@ dependencies:
     - paragraphs
     - paragraphs_library
     - path
+    - publication_date
     - scheduler
     - system
     - taxonomy
