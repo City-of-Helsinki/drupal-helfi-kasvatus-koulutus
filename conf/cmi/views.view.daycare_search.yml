@@ -5,8 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.tpr_unit.minimal
     - taxonomy.vocabulary.unit_type
+  content:
+    - 'taxonomy_term:unit_type:a63febe6-eaf5-4bb7-a3f2-697259244453'
   module:
     - helfi_address_search
+    - helfi_kasko_content
     - helfi_tpr
     - taxonomy
     - user
@@ -358,6 +361,55 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        provided_languages_filter:
+          id: provided_languages_filter
+          table: tpr_unit__provided_languages
+          field: provided_languages_filter
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: tpr_unit
+          plugin_id: provided_languages_filter
+          operator: in
+          value:
+            fi: fi
+            sv: sv
+            se: se
+          group: 1
+          exposed: true
+          expose:
+            operator_id: provided_languages_filter_op
+            label: 'Provided languages filter'
+            description: ''
+            use_operator: false
+            operator: provided_languages_filter_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: language
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_producer: '0'
+              school_editor: '0'
+              read_only: '0'
+              editor: '0'
+              admin: '0'
+            reduce: true
           is_grouped: false
           group_info:
             label: ''
