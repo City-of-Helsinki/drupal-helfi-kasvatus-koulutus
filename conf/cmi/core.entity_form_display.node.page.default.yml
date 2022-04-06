@@ -37,7 +37,7 @@ content:
     weight: 14
     region: content
     settings:
-      title: Lohko
+      title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
       closed_mode: summary
@@ -63,7 +63,7 @@ content:
     weight: 3
     region: content
     settings:
-      title: Lohko
+      title: Paragraph
       title_plural: Paragraphs
       edit_mode: closed_expand_nested
       closed_mode: summary
@@ -97,7 +97,7 @@ content:
     weight: 20
     region: content
     settings:
-      title: Lohko
+      title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
       closed_mode: summary
@@ -123,7 +123,7 @@ content:
     weight: 15
     region: content
     settings:
-      title: Lohko
+      title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
       closed_mode: summary
