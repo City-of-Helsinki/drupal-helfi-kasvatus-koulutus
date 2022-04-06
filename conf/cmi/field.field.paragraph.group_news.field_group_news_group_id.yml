@@ -1,0 +1,29 @@
+uuid: b447c303-4963-4bdc-8323-2a026b181d9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_group_news_group_id
+    - group.type.upper_secondary_school
+    - paragraphs.paragraphs_type.group_news
+id: paragraph.group_news.field_group_news_group_id
+field_name: field_group_news_group_id
+entity_type: paragraph
+bundle: group_news
+label: 'Group ID'
+description: 'Select the group which news you want to display on this paragraph.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      upper_secondary_school: upper_secondary_school
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

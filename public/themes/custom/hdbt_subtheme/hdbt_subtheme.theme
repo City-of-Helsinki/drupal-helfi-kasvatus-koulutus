@@ -87,6 +87,17 @@ function hdbt_subtheme_preprocess_paragraph(array &$variables) {
       }, $paragraph->$units_field->getValue()));
     }
   }
+
+  // Get the group ID & number of latest news to be displayed
+  // from the group news paragraph to be passed to the template.
+  if (
+    $paragraph_type == 'group_news' &&
+    $paragraph->hasField('field_group_news_group_id') &&
+    $paragraph->hasField('field_group_news_number_of_news')
+  ) {
+    $variables['group_news_number_of_items'] = $paragraph->get('field_group_news_number_of_news')->getString();
+    $variables['group_id'] = $paragraph->get('field_group_news_group_id')->getString();
+  }
 }
 
 /**

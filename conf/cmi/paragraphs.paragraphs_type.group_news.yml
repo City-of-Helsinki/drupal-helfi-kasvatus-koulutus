@@ -1,0 +1,10 @@
+uuid: 73619ad9-c51e-4103-b8b5-7ca8db9ea8e4
+langcode: en
+status: true
+dependencies: {  }
+id: group_news
+label: 'Group news'
+icon_uuid: null
+icon_default: null
+description: 'A paragraph that lists latest news of the selected group.'
+behavior_plugins: {  }
