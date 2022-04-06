@@ -44,7 +44,7 @@ content:
     weight: 5
     region: content
     settings:
-      title: Lohko
+      title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
       closed_mode: summary
