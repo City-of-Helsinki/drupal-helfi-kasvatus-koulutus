@@ -9,6 +9,7 @@
     "require": {
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6.7",
+        "drupal/better_exposed_filters": "^5.0",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-recommended": "^9.1",
         "drupal/flysystem_azure": "dev-1.0.x#d92841cd4c66cbf78a5297329afbb9add1df7314",
@@ -86,6 +87,11 @@
             "drush/Commands/{$name}": [
                 "type:drupal-drush"
             ]
+        },
+        "patches": {
+            "drupal/jquery_ui_touch_punch": {
+                "https://www.drupal.org/project/jquery_ui_touch_punch/issues/3159222": "https://www.drupal.org/files/issues/2021-11-17/jquery-touch-punch_3159222_73.patch"
+            }
         }
     },
     "repositories": [
