@@ -18,19 +18,6 @@ use Drupal\views\ViewExecutable;
 class DaycareOptions extends InOperator {
 
   /**
-   * Daycare options with ontology word IDs as keys.
-   *
-   * @var string[]
-   */
-  protected array $daycareOptions = [
-    489 => 'Part-time day care',
-    200 => 'Evening care',
-    831 => 'Round-the-clock care',
-    294 => 'Language immersion Finnish-Swedish',
-    86 => 'Open family activities',
-  ];
-
-  /**
    * {@inheritdoc}
    */
   public function init(ViewExecutable $view, DisplayPluginBase $display, array &$options = NULL) {
@@ -46,11 +33,13 @@ class DaycareOptions extends InOperator {
    *   Available options for the filter with ontology word IDs as keys.
    */
   protected function generateOptions(): array {
-    $translated = [];
-    foreach ($this->daycareOptions as $wordId => $option) {
-      $translated[$wordId] = $this->t($option);
-    }
-    return $translated;
+    $options = [];
+    $options[489] = $this->t('Part-time day care');
+    $options[200] = $this->t('Evening care');
+    $options[831] = $this->t('Round-the-clock care');
+    $options[294] = $this->t('Language immersion Finnish-Swedish');
+    $options[86] = $this->t('Open family activities');
+    return $options;
   }
 
 }
