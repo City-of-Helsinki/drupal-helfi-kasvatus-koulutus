@@ -1,8 +1,18 @@
 <?php
 
+/**
+ * @file
+ * Helfi Group module handles customizations for the group module.
+ */
+
 declare(strict_types = 1);
 
+use Drupal\Core\Access\AccessResultAllowed;
+use Drupal\Core\Access\AccessResultNeutral;
+use Drupal\Core\Field\FieldDefinitionInterface;
+use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\helfi_group\UnitFormAlter;
 
 /**
@@ -60,4 +70,34 @@ function helfi_group_theme($existing, $type, $theme, $path) {
 function helfi_group_form_tpr_unit_form_alter(&$form, FormStateInterface $form_state) {
   \Drupal::classResolver(UnitFormAlter::class)
     ->alter($form, $form_state);
+}
+
+/**
+ * Allow users with edit access to nodes to publish/unpublish them.
+ *
+ * Implements hook_entity_field_access().
+ */
+function helfi_group_entity_field_access(
+  $operation,
+  FieldDefinitionInterface $field_definition,
+  AccountInterface $account,
+  FieldItemListInterface $items = NULL
+) {
+  if ($field_definition->getname() == 'status' && !empty($items)) {
+    /** @var \Drupal\node\Entity\Node $entity */
+    $entity = $items->getEntity();
+
+    if ($entity->getEntityTypeId() == 'node') {
+      if ($account->hasPermission("edit any {$entity->bundle()} content")) {
+        return new AccessResultAllowed();
+      }
+
+      if (
+        $entity->getOwnerId() == $account->id() &&
+        $account->hasPermission("edit own {$entity->bundle()} content")) {
+        return new AccessResultAllowed();
+      }
+    }
+  }
+  return new AccessResultNeutral();
 }
