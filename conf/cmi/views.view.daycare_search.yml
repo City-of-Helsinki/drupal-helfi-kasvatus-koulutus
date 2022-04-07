@@ -373,15 +373,15 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        provided_languages_filter:
-          id: provided_languages_filter
+        tpr_provided_languages:
+          id: tpr_provided_languages
           table: tpr_unit__provided_languages
-          field: provided_languages_filter
+          field: tpr_provided_languages
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: tpr_unit
-          plugin_id: provided_languages_filter
+          plugin_id: tpr_provided_languages
           operator: in
           value:
             fi: fi
@@ -390,14 +390,65 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: provided_languages_filter_op
-            label: 'Provided languages filter'
+            operator_id: tpr_provided_languages_op
+            label: 'Filter by language'
             description: ''
             use_operator: false
-            operator: provided_languages_filter_op
+            operator: tpr_provided_languages_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: language
+            identifier: languages
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_producer: '0'
+              school_editor: '0'
+              read_only: '0'
+              editor: '0'
+              admin: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        daycare_options:
+          id: daycare_options
+          table: tpr_ontology_word_details_field_data
+          field: daycare_options
+          relationship: tpr_ontology_word_details
+          group_type: group
+          admin_label: ''
+          entity_type: tpr_ontology_word_details
+          plugin_id: daycare_options
+          operator: in
+          value:
+            489: '489'
+            831: '831'
+            294: '294'
+            86: '86'
+            200: '200'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: daycare_options_op
+            label: 'Daycare options'
+            description: ''
+            use_operator: false
+            operator: daycare_options_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: options
             required: false
             remember: false
             multiple: true
@@ -458,6 +509,16 @@ display:
           admin_label: 'field_unit_type: Taxonomy term'
           plugin_id: standard
           required: true
+        tpr_ontology_word_details:
+          id: tpr_ontology_word_details
+          table: tpr_unit
+          field: tpr_ontology_word_details
+          relationship: none
+          group_type: group
+          admin_label: 'Ontology word details field data'
+          entity_type: tpr_unit
+          plugin_id: standard
+          required: false
       use_ajax: true
       header:
         area_address_search_info:

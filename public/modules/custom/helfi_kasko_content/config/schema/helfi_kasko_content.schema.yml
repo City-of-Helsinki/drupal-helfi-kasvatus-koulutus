@@ -1,4 +1,3 @@
-# Schema definition for provided languages filter.
-views.filter.provided_languages_filter:
+views.filter.daycare_options:
   type: views.filter.in_operator
-  label: 'Allowed languages'
+  label: 'Allowed options'

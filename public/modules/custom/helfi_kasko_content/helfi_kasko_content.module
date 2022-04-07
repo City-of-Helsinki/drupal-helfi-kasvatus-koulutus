@@ -116,13 +116,14 @@ function helfi_kasko_content_preprocess_block(&$variables) {
  * Implements hook_views_data_alter().
  */
 function helfi_kasko_content_views_data_alter(array &$data) {
-  $data['tpr_unit__provided_languages']['provided_languages_filter'] = [
-    'title' => t('Provided languages filter'),
+  $data['tpr_ontology_word_details_field_data']['daycare_options'] = [
+    'title' => t('Daycare options'),
     'filter' => [
-      'title' => t('Provided languages filter'),
-      'help' => 'Filters units by provided languages field.',
-      'field' => 'provided_languages_value',
-      'id' => 'provided_languages_filter',
+      'id' => 'daycare_options',
+      'table' => 'tpr_ontology_word_details_field_data',
+      'field' => 'ontologyword_id',
+      'title' => t('Daycare options'),
+      'help' => 'Filters units by daycare related ontology words.',
     ],
   ];
 }
