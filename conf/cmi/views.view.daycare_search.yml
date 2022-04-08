@@ -575,7 +575,7 @@ display:
             value: 'Results organised by the address you searched for. The distance to the address is indicated in the results list after the location’s address.'
             format: minimal
           failed:
-            value: 'Given address was not found. Please check the address.'
+            value: 'Given address was not found. Please check the address. The results are now in alphabetical order.'
             format: minimal
       footer: {  }
       display_extenders: {  }
