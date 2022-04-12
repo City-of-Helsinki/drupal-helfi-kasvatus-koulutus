@@ -20,7 +20,7 @@ class DaycareOptions extends InOperator {
   /**
    * {@inheritdoc}
    */
-  public function init(ViewExecutable $view, DisplayPluginBase $display, array &$options = NULL) {
+  public function init(ViewExecutable $view, DisplayPluginBase $display, array &$options = NULL): void {
     parent::init($view, $display, $options);
     $this->valueTitle = t('Allowed options');
     $this->definition['options callback'] = [$this, 'generateOptions'];
