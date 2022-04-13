@@ -1,0 +1,23 @@
+uuid: b92e3e03-c48a-483e-92d8-32278c7c22ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon
+    - paragraphs.paragraphs_type.social_media_link
+  module:
+    - select2_icon
+_core:
+  default_config_hash: lvgcvPv34Bw-DXlz67PyI8wVfAGk6FiOnp-u0Ql35GU
+id: paragraph.social_media_link.field_icon
+field_name: field_icon
+entity_type: paragraph
+bundle: social_media_link
+label: Icon
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: select2_icon

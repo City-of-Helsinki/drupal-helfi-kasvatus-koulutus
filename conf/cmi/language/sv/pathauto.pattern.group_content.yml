@@ -1,0 +1,4 @@
+label: Gruppinnehåll
+relationships:
+  'group_content:langcode:language':
+    label: Språk

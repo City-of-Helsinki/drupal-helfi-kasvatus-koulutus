@@ -1,0 +1,28 @@
+label: 'Dagis sök'
+display:
+  default:
+    display_options:
+      empty:
+        area:
+          content:
+            value: "<p class=\"unit-search__no-results-title\">Inga verksamhetsställen hittades med de filter du valt.</p>\r\n\r\n<p class=\"unit-search__no-results-desc\">Försök med ett annat val.</p>\r\n"
+            format: full_html
+      filters:
+        address_search:
+          expose:
+            label: 'Sortera daghem efter adress'
+      exposed_form:
+        options:
+          submit_button: 'Sök daghem'
+      header:
+        area_address_search_info:
+          succeed:
+            value: "<p>Resultaten sorterade enligt adressen du sökte med. Avståndet till den angivna adressen står efter verksamhetsställets adress i resultatlistan.</p>\r\n"
+            format: minimal
+          failed:
+            value: "<p>Tyvärr kunde adressen du sökte inte hittas. Kontrollera adressen du uppgav.&nbsp;Resultaten är nu i alfabetisk ordning.</p>\r\n"
+            format: minimal
+      pager:
+        options:
+          views_infinite_scroll:
+            button_text: 'Ladda fler enheter'

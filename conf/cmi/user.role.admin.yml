@@ -45,7 +45,7 @@ dependencies:
     - taxonomy
     - toolbar
     - view_unpublished
-    - content_lock
+    - views_bulk_edit
 _core:
   default_config_hash: 7RTyCpgMKCMdwkxYrpzYOCq7DQDHO0SrTjB7xwFaIyI
 id: admin
@@ -199,6 +199,7 @@ permissions:
   - 'use menu link attributes'
   - 'use text format full_html'
   - 'use text format minimal'
+  - 'use views bulk edit'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view all tpr_service revisions'

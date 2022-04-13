@@ -1,47 +1,54 @@
+label: 'Ryhmän solmut'
 display:
   default:
+    display_title: Oletus
     display_options:
-      title: Sisältö
+      exposed_form:
+        options:
+          submit_button: Käytä
+          reset_button_label: Palauta
+          exposed_sorts_label: Lajittele
+          sort_asc_label: Nousevasti
+          sort_desc_label: Laskevasti
+      pager:
+        options:
+          tags:
+            previous: '‹ Edellinen'
+            next: 'Seuraava ›'
+            first: '« Ensimmäinen'
+            last: 'Viimeinen »'
+          expose:
+            items_per_page_label: 'Merkintöjä sivua kohti'
+            items_per_page_options_all_label: '- Kaikki -'
+            offset_label: Offset
       fields:
         title:
           label: Otsikko
+          separator: ', '
         type:
           label: Sisältötyyppi
+          separator: ', '
         status:
           label: Tila
           settings:
-            format_custom_false: Julkaisematon
             format_custom_true: Julkaistu
+            format_custom_false: Julkaisematon
+          separator: ', '
         changed:
           label: Päivitetty
-        dropbutton:
-          label: Toimenpiteet
+          separator: ', '
         edit_node:
           text: 'Muokkaa sisältöä'
         delete_node:
           text: 'Poista sisältö'
-      arguments:
-        gid:
-          title: '{{ arguments.gid|placeholder }} – sisältö'
-      pager:
-        options:
-          tags:
-            first: '« Ensimmäinen'
-            last: 'Viimeinen »'
-      exposed_form:
-        options:
-          submit_button: Käytä
-          reset_button_label: 'Tyhjennä valinnat'
-          exposed_sorts_label: Järjestä
-          sort_asc_label: Nouseva
-          sort_desc_label: Laskeva
-      empty:
-        area_text_custom:
-          content: 'Ei sisältöä.'
+        dropbutton:
+          label: Toiminnot
       filters:
         status:
+          expose:
+            label: Julkaisutila
           group_info:
-            label: 'Julkaisun tila'
+            label: Julkaisutila
             group_items:
               1:
                 title: Julkaistu
@@ -50,8 +57,17 @@ display:
         type:
           expose:
             label: Tyyppi
+      empty:
+        area_text_custom:
+          content: 'Ei sisältöä.'
+      arguments:
+        gid:
+          exception:
+            title: Kaikki
+          title: '{{ arguments.gid|placeholder }} – sisältö'
+      title: Sisältö
   page_1:
+    display_title: Sivu
     display_options:
       menu:
         title: Sisältö
-    display_title: Sivu
