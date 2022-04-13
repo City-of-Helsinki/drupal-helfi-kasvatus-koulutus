@@ -4325,16 +4325,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "2.6.13",
+            "version": "2.6.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "5c8d370a525bb2991e277542e5f3c0b9a1391e1f"
+                "reference": "d16769bb7f6794d061b3a707585e194d70da5c5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/5c8d370a525bb2991e277542e5f3c0b9a1391e1f",
-                "reference": "5c8d370a525bb2991e277542e5f3c0b9a1391e1f",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/d16769bb7f6794d061b3a707585e194d70da5c5c",
+                "reference": "d16769bb7f6794d061b3a707585e194d70da5c5c",
                 "shasum": ""
             },
             "require": {
@@ -4441,10 +4441,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/2.6.13",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/2.6.14",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2022-04-11T21:15:45+00:00"
+            "time": "2022-04-13T06:13:53+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -4762,17 +4762,17 @@
         },
         {
             "name": "drupal/matomo",
-            "version": "1.17.0",
+            "version": "1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/matomo.git",
-                "reference": "8.x-1.17"
+                "reference": "8.x-1.18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/matomo-8.x-1.17.zip",
-                "reference": "8.x-1.17",
-                "shasum": "091f946ec7a09d6b4463e5d75adca9cdcdff2918"
+                "url": "https://ftp.drupal.org/files/projects/matomo-8.x-1.18.zip",
+                "reference": "8.x-1.18",
+                "shasum": "ad0d24ba12bca16e666a5f9d404cd56926839169"
             },
             "require": {
                 "drupal/core": "^8.8.0 || ^9.0.0"
@@ -4788,8 +4788,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.17",
-                    "datestamp": "1647206848",
+                    "version": "8.x-1.18",
+                    "datestamp": "1649792938",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
