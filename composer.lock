@@ -4556,16 +4556,16 @@
         },
         {
             "name": "drupal/helfi_tpr",
-            "version": "2.0.8",
+            "version": "2.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr.git",
-                "reference": "09ddbc6900eb7db839bfdbb19c5d2413443415d0"
+                "reference": "60456551a03deb0ce195230b5aa1fc5550a07b4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/09ddbc6900eb7db839bfdbb19c5d2413443415d0",
-                "reference": "09ddbc6900eb7db839bfdbb19c5d2413443415d0",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/60456551a03deb0ce195230b5aa1fc5550a07b4e",
+                "reference": "60456551a03deb0ce195230b5aa1fc5550a07b4e",
                 "shasum": ""
             },
             "require": {
@@ -4587,10 +4587,10 @@
             ],
             "description": "TPR integration",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/2.0.8",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/2.0.9",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/issues"
             },
-            "time": "2022-04-05T06:08:39+00:00"
+            "time": "2022-04-13T06:12:30+00:00"
         },
         {
             "name": "drupal/helfi_tunnistamo",
