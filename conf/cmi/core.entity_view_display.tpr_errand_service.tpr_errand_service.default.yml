@@ -15,7 +15,7 @@ mode: default
 content:
   channels:
     type: tpr_service_channel_formatter
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -41,7 +41,7 @@ content:
         TELEFAX:
           weight: 9
     third_party_settings: {  }
-    weight: 14
+    weight: 16
     region: content
   costs:
     type: text_default
