@@ -10,3 +10,10 @@ high-school-search:
     dist/js/high-school-search.min.js: { }
   dependencies:
     - core/drupal
+
+high-school-mobile-menu:
+  version: 1.x
+  js:
+    dist/js/high-school-mobile-menu.min.js: { }
+  dependencies:
+    - core/drupal
