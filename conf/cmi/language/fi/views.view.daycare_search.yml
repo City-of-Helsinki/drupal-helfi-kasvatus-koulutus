@@ -1,4 +1,4 @@
-label: 'Päiväkoti haku'
+label: Päiväkotihaku
 display:
   default:
     display_options:
@@ -13,6 +13,12 @@ display:
         address_search:
           expose:
             label: 'Järjestä päiväkodit osoitteen perusteella'
+        tpr_provided_languages:
+          expose:
+            label: 'Suodata päiväkodin toimintakielen mukaan'
+        daycare_options:
+          expose:
+            label: Lisävalinnat
       empty:
         area:
           content:
