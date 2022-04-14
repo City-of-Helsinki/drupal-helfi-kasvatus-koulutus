@@ -1,0 +1,20 @@
+uuid: 2ec0aad7-6213-461d-a1f8-1625784ccea9
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+    - paragraphs
+id: paragraph.field_group_news_group_id
+field_name: field_group_news_group_id
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: group
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

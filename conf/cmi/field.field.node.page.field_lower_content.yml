@@ -9,11 +9,13 @@ dependencies:
     - paragraphs.paragraphs_type.banner
     - paragraphs.paragraphs_type.chart
     - paragraphs.paragraphs_type.columns
+    - paragraphs.paragraphs_type.contact_card_listing
     - paragraphs.paragraphs_type.content_cards
     - paragraphs.paragraphs_type.content_liftup
     - paragraphs.paragraphs_type.daycare_search
     - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.group_news
     - paragraphs.paragraphs_type.high_school_search
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.list_of_links
@@ -52,12 +54,13 @@ settings:
       map: map
       unit_search: unit_search
       from_library: from_library
+      chart: chart
+      contact_card_listing: contact_card_listing
       daycare_search: daycare_search
       high_school_search: high_school_search
       remote_video: remote_video
+      group_news: group_news
       vocational_school_search: vocational_school_search
-      chart: chart
-      contact_card_listing: contact_card_listing
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -99,6 +102,9 @@ settings:
       gallery_slide:
         weight: -20
         enabled: false
+      group_news:
+        weight: 42
+        enabled: true
       hero:
         weight: -19
         enabled: false

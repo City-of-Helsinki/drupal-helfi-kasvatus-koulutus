@@ -12,6 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.content_liftup
     - paragraphs.paragraphs_type.daycare_search
     - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.group_news
     - paragraphs.paragraphs_type.high_school_search
     - paragraphs.paragraphs_type.liftup_with_image
     - paragraphs.paragraphs_type.list_of_links
@@ -46,13 +47,14 @@ settings:
       liftup_with_image: liftup_with_image
       map: map
       from_library: from_library
+      chart: chart
       remote_video: remote_video
       unit_search: unit_search
       daycare_search: daycare_search
       high_school_search: high_school_search
       service_list: service_list
+      group_news: group_news
       vocational_school_search: vocational_school_search
-      chart: chart
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -70,6 +72,12 @@ settings:
       columns:
         weight: -27
         enabled: true
+      contact_card:
+        weight: 34
+        enabled: false
+      contact_card_listing:
+        weight: 35
+        enabled: false
       content_cards:
         weight: -33
         enabled: true
@@ -88,6 +96,9 @@ settings:
       gallery_slide:
         weight: -19
         enabled: false
+      group_news:
+        weight: 42
+        enabled: true
       hero:
         weight: -18
         enabled: false
@@ -117,6 +128,9 @@ settings:
         enabled: true
       sidebar_text:
         weight: 40
+        enabled: false
+      social_media_link:
+        weight: 53
         enabled: false
       text:
         weight: -15

@@ -1,0 +1,23 @@
+uuid: b00dd885-bf5e-4da3-aba3-d542187b438c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_group_news_number_of_news
+    - paragraphs.paragraphs_type.group_news
+  module:
+    - options
+id: paragraph.group_news.field_group_news_number_of_news
+field_name: field_group_news_number_of_news
+entity_type: paragraph
+bundle: group_news
+label: 'Number of latest news to be displayed'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 4
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

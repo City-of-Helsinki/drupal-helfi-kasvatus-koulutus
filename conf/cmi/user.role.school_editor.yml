@@ -10,6 +10,7 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - media.type.soundcloud
+    - node.type.news_item
   module:
     - content_translation
     - file
@@ -18,6 +19,7 @@ dependencies:
     - helfi_tpr
     - media
     - node
+    - publication_date
     - scheduler
     - system
     - toolbar
@@ -37,25 +39,35 @@ permissions:
   - 'create hel_map media'
   - 'create image media'
   - 'create media'
+  - 'create news_item content'
   - 'create remote_video media'
   - 'create soundcloud media'
+  - 'delete any news_item content'
   - 'delete media'
+  - 'delete news_item revisions'
   - 'delete own file media'
   - 'delete own hel_map media'
   - 'delete own image media'
+  - 'delete own news_item content'
   - 'delete own remote_video media'
   - 'delete own soundcloud media'
+  - 'edit any news_item content'
   - 'edit own file media'
   - 'edit own hel_map media'
   - 'edit own image media'
+  - 'edit own news_item content'
   - 'edit own remote_video media'
   - 'edit own soundcloud media'
+  - 'revert news_item revisions'
   - 'schedule publishing of nodes'
+  - 'set news_item published on date'
   - 'translate editable entities'
+  - 'translate news_item node'
   - 'update media'
   - 'use text format full_html'
   - 'use text format minimal'
   - 'view all media revisions'
+  - 'view news_item revisions'
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view the administration theme'

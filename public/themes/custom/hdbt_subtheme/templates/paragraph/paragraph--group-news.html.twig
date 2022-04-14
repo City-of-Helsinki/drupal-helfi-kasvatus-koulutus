@@ -1,0 +1,20 @@
+{% block paragraph %}
+  {% embed "@hdbt/misc/component.twig" with
+    {
+      component_classes: [ 'component--group-news' ],
+      component_title: content.field_group_news_title,
+      component_description: content.field_group_news_description,
+      component_content_class: 'group-news',
+    }
+  %}
+    {% block component_content %}
+
+      {% if group_news_number_of_items == '6' %}
+        {{ drupal_view('latest_group_news', 'latest_group_news_6', group_id) }}
+      {% else %}
+        {{ drupal_view('latest_group_news', 'latest_group_news_4', group_id) }}
+      {% endif %}
+
+    {% endblock component_content %}
+  {% endembed %}
+{% endblock paragraph %}
