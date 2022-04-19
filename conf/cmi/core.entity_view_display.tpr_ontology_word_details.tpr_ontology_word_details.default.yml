@@ -9,6 +9,13 @@ targetEntityType: tpr_ontology_word_details
 bundle: tpr_ontology_word_details
 mode: default
 content:
+  detail_items:
+    type: tpr_ontology_word_detail_item
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
   name:
     type: string
     label: hidden
