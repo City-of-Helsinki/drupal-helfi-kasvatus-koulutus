@@ -62,9 +62,11 @@ $card_spacing: $spacing-and-half;
 
       // Sort by distance to an address
       &:first-child {
-        margin-right: 30%;
         margin-top: 0;
-        width: 70%;
+        @include breakpoint($breakpoint-m) {
+          margin-right: 30%;
+          width: 70%;
+        }
       }
     }
   }
