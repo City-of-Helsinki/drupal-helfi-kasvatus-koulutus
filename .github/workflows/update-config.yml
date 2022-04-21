@@ -29,6 +29,9 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Run setup script
+        run: /setup.sh
+
       - name: Download latest dump
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
