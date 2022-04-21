@@ -6,8 +6,10 @@
  */
 
 use Drupal\Core\Cache\Cache;
+use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\helfi_tpr\Entity\Unit;
 use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
 use Drupal\paragraphs\Entity\Paragraph;
 
 /**
@@ -144,7 +146,79 @@ function hdbt_subtheme_preprocess_tpr_unit(&$variables) {
     $variables['high_school_front_page_nid'] = $nid;
     $variables['high_school_front_page_title'] = $title;
   }
+
+  if (isset($variables['view_mode']) || $variables['view_mode'] === 'full') {
+    _hdbt_subtheme_sidebar_menu_visibility($variables, $variables['entity']);
+  }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function hdbt_subtheme_preprocess_page(&$variables) {
+  // Handle sidebar visibility.
+  $entity = hdbt_content_get_page_entity();
+  if ($entity instanceof NodeInterface) {
+
+    // Handle sidebar visibility for the "Standard page" (page)
+    // content type.
+    if ($entity->getType() === 'page') {
+      _hdbt_subtheme_sidebar_menu_visibility($variables, $entity);
+    }
+
+    // News item needs to have the sidebar set at all times. Also move the
+    // node title to content area with move_berore_content variable.
+    if ($entity->getType() === 'news_item') {
+      _hdbt_subtheme_sidebar_menu_visibility($variables, $entity);
+    }
+  }
+}
+
+/**
+ * Handle sidebar visibility based on current entity menu links.
+ *
+ * @param array $variables
+ *   Variables array.
+ * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+ *   Content entity, like tpr_service, tpr_unit or node.
+ */
+function _hdbt_subtheme_sidebar_menu_visibility(array &$variables, ContentEntityInterface $entity) {
+  if (empty($entity)) {
+    return;
+  }
+
+  $menu_link_manager = Drupal::service('plugin.manager.menu.link');
+
+  // Load menu links for the current page entity.
+  $menu_links = $menu_link_manager->loadLinksByRoute(
+    "entity.{$entity->getEntityTypeId()}.canonical",
+    [$entity->getEntityTypeId() => $entity->id()]
+  );
+
+  // Add "page_has_sidebar" variable
+  // if current node has menu link items set.
+  if (!empty($menu_links) && is_array($menu_links)) {
+    $menu_Link = reset($menu_links);
+
+    // Set page_has_sidebar value true,
+    // if menu link is enabled.
+    if ($menu_Link->isEnabled()) {
+      $variables['has_sidebar'] = TRUE;
+      $variables['in_menu'] = TRUE;
+    }
+  }
+
+  // Hide the sidebar and menu if the current entity has
+  // "hide sidebar navigation" value set.
+  if (
+    $entity->hasField('hide_sidebar_navigation') &&
+    boolval($entity->get('hide_sidebar_navigation')->value)
+  ) {
+    $variables['has_sidebar'] = FALSE;
+    $variables['in_menu'] = FALSE;
+  }
+}
+
 
 /**
  * Implements template_preprocess_views_view().
