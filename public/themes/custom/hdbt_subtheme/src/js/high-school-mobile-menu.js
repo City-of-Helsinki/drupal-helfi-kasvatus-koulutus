@@ -123,15 +123,11 @@
     // there is no other items under the high school parent link.
     const ul = document.createElement('ul');
     ul.className = 'cssnav cssnav__subnav';
-    li.append(cloneMenuTitleLink);
     ul.append(li);
     // The DOM-structure needs also the details element to function correctly.
     const parentDetails = create_details(summary, ul, parentListItem);
     // Append everything to the parent list item.
     parentListItem.append(parentDetails);
-    // Add the sub-items of the group menus first level (if any) to the details
-    // under the li.
-    li.append(create_details(summary, cloneSidebarNavigation, cloneMenuTitleLink));
     // Because the parent list item doesn't have any children until we add them
     // we need to give it proper classes as well.
     parentListItem.classList.add('cssnav__item--has-children');
