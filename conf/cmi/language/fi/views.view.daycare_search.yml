@@ -1,4 +1,4 @@
-label: 'Päiväkoti haku'
+label: Päiväkotihaku
 display:
   default:
     display_options:
@@ -13,6 +13,12 @@ display:
         address_search:
           expose:
             label: 'Järjestä päiväkodit osoitteen perusteella'
+        tpr_provided_languages:
+          expose:
+            label: 'Suodata päiväkodin toimintakielen mukaan'
+        daycare_options:
+          expose:
+            label: Lisävalinnat
       empty:
         area:
           content:
@@ -24,7 +30,7 @@ display:
             value: "<p>Tulokset järjestettynä hakemasi osoitteen perusteella. Etäisyys annettuun osoitteeseen on kerrottu toimipisteen osoitteen jälkeen tuloslistauksessa.</p>\r\n"
             format: minimal
           failed:
-            value: "<p>Voi harmi. Hakemaasi osoitetta ei löytynyt. Tarkista syöttämäsi osoite. Tulokset on nyt järjestetty aakkosjärjestyseen.</p>\r\n"
+            value: "<p>Voi harmi. Hakemaasi osoitetta ei löytynyt. Tarkista syöttämäsi osoite. Tulokset on nyt järjestetty aakkosjärjestykseen.</p>\r\n"
             format: minimal
       pager:
         options:
