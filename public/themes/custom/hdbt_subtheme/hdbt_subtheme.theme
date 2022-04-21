@@ -220,7 +220,6 @@ function _hdbt_subtheme_sidebar_menu_visibility(array &$variables, ContentEntity
   }
 }
 
-
 /**
  * Implements template_preprocess_views_view().
  */
