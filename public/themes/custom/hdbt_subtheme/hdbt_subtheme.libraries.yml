@@ -17,3 +17,4 @@ high-school-mobile-menu:
     dist/js/high-school-mobile-menu.min.js: { }
   dependencies:
     - core/drupal
+    - core/jquery

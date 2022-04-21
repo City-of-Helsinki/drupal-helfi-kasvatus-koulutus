@@ -1,9 +1,11 @@
-(function (Drupal) {
+(function ($, Drupal) {
+  'use strict';
   // Find the menu item in the mobile menu that should work as the parent item
   // for this group menu. This is used in the code to target where to append the
   // group menu. We need to make sure this class is defined somewhere in the
-  // menu. If not, don't run the code any further.
-  if (!document.querySelector('.cssmenu-menu .high-school-parent')) {
+  // menu. Also we need to make sure that the navigation on the sidebar is group
+  // menu navigation.
+  if (!$('.cssmenu-menu .high-school-parent').length || !$('.sidebar-navigation--group-menu').length) {
     return;
   }
 
@@ -22,6 +24,12 @@
     return;
   }
 
+  // Add classes to indicate active-trail to the list items and links.
+  parentListItem.classList.add('cssnav__item--in-path');
+  $(parentListItem).parentsUntil('.cssmenu-menu', 'li').addClass('cssnav__item--in-path');
+  $('.cssnav__item--in-path > a').addClass('cssnav__link--in-path');
+  $('.cssnav__item--in-path > details').attr('open', '');
+
   // Find the group menus "title" that is actually the first level of the sub
   // navigation.
   const menuTitleLink = document.querySelector('.sidebar-navigation__title > a');
@@ -30,7 +38,7 @@
   const cloneMenuTitleLink = menuTitleLink.cloneNode(true);
 
   // Add required class for the first level link.
-  cloneMenuTitleLink.className = 'cssnav__link';
+  cloneMenuTitleLink.className = 'cssnav__link cssnav__link--in-path';
 
   // If there isn't any menu in the sidebar navigation we don't need to clone
   // anything.
@@ -55,7 +63,14 @@
     element.className = 'cssnav__item cssnav__item--level-5';
     const link = element.querySelector('span > a');
     element.querySelector('span').replaceWith(link);
-    link.className = 'cssnav__link';
+    link.classList.add('cssnav__link');
+
+    // Check if one of links is the active one and change the class to correct
+    // one.
+    if ($(link).hasClass('menu__link--active-trail')) {
+      $(link).addClass('cssnav__link--in-path');
+      $(link).removeClass('menu__link--active-trail');
+    }
   };
 
   // After the ul-element is cleaned up loop through all li-elements. Using the
@@ -94,6 +109,7 @@
     newSummary.innerHTML = newSummary.innerHTML.replace(/placeholder/g, summaryTitle);
     details.append(newSummary);
     details.append(content);
+    $(details).attr('open', '');
     return details;
   };
 
@@ -132,4 +148,4 @@
     // we need to give it proper classes as well.
     parentListItem.classList.add('cssnav__item--has-children');
   }
-})(Drupal);
+})(jQuery, Drupal);
