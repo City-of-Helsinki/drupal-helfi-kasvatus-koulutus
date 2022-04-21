@@ -25,7 +25,7 @@ dependencies:
     - system
     - toolbar
 id: school_editor
-label: 'Koulujen sisällöntuottaja'
+label: 'School editor'
 weight: -6
 is_admin: null
 permissions:
