@@ -193,6 +193,7 @@ function _hdbt_subtheme_sidebar_menu_visibility(array &$variables, ContentEntity
   $menu_links = $menu_link_manager->loadLinksByRoute(
     "entity.{$entity->getEntityTypeId()}.canonical",
     [$entity->getEntityTypeId() => $entity->id()]
+    // TODO: Could check here if the menu is found from the correct group menu.
   );
 
   // Add "page_has_sidebar" variable
