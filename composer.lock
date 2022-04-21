@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6712cce3aaef37c5ecb1dd2d1ebb919b",
+    "content-hash": "59b4e16418e03d3a9e1425f6db24dd08",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1806,6 +1806,75 @@
             }
         },
         {
+            "name": "drupal/better_exposed_filters",
+            "version": "5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/better_exposed_filters.git",
+                "reference": "8.x-5.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/better_exposed_filters-8.x-5.0.zip",
+                "reference": "8.x-5.0",
+                "shasum": "ef575591af202b5c6867841ce58e1f447455e502"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9",
+                "drupal/jquery_ui": "^1.4",
+                "drupal/jquery_ui_datepicker": "^1.0",
+                "drupal/jquery_ui_slider": "^1.1",
+                "drupal/jquery_ui_touch_punch": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-5.0",
+                    "datestamp": "1634748760",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Keran",
+                    "homepage": "https://www.drupal.org/u/mikeker"
+                },
+                {
+                    "name": "Martin Keereman",
+                    "homepage": "https://www.drupal.org/u/etroid"
+                },
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto"
+                },
+                {
+                    "name": "jkopel",
+                    "homepage": "https://www.drupal.org/user/66207"
+                },
+                {
+                    "name": "mikeker",
+                    "homepage": "https://www.drupal.org/user/192273"
+                },
+                {
+                    "name": "rlhawk",
+                    "homepage": "https://www.drupal.org/user/352283"
+                }
+            ],
+            "description": "Replaces the Views default single- or multi-select boxes with more advanced options.",
+            "homepage": "https://www.drupal.org/project/better_exposed_filters",
+            "support": {
+                "source": "https://git.drupalcode.org/project/better_exposed_filters",
+                "issues": "https://www.drupal.org/project/issues/better_exposed_filters"
+            }
+        },
+        {
             "name": "drupal/config_filter",
             "version": "2.3.0",
             "source": {
@@ -2141,16 +2210,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.3.9",
+            "version": "9.3.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "86b0c4496e20ae7f945e9a7f0404fafe191ab774"
+                "reference": "b8978dd6a4639bdc0930a6eb7791afffcd931a1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/86b0c4496e20ae7f945e9a7f0404fafe191ab774",
-                "reference": "86b0c4496e20ae7f945e9a7f0404fafe191ab774",
+                "url": "https://api.github.com/repos/drupal/core/zipball/b8978dd6a4639bdc0930a6eb7791afffcd931a1b",
+                "reference": "b8978dd6a4639bdc0930a6eb7791afffcd931a1b",
                 "shasum": ""
             },
             "require": {
@@ -2392,9 +2461,9 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.3.9"
+                "source": "https://github.com/drupal/core/tree/9.3.11"
             },
-            "time": "2022-03-21T21:21:58+00:00"
+            "time": "2022-04-14T00:39:08+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -2448,16 +2517,16 @@
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.3.9",
+            "version": "9.3.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "3ce3f2b6145de56178e006fb2ef94089d32cf411"
+                "reference": "9454fd8bce0172964d132feea87123a70948b6ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/3ce3f2b6145de56178e006fb2ef94089d32cf411",
-                "reference": "3ce3f2b6145de56178e006fb2ef94089d32cf411",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/9454fd8bce0172964d132feea87123a70948b6ee",
+                "reference": "9454fd8bce0172964d132feea87123a70948b6ee",
                 "shasum": ""
             },
             "require": {
@@ -2466,7 +2535,7 @@
                 "doctrine/annotations": "1.13.2",
                 "doctrine/lexer": "1.2.1",
                 "doctrine/reflection": "1.2.2",
-                "drupal/core": "9.3.9",
+                "drupal/core": "9.3.11",
                 "egulias/email-validator": "3.1.2",
                 "guzzlehttp/guzzle": "6.5.5",
                 "guzzlehttp/promises": "1.5.1",
@@ -2528,9 +2597,9 @@
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/9.3.9"
+                "source": "https://github.com/drupal/core-recommended/tree/9.3.11"
             },
-            "time": "2022-03-21T21:21:58+00:00"
+            "time": "2022-04-14T00:39:08+00:00"
         },
         {
             "name": "drupal/crop",
@@ -2922,6 +2991,58 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/easy_breadcrumb",
                 "issues": "https://www.drupal.org/project/issues/easy_breadcrumb"
+            }
+        },
+        {
+            "name": "drupal/editoria11y",
+            "version": "1.0.13",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/editoria11y.git",
+                "reference": "1.0.13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/editoria11y-1.0.13.zip",
+                "reference": "1.0.13",
+                "shasum": "ed7211efffe143330eb1e9530704babe7afcccca"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.13",
+                    "datestamp": "1648044837",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bkosborne",
+                    "homepage": "https://www.drupal.org/user/788032"
+                },
+                {
+                    "name": "itmaybejj",
+                    "homepage": "https://www.drupal.org/user/1177504"
+                },
+                {
+                    "name": "partyka",
+                    "homepage": "https://www.drupal.org/user/344048"
+                }
+            ],
+            "description": "Checks for accessibility in page content.",
+            "homepage": "https://www.drupal.org/project/editoria11y",
+            "support": {
+                "source": "https://git.drupalcode.org/project/editoria11y"
             }
         },
         {
@@ -4003,16 +4124,16 @@
         },
         {
             "name": "drupal/hdbt",
-            "version": "2.3.11",
+            "version": "2.3.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "2f0ffdac9e7a054b92772fa30cc2d7836257f0d7"
+                "reference": "5d1b2ced0fbc97b9022f4797236ad8dd9e616c84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/2f0ffdac9e7a054b92772fa30cc2d7836257f0d7",
-                "reference": "2f0ffdac9e7a054b92772fa30cc2d7836257f0d7",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/5d1b2ced0fbc97b9022f4797236ad8dd9e616c84",
+                "reference": "5d1b2ced0fbc97b9022f4797236ad8dd9e616c84",
                 "shasum": ""
             },
             "require": {
@@ -4027,23 +4148,23 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/2.3.11",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/2.3.15",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2022-04-12T08:25:43+00:00"
+            "time": "2022-04-21T10:20:21+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
-            "version": "1.5.4",
+            "version": "1.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt-admin.git",
-                "reference": "2b8bda65bec55c1597034edb896dd257c77b3e99"
+                "reference": "dc43851c35f2db8e1a3b2ff978efb70fda1f585a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/2b8bda65bec55c1597034edb896dd257c77b3e99",
-                "reference": "2b8bda65bec55c1597034edb896dd257c77b3e99",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/dc43851c35f2db8e1a3b2ff978efb70fda1f585a",
+                "reference": "dc43851c35f2db8e1a3b2ff978efb70fda1f585a",
                 "shasum": ""
             },
             "require": {
@@ -4059,10 +4180,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/1.5.4",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/1.5.8",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/issues"
             },
-            "time": "2022-04-04T11:30:35+00:00"
+            "time": "2022-04-21T07:39:40+00:00"
         },
         {
             "name": "drupal/helfi_ahjo",
@@ -4195,33 +4316,6 @@
             "time": "2022-04-01T08:23:42+00:00"
         },
         {
-            "name": "drupal/helfi_group",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "public/modules/custom/helfi_group",
-                "reference": "7bacd372ccad6eb95f496fa417eb2fcc81f12793"
-            },
-            "require": {
-                "drupal/group": "^1.4",
-                "drupal/group_content_menu": "^1.1"
-            },
-            "type": "drupal-custom-module",
-            "extra": {
-                "patches": {
-                    "drupal/group": {
-                        "https://www.drupal.org/project/group/issues/2842630": "https://www.drupal.org/files/issues/2019-01-04/2842630-20.patch",
-                        "https://www.drupal.org/project/group/issues/2815971": "https://www.drupal.org/files/issues/2021-02-19/2815971-28.patch",
-                        "https://www.drupal.org/project/group/issues/3210808": "https://www.drupal.org/files/issues/2021-04-26/uasort-comparison-3210808-2.patch"
-                    }
-                }
-            },
-            "description": "Provides Group module customization.",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
             "name": "drupal/helfi_hauki",
             "version": "1.0.5",
             "source": {
@@ -4325,16 +4419,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "2.6.14",
+            "version": "2.6.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "d16769bb7f6794d061b3a707585e194d70da5c5c"
+                "reference": "89bfc06f92fc70ef5f24f6296e207d7b9a0235de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/d16769bb7f6794d061b3a707585e194d70da5c5c",
-                "reference": "d16769bb7f6794d061b3a707585e194d70da5c5c",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/89bfc06f92fc70ef5f24f6296e207d7b9a0235de",
+                "reference": "89bfc06f92fc70ef5f24f6296e207d7b9a0235de",
                 "shasum": ""
             },
             "require": {
@@ -4350,6 +4444,7 @@
                 "drupal/default_content": "^2.0.0-alpha1",
                 "drupal/diff": "^1.0",
                 "drupal/easy_breadcrumb": "^2.0",
+                "drupal/editoria11y": "^1.0",
                 "drupal/elasticsearch_connector": "^7.0@alpha",
                 "drupal/entity_browser": "^2.5",
                 "drupal/entity_usage": "^2.0@beta",
@@ -4367,6 +4462,7 @@
                 "drupal/linkit": "^6.0@beta",
                 "drupal/matomo": "^1.11",
                 "drupal/matomo_reports": "^1.1",
+                "drupal/media_entity_file_replace": "^1.0",
                 "drupal/media_entity_soundcloud": "^3.0.0",
                 "drupal/menu_block_current_language": "^1.5",
                 "drupal/menu_link_attributes": "^1.2",
@@ -4441,10 +4537,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/2.6.14",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/2.6.19",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2022-04-13T06:13:53+00:00"
+            "time": "2022-04-20T06:49:15+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -4487,16 +4583,16 @@
         },
         {
             "name": "drupal/helfi_tpr",
-            "version": "2.0.8",
+            "version": "2.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr.git",
-                "reference": "09ddbc6900eb7db839bfdbb19c5d2413443415d0"
+                "reference": "478f23545e018416944c1a08ca26c694f1084a6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/09ddbc6900eb7db839bfdbb19c5d2413443415d0",
-                "reference": "09ddbc6900eb7db839bfdbb19c5d2413443415d0",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/478f23545e018416944c1a08ca26c694f1084a6a",
+                "reference": "478f23545e018416944c1a08ca26c694f1084a6a",
                 "shasum": ""
             },
             "require": {
@@ -4518,10 +4614,10 @@
             ],
             "description": "TPR integration",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/2.0.8",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/2.0.11",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/issues"
             },
-            "time": "2022-04-05T06:08:39+00:00"
+            "time": "2022-04-20T07:28:14+00:00"
         },
         {
             "name": "drupal/helfi_tunnistamo",
@@ -4652,6 +4748,257 @@
             "homepage": "https://www.drupal.org/project/imagecache_external",
             "support": {
                 "source": "https://git.drupalcode.org/project/imagecache_external"
+            }
+        },
+        {
+            "name": "drupal/jquery_ui",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jquery_ui.git",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jquery_ui-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "64c19ecc8902e2b4b1ab0cc5f5fe28dbc83bfebe"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1582149957",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "RobLoach",
+                    "homepage": "https://www.drupal.org/user/61114"
+                },
+                {
+                    "name": "jjeff",
+                    "homepage": "https://www.drupal.org/user/17190"
+                },
+                {
+                    "name": "lauriii",
+                    "homepage": "https://www.drupal.org/user/1078742"
+                },
+                {
+                    "name": "litwol",
+                    "homepage": "https://www.drupal.org/user/78134"
+                },
+                {
+                    "name": "mfb",
+                    "homepage": "https://www.drupal.org/user/12302"
+                },
+                {
+                    "name": "mfer",
+                    "homepage": "https://www.drupal.org/user/25701"
+                },
+                {
+                    "name": "mikelutz",
+                    "homepage": "https://www.drupal.org/user/2972409"
+                },
+                {
+                    "name": "sun",
+                    "homepage": "https://www.drupal.org/user/54136"
+                },
+                {
+                    "name": "webchick",
+                    "homepage": "https://www.drupal.org/user/24967"
+                },
+                {
+                    "name": "zrpnr",
+                    "homepage": "https://www.drupal.org/user/1448368"
+                }
+            ],
+            "description": "Provides jQuery UI library.",
+            "homepage": "https://www.drupal.org/project/jquery_ui",
+            "support": {
+                "source": "https://git.drupalcode.org/project/jquery_ui"
+            }
+        },
+        {
+            "name": "drupal/jquery_ui_datepicker",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jquery_ui_datepicker.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jquery_ui_datepicker-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "19ffa245970ee4e9d908fa0c5d0761f567e487bb"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/jquery_ui": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1642614454",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Andrei Ivnitskii",
+                    "homepage": "https://www.drupal.org/u/ivnish",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "ivnish",
+                    "homepage": "https://www.drupal.org/user/3547706"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                },
+                {
+                    "name": "lauriii",
+                    "homepage": "https://www.drupal.org/user/1078742"
+                },
+                {
+                    "name": "zrpnr",
+                    "homepage": "https://www.drupal.org/user/1448368"
+                }
+            ],
+            "description": "Provides jQuery UI Datepicker library.",
+            "homepage": "https://www.drupal.org/project/jquery_ui_datepicker",
+            "support": {
+                "source": "https://git.drupalcode.org/project/jquery_ui_datepicker",
+                "issues": "https://www.drupal.org/project/issues/jquery_ui_datepicker"
+            }
+        },
+        {
+            "name": "drupal/jquery_ui_slider",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jquery_ui_slider.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jquery_ui_slider-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "79b90cf60d45fc33ffdaa84bb2d6563f78a7d3d1"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/jquery_ui": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1584107817",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bnjmnm",
+                    "homepage": "https://www.drupal.org/user/2369194"
+                },
+                {
+                    "name": "lauriii",
+                    "homepage": "https://www.drupal.org/user/1078742"
+                },
+                {
+                    "name": "zrpnr",
+                    "homepage": "https://www.drupal.org/user/1448368"
+                }
+            ],
+            "description": "Provides jQuery UI Slider library.",
+            "homepage": "https://www.drupal.org/project/jquery_ui_slider",
+            "support": {
+                "source": "https://git.drupalcode.org/project/jquery_ui_slider"
+            }
+        },
+        {
+            "name": "drupal/jquery_ui_touch_punch",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jquery_ui_touch_punch.git",
+                "reference": "1.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jquery_ui_touch_punch-1.0.0.zip",
+                "reference": "1.0.0",
+                "shasum": "8444a0ed897ba3d8e8876a9602ec8b3dca678cd1"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/jquery_ui": "^1.0"
+            },
+            "suggest": {
+                "furf/jquery-ui-touch-punch": "Required to use drupal/jquery_ui_touch_punch module."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0",
+                    "datestamp": "1591893292",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Naveen Valecha",
+                    "homepage": "https://drupal.org/u/naveenvalecha",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provides jQuery UI Touch Punch library.",
+            "homepage": "https://www.drupal.org/project/jquery_ui_touch_punch",
+            "keywords": [
+                "Drupal",
+                "jquery_ui_touch_punch"
+            ],
+            "support": {
+                "source": "https://www.drupal.org/project/jquery_ui_touch_punch",
+                "issues": "https://www.drupal.org/project/issues/jquery_ui_touch_punch",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
             }
         },
         {
@@ -4875,6 +5222,50 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/matomo_reports",
                 "issues": "https://www.drupal.org/project/issues/matomo_reports"
+            }
+        },
+        {
+            "name": "drupal/media_entity_file_replace",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_entity_file_replace.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_entity_file_replace-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "a22fb6b946dade434301b85c249d8621d0fc6654"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1618180544",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bkosborne",
+                    "homepage": "https://www.drupal.org/user/788032"
+                }
+            ],
+            "description": "Allows content editors to easily replace source files associated with any file-based media entity, preserving the original filename.",
+            "homepage": "https://www.drupal.org/project/media_entity_file_replace",
+            "support": {
+                "source": "https://git.drupalcode.org/project/media_entity_file_replace"
             }
         },
         {
@@ -8333,16 +8724,16 @@
         },
         {
             "name": "league/mime-type-detection",
-            "version": "1.10.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/mime-type-detection.git",
-                "reference": "3e4a35d756eedc67096f30240a68a3149120dae7"
+                "reference": "ff6248ea87a9f116e78edd6002e39e5128a0d4dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/3e4a35d756eedc67096f30240a68a3149120dae7",
-                "reference": "3e4a35d756eedc67096f30240a68a3149120dae7",
+                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/ff6248ea87a9f116e78edd6002e39e5128a0d4dd",
+                "reference": "ff6248ea87a9f116e78edd6002e39e5128a0d4dd",
                 "shasum": ""
             },
             "require": {
@@ -8373,7 +8764,7 @@
             "description": "Mime-type detection for Flysystem",
             "support": {
                 "issues": "https://github.com/thephpleague/mime-type-detection/issues",
-                "source": "https://github.com/thephpleague/mime-type-detection/tree/1.10.0"
+                "source": "https://github.com/thephpleague/mime-type-detection/tree/1.11.0"
             },
             "funding": [
                 {
@@ -8385,7 +8776,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-11T12:49:04+00:00"
+            "time": "2022-04-17T13:12:02+00:00"
         },
         {
             "name": "league/uri",
@@ -16521,8 +16912,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/flysystem_azure": 20,
-        "drupal/helfi_drupal_tools": 20,
-        "drupal/helfi_group": 20
+        "drupal/helfi_drupal_tools": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

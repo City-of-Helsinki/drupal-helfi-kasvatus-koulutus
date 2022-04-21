@@ -1,0 +1,12 @@
+uuid: c955fc20-c04c-4815-b1cb-c6762f3f0da0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: u4xPVzzez1KP66PPTRiynkPmjXyIwJw6Nqjz01tLAjQ
+id: media.image_content_area
+label: 'Image (content area)'
+targetEntityType: media
+cache: true
