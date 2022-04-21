@@ -4155,16 +4155,16 @@
         },
         {
             "name": "drupal/hdbt_admin",
-            "version": "1.5.5",
+            "version": "1.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt-admin.git",
-                "reference": "89a4669b918ce92d9f8758329f5d750bdaf97823"
+                "reference": "dc43851c35f2db8e1a3b2ff978efb70fda1f585a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/89a4669b918ce92d9f8758329f5d750bdaf97823",
-                "reference": "89a4669b918ce92d9f8758329f5d750bdaf97823",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/dc43851c35f2db8e1a3b2ff978efb70fda1f585a",
+                "reference": "dc43851c35f2db8e1a3b2ff978efb70fda1f585a",
                 "shasum": ""
             },
             "require": {
@@ -4180,10 +4180,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/1.5.5",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/1.5.8",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/issues"
             },
-            "time": "2022-04-19T09:06:13+00:00"
+            "time": "2022-04-21T07:39:40+00:00"
         },
         {
             "name": "drupal/helfi_ahjo",
