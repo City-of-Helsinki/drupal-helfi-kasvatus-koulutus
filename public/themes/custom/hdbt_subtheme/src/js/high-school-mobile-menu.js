@@ -1,5 +1,6 @@
 (function ($, Drupal) {
   'use strict';
+
   // Find the menu item in the mobile menu that should work as the parent item
   // for this group menu. This is used in the code to target where to append the
   // group menu. We need to make sure this class is defined somewhere in the
