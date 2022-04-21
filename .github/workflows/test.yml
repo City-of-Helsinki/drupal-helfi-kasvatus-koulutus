@@ -27,6 +27,9 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Run setup script
+        run: /setup.sh
+
       - name: Build project
         run: composer install
 
