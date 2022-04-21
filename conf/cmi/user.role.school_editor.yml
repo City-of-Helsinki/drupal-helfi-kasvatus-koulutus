@@ -13,6 +13,7 @@ dependencies:
     - node.type.news_item
   module:
     - content_translation
+    - editoria11y
     - file
     - filter
     - group
@@ -24,7 +25,7 @@ dependencies:
     - system
     - toolbar
 id: school_editor
-label: 'School editor'
+label: 'Koulujen sisällöntuottaja'
 weight: -6
 is_admin: null
 permissions:
@@ -67,6 +68,7 @@ permissions:
   - 'use text format full_html'
   - 'use text format minimal'
   - 'view all media revisions'
+  - 'view editoria11y checker'
   - 'view news_item revisions'
   - 'view own unpublished content'
   - 'view own unpublished media'
