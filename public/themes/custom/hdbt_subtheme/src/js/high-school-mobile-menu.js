@@ -1,14 +1,28 @@
 (function ($, Drupal) {
   'use strict';
 
-  // Find the menu item in the mobile menu that should work as the parent item
-  // for this group menu. This is used in the code to target where to append the
-  // group menu. We need to make sure this class is defined somewhere in the
-  // menu. Also we need to make sure that the navigation on the sidebar is group
-  // menu navigation.
-  if (!$('.cssmenu-menu .high-school-parent').length || !$('.sidebar-navigation--group-menu').length) {
-    return;
-  }
+  $(document).ready(function () {
+    if(!checkRequiredElements()) {
+      return;
+    }
+  });
+
+  const checkRequiredElements = () => {
+    // TODO
+    if (!$('.cssmenu-menu .high-school-parent').length || !$('.sidebar-navigation--group-menu').length) {
+      return false;
+    }
+    // TODO
+    if (!$('.sidebar-navigation__title > a')) {
+      return false;
+    }
+    // TODO
+    if (!$('.sidebar-navigation > .menu')) {
+      return false;
+    }
+
+    return true;
+  };
 
   // Save the menu link to variable now that we know it exists.
   const menuLinkParent = $('.cssmenu-menu .high-school-parent');
@@ -17,13 +31,6 @@
   // the group menu item. This is used later in the code to append the required
   // DOM for the menu to work correctly.
   const parentListItem = menuLinkParent.parent();
-
-  // Make sure we have the sidebar navigation that needs to be appended inside
-  // the mobile menu by checking if the group menus "title" is available in the
-  // dom. If not, don't run the code any further.
-  if (!$('.sidebar-navigation__title > a')) {
-    return;
-  }
 
   // Add classes to indicate active-trail to the list items and links.
   parentListItem.addClass('cssnav__item--in-path');
@@ -40,12 +47,6 @@
 
   // Add required class for the first level link.
   cloneMenuTitleLink.attr('class', 'cssnav__link cssnav__link--in-path');
-
-  // If there isn't any menu in the sidebar navigation we don't need to clone
-  // anything.
-  if (!$('.sidebar-navigation > .menu')) {
-    return;
-  }
 
   // Find the rest of the sidebar navigation tree.
   const sidebarNavigation = $('.sidebar-navigation > .menu');
