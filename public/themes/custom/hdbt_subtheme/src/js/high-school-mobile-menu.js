@@ -11,51 +11,51 @@
   }
 
   // Save the menu link to variable now that we know it exists.
-  const menuLinkParent = document.querySelector('.cssmenu-menu .high-school-parent');
+  const menuLinkParent = $('.cssmenu-menu .high-school-parent');
 
   // Find the parent item of the menu item that should work as parent item for
   // the group menu item. This is used later in the code to append the required
   // DOM for the menu to work correctly.
-  const parentListItem = menuLinkParent.parentElement;
+  const parentListItem = menuLinkParent.parent();
 
   // Make sure we have the sidebar navigation that needs to be appended inside
   // the mobile menu by checking if the group menus "title" is available in the
   // dom. If not, don't run the code any further.
-  if (!document.querySelector('.sidebar-navigation__title > a')) {
+  if (!$('.sidebar-navigation__title > a')) {
     return;
   }
 
   // Add classes to indicate active-trail to the list items and links.
-  parentListItem.classList.add('cssnav__item--in-path');
+  parentListItem.addClass('cssnav__item--in-path');
   $(parentListItem).parentsUntil('.cssmenu-menu', 'li').addClass('cssnav__item--in-path');
   $('.cssnav__item--in-path > a').addClass('cssnav__link--in-path');
   $('.cssnav__item--in-path > details').attr('open', '');
 
   // Find the group menus "title" that is actually the first level of the sub
   // navigation.
-  const menuTitleLink = document.querySelector('.sidebar-navigation__title > a');
+  const menuTitleLink = $('.sidebar-navigation__title > a');
 
   // Clone the first level item to be used for mobile navigation.
-  const cloneMenuTitleLink = menuTitleLink.cloneNode(true);
+  const cloneMenuTitleLink = menuTitleLink.clone();
 
   // Add required class for the first level link.
-  cloneMenuTitleLink.className = 'cssnav__link cssnav__link--in-path';
+  cloneMenuTitleLink.attr('class', 'cssnav__link cssnav__link--in-path');
 
   // If there isn't any menu in the sidebar navigation we don't need to clone
   // anything.
-  if (!document.querySelector('.sidebar-navigation > .menu')) {
+  if (!$('.sidebar-navigation > .menu')) {
     return;
   }
 
   // Find the rest of the sidebar navigation tree.
-  const sidebarNavigation = document.querySelector('.sidebar-navigation > .menu');
+  const sidebarNavigation = $('.sidebar-navigation > .menu');
 
   // Clone the sidebar navigation tree.
-  const cloneSidebarNavigation = sidebarNavigation.cloneNode(true);
+  const cloneSidebarNavigation = sidebarNavigation.clone();
 
   // Clean up the cloned sidebar navigation. Get the ul-element and
   // remove ul-element classes and add classes 'cssnav cssnav__subnav'
-  cloneSidebarNavigation.className = 'cssnav cssnav__subnav';
+  cloneSidebarNavigation.attr('class', 'cssnav cssnav__subnav');
 
   // Remove all classes from the li-elements and add classes
   // 'cssnav__item cssnav__item--level-4" and remove the wrapper span.
@@ -76,7 +76,20 @@
 
   // After the ul-element is cleaned up loop through all li-elements. Using the
   // modify_list_item above for that.
-  cloneSidebarNavigation.querySelectorAll('.menu__item').forEach(element => modify_list_item(element));
+  $(cloneSidebarNavigation).find('.menu__item').each(function() {
+    $(this).attr('class', 'cssnav__item cssnav__item--level-5');
+    const link = $(this).find('span > a');
+    $(this).find('span')[0].remove()
+    link.appendTo($(this));
+    link.addClass('cssnav__link');
+
+    // Check if one of links is the active one and change the class to correct
+    // one.
+    if ($(link).hasClass('menu__link--active-trail')) {
+      $(link).addClass('cssnav__link--in-path');
+      $(link).removeClass('menu__link--active-trail');
+    }
+  });
 
   // Create DOM-elements for the summary block inside navigation elements that
   // have children.
@@ -108,8 +121,8 @@
     const summaryTitle = linkName.textContent;
     // Replace all instances of placeholder with the summary title.
     newSummary.innerHTML = newSummary.innerHTML.replace(/placeholder/g, summaryTitle);
-    details.append(newSummary);
-    details.append(content);
+    $(newSummary).appendTo(details);
+    $(content).appendTo(details);
     $(details).attr('open', '');
     return details;
   };
@@ -120,7 +133,7 @@
   // shouldn't be a case where only the high schools name alone is appended
   // to the menu.
   li.className = 'cssnav__item cssnav__item--level-4 cssnav__item--has-children';
-  li.append(cloneMenuTitleLink);
+  cloneMenuTitleLink.appendTo(li);
   // Add the sub-items of the group menus first level to the details under the
   // list item.
   li.append(create_details(summary, cloneSidebarNavigation, cloneMenuTitleLink));
@@ -147,6 +160,6 @@
     parentListItem.append(parentDetails);
     // Because the parent list item doesn't have any children until we add them
     // we need to give it proper classes as well.
-    parentListItem.classList.add('cssnav__item--has-children');
+    parentListItem.addClass('cssnav__item--has-children');
   }
 })(jQuery, Drupal);
