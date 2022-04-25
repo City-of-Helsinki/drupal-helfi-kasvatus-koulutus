@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.group_news_archive.field_group_news_archive_title
     - field.field.paragraph.group_news_archive.field_group_news_group_id
     - paragraphs.paragraphs_type.group_news_archive
 id: paragraph.group_news_archive.default
@@ -11,14 +10,6 @@ targetEntityType: paragraph
 bundle: group_news_archive
 mode: default
 content:
-  field_group_news_archive_title:
-    type: string_textfield
-    weight: 0
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_group_news_group_id:
     type: entity_reference_autocomplete
     weight: 1
