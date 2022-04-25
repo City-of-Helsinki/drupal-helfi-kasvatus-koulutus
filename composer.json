@@ -13,12 +13,13 @@
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-recommended": "^9.1",
         "drupal/flysystem_azure": "dev-1.0.x#d92841cd4c66cbf78a5297329afbb9add1df7314",
+        "drupal/group": "^1.4",
+        "drupal/group_content_menu": "^1.1",
         "drupal/hdbt": "^2.0",
         "drupal/hdbt_admin": "^1.0",
         "drupal/helfi_ahjo": "^1.0",
         "drupal/helfi_azure_fs": "^1.0",
         "drupal/helfi_drupal_tools": "dev-main",
-        "drupal/helfi_group": "dev-main",
         "drupal/helfi_hauki": "^1.0",
         "drupal/helfi_platform_config": "^2.0",
         "drupal/helfi_proxy": "^2.0",
@@ -91,14 +92,15 @@
         "patches": {
             "drupal/jquery_ui_touch_punch": {
                 "https://www.drupal.org/project/jquery_ui_touch_punch/issues/3159222": "https://www.drupal.org/files/issues/2021-11-17/jquery-touch-punch_3159222_73.patch"
+            },
+            "drupal/group": {
+                "https://www.drupal.org/project/group/issues/2842630": "https://www.drupal.org/files/issues/2019-01-04/2842630-20.patch",
+                "https://www.drupal.org/project/group/issues/2815971": "https://www.drupal.org/files/issues/2021-02-19/2815971-28.patch",
+                "https://www.drupal.org/project/group/issues/3210808": "https://www.drupal.org/files/issues/2021-04-26/uasort-comparison-3210808-2.patch"
             }
         }
     },
     "repositories": [
-        {
-            "type": "path",
-            "url": "public/modules/custom/helfi_group"
-        },
         {
             "type": "composer",
             "url": "https://repository.drupal.hel.ninja"
