@@ -148,7 +148,7 @@ display:
             offset: false
             offset_label: Offset
           views_infinite_scroll:
-            button_text: 'Load more units'
+            button_text: 'Load more locations'
             automatically_load_content: false
             initially_load_all_pages: false
       exposed_form:
@@ -219,7 +219,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: "<p class=\"unit-search__no-results-title\">No daycare units were found with the selected filters.</p>\r\n<p class=\"unit-search__no-results-desc\">Please try another selection.</p>"
+            value: "<p class=\"unit-search__no-results-title\">No daycare locations were found with the selected filters.</p>\r\n<p class=\"unit-search__no-results-desc\">Please try another selection.</p>"
             format: full_html
           tokenize: false
       sorts:
