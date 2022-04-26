@@ -27,3 +27,7 @@ msgid "unit"
 msgid_plural "units"
 msgstr[0] "enhet"
 msgstr[1] "enheter"
+
+msgctxt "Group news archive link"
+msgid "All news"
+msgstr "Alla nyheter"

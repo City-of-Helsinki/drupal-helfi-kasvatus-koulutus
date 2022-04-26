@@ -17,7 +17,7 @@
 
       <div class="group-news__links">
         {% set link_title %}
-          {{ 'All news'|t }}
+          {{ 'All news'|t({}, {'context': 'Group news archive link'}) }}
         {% endset %}
         {% set link_attributes = {
           'class': [
