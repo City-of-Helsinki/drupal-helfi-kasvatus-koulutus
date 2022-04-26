@@ -1,0 +1,29 @@
+uuid: 2942768d-963a-4b47-a623-1068a7b1bc6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_group_news_archive
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.group_news
+id: paragraph.group_news.field_group_news_archive
+field_name: field_group_news_archive
+entity_type: paragraph
+bundle: group_news
+label: 'Group news archive location'
+description: 'Select here the landing page containing the group news archive paragraph.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      landing_page: landing_page
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
