@@ -38,7 +38,7 @@ class DaycareOptions extends InOperator {
     $options[200] = $this->t('Evening care');
     $options[831] = $this->t('Round-the-clock care');
     $options[294] = $this->t('Language immersion Finnish-Swedish');
-    $options[86] = $this->t('Open family activities');
+    $options[288] = $this->t('Playgroup clubs');
     return $options;
   }
 
