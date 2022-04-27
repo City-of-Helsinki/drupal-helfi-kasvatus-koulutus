@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: 'Vocational studies'
 vid: vocational_studies
-description: 'Lists vocational study degrees grouped under more general fields of studies.'
+description: 'Lists vocational study fields.'
 weight: 0
