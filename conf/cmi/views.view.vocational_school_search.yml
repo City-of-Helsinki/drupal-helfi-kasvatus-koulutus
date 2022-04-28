@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.tpr_unit.vocational_school_card
+    - taxonomy.vocabulary.vocational_studies
   module:
     - helfi_tpr
+    - taxonomy
     - user
 _core:
   default_config_hash: Qi_H9S0h8L3oK0pwRXFvyfqE1rtbScL6G5En1FHfQ9I
@@ -349,6 +351,57 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        field_study_field_target_id:
+          id: field_study_field_target_id
+          table: tpr_unit__field_study_field
+          field: field_study_field_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_study_field_target_id_op
+            label: 'Study field'
+            description: ''
+            use_operator: false
+            operator: field_study_field_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: study_field
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_producer: '0'
+              school_editor: '0'
+              read_only: '0'
+              editor: '0'
+              admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: vocational_studies
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       filter_groups:
         operator: AND
         groups:
@@ -372,7 +425,16 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships: {  }
+      relationships:
+        field_study_field:
+          id: field_study_field
+          table: tpr_unit__field_study_field
+          field: field_study_field
+          relationship: none
+          group_type: group
+          admin_label: 'field_study_field: Luokittelutermi'
+          plugin_id: standard
+          required: false
       use_ajax: true
       group_by: true
       header: {  }
@@ -384,6 +446,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - user
         - user.permissions
       tags: {  }
   block:
@@ -400,6 +463,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - user
         - user.permissions
       tags: {  }
   entity_reference:
