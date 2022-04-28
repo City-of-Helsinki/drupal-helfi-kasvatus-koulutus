@@ -1,0 +1,87 @@
+<?php
+
+use Drupal\taxonomy\Entity\Term;
+use Drupal\taxonomy\Entity\Vocabulary;
+
+/**
+ * Set initial vocational study terms.
+ */
+function helfi_kasko_content_update_9001() {
+  $vocabulary = 'vocational_studies';
+  if (!Vocabulary::load($vocabulary)) {
+    return;
+  }
+
+  $vocationalStudies = [
+    0 => [
+      'en' => "Arts and humanities",
+      'fi' => "Humanistiset ja taidealat",
+      'sv' => "De humanistiska och konstnärliga områdena",
+    ],
+    1 => [
+      'en' => "Business and administration",
+      'fi' => "Kauppa ja hallinto",
+      'sv' => "Handel och administration",
+    ],
+    2 => [
+      'en' => "Natural sciences",
+      'fi' => "Luonnontieteet",
+      'sv' => "Natur och miljö",
+    ],
+    3 => [
+      'en' => "Information and Communication Technologies",
+      'fi' => "Tietojenkäsittely ja tietoliikenne",
+      'sv' => "Informations- och kommunikationsteknik",
+    ],
+    4 => [
+      'en' => "Engineering, manufacturing and construction",
+      'fi' => "Tekniikan alat",
+      'sv' => "Teknik branschen",
+    ],
+    5 => [
+      'en' => "Health and welfare",
+      'fi' => "Terveys- ja hyvinvointialat",
+      'sv' => "Hälsovård och välfärd",
+    ],
+    6 => [
+      'en' => "Services",
+      'fi' => "Palvelualat",
+      'sv' => "Servicebranschen",
+    ],
+  ];
+
+  // Add initial vocational study fields in English.
+  $langcode = 'en';
+  foreach ($vocationalStudies as $studyField) {
+    $term = Term::create([
+      'parent' => [],
+      'name' => $studyField[$langcode],
+      'vid' => $vocabulary,
+      'langcode' => $langcode,
+    ]);
+    try {
+      $term->save();
+    } catch (\Drupal\Core\Entity\EntityStorageException $e) {
+      Drupal::logger('helfi_kasko_content')->error('Failed to add term @name. Message: @message',
+        [
+          '@name' => $studyField[$langcode],
+          '@message' => $e->getMessage(),
+        ]);
+    }
+
+    // Add translations for all available languages.
+    foreach (['fi', 'sv'] as $translationLangcode) {
+      try {
+        $term->addTranslation($translationLangcode, [
+          'name' => $studyField[$translationLangcode],
+        ])->save();
+      } catch (\InvalidArgumentException $e) {
+        Drupal::logger('helfi_helsinki_neighbourhoods')->error('Failed to translate term @name. Message: @message',
+          [
+            '@name' => $studyField[$langcode],
+            '@message' => $e->getMessage(),
+          ]);
+      }
+    }
+  }
+}
