@@ -1,0 +1,20 @@
+uuid: 77d68c36-c4d8-4b62-9f13-f82b0c707d6e
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+    - taxonomy
+id: tpr_unit.field_study_field
+field_name: field_study_field
+entity_type: tpr_unit
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
