@@ -79,7 +79,7 @@
 
     // Check if there is more than one element inside the element that contains
     // the parent for link for high school group menu.
-    if (mobileGroupMenuContainer.children.length > 1) {
+    if (mobileGroupMenuContainer.children().length > 1) {
       // Append the list item after the existing items.
       mobileGroupMenuContainer.find('.cssnav__subnav')[0].append(li);
     } else {
