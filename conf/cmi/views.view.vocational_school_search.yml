@@ -189,8 +189,8 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: 'No results'
-            format: full_html
+            value: 'No results.'
+            format: minimal
           tokenize: false
       sorts:
         name:
@@ -365,7 +365,7 @@ display:
           exposed: true
           expose:
             operator_id: field_study_field_target_id_op
-            label: 'Study field'
+            label: 'Choose a field of study'
             description: ''
             use_operator: false
             operator: field_study_field_target_id_op
