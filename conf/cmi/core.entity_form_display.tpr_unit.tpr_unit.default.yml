@@ -17,6 +17,7 @@ dependencies:
     - paragraphs
     - path
     - readonly_field_widget
+    - select2
 _core:
   default_config_hash: g-ZdiLH0rHr8Mv6vni5A3v5v2UQGRdwiwPxs88WA93E
 id: tpr_unit.tpr_unit.default
@@ -161,14 +162,14 @@ content:
       use_details: true
     third_party_settings: {  }
   field_study_field:
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     weight: 30
     region: content
     settings:
+      width: 100%
+      autocomplete: false
       match_operator: CONTAINS
       match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   field_unit_type:
     type: entity_reference_autocomplete

@@ -221,8 +221,8 @@ content:
     region: content
 hidden:
   created: true
-  field_unit_type: true
   field_study_field: true
+  field_unit_type: true
   hide_description: true
   langcode: true
   latitude: true
