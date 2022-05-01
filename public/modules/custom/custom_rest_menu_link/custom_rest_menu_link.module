@@ -70,3 +70,4 @@ function sync_atomid_finished($success, $results, $operations) {
   }
   \Drupal::messenger()->addStatus($message);
 }
+
