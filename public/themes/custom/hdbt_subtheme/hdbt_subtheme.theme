@@ -90,15 +90,30 @@ function hdbt_subtheme_preprocess_paragraph(array &$variables) {
     }
   }
 
-  // Get the group ID & number of latest news to be displayed
-  // from the group news paragraph to be passed to the template.
+  // Get the group ID for latest group news and group news archive & number of
+  // latest news to be displayed from the paragraph to be passed to
+  // the template.
+  if (
+    ($paragraph_type == 'group_news' || $paragraph_type == 'group_news_archive') &&
+    $paragraph->hasField('field_group_news_group_id')
+  ) {
+    $variables['group_id'] = $paragraph->get('field_group_news_group_id')->getString();
+  }
   if (
     $paragraph_type == 'group_news' &&
-    $paragraph->hasField('field_group_news_group_id') &&
     $paragraph->hasField('field_group_news_number_of_news')
   ) {
     $variables['group_news_number_of_items'] = $paragraph->get('field_group_news_number_of_news')->getString();
-    $variables['group_id'] = $paragraph->get('field_group_news_group_id')->getString();
+  }
+
+  // Latest group news paragraph.
+  if (
+    $paragraph_type == 'group_news' &&
+    $paragraph->hasField('field_group_news_archive')
+  ) {
+    $field_content_id = $paragraph->get('field_group_news_archive')->getString();
+    $node = Node::load($field_content_id);
+    $variables['group_news_archive_location'] = !$node->isNew() ? $node->toUrl('canonical') : NULL;
   }
 }
 

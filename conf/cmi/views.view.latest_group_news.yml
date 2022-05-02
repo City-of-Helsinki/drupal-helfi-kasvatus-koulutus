@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.medium_teaser
     - node.type.news_item
   module:
     - group
@@ -212,7 +212,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: teaser
+          view_mode: medium_teaser
       query:
         type: views_query
         options:

@@ -32,7 +32,11 @@ msgid "Open large version of the map"
 msgstr "Avaa suurempi versio kartasta"
 
 msgctxt "Daycare search count"
-msgid "unit"
-msgid_plural "units"
+msgid "location"
+msgid_plural "locations"
 msgstr[0] "toimipaikka"
 msgstr[1] "toimipaikkaa"
+
+msgctxt "Group news archive link"
+msgid "All news"
+msgstr "Kaikki uutiset"
