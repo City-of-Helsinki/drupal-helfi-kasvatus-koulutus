@@ -112,6 +112,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  published_at:
+    type: publication_date_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   scheduler_settings:
     weight: 5
     region: content
@@ -154,6 +160,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  hide_sidebar_navigation: true
   promote: true
   sticky: true
   url_redirects: true

@@ -23,8 +23,8 @@ msgid "Open large version of the map"
 msgstr "Öppna den stora versionen av kartan"
 
 msgctxt "Daycare search count"
-msgid "unit"
-msgid_plural "units"
+msgid "location"
+msgid_plural "locations"
 msgstr[0] "enhet"
 msgstr[1] "enheter"
 
