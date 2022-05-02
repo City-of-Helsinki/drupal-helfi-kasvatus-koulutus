@@ -1,4 +1,4 @@
-uuid: 15bc8c47-7996-40d0-937c-92ff2f7b8054
+uuid: 4ea7570f-8458-40a4-a892-1c9d0c1546e8
 langcode: en
 status: true
 dependencies:
@@ -11,27 +11,23 @@ bundle: upper_secondary_school
 mode: default
 content:
   field_group_news_parent:
-    type: options_select
-    weight: 26
-    region: content
-    settings: {  }
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
     third_party_settings: {  }
+    weight: -4
+    region: content
   label:
-    type: string_textfield
-    weight: 0
-    region: content
+    type: string
+    label: hidden
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-  status:
-    type: boolean_checkbox
-    weight: 1
+    weight: -5
     region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
 hidden:
+  changed: true
+  created: true
   langcode: true
-  path: true
   uid: true
