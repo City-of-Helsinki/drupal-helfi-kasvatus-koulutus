@@ -19,10 +19,9 @@ services:
       # To enable xdebug, run `export XDEBUG_ENABLE=true` before (re)starting your project.
       # Optionally, you can add this to your default environments variables to enable or disable
       # xdebug by default (like /etc/environments, ~/.bashrc, or ~/.zshrc).
-      XDEBUG_ENABLE: "${XDEBUG_ENABLE:-false}"
-      # DOCKERHOST: host.docker.internal
-      # Use drush server to run functional tests so we don't have to care about
-      # permission issues.
+      XDEBUG_ENABLE: "true"
+      XDEBUG_CONFIG: "remote_port=9001 remote_host=host.docker.internal remote_connect_back=0"
+      PHP_IDE_CONFIG: "serverName=${DRUPAL_HOSTNAME}"
       SIMPLETEST_BASE_URL: "http://127.0.0.1:8888"
       SIMPLETEST_DB: "mysql://drupal:drupal@db:3306/drupal"
       BROWSERTEST_OUTPUT_BASE_URL: "https://${DRUPAL_HOSTNAME}"
