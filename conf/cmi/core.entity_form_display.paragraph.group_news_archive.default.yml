@@ -1,0 +1,25 @@
+uuid: 6f07749e-f613-4b93-886f-06e870bbdcf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.group_news_archive.field_group_news_group_id
+    - paragraphs.paragraphs_type.group_news_archive
+id: paragraph.group_news_archive.default
+targetEntityType: paragraph
+bundle: group_news_archive
+mode: default
+content:
+  field_group_news_group_id:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

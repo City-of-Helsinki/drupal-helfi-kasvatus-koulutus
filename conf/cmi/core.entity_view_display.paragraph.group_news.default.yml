@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.group_news.field_group_news_archive
     - field.field.paragraph.group_news.field_group_news_description
     - field.field.paragraph.group_news.field_group_news_group_id
     - field.field.paragraph.group_news.field_group_news_number_of_news
@@ -16,6 +17,13 @@ targetEntityType: paragraph
 bundle: group_news
 mode: default
 content:
+  field_group_news_archive:
+    type: entity_reference_entity_id
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
   field_group_news_description:
     type: text_default
     label: hidden

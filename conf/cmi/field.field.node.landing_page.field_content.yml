@@ -13,6 +13,7 @@ dependencies:
     - paragraphs.paragraphs_type.daycare_search
     - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.group_news
+    - paragraphs.paragraphs_type.group_news_archive
     - paragraphs.paragraphs_type.high_school_search
     - paragraphs.paragraphs_type.liftup_with_image
     - paragraphs.paragraphs_type.list_of_links
@@ -54,6 +55,7 @@ settings:
       high_school_search: high_school_search
       service_list: service_list
       group_news: group_news
+      group_news_archive: group_news_archive
       vocational_school_search: vocational_school_search
     negate: 0
     target_bundles_drag_drop:
@@ -98,6 +100,9 @@ settings:
         enabled: false
       group_news:
         weight: 42
+        enabled: true
+      group_news_archive:
+        weight: 44
         enabled: true
       hero:
         weight: -18

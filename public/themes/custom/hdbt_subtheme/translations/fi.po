@@ -36,3 +36,7 @@ msgid "location"
 msgid_plural "locations"
 msgstr[0] "toimipaikka"
 msgstr[1] "toimipaikkaa"
+
+msgctxt "Group news archive link"
+msgid "All news"
+msgstr "Kaikki uutiset"

@@ -1,0 +1,8 @@
+.group-news__links {
+  display: flex;
+  justify-content: flex-start;
+
+  @include breakpoint($breakpoint-m) {
+    justify-content: flex-end;
+  }
+}
