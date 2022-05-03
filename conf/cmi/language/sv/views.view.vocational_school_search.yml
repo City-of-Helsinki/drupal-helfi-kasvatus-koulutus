@@ -1,0 +1,15 @@
+display:
+  default:
+    display_options:
+      empty:
+        area:
+          content:
+            value: "<p>Inget resultat.</p>\r\n"
+            format: minimal
+      filters:
+        field_study_field_target_id:
+          expose:
+            label: 'Välj ett utbildningsområde'
+      exposed_form:
+        options:
+          submit_button: Filtrera

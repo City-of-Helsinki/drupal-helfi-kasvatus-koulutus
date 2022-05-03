@@ -7,7 +7,7 @@ dependencies:
     - field.field.tpr_unit.tpr_unit.field_hs_front_page
     - field.field.tpr_unit.tpr_unit.field_lower_content
     - field.field.tpr_unit.tpr_unit.field_metatags
-    - field.field.tpr_unit.tpr_unit.field_unit_type
+    - field.field.tpr_unit.tpr_unit.field_study_field
     - field.field.tpr_unit.tpr_unit.field_unit_type
   module:
     - hdbt_admin_editorial
@@ -17,6 +17,7 @@ dependencies:
     - paragraphs
     - path
     - readonly_field_widget
+    - select2
 _core:
   default_config_hash: g-ZdiLH0rHr8Mv6vni5A3v5v2UQGRdwiwPxs88WA93E
 id: tpr_unit.tpr_unit.default
@@ -46,7 +47,7 @@ content:
     third_party_settings: {  }
   accessibility_www:
     type: readonly_field_widget
-    weight: 12
+    weight: 13
     region: content
     settings:
       label: above
@@ -56,7 +57,7 @@ content:
     third_party_settings: {  }
   address:
     type: readonly_field_widget
-    weight: 15
+    weight: 16
     region: content
     settings:
       label: above
@@ -66,7 +67,7 @@ content:
     third_party_settings: {  }
   address_postal:
     type: readonly_field_widget
-    weight: 17
+    weight: 18
     region: content
     settings:
       label: above
@@ -76,7 +77,7 @@ content:
     third_party_settings: {  }
   call_charge_info:
     type: readonly_field_widget
-    weight: 16
+    weight: 17
     region: content
     settings:
       label: above
@@ -86,7 +87,7 @@ content:
     third_party_settings: {  }
   description:
     type: readonly_field_widget
-    weight: 13
+    weight: 14
     region: content
     settings:
       label: above
@@ -106,7 +107,7 @@ content:
     third_party_settings: {  }
   field_content:
     type: paragraphs
-    weight: 24
+    weight: 25
     region: content
     settings:
       title: Paragraph
@@ -125,7 +126,7 @@ content:
     third_party_settings: {  }
   field_hs_front_page:
     type: entity_reference_autocomplete
-    weight: 27
+    weight: 28
     region: content
     settings:
       match_operator: CONTAINS
@@ -135,7 +136,7 @@ content:
     third_party_settings: {  }
   field_lower_content:
     type: paragraphs
-    weight: 25
+    weight: 26
     region: content
     settings:
       title: Paragraph
@@ -154,14 +155,25 @@ content:
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 23
+    weight: 24
     region: content
     settings:
       sidebar: false
+      use_details: true
+    third_party_settings: {  }
+  field_study_field:
+    type: select2_entity_reference
+    weight: 30
+    region: content
+    settings:
+      width: 100%
+      autocomplete: false
+      match_operator: CONTAINS
+      match_limit: 10
     third_party_settings: {  }
   field_unit_type:
     type: entity_reference_autocomplete
-    weight: 28
+    weight: 29
     region: content
     settings:
       match_operator: CONTAINS
@@ -171,14 +183,14 @@ content:
     third_party_settings: {  }
   hide_description:
     type: boolean_checkbox
-    weight: 14
+    weight: 15
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   hide_sidebar_navigation:
     type: boolean_checkbox
-    weight: 29
+    weight: 31
     region: content
     settings:
       display_label: true
@@ -192,7 +204,7 @@ content:
     third_party_settings: {  }
   latitude:
     type: readonly_field_widget
-    weight: 18
+    weight: 19
     region: content
     settings:
       label: above
@@ -202,7 +214,7 @@ content:
     third_party_settings: {  }
   longitude:
     type: readonly_field_widget
-    weight: 19
+    weight: 20
     region: content
     settings:
       label: above
@@ -230,7 +242,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -263,7 +275,7 @@ content:
     third_party_settings: {  }
   provided_languages:
     type: readonly_field_widget
-    weight: 26
+    weight: 27
     region: content
     settings:
       label: above
@@ -273,7 +285,7 @@ content:
     third_party_settings: {  }
   service_map_embed:
     type: readonly_field_widget
-    weight: 21
+    weight: 22
     region: content
     settings:
       label: above
@@ -283,7 +295,7 @@ content:
     third_party_settings: {  }
   services:
     type: readonly_field_widget
-    weight: 22
+    weight: 23
     region: content
     settings:
       label: above
@@ -300,7 +312,7 @@ content:
     third_party_settings: {  }
   streetview_entrance_url:
     type: readonly_field_widget
-    weight: 20
+    weight: 21
     region: content
     settings:
       label: above
@@ -325,4 +337,3 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_unit_type: true
