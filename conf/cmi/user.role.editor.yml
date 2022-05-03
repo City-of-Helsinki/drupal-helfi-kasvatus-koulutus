@@ -15,6 +15,7 @@ dependencies:
     - node.type.landing_page
     - node.type.page
     - taxonomy.vocabulary.keywords
+    - taxonomy.vocabulary.vocational_studies
   module:
     - content_translation
     - editoria11y
@@ -78,6 +79,7 @@ permissions:
   - 'create remote_video media'
   - 'create soundcloud media'
   - 'create terms in keywords'
+  - 'create terms in vocational_studies'
   - 'create upper_secondary_school group'
   - 'create url aliases'
   - 'delete announcement revisions'
@@ -106,6 +108,7 @@ permissions:
   - 'delete page revisions'
   - 'delete remote entities'
   - 'delete terms in keywords'
+  - 'delete terms in vocational_studies'
   - 'edit any announcement content'
   - 'edit any file media'
   - 'edit any hel_map media'
@@ -127,6 +130,7 @@ permissions:
   - 'edit paragraph library item'
   - 'edit remote entities'
   - 'edit terms in keywords'
+  - 'edit terms in vocational_studies'
   - 'revert all tpr_service revisions'
   - 'revert all tpr_unit revisions'
   - 'revert announcement revisions'
@@ -152,6 +156,7 @@ permissions:
   - 'translate tpr_service'
   - 'translate tpr_service_channel'
   - 'translate tpr_unit'
+  - 'translate vocational_studies taxonomy_term'
   - 'update any media'
   - 'update any tpr_service'
   - 'update any tpr_unit'

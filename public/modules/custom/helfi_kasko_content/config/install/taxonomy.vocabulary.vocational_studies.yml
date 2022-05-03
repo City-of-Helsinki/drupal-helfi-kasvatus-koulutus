@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Vocational studies'
+vid: vocational_studies
+description: 'Lists vocational study fields.'
+weight: 0
