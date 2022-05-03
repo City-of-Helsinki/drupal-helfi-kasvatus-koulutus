@@ -130,16 +130,6 @@ content:
     third_party_settings: {  }
     weight: 18
     region: content
-  field_unit_type:
-    type: tpr_service_channel_formatter
-    label: above
-    settings:
-      view_mode: default
-      link: false
-      sort_order: {  }
-    third_party_settings: {  }
-    weight: 29
-    region: content
   name:
     type: string
     label: hidden
