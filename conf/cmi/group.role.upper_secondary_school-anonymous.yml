@@ -13,5 +13,6 @@ group_type: upper_secondary_school
 permissions_ui: true
 permissions:
   - 'view group_node:landing_page entity'
+  - 'view group_node:news_item entity'
   - 'view group_node:page entity'
   - 'view group_tpr_unit entity'
