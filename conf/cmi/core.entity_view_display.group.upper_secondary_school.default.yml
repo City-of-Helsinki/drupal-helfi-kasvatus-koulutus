@@ -10,24 +10,17 @@ targetEntityType: group
 bundle: upper_secondary_school
 mode: default
 content:
-  field_group_news_parent:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: -4
-    region: content
   label:
     type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: -5
+    weight: 0
     region: content
 hidden:
   changed: true
   created: true
+  field_group_news_parent: true
   langcode: true
   uid: true
