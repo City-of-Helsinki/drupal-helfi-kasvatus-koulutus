@@ -1,13 +1,12 @@
-uuid: 0b2be957-2774-4351-b528-0cbfb311b986
+uuid: 9d937370-9b37-4d75-92d3-868b0ddb4a17
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.group.field_group_news_parent
-    - group.content_type.group_content_type_5e8b00831189e
-    - group.content_type.group_content_type_b0ee7f3e08749
-    - group.content_type.group_content_type_cb62eb2a38c4f
     - group.type.upper_secondary_school
+    - node.type.landing_page
+    - node.type.page
 id: group.upper_secondary_school.field_group_news_parent
 field_name: field_group_news_parent
 entity_type: group
@@ -19,15 +18,14 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:group_content'
+  handler: 'default:node'
   handler_settings:
     target_bundles:
-      group_content_type_5e8b00831189e: group_content_type_5e8b00831189e
-      group_content_type_b0ee7f3e08749: group_content_type_b0ee7f3e08749
-      group_content_type_cb62eb2a38c4f: group_content_type_cb62eb2a38c4f
+      landing_page: landing_page
+      page: page
     sort:
-      field: entity_id
+      field: title
       direction: ASC
     auto_create: false
-    auto_create_bundle: group_content_type_b0ee7f3e08749
+    auto_create_bundle: landing_page
 field_type: entity_reference
