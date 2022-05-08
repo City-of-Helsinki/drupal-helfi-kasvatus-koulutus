@@ -26,7 +26,7 @@ display:
           label: Käyttäjä
           separator: ', '
         group_roles:
-          label: Roolit
+          label: Käyttäjäroolit
           separator: ', '
         changed:
           label: Päivitetty
@@ -35,19 +35,15 @@ display:
           label: Liittynyt
           separator: ', '
         edit_group_content:
-          text: 'Muokkaa jäsenyyttä'
+          text: 'Muokkaa jäsentä'
         delete_group_content:
-          text: 'Poista jäsenyys'
+          text: 'Poista jäsen'
         dropbutton:
-          label: Toiminnot
-      empty:
-        area_text_custom:
-          content: 'Ei lisättyjä jäseniä.'
+          label: Toimenpiteet
       arguments:
         gid:
           exception:
             title: Kaikki
-          title: '{{ arguments.gid|placeholder }} – jäsenet'
       title: Jäsenet
   page_1:
     display_title: Sivu

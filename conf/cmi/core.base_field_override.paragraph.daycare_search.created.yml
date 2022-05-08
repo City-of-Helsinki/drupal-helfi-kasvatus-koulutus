@@ -1,0 +1,18 @@
+uuid: 71232bd6-26ba-4ce1-8791-f8c3240d7ee4
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.daycare_search
+id: paragraph.daycare_search.created
+field_name: created
+entity_type: paragraph
+bundle: daycare_search
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created
