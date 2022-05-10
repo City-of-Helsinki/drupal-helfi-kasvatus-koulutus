@@ -6,10 +6,7 @@
  */
 
 use Drupal\Core\Render\BubbleableMetadata;
-use Drupal\group\Entity\Group;
-use Drupal\group\Entity\GroupContent;
 use Drupal\helfi_group\GroupUtility;
-use Drupal\node\Entity\Node;
 
 /**
  * Implements hook_token_info().
