@@ -7,6 +7,9 @@
 
 use Drupal\Core\Cache\Cache;
 use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\group\Entity\Group;
+use Drupal\group\Entity\GroupContent;
+use Drupal\helfi_group\GroupUtility;
 use Drupal\helfi_tpr\Entity\Unit;
 use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
@@ -225,6 +228,12 @@ function _hdbt_subtheme_sidebar_menu_visibility(array &$variables, ContentEntity
       $variables['has_sidebar'] = TRUE;
       $variables['in_menu'] = TRUE;
     }
+  }
+
+  // Always show sidebar with group content.
+  if (GroupUtility::getGroup($entity) !== FALSE) {
+    $variables['has_sidebar'] = TRUE;
+    $variables['in_menu'] = TRUE;
   }
 
   // Hide the sidebar and menu if the current entity has

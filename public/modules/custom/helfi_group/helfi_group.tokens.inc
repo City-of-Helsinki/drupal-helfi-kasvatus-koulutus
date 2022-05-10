@@ -8,6 +8,7 @@
 use Drupal\Core\Render\BubbleableMetadata;
 use Drupal\group\Entity\Group;
 use Drupal\group\Entity\GroupContent;
+use Drupal\helfi_group\GroupUtility;
 use Drupal\node\Entity\Node;
 
 /**
@@ -46,8 +47,7 @@ function helfi_group_tokens($type, $tokens, array $data, array $options, Bubblea
   foreach ($tokens as $name => $original) {
     switch ($name) {
       case 'path':
-        // Get the group a given node belongs to.
-        if (!$group = _helfi_group_get_node_group($data['node'])) {
+        if (!$group = GroupUtility::getGroup($data['node'])) {
           break;
         }
 
@@ -89,25 +89,6 @@ function helfi_group_tokens($type, $tokens, array $data, array $options, Bubblea
   }
 
   return $replacements;
-}
-
-/**
- * Gets the first founded group a given node belongs to.
- *
- * @param \Drupal\node\Entity\Node $node
- *   Node entity.
- *
- * @return \Drupal\group\Entity\Group|null
- *   The group that contains the node or NULL.
- */
-function _helfi_group_get_node_group(Node $node) : ?Group {
-  $groupContents = GroupContent::loadByEntity($node);
-  $group = NULL;
-  foreach ($groupContents as $groupContent) {
-    $group = $groupContent->getGroup();
-    break;
-  }
-  return $group;
 }
 
 /**
