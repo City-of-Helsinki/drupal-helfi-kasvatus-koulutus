@@ -1,3 +1,4 @@
+uuid: 8754e47d-4a6d-4b0b-83de-b61baa5799f8
 langcode: en
 status: true
 dependencies:
@@ -14,6 +15,8 @@ dependencies:
     - node.type.news_item
   module:
     - user
+_core:
+  default_config_hash: xqTp84CeQvfoe6b00joIYaZIdcej55tWuwyXtZNVjug
 id: node.news_item.medium_teaser
 targetEntityType: node
 bundle: news_item
