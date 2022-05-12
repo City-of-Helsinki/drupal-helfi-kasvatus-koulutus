@@ -1,0 +1,14 @@
+uuid: 04ea3aa2-fce6-410e-9257-511cbca6b2e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.vocational_studies
+id: taxonomy_term.vocational_studies.default
+targetEntityType: taxonomy_term
+bundle: vocational_studies
+mode: default
+content: {  }
+hidden:
+  description: true
+  langcode: true

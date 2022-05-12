@@ -17,6 +17,7 @@ dependencies:
     - node.type.page
     - taxonomy.vocabulary.keywords
     - taxonomy.vocabulary.news_tags
+    - taxonomy.vocabulary.vocational_studies
   module:
     - block
     - config_translation
@@ -114,6 +115,7 @@ permissions:
   - 'create soundcloud media'
   - 'create terms in keywords'
   - 'create terms in news_tags'
+  - 'create terms in vocational_studies'
   - 'create upper_secondary_school group'
   - 'create url aliases'
   - 'delete all revisions'
@@ -147,6 +149,7 @@ permissions:
   - 'delete remote entities'
   - 'delete terms in keywords'
   - 'delete terms in news_tags'
+  - 'delete terms in vocational_studies'
   - 'edit any announcement content'
   - 'edit any file media'
   - 'edit any hel_map media'
@@ -171,6 +174,7 @@ permissions:
   - 'edit remote entities'
   - 'edit terms in keywords'
   - 'edit terms in news_tags'
+  - 'edit terms in vocational_studies'
   - 'revert all revisions'
   - 'revert all tpr_service revisions'
   - 'revert all tpr_unit revisions'
@@ -202,6 +206,7 @@ permissions:
   - 'translate tpr_service'
   - 'translate tpr_service_channel'
   - 'translate tpr_unit'
+  - 'translate vocational_studies taxonomy_term'
   - 'update any media'
   - 'update any tpr_ontology_word_details'
   - 'update any tpr_service'

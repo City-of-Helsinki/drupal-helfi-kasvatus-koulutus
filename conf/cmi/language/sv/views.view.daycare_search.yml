@@ -30,5 +30,11 @@ display:
             format: minimal
       pager:
         options:
-          views_infinite_scroll:
-            button_text: 'Ladda fler enheter'
+          tags:
+            next: Nästa
+            previous: Tidigare
+            first: Först
+            last: Sista
+          expose:
+            items_per_page_label: 'Artiklar per sida'
+            items_per_page_options_all_label: '- Allt -'

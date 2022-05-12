@@ -112,6 +112,10 @@ function hdbt_subtheme_preprocess_paragraph(array &$variables) {
     $paragraph->hasField('field_group_news_archive')
   ) {
     $field_content_id = $paragraph->get('field_group_news_archive')->getString();
+    // Check if the field has value.
+    if (empty($field_content_id)) {
+      return;
+    }
     $node = Node::load($field_content_id);
     $variables['group_news_archive_location'] = !$node->isNew() ? $node->toUrl('canonical') : NULL;
   }
