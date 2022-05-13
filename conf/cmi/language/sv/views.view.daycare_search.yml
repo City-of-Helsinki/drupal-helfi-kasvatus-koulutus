@@ -11,6 +11,12 @@ display:
         address_search:
           expose:
             label: 'Sortera daghem efter adress'
+        tpr_provided_languages:
+          expose:
+            label: 'Filtrera efter språk'
+        daycare_options:
+          expose:
+            label: Alternativ
       exposed_form:
         options:
           submit_button: 'Sök daghem'
@@ -24,5 +30,11 @@ display:
             format: minimal
       pager:
         options:
-          views_infinite_scroll:
-            button_text: 'Ladda fler enheter'
+          tags:
+            next: Nästa
+            previous: Tidigare
+            first: Först
+            last: Sista
+          expose:
+            items_per_page_label: 'Artiklar per sida'
+            items_per_page_options_all_label: '- Allt -'

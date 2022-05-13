@@ -12,7 +12,6 @@ dependencies:
     - helfi_tpr
     - taxonomy
     - user
-    - views_infinite_scroll
 id: daycare_search
 label: 'Daycare search'
 module: views
@@ -130,15 +129,17 @@ display:
           empty_zero: false
           hide_alter_empty: true
       pager:
-        type: infinite_scroll
+        type: full
         options:
           offset: 0
           items_per_page: 50
           total_pages: null
           id: 0
           tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
+            next: Next
+            previous: Previous
+            first: First
+            last: Last
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -147,10 +148,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          views_infinite_scroll:
-            button_text: 'Load more units'
-            automatically_load_content: false
-            initially_load_all_pages: false
+          quantity: 9
       exposed_form:
         type: bef
         options:
@@ -219,7 +217,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: "<p class=\"unit-search__no-results-title\">No daycare units were found with the selected filters.</p>\r\n<p class=\"unit-search__no-results-desc\">Please try another selection.</p>"
+            value: "<p class=\"unit-search__no-results-title\">No daycare locations were found with the selected filters.</p>\r\n<p class=\"unit-search__no-results-desc\">Please try another selection.</p>"
             format: full_html
           tokenize: false
       sorts:
@@ -432,7 +430,7 @@ display:
           exposed: true
           expose:
             operator_id: tpr_provided_languages_op
-            label: 'Filter by provided language'
+            label: 'Filter by language of instruction'
             description: ''
             use_operator: false
             operator: tpr_provided_languages_op
@@ -478,7 +476,7 @@ display:
             200: '200'
             831: '831'
             294: '294'
-            86: '86'
+            288: '288'
           group: 1
           exposed: true
           expose:

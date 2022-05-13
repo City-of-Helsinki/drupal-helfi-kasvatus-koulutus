@@ -15,6 +15,22 @@
         {{ drupal_view('latest_group_news', 'latest_group_news_4', group_id) }}
       {% endif %}
 
+      {% if group_news_archive_location %}
+        <div class="group-news__links">
+          {% set link_title %}
+            {{ 'All news'|t({}, {'context': 'Group news archive link'}) }}
+          {% endset %}
+          {% set link_attributes = {
+            'class': [
+              'group-news__archive-link',
+              'hds-button',
+              'hds-button--supplementary',
+            ],
+          } %}
+          {{ link(link_title, group_news_archive_location, link_attributes) }}
+        </div>
+      {% endif %}
+
     {% endblock component_content %}
   {% endembed %}
 {% endblock paragraph %}

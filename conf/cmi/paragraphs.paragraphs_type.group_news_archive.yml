@@ -1,0 +1,10 @@
+uuid: f3a08e1e-fad5-4eaa-9aad-1f74e0cf9c92
+langcode: en
+status: true
+dependencies: {  }
+id: group_news_archive
+label: 'Group news archive'
+icon_uuid: null
+icon_default: null
+description: 'Lists all news belonging to a certain group.'
+behavior_plugins: {  }

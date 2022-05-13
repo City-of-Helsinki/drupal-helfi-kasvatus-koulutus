@@ -1,0 +1,15 @@
+display:
+  default:
+    display_options:
+      empty:
+        area:
+          content:
+            value: "<p>Ei tuloksia.</p>\r\n"
+            format: minimal
+      filters:
+        field_study_field_target_id:
+          expose:
+            label: 'Valitse koulutusala'
+      exposed_form:
+        options:
+          submit_button: Käytä

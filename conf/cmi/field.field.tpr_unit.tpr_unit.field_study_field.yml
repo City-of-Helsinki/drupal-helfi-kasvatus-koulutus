@@ -1,0 +1,30 @@
+uuid: 1b995116-fecc-442e-b214-120beef3cf30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tpr_unit.field_study_field
+    - taxonomy.vocabulary.vocational_studies
+  module:
+    - helfi_tpr
+id: tpr_unit.tpr_unit.field_study_field
+field_name: field_study_field
+entity_type: tpr_unit
+bundle: tpr_unit
+label: 'Study field'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      vocational_studies: vocational_studies
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
