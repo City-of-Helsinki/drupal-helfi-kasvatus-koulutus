@@ -1,0 +1,22 @@
+uuid: d88b95da-b5aa-4499-a175-e57bdcb1aaf5
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.contact_card_listing
+id: paragraph.contact_card_listing.status
+field_name: status
+entity_type: paragraph
+bundle: contact_card_listing
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,18 @@
+uuid: 0008943e-37dc-4c8c-80ea-189fb04eb097
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+id: group.upper_secondary_school.created
+field_name: created
+entity_type: group
+bundle: upper_secondary_school
+label: 'Created on'
+description: 'The time that the group was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

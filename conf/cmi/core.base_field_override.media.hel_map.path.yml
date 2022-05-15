@@ -1,0 +1,20 @@
+uuid: 858653dc-b201-4618-9236-7c5a9ade1335
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.hel_map
+  module:
+    - path
+id: media.hel_map.path
+field_name: path
+entity_type: media
+bundle: hel_map
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

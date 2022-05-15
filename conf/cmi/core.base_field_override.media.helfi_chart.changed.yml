@@ -1,0 +1,18 @@
+uuid: 302f1e7e-6174-4922-a2e7-aeb0a8ff321e
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.helfi_chart
+id: media.helfi_chart.changed
+field_name: changed
+entity_type: media
+bundle: helfi_chart
+label: Changed
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

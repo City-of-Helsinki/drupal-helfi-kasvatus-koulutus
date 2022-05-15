@@ -1,0 +1,22 @@
+uuid: 9924a1e7-2be1-474b-852d-53e6cb25fabd
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.hel_map
+id: media.hel_map.status
+field_name: status
+entity_type: media
+bundle: hel_map
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

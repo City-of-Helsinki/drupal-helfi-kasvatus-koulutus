@@ -1,0 +1,18 @@
+uuid: 0a3e272f-5ca0-4e6b-89e2-0fd85f0fdee8
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.hel_map
+id: media.hel_map.created
+field_name: created
+entity_type: media
+bundle: hel_map
+label: 'Authored on'
+description: 'The time the media item was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getRequestTime'
+settings: {  }
+field_type: created

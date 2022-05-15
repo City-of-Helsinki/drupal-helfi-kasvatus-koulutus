@@ -1,0 +1,22 @@
+uuid: d3567b55-f7a5-4729-b0e6-d1bc647a9947
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.daycare_search
+id: paragraph.daycare_search.status
+field_name: status
+entity_type: paragraph
+bundle: daycare_search
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

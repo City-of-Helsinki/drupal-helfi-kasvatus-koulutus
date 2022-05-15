@@ -5,10 +5,6 @@ display:
       exposed_form:
         options:
           submit_button: 'Hae päiväkotia'
-          reset_button_label: Palauta
-          exposed_sorts_label: Järjestä
-          sort_asc_label: Nouseva
-          sort_desc_label: Laskeva
       filters:
         address_search:
           expose:
