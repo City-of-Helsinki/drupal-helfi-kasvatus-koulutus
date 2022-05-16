@@ -20,6 +20,8 @@ exec "/crons/migrate-tpr.sh" &
 exec "/crons/migrate-tpr-kasko.sh" &
 exec "/crons/purge-queue.sh" &
 exec "/crons/update-translations.sh" &
+# Uncomment this to enable content scheduler
+exec "/crons/content-scheduler.sh" &
 
 while true
 do
