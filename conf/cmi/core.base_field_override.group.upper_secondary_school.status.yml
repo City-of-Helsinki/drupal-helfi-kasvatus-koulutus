@@ -1,0 +1,22 @@
+uuid: 65f0909e-fc35-401a-a7a9-1e75624567e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+id: group.upper_secondary_school.status
+field_name: status
+entity_type: group
+bundle: upper_secondary_school
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

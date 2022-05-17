@@ -7,6 +7,9 @@
 
 use Drupal\Core\Cache\Cache;
 use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\group\Entity\Group;
+use Drupal\group\Entity\GroupContent;
+use Drupal\helfi_group\GroupUtility;
 use Drupal\helfi_tpr\Entity\Unit;
 use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
@@ -111,13 +114,12 @@ function hdbt_subtheme_preprocess_paragraph(array &$variables) {
     $paragraph_type == 'group_news' &&
     $paragraph->hasField('field_group_news_archive')
   ) {
-    $field_content_id = $paragraph->get('field_group_news_archive')->getString();
-    // Check if the field has value.
-    if (empty($field_content_id)) {
-      return;
+    $variables['group_news_archive_location'] = NULL;
+    if ($archive_page = Node::load($paragraph->get('field_group_news_archive')->getString())) {
+      if (!$archive_page->isNew()) {
+        $variables['group_news_archive_location'] = $archive_page->toUrl('canonical');
+      }
     }
-    $node = Node::load($field_content_id);
-    $variables['group_news_archive_location'] = !$node->isNew() ? $node->toUrl('canonical') : NULL;
   }
 }
 
@@ -226,6 +228,12 @@ function _hdbt_subtheme_sidebar_menu_visibility(array &$variables, ContentEntity
       $variables['has_sidebar'] = TRUE;
       $variables['in_menu'] = TRUE;
     }
+  }
+
+  // Always show sidebar with group content.
+  if (GroupUtility::getGroup($entity) !== FALSE) {
+    $variables['has_sidebar'] = TRUE;
+    $variables['in_menu'] = TRUE;
   }
 
   // Hide the sidebar and menu if the current entity has

@@ -1,0 +1,18 @@
+uuid: cd893746-2828-4f48-8a39-fe93955bfca5
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.content_type.group_content_type_8cf71fbe8b0c4
+id: group_content.group_content_type_8cf71fbe8b0c4.label
+field_name: label
+entity_type: group_content
+bundle: group_content_type_8cf71fbe8b0c4
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
