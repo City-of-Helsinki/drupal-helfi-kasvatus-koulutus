@@ -1,0 +1,26 @@
+uuid: 4ea7570f-8458-40a4-a892-1c9d0c1546e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.upper_secondary_school.field_group_news_parent
+    - group.type.upper_secondary_school
+id: group.upper_secondary_school.default
+targetEntityType: group
+bundle: upper_secondary_school
+mode: default
+content:
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  changed: true
+  created: true
+  field_group_news_parent: true
+  langcode: true
+  uid: true

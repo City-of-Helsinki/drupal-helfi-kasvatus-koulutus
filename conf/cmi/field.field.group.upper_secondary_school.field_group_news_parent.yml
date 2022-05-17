@@ -1,0 +1,31 @@
+uuid: 9d937370-9b37-4d75-92d3-868b0ddb4a17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_group_news_parent
+    - group.type.upper_secondary_school
+    - node.type.landing_page
+    - node.type.page
+id: group.upper_secondary_school.field_group_news_parent
+field_name: field_group_news_parent
+entity_type: group
+bundle: upper_secondary_school
+label: 'Group news parent location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      landing_page: landing_page
+      page: page
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: landing_page
+field_type: entity_reference
