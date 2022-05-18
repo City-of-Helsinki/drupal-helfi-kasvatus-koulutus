@@ -14,7 +14,7 @@ bundle: helfi_chart
 label: Title
 description: 'The chart is rendered via inline frame. Iframe needs a label so users can determine what content is being presented in the iframe.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

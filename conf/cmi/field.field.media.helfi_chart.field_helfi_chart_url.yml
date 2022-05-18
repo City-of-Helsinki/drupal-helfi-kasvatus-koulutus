@@ -16,7 +16,7 @@ bundle: helfi_chart
 label: URL
 description: "Enter the Chart URL. Should be in format <i>https://app.powerbi.com/view?r=eyJrIjo..</i>.\r\n"
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

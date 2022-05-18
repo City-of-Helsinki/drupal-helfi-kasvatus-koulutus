@@ -1,0 +1,22 @@
+uuid: 648ece1d-c061-481d-aa9f-fee0dd7e2022
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.high_school_search
+id: paragraph.high_school_search.status
+field_name: status
+entity_type: paragraph
+bundle: high_school_search
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

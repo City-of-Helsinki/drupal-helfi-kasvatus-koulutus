@@ -1,0 +1,22 @@
+uuid: 9b83781c-9e8f-4e81-95c8-4f2ba492170f
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.content_liftup
+id: paragraph.content_liftup.status
+field_name: status
+entity_type: paragraph
+bundle: content_liftup
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

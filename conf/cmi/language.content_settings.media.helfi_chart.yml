@@ -4,10 +4,17 @@ status: true
 dependencies:
   config:
     - media.type.helfi_chart
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: 2BVN4f7oVA6fKcWq9zF90vKpBQ122PgyhnrbvoSn_gk
 id: media.helfi_chart
 target_entity_type_id: media
 target_bundle: helfi_chart
-default_langcode: site_default
-language_alterable: false
+default_langcode: fi
+language_alterable: true

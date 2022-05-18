@@ -13,7 +13,7 @@ bundle: group_news_archive
 label: 'Group ID'
 description: 'Select the group which news you want to display on this paragraph.'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

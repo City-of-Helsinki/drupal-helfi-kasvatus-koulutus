@@ -1,0 +1,18 @@
+uuid: ccdc90eb-1648-407e-88bf-6f68350a3e3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.contact_card_listing
+id: paragraph.contact_card_listing.created
+field_name: created
+entity_type: paragraph
+bundle: contact_card_listing
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

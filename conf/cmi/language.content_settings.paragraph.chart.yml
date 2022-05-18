@@ -1,0 +1,18 @@
+uuid: f6822bba-32a8-44c9-b5f5-338a74273e3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.chart
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.chart
+target_entity_type_id: paragraph
+target_bundle: chart
+default_langcode: site_default
+language_alterable: false

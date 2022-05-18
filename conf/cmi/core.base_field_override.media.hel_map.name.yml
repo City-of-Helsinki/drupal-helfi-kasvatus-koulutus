@@ -1,0 +1,20 @@
+uuid: 16dff8f9-8aac-4122-9236-ff3d6b8ec800
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.hel_map
+id: media.hel_map.name
+field_name: name
+entity_type: media
+bundle: hel_map
+label: Name
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: bf72ce8d-8236-40a3-8371-2625a0446a3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.vocational_school_search
+id: paragraph.vocational_school_search.status
+field_name: status
+entity_type: paragraph
+bundle: vocational_school_search
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

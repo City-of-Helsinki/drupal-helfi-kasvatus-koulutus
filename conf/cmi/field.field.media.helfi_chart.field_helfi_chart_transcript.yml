@@ -22,7 +22,7 @@ bundle: helfi_chart
 label: Transcript
 description: 'Provide a descriptive transcript of the visual information what is presented in the chart.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

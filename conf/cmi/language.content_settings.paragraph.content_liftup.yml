@@ -1,0 +1,18 @@
+uuid: fc1abd8b-f8d1-4697-b4dd-af92afd21e41
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.content_liftup
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.content_liftup
+target_entity_type_id: paragraph
+target_bundle: content_liftup
+default_langcode: site_default
+language_alterable: false

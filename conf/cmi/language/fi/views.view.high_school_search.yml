@@ -1,22 +1,12 @@
-label: Lukiohaku
 display:
   default:
-    display_title: Oletus
     display_options:
-      exposed_form:
-        options:
-          submit_button: Käytä
-          reset_button_label: Palauta
-          exposed_sorts_label: Järjestä
-          sort_asc_label: Nouseva
-          sort_desc_label: Laskeva
       empty:
         area:
           content:
             value: "<p>Ei tuloksia</p>\r\n"
             format: full_html
   block:
-    display_title: Lohko
     display_options:
       filters:
         emphasis_filter:
@@ -28,5 +18,3 @@ display:
         study_programme_type_filter:
           expose:
             label: 'Valitse yleislukio tai aikuislukio'
-  entity_reference:
-    display_title: Entiteettiviittaus

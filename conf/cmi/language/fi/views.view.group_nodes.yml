@@ -38,11 +38,11 @@ display:
           label: Päivitetty
           separator: ', '
         edit_node:
-          text: 'Muokkaa sisältöä'
+          text: 'Muokkaa solmua'
         delete_node:
           text: 'Poista sisältö'
         dropbutton:
-          label: Toiminnot
+          label: Toimenpiteet
       filters:
         status:
           expose:
@@ -64,7 +64,6 @@ display:
         gid:
           exception:
             title: Kaikki
-          title: '{{ arguments.gid|placeholder }} – sisältö'
       title: Sisältö
   page_1:
     display_title: Sivu

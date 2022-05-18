@@ -1,0 +1,18 @@
+uuid: 2a32a214-1b99-44ac-81d9-b44cb5505ab3
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.daycare_search
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.daycare_search
+target_entity_type_id: paragraph
+target_bundle: daycare_search
+default_langcode: site_default
+language_alterable: false
