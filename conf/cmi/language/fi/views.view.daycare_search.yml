@@ -5,10 +5,6 @@ display:
       exposed_form:
         options:
           submit_button: 'Hae päiväkotia'
-          reset_button_label: Palauta
-          exposed_sorts_label: Järjestä
-          sort_asc_label: Nouseva
-          sort_desc_label: Laskeva
       filters:
         address_search:
           expose:
@@ -42,5 +38,3 @@ display:
           expose:
             items_per_page_label: 'Kohteita per sivu'
             items_per_page_options_all_label: '- Kaikki -'
-  block:
-    display_title: Lohko

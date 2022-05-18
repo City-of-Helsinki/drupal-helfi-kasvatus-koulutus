@@ -1,9 +1,6 @@
-label: 'Ryhmän uutisarkisto'
-description: 'Listaa kaikki ryhmän uutiset'
 display:
   default:
     display_options:
-      title: 'Ryhmän uutisarkisto'
       pager:
         options:
           tags:
@@ -14,5 +11,3 @@ display:
           expose:
             items_per_page_label: 'Kohteita per sivu'
             items_per_page_options_all_label: '- Kaikki -'
-  group_news_archive:
-    display_title: Lohko
