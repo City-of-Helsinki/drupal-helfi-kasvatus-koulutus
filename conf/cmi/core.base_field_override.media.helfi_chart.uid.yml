@@ -1,0 +1,20 @@
+uuid: d058ca5f-0938-4b45-bc8c-eabf0a35a5ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.helfi_chart
+id: media.helfi_chart.uid
+field_name: uid
+entity_type: media
+bundle: helfi_chart
+label: 'Authored by'
+description: 'The user ID of the author.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

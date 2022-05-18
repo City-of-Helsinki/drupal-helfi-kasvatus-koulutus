@@ -1,0 +1,20 @@
+uuid: 350dcefc-957b-4467-816d-ffcd75d5f817
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.helfi_chart
+  module:
+    - path
+id: media.helfi_chart.path
+field_name: path
+entity_type: media
+bundle: helfi_chart
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

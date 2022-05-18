@@ -1,0 +1,20 @@
+uuid: 213f22a5-0101-4fab-a6d1-612197219ccf
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+  module:
+    - path
+id: group.upper_secondary_school.path
+field_name: path
+entity_type: group
+bundle: upper_secondary_school
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

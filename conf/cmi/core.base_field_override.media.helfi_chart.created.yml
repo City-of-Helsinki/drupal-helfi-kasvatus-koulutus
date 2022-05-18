@@ -1,0 +1,18 @@
+uuid: f5bfd9ec-96d3-4060-91cd-dda7fd747429
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.helfi_chart
+id: media.helfi_chart.created
+field_name: created
+entity_type: media
+bundle: helfi_chart
+label: 'Authored on'
+description: 'The time the media item was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getRequestTime'
+settings: {  }
+field_type: created

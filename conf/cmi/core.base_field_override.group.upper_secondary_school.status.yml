@@ -1,0 +1,22 @@
+uuid: 8080e5d2-4a88-4058-afde-d54a52b828b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+id: group.upper_secondary_school.status
+field_name: status
+entity_type: group
+bundle: upper_secondary_school
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
