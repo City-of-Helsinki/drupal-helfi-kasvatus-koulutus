@@ -1,0 +1,18 @@
+uuid: 061d049b-4f22-4d24-b4c1-5386c5caf67a
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+id: group.upper_secondary_school.metatag
+field_name: metatag
+entity_type: group
+bundle: upper_secondary_school
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

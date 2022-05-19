@@ -1,0 +1,11 @@
+uuid: f90b7566-5eac-4d6b-8b85-43e0f402f322
+langcode: en
+status: true
+dependencies:
+  config:
+    - group_content_menu.group_content_menu_type.kasko_group_menu
+id: group_content_menu.kasko_group_menu
+target_entity_type_id: group_content_menu
+target_bundle: kasko_group_menu
+default_langcode: site_default
+language_alterable: false

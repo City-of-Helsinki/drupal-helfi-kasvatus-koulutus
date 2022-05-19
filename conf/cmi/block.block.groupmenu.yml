@@ -24,7 +24,7 @@ settings:
     group: '@group.group_route_context:group'
   level: 2
   depth: 2
-  expand_all_items: false
+  expand_all_items: true
 visibility:
   group_type:
     id: group_type

@@ -1,0 +1,18 @@
+uuid: e38b2687-45ef-4e80-8b5e-4f1eadb54e2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.content_type.group_content_type_cb62eb2a38c4f
+id: group_content.group_content_type_cb62eb2a38c4f.changed
+field_name: changed
+entity_type: group_content
+bundle: group_content_type_cb62eb2a38c4f
+label: 'Changed on'
+description: 'The time that the group content was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

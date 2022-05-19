@@ -101,3 +101,20 @@ function helfi_group_entity_field_access(
   }
   return new AccessResultNeutral();
 }
+
+/**
+ * Implements hook_menu_local_tasks_alter().
+ *
+ * Removes duplicate local task from group nodes view page.
+ */
+function helfi_group_menu_local_tasks_alter(&$data, $route_name): void {
+  $local_task = 'helfi_group.view_group';
+  if (!isset($data['tabs'][0][$local_task])) {
+    return;
+  }
+
+  $routes = ['view.group_nodes.page_1'];
+  if (in_array($route_name, $routes)) {
+    unset($data['tabs'][0][$local_task]);
+  }
+}
