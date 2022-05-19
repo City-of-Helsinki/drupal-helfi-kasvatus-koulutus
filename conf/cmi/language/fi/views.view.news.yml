@@ -1,0 +1,13 @@
+display:
+  latest_news:
+    display_title: 'Uusimmat uutiset'
+  default:
+    display_options:
+      fields:
+        view_node:
+          text: näkymä
+      title: 'Uusimmat uutiset'
+      arguments:
+        nid:
+          exception:
+            title: Kaikki
