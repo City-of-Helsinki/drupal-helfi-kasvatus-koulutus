@@ -58,6 +58,7 @@ settings:
       high_school_search: high_school_search
       group_news: group_news
       vocational_school_search: vocational_school_search
+      event_list: event_list
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -90,6 +91,9 @@ settings:
       daycare_search:
         weight: 38
         enabled: false
+      event_list:
+        weight: 30
+        enabled: true
       from_library:
         weight: 21
         enabled: true
