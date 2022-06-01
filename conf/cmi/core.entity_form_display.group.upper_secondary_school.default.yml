@@ -3,12 +3,25 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.group.upper_secondary_school.field_group_news_parent
     - group.type.upper_secondary_school
+  module:
+    - select2
 id: group.upper_secondary_school.default
 targetEntityType: group
 bundle: upper_secondary_school
 mode: default
 content:
+  field_group_news_parent:
+    type: select2_entity_reference
+    weight: 26
+    region: content
+    settings:
+      width: 100%
+      autocomplete: false
+      match_operator: CONTAINS
+      match_limit: 10
+    third_party_settings: {  }
   label:
     type: string_textfield
     weight: 0
@@ -17,14 +30,25 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: false
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 1
+    weight: 2
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
-  langcode: true
   path: true
   uid: true

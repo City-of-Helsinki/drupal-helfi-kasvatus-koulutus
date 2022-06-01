@@ -45,7 +45,6 @@ settings:
       columns: columns
       accordion: accordion
       image: image
-      gallery: gallery
       content_liftup: content_liftup
       list_of_links: list_of_links
       content_cards: content_cards
@@ -59,6 +58,7 @@ settings:
       high_school_search: high_school_search
       group_news: group_news
       vocational_school_search: vocational_school_search
+      event_list: event_list
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -91,12 +91,15 @@ settings:
       daycare_search:
         weight: 38
         enabled: false
+      event_list:
+        weight: 30
+        enabled: true
       from_library:
         weight: 21
         enabled: true
       gallery:
         weight: -23
-        enabled: true
+        enabled: false
       gallery_slide:
         weight: -19
         enabled: false

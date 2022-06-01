@@ -1,0 +1,20 @@
+uuid: 42a7bed1-5001-435f-9fec-9f65e58e18c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+id: group.upper_secondary_school.uid
+field_name: uid
+entity_type: group
+bundle: upper_secondary_school
+label: 'Group creator'
+description: 'The username of the group creator.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\group\Entity\Group::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

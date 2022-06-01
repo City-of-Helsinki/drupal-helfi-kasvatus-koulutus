@@ -7,6 +7,9 @@
 
 use Drupal\Core\Cache\Cache;
 use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\group\Entity\Group;
+use Drupal\group\Entity\GroupContent;
+use Drupal\helfi_group\GroupUtility;
 use Drupal\helfi_tpr\Entity\Unit;
 use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
@@ -111,13 +114,12 @@ function hdbt_subtheme_preprocess_paragraph(array &$variables) {
     $paragraph_type == 'group_news' &&
     $paragraph->hasField('field_group_news_archive')
   ) {
-    $field_content_id = $paragraph->get('field_group_news_archive')->getString();
-    // Check if the field has value.
-    if (empty($field_content_id)) {
-      return;
+    $variables['group_news_archive_location'] = NULL;
+    if ($archive_page = Node::load($paragraph->get('field_group_news_archive')->getString())) {
+      if (!$archive_page->isNew()) {
+        $variables['group_news_archive_location'] = $archive_page->toUrl('canonical');
+      }
     }
-    $node = Node::load($field_content_id);
-    $variables['group_news_archive_location'] = !$node->isNew() ? $node->toUrl('canonical') : NULL;
   }
 }
 
@@ -165,10 +167,6 @@ function hdbt_subtheme_preprocess_tpr_unit(&$variables) {
     $variables['high_school_front_page_nid'] = $nid;
     $variables['high_school_front_page_title'] = $title;
   }
-
-  if (isset($variables['view_mode']) || $variables['view_mode'] === 'full') {
-    _hdbt_subtheme_sidebar_menu_visibility($variables, $variables['entity']);
-  }
 }
 
 /**
@@ -179,17 +177,21 @@ function hdbt_subtheme_preprocess_page(&$variables) {
   $entity = hdbt_content_get_page_entity();
   if ($entity instanceof NodeInterface) {
 
-    // Handle sidebar visibility for the "Standard page" (page)
+    // Handle first and second sidebar visibility for the "Standard page" (page)
     // content type.
     if ($entity->getType() === 'page') {
       _hdbt_subtheme_sidebar_menu_visibility($variables, $entity);
     }
 
-    // News item needs to have the sidebar set at all times. Also move the
-    // node title to content area with move_berore_content variable.
+    // Handle first and second sidebar visibility for the News item.
     if ($entity->getType() === 'news_item') {
       _hdbt_subtheme_sidebar_menu_visibility($variables, $entity);
     }
+  }
+
+  // Handle first and second sidebar visibility for the Unit entity.
+  if ($entity instanceof Unit) {
+    _hdbt_subtheme_sidebar_menu_visibility($variables, $entity);
   }
 }
 
@@ -223,9 +225,14 @@ function _hdbt_subtheme_sidebar_menu_visibility(array &$variables, ContentEntity
     // Set page_has_sidebar value true,
     // if menu link is enabled.
     if ($menu_Link->isEnabled()) {
-      $variables['has_sidebar'] = TRUE;
-      $variables['in_menu'] = TRUE;
+      $variables['has_sidebar_first'] = TRUE;
     }
+  }
+
+  // Always show sidebar with group content.
+  if (GroupUtility::getGroup($entity) !== FALSE) {
+    $variables['has_sidebar'] = TRUE;
+    $variables['in_menu'] = TRUE;
   }
 
   // Hide the sidebar and menu if the current entity has
@@ -234,8 +241,7 @@ function _hdbt_subtheme_sidebar_menu_visibility(array &$variables, ContentEntity
     $entity->hasField('hide_sidebar_navigation') &&
     boolval($entity->get('hide_sidebar_navigation')->value)
   ) {
-    $variables['has_sidebar'] = FALSE;
-    $variables['in_menu'] = FALSE;
+    $variables['has_sidebar_first'] = FALSE;
   }
 }
 
