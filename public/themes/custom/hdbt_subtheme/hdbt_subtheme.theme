@@ -217,12 +217,12 @@ function _hdbt_subtheme_sidebar_menu_visibility(array &$variables, ContentEntity
     // TODO: Could check here if the menu is found from the correct group menu.
   );
 
-  // Add "page_has_sidebar" variable
+  // Add "has_sidebar_first" variable
   // if current node has menu link items set.
   if (!empty($menu_links) && is_array($menu_links)) {
     $menu_Link = reset($menu_links);
 
-    // Set page_has_sidebar value true,
+    // Set has_sidebar_first value true,
     // if menu link is enabled.
     if ($menu_Link->isEnabled()) {
       $variables['has_sidebar_first'] = TRUE;
