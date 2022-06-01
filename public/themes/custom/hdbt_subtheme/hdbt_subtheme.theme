@@ -231,8 +231,7 @@ function _hdbt_subtheme_sidebar_menu_visibility(array &$variables, ContentEntity
 
   // Always show sidebar with group content.
   if (GroupUtility::getGroup($entity) !== FALSE) {
-    $variables['has_sidebar'] = TRUE;
-    $variables['in_menu'] = TRUE;
+    $variables['has_sidebar_first'] = TRUE;
   }
 
   // Hide the sidebar and menu if the current entity has
