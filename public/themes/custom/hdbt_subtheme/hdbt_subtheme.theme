@@ -229,8 +229,8 @@ function _hdbt_subtheme_sidebar_menu_visibility(array &$variables, ContentEntity
     }
   }
 
-  // Always show sidebar with group content.
-  if (GroupUtility::getGroup($entity) !== FALSE) {
+  // Always show the first sidebar (menu) with group content.
+  if (!empty(GroupUtility::getGroup($entity))) {
     $variables['has_sidebar_first'] = TRUE;
   }
 
