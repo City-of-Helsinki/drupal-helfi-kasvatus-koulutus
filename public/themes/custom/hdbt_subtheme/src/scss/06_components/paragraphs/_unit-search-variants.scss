@@ -36,6 +36,17 @@ $card_spacing: $spacing-and-half;
     flex-direction: column;
     margin-bottom: 0;
 
+    // @TODO: Needs subtheme tpr-unit.html.twig updates from hdbt theme.
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .image-placeholder {
+      $-placeholder-aspect-ratio: 3 / 2;
+      padding-bottom: aspect-ratio-padding($-placeholder-aspect-ratio);
+    }
+
     @include breakpoint($breakpoint-s) {
       flex-direction: row;
       flex-wrap: wrap;
