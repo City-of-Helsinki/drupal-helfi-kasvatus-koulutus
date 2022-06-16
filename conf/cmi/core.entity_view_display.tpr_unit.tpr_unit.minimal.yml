@@ -60,6 +60,7 @@ hidden:
   field_study_field: true
   field_unit_type: true
   hide_description: true
+  highlights: true
   langcode: true
   latitude: true
   longitude: true
