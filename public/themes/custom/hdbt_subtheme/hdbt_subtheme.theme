@@ -65,7 +65,7 @@ function hdbt_subtheme_theme_suggestions_menu_alter(&$suggestions, $variables) {
 }
 
 /**
- *
+ * Implements hook_preprocess_hook().
  */
 function hdbt_subtheme_preprocess_paragraph(array &$variables) {
   /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
