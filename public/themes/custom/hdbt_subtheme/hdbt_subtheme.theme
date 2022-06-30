@@ -5,10 +5,7 @@
  * Functions to support theming in the HDBT Subtheme.
  */
 
-use Drupal\Core\Cache\Cache;
 use Drupal\Core\Entity\ContentEntityInterface;
-use Drupal\group\Entity\Group;
-use Drupal\group\Entity\GroupContent;
 use Drupal\helfi_group\GroupUtility;
 use Drupal\helfi_tpr\Entity\Unit;
 use Drupal\node\Entity\Node;
@@ -25,7 +22,7 @@ function hdbt_subtheme_preprocess_block(&$variables) {
 }
 
 /**
- * Implements hook_theme_suggestions_HOOK_alter for blocks.
+ * Implements hook_theme_suggestions_HOOK_alter().
  */
 function hdbt_subtheme_theme_suggestions_block_alter(&$suggestions) {
   // Load theme suggestions for blocks from parent theme.
@@ -67,6 +64,9 @@ function hdbt_subtheme_theme_suggestions_menu_alter(&$suggestions, $variables) {
   }
 }
 
+/**
+ * Implements hook_preprocess_hook().
+ */
 function hdbt_subtheme_preprocess_paragraph(array &$variables) {
   /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
   $paragraph = $variables['paragraph'];
@@ -214,7 +214,7 @@ function _hdbt_subtheme_sidebar_menu_visibility(array &$variables, ContentEntity
   $menu_links = $menu_link_manager->loadLinksByRoute(
     "entity.{$entity->getEntityTypeId()}.canonical",
     [$entity->getEntityTypeId() => $entity->id()]
-    // TODO: Could check here if the menu is found from the correct group menu.
+    // @todo Could check here if the menu is found from the correct group menu.
   );
 
   // Add "has_sidebar_first" variable
