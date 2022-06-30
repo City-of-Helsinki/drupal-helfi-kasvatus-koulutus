@@ -2,6 +2,7 @@
 
 /**
  * @file
+ * Contains installation functions for Kasko instance.
  */
 
 declare(strict_types = 1);
