@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: fc91c53f-90ef-4ac1-b891-3f079c446d23
 name: 'Childhood and education'
-mail: admin@example.com
+mail: drupal@hel.fi
 slogan: ''
 page:
   403: ''
