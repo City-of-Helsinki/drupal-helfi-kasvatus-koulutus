@@ -39,6 +39,7 @@ dependencies:
     - node
     - paragraphs
     - paragraphs_library
+    - paragraphs_type_permissions
     - path
     - pathauto
     - publication_date
@@ -97,6 +98,7 @@ permissions:
   - 'assign school_editor role'
   - 'break content lock'
   - 'bypass group access'
+  - 'bypass paragraphs type content access'
   - 'cancel account'
   - 'change own username'
   - 'create announcement content'

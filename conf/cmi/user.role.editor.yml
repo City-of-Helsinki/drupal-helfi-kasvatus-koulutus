@@ -32,6 +32,7 @@ dependencies:
     - node
     - paragraphs
     - paragraphs_library
+    - paragraphs_type_permissions
     - path
     - publication_date
     - redirect
@@ -63,6 +64,7 @@ permissions:
   - 'administer paragraphs library'
   - 'administer redirects'
   - 'administer url aliases'
+  - 'bypass paragraphs type content access'
   - 'cancel account'
   - 'change own username'
   - 'create announcement content'
