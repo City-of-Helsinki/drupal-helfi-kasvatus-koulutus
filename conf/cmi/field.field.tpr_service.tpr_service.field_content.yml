@@ -42,6 +42,7 @@ settings:
       banner: banner
       from_library: from_library
       remote_video: remote_video
+      phasing: phasing
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -82,6 +83,12 @@ settings:
         enabled: true
       list_of_links_item:
         weight: -17
+        enabled: false
+      phasing:
+        weight: 50
+        enabled: true
+      phasing_item:
+        weight: 30
         enabled: false
       remote_video:
         weight: 41

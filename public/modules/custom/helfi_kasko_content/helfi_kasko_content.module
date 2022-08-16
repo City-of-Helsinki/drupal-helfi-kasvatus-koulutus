@@ -5,7 +5,6 @@
  * Contains alterations for content.
  */
 
-use Drupal\Core\Block\BlockPluginInterface;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Language\LanguageInterface;
 
