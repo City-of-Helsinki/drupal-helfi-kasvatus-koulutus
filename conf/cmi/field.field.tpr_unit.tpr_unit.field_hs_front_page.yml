@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.tpr_unit.field_hs_front_page
     - node.type.landing_page
+    - node.type.page
   module:
     - helfi_tpr
 id: tpr_unit.tpr_unit.field_hs_front_page
@@ -22,9 +23,10 @@ settings:
   handler_settings:
     target_bundles:
       landing_page: landing_page
+      page: page
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: landing_page
 field_type: entity_reference
