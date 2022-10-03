@@ -92,8 +92,7 @@ $card_spacing: $spacing-and-half;
   .bef-checkboxes {
     display: flex;
     justify-content: flex-start;
-    margin-top: $spacing;
-
+    flex-wrap:wrap;
     // Compensate the checkboxes height so that it matches the select height.
     @include breakpoint($breakpoint-m) {
       margin-bottom: $spacing;
@@ -102,7 +101,7 @@ $card_spacing: $spacing-and-half;
     .form-item {
       margin-bottom: 0;
       margin-right: $spacing-and-half;
-      margin-top: 0;
+      margin-top: $spacing;
       width: auto;
     }
   }
