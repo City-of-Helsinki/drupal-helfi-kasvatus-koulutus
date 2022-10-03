@@ -1,7 +1,7 @@
 (function (Drupal) {
   Drupal.behaviors.HighSchoolSearch = {};
 
-  Drupal.behaviors.HighSchoolSearch.attach = function (context, settings) {
+  Drupal.behaviors.HighSchoolSearch.attach = function (context) {
     // Find all select elements inside high school search.
     const selectElements = context.querySelectorAll(
       '.unit-search--high-school .js-form-item-emphasis .form-select, ' +
@@ -33,14 +33,14 @@
       );
       select.parentElement.classList.add('hdbt--select-wrapper--disabled');
       select.disabled = true;
-      select.setAttribute("aria-disabled", "true");
+      select.setAttribute('aria-disabled', 'true');
     } else {
       helpText.textContent = '';
       select.parentElement.classList.remove(
         'hdbt--select-wrapper--disabled'
       );
       select.disabled = false;
-      select.setAttribute("aria-disabled", "false");
+      select.setAttribute('aria-disabled', 'false');
     }
   }
 
