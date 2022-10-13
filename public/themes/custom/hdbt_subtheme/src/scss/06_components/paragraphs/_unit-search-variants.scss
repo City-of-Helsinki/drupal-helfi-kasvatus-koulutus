@@ -25,9 +25,9 @@ $card_spacing: $spacing-and-half;
     }
 
     label {
+      display: block;
       font-weight: 500;
       margin-bottom: $spacing-quarter;
-      display: block;
     }
   }
 
@@ -38,8 +38,8 @@ $card_spacing: $spacing-and-half;
 
     // @TODO: Needs subtheme tpr-unit.html.twig updates from hdbt theme.
     img {
-      width: 100%;
       height: auto;
+      width: 100%;
     }
 
     .image-placeholder {
@@ -91,9 +91,8 @@ $card_spacing: $spacing-and-half;
 
   .bef-checkboxes {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
-    margin-top: $spacing;
-
     // Compensate the checkboxes height so that it matches the select height.
     @include breakpoint($breakpoint-m) {
       margin-bottom: $spacing;
@@ -102,7 +101,7 @@ $card_spacing: $spacing-and-half;
     .form-item {
       margin-bottom: 0;
       margin-right: $spacing-and-half;
-      margin-top: 0;
+      margin-top: $spacing;
       width: auto;
     }
   }
