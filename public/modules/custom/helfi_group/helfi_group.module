@@ -50,13 +50,6 @@ function helfi_group_preprocess_block(&$variables) {
  * Implements hook_preprocess().
  */
 function helfi_group_preprocess_page(&$variables) {
-  $variables['has_section_nav'] = FALSE;
-  // TODO: Check if the content displayed belongs to a group.
-  //if () {
-  //  $variables['has_section_nav'] = TRUE;
-  //}
-}
-
 /**
  * Implements hook_theme().
  *
