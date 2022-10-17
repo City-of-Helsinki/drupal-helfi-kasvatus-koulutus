@@ -47,10 +47,6 @@ function helfi_group_preprocess_block(&$variables) {
 }
 
 /**
- * Implements hook_preprocess().
- */
-function helfi_group_preprocess_page(&$variables) {
-/**
  * Implements hook_theme().
  *
  * Overrides templates.
