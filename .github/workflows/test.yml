@@ -30,8 +30,7 @@ jobs:
       - name: Build project
         run: composer install
 
-      - name: Check for sourceMappingURL
-        # Fail tests if someone is trying to commit non-minified css.
+      - name: Check that subtheme is not built with dev mode
         run: if grep -q 'sourceMappingURL=' -R public/themes/custom/hdbt_subtheme/dist/css; then exit 1; fi
 
       - name: Run PHPCS
