@@ -11,6 +11,7 @@ dependencies:
     - paragraphs.paragraphs_type.content_cards
     - paragraphs.paragraphs_type.content_liftup
     - paragraphs.paragraphs_type.daycare_search
+    - paragraphs.paragraphs_type.event_list
     - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.group_news
     - paragraphs.paragraphs_type.group_news_archive
@@ -18,8 +19,12 @@ dependencies:
     - paragraphs.paragraphs_type.liftup_with_image
     - paragraphs.paragraphs_type.list_of_links
     - paragraphs.paragraphs_type.map
+    - paragraphs.paragraphs_type.news_list
+    - paragraphs.paragraphs_type.phasing
+    - paragraphs.paragraphs_type.popular_services
     - paragraphs.paragraphs_type.remote_video
     - paragraphs.paragraphs_type.service_list
+    - paragraphs.paragraphs_type.target_group_links
     - paragraphs.paragraphs_type.unit_search
     - paragraphs.paragraphs_type.vocational_school_search
   module:
@@ -61,6 +66,7 @@ settings:
       phasing: phasing
       popular_services: popular_services
       target_group_links: target_group_links
+      news_list: news_list
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -131,6 +137,9 @@ settings:
         enabled: false
       map:
         weight: -20
+        enabled: true
+      news_list:
+        weight: 30
         enabled: true
       phasing:
         weight: 50
