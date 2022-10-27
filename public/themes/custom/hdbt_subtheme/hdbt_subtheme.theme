@@ -187,6 +187,11 @@ function hdbt_subtheme_preprocess_page(&$variables) {
     if ($entity->getType() === 'news_item') {
       _hdbt_subtheme_sidebar_menu_visibility($variables, $entity);
     }
+
+    // Show the section navigation on mobile with group content.
+    if (!empty(GroupUtility::getGroup($entity))) {
+      $variables['has_section_nav'] = TRUE;
+    }
   }
 
   // Handle first and second sidebar visibility for the Unit entity.

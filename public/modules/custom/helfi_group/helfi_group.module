@@ -42,6 +42,17 @@ function helfi_group_preprocess_block(&$variables) {
         'title' => $parent_item->getTitle(),
         'url' => $parent_item->getUrlObject(),
       ];
+
+      // Check if current page is the same as the item used as parent and
+      // assign a boolean to enable aria-current="page" attribute on dom.
+      $current_item_url = $parent_item->getUrlObject();
+      $current_item_path = '/' . $current_item_url->getInternalPath();
+
+      $current_path = \Drupal::service('path.current')->getPath();
+
+      if ($current_item_path == $current_path) {
+        $variables['menu_link_parent_is_current'] = TRUE;
+      }
     }
   }
 }
