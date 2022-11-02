@@ -7,6 +7,7 @@ dependencies:
     - filter.format.minimal
     - media.type.file
     - media.type.hel_map
+    - media.type.helfi_chart
     - media.type.image
     - media.type.remote_video
     - media.type.soundcloud
@@ -39,6 +40,7 @@ permissions:
   - 'change own username'
   - 'create file media'
   - 'create hel_map media'
+  - 'create helfi_chart media'
   - 'create image media'
   - 'create media'
   - 'create news_item content'
@@ -49,6 +51,7 @@ permissions:
   - 'delete news_item revisions'
   - 'delete own file media'
   - 'delete own hel_map media'
+  - 'delete own helfi_chart media'
   - 'delete own image media'
   - 'delete own news_item content'
   - 'delete own remote_video media'
@@ -56,6 +59,7 @@ permissions:
   - 'edit any news_item content'
   - 'edit own file media'
   - 'edit own hel_map media'
+  - 'edit own helfi_chart media'
   - 'edit own image media'
   - 'edit own news_item content'
   - 'edit own remote_video media'
