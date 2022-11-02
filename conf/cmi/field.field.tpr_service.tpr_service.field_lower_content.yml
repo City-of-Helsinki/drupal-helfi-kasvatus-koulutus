@@ -15,6 +15,7 @@ dependencies:
     - paragraphs.paragraphs_type.news_list
     - paragraphs.paragraphs_type.phasing
     - paragraphs.paragraphs_type.remote_video
+    - paragraphs.paragraphs_type.event_list
   module:
     - entity_reference_revisions
     - helfi_tpr
@@ -45,6 +46,7 @@ settings:
       remote_video: remote_video
       phasing: phasing
       news_list: news_list
+      event_list: event_list
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -61,6 +63,9 @@ settings:
         enabled: true
       content_cards:
         weight: -23
+        enabled: true
+      event_list:
+        weight: 44
         enabled: true
       from_library:
         weight: 21
