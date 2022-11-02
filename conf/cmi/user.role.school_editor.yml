@@ -29,6 +29,7 @@ label: 'School editor'
 weight: -6
 is_admin: null
 permissions:
+  - 'access content overview'
   - 'access files overview'
   - 'access group overview'
   - 'access media overview'
