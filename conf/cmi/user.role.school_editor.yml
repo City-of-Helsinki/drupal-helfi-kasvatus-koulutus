@@ -61,7 +61,6 @@ permissions:
   - 'schedule publishing of nodes'
   - 'set news_item published on date'
   - 'translate editable entities'
-  - 'translate news_item node'
   - 'update media'
   - 'use text format full_html'
   - 'use text format minimal'
