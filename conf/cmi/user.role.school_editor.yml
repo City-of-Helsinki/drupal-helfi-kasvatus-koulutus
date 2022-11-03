@@ -21,6 +21,7 @@ dependencies:
     - helfi_tpr
     - media
     - node
+    - override_node_options
     - publication_date
     - scheduler
     - system
@@ -58,6 +59,9 @@ permissions:
   - 'edit own image media'
   - 'edit own remote_video media'
   - 'edit own soundcloud media'
+  - 'override landing_page published option'
+  - 'override news_item published option'
+  - 'override page published option'
   - 'schedule publishing of nodes'
   - 'set news_item published on date'
   - 'translate editable entities'
