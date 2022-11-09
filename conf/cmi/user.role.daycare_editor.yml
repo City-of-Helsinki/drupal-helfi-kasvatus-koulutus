@@ -1,0 +1,9 @@
+uuid: d3b2a2be-12d1-444f-a290-ab07f3548415
+langcode: en
+status: true
+dependencies: {  }
+id: daycare_editor
+label: 'Daycare editor'
+weight: 8
+is_admin: null
+permissions: {  }

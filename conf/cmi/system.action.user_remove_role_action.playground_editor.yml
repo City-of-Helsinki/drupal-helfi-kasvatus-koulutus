@@ -1,0 +1,14 @@
+uuid: 5e77b2f7-1fa5-4a3d-b40b-9e7f3011cb1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.playground_editor
+  module:
+    - user
+id: user_remove_role_action.playground_editor
+label: 'Remove the Playground editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: playground_editor

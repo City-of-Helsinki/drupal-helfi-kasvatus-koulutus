@@ -1,0 +1,9 @@
+uuid: 0dd1314a-c73f-4e8a-bd38-f64530063132
+langcode: en
+status: true
+dependencies: {  }
+id: playground_editor
+label: 'Playground editor'
+weight: 6
+is_admin: null
+permissions: {  }
