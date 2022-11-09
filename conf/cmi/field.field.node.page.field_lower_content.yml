@@ -13,13 +13,15 @@ dependencies:
     - paragraphs.paragraphs_type.content_cards
     - paragraphs.paragraphs_type.content_liftup
     - paragraphs.paragraphs_type.daycare_search
+    - paragraphs.paragraphs_type.event_list
     - paragraphs.paragraphs_type.from_library
-    - paragraphs.paragraphs_type.gallery
     - paragraphs.paragraphs_type.group_news
     - paragraphs.paragraphs_type.high_school_search
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.list_of_links
     - paragraphs.paragraphs_type.map
+    - paragraphs.paragraphs_type.news_list
+    - paragraphs.paragraphs_type.phasing
     - paragraphs.paragraphs_type.remote_video
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.unit_search
@@ -62,6 +64,7 @@ settings:
       vocational_school_search: vocational_school_search
       event_list: event_list
       phasing: phasing
+      news_list: news_list
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -129,6 +132,9 @@ settings:
         enabled: false
       map:
         weight: -21
+        enabled: true
+      news_list:
+        weight: 30
         enabled: true
       phasing:
         weight: 50

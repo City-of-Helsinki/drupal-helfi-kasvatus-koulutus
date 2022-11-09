@@ -9,11 +9,13 @@ dependencies:
     - paragraphs.paragraphs_type.columns
     - paragraphs.paragraphs_type.content_cards
     - paragraphs.paragraphs_type.from_library
-    - paragraphs.paragraphs_type.gallery
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.liftup_with_image
     - paragraphs.paragraphs_type.list_of_links
+    - paragraphs.paragraphs_type.news_list
+    - paragraphs.paragraphs_type.phasing
     - paragraphs.paragraphs_type.remote_video
+    - paragraphs.paragraphs_type.event_list
   module:
     - entity_reference_revisions
     - helfi_tpr
@@ -43,6 +45,8 @@ settings:
       from_library: from_library
       remote_video: remote_video
       phasing: phasing
+      news_list: news_list
+      event_list: event_list
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -59,6 +63,9 @@ settings:
         enabled: true
       content_cards:
         weight: -23
+        enabled: true
+      event_list:
+        weight: 44
         enabled: true
       from_library:
         weight: 21
@@ -84,6 +91,9 @@ settings:
       list_of_links_item:
         weight: -17
         enabled: false
+      news_list:
+        weight: 30
+        enabled: true
       phasing:
         weight: 50
         enabled: true
