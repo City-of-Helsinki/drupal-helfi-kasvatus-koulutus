@@ -14,9 +14,7 @@ use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountInterface;
-use Drupal\group\Entity\Group;
 use Drupal\helfi_group\UnitFormAlter;
-use Drupal\media_library\MediaLibraryState;
 
 /**
  * Implements hook_preprocess_HOOK().
