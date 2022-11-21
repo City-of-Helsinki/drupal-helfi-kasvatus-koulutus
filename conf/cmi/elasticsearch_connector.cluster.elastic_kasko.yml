@@ -1,0 +1,19 @@
+uuid: 49404e73-70f3-4f7a-b447-c8d7271a0439
+langcode: en
+status: '1'
+dependencies: {  }
+cluster_id: elastic_kasko
+name: 'Elastic Kasko'
+url: 'http://elastic:9200'
+options:
+  multiple_nodes_connection: false
+  use_authentication: 1
+  authentication_type: Basic
+  username: ''
+  password: ''
+  timeout: '3'
+  rewrite:
+    rewrite_index: 1
+    index:
+      prefix: ''
+      suffix: ''
