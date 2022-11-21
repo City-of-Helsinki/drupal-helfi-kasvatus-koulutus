@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.tpr_unit.tpr_unit.field_categories
     - field.field.tpr_unit.tpr_unit.field_content
     - field.field.tpr_unit.tpr_unit.field_hs_front_page
     - field.field.tpr_unit.tpr_unit.field_lower_content
@@ -103,6 +104,16 @@ content:
       label: above
       formatter_type: null
       formatter_settings: null
+      show_description: false
+    third_party_settings: {  }
+  field_categories:
+    type: readonly_field_widget
+    weight: 39
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
   field_content:

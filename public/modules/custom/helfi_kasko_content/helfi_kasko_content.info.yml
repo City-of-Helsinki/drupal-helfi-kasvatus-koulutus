@@ -7,3 +7,4 @@ dependencies:
   - drupal:content_translation
   - drupal:language
   - drupal:taxonomy
+  - helfi_tpr:helfi_tpr
