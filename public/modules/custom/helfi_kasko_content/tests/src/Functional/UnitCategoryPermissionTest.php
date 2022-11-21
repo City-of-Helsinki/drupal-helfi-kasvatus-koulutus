@@ -38,6 +38,7 @@ class UnitCategoryPermissionTest extends MigrationTestBase {
       'type' => 'string',
       'settings' => [],
       'cardinality' => -1,
+      'translatable' => '0',
     ])->save();
 
     $fieldCategoriesConfig = FieldConfig::create([
@@ -83,7 +84,6 @@ class UnitCategoryPermissionTest extends MigrationTestBase {
     $this->assertSession()->statusCodeEquals(403);
 
     // Test that user with special category-related permission has access.
-    // @todo Fix this: changes made in UnitCategorySubscriber are not shown.
     $this->drupalLogin($this->createUser([
       'admin daycare units',
     ]));
