@@ -5,8 +5,6 @@ declare(strict_types = 1);
 namespace Drupal\Tests\helfi_kasko_content\Functional;
 
 use Drupal\Core\Url;
-use Drupal\field\Entity\FieldConfig;
-use Drupal\field\Entity\FieldStorageConfig;
 use Drupal\Tests\helfi_tpr\Functional\MigrationTestBase;
 use Drupal\Tests\helfi_tpr\Traits\TprMigrateTrait;
 
@@ -32,29 +30,10 @@ class UnitCategoryPermissionTest extends MigrationTestBase {
   public function setUp(): void {
     parent::setUp();
 
-    FieldStorageConfig::create([
-      'field_name' => 'field_categories',
-      'entity_type' => 'tpr_unit',
-      'type' => 'string',
-      'settings' => [],
-      'cardinality' => -1,
-      'translatable' => '0',
-    ])->save();
-
-    $fieldCategoriesConfig = FieldConfig::create([
-      'field_name' => 'field_categories',
-      'label' => 'Categories',
-      'entity_type' => 'tpr_unit',
-      'bundle' => 'tpr_unit',
-      'required' => FALSE,
-      'settings' => [],
-      'description' => '',
-    ]);
-    $fieldCategoriesConfig->save();
-
+    // Show Categories at the browser output.
     \Drupal::service('entity_display.repository')
-      ->getFormDisplay($fieldCategoriesConfig->getTargetEntityTypeId(), $fieldCategoriesConfig->getTargetBundle())
-      ->setComponent($fieldCategoriesConfig->getName(), [
+      ->getFormDisplay('tpr_unit', 'tpr_unit')
+      ->setComponent('field_categories', [
         'type' => 'readonly_field_widget',
       ])
       ->save();
