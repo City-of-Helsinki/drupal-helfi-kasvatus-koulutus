@@ -11,7 +11,7 @@ use Drupal\helfi_kasko_content\EventSubscriber\UnitCategorySubscriber;
 use Drupal\helfi_kasko_content\UnitCategoryUtility;
 use Drupal\helfi_tpr\Entity\Unit;
 use Drupal\migrate\Event\MigrateEvents;
-use Drupal\migrate\Event\MigratePostRowSaveEvent;
+use Drupal\migrate\Event\MigratePreRowSaveEvent;
 use Drupal\Tests\helfi_tpr\Kernel\MigrationTestBase;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
@@ -55,7 +55,7 @@ class UnitCategoryMigrationTest extends MigrationTestBase implements EventSubscr
    */
   public static function getSubscribedEvents() : array {
     return [
-      MigrateEvents::POST_ROW_SAVE => 'postRowSave',
+      MigrateEvents::PRE_ROW_SAVE => 'preRowSave',
     ];
   }
 
@@ -73,8 +73,8 @@ class UnitCategoryMigrationTest extends MigrationTestBase implements EventSubscr
   /**
    * Use UnitCategorySubscriber to handle migration event.
    */
-  public function postRowSave(MigratePostRowSaveEvent $event) : void {
-    (new UnitCategorySubscriber(\Drupal::service('entity_type.manager')))->postRowSave($event);
+  public function preRowSave(MigratePreRowSaveEvent $event) : void {
+    (new UnitCategorySubscriber())->preRowSave($event);
   }
 
   /**

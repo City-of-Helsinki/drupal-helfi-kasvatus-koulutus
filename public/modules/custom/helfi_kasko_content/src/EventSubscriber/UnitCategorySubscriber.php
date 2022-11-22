@@ -4,10 +4,9 @@ declare(strict_types = 1);
 
 namespace Drupal\helfi_kasko_content\EventSubscriber;
 
-use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\helfi_kasko_content\UnitCategoryUtility;
 use Drupal\migrate\Event\MigrateEvents;
-use Drupal\migrate\Event\MigratePostRowSaveEvent;
+use Drupal\migrate\Event\MigratePreRowSaveEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
@@ -16,28 +15,18 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 class UnitCategorySubscriber implements EventSubscriberInterface {
 
   /**
-   * Constructs a new UnitCategorySubscriber object.
-   *
-   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager
-   *   The entity type manager.
-   */
-  public function __construct(
-    protected EntityTypeManagerInterface $entityTypeManager,
-  ) {}
-
-  /**
    * {@inheritdoc}
    */
   public static function getSubscribedEvents(): array {
     return [
-      MigrateEvents::POST_ROW_SAVE => 'postRowSave',
+      MigrateEvents::PRE_ROW_SAVE => 'preRowSave',
     ];
   }
 
   /**
    * Set categories field values using ontologyword IDs.
    */
-  public function postRowSave(MigratePostRowSaveEvent $event): void {
+  public function preRowSave(MigratePreRowSaveEvent $event): void {
     if ($event->getMigration()->id() !== 'tpr_unit') {
       return;
     }
@@ -45,25 +34,13 @@ class UnitCategorySubscriber implements EventSubscriberInterface {
       return;
     }
 
-    $tprUnitStorage = $this->entityTypeManager->getStorage('tpr_unit');
-    $destinationIDs = $event->getDestinationIdValues();
-
-    foreach ($destinationIDs as $destinationId) {
-      $entity = $tprUnitStorage->load($destinationId);
-      if (!$entity->hasField('ontologyword_ids') || !$entity->hasField('field_categories')) {
-        continue;
+    $categories = [];
+    foreach ($event->getRow()->getSourceProperty('ontologyword_ids') as $ontologywordId) {
+      foreach (UnitCategoryUtility::getCategories($ontologywordId) as $category) {
+        $categories[$category] = $category;
       }
-
-      $categories = [];
-      foreach ($entity->get('ontologyword_ids') as $ontologywordId) {
-        foreach (UnitCategoryUtility::getCategories($ontologywordId->get('value')->getCastedValue()) as $category) {
-          $categories[$category] = $category;
-        }
-      }
-
-      $entity->set('field_categories', array_values($categories));
-      $entity->save();
     }
+    $event->getRow()->setDestinationProperty('field_categories', array_values($categories));
   }
 
 }

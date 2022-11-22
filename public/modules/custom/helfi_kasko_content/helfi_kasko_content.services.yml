@@ -1,5 +1,4 @@
 services:
   Drupal\helfi_kasko_content\EventSubscriber\UnitCategorySubscriber:
-    arguments: [ '@entity_type.manager' ]
     tags:
       - { name: 'event_subscriber' }
