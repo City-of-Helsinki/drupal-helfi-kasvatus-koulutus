@@ -1,4 +1,4 @@
-uuid: bd88db70-43a4-4eee-a38a-8b7988fa6731
+uuid: 37709d9c-5b3d-4b76-b32c-28ec480560a1
 langcode: en
 status: true
 dependencies:
@@ -6,10 +6,10 @@ dependencies:
     - group.type.upper_secondary_school
   enforced:
     config:
-      - user.role.school_editor
-id: upper_secondary_school-161bb35a9
-label: 'Upper secondary school editor'
-weight: 5
+      - user.role.daycare_editor
+id: upper_secondary_school-ed6e8ed69
+label: 'Daycare editor'
+weight: 8
 internal: true
 audience: outsider
 group_type: upper_secondary_school

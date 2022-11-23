@@ -1,0 +1,4 @@
+services:
+  Drupal\helfi_kasko_content\EventSubscriber\UnitCategorySubscriber:
+    tags:
+      - { name: 'event_subscriber' }

@@ -1,0 +1,14 @@
+uuid: 7b12bbff-0fab-43dc-b30c-d918712367ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.daycare_editor
+  module:
+    - user
+id: user_add_role_action.daycare_editor
+label: 'Add the Daycare editor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: daycare_editor

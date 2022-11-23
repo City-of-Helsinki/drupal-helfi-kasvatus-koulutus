@@ -1,0 +1,14 @@
+uuid: 1371d4cb-d0fe-4b57-bf0b-13af408e766e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.playground_editor
+  module:
+    - user
+id: user_add_role_action.playground_editor
+label: 'Add the Playground editor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: playground_editor

@@ -4,15 +4,18 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.tpr_unit.vocational_school_card
+    - field.field.tpr_unit.tpr_unit.field_categories
     - field.field.tpr_unit.tpr_unit.field_content
     - field.field.tpr_unit.tpr_unit.field_hs_front_page
     - field.field.tpr_unit.tpr_unit.field_lower_content
     - field.field.tpr_unit.tpr_unit.field_metatags
     - field.field.tpr_unit.tpr_unit.field_study_field
     - field.field.tpr_unit.tpr_unit.field_unit_type
+    - responsive_image.styles.image__3_2
   module:
     - address
     - entity_reference_revisions
+    - helfi_address_search
     - helfi_tpr
     - imagecache_external
     - link
@@ -204,6 +207,7 @@ content:
     region: content
 hidden:
   created: true
+  field_categories: true
   field_hs_front_page: true
   field_study_field: true
   field_unit_type: true
