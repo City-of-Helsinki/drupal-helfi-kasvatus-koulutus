@@ -12,6 +12,10 @@ class UnitCategoryUtility {
   public const DAYCARE = 'daycare';
   public const COMPREHENSIVE_SCHOOL = 'comprehensive school';
   public const PLAYGROUND = 'playground';
+  public const FINNISH_BASIC_EDUCATION = 'basic education in Finnish';
+  public const SWEDISH_BASIC_EDUCATION = 'basic education in Swedish';
+  public const GRADES_1_6 = 'basic education for grades 1-6';
+  public const GRADES_7_9 = 'basic education for grades 7-9';
 
   /**
    * Map categories to ontologyword IDs.
@@ -31,6 +35,22 @@ class UnitCategoryUtility {
     ],
     self::PLAYGROUND => [
       475,
+    ],
+    self::FINNISH_BASIC_EDUCATION => [
+      661,
+      662,
+    ],
+    self::SWEDISH_BASIC_EDUCATION => [
+      601,
+      602,
+    ],
+    self::GRADES_1_6 => [
+      601,
+      661,
+    ],
+    self::GRADES_7_9 => [
+      602,
+      662,
     ],
   ];
 
