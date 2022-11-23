@@ -251,16 +251,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  ontologyword_ids:
-    type: readonly_field_widget
-    weight: 35
-    region: content
-    settings:
-      label: above
-      formatter_type: null
-      formatter_settings: {  }
-      show_description: false
-    third_party_settings: {  }
   path:
     type: path
     weight: 13
@@ -363,3 +353,4 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  ontologyword_ids: true
