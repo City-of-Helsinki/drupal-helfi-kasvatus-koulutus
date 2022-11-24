@@ -4,6 +4,8 @@ declare(strict_types = 1);
 
 namespace Drupal\helfi_kasko_content;
 
+use Drupal\helfi_tpr\Entity\TprEntityBase;
+
 /**
  * Contains helper functions for TPR Unit categories.
  */
@@ -71,6 +73,30 @@ class UnitCategoryUtility {
       }
     }
     return $categories;
+  }
+
+  /**
+   * Check if entity has the given category at the category field.
+   *
+   * @param \Drupal\helfi_tpr\Entity\TprEntityBase $entity
+   *   The entity.
+   * @param string $category
+   *   Category to check.
+   *
+   * @return bool
+   *   True if entity has the given category, false otherwise.
+   */
+  public static function entityHasCategory(TprEntityBase $entity, string $category) : bool {
+    if (!$entity->hasField('field_categories')) {
+      return FALSE;
+    }
+
+    foreach ($entity->get('field_categories')->getValue() as $categoryValue) {
+      if ($categoryValue['value'] === $category) {
+        return TRUE;
+      }
+    }
+    return FALSE;
   }
 
 }
