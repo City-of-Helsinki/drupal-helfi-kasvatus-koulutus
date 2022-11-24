@@ -11,7 +11,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *
  * @SearchApiProcessor(
  *   id = "search_api_exclude_items_from_index",
- *   label = @Translation("Exclude items from Search API index - TPR Units),
+ *   label = @Translation("Exclude items from Search API index - TPR Units"),
  *   description = @Translation("Excludes all but comprehensive school TPR units from being indexed."),
  *   stages = {
  *     "alter_items" = -50
