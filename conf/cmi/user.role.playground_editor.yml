@@ -1,4 +1,4 @@
-uuid: a8d1e5d9-788d-4346-a7e5-3a9f04c3fa81
+uuid: 0dd1314a-c73f-4e8a-bd38-f64530063132
 langcode: en
 status: true
 dependencies:
@@ -11,31 +11,30 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - media.type.soundcloud
-    - node.type.news_item
   module:
     - content_translation
     - editoria11y
     - file
     - filter
-    - group
+    - helfi_api_base
     - helfi_tpr
     - media
     - node
-    - publication_date
     - scheduler
     - system
-    - toolbar
-id: school_editor
-label: 'Upper secondary school editor'
-weight: -4
+id: playground_editor
+label: 'Playground editor'
+weight: -6
 is_admin: null
 permissions:
   - 'access content overview'
   - 'access files overview'
-  - 'access group overview'
   - 'access media overview'
-  - 'access toolbar'
+  - 'access remote entities overview'
+  - 'access tpr_service overview'
+  - 'access tpr_unit overview'
   - 'access user profiles'
+  - 'admin playground units'
   - 'cancel account'
   - 'change own username'
   - 'create file media'
@@ -58,11 +57,7 @@ permissions:
   - 'edit own image media'
   - 'edit own remote_video media'
   - 'edit own soundcloud media'
-  - 'override landing_page published option'
-  - 'override news_item published option'
-  - 'override page published option'
   - 'schedule publishing of nodes'
-  - 'set news_item published on date'
   - 'translate editable entities'
   - 'update media'
   - 'use text format full_html'

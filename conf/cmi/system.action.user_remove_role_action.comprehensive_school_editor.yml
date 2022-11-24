@@ -1,0 +1,14 @@
+uuid: a204632b-efcc-4111-83e5-4ea7dcfedef4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.comprehensive_school_editor
+  module:
+    - user
+id: user_remove_role_action.comprehensive_school_editor
+label: 'Remove the Comprehensive school editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: comprehensive_school_editor

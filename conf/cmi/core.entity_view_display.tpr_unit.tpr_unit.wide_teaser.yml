@@ -4,14 +4,17 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.tpr_unit.wide_teaser
+    - field.field.tpr_unit.tpr_unit.field_categories
     - field.field.tpr_unit.tpr_unit.field_content
     - field.field.tpr_unit.tpr_unit.field_hs_front_page
     - field.field.tpr_unit.tpr_unit.field_lower_content
     - field.field.tpr_unit.tpr_unit.field_metatags
     - field.field.tpr_unit.tpr_unit.field_study_field
     - field.field.tpr_unit.tpr_unit.field_unit_type
+    - responsive_image.styles.image__3_2
   module:
     - address
+    - helfi_address_search
     - helfi_tpr
     - imagecache_external
     - telephone
@@ -88,6 +91,7 @@ hidden:
   created: true
   description: true
   email: true
+  field_categories: true
   field_content: true
   field_hs_front_page: true
   field_lower_content: true
