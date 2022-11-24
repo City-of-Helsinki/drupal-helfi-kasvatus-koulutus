@@ -14,7 +14,7 @@ name: 'Comprehensive schools'
 description: ''
 read_only: false
 field_settings:
-  field_categories:
+  categories:
     label: Categories
     datasource_id: 'entity:tpr_unit'
     property_path: field_categories
@@ -22,6 +22,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.tpr_unit.field_categories
+  id:
+    label: ID
+    datasource_id: 'entity:tpr_unit'
+    property_path: id
+    type: string
+    dependencies:
+      module:
+        - helfi_tpr
   name:
     label: Name
     datasource_id: 'entity:tpr_unit'
@@ -49,6 +57,7 @@ datasource_settings:
 processor_settings:
   add_url: {  }
   aggregated_field: {  }
+  entity_status: {  }
   entity_type: {  }
   language_with_fallback: {  }
   rendered_item: {  }
