@@ -14,6 +14,14 @@ name: 'Comprehensive schools'
 description: ''
 read_only: false
 field_settings:
+  address_line1:
+    label: 'Address » The first line of the address block'
+    datasource_id: 'entity:tpr_unit'
+    property_path: 'address:address_line1'
+    type: string
+    dependencies:
+      module:
+        - helfi_tpr
   categories:
     label: Categories
     datasource_id: 'entity:tpr_unit'
@@ -22,6 +30,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.tpr_unit.field_categories
+  description:
+    label: Description
+    datasource_id: 'entity:tpr_unit'
+    property_path: description
+    type: string
+    dependencies:
+      module:
+        - helfi_tpr
   id:
     label: ID
     datasource_id: 'entity:tpr_unit'
@@ -34,6 +50,14 @@ field_settings:
     label: Name
     datasource_id: 'entity:tpr_unit'
     property_path: name
+    type: string
+    dependencies:
+      module:
+        - helfi_tpr
+  picture_url:
+    label: Picture
+    datasource_id: 'entity:tpr_unit'
+    property_path: picture_url
     type: string
     dependencies:
       module:
