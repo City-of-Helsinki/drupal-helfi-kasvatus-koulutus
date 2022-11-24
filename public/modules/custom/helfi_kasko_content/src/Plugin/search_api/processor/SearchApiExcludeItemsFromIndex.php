@@ -2,6 +2,7 @@
 
 namespace Drupal\helfi_kasko_content\Plugin\search_api\processor;
 
+use Drupal\helfi_kasko_content\UnitCategoryUtility;
 use Drupal\search_api\Plugin\PluginFormTrait;
 use Drupal\search_api\Processor\ProcessorPluginBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -38,17 +39,9 @@ class SearchApiExcludeItemsFromIndex extends ProcessorPluginBase {
   public function alterIndexedItems(array &$items) {
     /** @var \Drupal\search_api\Item\ItemInterface $item */
     foreach ($items as $item_id => $item) {
-      $object = $item->getOriginalObject()->getValue();
+      $unit = $item->getOriginalObject()->getValue();
 
-      $categories = $object->get('field_categories')->getValue();
-
-      $unit_categories = [];
-
-      foreach ($categories as $category) {
-        $unit_categories[] = $category['value'];
-      }
-
-      if (!in_array('comprehensive school', $unit_categories)) {
+      if (!UnitCategoryUtility::entityHasCategory($unit, UnitCategoryUtility::COMPREHENSIVE_SCHOOL)) {
         unset($items[$item_id]);
         continue;
       }
