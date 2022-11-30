@@ -21,14 +21,13 @@ dependencies:
     - helfi_tpr
     - media
     - node
-    - override_node_options
     - publication_date
     - scheduler
     - system
     - toolbar
 id: school_editor
-label: 'School editor'
-weight: -6
+label: 'Upper secondary school editor'
+weight: -4
 is_admin: null
 permissions:
   - 'access content overview'

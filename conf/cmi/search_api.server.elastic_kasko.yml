@@ -1,0 +1,14 @@
+uuid: e1c5dd15-1abe-4c47-8f18-214fbccf5aeb
+langcode: en
+status: true
+dependencies:
+  module:
+    - elasticsearch_connector
+id: elastic_kasko
+name: 'Elastic Kasko'
+description: ''
+backend: elasticsearch
+backend_config:
+  cluster_settings:
+    cluster: elastic_kasko
+  fuzziness: auto

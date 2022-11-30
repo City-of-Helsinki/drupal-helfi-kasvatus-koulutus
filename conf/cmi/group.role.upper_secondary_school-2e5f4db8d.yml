@@ -1,0 +1,17 @@
+uuid: 4569e698-e7d4-44db-83bc-332f4dcbda0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+  enforced:
+    config:
+      - user.role.comprehensive_school_editor
+id: upper_secondary_school-2e5f4db8d
+label: 'Comprehensive school editor'
+weight: 7
+internal: true
+audience: outsider
+group_type: upper_secondary_school
+permissions_ui: false
+permissions: {  }

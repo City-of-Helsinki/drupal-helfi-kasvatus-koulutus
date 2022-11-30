@@ -1,0 +1,20 @@
+uuid: b1e61bbf-6cb3-4451-acbc-624950250aeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tpr_unit.field_categories
+  module:
+    - helfi_tpr
+id: tpr_unit.tpr_unit.field_categories
+field_name: field_categories
+entity_type: tpr_unit
+bundle: tpr_unit
+label: Categories
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

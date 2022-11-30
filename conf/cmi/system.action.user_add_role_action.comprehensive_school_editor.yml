@@ -1,0 +1,14 @@
+uuid: c23cd6b5-1fde-40a8-aeec-96c914e8ff87
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.comprehensive_school_editor
+  module:
+    - user
+id: user_add_role_action.comprehensive_school_editor
+label: 'Add the Comprehensive school editor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: comprehensive_school_editor

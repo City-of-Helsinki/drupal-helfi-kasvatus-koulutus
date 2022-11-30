@@ -5,8 +5,42 @@
  * Contains alterations for content.
  */
 
+use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Language\LanguageInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\helfi_kasko_content\UnitCategoryUtility;
+
+/**
+ * Implements hook_ENTITY_TYPE_access().
+ */
+function helfi_kasko_content_tpr_unit_access(EntityInterface $entity, $operation, AccountInterface $account) : AccessResult {
+  /** @var \Drupal\helfi_tpr\Entity\Unit $entity */
+  // Allow users with special permissions to update specific TPR units.
+  if ($operation === 'update' && $entity->hasField('field_categories')) {
+    $unit_categories = [];
+    foreach ($entity->get('field_categories')->getValue() as $value) {
+      if (!empty($value['value'])) {
+        $unit_categories[] = $value['value'];
+      }
+    }
+
+    if (in_array(UnitCategoryUtility::DAYCARE, $unit_categories)) {
+      return AccessResult::allowedIfHasPermission($account, 'admin daycare units');
+    }
+
+    if (in_array(UnitCategoryUtility::COMPREHENSIVE_SCHOOL, $unit_categories)) {
+      return AccessResult::allowedIfHasPermission($account, 'admin comprehensive school units');
+    }
+
+    if (in_array(UnitCategoryUtility::PLAYGROUND, $unit_categories)) {
+      return AccessResult::allowedIfHasPermission($account, 'admin playground units');
+    }
+  }
+
+  return AccessResult::neutral();
+}
 
 /**
  * Implements hook_form_FORM_ID_alter().
