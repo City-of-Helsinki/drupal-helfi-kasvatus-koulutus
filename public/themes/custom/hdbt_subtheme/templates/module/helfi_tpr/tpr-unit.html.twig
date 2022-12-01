@@ -18,8 +18,14 @@
     {% endif %}
   {% endset %}
 
+  {% if view_mode == 'high_school_card' %}
+    {% set view_mode_class = 'card--high-school-teaser' %}
+  {% else %}
+    {% set view_mode_class = 'card--vocational-school-teaser' %}
+  {% endif %}
+
   {% embed '@hdbt/component/card.twig' with {
-    card_modifier_class: 'card--high-school-teaser',
+    card_modifier_class: view_mode_class,
     card_image: card_image,
     card_title: card_title,
     card_url: unit_url,
