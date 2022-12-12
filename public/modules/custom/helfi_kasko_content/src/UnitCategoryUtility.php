@@ -18,6 +18,11 @@ class UnitCategoryUtility {
   public const SWEDISH_BASIC_EDUCATION = 'basic education in Swedish';
   public const GRADES_1_6 = 'basic education for grades 1-6';
   public const GRADES_7_9 = 'basic education for grades 7-9';
+  public const DAYCARE_PART_TIME = 'part-time day care (child day care)';
+  public const DAYCARE_EVENING_CARE = 'evening care (child day care)';
+  public const DAYCARE_ROUND_THE_CLOCK = 'round-the-clock care (child day care)';
+  public const DAYCARE_LANGUAGE_IMMERSION_FI_SE = 'language immersion Finnish-Swedish (child day care)';
+  public const DAYCARE_PLAYGROUP_CLUBS = 'club activities (child day care play activities)';
 
   /**
    * Map categories to ontologyword IDs.
@@ -53,6 +58,21 @@ class UnitCategoryUtility {
     self::GRADES_7_9 => [
       602,
       662,
+    ],
+    self::DAYCARE_PART_TIME => [
+      489,
+    ],
+    self::DAYCARE_EVENING_CARE => [
+      200,
+    ],
+    self::DAYCARE_ROUND_THE_CLOCK => [
+      831,
+    ],
+    self::DAYCARE_LANGUAGE_IMMERSION_FI_SE => [
+      294,
+    ],
+    self::DAYCARE_PLAYGROUP_CLUBS => [
+      288,
     ],
   ];
 
