@@ -16,9 +16,20 @@ display:
         tpr_provided_languages:
           expose:
             label: 'Suodata päiväkodin toimintakielen mukaan'
-        daycare_options:
-          expose:
+        field_categories_value:
+          group_info:
             label: Lisävalinnat
+            group_items:
+              1:
+                title: Osapäiväryhmä
+              2:
+                title: Iltahoito
+              3:
+                title: 'Ympärivuorokautinen hoito'
+              4:
+                title: 'Kielikylpy suomi-ruotsi'
+              5:
+                title: Kerhot
       empty:
         area:
           content:
