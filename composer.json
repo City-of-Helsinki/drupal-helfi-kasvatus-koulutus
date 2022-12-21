@@ -29,7 +29,7 @@
         "drupal/raven": "^4.0",
         "drupal/redis": "^1.5",
         "drupal/stage_file_proxy": "^1.2",
-        "drush/drush": "^10.4"
+        "drush/drush": "^10.4 || ^11"
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
