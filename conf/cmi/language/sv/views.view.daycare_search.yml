@@ -14,9 +14,20 @@ display:
         tpr_provided_languages:
           expose:
             label: 'Filtrera efter språk'
-        daycare_options:
-          expose:
+        field_categories_value:
+          group_info:
             label: Alternativ
+            group_items:
+              1:
+                title: Halvdagsgrupp
+              2:
+                title: Kvällsvård
+              3:
+                title: 'Dygnet runt-vård'
+              4:
+                title: 'Språkbad finska-svenska'
+              5:
+                title: Klubbar
       exposed_form:
         options:
           submit_button: 'Sök daghem'
