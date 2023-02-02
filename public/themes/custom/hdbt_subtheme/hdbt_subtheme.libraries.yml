@@ -9,6 +9,7 @@ high-school-search:
   js:
     dist/js/high-school-search.min.js: { }
   dependencies:
+    - hdbt/tabs
     - core/drupal
 
 high-school-mobile-menu:
