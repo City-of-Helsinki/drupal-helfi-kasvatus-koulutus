@@ -1,0 +1,20 @@
+uuid: 8e2de366-e67e-4026-b9ad-9951af30bcf9
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: 9uolLTKIUim2fFfw-TdKiTsGrbGqMm39Hm6Th550A8Y
+id: paragraph.field_event_time
+field_name: field_event_time
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
