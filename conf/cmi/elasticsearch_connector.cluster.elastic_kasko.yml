@@ -2,8 +2,8 @@ uuid: 49404e73-70f3-4f7a-b447-c8d7271a0439
 langcode: en
 status: '1'
 dependencies: {  }
-cluster_id: elastic_kasko
-name: 'Elastic Kasko'
+cluster_id: kasko
+name: Kasko
 url: 'http://elastic:9200'
 options:
   multiple_nodes_connection: false
