@@ -23,6 +23,7 @@ dependencies:
     - paragraphs.paragraphs_type.phasing
     - paragraphs.paragraphs_type.popular_services
     - paragraphs.paragraphs_type.remote_video
+    - paragraphs.paragraphs_type.school_search
     - paragraphs.paragraphs_type.service_list
     - paragraphs.paragraphs_type.target_group_links
     - paragraphs.paragraphs_type.unit_search
@@ -53,20 +54,21 @@ settings:
       liftup_with_image: liftup_with_image
       map: map
       from_library: from_library
+      target_group_links: target_group_links
       chart: chart
       remote_video: remote_video
       unit_search: unit_search
+      event_list: event_list
+      news_list: news_list
       daycare_search: daycare_search
       high_school_search: high_school_search
       service_list: service_list
       group_news: group_news
+      popular_services: popular_services
       group_news_archive: group_news_archive
       vocational_school_search: vocational_school_search
-      event_list: event_list
       phasing: phasing
-      popular_services: popular_services
-      target_group_links: target_group_links
-      news_list: news_list
+      school_search: school_search
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -147,11 +149,17 @@ settings:
       phasing_item:
         weight: 30
         enabled: false
+      popular_service_item:
+        weight: 59
+        enabled: false
       popular_services:
         weight: 42
         enabled: true
       remote_video:
         weight: 27
+        enabled: true
+      school_search:
+        weight: 62
         enabled: true
       service_list:
         weight: 36

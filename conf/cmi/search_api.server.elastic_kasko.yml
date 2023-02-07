@@ -5,10 +5,10 @@ dependencies:
   module:
     - elasticsearch_connector
 id: elastic_kasko
-name: 'Elastic Kasko'
+name: 'Elastic kasko'
 description: ''
 backend: elasticsearch
 backend_config:
   cluster_settings:
-    cluster: elastic_kasko
+    cluster: kasko
   fuzziness: auto
