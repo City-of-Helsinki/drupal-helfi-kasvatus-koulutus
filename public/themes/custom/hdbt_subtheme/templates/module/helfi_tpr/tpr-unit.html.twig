@@ -1,99 +1,45 @@
 {% if view_mode == 'high_school_card' or view_mode == 'vocational_school_card' %}
 
+  {% set card_image %}
+    {% if content.picture_url_override|render %}
+      {{ content.picture_url_override }}
+    {% elseif content.picture_url|render %}
+      {{ content.picture_url }}
+    {% else %}
+      {% include "@hdbt/misc/image-placeholder.twig" ignore missing %}
+    {% endif %}
+  {% endset %}
+
+  {% set card_title %}
+    {% if high_school_front_page_title is not empty %}
+      {{ high_school_front_page_title }}
+    {% else %}
+      {{ entity.label }}
+    {% endif %}
+  {% endset %}
+
   {% if view_mode == 'high_school_card' %}
-    {% set view_mode_name = 'high-school' %}
+    {% set view_mode_class = 'card--high-school-teaser' %}
   {% else %}
-    {% set view_mode_name = 'vocational-school' %}
+    {% set view_mode_class = 'card--vocational-school-teaser' %}
   {% endif %}
 
-  {%
-    set classes = [
-    'unit',
-    'unit--' ~ view_mode_name ~ '-card'
-  ]
-  %}
-
-  {% set image_attributes = create_attribute() %}
-
-  {% if content.picture_url_override|render or content.picture_url|render %}
-    {% set has_image = TRUE %}
-  {% endif %}
-
-  {%
-    set picture_classes = [
-    'unit__image',
-    has_image ? 'unit__image--image' : 'unit__image--placeholder'
-  ]
-  %}
-
-  <div{{ attributes.addClass(classes) }}>
-  {% if view_mode == 'high_school_card' and high_school_front_page_nid is not empty %}
-    <a href="{{ url('entity.node.canonical', { 'node': high_school_front_page_nid }) }}" class="unit__link">
-  {% elseif view_mode == 'high_school_card' and content.www.0 is not empty %}
-    <a href="{{ content.www.0 }}" class="unit__link">
-  {% else %}
-    <a href="{{ url('entity.tpr_unit.canonical', { 'tpr_unit': entity.id() }) }}" class="unit__link">
-  {% endif %}
-      <div{{ image_attributes.addClass(picture_classes) }}>
-        {% if content.picture_url_override|render %}
-          {{ content.picture_url_override }}
-        {% elseif content.picture_url|render %}
-          {{ content.picture_url }}
-        {% else %}
-          {% include "@hdbt/misc/image-placeholder.twig" ignore missing %}
-        {% endif %}
-      </div>
-      <div class="unit__text">
-        <div class="unit__text__content">
-          <{{ unit_title_level|default('h3') }} class="unit__title">
-            {% if high_school_front_page_title is not empty %}
-              {{ high_school_front_page_title }}
-            {% else %}
-              {{ entity.label }}
-            {% endif %}
-          </{{ unit_title_level|default('h3') }}>
-          {% if content.address|render %}
-            <div class="unit__info-row unit__info-row--address">
-              {{ content.address }}
-            </div>
-          {% endif %}
-          {% if content.description_summary|render %}
-            <div class="unit__short-desc">
-              {{ content.description_summary }}
-            </div>
-          {% endif %}
-          <span class="unit__arrow">
-          {% include '@hdbt/misc/icon.twig' ignore missing with {icon: 'arrow-right'} %}
-        </span>
-        </div>
-      </div>
-    </a>
-  </div>
-
-{% elseif view_mode == 'minimal' %}
-
-  <div class="unit unit--minimal">
-    <a href="{{ url('entity.tpr_unit.canonical', { 'tpr_unit': entity.id() }) }}" class="unit__link">
-      <div class="unit__text">
-        <div class="unit__text__content">
-          <{{ unit_title_level|default('h3') }} class="unit__title">
-            {{ entity.label }}
-          </{{ unit_title_level|default('h3') }}>
-          <div class="unit__info">
-            {% if content.address|render %}
-              <div class="unit__info-row unit__info-row--address">
-                {{ content.address }}
-              </div>
-            {% endif %}
-            {{ content.distance }}
-          </div>
-        </div>
-        <div class="unit__read-more">
-          {% include '@hdbt/misc/icon.twig' ignore missing with {icon: 'arrow-right'} %}
-        </div>
-      </div>
-    </a>
-  </div>
+  {% embed '@hdbt/component/card.twig' with {
+    card_modifier_class: view_mode_class,
+    card_image: card_image,
+    card_title: card_title,
+    card_url: unit_url,
+    card_description: content.description_summary,
+    card_tags: card_tags,
+    card_metas: [
+      {
+        icon: 'location',
+        label: 'Address'|t,
+        content: content.address,
+      },
+    ],
+    } %}
+  {% endembed %}
 
 {% else %}
 
