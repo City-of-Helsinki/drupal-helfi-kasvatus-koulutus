@@ -1,4 +1,4 @@
-{% if view_mode == 'high_school_card' or view_mode == 'vocational_school_card' %}
+{% if view_mode == 'high_school_card' or view_mode == 'vocational_school_card' or view_mode == 'comprehensive_school_card' %}
 
   {% set card_image %}
     {% if content.picture_url_override|render %}
@@ -20,10 +20,13 @@
 
   {% if view_mode == 'high_school_card' %}
     {% set view_mode_class = 'card--high-school-teaser' %}
-  {% else %}
+  {% elseif view_mode == 'vocational_school_card' %}
     {% set view_mode_class = 'card--vocational-school-teaser' %}
+  {% else %}
+    {% set view_mode_class = 'card--comprehensive-school-teaser' %}
   {% endif %}
 
+  {% if view_mode == 'comprehensive_school_card' %}
   {% embed '@hdbt/component/card.twig' with {
     card_modifier_class: view_mode_class,
     card_image: card_image,
@@ -37,9 +40,32 @@
         label: 'Address'|t,
         content: content.address,
       },
+      {
+        icon: 'globe',
+        label: 'Language of instruction'|t,
+        content: content.provided_languages,
+      },
     ],
     } %}
   {% endembed %}
+  {% else %}
+    {% embed '@hdbt/component/card.twig' with {
+      card_modifier_class: view_mode_class,
+      card_image: card_image,
+      card_title: card_title,
+      card_url: unit_url,
+      card_description: content.description_summary,
+      card_tags: card_tags,
+      card_metas: [
+        {
+          icon: 'location',
+          label: 'Address'|t,
+          content: content.address,
+        },
+      ],
+    } %}
+    {% endembed %}
+  {% endif %}
 
 {% else %}
 
