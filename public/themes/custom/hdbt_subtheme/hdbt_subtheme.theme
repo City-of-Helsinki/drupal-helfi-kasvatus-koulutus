@@ -5,7 +5,6 @@
  * Functions to support theming in the HDBT Subtheme.
  */
 
-use Drupal\Component\Utility\UrlHelper;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Url;
 use Drupal\helfi_group\GroupUtility;
@@ -169,7 +168,8 @@ function hdbt_subtheme_preprocess_tpr_unit(&$variables) {
     $url = Url::fromRoute('entity.node.canonical', ['node' => $nid]);
     $variables['high_school_card_url'] = $url;
     $variables['high_school_front_page_title'] = $title;
-  } elseif (
+  }
+  elseif (
     $entity->hasField('field_hs_front_page') &&
     $entity->hasField('www') &&
     $entity->field_hs_front_page->isEmpty() &&
@@ -184,7 +184,8 @@ function hdbt_subtheme_preprocess_tpr_unit(&$variables) {
     $resolver = \Drupal::service('helfi_api_base.internal_domain_resolver');
     $variables['high_school_card_url_external'] = $resolver->isExternal($url);
     $variables['high_school_card_url'] = $url;
-  } else {
+  }
+  else {
     $variables['high_school_card_url'] = !$entity->isNew() ? $entity->toUrl('canonical') : NULL;
   }
 }
