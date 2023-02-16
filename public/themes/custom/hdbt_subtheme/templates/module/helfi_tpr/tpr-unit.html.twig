@@ -20,8 +20,14 @@
 
   {% if view_mode == 'high_school_card' %}
     {% set view_mode_class = 'card--high-school-teaser' %}
+    {% set unit_url = high_school_card_url %}
+    {% set unit_url_external = false %}
+    {% if high_school_card_url_external %}
+      {% set unit_url_external = true %}
+    {% endif %}
   {% else %}
     {% set view_mode_class = 'card--vocational-school-teaser' %}
+    {% set unit_url_external = false %}
   {% endif %}
 
   {% embed '@hdbt/component/card.twig' with {
@@ -29,6 +35,7 @@
     card_image: card_image,
     card_title: card_title,
     card_url: unit_url,
+    card_url_external: unit_url_external,
     card_description: content.description_summary,
     card_tags: card_tags,
     card_metas: [
