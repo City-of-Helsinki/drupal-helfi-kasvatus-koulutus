@@ -7,7 +7,6 @@ dependencies:
     - helfi_api_base
     - linkit
     - media
-    - token_filter
 _core:
   default_config_hash: sT1EGRgQu01VxKkqehd1pxPfnzNMU02el719MOliiho
 name: HTML
@@ -49,13 +48,6 @@ filters:
     weight: -48
     settings:
       title: true
-  token_filter:
-    id: token_filter
-    provider: token_filter
-    status: true
-    weight: -47
-    settings:
-      replace_empty: '1'
   media_embed:
     id: media_embed
     provider: media
