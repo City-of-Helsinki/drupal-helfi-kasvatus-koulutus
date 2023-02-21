@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Url;
 use Drupal\helfi_group\GroupUtility;
 use Drupal\helfi_tpr\Entity\Unit;
 use Drupal\node\Entity\Node;
@@ -164,8 +165,28 @@ function hdbt_subtheme_preprocess_tpr_unit(&$variables) {
   ) {
     $nid = $entity->field_hs_front_page->entity->id();
     $title = $entity->field_hs_front_page->entity->getTitle();
-    $variables['high_school_front_page_nid'] = $nid;
+    $url = Url::fromRoute('entity.node.canonical', ['node' => $nid]);
+    $variables['high_school_card_url'] = $url;
     $variables['high_school_front_page_title'] = $title;
+  }
+  elseif (
+    $entity->hasField('field_hs_front_page') &&
+    $entity->hasField('www') &&
+    $entity->field_hs_front_page->isEmpty() &&
+    !$entity->www->isEmpty()
+  ) {
+    $uri = $entity->get('www')->first()->getValue()['uri'];
+    $url = Url::fromUri($uri);
+
+    // Check if current link is external (not whitelisted) and
+    // set data attributes accordingly.
+    /** @var \Drupal\helfi_api_base\Link\InternalDomainResolver $resolver */
+    $resolver = \Drupal::service('helfi_api_base.internal_domain_resolver');
+    $variables['high_school_card_url_external'] = $resolver->isExternal($url);
+    $variables['high_school_card_url'] = $url;
+  }
+  else {
+    $variables['high_school_card_url'] = !$entity->isNew() ? $entity->toUrl('canonical') : NULL;
   }
 }
 

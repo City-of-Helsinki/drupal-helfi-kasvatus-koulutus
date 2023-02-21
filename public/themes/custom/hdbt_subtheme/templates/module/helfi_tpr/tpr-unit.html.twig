@@ -20,40 +20,49 @@
 
   {% if view_mode == 'high_school_card' %}
     {% set view_mode_class = 'card--high-school-teaser' %}
+    {% set unit_url = high_school_card_url %}
+    {% set unit_url_external = false %}
+    {% if high_school_card_url_external %}
+      {% set unit_url_external = true %}
+    {% endif %}
   {% elseif view_mode == 'vocational_school_card' %}
     {% set view_mode_class = 'card--vocational-school-teaser' %}
+    {% set unit_url_external = false %}
   {% else %}
     {% set view_mode_class = 'card--comprehensive-school-teaser' %}
+    {% set unit_url_external = false %}
   {% endif %}
 
   {% if view_mode == 'comprehensive_school_card' %}
-  {% embed '@hdbt/component/card.twig' with {
-    card_modifier_class: view_mode_class,
-    card_image: card_image,
-    card_title: card_title,
-    card_url: unit_url,
-    card_description: content.description_summary,
-    card_tags: card_tags,
-    card_metas: [
-      {
-        icon: 'location',
-        label: 'Address'|t,
-        content: content.address,
-      },
-      {
-        icon: 'globe',
-        label: 'Language of instruction'|t,
-        content: content.provided_languages,
-      },
-    ],
-    } %}
-  {% endembed %}
+    {% embed '@hdbt/component/card.twig' with {
+      card_modifier_class: view_mode_class,
+      card_image: card_image,
+      card_title: card_title,
+      card_url: unit_url,
+      card_url_external: unit_url_external,
+      card_description: content.description_summary,
+      card_tags: card_tags,
+      card_metas: [
+        {
+          icon: 'location',
+          label: 'Address'|t,
+          content: content.address,
+        },
+        {
+          icon: 'globe',
+          label: 'Language of instruction'|t,
+          content: content.provided_languages,
+        },
+      ],
+      } %}
+    {% endembed %}
   {% else %}
     {% embed '@hdbt/component/card.twig' with {
       card_modifier_class: view_mode_class,
       card_image: card_image,
       card_title: card_title,
       card_url: unit_url,
+      card_url_external: unit_url_external,
       card_description: content.description_summary,
       card_tags: card_tags,
       card_metas: [
