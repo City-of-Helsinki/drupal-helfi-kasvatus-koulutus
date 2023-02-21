@@ -1,4 +1,4 @@
-{% if view_mode == 'high_school_card' or view_mode == 'vocational_school_card' %}
+{% if view_mode == 'high_school_card' or view_mode == 'vocational_school_card' or view_mode == 'comprehensive_school_card' %}
 
   {% set card_image %}
     {% if content.picture_url_override|render %}
@@ -25,28 +25,56 @@
     {% if high_school_card_url_external %}
       {% set unit_url_external = true %}
     {% endif %}
-  {% else %}
+  {% elseif view_mode == 'vocational_school_card' %}
     {% set view_mode_class = 'card--vocational-school-teaser' %}
+    {% set unit_url_external = false %}
+  {% else %}
+    {% set view_mode_class = 'card--comprehensive-school-teaser' %}
     {% set unit_url_external = false %}
   {% endif %}
 
-  {% embed '@hdbt/component/card.twig' with {
-    card_modifier_class: view_mode_class,
-    card_image: card_image,
-    card_title: card_title,
-    card_url: unit_url,
-    card_url_external: unit_url_external,
-    card_description: content.description_summary,
-    card_tags: card_tags,
-    card_metas: [
-      {
-        icon: 'location',
-        label: 'Address'|t,
-        content: content.address,
-      },
-    ],
+  {% if view_mode == 'comprehensive_school_card' %}
+    {% embed '@hdbt/component/card.twig' with {
+      card_modifier_class: view_mode_class,
+      card_image: card_image,
+      card_title: card_title,
+      card_url: unit_url,
+      card_url_external: unit_url_external,
+      card_description: content.description_summary,
+      card_tags: card_tags,
+      card_metas: [
+        {
+          icon: 'location',
+          label: 'Address'|t,
+          content: content.address,
+        },
+        {
+          icon: 'globe',
+          label: 'Language of instruction'|t,
+          content: content.provided_languages,
+        },
+      ],
+      } %}
+    {% endembed %}
+  {% else %}
+    {% embed '@hdbt/component/card.twig' with {
+      card_modifier_class: view_mode_class,
+      card_image: card_image,
+      card_title: card_title,
+      card_url: unit_url,
+      card_url_external: unit_url_external,
+      card_description: content.description_summary,
+      card_tags: card_tags,
+      card_metas: [
+        {
+          icon: 'location',
+          label: 'Address'|t,
+          content: content.address,
+        },
+      ],
     } %}
-  {% endembed %}
+    {% endembed %}
+  {% endif %}
 
 {% else %}
 
