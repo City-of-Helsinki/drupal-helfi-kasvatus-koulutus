@@ -1,13 +1,11 @@
-uuid: 62a2ae6d-a3c2-4015-afea-44649802a0cf
+uuid: 281a0fcf-5a65-4a81-86b9-765c3f41213f
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: 9P94Pn1REctF0uFncki94r1jZMXy3RDNJuBNHXYpnk0
-id: paragraph.field_service_list_meta_load_mor
-field_name: field_service_list_meta_load_mor
+id: paragraph.field_comp_search_title
+field_name: field_comp_search_title
 entity_type: paragraph
 type: string
 settings:

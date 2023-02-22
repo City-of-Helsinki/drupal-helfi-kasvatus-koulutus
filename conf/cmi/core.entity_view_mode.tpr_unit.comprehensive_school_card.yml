@@ -1,0 +1,10 @@
+uuid: fa5703e6-66c5-4e6a-8149-38dcb2bc431a
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+id: tpr_unit.comprehensive_school_card
+label: 'Comprehensive school card'
+targetEntityType: tpr_unit
+cache: true

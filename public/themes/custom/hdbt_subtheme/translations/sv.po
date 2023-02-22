@@ -31,3 +31,76 @@ msgstr[1] "enheter"
 msgctxt "Group news archive link"
 msgid "All news"
 msgstr "Alla nyheter"
+
+msgid "Language of instruction"
+msgstr "Undervisningsspråk"
+
+msgctxt "Language of instruction"
+msgid "Spanish"
+msgstr "spanska"
+
+msgctxt "Language of instruction"
+msgid "Estonian"
+msgstr "estniska"
+
+msgctxt "Language of instruction"
+msgid "Persian"
+msgstr "persiska"
+
+msgctxt "Language of instruction"
+msgid "Arabic"
+msgstr "arabiska"
+
+msgctxt "Language of instruction"
+msgid "Finnish"
+msgstr "finska"
+
+msgctxt "Language of instruction"
+msgid "English"
+msgstr "engelska"
+
+msgctxt "Language of instruction"
+msgid "Swedish"
+msgstr "svenska"
+
+msgctxt "Language of instruction"
+msgid "Hebrew"
+msgstr "hebreiska"
+
+msgctxt "Language of instruction"
+msgid "French"
+msgstr "franska"
+
+msgctxt "Language of instruction"
+msgid "German"
+msgstr "tyska"
+
+msgctxt "Language of instruction"
+msgid "Japanese"
+msgstr "japanska"
+
+msgctxt "Language of instruction"
+msgid "Portuguese"
+msgstr "portugisiska"
+
+msgctxt "Language of instruction"
+msgid "Russian"
+msgstr "ryska"
+
+msgctxt "Language of instruction"
+msgid "Sami"
+msgstr "sami"
+
+msgctxt "Language of instruction"
+msgid "Ukrainian"
+msgstr "ukrainska"
+
+msgctxt "Language of instruction"
+msgid "Chinese"
+msgstr "kinesiska"
+
+msgctxt "Comprehensive school search count"
+msgid "school"
+msgid_plural "schools"
+msgstr[0] "skola"
+msgstr[1] "skolor"

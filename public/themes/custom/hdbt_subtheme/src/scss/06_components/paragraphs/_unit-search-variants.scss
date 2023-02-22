@@ -146,3 +146,13 @@ $card_spacing: $spacing-and-half;
 .component ~ .component--daycare-search {
   margin-top: 0;
 }
+
+.comprehensive-school__instruction-language {
+  &::after {
+    content: ', ';
+  }
+
+  &:last-child::after {
+    content: '';
+  }
+}

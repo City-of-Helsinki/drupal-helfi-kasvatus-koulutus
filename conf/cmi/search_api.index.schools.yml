@@ -21,6 +21,18 @@ field_settings:
     dependencies:
       module:
         - helfi_tpr
+  coordinates:
+    label: Coordinates
+    property_path: coordinates
+    type: object
+  id:
+    label: ID
+    datasource_id: 'entity:tpr_unit'
+    property_path: id
+    type: string
+    dependencies:
+      module:
+        - helfi_tpr
   media_as_objects:
     label: 'Media objects'
     property_path: media_as_objects
@@ -71,6 +83,7 @@ datasource_settings:
 processor_settings:
   add_url: {  }
   aggregated_field: {  }
+  coordinates: {  }
   entity_type: {  }
   is_school: {  }
   language_with_fallback: {  }
