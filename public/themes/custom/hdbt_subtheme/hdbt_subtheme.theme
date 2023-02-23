@@ -287,3 +287,38 @@ function hdbt_subtheme_preprocess_views_view(&$variables) {
     $variables['unit_ids'] = $unit_ids;
   }
 }
+
+/**
+ * Implements template_preprocess_field().
+ */
+function hdbt_subtheme_preprocess_field(&$variables) {
+  if ($variables['field_name'] !== 'provided_languages') {
+    return;
+  }
+
+  $language_map = [
+    'ar' => t('Arabic', [], ['context' => 'Language of instruction']),
+    'de' => t('German', [], ['context' => 'Language of instruction']),
+    'en' => t('English', [], ['context' => 'Language of instruction']),
+    'es' => t('Spanish', [], ['context' => 'Language of instruction']),
+    'et' => t('Estonian', [], ['context' => 'Language of instruction']),
+    'fa' => t('Persian', [], ['context' => 'Language of instruction']),
+    'fi' => t('Finnish', [], ['context' => 'Language of instruction']),
+    'fr' => t('French', [], ['context' => 'Language of instruction']),
+    'he' => t('Hebrew', [], ['context' => 'Language of instruction']),
+    'ja' => t('Japanese', [], ['context' => 'Language of instruction']),
+    'pt' => t('Portuguese', [], ['context' => 'Language of instruction']),
+    'ru' => t('Russian', [], ['context' => 'Language of instruction']),
+    'se' => t('Sami', [], ['context' => 'Language of instruction']),
+    'sv' => t('Swedish', [], ['context' => 'Language of instruction']),
+    'uk' => t('Ukrainian', [], ['context' => 'Language of instruction']),
+    'zh' => t('Chinese', [], ['context' => 'Language of instruction']),
+  ];
+
+  foreach ($variables['items'] as $delta => &$item) {
+    $value = &$item['content']['#context']['value'];
+    if (array_key_exists($value, $language_map)) {
+      $value = $language_map[$value];
+    }
+  }
+}

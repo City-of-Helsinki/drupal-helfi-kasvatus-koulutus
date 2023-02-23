@@ -2,12 +2,17 @@ uuid: bb9feb29-3e2f-429f-8f0a-5bef22cc3c4c
 langcode: en
 status: true
 dependencies:
+  config:
+    - rest.resource.helfi_global_mobile_menu
+    - rest.resource.helfi_global_mobile_menu
   module:
     - eu_cookie_compliance
     - helfi_api_base
     - helfi_tpr
     - media
     - system
+    - rest
+    - rest
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
@@ -21,3 +26,5 @@ permissions:
   - 'view remote entities'
   - 'view tpr_service'
   - 'view tpr_unit'
+  - 'restful get helfi_global_mobile_menu'
+  - 'restful get helfi_global_mobile_menu'
