@@ -1,9 +1,9 @@
-label: Grundskola sök
+label: 'Grundskola sök'
 display:
   default:
     display_title: Förvald
     display_options:
-      title: Grundskola sök
+      title: 'Grundskola sök'
       pager:
         options:
           tags:
