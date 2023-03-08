@@ -41,7 +41,7 @@ field_settings:
     label: Name
     datasource_id: 'entity:tpr_unit'
     property_path: name
-    type: string
+    type: text
     dependencies:
       module:
         - helfi_tpr
