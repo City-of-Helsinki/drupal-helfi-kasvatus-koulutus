@@ -7,12 +7,17 @@ dependencies:
   module:
     - helfi_tpr
     - search_api
+    - helfi_kasko_content
     - helfi_react_search
 id: schools
 name: Schools
 description: ''
 read_only: false
 field_settings:
+  additional_filters:
+    label: 'Extra filters data'
+    property_path: additional_filters
+    type: object
   address:
     label: 'Address » The first line of the address block'
     datasource_id: 'entity:tpr_unit'
@@ -94,6 +99,7 @@ processor_settings:
   coordinates: {  }
   entity_status: {  }
   entity_type: {  }
+  helfi_kasko_content_additional_filters: {  }
   is_school: {  }
   language_with_fallback: {  }
   media_reference_to_object:
