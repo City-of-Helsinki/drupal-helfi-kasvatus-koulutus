@@ -4,20 +4,18 @@ status: true
 dependencies:
   config:
     - rest.resource.helfi_global_mobile_menu
-    - rest.resource.helfi_global_mobile_menu
   module:
     - eu_cookie_compliance
     - helfi_api_base
     - helfi_tpr
     - media
+    - rest
     - system
     - toolbar
-    - rest
-    - rest
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
-label: 'Authenticated user'
+label: 'Sisäänkirjautunut käyttäjä'
 weight: -9
 is_admin: false
 permissions:

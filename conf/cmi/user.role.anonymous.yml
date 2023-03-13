@@ -4,19 +4,17 @@ status: true
 dependencies:
   config:
     - rest.resource.helfi_global_mobile_menu
-    - rest.resource.helfi_global_mobile_menu
   module:
     - eu_cookie_compliance
     - helfi_api_base
     - helfi_tpr
     - media
+    - rest
     - system
-    - rest
-    - rest
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
-label: 'Anonymous user'
+label: 'Anonyymi käyttäjä'
 weight: -10
 is_admin: false
 permissions:
