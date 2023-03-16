@@ -2274,16 +2274,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.5.4",
+            "version": "9.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "d48ad3173a39d6792e617f884fefe86c4bf41630"
+                "reference": "eae5e76a8b403cbd42b3465f567313b52d78b0dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/d48ad3173a39d6792e617f884fefe86c4bf41630",
-                "reference": "d48ad3173a39d6792e617f884fefe86c4bf41630",
+                "url": "https://api.github.com/repos/drupal/core/zipball/eae5e76a8b403cbd42b3465f567313b52d78b0dc",
+                "reference": "eae5e76a8b403cbd42b3465f567313b52d78b0dc",
                 "shasum": ""
             },
             "require": {
@@ -2435,9 +2435,9 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.5.4"
+                "source": "https://github.com/drupal/core/tree/9.5.5"
             },
-            "time": "2023-03-01T14:08:11+00:00"
+            "time": "2023-03-15T14:30:25+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -4471,16 +4471,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "2.18.1",
+            "version": "2.18.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "8e6c06b73770b589b67b46b18780a74c6666dbc3"
+                "reference": "5deed4c697edfc1953b979c9b979de8d72687262"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/8e6c06b73770b589b67b46b18780a74c6666dbc3",
-                "reference": "8e6c06b73770b589b67b46b18780a74c6666dbc3",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/5deed4c697edfc1953b979c9b979de8d72687262",
+                "reference": "5deed4c697edfc1953b979c9b979de8d72687262",
                 "shasum": ""
             },
             "require": {
@@ -4512,7 +4512,7 @@
                 "drupal/image_style_quality": "^1.4",
                 "drupal/imagecache_external": "^3.0",
                 "drupal/imagemagick": "^3.4",
-                "drupal/linkit": "6.0.0-beta3",
+                "drupal/linkit": "^6.0",
                 "drupal/matomo": "^1.11",
                 "drupal/matomo_reports": "^1.1",
                 "drupal/media_entity_file_replace": "^1.0",
@@ -4577,7 +4577,7 @@
                         "[#UHF-2059] Enhancements for the Admin UI": "https://raw.githubusercontent.com/City-of-Helsinki/drupal-helfi-platform-config/fdccb32397cc6fa19b4d0077b21a2b18aa6be297/patches/helfi_customizations_for_paragraphs_widget_8.x-1.12.patch"
                     },
                     "drupal/linkit": {
-                        "[#UHF-1872] Linkit support for link field (https://www.drupal.org/i/2712951)": "https://www.drupal.org/files/issues/2021-08-20/avoid-linkit-CI-issue.patch"
+                        "[#UHF-1872] Linkit support for link field (https://www.drupal.org/i/2712951)": "https://www.drupal.org/files/issues/2023-03-07/2712951_329.6.x.diff"
                     },
                     "drupal/field_group": {
                         "[#UHF-3268] Support for field group translations": "https://raw.githubusercontent.com/City-of-Helsinki/drupal-helfi-platform-config/736077493b73d83b63081820790dc68e226a6460/patches/field_group_fix-translations_label_description-3111107-31-rerolled.patch"
@@ -4592,23 +4592,23 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/2.18.1",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/2.18.4",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2023-03-09T09:35:59+00:00"
+            "time": "2023-03-16T08:12:10+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
-            "version": "3.0.3",
+            "version": "3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-proxy.git",
-                "reference": "625d1baf0df705d96bd8b59fb9e6a6166dbcee77"
+                "reference": "f5125c5569c04781730d1420f0d1886ba1096c1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-proxy/zipball/625d1baf0df705d96bd8b59fb9e6a6166dbcee77",
-                "reference": "625d1baf0df705d96bd8b59fb9e6a6166dbcee77",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-proxy/zipball/f5125c5569c04781730d1420f0d1886ba1096c1f",
+                "reference": "f5125c5569c04781730d1420f0d1886ba1096c1f",
                 "shasum": ""
             },
             "require": {
@@ -4634,10 +4634,10 @@
             ],
             "description": "Provides various fixes so we can serve multiple Drupal instances in one domain.",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-proxy/tree/3.0.3",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-proxy/tree/3.0.4",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-proxy/issues"
             },
-            "time": "2023-02-28T07:10:49+00:00"
+            "time": "2023-03-14T06:27:48+00:00"
         },
         {
             "name": "drupal/helfi_tpr",
@@ -5167,29 +5167,30 @@
         },
         {
             "name": "drupal/linkit",
-            "version": "6.0.0-beta3",
+            "version": "6.0.0-beta4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/linkit.git",
-                "reference": "6.0.0-beta3"
+                "reference": "6.0.0-beta4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/linkit-6.0.0-beta3.zip",
-                "reference": "6.0.0-beta3",
-                "shasum": "39a5bf54cbc88324d788a573df7b3fecf7622065"
+                "url": "https://ftp.drupal.org/files/projects/linkit-6.0.0-beta4.zip",
+                "reference": "6.0.0-beta4",
+                "shasum": "94274f0af2315ca91d9be8fc4e5103c9566860f0"
             },
             "require": {
-                "drupal/core": "^8.7.7 || ^9"
+                "drupal/core": "^9.4 || ^10"
             },
             "require-dev": {
+                "drupal/ckeditor": "*",
                 "drupal/imce": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.0.0-beta3",
-                    "datestamp": "1632946984",
+                    "version": "6.0.0-beta4",
+                    "datestamp": "1678030708",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."

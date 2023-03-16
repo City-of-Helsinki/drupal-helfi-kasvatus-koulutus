@@ -1,4 +1,4 @@
-uuid: null
+uuid: d3972f4b-2c2c-4814-b403-012fdbb4f726
 langcode: en
 status: true
 dependencies:
@@ -33,4 +33,3 @@ content:
 hidden:
   field_service_list_service_ids: true
   field_service_list_services: true
-  search_api_excerpt: true
