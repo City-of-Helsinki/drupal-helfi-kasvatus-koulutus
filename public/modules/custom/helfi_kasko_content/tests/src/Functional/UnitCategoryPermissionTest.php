@@ -22,6 +22,7 @@ class UnitCategoryPermissionTest extends MigrationTestBase {
    */
   protected static $modules = [
     'helfi_kasko_content',
+    'options',
   ];
 
   /**
