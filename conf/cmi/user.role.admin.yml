@@ -172,6 +172,7 @@ permissions:
   - 'edit terms in keywords'
   - 'edit terms in news_tags'
   - 'edit terms in vocational_studies'
+  - 'mark as hidden in editoria11y'
   - 'revert all revisions'
   - 'revert all tpr_service revisions'
   - 'revert all tpr_unit revisions'

@@ -57,6 +57,7 @@ hidden:
   email: true
   field_categories: true
   field_content: true
+  field_districts: true
   field_hs_front_page: true
   field_lower_content: true
   field_metatags: true
