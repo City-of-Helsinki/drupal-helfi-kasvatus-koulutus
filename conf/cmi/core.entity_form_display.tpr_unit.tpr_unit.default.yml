@@ -155,7 +155,7 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
-    third_party_settings: { }
+    third_party_settings: {  }
   field_lower_content:
     type: paragraphs
     weight: 28
@@ -191,7 +191,7 @@ content:
       autocomplete: false
       match_operator: CONTAINS
       match_limit: 10
-    third_party_settings: { }
+    third_party_settings: {  }
   field_unit_type:
     type: entity_reference_autocomplete
     weight: 28
