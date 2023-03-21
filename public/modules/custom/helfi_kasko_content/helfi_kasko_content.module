@@ -11,6 +11,7 @@ use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\helfi_kasko_content\UnitCategoryUtility;
+use Drupal\paragraphs\ParagraphInterface;
 
 /**
  * Implements hook_ENTITY_TYPE_access().
@@ -76,69 +77,75 @@ function helfi_kasko_content_form_views_exposed_form_alter(&$form, $form_state) 
  * Implements hook_preprocess_HOOK().
  */
 function helfi_kasko_content_preprocess_block(&$variables) {
-  if ($variables["plugin_id"] !== 'hero_block') {
+  if ($variables['plugin_id'] !== 'hero_block') {
     return;
   }
 
   // Get current entity and entity version.
-  $entity_matcher = \Drupal::service('hdbt_content.entity_version_matcher')->getType();
+  $entity_matcher = \Drupal::service('helfi_platform_config.entity_version_matcher')->getType();
 
   /** @var \Drupal\Core\Entity\ContentEntityInterface $entity */
   $entity = $entity_matcher['entity'];
-  $entity_version = $entity_matcher['entity_version'];
 
-  // No need to continue if current entity doesn't have has_hero field.
+  // No need to continue if current entity doesn't have hero set.
   if (
     !$entity instanceof ContentEntityInterface ||
-    !$entity->hasField('field_has_hero')
+    !$entity->hasField('field_has_hero') ||
+    !(bool) $entity->get('field_has_hero')->value ||
+    $entity->get('field_content')->isEmpty()
   ) {
     return;
   }
+  $paragraph = $entity->get('field_content')->first()->get('entity')->getValue();
 
-  if ((bool) $entity->get('field_has_hero')->value) {
+  if (
+    empty($paragraph) ||
+    !in_array($entity->getType(), ['landing_page', 'page']) ||
+    !$paragraph instanceof ParagraphInterface
+  ) {
+    return;
+  }
+  $first_paragraph_gray = &$variables['content']['hero_block']['#first_paragraph_grey'];
+
+  // Check if the content field first paragraph is High school search
+  // and add classes accordingly.
+  if ($paragraph->getType() === 'high_school_search') {
+    $first_paragraph_gray = 'has-first-gray-bg-block';
+
+    // If lead_in field has value, unset 1st gray paragraph class.
     if (
-      in_array($entity->getType(), ['landing_page', 'page']) &&
-      isset($entity->get('field_content')->first()->entity)
+      $entity->hasField('field_lead_in') &&
+      !$entity->field_lead_in->isEmpty()
     ) {
+      $first_paragraph_gray = '';
+      return;
+    }
 
-      $first_paragraph_gray = &$variables['content']['hero_block']['#first_paragraph_grey'];
+    // If table of contents is enabled, unset 1st gray paragraph class.
+    if (
+      $entity->hasField('toc_enabled') &&
+      $entity->toc_enabled->value == TRUE
+    ) {
+      $first_paragraph_gray = '';
+      return;
+    }
 
-      // Check if the content field first paragraph is High school search
-      // and add classes accordingly.
-      $paragraph = $entity->get('field_content')->first()->entity;
-      if (!empty($paragraph) && $paragraph->getType() === 'high_school_search') {
-        $first_paragraph_gray = 'has-first-gray-bg-block';
+    // Special cases if the node type is page.
+    if ($entity->getType() === 'page') {
+      // Load menu links for the current page entity.
+      $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
+      $menu_links = $menu_link_manager->loadLinksByRoute(
+        "entity.{$entity->getEntityTypeId()}.canonical",
+        [$entity->getEntityTypeId() => $entity->id()]
+      );
 
-        // If lead_in field has value, unset 1st gray paragraph class.
-        if ($entity->hasField('field_lead_in') && !$entity->field_lead_in->isEmpty()) {
-          $first_paragraph_gray = '';
-          return;
-        }
+      // If the page is in navigation set a different value for 1st gray
+      // paragraph class.
+      if (!empty($menu_links) && is_array($menu_links)) {
+        $menu_Link = reset($menu_links);
 
-        // If table of contents is enabled, unset 1st gray paragraph class.
-        if ($entity->hasField('toc_enabled') && $entity->toc_enabled->value == TRUE) {
-          $first_paragraph_gray = '';
-          return;
-        }
-
-        // Special cases if the node type is page.
-        if ($entity->getType() === 'page') {
-          // Load menu links for the current page entity.
-          $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
-          $menu_links = $menu_link_manager->loadLinksByRoute(
-            "entity.{$entity->getEntityTypeId()}.canonical",
-            [$entity->getEntityTypeId() => $entity->id()]
-          );
-
-          // If the page is in navigation set a different value for 1st gray
-          // paragraph class.
-          if (!empty($menu_links) && is_array($menu_links)) {
-            $menu_Link = reset($menu_links);
-
-            if ($menu_Link->isEnabled()) {
-              $first_paragraph_gray = 'has-first-gray-bg-block--desktop';
-            }
-          }
+        if ($menu_Link->isEnabled()) {
+          $first_paragraph_gray = 'has-first-gray-bg-block--desktop';
         }
       }
     }
