@@ -12,8 +12,12 @@ dependencies:
     - media.type.remote_video
     - node.type.announcement
     - node.type.landing_page
+    - node.type.news_item
     - node.type.page
     - taxonomy.vocabulary.keywords
+    - taxonomy.vocabulary.news_group
+    - taxonomy.vocabulary.news_neighbourhoods
+    - taxonomy.vocabulary.news_tags
     - taxonomy.vocabulary.vocational_studies
   module:
     - content_translation
@@ -71,6 +75,7 @@ permissions:
   - 'create image media'
   - 'create landing_page content'
   - 'create media'
+  - 'create news_item content'
   - 'create page content'
   - 'create paragraph library item'
   - 'create remote entities'
@@ -87,17 +92,20 @@ permissions:
   - 'delete any image media'
   - 'delete any landing_page content'
   - 'delete any media'
+  - 'delete any news_item content'
   - 'delete any page content'
   - 'delete any remote_video media'
   - 'delete content translations'
   - 'delete landing_page revisions'
   - 'delete media'
+  - 'delete news_item revisions'
   - 'delete own announcement content'
   - 'delete own file media'
   - 'delete own hel_map media'
   - 'delete own helfi_chart media'
   - 'delete own image media'
   - 'delete own landing_page content'
+  - 'delete own news_item content'
   - 'delete own page content'
   - 'delete own remote_video media'
   - 'delete page revisions'
@@ -110,6 +118,7 @@ permissions:
   - 'edit any helfi_chart media'
   - 'edit any image media'
   - 'edit any landing_page content'
+  - 'edit any news_item content'
   - 'edit any page content'
   - 'edit any remote_video media'
   - 'edit own announcement content'
@@ -118,6 +127,7 @@ permissions:
   - 'edit own helfi_chart media'
   - 'edit own image media'
   - 'edit own landing_page content'
+  - 'edit own news_item content'
   - 'edit own page content'
   - 'edit own remote_video media'
   - 'edit paragraph library item'
@@ -129,10 +139,12 @@ permissions:
   - 'revert all tpr_unit revisions'
   - 'revert announcement revisions'
   - 'revert landing_page revisions'
+  - 'revert news_item revisions'
   - 'revert page revisions'
   - 'schedule publishing of nodes'
   - 'set announcement published on date'
   - 'set landing_page published on date'
+  - 'set news_item published on date'
   - 'set page published on date'
   - 'translate announcement node'
   - 'translate any entity'
@@ -143,6 +155,10 @@ permissions:
   - 'translate keywords taxonomy_term'
   - 'translate landing_page node'
   - 'translate menu_link_content'
+  - 'translate news_group taxonomy_term'
+  - 'translate news_item node'
+  - 'translate news_neighbourhoods taxonomy_term'
+  - 'translate news_tags taxonomy_term'
   - 'translate page node'
   - 'translate remote_video media'
   - 'translate tpr_errand_service'
@@ -168,6 +184,7 @@ permissions:
   - 'view any unpublished content'
   - 'view editoria11y checker'
   - 'view landing_page revisions'
+  - 'view news_item revisions'
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view page revisions'

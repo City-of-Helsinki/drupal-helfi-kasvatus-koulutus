@@ -28,6 +28,8 @@ dependencies:
     - paragraphs.paragraphs_type.vocational_school_search
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: YD6Rdw1iEhjKEPsmTgUaoyfl5iIRhW7JsotBCZkhRv4
 id: node.page.field_lower_content
 field_name: field_lower_content
 entity_type: node
