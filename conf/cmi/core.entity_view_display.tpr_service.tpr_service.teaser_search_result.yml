@@ -75,6 +75,7 @@ content:
           label: 'Service point'
           show: false
           weight: 99
+      view_mode: default
     third_party_settings: {  }
     weight: 2
     region: content
