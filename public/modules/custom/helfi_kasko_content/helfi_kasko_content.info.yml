@@ -8,4 +8,5 @@ dependencies:
   - drupal:language
   - drupal:taxonomy
   - elasticsearch_connector:elasticsearch_connector
+  - helfi_platform_config:helfi_react_search
   - helfi_tpr:helfi_tpr
