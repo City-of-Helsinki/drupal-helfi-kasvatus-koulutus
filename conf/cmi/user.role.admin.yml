@@ -15,6 +15,8 @@ dependencies:
     - node.type.news_item
     - node.type.page
     - taxonomy.vocabulary.keywords
+    - taxonomy.vocabulary.news_group
+    - taxonomy.vocabulary.news_neighbourhoods
     - taxonomy.vocabulary.news_tags
     - taxonomy.vocabulary.vocational_studies
   module:
@@ -115,6 +117,8 @@ permissions:
   - 'create remote entities'
   - 'create remote_video media'
   - 'create terms in keywords'
+  - 'create terms in news_group'
+  - 'create terms in news_neighbourhoods'
   - 'create terms in news_tags'
   - 'create terms in vocational_studies'
   - 'create upper_secondary_school group'
@@ -147,6 +151,8 @@ permissions:
   - 'delete page revisions'
   - 'delete remote entities'
   - 'delete terms in keywords'
+  - 'delete terms in news_group'
+  - 'delete terms in news_neighbourhoods'
   - 'delete terms in news_tags'
   - 'delete terms in vocational_studies'
   - 'edit any announcement content'
@@ -170,8 +176,11 @@ permissions:
   - 'edit paragraph library item'
   - 'edit remote entities'
   - 'edit terms in keywords'
+  - 'edit terms in news_group'
+  - 'edit terms in news_neighbourhoods'
   - 'edit terms in news_tags'
   - 'edit terms in vocational_studies'
+  - 'mark as hidden in editoria11y'
   - 'revert all revisions'
   - 'revert all tpr_service revisions'
   - 'revert all tpr_unit revisions'
@@ -194,7 +203,9 @@ permissions:
   - 'translate keywords taxonomy_term'
   - 'translate landing_page node'
   - 'translate menu_link_content'
+  - 'translate news_group taxonomy_term'
   - 'translate news_item node'
+  - 'translate news_neighbourhoods taxonomy_term'
   - 'translate news_tags taxonomy_term'
   - 'translate page node'
   - 'translate remote_video media'

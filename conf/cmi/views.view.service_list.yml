@@ -4,9 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.tpr_service.teaser
-    - core.entity_view_mode.tpr_service.teaser_search_result
-    - core.entity_view_mode.tpr_service.teaser_search_result
-    - core.entity_view_mode.tpr_service.teaser_search_result
   module:
     - helfi_tpr
     - user
@@ -809,9 +806,7 @@ display:
       filter_groups:
         operator: AND
         groups:
-          - AND
-          - AND
-          - AND
+          1: AND
       style:
         type: default
         options:
@@ -836,23 +831,10 @@ display:
         filters: false
         filter_groups: false
       relationships: {  }
-      display_extenders:
-        metatag_display_extender:
-          metatags: {  }
-          tokenize: false
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-        - user.permissions
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-        - user.permissions
         - 'languages:language_content'
         - 'languages:language_interface'
         - url

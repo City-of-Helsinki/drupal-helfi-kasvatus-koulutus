@@ -9,6 +9,7 @@ dependencies:
     - helfi_api_base
     - helfi_tpr
     - media
+    - paragraphs
     - rest
     - system
     - toolbar
@@ -23,8 +24,8 @@ permissions:
   - 'access toolbar'
   - 'display eu cookie compliance popup'
   - 'restful get helfi_global_mobile_menu'
-  - 'restful get helfi_global_mobile_menu'
   - 'view media'
   - 'view remote entities'
   - 'view tpr_service'
   - 'view tpr_unit'
+  - 'view unpublished paragraphs'
