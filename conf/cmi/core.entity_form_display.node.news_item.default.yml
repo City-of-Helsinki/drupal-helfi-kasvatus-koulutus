@@ -14,7 +14,7 @@ dependencies:
     - node.type.news_item
   module:
     - field_group
-    - hdbt_admin_editorial
+    - hdbt_admin_tools
     - linkit
     - media_library
     - paragraphs
@@ -65,20 +65,11 @@ third_party_settings:
       format_type: details
       format_settings:
         classes: ''
-        show_empty_fields: true
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
-        required_fields: false
-        element: div
-        show_label: '0'
-        label_element: h3
-        label_element_classes: ''
-        attributes: ''
-        effect: none
-        speed: fast
-_core:
-  default_config_hash: UZnoucUEt8y89UnQiu7EMK_wrERztS9ZWataufzf4ao
+        required_fields: true
 id: node.news_item.default
 targetEntityType: node
 bundle: news_item
@@ -139,7 +130,7 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
-      linkit_profile: tpr_content
+      linkit_profile: helfi
       linkit_auto_link_text: true
     third_party_settings: {  }
   field_news_item_links_title:
@@ -202,6 +193,11 @@ content:
     third_party_settings: {  }
   scheduler_settings:
     weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }

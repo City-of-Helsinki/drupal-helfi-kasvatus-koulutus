@@ -1,0 +1,8 @@
+uuid: 76568ad9-a504-492c-a83f-4bd662e29dde
+langcode: und
+status: true
+dependencies: {  }
+id: footer-top-navigation-2
+label: 'Footer - Top navigation - Second'
+description: 'Top navigation for footer block.'
+locked: false

@@ -1,0 +1,8 @@
+uuid: ea295a4e-505d-41ab-8915-21962f3d60c9
+langcode: en
+status: true
+dependencies: {  }
+name: 'News group'
+vid: news_group
+description: ''
+weight: 0

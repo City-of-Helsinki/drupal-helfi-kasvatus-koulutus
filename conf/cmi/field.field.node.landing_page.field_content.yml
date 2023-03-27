@@ -25,6 +25,7 @@ dependencies:
     - paragraphs.paragraphs_type.remote_video
     - paragraphs.paragraphs_type.school_search
     - paragraphs.paragraphs_type.service_list
+    - paragraphs.paragraphs_type.service_list_search
     - paragraphs.paragraphs_type.target_group_links
     - paragraphs.paragraphs_type.unit_search
     - paragraphs.paragraphs_type.vocational_school_search
@@ -46,143 +47,102 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
+      daycare_search: daycare_search
+      group_news: group_news
+      group_news_archive: group_news_archive
+      high_school_search: high_school_search
+      school_search: school_search
+      vocational_school_search: vocational_school_search
+      columns: columns
+      list_of_links: list_of_links
       content_cards: content_cards
       content_liftup: content_liftup
-      columns: columns
       banner: banner
-      list_of_links: list_of_links
       liftup_with_image: liftup_with_image
-      map: map
       from_library: from_library
-      target_group_links: target_group_links
       chart: chart
       remote_video: remote_video
-      unit_search: unit_search
-      event_list: event_list
+      map: map
       news_list: news_list
-      daycare_search: daycare_search
-      high_school_search: high_school_search
-      service_list: service_list
-      group_news: group_news
-      popular_services: popular_services
-      group_news_archive: group_news_archive
-      vocational_school_search: vocational_school_search
+      event_list: event_list
       phasing: phasing
-      school_search: school_search
+      popular_services: popular_services
+      target_group_links: target_group_links
+      unit_search: unit_search
+      service_list: service_list
+      service_list_search: service_list_search
     negate: 0
     target_bundles_drag_drop:
-      accordion:
-        weight: -22
-        enabled: false
-      accordion_item:
-        weight: -21
-        enabled: false
       banner:
-        weight: -26
+        weight: 0
         enabled: true
       chart:
-        weight: 25
+        weight: 0
         enabled: true
       columns:
-        weight: -27
+        weight: 0
         enabled: true
-      contact_card:
-        weight: 34
-        enabled: false
-      contact_card_listing:
-        weight: 35
-        enabled: false
       content_cards:
-        weight: -33
+        weight: 0
         enabled: true
       content_liftup:
-        weight: -32
+        weight: 0
         enabled: true
       daycare_search:
-        weight: 32
+        weight: 0
         enabled: true
       event_list:
-        weight: 30
+        weight: 0
         enabled: true
       from_library:
-        weight: 21
+        weight: 0
         enabled: true
-      gallery:
-        weight: -20
-        enabled: false
-      gallery_slide:
-        weight: -19
-        enabled: false
       group_news:
-        weight: 42
+        weight: 0
         enabled: true
       group_news_archive:
-        weight: 44
+        weight: 0
         enabled: true
-      hero:
-        weight: -18
-        enabled: false
       high_school_search:
-        weight: 32
+        weight: 0
         enabled: true
-      image:
-        weight: -17
-        enabled: false
       liftup_with_image:
-        weight: -24
+        weight: 0
         enabled: true
       list_of_links:
-        weight: -25
+        weight: 0
         enabled: true
-      list_of_links_item:
-        weight: -16
-        enabled: false
       map:
-        weight: -20
+        weight: 0
         enabled: true
       news_list:
-        weight: 30
+        weight: 0
         enabled: true
       phasing:
-        weight: 50
+        weight: 0
         enabled: true
-      phasing_item:
-        weight: 30
-        enabled: false
-      popular_service_item:
-        weight: 59
-        enabled: false
       popular_services:
-        weight: 42
+        weight: 0
         enabled: true
       remote_video:
-        weight: 27
+        weight: 0
         enabled: true
       school_search:
-        weight: 62
+        weight: 0
         enabled: true
       service_list:
-        weight: 36
+        weight: 0
         enabled: true
-      sidebar_text:
-        weight: 40
-        enabled: false
-      social_media_link:
-        weight: 53
-        enabled: false
-      target_group_link_item:
-        weight: 45
-        enabled: false
+      service_list_search:
+        weight: 0
+        enabled: true
       target_group_links:
-        weight: 24
+        weight: 0
         enabled: true
-      text:
-        weight: -15
-        enabled: false
       unit_search:
-        weight: 28
+        weight: 0
         enabled: true
       vocational_school_search:
-        weight: 44
+        weight: 0
         enabled: true
 field_type: entity_reference_revisions

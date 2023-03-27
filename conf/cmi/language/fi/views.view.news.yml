@@ -1,5 +1,7 @@
 display:
   latest_news:
+    display_options:
+      title: 'Uusimmat uutiset'
     display_title: 'Uusimmat uutiset'
   default:
     display_options:

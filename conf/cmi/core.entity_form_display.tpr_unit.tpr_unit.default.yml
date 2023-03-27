@@ -5,13 +5,14 @@ dependencies:
   config:
     - field.field.tpr_unit.tpr_unit.field_categories
     - field.field.tpr_unit.tpr_unit.field_content
+    - field.field.tpr_unit.tpr_unit.field_districts
     - field.field.tpr_unit.tpr_unit.field_hs_front_page
     - field.field.tpr_unit.tpr_unit.field_lower_content
     - field.field.tpr_unit.tpr_unit.field_metatags
     - field.field.tpr_unit.tpr_unit.field_study_field
     - field.field.tpr_unit.tpr_unit.field_unit_type
   module:
-    - hdbt_admin_editorial
+    - hdbt_admin_tools
     - helfi_tpr
     - media_library
     - metatag
@@ -33,7 +34,7 @@ content:
     settings:
       label: above
       formatter_type: null
-      formatter_settings: null
+      formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
   accessibility_phone:
@@ -43,57 +44,57 @@ content:
     settings:
       label: above
       formatter_type: null
-      formatter_settings: null
+      formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
   accessibility_www:
+    type: readonly_field_widget
+    weight: 12
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  address:
     type: readonly_field_widget
     weight: 14
     region: content
     settings:
       label: above
       formatter_type: null
-      formatter_settings: null
-      show_description: false
-    third_party_settings: {  }
-  address:
-    type: readonly_field_widget
-    weight: 17
-    region: content
-    settings:
-      label: above
-      formatter_type: null
-      formatter_settings: null
+      formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
   address_postal:
     type: readonly_field_widget
-    weight: 19
+    weight: 16
     region: content
     settings:
       label: above
       formatter_type: null
-      formatter_settings: null
+      formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
   call_charge_info:
-    type: readonly_field_widget
-    weight: 18
-    region: content
-    settings:
-      label: above
-      formatter_type: null
-      formatter_settings: null
-      show_description: false
-    third_party_settings: {  }
-  description:
     type: readonly_field_widget
     weight: 15
     region: content
     settings:
       label: above
       formatter_type: null
-      formatter_settings: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  description:
+    type: readonly_field_widget
+    weight: 13
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
   email:
@@ -103,7 +104,7 @@ content:
     settings:
       label: above
       formatter_type: null
-      formatter_settings: null
+      formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
   field_categories:
@@ -117,35 +118,6 @@ content:
       show_description: false
     third_party_settings: {  }
   field_content:
-    type: paragraphs
-    weight: 26
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: text
-      features:
-        add_above: '0'
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
-  field_hs_front_page:
-    type: entity_reference_autocomplete
-    weight: 29
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_lower_content:
     type: paragraphs
     weight: 27
     region: content
@@ -164,13 +136,51 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
+  field_districts:
+    type: select2_entity_reference
+    weight: 29
+    region: content
+    settings:
+      width: 100%
+      autocomplete: false
+      match_operator: STARTS_WITH
+      match_limit: 10
+    third_party_settings: {  }
+  field_hs_front_page:
+    type: entity_reference_autocomplete
+    weight: 29
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_lower_content:
+    type: paragraphs
+    weight: 28
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: text
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 25
+    weight: 26
     region: content
     settings:
       sidebar: false
-      use_details: true
     third_party_settings: {  }
   field_study_field:
     type: select2_entity_reference
@@ -184,7 +194,7 @@ content:
     third_party_settings: {  }
   field_unit_type:
     type: entity_reference_autocomplete
-    weight: 30
+    weight: 28
     region: content
     settings:
       match_operator: CONTAINS
@@ -201,7 +211,7 @@ content:
     third_party_settings: {  }
   hide_sidebar_navigation:
     type: boolean_checkbox
-    weight: 32
+    weight: 29
     region: content
     settings:
       display_label: true
@@ -215,22 +225,22 @@ content:
     third_party_settings: {  }
   latitude:
     type: readonly_field_widget
-    weight: 20
+    weight: 17
     region: content
     settings:
       label: above
       formatter_type: null
-      formatter_settings: null
+      formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
   longitude:
     type: readonly_field_widget
-    weight: 21
+    weight: 18
     region: content
     settings:
       label: above
       formatter_type: null
-      formatter_settings: null
+      formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
   name:
@@ -240,7 +250,7 @@ content:
     settings:
       label: above
       formatter_type: null
-      formatter_settings: null
+      formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
   name_override:
@@ -253,7 +263,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 13
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -264,7 +274,7 @@ content:
     settings:
       label: above
       formatter_type: null
-      formatter_settings: null
+      formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
   picture_url:
@@ -274,7 +284,7 @@ content:
     settings:
       label: above
       formatter_type: null
-      formatter_settings: null
+      formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
   picture_url_override:
@@ -286,54 +296,54 @@ content:
     third_party_settings: {  }
   provided_languages:
     type: readonly_field_widget
-    weight: 28
+    weight: 30
     region: content
     settings:
       label: above
       formatter_type: null
-      formatter_settings: null
+      formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
   service_map_embed:
     type: readonly_field_widget
-    weight: 23
+    weight: 20
     region: content
     settings:
       label: above
       formatter_type: null
-      formatter_settings: null
+      formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
   services:
     type: readonly_field_widget
-    weight: 24
+    weight: 21
     region: content
     settings:
       label: above
       formatter_type: null
-      formatter_settings: null
+      formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
   show_www:
     type: boolean_checkbox
-    weight: 12
+    weight: 11
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   simple_sitemap:
-    weight: 11
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   streetview_entrance_url:
     type: readonly_field_widget
-    weight: 22
+    weight: 19
     region: content
     settings:
       label: above
       formatter_type: null
-      formatter_settings: null
+      formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
   translation:
@@ -348,7 +358,7 @@ content:
     settings:
       label: above
       formatter_type: null
-      formatter_settings: null
+      formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
 hidden:

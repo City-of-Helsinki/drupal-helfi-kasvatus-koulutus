@@ -54,6 +54,7 @@ permissions:
   - 'edit own helfi_chart media'
   - 'edit own image media'
   - 'edit own remote_video media'
+  - 'mark as hidden in editoria11y'
   - 'override landing_page published option'
   - 'override news_item published option'
   - 'override page published option'

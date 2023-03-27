@@ -25,7 +25,7 @@ Requirements for developing:
 
 | Command       | Description                                                                       |
 | ------------- | --------------------------------------------------------------------------------- |
-| nvm use       | Uses correct Node version chosen for the subtheme compiler.                       |
+| nvm use       | Uses correct Node version chosen for the subtheme compiler                        |
 | npm i         | Install dependencies and link local packages.                                     |
 | npm ci        | Install a project with a clean slate. Use especially in travis like environments. |
 | npm run dev   | Compile styles for development environment and watch file changes.                |
@@ -80,12 +80,6 @@ hdbt_subtheme
     └───icons
         |   sprite.svg
 ```
-
-## Component library
-
-Ready to use components can be explored from component library.
-Component library is not installed by default, but it can be installed in same fashion as any other module.
-Once installed it can be accessed in `/admin/appearance/hdbt/component-library`.
 
 ## How tos
 

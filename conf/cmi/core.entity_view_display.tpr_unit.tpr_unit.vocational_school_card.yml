@@ -208,6 +208,7 @@ content:
 hidden:
   created: true
   field_categories: true
+  field_districts: true
   field_hs_front_page: true
   field_study_field: true
   field_unit_type: true
