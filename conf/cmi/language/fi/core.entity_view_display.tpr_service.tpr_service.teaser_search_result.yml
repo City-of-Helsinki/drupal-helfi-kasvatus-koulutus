@@ -7,7 +7,7 @@ content:
         CHAT:
           label: Chat
         EMAIL:
-          label: Sähköposti
+          label: 'Lähetä sivu sähköpostitse'
         TELEPHONE:
           label: Puhelin
         PRINTABLE_FORM:

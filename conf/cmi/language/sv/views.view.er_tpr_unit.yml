@@ -2,6 +2,18 @@ display:
   default:
     display_title: Förvald
     display_options:
+      fields:
+        name:
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page_label: 'Inlägg per sida'
+            items_per_page_options_all_label: '- Alla -'
+            offset_label: Kompensera
       exposed_form:
         options:
           submit_button: Verkställ
@@ -9,18 +21,6 @@ display:
           exposed_sorts_label: 'Sortera efter'
           sort_asc_label: Stigande
           sort_desc_label: Fallande
-      pager:
-        options:
-          expose:
-            items_per_page_label: 'Inlägg per sida'
-            items_per_page_options_all_label: '- Alla -'
-            offset_label: Kompensera
-          tags:
-            previous: ‹‹
-            next: ››
-      fields:
-        name:
-          separator: ', '
       empty:
         area:
           content:
