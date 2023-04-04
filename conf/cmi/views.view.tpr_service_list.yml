@@ -5,6 +5,8 @@ dependencies:
   module:
     - helfi_tpr
     - user
+    - helfi_tpr
+    - user
 _core:
   default_config_hash: rO8m-2SU4UjJoGRHWn5CfFPKwy59J2U_J0xJq6MZpjA
 id: tpr_service_list
@@ -718,6 +720,11 @@ display:
         - url
         - url.query_args
         - user.permissions
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
       tags: {  }
   page_1:
     id: page_1
@@ -731,6 +738,11 @@ display:
     cache_metadata:
       max-age: 0
       contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
         - 'languages:language_content'
         - 'languages:language_interface'
         - url

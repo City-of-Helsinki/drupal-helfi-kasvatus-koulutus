@@ -14,11 +14,11 @@ dependencies:
     - node.type.news_item
   module:
     - entity_reference_revisions
-    - hdbt_admin_tools
+    - helfi_platform_config
     - link
     - user
 _core:
-  default_config_hash: xqTp84CeQvfoe6b00joIYaZIdcej55tWuwyXtZNVjug
+  default_config_hash: _31gTd8Z7ZT8KGS8tHPve5Vb_OAnn7JbybIcOXUGiyA
 id: node.news_item.default
 targetEntityType: node
 bundle: news_item
