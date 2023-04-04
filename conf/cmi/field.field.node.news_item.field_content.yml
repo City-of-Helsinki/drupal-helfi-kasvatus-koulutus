@@ -12,7 +12,7 @@ dependencies:
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: 2T1gR9bqoe9VEUeyx8IGFNgT4JPHOgzjWNMbaEEdVf4
+  default_config_hash: IngfOhrKiEet-oQmwX1eM35bf74Y_YNZwZWRJtt4Qg0
 id: node.news_item.field_content
 field_name: field_content
 entity_type: node

@@ -20,7 +20,7 @@ dependencies:
     - imagecache_external
     - telephone
 _core:
-  default_config_hash: R_XBsTvZDDewssRkRd4k76syUBu9RzxTsVwKp9CndNc
+  default_config_hash: VNYTo5CntTn6nX5XMd8B4xqHRx0QiKEw4hPFz6MahI8
 id: tpr_unit.tpr_unit.teaser_with_image
 targetEntityType: tpr_unit
 bundle: tpr_unit
