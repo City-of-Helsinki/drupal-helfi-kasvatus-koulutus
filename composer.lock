@@ -4161,16 +4161,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "3.0.21",
+            "version": "3.0.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "5a854d585559fad66d74a905a43540e0017bc990"
+                "reference": "55b4496205c61b6d298124b0ade4b43f034ac33a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/5a854d585559fad66d74a905a43540e0017bc990",
-                "reference": "5a854d585559fad66d74a905a43540e0017bc990",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/55b4496205c61b6d298124b0ade4b43f034ac33a",
+                "reference": "55b4496205c61b6d298124b0ade4b43f034ac33a",
                 "shasum": ""
             },
             "require": {
@@ -4272,10 +4272,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/3.0.21",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/3.0.23",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2023-04-04T08:38:26+00:00"
+            "time": "2023-04-05T06:46:56+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -15829,16 +15829,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.17.0",
+            "version": "1.17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "bfec8729f7e23c40670f98e27e694cfdb13fc12a"
+                "reference": "d3753fcb3abc6f78f5de6f72153d4b9c99c72dee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/bfec8729f7e23c40670f98e27e694cfdb13fc12a",
-                "reference": "bfec8729f7e23c40670f98e27e694cfdb13fc12a",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/d3753fcb3abc6f78f5de6f72153d4b9c99c72dee",
+                "reference": "d3753fcb3abc6f78f5de6f72153d4b9c99c72dee",
                 "shasum": ""
             },
             "require": {
@@ -15868,9 +15868,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.17.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.17.1"
             },
-            "time": "2023-04-04T08:27:19+00:00"
+            "time": "2023-04-04T11:11:22+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
