@@ -17,6 +17,8 @@ dependencies:
   module:
     - media
     - user
+_core:
+  default_config_hash: zIVC1uLWwVPYq_7wZYMvFN3QSHhRappBoaU6uxj8O1Q
 id: node.news_item.card_teaser
 targetEntityType: node
 bundle: news_item

@@ -10,7 +10,7 @@ dependencies:
     - entity_reference_revisions
     - helfi_tpr
 _core:
-  default_config_hash: FaWCU5gCsW4M8PnwbuLn5GOMEQzk5eDml8WMsg4ypMM
+  default_config_hash: 2Cnwe0fNZpuNDGlHzy54i1Qhrc7QLtTUkRRnvfrDObo
 id: tpr_service.tpr_service.field_sidebar_content
 field_name: field_sidebar_content
 entity_type: tpr_service

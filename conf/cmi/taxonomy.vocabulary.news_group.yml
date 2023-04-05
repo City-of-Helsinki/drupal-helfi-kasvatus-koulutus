@@ -2,6 +2,8 @@ uuid: ea295a4e-505d-41ab-8915-21962f3d60c9
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: WZlqmVE7IG7NlPwHTf-2r9OKJxNlmb7H-WuoBvyheCE
 name: 'News group'
 vid: news_group
 description: ''

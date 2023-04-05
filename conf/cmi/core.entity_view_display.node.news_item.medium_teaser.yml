@@ -16,7 +16,7 @@ dependencies:
   module:
     - user
 _core:
-  default_config_hash: xqTp84CeQvfoe6b00joIYaZIdcej55tWuwyXtZNVjug
+  default_config_hash: 11O10dO-PpPSlc1lARKUBbjgUwOqK7qRsdE_0zJQnyA
 id: node.news_item.medium_teaser
 targetEntityType: node
 bundle: news_item
