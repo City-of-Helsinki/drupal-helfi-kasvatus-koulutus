@@ -5,6 +5,7 @@
  * Builds extra placeholder replacement tokens for groups.
  */
 
+use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Render\BubbleableMetadata;
 use Drupal\helfi_group\GroupUtility;
 
@@ -62,7 +63,9 @@ function helfi_group_tokens($type, $tokens, array $data, array $options, Bubblea
         }
 
         // Use news parent translation that matches the current language.
-        $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
+        $langcode = \Drupal::languageManager()
+          ->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)
+          ->getId();
         /** @var \Drupal\Core\Entity\EntityInterface $newsParent */
         if ($newsParent->hasTranslation($langcode)) {
           $newsParent = $newsParent->getTranslation($langcode);
