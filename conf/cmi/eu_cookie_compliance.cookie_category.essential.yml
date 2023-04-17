@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: FW3vd0tXZeRSJeKvKE42BB-gwieMUeNeQ8GiW13EFO0
+  default_config_hash: _t7KlporqDL3DArj6oSOO8nYsti4sn1kbsjV_-srYzM
 id: essential
 label: 'Essential cookies'
 description:

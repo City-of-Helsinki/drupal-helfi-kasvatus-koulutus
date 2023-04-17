@@ -352,4 +352,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_districts: true
   ontologyword_ids: true
