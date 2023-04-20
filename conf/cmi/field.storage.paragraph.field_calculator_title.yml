@@ -1,13 +1,13 @@
-uuid: bef90899-5f7a-46a9-b20d-5bb857b2e3b3
+uuid: 10779c95-8eda-4313-bc63-0001233b191e
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
 _core:
-  default_config_hash: 3FyHZFVBPX-qi1AFJmHcS7-24936nQ9oMX22EPuavlE
-id: paragraph.field_iframe_title
-field_name: field_iframe_title
+  default_config_hash: GjV7FfqAN65CsmDNefqd6mthq6-EnqtZUkjI5j-csX0
+id: paragraph.field_calculator_title
+field_name: field_calculator_title
 entity_type: paragraph
 type: string
 settings:

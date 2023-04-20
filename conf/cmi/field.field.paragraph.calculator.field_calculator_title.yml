@@ -1,0 +1,21 @@
+uuid: b2715d0d-d860-49e6-ad80-24e71ef3eff1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_calculator_title
+    - paragraphs.paragraphs_type.calculator
+_core:
+  default_config_hash: 1vOlAAB-2tKwI8vgO2D9Z8MyC9GgxUgFftTXK0jwyUo
+id: paragraph.calculator.field_calculator_title
+field_name: field_calculator_title
+entity_type: paragraph
+bundle: calculator
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

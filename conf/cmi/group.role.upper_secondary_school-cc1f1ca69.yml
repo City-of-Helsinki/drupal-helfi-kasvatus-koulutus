@@ -1,0 +1,17 @@
+uuid: f93dd132-1381-4505-b95c-d1334f1bdcd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+  enforced:
+    config:
+      - user.role.debug_api
+id: upper_secondary_school-cc1f1ca69
+label: 'Debug API'
+weight: 0
+internal: true
+audience: outsider
+group_type: upper_secondary_school
+permissions_ui: false
+permissions: {  }
