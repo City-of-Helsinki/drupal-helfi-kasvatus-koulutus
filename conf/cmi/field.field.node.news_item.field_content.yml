@@ -17,7 +17,7 @@ id: node.news_item.field_content
 field_name: field_content
 entity_type: node
 bundle: news_item
-label: Sisältöalue
+label: 'Content region'
 description: ''
 required: false
 translatable: true
