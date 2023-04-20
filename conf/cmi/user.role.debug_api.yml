@@ -1,0 +1,14 @@
+uuid: 594c0311-d13e-4ab3-af4f-b88707149886
+langcode: fi
+status: true
+dependencies:
+  config:
+    - rest.resource.helfi_debug_data
+  module:
+    - rest
+id: debug_api
+label: 'Debug API'
+weight: 0
+is_admin: null
+permissions:
+  - 'restful get helfi_debug_data'
