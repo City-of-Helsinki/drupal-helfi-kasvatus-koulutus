@@ -1,0 +1,10 @@
+uuid: 6cc9f62c-01f9-440b-9d9e-88b67f0dde96
+langcode: en
+status: true
+dependencies: {  }
+id: playground_search
+label: Playground search
+icon_uuid: null
+icon_default: null
+description: 'Paragraph that lists all units tagged in the term playground.'
+behavior_plugins: {  }

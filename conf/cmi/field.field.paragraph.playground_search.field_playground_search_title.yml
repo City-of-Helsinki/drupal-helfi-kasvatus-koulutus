@@ -1,0 +1,19 @@
+uuid: cf5a34f4-3bbf-4285-9433-adc454c42d9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_playground_search_title
+    - paragraphs.paragraphs_type.playground_search
+id: paragraph.playground_search.field_playground_search_title
+field_name: field_playground_search_title
+entity_type: paragraph
+bundle: playground_search
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
