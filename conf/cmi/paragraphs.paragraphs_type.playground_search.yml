@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: playground_search
-label: Playground search
+label: 'Playground search'
 icon_uuid: null
 icon_default: null
 description: 'Paragraph that lists all units tagged in the term playground.'
