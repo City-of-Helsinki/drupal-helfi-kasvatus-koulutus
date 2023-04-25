@@ -1,0 +1,19 @@
+uuid: 4b694777-4381-4e9c-a3a6-d9f990601745
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_playground_search_desc
+field_name: field_playground_search_desc
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

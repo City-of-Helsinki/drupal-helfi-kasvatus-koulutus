@@ -21,6 +21,7 @@ dependencies:
     - paragraphs.paragraphs_type.map
     - paragraphs.paragraphs_type.news_list
     - paragraphs.paragraphs_type.phasing
+    - paragraphs.paragraphs_type.playground_search
     - paragraphs.paragraphs_type.popular_services
     - paragraphs.paragraphs_type.remote_video
     - paragraphs.paragraphs_type.school_search
@@ -47,41 +48,57 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
+      banner: banner
+      chart: chart
+      columns: columns
+      content_cards: content_cards
+      content_liftup: content_liftup
       daycare_search: daycare_search
+      event_list: event_list
+      from_library: from_library
       group_news: group_news
       group_news_archive: group_news_archive
       high_school_search: high_school_search
-      school_search: school_search
-      vocational_school_search: vocational_school_search
-      columns: columns
-      list_of_links: list_of_links
-      content_cards: content_cards
-      content_liftup: content_liftup
-      banner: banner
       liftup_with_image: liftup_with_image
-      from_library: from_library
-      chart: chart
-      remote_video: remote_video
+      list_of_links: list_of_links
       map: map
       news_list: news_list
-      event_list: event_list
       phasing: phasing
       popular_services: popular_services
-      target_group_links: target_group_links
-      unit_search: unit_search
+      remote_video: remote_video
+      school_search: school_search
       service_list: service_list
       service_list_search: service_list_search
+      target_group_links: target_group_links
+      unit_search: unit_search
+      vocational_school_search: vocational_school_search
+      playground_search: playground_search
     negate: 0
     target_bundles_drag_drop:
+      accordion:
+        weight: 40
+        enabled: false
+      accordion_item:
+        weight: 41
+        enabled: false
       banner:
         weight: 0
         enabled: true
+      calculator:
+        weight: 43
+        enabled: false
       chart:
         weight: 0
         enabled: true
       columns:
         weight: 0
         enabled: true
+      contact_card:
+        weight: 46
+        enabled: false
+      contact_card_listing:
+        weight: 47
+        enabled: false
       content_cards:
         weight: 0
         enabled: true
@@ -103,15 +120,24 @@ settings:
       group_news_archive:
         weight: 0
         enabled: true
+      hero:
+        weight: 55
+        enabled: false
       high_school_search:
         weight: 0
         enabled: true
+      image:
+        weight: 57
+        enabled: false
       liftup_with_image:
         weight: 0
         enabled: true
       list_of_links:
         weight: 0
         enabled: true
+      list_of_links_item:
+        weight: 60
+        enabled: false
       map:
         weight: 0
         enabled: true
@@ -121,6 +147,15 @@ settings:
       phasing:
         weight: 0
         enabled: true
+      phasing_item:
+        weight: 64
+        enabled: false
+      playground_search:
+        weight: 65
+        enabled: true
+      popular_service_item:
+        weight: 66
+        enabled: false
       popular_services:
         weight: 0
         enabled: true
@@ -136,9 +171,21 @@ settings:
       service_list_search:
         weight: 0
         enabled: true
+      sidebar_text:
+        weight: 72
+        enabled: false
+      social_media_link:
+        weight: 73
+        enabled: false
+      target_group_link_item:
+        weight: 74
+        enabled: false
       target_group_links:
         weight: 0
         enabled: true
+      text:
+        weight: 76
+        enabled: false
       unit_search:
         weight: 0
         enabled: true

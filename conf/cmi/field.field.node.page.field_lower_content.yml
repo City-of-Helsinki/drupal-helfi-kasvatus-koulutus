@@ -23,6 +23,7 @@ dependencies:
     - paragraphs.paragraphs_type.map
     - paragraphs.paragraphs_type.news_list
     - paragraphs.paragraphs_type.phasing
+    - paragraphs.paragraphs_type.playground_search
     - paragraphs.paragraphs_type.remote_video
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.unit_search
@@ -67,6 +68,7 @@ settings:
       unit_search: unit_search
       vocational_school_search: vocational_school_search
       calculator: calculator
+      playground_search: playground_search
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -144,6 +146,9 @@ settings:
       phasing_item:
         weight: 63
         enabled: false
+      playground_search:
+        weight: 65
+        enabled: true
       popular_service_item:
         weight: 64
         enabled: false
