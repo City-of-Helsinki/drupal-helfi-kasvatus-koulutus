@@ -6,5 +6,5 @@ id: after_school_activity_search
 label: 'After-school activity search'
 icon_uuid: null
 icon_default: null
-description: ''
+description: 'Paragraph that lists all units tagged in the term after-school activities'
 behavior_plugins: {  }
