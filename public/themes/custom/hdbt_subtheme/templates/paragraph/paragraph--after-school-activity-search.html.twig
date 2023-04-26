@@ -1,0 +1,16 @@
+{% block paragraph %}
+  {% embed "@hdbt/misc/component.twig" with
+    {
+      component_classes: [ 'component--unit-search' ],
+      component_title: content.field_after_school_activity_search_title,
+      component_description: content.field_after_school_activity_search_desc,
+      component_content_class: 'unit-search unit-search--after-school-activity-search',
+    }
+  %}
+    {% block component_content %}
+
+      {{ drupal_view('after_school_activity_search', 'block') }}
+
+    {% endblock component_content %}
+  {% endembed %}
+{% endblock paragraph %}
