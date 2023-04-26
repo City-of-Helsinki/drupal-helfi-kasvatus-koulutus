@@ -1,0 +1,34 @@
+uuid: d485f296-1c05-473f-b53d-c88af5c14aab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.after_school_activity_search.field_after_school_search_desc
+    - field.field.paragraph.after_school_activity_search.field_after_school_search_title
+    - paragraphs.paragraphs_type.after_school_activity_search
+  module:
+    - text
+id: paragraph.after_school_activity_search.default
+targetEntityType: paragraph
+bundle: after_school_activity_search
+mode: default
+content:
+  field_after_school_search_desc:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_after_school_search_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
