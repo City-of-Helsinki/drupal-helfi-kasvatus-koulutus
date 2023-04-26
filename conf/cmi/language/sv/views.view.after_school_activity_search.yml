@@ -14,7 +14,7 @@ display:
             items_per_page_options_all_label: '- Allt -'
       exposed_form:
         options:
-          submit_button: 'Sök fftermiddagsverksamhet'
+          submit_button: 'Sök eftermiddagsverksamhet'
       empty:
         area:
           content:

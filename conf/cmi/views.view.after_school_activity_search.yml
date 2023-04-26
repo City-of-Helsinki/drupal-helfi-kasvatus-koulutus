@@ -151,7 +151,7 @@ display:
       exposed_form:
         type: bef
         options:
-          submit_button: 'Search for a Search for a after-school activity'
+          submit_button: 'Search for a after-school activities'
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
