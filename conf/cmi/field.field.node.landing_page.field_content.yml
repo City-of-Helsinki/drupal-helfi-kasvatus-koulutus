@@ -22,6 +22,7 @@ dependencies:
     - paragraphs.paragraphs_type.map
     - paragraphs.paragraphs_type.news_list
     - paragraphs.paragraphs_type.phasing
+    - paragraphs.paragraphs_type.playground_search
     - paragraphs.paragraphs_type.popular_services
     - paragraphs.paragraphs_type.remote_video
     - paragraphs.paragraphs_type.school_search
@@ -73,6 +74,7 @@ settings:
       unit_search: unit_search
       vocational_school_search: vocational_school_search
       after_school_activity_search: after_school_activity_search
+      playground_search: playground_search
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -153,8 +155,11 @@ settings:
       phasing_item:
         weight: 65
         enabled: false
-      popular_service_item:
+      playground_search:
         weight: 66
+        enabled: true
+      popular_service_item:
+        weight: 67
         enabled: false
       popular_services:
         weight: 0

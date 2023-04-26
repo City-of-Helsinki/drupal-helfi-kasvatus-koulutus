@@ -1,0 +1,34 @@
+uuid: e5348be9-2372-46e5-9806-f9c859b3c79c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.playground_search.field_playground_search_desc
+    - field.field.paragraph.playground_search.field_playground_search_title
+    - paragraphs.paragraphs_type.playground_search
+  module:
+    - text
+id: paragraph.playground_search.default
+targetEntityType: paragraph
+bundle: playground_search
+mode: default
+content:
+  field_playground_search_desc:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_playground_search_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

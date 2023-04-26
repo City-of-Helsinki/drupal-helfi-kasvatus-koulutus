@@ -32,8 +32,9 @@ $card_spacing: $spacing-and-half;
   }
 }
 
-.unit-search--daycare-search {
-  // Daycare search filters
+.unit-search--daycare-search,
+.unit-search--playground-search {
+  // Daycare and playground search filters
   .bef-exposed-form {
     @include breakpoint($breakpoint-m) {
       position: relative;
@@ -136,14 +137,16 @@ $card_spacing: $spacing-and-half;
   }
 }
 
-.component--daycare-search {
+.component--daycare-search,
+.component--playground-search {
   background-color: $color-silver-light;
   padding-top: $spacing-triple;
 }
 
 // Remove margin from daycare search if it is placed after another component since it is added already to the padding
 // on the top of the component.
-.component ~ .component--daycare-search {
+.component ~ .component--daycare-search,
+.component ~ .component--playground-search {
   margin-top: 0;
 }
 

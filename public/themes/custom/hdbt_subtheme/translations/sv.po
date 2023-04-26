@@ -1,5 +1,6 @@
 msgid ""
 msgstr ""
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 msgctxt "High school search count"
 msgid "general upper secondary school"
@@ -29,6 +30,12 @@ msgstr[0] "enhet"
 msgstr[1] "enheter"
 
 msgctxt "After-school activity search count"
+msgid "location"
+msgid_plural "locations"
+msgstr[0] "enhet"
+msgstr[1] "enheter"
+
+msgctxt "Playground search count"
 msgid "location"
 msgid_plural "locations"
 msgstr[0] "enhet"
