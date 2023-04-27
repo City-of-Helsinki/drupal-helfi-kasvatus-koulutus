@@ -40,6 +40,7 @@ final class GroupMenuFilterByLanguage implements EventSubscriberInterface {
   public function filter(MenuLinkTreeManipulatorsAlterEvent $event) : void {
     $manipulators = &$event->getManipulators();
 
+
     if ($this->adminContext->isAdminRoute()) {
       return;
     }
@@ -55,7 +56,7 @@ final class GroupMenuFilterByLanguage implements EventSubscriberInterface {
       break;
     }
 
-    if ($menuName && str_contains($this->menuName, $menuName)) {
+    if (!$menuName || !str_contains($menuName, $this->menuName)) {
       return;
     }
 
