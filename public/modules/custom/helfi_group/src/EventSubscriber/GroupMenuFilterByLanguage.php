@@ -5,6 +5,7 @@ declare(strict_types = 1);
 namespace Drupal\helfi_group\EventSubscriber;
 
 use Drupal\Core\Menu\MenuLinkTreeManipulatorsAlterEvent;
+use Drupal\Core\Routing\AdminContext;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
@@ -22,12 +23,27 @@ final class GroupMenuFilterByLanguage implements EventSubscriberInterface {
   protected string $menuName = 'group_menu_link_content';
 
   /**
+   * Constructs a new instance.
+   *
+   * @param \Drupal\Core\Routing\AdminContext $adminContext
+   *   The admin context service.
+   */
+  public function __construct(private AdminContext $adminContext) {
+  }
+
+  /**
    * Responds to MenuLinkTreeEvents::ALTER_MANIPULATORS event.
    *
    * @param \Drupal\Core\Menu\MenuLinkTreeManipulatorsAlterEvent $event
    *   The event to subscribe to.
    */
   public function filter(MenuLinkTreeManipulatorsAlterEvent $event) : void {
+    $manipulators = &$event->getManipulators();
+
+    if ($this->adminContext->isAdminRoute()) {
+      return;
+    }
+
     $manipulators = &$event->getManipulators();
 
     $menuName = NULL;

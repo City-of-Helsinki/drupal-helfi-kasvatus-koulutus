@@ -5,5 +5,7 @@ services:
       - { name: event_subscriber }
   helfi_group.group_menu_filter_by_language:
     class: 'Drupal\helfi_group\EventSubscriber\GroupMenuFilterByLanguage'
+    arguments:
+      - '@router.admin_context'
     tags:
       - { name: 'event_subscriber' }
