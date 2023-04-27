@@ -166,6 +166,7 @@ function helfi_kasko_content_helfi_paragraph_types() : array {
           'vocational_school_search',
         ],
         'field_lower_content' => [
+          'after_school_activity_search',
           'daycare_search',
           'group_news',
           'high_school_search',
@@ -175,6 +176,7 @@ function helfi_kasko_content_helfi_paragraph_types() : array {
       ],
       'landing_page' => [
         'field_content' => [
+          'after_school_activity_search',
           'daycare_search',
           'group_news',
           'group_news_archive',
@@ -198,4 +200,38 @@ function helfi_kasko_content_helfi_paragraph_types() : array {
     }
   }
   return $enabled;
+}
+
+/**
+ * Implements hook_views_post_execute().
+ */
+function helfi_kasko_content_views_post_execute($view) {
+  if ($view->id() == 'after_school_activity_search') {
+    $current_language = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
+
+    $removableStrings = [
+      'Iltapäivätoiminta /',
+      'Eftermiddagsverksamhet /',
+      'Finskspråkig eftermiddagsverksamhet /',
+      'After-school activities /',
+    ];
+
+    foreach ($view->result as &$row) {
+      if ($row->_entity->hasTranslation($current_language)) {
+        $translatedEntity = $row->_entity->getTranslation($current_language);
+        $translatedEntity->set('name', trim(str_replace($removableStrings, '', $translatedEntity->get('name')->getString())));
+      }
+      else {
+        $row->_entity->set('name', trim(str_replace($removableStrings, '', $row->_entity->get('name')->getString())));
+      }
+    }
+
+    // Sort alphabetically based on parsed title.
+    if ($current_language === 'en' || $current_language === 'sv') {
+      usort($view->result, fn($a, $b) => $a->_entity->getTranslation($current_language)->get('name')->getString() <=> $b->_entity->getTranslation($current_language)->get('name')->getString());
+    }
+    else {
+      usort($view->result, fn($a, $b) => $a->_entity->get('name')->getString() <=> $b->_entity->get('name')->getString());
+    }
+  }
 }
