@@ -209,6 +209,7 @@ function helfi_kasko_content_views_post_execute($view) {
   if ($view->id() == 'after_school_activity_search') {
     $current_language = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
 
+    // Remove these strings from TPR unit titles.
     $removableStrings = [
       'Iltapäivätoiminta /',
       'Eftermiddagsverksamhet /',
