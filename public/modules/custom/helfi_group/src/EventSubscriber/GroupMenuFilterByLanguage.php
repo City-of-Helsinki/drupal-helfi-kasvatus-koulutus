@@ -5,7 +5,6 @@ declare(strict_types = 1);
 namespace Drupal\helfi_group\EventSubscriber;
 
 use Drupal\Core\Menu\MenuLinkTreeManipulatorsAlterEvent;
-use Drupal\Core\Routing\AdminContext;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
@@ -29,7 +28,6 @@ final class GroupMenuFilterByLanguage implements EventSubscriberInterface {
    *   The event to subscribe to.
    */
   public function filter(MenuLinkTreeManipulatorsAlterEvent $event) : void {
-
     $manipulators = &$event->getManipulators();
 
     $menuName = NULL;
@@ -41,8 +39,6 @@ final class GroupMenuFilterByLanguage implements EventSubscriberInterface {
       break;
     }
 
-
-
     if ($menuName && str_contains($this->menuName, $menuName)) {
       return;
     }
@@ -51,7 +47,6 @@ final class GroupMenuFilterByLanguage implements EventSubscriberInterface {
       'callable' => 'menu_block_current_language_tree_manipulator::filterLanguages',
       'args' => [['menu_link_content']],
     ];
-
   }
 
   /**
