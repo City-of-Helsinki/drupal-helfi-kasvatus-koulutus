@@ -69,10 +69,6 @@ function helfi_group_theme($existing, $type, $theme, $path) {
       'template' => 'block--group-content-menu',
       'base hook' => 'block',
     ],
-    'block__translatable_group_content_menu' => [
-      'template' => 'block--group-content-menu',
-      'base hook' => 'block',
-    ],
     'menu__group_menu' => [
       'template' => 'menu--group-menu',
       'base hook' => 'menu__group_menu',

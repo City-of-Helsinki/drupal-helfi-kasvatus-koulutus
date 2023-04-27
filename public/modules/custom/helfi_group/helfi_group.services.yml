@@ -3,3 +3,7 @@ services:
     class: Drupal\helfi_group\Routing\RouteSubscriber
     tags:
       - { name: event_subscriber }
+  helfi_group.group_menu_filter_by_language:
+    class: 'Drupal\helfi_group\EventSubscriber\GroupMenuFilterByLanguage'
+    tags:
+      - { name: 'event_subscriber' }
