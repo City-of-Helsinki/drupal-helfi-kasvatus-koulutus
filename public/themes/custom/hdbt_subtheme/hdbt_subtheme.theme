@@ -301,7 +301,7 @@ function hdbt_subtheme_preprocess_field(&$variables) {
     'zh' => t('Chinese', [], ['context' => 'Language of instruction']),
   ];
 
-  foreach ($variables['items'] as $delta => &$item) {
+  foreach ($variables['items'] as &$item) {
     $value = &$item['content']['#context']['value'];
     if (array_key_exists($value, $language_map)) {
       $value = $language_map[$value];

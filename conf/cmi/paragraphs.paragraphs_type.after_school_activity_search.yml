@@ -1,0 +1,10 @@
+uuid: 327f7fb5-01ec-4679-828e-fee93d10532d
+langcode: en
+status: true
+dependencies: {  }
+id: after_school_activity_search
+label: 'After-school activity search'
+icon_uuid: null
+icon_default: null
+description: 'Paragraph that lists all units tagged in the term after-school activities'
+behavior_plugins: {  }

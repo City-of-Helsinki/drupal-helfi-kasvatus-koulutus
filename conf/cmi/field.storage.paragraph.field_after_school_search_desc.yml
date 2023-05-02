@@ -1,0 +1,19 @@
+uuid: cd0aa556-9a71-4234-acff-4ceb7ddc802f
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_after_school_search_desc
+field_name: field_after_school_search_desc
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

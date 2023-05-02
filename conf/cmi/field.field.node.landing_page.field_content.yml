@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.landing_page
+    - paragraphs.paragraphs_type.after_school_activity_search
     - paragraphs.paragraphs_type.banner
     - paragraphs.paragraphs_type.chart
     - paragraphs.paragraphs_type.columns
@@ -72,6 +73,7 @@ settings:
       target_group_links: target_group_links
       unit_search: unit_search
       vocational_school_search: vocational_school_search
+      after_school_activity_search: after_school_activity_search
       playground_search: playground_search
     negate: 0
     target_bundles_drag_drop:
@@ -81,11 +83,14 @@ settings:
       accordion_item:
         weight: 41
         enabled: false
+      after_school_activity_search:
+        weight: 42
+        enabled: true
       banner:
         weight: 0
         enabled: true
       calculator:
-        weight: 43
+        weight: 44
         enabled: false
       chart:
         weight: 0
@@ -94,10 +99,10 @@ settings:
         weight: 0
         enabled: true
       contact_card:
-        weight: 46
+        weight: 47
         enabled: false
       contact_card_listing:
-        weight: 47
+        weight: 48
         enabled: false
       content_cards:
         weight: 0
@@ -121,13 +126,13 @@ settings:
         weight: 0
         enabled: true
       hero:
-        weight: 55
+        weight: 56
         enabled: false
       high_school_search:
         weight: 0
         enabled: true
       image:
-        weight: 57
+        weight: 58
         enabled: false
       liftup_with_image:
         weight: 0
@@ -136,7 +141,7 @@ settings:
         weight: 0
         enabled: true
       list_of_links_item:
-        weight: 60
+        weight: 61
         enabled: false
       map:
         weight: 0
@@ -148,13 +153,13 @@ settings:
         weight: 0
         enabled: true
       phasing_item:
-        weight: 64
+        weight: 65
         enabled: false
       playground_search:
-        weight: 65
+        weight: 66
         enabled: true
       popular_service_item:
-        weight: 66
+        weight: 67
         enabled: false
       popular_services:
         weight: 0
