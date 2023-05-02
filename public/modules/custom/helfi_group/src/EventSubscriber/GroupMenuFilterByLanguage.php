@@ -16,7 +16,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 final class GroupMenuFilterByLanguage implements EventSubscriberInterface {
 
   /**
-   * List of menu names to filter.
+   * Menu to filter.
    *
    * @var string
    */
@@ -38,8 +38,6 @@ final class GroupMenuFilterByLanguage implements EventSubscriberInterface {
    *   The event to subscribe to.
    */
   public function filter(MenuLinkTreeManipulatorsAlterEvent $event) : void {
-    $manipulators = &$event->getManipulators();
-
     if ($this->adminContext->isAdminRoute()) {
       return;
     }
