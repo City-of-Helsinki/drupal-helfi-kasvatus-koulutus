@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_lower_content
     - node.type.page
     - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.after_school_activity_search
     - paragraphs.paragraphs_type.banner
     - paragraphs.paragraphs_type.calculator
     - paragraphs.paragraphs_type.chart
@@ -23,6 +24,7 @@ dependencies:
     - paragraphs.paragraphs_type.map
     - paragraphs.paragraphs_type.news_list
     - paragraphs.paragraphs_type.phasing
+    - paragraphs.paragraphs_type.playground_search
     - paragraphs.paragraphs_type.remote_video
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.unit_search
@@ -66,7 +68,9 @@ settings:
       text: text
       unit_search: unit_search
       vocational_school_search: vocational_school_search
+      after_school_activity_search: after_school_activity_search
       calculator: calculator
+      playground_search: playground_search
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -75,6 +79,9 @@ settings:
       accordion_item:
         weight: 40
         enabled: false
+      after_school_activity_search:
+        weight: 42
+        enabled: true
       banner:
         weight: 0
         enabled: true
@@ -144,6 +151,9 @@ settings:
       phasing_item:
         weight: 63
         enabled: false
+      playground_search:
+        weight: 65
+        enabled: true
       popular_service_item:
         weight: 64
         enabled: false

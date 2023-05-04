@@ -1,0 +1,25 @@
+uuid: 7c5ad48b-ca11-464c-a429-a318cd2f5aa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_playground_search_desc
+    - paragraphs.paragraphs_type.playground_search
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: paragraph.playground_search.field_playground_search_desc
+field_name: field_playground_search_desc
+entity_type: paragraph
+bundle: playground_search
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

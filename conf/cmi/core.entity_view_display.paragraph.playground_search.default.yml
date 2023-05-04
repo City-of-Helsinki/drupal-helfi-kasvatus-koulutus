@@ -1,0 +1,32 @@
+uuid: bd6f9dd1-02c7-4b98-b62d-f65e925a6bae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.playground_search.field_playground_search_desc
+    - field.field.paragraph.playground_search.field_playground_search_title
+    - paragraphs.paragraphs_type.playground_search
+  module:
+    - text
+id: paragraph.playground_search.default
+targetEntityType: paragraph
+bundle: playground_search
+mode: default
+content:
+  field_playground_search_desc:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_playground_search_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

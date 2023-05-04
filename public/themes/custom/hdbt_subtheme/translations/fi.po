@@ -1,5 +1,6 @@
 msgid ""
 msgstr ""
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 msgctxt "High school search count"
 msgid "general upper secondary school"
@@ -32,6 +33,18 @@ msgid "Open large version of the map"
 msgstr "Avaa suurempi versio kartasta"
 
 msgctxt "Daycare search count"
+msgid "location"
+msgid_plural "locations"
+msgstr[0] "toimipaikka"
+msgstr[1] "toimipaikkaa"
+
+msgctxt "After-school activity search count"
+msgid "location"
+msgid_plural "locations"
+msgstr[0] "toimipaikka"
+msgstr[1] "toimipaikkaa"
+
+msgctxt "Playground search count"
 msgid "location"
 msgid_plural "locations"
 msgstr[0] "toimipaikka"

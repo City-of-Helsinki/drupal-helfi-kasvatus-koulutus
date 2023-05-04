@@ -1,0 +1,19 @@
+uuid: 605b86fd-c9df-449e-8803-fb882127d960
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_after_school_search_title
+    - paragraphs.paragraphs_type.after_school_activity_search
+id: paragraph.after_school_activity_search.field_after_school_search_title
+field_name: field_after_school_search_title
+entity_type: paragraph
+bundle: after_school_activity_search
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
