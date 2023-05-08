@@ -84,7 +84,7 @@ settings:
         weight: 41
         enabled: false
       after_school_activity_search:
-        weight: 42
+        weight: 0
         enabled: true
       banner:
         weight: 0
@@ -156,7 +156,7 @@ settings:
         weight: 65
         enabled: false
       playground_search:
-        weight: 66
+        weight: 0
         enabled: true
       popular_service_item:
         weight: 67
