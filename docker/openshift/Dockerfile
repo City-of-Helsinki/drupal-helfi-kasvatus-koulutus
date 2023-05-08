@@ -12,6 +12,7 @@ RUN version=$(php -r "echo PHP_MAJOR_VERSION.PHP_MINOR_VERSION;") \
 
 RUN { \
 		echo 'apc.shm_size=128M'; \
+		echo 'zend.enable_gc=Off'; \
 	} > /etc/php81/conf.d/xyz-override.ini
 
 COPY / /var/www/html/
