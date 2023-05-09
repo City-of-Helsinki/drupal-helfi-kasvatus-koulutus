@@ -16,6 +16,7 @@ RUN { \
     echo 'opcache.enable_file_override=1'; \
     echo 'opcache.validate_timestamps=0'; \
     echo 'elastic_apm.enabled=false'; \
+    echo 'realpath_cache_size=10M'; \
   } > /etc/php81/conf.d/xyz-override.ini
 
 RUN rm /etc/php81/conf.d/newrelic.ini
