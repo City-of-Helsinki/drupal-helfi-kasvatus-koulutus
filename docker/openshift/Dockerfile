@@ -11,9 +11,11 @@ RUN version=$(php -r "echo PHP_MAJOR_VERSION.PHP_MINOR_VERSION;") \
     && rm -rf /tmp/blackfire /tmp/blackfire-probe.tar.gz
 
 RUN { \
-		echo 'apc.shm_size=128M'; \
-		echo 'zend.enable_gc=Off'; \
-	} > /etc/php81/conf.d/xyz-override.ini
+    echo 'apc.shm_size=128M'; \
+    echo 'zend.enable_gc=Off'; \
+    echo 'opcache.enable_file_override=1'; \
+    echo 'opcache.validate_timestamps=0'; \
+  } > /etc/php81/conf.d/xyz-override.ini
 
 COPY / /var/www/html/
 WORKDIR /var/www/html
