@@ -17,6 +17,8 @@ RUN { \
     echo 'opcache.validate_timestamps=0'; \
   } > /etc/php81/conf.d/xyz-override.ini
 
+RUN rm /etc/php${PHP_SHORT_VERSION}/conf.d/newrelic.ini
+
 COPY / /var/www/html/
 WORKDIR /var/www/html
 RUN composer install --no-progress --profile --prefer-dist --no-interaction --no-dev --optimize-autoloader
