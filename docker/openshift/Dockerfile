@@ -19,7 +19,7 @@ RUN { \
     echo 'realpath_cache_size=10M'; \
   } > /etc/php81/conf.d/xyz-override.ini
 
-RUN rm /etc/php81/conf.d/newrelic.ini
+# RUN rm /etc/php81/conf.d/newrelic.ini
 
 COPY / /var/www/html/
 WORKDIR /var/www/html
