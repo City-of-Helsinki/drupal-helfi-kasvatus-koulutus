@@ -13,8 +13,8 @@ RUN version=$(php -r "echo PHP_MAJOR_VERSION.PHP_MINOR_VERSION;") \
 RUN { \
     echo 'apc.shm_size=128M'; \
     echo 'zend.enable_gc=Off'; \
-    echo 'opcache.enable_file_override=1'; \
-    echo 'opcache.validate_timestamps=0'; \
+#    echo 'opcache.enable_file_override=1'; \
+#    echo 'opcache.validate_timestamps=0'; \
 #    echo 'elastic_apm.enabled=false'; \
     echo 'realpath_cache_size=10M'; \
   } > /etc/php81/conf.d/xyz-override.ini
