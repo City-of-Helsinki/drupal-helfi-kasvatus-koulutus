@@ -17,6 +17,7 @@ dependencies:
   module:
     - content_translation
     - editoria11y
+    - entity_usage
     - file
     - filter
     - group
@@ -42,6 +43,7 @@ weight: -3
 is_admin: null
 permissions:
   - 'access content overview'
+  - 'access entity usage statistics'
   - 'access files overview'
   - 'access group overview'
   - 'access media overview'
