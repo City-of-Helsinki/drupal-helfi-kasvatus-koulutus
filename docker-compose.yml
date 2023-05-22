@@ -1,107 +1,39 @@
-version: '3.7'
+#
+# These are services which are build on Lagoon
+#
 
 services:
-  app:
-    hostname: "${DRUPAL_HOSTNAME}"
-    container_name: "${COMPOSE_PROJECT_NAME}-app"
-    image: "${DRUPAL_IMAGE}"
-    volumes:
-      - .:/app:delegated
-    depends_on:
-      - db
-    environment:
-      STAGE_FILE_PROXY_ORIGIN: "${STAGE_FILE_PROXY_ORIGIN}"
-      STAGE_FILE_PROXY_ORIGIN_DIR: "${STAGE_FILE_PROXY_ORIGIN_DIR}"
-      APP_ENV: "${APP_ENV:-local}"
-      DRUPAL_ROUTES: "https://varnish-${DRUPAL_HOSTNAME},https://helfi-proxy.docker.so,http://${COMPOSE_PROJECT_NAME}-varnish"
-      DRUPAL_REVERSE_PROXY_ADDRESS: helfi-proxy.docker.so
-      DRUSH_OPTIONS_URI: "https://${DRUPAL_HOSTNAME}"
-      # To enable xdebug, run `export XDEBUG_ENABLE=true` before (re)starting your project.
-      # Optionally, you can add this to your default environments variables to enable or disable
-      # xdebug by default (like /etc/environments, ~/.bashrc, or ~/.zshrc).
-      XDEBUG_ENABLE: "${XDEBUG_ENABLE:-false}"
-      # DOCKERHOST: host.docker.internal
-      # Use drush server to run functional tests so we don't have to care about
-      # permission issues.
-      SIMPLETEST_BASE_URL: "http://127.0.0.1:8888"
-      SIMPLETEST_DB: "mysql://drupal:drupal@db:3306/drupal"
-      BROWSERTEST_OUTPUT_BASE_URL: "https://${DRUPAL_HOSTNAME}"
-      DRUPAL_VARNISH_HOST: "${COMPOSE_PROJECT_NAME}-varnish"
-      DRUPAL_VARNISH_PORT: 6081
-      REDIS_HOST: redis
-      PROJECT_NAME: "${PROJECT_NAME}"
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-      - "${DRUPAL_HOSTNAME}:host-gateway"
-    networks:
-      - internal
-      - stonehenge-network
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-app.entrypoints=https"
-      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-app.rule=Host(`${DRUPAL_HOSTNAME}`)"
-      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-app.tls=true"
-      - "traefik.http.services.${COMPOSE_PROJECT_NAME}-app.loadbalancer.server.port=8080"
-      - "traefik.docker.network=stonehenge-network"
-  redis:
-    container_name: "${COMPOSE_PROJECT_NAME}-redis"
-    image: redis:7-alpine
-    command: [sh, -c, "rm -f /data/dump.rdb && redis-server --save ''"]
-    networks:
-      - internal
-  db:
-    container_name: "${COMPOSE_PROJECT_NAME}-db"
-    image: druidfi/mariadb:10.11-drupal
-    environment:
-      MARIADB_AUTO_UPGRADE: "1"
-      MARIADB_INITDB_SKIP_TZINFO: "1"
-    volumes:
-      - db_data:/var/lib/mysql
-    ports:
-      - 3306
-    networks:
-      - internal
-  varnish:
-    container_name: "${COMPOSE_PROJECT_NAME}-varnish"
-    image: druidfi/varnish:6-drupal
-    environment:
-      VARNISH_BACKEND_HOST: "${COMPOSE_PROJECT_NAME}-app"
-    depends_on:
-      - app
-    networks:
-      - internal
-      - stonehenge-network
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-varnish.entrypoints=https"
-      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-varnish.rule=Host(`varnish-${DRUPAL_HOSTNAME}`)"
-      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-varnish.tls=true"
-      - "traefik.http.services.${COMPOSE_PROJECT_NAME}-varnish.loadbalancer.server.port=6081"
-      - "traefik.docker.network=stonehenge-network"
-  robo:
-    image: ghcr.io/city-of-helsinki/drupal-robo:latest
-    shm_size: '2gb'
-    tty: true
-    volumes:
-      - .:/app:delegated
-    networks:
-      - internal
-      - stonehenge-network
-    depends_on:
-      - app
-    profiles:
-      - testing
-    extra_hosts:
-      - "${DRUPAL_HOSTNAME}:host-gateway"
-      - "varnish-${DRUPAL_HOSTNAME}:host-gateway"
-networks:
-  internal:
-    external: false
-  stonehenge-network:
-    external: true
 
-volumes:
-  db_data:
-  ssh:
-    name: stonehenge-ssh
-    external: true
+  cli:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: cli
+    labels:
+      lagoon.type: cli-persistent
+      lagoon.persistent.name: nginx # mount the persistent storage of nginx into this container
+      lagoon.persistent: /app/public/sites/default/files/ # location where the persistent storage should be mounted
+
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: nginx
+    labels:
+      lagoon.type: nginx-php-persistent
+      lagoon.persistent: /app/public/sites/default/files/ # define where the persistent storage should be mounted too
+
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: php
+    labels:
+      lagoon.type: nginx-php-persistent
+      lagoon.name: nginx # we want this service be part of the nginx pod in Lagoon
+      lagoon.persistent: /app/public/sites/default/files/ # define where the persistent storage should be mounted too
+
+  mariadb:
+    image: uselagoon/mariadb-10.6-drupal:latest
+    labels:
+      lagoon.type: mariadb

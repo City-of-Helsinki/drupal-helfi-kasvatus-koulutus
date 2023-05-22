@@ -1,38 +1,83 @@
-version: '3.7'
+#
+# These are service overrides for local development
+#
+
+x-environment:
+  &default-environment
+  # Route that should be used locally
+  LAGOON_ROUTE: &default-url "https://${DRUPAL_HOSTNAME}"
+  # Uncomment if you like to have the system behave like in production
+  #LAGOON_ENVIRONMENT_TYPE: production
+  XDEBUG_ENABLE: "${XDEBUG_ENABLE:-false}"
+  OMEN_TOKEN: "kissanpissa"
+  SSMTP_MAILHUB: "host.docker.internal:1025"
+
+x-volumes:
+  &default-volumes
+  # Define all volumes you would like to have real-time mounted into the docker containers
+  volumes:
+    - &app-volume .:/app:delegated
+    - &files-volume files:/app/public/sites/default/files
 
 services:
-  app:
+
+  cli:
+    container_name: ${COMPOSE_PROJECT_NAME}-cli
+    << : *default-volumes # loads the defined volumes from the top
+    volumes:
+      - *app-volume
+      - *files-volume
+      - ssh:/tmp/amazeeio_ssh-agent
+    user: root
     environment:
-      - ELASTIC_PROXY_URL=${ELASTIC_PROXY_URL}
-  elastic:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.4.0
-    container_name: "${COMPOSE_PROJECT_NAME}-elastic"
-    environment:
-      - node.name="${COMPOSE_PROJECT_NAME}-elastic"
-      - discovery.seed_hosts=elastic
-      - cluster.name=es-docker-cluster
-      - cluster.initial_master_nodes="${COMPOSE_PROJECT_NAME}-elastic"
-      - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-      - "http.cors.allow-origin=\"*\""
-      - "http.cors.enabled=true"
-      - "http.cors.allow-headers=X-Requested-With,X-Auth-Token,Content-Type,Content-Length,Authorization"
-      - "http.cors.allow-credentials=true"
-      - xpack.security.enabled=false
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
-    ports:
-      - 9200-9220:9200
-    networks:
-      - internal
-      - stonehenge-network
+      << : *default-environment # loads the defined environment variables from the top
+      SIMPLETEST_BASE_URL: "http://nginx:8080"
+      SIMPLETEST_DB: "mysql://drupal:drupal@mariadb:3306/drupal"
+
+  nginx:
+    container_name: ${COMPOSE_PROJECT_NAME}-nginx
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-elastic.entrypoints=https"
-      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-elastic.rule=Host(`elastic-${DRUPAL_HOSTNAME}`)"
-      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-elastic.tls=true"
-      - "traefik.http.services.${COMPOSE_PROJECT_NAME}-elastic.loadbalancer.server.port=9200"
+      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-nginx.entrypoints=https"
+      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-nginx.rule=Host(`${DRUPAL_HOSTNAME}`)"
+      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-nginx.tls=true"
+      - "traefik.http.services.${COMPOSE_PROJECT_NAME}-nginx.loadbalancer.server.port=8080"
       - "traefik.docker.network=stonehenge-network"
-      - "traefik.port=9200"
+    << : *default-volumes
+    depends_on:
+      - cli # basically just tells docker-compose to build the cli first
+    environment:
+      << : *default-environment # loads the defined environment variables from the top
+      NGINX_FASTCGI_PASS: ${COMPOSE_PROJECT_NAME}-php
+    networks:
+      - default
+      - stonehenge-network
+
+  php:
+    container_name: ${COMPOSE_PROJECT_NAME}-php
+    << : *default-volumes
+    depends_on:
+      - cli # basically just tells docker-compose to build the cli first
+    environment:
+      << : *default-environment # loads the defined environment variables from the top
+      DRUPAL_ROUTES: https://varnish-${DRUPAL_HOSTNAME}
+
+  mariadb:
+    container_name: ${COMPOSE_PROJECT_NAME}-db
+    ports:
+      - "3306" # exposes the port 3306 with a random local port, find it with `docker compose port mariadb 3306`
+    volumes:
+      - db:/var/lib/mysql
+
+networks:
+  stonehenge-network:
+    external: true
+
+volumes:
+  db:
+    {}
+  files:
+    {}
+  ssh:
+    name: stonehenge-ssh
+    external: true
