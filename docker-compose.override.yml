@@ -66,6 +66,7 @@ services:
       DRUPAL_DB_PASS: drupal
       DRUPAL_DB_NAME: drupal
       DRUPAL_DB_HOST: mariadb
+      APP_ENV: "${APP_ENV:-local}"
 
   mariadb:
     container_name: ${COMPOSE_PROJECT_NAME}-db
