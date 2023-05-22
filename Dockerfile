@@ -9,7 +9,7 @@ FROM uselagoon/php-${PHP_VERSION}-cli-drupal:latest as cli
 ARG WEBROOT
 
 COPY composer.json composer.lock /app/
-COPY patches /app/patches
+# COPY patches /app/patches
 
 RUN composer --ansi install --no-dev --optimize-autoloader --prefer-dist --no-progress
 
