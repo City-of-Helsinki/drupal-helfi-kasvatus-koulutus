@@ -1,0 +1,16 @@
+docker-compose-yaml: docker-compose.yml
+
+tasks:
+  post-rollout:
+    - run:
+        name: Drush deploy
+        command: drush deploy
+        service: cli
+
+environments:
+  lagoon:
+    cronjobs:
+      - name: drush cron
+        schedule: "H * * * *" # this will run the cron once per hour
+        command: drush cron
+        service: cli
