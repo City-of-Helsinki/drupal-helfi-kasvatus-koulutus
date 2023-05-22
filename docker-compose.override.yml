@@ -60,7 +60,12 @@ services:
       - cli # basically just tells docker-compose to build the cli first
     environment:
       << : *default-environment # loads the defined environment variables from the top
-      DRUPAL_ROUTES: https://varnish-${DRUPAL_HOSTNAME}
+      DRUPAL_ROUTES: "https://varnish-${DRUPAL_HOSTNAME},https://helfi-proxy.docker.so,http://${COMPOSE_PROJECT_NAME}-varnish"
+      DRUSH_OPTIONS_URI: "https://${DRUPAL_HOSTNAME}"
+      DRUPAL_DB_USER: drupal
+      DRUPAL_DB_PASS: drupal
+      DRUPAL_DB_NAME: drupal
+      DRUPAL_DB_HOST: mariadb
 
   mariadb:
     container_name: ${COMPOSE_PROJECT_NAME}-db
