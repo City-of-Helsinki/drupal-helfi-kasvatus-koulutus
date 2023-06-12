@@ -1,9 +1,9 @@
 {
-    "name": "city-of-helsinki/drupal-helfi-platform",
-    "description": "Drupal 9 started project",
+    "name": "city-of-Helsinki/drupal-helfi-kasvatus-koulutus",
+    "description": "Drupal instance for helfi-kasko",
     "type": "project",
     "license": "MIT",
-    "homepage": "https://github.com/City-of-Helsinki/drupal-helfi-platform",
+    "homepage": "https://github.com/City-of-Helsinki/drupal-helfi-kasvatus-koulutus",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
