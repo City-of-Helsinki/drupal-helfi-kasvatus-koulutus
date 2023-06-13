@@ -190,15 +190,15 @@ function helfi_kasko_content_helfi_paragraph_types() : array {
   ];
 
   $enabled = [];
-  foreach ($entities as $entityTypeId => $bundles) {
-    foreach ($bundles as $bundle => $fields) {
-      foreach ($fields as $field => $paragraphTypes) {
-        foreach ($paragraphTypes as $paragraphType) {
-          $enabled[] = new ParagraphTypeCollection($entityTypeId, $bundle, $field, $paragraphType);
-        }
-      }
-    }
-  }
+//  foreach ($entities as $entityTypeId => $bundles) {
+//    foreach ($bundles as $bundle => $fields) {
+//      foreach ($fields as $field => $paragraphTypes) {
+//        foreach ($paragraphTypes as $paragraphType) {
+//          $enabled[] = new ParagraphTypeCollection($entityTypeId, $bundle, $field, $paragraphType);
+//        }
+//      }
+//    }
+//  }
   return $enabled;
 }
 
