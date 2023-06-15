@@ -24,6 +24,7 @@ dependencies:
     - scheduler
     - system
     - toolbar
+    - view_unpublished
 id: school_editor
 label: 'Upper secondary school editor'
 weight: -4
@@ -65,6 +66,7 @@ permissions:
   - 'use text format full_html'
   - 'use text format minimal'
   - 'view all media revisions'
+  - 'view any unpublished content'
   - 'view editoria11y checker'
   - 'view own unpublished content'
   - 'view own unpublished media'

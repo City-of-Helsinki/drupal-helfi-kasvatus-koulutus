@@ -26,6 +26,7 @@ dependencies:
     - paragraphs.paragraphs_type.phasing
     - paragraphs.paragraphs_type.playground_search
     - paragraphs.paragraphs_type.remote_video
+    - paragraphs.paragraphs_type.service_list_search
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.unit_search
     - paragraphs.paragraphs_type.vocational_school_search
@@ -71,6 +72,7 @@ settings:
       after_school_activity_search: after_school_activity_search
       calculator: calculator
       playground_search: playground_search
+      service_list_search: service_list_search
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -80,7 +82,7 @@ settings:
         weight: 40
         enabled: false
       after_school_activity_search:
-        weight: 42
+        weight: 0
         enabled: true
       banner:
         weight: 0
@@ -152,7 +154,7 @@ settings:
         weight: 63
         enabled: false
       playground_search:
-        weight: 65
+        weight: 0
         enabled: true
       popular_service_item:
         weight: 64
@@ -170,8 +172,8 @@ settings:
         weight: 68
         enabled: false
       service_list_search:
-        weight: 69
-        enabled: false
+        weight: 0
+        enabled: true
       sidebar_text:
         weight: 70
         enabled: false

@@ -145,6 +145,7 @@ class UnitFormAlter extends NodeFormAlter {
         ->condition('menu_name', $menuNames, 'IN')
         ->sort('id')
         ->range(0, 1)
+        ->accessCheck(FALSE)
         ->execute();
 
       $menuLink = empty($results) ? MenuLinkContent::create([]) : MenuLinkContent::load(reset($results));
