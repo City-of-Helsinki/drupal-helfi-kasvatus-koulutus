@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e2f27f2a45e3ef48f35c6a7aa937bf40",
+    "content-hash": "df9a416fe3fd97aebe23ff6ff047288a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1788,30 +1788,30 @@
         },
         {
             "name": "drupal/better_exposed_filters",
-            "version": "5.0.0",
+            "version": "6.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/better_exposed_filters.git",
-                "reference": "8.x-5.0"
+                "reference": "6.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/better_exposed_filters-8.x-5.0.zip",
-                "reference": "8.x-5.0",
-                "shasum": "ef575591af202b5c6867841ce58e1f447455e502"
+                "url": "https://ftp.drupal.org/files/projects/better_exposed_filters-6.0.2.zip",
+                "reference": "6.0.2",
+                "shasum": "e06e8f88fab14942e4d3f71faaa64a30f136792c"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9",
+                "drupal/core": "^9 || ^10",
                 "drupal/jquery_ui": "^1.4",
-                "drupal/jquery_ui_datepicker": "^1.0",
+                "drupal/jquery_ui_datepicker": "^1.2",
                 "drupal/jquery_ui_slider": "^1.1",
                 "drupal/jquery_ui_touch_punch": "^1.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-5.0",
-                    "datestamp": "1634748760",
+                    "version": "6.0.2",
+                    "datestamp": "1666017720",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1836,12 +1836,16 @@
                     "homepage": "https://www.drupal.org/u/neslee-canil-pinto"
                 },
                 {
-                    "name": "jkopel",
-                    "homepage": "https://www.drupal.org/user/66207"
-                },
-                {
                     "name": "mikeker",
                     "homepage": "https://www.drupal.org/user/192273"
+                },
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/user/3580850"
+                },
+                {
+                    "name": "podarok",
+                    "homepage": "https://www.drupal.org/user/116002"
                 },
                 {
                     "name": "rlhawk",
@@ -5252,26 +5256,26 @@
         },
         {
             "name": "drupal/override_node_options",
-            "version": "2.6.0",
+            "version": "2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/override_node_options.git",
-                "reference": "8.x-2.6"
+                "reference": "8.x-2.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/override_node_options-8.x-2.6.zip",
-                "reference": "8.x-2.6",
-                "shasum": "bb164546d4d40e183a92173e44e7fd75cffdee38"
+                "url": "https://ftp.drupal.org/files/projects/override_node_options-8.x-2.7.zip",
+                "reference": "8.x-2.7",
+                "shasum": "2354c6164b5a5fcfec0b36be73606ae3f6869a97"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.6",
-                    "datestamp": "1606950754",
+                    "version": "8.x-2.7",
+                    "datestamp": "1676800639",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5801,29 +5805,31 @@
         },
         {
             "name": "drupal/redis",
-            "version": "1.5.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/redis.git",
-                "reference": "8.x-1.5"
+                "reference": "8.x-1.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/redis-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "4283333dc2bf405045765b83ca662acc409a6543"
+                "url": "https://ftp.drupal.org/files/projects/redis-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "602043bdad62ff047321121edcfde8abf3638c7c"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^9.3 || ^10"
             },
             "suggest": {
-                "predis/predis": "^1.1.1"
+                "ext-redis": "Required to use the PhpRedis as redis driver (^4.0|^5.0).",
+                "ext-relay": "Required to use the Relay as Redis driver (^0.5|^1.0).",
+                "predis/predis": "Required to use the Predis as redis driver (^1.1|^2.0)."
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1609972488",
+                    "version": "8.x-1.7",
+                    "datestamp": "1686175620",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5843,6 +5849,14 @@
                 {
                     "name": "Berdir",
                     "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "greg.1.anderson",
+                    "homepage": "https://www.drupal.org/user/438598"
+                },
+                {
+                    "name": "kporras07",
+                    "homepage": "https://www.drupal.org/user/1349780"
                 },
                 {
                     "name": "pounard",
@@ -6342,26 +6356,29 @@
         },
         {
             "name": "drupal/stage_file_proxy",
-            "version": "1.2.0",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/stage_file_proxy.git",
-                "reference": "8.x-1.2"
+                "reference": "2.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/stage_file_proxy-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "a0bea520c139a4b0b67738b0c54e7ee21af081da"
+                "url": "https://ftp.drupal.org/files/projects/stage_file_proxy-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "187019fdbb7b805a66068c6ca93d211f439d288b"
             },
             "require": {
-                "drupal/core": ">=8.7.7"
+                "drupal/core": "^9 || ^10"
+            },
+            "require-dev": {
+                "drush/drush": "^11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1637007759",
+                    "version": "2.0.2",
+                    "datestamp": "1670369228",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6369,7 +6386,7 @@
                 },
                 "drush": {
                     "services": {
-                        "stage_file_proxy.drush.services.yml": "^9 || ^10"
+                        "stage_file_proxy.drush.services.yml": "^11"
                     }
                 }
             },
@@ -6409,6 +6426,10 @@
                 {
                     "name": "robwilmshurst",
                     "homepage": "https://www.drupal.org/user/144488"
+                },
+                {
+                    "name": "smustgrave",
+                    "homepage": "https://www.drupal.org/user/3252890"
                 }
             ],
             "description": "Provides stage_file_proxy module.",
