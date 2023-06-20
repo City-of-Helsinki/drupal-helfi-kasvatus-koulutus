@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e2f27f2a45e3ef48f35c6a7aa937bf40",
+    "content-hash": "df9a416fe3fd97aebe23ff6ff047288a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1788,30 +1788,30 @@
         },
         {
             "name": "drupal/better_exposed_filters",
-            "version": "5.0.0",
+            "version": "6.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/better_exposed_filters.git",
-                "reference": "8.x-5.0"
+                "reference": "6.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/better_exposed_filters-8.x-5.0.zip",
-                "reference": "8.x-5.0",
-                "shasum": "ef575591af202b5c6867841ce58e1f447455e502"
+                "url": "https://ftp.drupal.org/files/projects/better_exposed_filters-6.0.2.zip",
+                "reference": "6.0.2",
+                "shasum": "e06e8f88fab14942e4d3f71faaa64a30f136792c"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9",
+                "drupal/core": "^9 || ^10",
                 "drupal/jquery_ui": "^1.4",
-                "drupal/jquery_ui_datepicker": "^1.0",
+                "drupal/jquery_ui_datepicker": "^1.2",
                 "drupal/jquery_ui_slider": "^1.1",
                 "drupal/jquery_ui_touch_punch": "^1.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-5.0",
-                    "datestamp": "1634748760",
+                    "version": "6.0.2",
+                    "datestamp": "1666017720",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1836,12 +1836,16 @@
                     "homepage": "https://www.drupal.org/u/neslee-canil-pinto"
                 },
                 {
-                    "name": "jkopel",
-                    "homepage": "https://www.drupal.org/user/66207"
-                },
-                {
                     "name": "mikeker",
                     "homepage": "https://www.drupal.org/user/192273"
+                },
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/user/3580850"
+                },
+                {
+                    "name": "podarok",
+                    "homepage": "https://www.drupal.org/user/116002"
                 },
                 {
                     "name": "rlhawk",
@@ -3919,16 +3923,16 @@
         },
         {
             "name": "drupal/hdbt",
-            "version": "5.4.1",
+            "version": "5.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "a35ebbd4ed6927e0d70f5eebf2b58552a779ddb4"
+                "reference": "48fcb57bbf2ec1d228af3ac56726b5a34d51357a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/a35ebbd4ed6927e0d70f5eebf2b58552a779ddb4",
-                "reference": "a35ebbd4ed6927e0d70f5eebf2b58552a779ddb4",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/48fcb57bbf2ec1d228af3ac56726b5a34d51357a",
+                "reference": "48fcb57bbf2ec1d228af3ac56726b5a34d51357a",
                 "shasum": ""
             },
             "require": {
@@ -3946,10 +3950,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/5.4.1",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/5.4.2",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2023-06-13T06:49:35+00:00"
+            "time": "2023-06-14T13:47:10+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
@@ -5252,26 +5256,26 @@
         },
         {
             "name": "drupal/override_node_options",
-            "version": "2.6.0",
+            "version": "2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/override_node_options.git",
-                "reference": "8.x-2.6"
+                "reference": "8.x-2.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/override_node_options-8.x-2.6.zip",
-                "reference": "8.x-2.6",
-                "shasum": "bb164546d4d40e183a92173e44e7fd75cffdee38"
+                "url": "https://ftp.drupal.org/files/projects/override_node_options-8.x-2.7.zip",
+                "reference": "8.x-2.7",
+                "shasum": "2354c6164b5a5fcfec0b36be73606ae3f6869a97"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.6",
-                    "datestamp": "1606950754",
+                    "version": "8.x-2.7",
+                    "datestamp": "1676800639",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5801,29 +5805,31 @@
         },
         {
             "name": "drupal/redis",
-            "version": "1.5.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/redis.git",
-                "reference": "8.x-1.5"
+                "reference": "8.x-1.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/redis-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "4283333dc2bf405045765b83ca662acc409a6543"
+                "url": "https://ftp.drupal.org/files/projects/redis-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "602043bdad62ff047321121edcfde8abf3638c7c"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^9.3 || ^10"
             },
             "suggest": {
-                "predis/predis": "^1.1.1"
+                "ext-redis": "Required to use the PhpRedis as redis driver (^4.0|^5.0).",
+                "ext-relay": "Required to use the Relay as Redis driver (^0.5|^1.0).",
+                "predis/predis": "Required to use the Predis as redis driver (^1.1|^2.0)."
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1609972488",
+                    "version": "8.x-1.7",
+                    "datestamp": "1686175620",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5843,6 +5849,14 @@
                 {
                     "name": "Berdir",
                     "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "greg.1.anderson",
+                    "homepage": "https://www.drupal.org/user/438598"
+                },
+                {
+                    "name": "kporras07",
+                    "homepage": "https://www.drupal.org/user/1349780"
                 },
                 {
                     "name": "pounard",
@@ -6342,26 +6356,29 @@
         },
         {
             "name": "drupal/stage_file_proxy",
-            "version": "1.2.0",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/stage_file_proxy.git",
-                "reference": "8.x-1.2"
+                "reference": "2.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/stage_file_proxy-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "a0bea520c139a4b0b67738b0c54e7ee21af081da"
+                "url": "https://ftp.drupal.org/files/projects/stage_file_proxy-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "187019fdbb7b805a66068c6ca93d211f439d288b"
             },
             "require": {
-                "drupal/core": ">=8.7.7"
+                "drupal/core": "^9 || ^10"
+            },
+            "require-dev": {
+                "drush/drush": "^11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1637007759",
+                    "version": "2.0.2",
+                    "datestamp": "1670369228",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6369,7 +6386,7 @@
                 },
                 "drush": {
                     "services": {
-                        "stage_file_proxy.drush.services.yml": "^9 || ^10"
+                        "stage_file_proxy.drush.services.yml": "^11"
                     }
                 }
             },
@@ -6409,6 +6426,10 @@
                 {
                     "name": "robwilmshurst",
                     "homepage": "https://www.drupal.org/user/144488"
+                },
+                {
+                    "name": "smustgrave",
+                    "homepage": "https://www.drupal.org/user/3252890"
                 }
             ],
             "description": "Provides stage_file_proxy module.",
@@ -7524,16 +7545,16 @@
         },
         {
             "name": "firebase/php-jwt",
-            "version": "v6.5.0",
+            "version": "v6.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "e94e7353302b0c11ec3cfff7180cd0b1743975d2"
+                "reference": "5a9cf79b4a2eb347230384648cc7b0d68cd97faa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/e94e7353302b0c11ec3cfff7180cd0b1743975d2",
-                "reference": "e94e7353302b0c11ec3cfff7180cd0b1743975d2",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/5a9cf79b4a2eb347230384648cc7b0d68cd97faa",
+                "reference": "5a9cf79b4a2eb347230384648cc7b0d68cd97faa",
                 "shasum": ""
             },
             "require": {
@@ -7581,9 +7602,9 @@
             ],
             "support": {
                 "issues": "https://github.com/firebase/php-jwt/issues",
-                "source": "https://github.com/firebase/php-jwt/tree/v6.5.0"
+                "source": "https://github.com/firebase/php-jwt/tree/v6.6.0"
             },
-            "time": "2023-05-12T15:47:07+00:00"
+            "time": "2023-06-13T17:11:06+00:00"
         },
         {
             "name": "galbar/jsonpath",
@@ -15194,24 +15215,30 @@
         },
         {
             "name": "drupal/coder",
-            "version": "8.3.15",
+            "version": "8.3.20",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/coder.git",
-                "reference": "0cfad3a21f1168bdc3030ae73351c31f88abba74"
+                "url": "https://github.com/pfrenssen/coder.git",
+                "reference": "88055e40931a56074b6510a631d3403794c91625"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pfrenssen/coder/zipball/88055e40931a56074b6510a631d3403794c91625",
+                "reference": "88055e40931a56074b6510a631d3403794c91625",
+                "shasum": ""
             },
             "require": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1 || ^1.0.0",
                 "ext-mbstring": "*",
-                "php": ">=7.1",
-                "sirbrillig/phpcs-variable-analysis": "^2.10",
-                "slevomat/coding-standard": "^7.0",
-                "squizlabs/php_codesniffer": "^3.6.0",
-                "symfony/yaml": ">=2.0.5"
+                "php": ">=7.2",
+                "sirbrillig/phpcs-variable-analysis": "^2.11.7",
+                "slevomat/coding-standard": "^8.11",
+                "squizlabs/php_codesniffer": "^3.7.1",
+                "symfony/yaml": ">=3.4.0"
             },
             "require-dev": {
-                "phpstan/phpstan": "^1.4.9",
-                "phpunit/phpunit": "^7.0 || ^8.0"
+                "phpstan/phpstan": "^1.7.12",
+                "phpunit/phpunit": "^8.0"
             },
             "type": "phpcodesniffer-standard",
             "autoload": {
@@ -15235,7 +15262,7 @@
                 "issues": "https://www.drupal.org/project/issues/coder",
                 "source": "https://www.drupal.org/project/coder"
             },
-            "time": "2022-04-02T17:56:30+00:00"
+            "time": "2023-06-15T07:16:09+00:00"
         },
         {
             "name": "drupal/core-dev",
@@ -16068,24 +16095,22 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.22.0",
+            "version": "1.20.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "ec58baf7b3c7f1c81b3b00617c953249fb8cf30c"
+                "reference": "7d568c87a9df9c5f7e8b5f075fc469aa8cb0a4cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/ec58baf7b3c7f1c81b3b00617c953249fb8cf30c",
-                "reference": "ec58baf7b3c7f1c81b3b00617c953249fb8cf30c",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/7d568c87a9df9c5f7e8b5f075fc469aa8cb0a4cd",
+                "reference": "7d568c87a9df9c5f7e8b5f075fc469aa8cb0a4cd",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0"
             },
             "require-dev": {
-                "doctrine/annotations": "^2.0",
-                "nikic/php-parser": "^4.15",
                 "php-parallel-lint/php-parallel-lint": "^1.2",
                 "phpstan/extension-installer": "^1.0",
                 "phpstan/phpstan": "^1.5",
@@ -16109,9 +16134,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.22.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.20.4"
             },
-            "time": "2023-06-01T12:35:21+00:00"
+            "time": "2023-05-02T09:19:37+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -17612,28 +17637,29 @@
         },
         {
             "name": "sirbrillig/phpcs-variable-analysis",
-            "version": "v2.11.3",
+            "version": "v2.11.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirbrillig/phpcs-variable-analysis.git",
-                "reference": "c921498b474212fe4552928bbeb68d70250ce5e8"
+                "reference": "dc5582dc5a93a235557af73e523c389aac9a8e88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirbrillig/phpcs-variable-analysis/zipball/c921498b474212fe4552928bbeb68d70250ce5e8",
-                "reference": "c921498b474212fe4552928bbeb68d70250ce5e8",
+                "url": "https://api.github.com/repos/sirbrillig/phpcs-variable-analysis/zipball/dc5582dc5a93a235557af73e523c389aac9a8e88",
+                "reference": "dc5582dc5a93a235557af73e523c389aac9a8e88",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0",
-                "squizlabs/php_codesniffer": "^3.5"
+                "squizlabs/php_codesniffer": "^3.5.6"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
-                "limedeck/phpunit-detailed-printer": "^3.1 || ^4.0 || ^5.0",
-                "phpstan/phpstan": "^0.11.8",
-                "phpunit/phpunit": "^5.0 || ^6.5 || ^7.0 || ^8.0",
-                "sirbrillig/phpcs-import-detection": "^1.1"
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7 || ^1.0",
+                "phpcsstandards/phpcsdevcs": "^1.1",
+                "phpstan/phpstan": "^1.7",
+                "phpunit/phpunit": "^4.8.36 || ^5.7.21 || ^6.5 || ^7.0 || ^8.0 || ^9.0",
+                "sirbrillig/phpcs-import-detection": "^1.1",
+                "vimeo/psalm": "^0.2 || ^0.3 || ^1.1 || ^4.24 || ^5.0@beta"
             },
             "type": "phpcodesniffer-standard",
             "autoload": {
@@ -17656,51 +17682,55 @@
                 }
             ],
             "description": "A PHPCS sniff to detect problems with variables.",
+            "keywords": [
+                "phpcs",
+                "static analysis"
+            ],
             "support": {
                 "issues": "https://github.com/sirbrillig/phpcs-variable-analysis/issues",
                 "source": "https://github.com/sirbrillig/phpcs-variable-analysis",
                 "wiki": "https://github.com/sirbrillig/phpcs-variable-analysis/wiki"
             },
-            "time": "2022-02-21T17:01:13+00:00"
+            "time": "2023-03-31T16:46:32+00:00"
         },
         {
             "name": "slevomat/coding-standard",
-            "version": "7.1",
+            "version": "8.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slevomat/coding-standard.git",
-                "reference": "b521bd358b5f7a7d69e9637fd139e036d8adeb6f"
+                "reference": "f69e2524e8770efb9b3e5ac4a0ebc0d54eb446d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/b521bd358b5f7a7d69e9637fd139e036d8adeb6f",
-                "reference": "b521bd358b5f7a7d69e9637fd139e036d8adeb6f",
+                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/f69e2524e8770efb9b3e5ac4a0ebc0d54eb446d7",
+                "reference": "f69e2524e8770efb9b3e5ac4a0ebc0d54eb446d7",
                 "shasum": ""
             },
             "require": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2 || ^0.7",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2 || ^0.7 || ^1.0",
                 "php": "^7.2 || ^8.0",
-                "phpstan/phpdoc-parser": "^1.4.1",
-                "squizlabs/php_codesniffer": "^3.6.2"
+                "phpstan/phpdoc-parser": ">=1.20.0 <1.21.0",
+                "squizlabs/php_codesniffer": "^3.7.1"
             },
             "require-dev": {
-                "phing/phing": "2.17.2",
+                "phing/phing": "2.17.4",
                 "php-parallel-lint/php-parallel-lint": "1.3.2",
-                "phpstan/phpstan": "1.4.10|1.5.2",
-                "phpstan/phpstan-deprecation-rules": "1.0.0",
-                "phpstan/phpstan-phpunit": "1.0.0|1.1.0",
-                "phpstan/phpstan-strict-rules": "1.1.0",
-                "phpunit/phpunit": "7.5.20|8.5.21|9.5.19"
+                "phpstan/phpstan": "1.10.15",
+                "phpstan/phpstan-deprecation-rules": "1.1.3",
+                "phpstan/phpstan-phpunit": "1.3.11",
+                "phpstan/phpstan-strict-rules": "1.5.1",
+                "phpunit/phpunit": "7.5.20|8.5.21|9.6.8|10.1.3"
             },
             "type": "phpcodesniffer-standard",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "7.x-dev"
+                    "dev-master": "8.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "SlevomatCodingStandard\\": "SlevomatCodingStandard"
+                    "SlevomatCodingStandard\\": "SlevomatCodingStandard/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -17708,9 +17738,13 @@
                 "MIT"
             ],
             "description": "Slevomat Coding Standard for PHP_CodeSniffer complements Consistence Coding Standard by providing sniffs with additional checks.",
+            "keywords": [
+                "dev",
+                "phpcs"
+            ],
             "support": {
                 "issues": "https://github.com/slevomat/coding-standard/issues",
-                "source": "https://github.com/slevomat/coding-standard/tree/7.1"
+                "source": "https://github.com/slevomat/coding-standard/tree/8.12.1"
             },
             "funding": [
                 {
@@ -17722,20 +17756,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-29T12:44:16+00:00"
+            "time": "2023-05-15T21:42:25+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.6.2",
+            "version": "3.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "5e4e71592f69da17871dba6e80dd51bce74a351a"
+                "reference": "ed8e00df0a83aa96acf703f8c2979ff33341f879"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/5e4e71592f69da17871dba6e80dd51bce74a351a",
-                "reference": "5e4e71592f69da17871dba6e80dd51bce74a351a",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/ed8e00df0a83aa96acf703f8c2979ff33341f879",
+                "reference": "ed8e00df0a83aa96acf703f8c2979ff33341f879",
                 "shasum": ""
             },
             "require": {
@@ -17771,14 +17805,15 @@
             "homepage": "https://github.com/squizlabs/PHP_CodeSniffer",
             "keywords": [
                 "phpcs",
-                "standards"
+                "standards",
+                "static analysis"
             ],
             "support": {
                 "issues": "https://github.com/squizlabs/PHP_CodeSniffer/issues",
                 "source": "https://github.com/squizlabs/PHP_CodeSniffer",
                 "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
             },
-            "time": "2021-12-12T21:44:58+00:00"
+            "time": "2023-02-22T23:07:41+00:00"
         },
         {
             "name": "symfony/browser-kit",
