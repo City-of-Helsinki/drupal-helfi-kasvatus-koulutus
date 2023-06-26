@@ -2,14 +2,14 @@
 
 declare(strict_types = 1);
 
-namespace Drupal\helfi_group\Plugin\GroupContentEnabler;
+namespace Drupal\helfi_group\Plugin\Group\Relation;
 
-use Drupal\group\Plugin\GroupContentEnablerBase;
+use Drupal\group\Plugin\Group\Relation\GroupRelationBase;
 
 /**
- * Provides a group content enabler for TPR Units.
+ * Provides a group relation type for TPR Units.
  *
- * @GroupContentEnabler(
+ * @GroupRelationType(
  *   id = "group_tpr_unit",
  *   label = @Translation("Group TPR unit"),
  *   description = @Translation("Adds TPR units to groups."),
@@ -23,5 +23,5 @@ use Drupal\group\Plugin\GroupContentEnablerBase;
  *   }
  * )
  */
-class GroupTprUnit extends GroupContentEnablerBase {
+class GroupTprUnit extends GroupRelationBase {
 }
