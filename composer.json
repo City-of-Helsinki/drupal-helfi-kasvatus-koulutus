@@ -12,6 +12,7 @@
         "drupal/better_exposed_filters": "^6.0",
         "drupal/core": "^9.4",
         "drupal/core-composer-scaffold": "^9.4",
+        "drupal/flexible_permissions": "^1.0",
         "drupal/group": "^2",
         "drupal/group_content_menu": "^2",
         "drupal/hdbt": "^5.0",
