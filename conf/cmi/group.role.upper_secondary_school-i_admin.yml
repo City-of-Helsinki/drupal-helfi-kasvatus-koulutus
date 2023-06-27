@@ -1,0 +1,15 @@
+uuid: 4541bd25-8f60-440f-b252-5bdc24ecd204
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+    - user.role.admin
+id: upper_secondary_school-i_admin
+label: 'Insider admin'
+weight: 7
+admin: true
+scope: insider
+global_role: admin
+group_type: upper_secondary_school
+permissions: {  }

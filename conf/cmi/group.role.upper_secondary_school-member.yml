@@ -4,13 +4,14 @@ status: true
 dependencies:
   config:
     - group.type.upper_secondary_school
+    - user.role.school_editor
 id: upper_secondary_school-member
 label: Member
 weight: -100
-internal: true
-audience: member
+admin: false
+scope: insider
+global_role: school_editor
 group_type: upper_secondary_school
-permissions_ui: true
 permissions:
   - 'access group content menu overview'
   - 'access group_node overview'

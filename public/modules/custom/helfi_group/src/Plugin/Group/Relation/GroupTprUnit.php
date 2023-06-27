@@ -18,8 +18,8 @@ use Drupal\group\Plugin\Group\Relation\GroupRelationBase;
  *   reference_label = @Translation("Title"),
  *   reference_description = @Translation("The title of the TPR Unit to add to the group"),
  *   handlers = {
- *     "access" = "Drupal\group\Plugin\GroupContentAccessControlHandler",
- *     "permission_provider" = "Drupal\group\Plugin\GroupContentPermissionProvider",
+ *     "access" = "Drupal\group\Plugin\Group\RelationHandlerDefault\AccessControl",
+ *     "permission_provider" = "Drupal\group\Plugin\Group\RelationHandlerDefault\PermissionProvider",
  *   }
  * )
  */

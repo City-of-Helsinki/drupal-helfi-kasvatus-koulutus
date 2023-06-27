@@ -7,10 +7,10 @@ dependencies:
 id: upper_secondary_school-admin
 label: 'School admin'
 weight: 6
-internal: false
-audience: member
+admin: false
+scope: individual
+global_role: null
 group_type: upper_secondary_school
-permissions_ui: true
 permissions:
   - 'access group content menu overview'
   - 'access group_node overview'
