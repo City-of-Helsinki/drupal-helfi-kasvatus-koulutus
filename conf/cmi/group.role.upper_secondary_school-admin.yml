@@ -19,6 +19,7 @@ permissions:
   - 'administer members'
   - 'create group_node:landing_page content'
   - 'create group_node:landing_page entity'
+  - 'create group_node:landing_page relationship'
   - 'create group_node:news_item content'
   - 'create group_node:news_item entity'
   - 'create group_node:page content'

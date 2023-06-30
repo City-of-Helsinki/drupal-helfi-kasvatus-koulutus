@@ -17,6 +17,7 @@ permissions:
   - 'access group_node overview'
   - 'access group_tpr_unit overview'
   - 'create group_node:landing_page entity'
+  - 'create group_node:landing_page relationship'
   - 'create group_node:news_item entity'
   - 'create group_node:page entity'
   - 'create group_tpr_unit content'
