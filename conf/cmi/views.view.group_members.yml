@@ -1,3 +1,4 @@
+uuid: 96fa930c-3f22-40e3-b666-1d5890af071d
 langcode: en
 status: true
 dependencies:
@@ -490,13 +491,13 @@ display:
           hide_alter_empty: true
           destination: true
           fields:
-            view_group_content: view_group_content
             edit_group_content: edit_group_content
             delete_group_content: delete_group_content
             name: '0'
             group_roles: '0'
             changed: '0'
             created: '0'
+            view_group_content: '0'
       pager:
         type: full
         options:
