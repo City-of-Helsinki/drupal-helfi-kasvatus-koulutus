@@ -95,7 +95,8 @@
                 "https://www.drupal.org/project/group/issues/2815971": "https://www.drupal.org/files/issues/2023-06-13/group-context-2815971-46.patch"
             },
             "drupal/group_content_menu": {
-                "https://www.drupal.org/project/group_content_menu/issues/3209011": "https://www.drupal.org/files/issues/2021-04-21/group_content_menu-active_trail_cache_problem-3209011-10.patch"
+                "https://www.drupal.org/project/group_content_menu/issues/3209011": "https://www.drupal.org/files/issues/2021-04-21/group_content_menu-active_trail_cache_problem-3209011-10.patch",
+                "concat array with null fix": "./patches/group_menu_content_array_concat_error.patch"
             }
         }
     },
