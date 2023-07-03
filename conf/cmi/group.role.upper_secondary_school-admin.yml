@@ -49,7 +49,6 @@ permissions:
   - 'delete own group_tpr_unit content'
   - 'edit group'
   - 'leave group'
-  - 'manage group_content_menu'
   - 'manage group_content_menu menu items'
   - 'update any group_node:landing_page content'
   - 'update any group_node:landing_page entity'
