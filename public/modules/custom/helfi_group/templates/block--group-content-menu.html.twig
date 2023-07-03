@@ -46,6 +46,9 @@
       {% set link_attributes = {
         'id': section_menu_title_link,
         'aria-current':  section_menu_title_current,
+        'class': [
+          'sidebar-navigation__title-link',
+        ],
       } %}
 
       {{ link(link_title, link_url, link_attributes) }}
