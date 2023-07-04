@@ -7,7 +7,7 @@ dependencies:
     - user.role.admin
 id: upper_secondary_school-i_admin
 label: 'Insider admin'
-weight: 7
+weight: -6
 admin: true
 scope: insider
 global_role: admin

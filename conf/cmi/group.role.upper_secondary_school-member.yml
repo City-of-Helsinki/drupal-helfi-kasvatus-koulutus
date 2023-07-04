@@ -7,7 +7,7 @@ dependencies:
     - user.role.school_editor
 id: upper_secondary_school-member
 label: Member
-weight: -100
+weight: -8
 admin: false
 scope: insider
 global_role: school_editor

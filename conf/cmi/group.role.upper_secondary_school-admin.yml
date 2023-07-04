@@ -6,7 +6,7 @@ dependencies:
     - group.type.upper_secondary_school
 id: upper_secondary_school-admin
 label: 'School admin'
-weight: 6
+weight: -7
 admin: false
 scope: individual
 global_role: null
