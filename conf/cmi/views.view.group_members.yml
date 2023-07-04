@@ -7,14 +7,12 @@ dependencies:
   module:
     - group
     - user
-_core:
-  default_config_hash: zIcnLmbW8inPRIQdPSVbKPuG2o5G5wHGJED4Jlgb2SY
 id: group_members
 label: 'Group members'
 module: group
 description: ''
 tag: ''
-base_table: group_content_field_data
+base_table: group_relationship_field_data
 base_field: id
 display:
   default:
@@ -135,7 +133,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: '<div class="item-list"><ul><li>&lt;none&gt;</li></ul></div>'
+          empty: None
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -155,7 +153,7 @@ display:
           field_api_classes: false
         changed:
           id: changed
-          table: group_content_field_data
+          table: group_relationship_field_data
           field: changed
           relationship: none
           group_type: group
@@ -222,7 +220,7 @@ display:
           field_api_classes: false
         created:
           id: created
-          table: group_content_field_data
+          table: group_relationship_field_data
           field: created
           relationship: none
           group_type: group
@@ -287,9 +285,62 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        view_group_content:
+          id: view_group_content
+          table: group_relationship
+          field: view_group_content
+          relationship: none
+          group_type: group
+          admin_label: 'View member link'
+          entity_type: group_content
+          plugin_id: entity_link
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: 'View member'
+          output_url_as_text: false
+          absolute: false
         edit_group_content:
           id: edit_group_content
-          table: group_content
+          table: group_relationship
           field: edit_group_content
           relationship: none
           group_type: group
@@ -337,12 +388,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: 'Edit membership'
-          output_url_as_text: false
-          absolute: false
+          text: 'Edit member'
         delete_group_content:
           id: delete_group_content
-          table: group_content
+          table: group_relationship
           field: delete_group_content
           relationship: none
           group_type: group
@@ -390,9 +439,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: 'Remove membership'
-          output_url_as_text: false
-          absolute: false
+          text: 'Remove member'
         dropbutton:
           id: dropbutton
           table: views
@@ -444,13 +491,13 @@ display:
           hide_alter_empty: true
           destination: true
           fields:
-            view_group_content: view_group_content
             edit_group_content: edit_group_content
             delete_group_content: delete_group_content
             name: '0'
             group_roles: '0'
             changed: '0'
             created: '0'
+            view_group_content: '0'
       pager:
         type: full
         options:
@@ -505,7 +552,7 @@ display:
       arguments:
         gid:
           id: gid
-          table: group_content_field_data
+          table: group_relationship_field_data
           field: gid
           relationship: none
           group_type: group
@@ -636,7 +683,7 @@ display:
       relationships:
         gc__user:
           id: gc__user
-          table: group_content_field_data
+          table: group_relationship_field_data
           field: gc__user
           relationship: none
           group_type: group

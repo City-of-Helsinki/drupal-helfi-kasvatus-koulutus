@@ -13,8 +13,8 @@
         "drupal/core": "^9.4",
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/flexible_permissions": "^1.0",
-        "drupal/group": "^1.4",
-        "drupal/group_content_menu": "^1.1",
+        "drupal/group": "^2.0",
+        "drupal/group_content_menu": "^2.0",
         "drupal/hdbt": "^5.0",
         "drupal/hdbt_admin": "^2.0",
         "drupal/helfi_azure_fs": "^1.1",
@@ -92,13 +92,11 @@
         },
         "patches": {
             "drupal/group": {
-                "https://www.drupal.org/project/group/issues/2842630": "https://www.drupal.org/files/issues/2019-01-04/2842630-20.patch",
-                "https://www.drupal.org/project/group/issues/2815971": "https://www.drupal.org/files/issues/2021-02-19/2815971-28.patch",
-                "https://www.drupal.org/project/group/issues/3210808": "https://www.drupal.org/files/issues/2021-04-26/uasort-comparison-3210808-2.patch",
-                "https://www.drupal.org/project/group/issues/3036272": "https://www.drupal.org/files/issues/2019-02-27/group_type_language_settings-3036272-2.patch"
+                "https://www.drupal.org/project/group/issues/2815971": "https://www.drupal.org/files/issues/2023-06-13/group-context-2815971-46.patch"
             },
             "drupal/group_content_menu": {
-                "https://www.drupal.org/project/group_content_menu/issues/3209011": "https://www.drupal.org/files/issues/2021-04-21/group_content_menu-active_trail_cache_problem-3209011-10.patch"
+                "https://www.drupal.org/project/group_content_menu/issues/3209011": "https://www.drupal.org/files/issues/2021-04-21/group_content_menu-active_trail_cache_problem-3209011-10.patch",
+                "concat array with null fix": "./patches/group_menu_content_array_concat_error.patch"
             }
         }
     },

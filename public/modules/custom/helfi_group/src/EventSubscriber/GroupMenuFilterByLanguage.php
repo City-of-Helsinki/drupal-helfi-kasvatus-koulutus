@@ -10,8 +10,6 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
  * Filters out the untranslated menu links.
- *
- * @note this requires a patch from #3091246.
  */
 final class GroupMenuFilterByLanguage implements EventSubscriberInterface {
 

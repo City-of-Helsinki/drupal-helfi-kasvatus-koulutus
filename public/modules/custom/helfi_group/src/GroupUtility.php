@@ -6,7 +6,7 @@ namespace Drupal\helfi_group;
 
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\group\Entity\Group;
-use Drupal\group\Entity\GroupContent;
+use Drupal\group\Entity\GroupRelationship;
 
 /**
  * Contains helper functions for groups.
@@ -23,13 +23,8 @@ class GroupUtility {
    *   The group that contains the node or NULL.
    */
   public static function getGroup(ContentEntityInterface $entity): ?Group {
-    $groupContents = GroupContent::loadByEntity($entity);
-    $group = NULL;
-    foreach ($groupContents as $groupContent) {
-      $group = $groupContent->getGroup();
-      break;
-    }
-    return $group;
+    $groupContents = GroupRelationship::loadByEntity($entity);
+    return !empty($groupContents) ? reset($groupContents)->getGroup() : NULL;
   }
 
 }

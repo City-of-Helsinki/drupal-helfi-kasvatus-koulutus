@@ -26,7 +26,7 @@ class UnitFormAlter extends NodeFormAlter {
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
-  public function alter(array &$form, FormStateInterface $form_state) {
+  public function alter(array &$form, FormStateInterface $form_state): void {
     $unit = $form_state->getFormObject()->getEntity();
     $groups = $this->getEntityGroups($form_state, $unit);
 
@@ -111,7 +111,7 @@ class UnitFormAlter extends NodeFormAlter {
 
     $group_ids = [];
     foreach ($groupContents as $groupContent) {
-      /** @var \Drupal\group\Entity\GroupContent $groupContent */
+      /** @var \Drupal\group\Entity\GroupRelationship $groupContent */
       $group_ids[] = $groupContent->getGroup()->id();
     }
 
