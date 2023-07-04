@@ -1,0 +1,23 @@
+uuid: d464efcc-0e0f-42c9-9efa-609099483b3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+    - user.role.anonymous
+id: upper_secondary_school-anonymous
+label: Anonymous
+weight: -10
+admin: false
+scope: outsider
+global_role: anonymous
+group_type: upper_secondary_school
+permissions:
+  - 'view group_node:landing_page content'
+  - 'view group_node:landing_page entity'
+  - 'view group_node:news_item content'
+  - 'view group_node:news_item entity'
+  - 'view group_node:page content'
+  - 'view group_node:page entity'
+  - 'view group_tpr_unit content'
+  - 'view group_tpr_unit entity'
