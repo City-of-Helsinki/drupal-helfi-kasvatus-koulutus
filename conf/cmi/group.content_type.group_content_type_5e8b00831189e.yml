@@ -8,8 +8,6 @@ dependencies:
     - helfi_group
     - helfi_tpr
 id: group_content_type_5e8b00831189e
-label: 'Upper secondary school: Group TPR unit'
-description: 'Adds TPR units to groups.'
 group_type: upper_secondary_school
 content_plugin: group_tpr_unit
 plugin_config:

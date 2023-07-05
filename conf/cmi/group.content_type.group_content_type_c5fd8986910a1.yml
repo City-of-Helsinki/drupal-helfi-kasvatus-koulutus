@@ -8,8 +8,6 @@ dependencies:
   module:
     - group_content_menu
 id: group_content_type_c5fd8986910a1
-label: 'Upper secondary school: Group menu (Kasko group menu)'
-description: 'Adds <em class="placeholder">Kasko group menu</em> menu items to groups.'
 group_type: upper_secondary_school
 content_plugin: 'group_content_menu:kasko_group_menu'
 plugin_config:

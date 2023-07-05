@@ -7,8 +7,6 @@ dependencies:
   module:
     - user
 id: group_content_type_c28cd27128f0f
-label: 'Upper secondary school: Group membership'
-description: 'Adds users to groups as members.'
 group_type: upper_secondary_school
 content_plugin: group_membership
 plugin_config:

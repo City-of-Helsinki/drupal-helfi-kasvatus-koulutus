@@ -21,7 +21,7 @@ dependencies:
     - readonly_field_widget
     - select2
 _core:
-  default_config_hash: g-ZdiLH0rHr8Mv6vni5A3v5v2UQGRdwiwPxs88WA93E
+  default_config_hash: cotjiL17Qafj5pirtPax237aflvFs_-3pKHSP6wblrg
 id: tpr_unit.tpr_unit.default
 targetEntityType: tpr_unit
 bundle: tpr_unit
@@ -81,6 +81,16 @@ content:
     type: readonly_field_widget
     weight: 15
     region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  contacts:
+    type: readonly_field_widget
+    region: content
+    weight: 36
     settings:
       label: above
       formatter_type: null
@@ -206,6 +216,16 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  highlights:
+    type: readonly_field_widget
+    region: content
+    weight: 32
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 0
@@ -217,6 +237,16 @@ content:
     type: readonly_field_widget
     weight: 17
     region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  links:
+    type: readonly_field_widget
+    region: content
+    weight: 35
     settings:
       label: above
       formatter_type: null
@@ -251,6 +281,26 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  opening_hours:
+    type: readonly_field_widget
+    region: content
+    weight: 31
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  other_info:
+    type: readonly_field_widget
+    region: content
+    weight: 33
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
   path:
     type: path
     weight: 11
@@ -283,6 +333,16 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  price_info:
+    type: readonly_field_widget
+    region: content
+    weight: 34
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
     third_party_settings: {  }
   provided_languages:
     type: readonly_field_widget

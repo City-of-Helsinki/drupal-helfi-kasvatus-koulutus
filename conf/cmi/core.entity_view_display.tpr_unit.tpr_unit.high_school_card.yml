@@ -213,6 +213,7 @@ content:
     weight: 13
     region: content
 hidden:
+  contacts: true
   created: true
   field_categories: true
   field_districts: true
@@ -222,7 +223,10 @@ hidden:
   highlights: true
   langcode: true
   latitude: true
+  links: true
   longitude: true
+  other_info: true
+  price_info: true
   provided_languages: true
   search_api_excerpt: true
   show_www: true
