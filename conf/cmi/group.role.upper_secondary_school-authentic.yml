@@ -1,0 +1,23 @@
+uuid: 6abf7e72-1fa9-4caa-92fd-8f47a91d0916
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+    - user.role.authenticated
+id: upper_secondary_school-authentic
+label: Authenticated
+weight: -9
+admin: false
+scope: outsider
+global_role: authenticated
+group_type: upper_secondary_school
+permissions:
+  - 'view group_node:landing_page content'
+  - 'view group_node:landing_page entity'
+  - 'view group_node:news_item content'
+  - 'view group_node:news_item entity'
+  - 'view group_node:page content'
+  - 'view group_node:page entity'
+  - 'view group_tpr_unit content'
+  - 'view group_tpr_unit entity'

@@ -504,14 +504,14 @@ display:
       arguments:
         gid:
           id: gid
-          table: group_content_field_data
+          table: group_relationship_field_data
           field: gid
           relationship: group_content
           group_type: group
           admin_label: ''
           entity_type: group_content
           entity_field: gid
-          plugin_id: numeric
+          plugin_id: group_id
           default_action: 'access denied'
           exception:
             value: all

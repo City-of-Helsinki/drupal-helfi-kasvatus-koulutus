@@ -1,0 +1,15 @@
+uuid: c756632f-2294-4a9b-9ff6-f090fa0ca8b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+    - user.role.admin
+id: upper_secondary_school-o_admin
+label: 'Outsider admin'
+weight: -5
+admin: true
+scope: outsider
+global_role: admin
+group_type: upper_secondary_school
+permissions: {  }
