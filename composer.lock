@@ -2108,16 +2108,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.5.9",
+            "version": "9.5.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "c3b194f9056a297f6d72e54056c818843cab9aba"
+                "reference": "c84bab7403943fbc4ed90ffcdde4460a94642b06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/c3b194f9056a297f6d72e54056c818843cab9aba",
-                "reference": "c3b194f9056a297f6d72e54056c818843cab9aba",
+                "url": "https://api.github.com/repos/drupal/core/zipball/c84bab7403943fbc4ed90ffcdde4460a94642b06",
+                "reference": "c84bab7403943fbc4ed90ffcdde4460a94642b06",
                 "shasum": ""
             },
             "require": {
@@ -2269,9 +2269,9 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.5.9"
+                "source": "https://github.com/drupal/core/tree/9.5.10"
             },
-            "time": "2023-05-03T13:26:12+00:00"
+            "time": "2023-07-05T09:26:59+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -2702,7 +2702,7 @@
                     "homepage": "https://www.drupal.org/user/3094661"
                 },
                 {
-                    "name": "RenatoG",
+                    "name": "renatog",
                     "homepage": "https://www.drupal.org/user/3326031"
                 },
                 {
@@ -3698,17 +3698,17 @@
         },
         {
             "name": "drupal/focal_point",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/focal_point.git",
-                "reference": "2.0.0"
+                "reference": "2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/focal_point-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "ff677594c632b4b87aaace39a90a8cdf48ec3ed4"
+                "url": "https://ftp.drupal.org/files/projects/focal_point-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "2af4bb7f305735adbc216de742f0fa02bba6457b"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10",
@@ -3722,8 +3722,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1681277837",
+                    "version": "2.0.1",
+                    "datestamp": "1689093654",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3986,16 +3986,16 @@
         },
         {
             "name": "drupal/hdbt",
-            "version": "5.4.8",
+            "version": "5.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "23f279fa95516444766b092a9ffbc910230395fe"
+                "reference": "e01ee76d87f8d93759f34de45716c72f89282852"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/23f279fa95516444766b092a9ffbc910230395fe",
-                "reference": "23f279fa95516444766b092a9ffbc910230395fe",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/e01ee76d87f8d93759f34de45716c72f89282852",
+                "reference": "e01ee76d87f8d93759f34de45716c72f89282852",
                 "shasum": ""
             },
             "require": {
@@ -4013,23 +4013,23 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/5.4.8",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/5.4.11",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2023-06-30T06:23:42+00:00"
+            "time": "2023-07-12T05:31:39+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
-            "version": "2.0.9",
+            "version": "2.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt-admin.git",
-                "reference": "391983675279b504ef09ea9bb98a28245bd42ed4"
+                "reference": "e7c3e4a71a4a3cc15302979feca014b4ef3d0155"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/391983675279b504ef09ea9bb98a28245bd42ed4",
-                "reference": "391983675279b504ef09ea9bb98a28245bd42ed4",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/e7c3e4a71a4a3cc15302979feca014b4ef3d0155",
+                "reference": "e7c3e4a71a4a3cc15302979feca014b4ef3d0155",
                 "shasum": ""
             },
             "require": {
@@ -4037,7 +4037,7 @@
                 "drupal/gin": "3.0.0-rc3"
             },
             "conflict": {
-                "drupal/helfi_platform_config": "<3.0"
+                "drupal/helfi_platform_config": "<3.1.12"
             },
             "type": "drupal-theme",
             "license": [
@@ -4048,10 +4048,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/2.0.9",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/2.0.11",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/issues"
             },
-            "time": "2023-06-08T06:52:48+00:00"
+            "time": "2023-07-07T14:29:20+00:00"
         },
         {
             "name": "drupal/health_check",
@@ -4105,16 +4105,16 @@
         },
         {
             "name": "drupal/helfi_api_base",
-            "version": "2.4.15",
+            "version": "2.4.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base.git",
-                "reference": "b1782248c7b28101581d42a84763ec029acacb3c"
+                "reference": "82ee1db1d99eb46a8c3e2ce5b88a0f6df204e383"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-api-base/zipball/b1782248c7b28101581d42a84763ec029acacb3c",
-                "reference": "b1782248c7b28101581d42a84763ec029acacb3c",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-api-base/zipball/82ee1db1d99eb46a8c3e2ce5b88a0f6df204e383",
+                "reference": "82ee1db1d99eb46a8c3e2ce5b88a0f6df204e383",
                 "shasum": ""
             },
             "require": {
@@ -4140,10 +4140,10 @@
             ],
             "description": "Helfi - API Base",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base/tree/2.4.15",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base/tree/2.4.16",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base/issues"
             },
-            "time": "2023-06-21T10:52:50+00:00"
+            "time": "2023-07-10T06:57:27+00:00"
         },
         {
             "name": "drupal/helfi_azure_fs",
@@ -4246,16 +4246,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "3.1.8",
+            "version": "3.1.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "9851169899630c1b9f62a065a7829e6dbca7cc6c"
+                "reference": "eba9800c0b87d8662b649136ed98b8d2b83c2469"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/9851169899630c1b9f62a065a7829e6dbca7cc6c",
-                "reference": "9851169899630c1b9f62a065a7829e6dbca7cc6c",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/eba9800c0b87d8662b649136ed98b8d2b83c2469",
+                "reference": "eba9800c0b87d8662b649136ed98b8d2b83c2469",
                 "shasum": ""
             },
             "require": {
@@ -4358,10 +4358,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/3.1.8",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/3.1.12",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2023-07-04T06:10:59+00:00"
+            "time": "2023-07-07T14:20:32+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -5008,17 +5008,17 @@
         },
         {
             "name": "drupal/linkit",
-            "version": "6.0.0-rc2",
+            "version": "6.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/linkit.git",
-                "reference": "6.0.0-rc2"
+                "reference": "6.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/linkit-6.0.0-rc2.zip",
-                "reference": "6.0.0-rc2",
-                "shasum": "69274e63d5312594cb3444656c6a0ec3800d0df4"
+                "url": "https://ftp.drupal.org/files/projects/linkit-6.0.0.zip",
+                "reference": "6.0.0",
+                "shasum": "3c4143eb797abee04e5af47eb1885a65e6321b51"
             },
             "require": {
                 "drupal/core": "^9.4 || ^10.0.0"
@@ -5033,11 +5033,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.0.0-rc2",
-                    "datestamp": "1688055675",
+                    "version": "6.0.0",
+                    "datestamp": "1688748025",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -7064,17 +7064,17 @@
         },
         {
             "name": "drupal/views_infinite_scroll",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/views_infinite_scroll.git",
-                "reference": "2.0.1"
+                "reference": "2.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_infinite_scroll-2.0.1.zip",
-                "reference": "2.0.1",
-                "shasum": "c57a2c63f00c53a9ee7e741c7f37df21eb9e76de"
+                "url": "https://ftp.drupal.org/files/projects/views_infinite_scroll-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "8b2b935d1e5d94d7ad068d099512d3b915efb41f"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10"
@@ -7082,8 +7082,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.1",
-                    "datestamp": "1664716655",
+                    "version": "2.0.2",
+                    "datestamp": "1689001933",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7095,6 +7095,14 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
+                {
+                    "name": "Anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
+                },
+                {
+                    "name": "Grevil",
+                    "homepage": "https://www.drupal.org/user/3668491"
+                },
                 {
                     "name": "Honza Pobořil",
                     "homepage": "https://www.drupal.org/user/123612"
@@ -7110,6 +7118,10 @@
                 {
                     "name": "Sam152",
                     "homepage": "https://www.drupal.org/user/1485048"
+                },
+                {
+                    "name": "thomas.frobieter",
+                    "homepage": "https://www.drupal.org/user/409335"
                 }
             ],
             "description": "A pager which allows an infinite scroll effect for views.",
