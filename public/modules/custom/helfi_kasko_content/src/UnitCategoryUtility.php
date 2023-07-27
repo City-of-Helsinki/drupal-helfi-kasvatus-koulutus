@@ -55,12 +55,6 @@ class UnitCategoryUtility {
       601,
       661,
     ],
-    self:: GRADES_1_9 => [
-      601,
-      661,
-      602,
-      662,
-    ],
     self::GRADES_7_9 => [
       602,
       662,
