@@ -7,6 +7,7 @@ $config['helfi_proxy.settings']['prefixes'] = [
   'fi' => 'test-kasvatus-ja-koulutus',
   'sv' => 'test-fostran-och-utbildning',
   'ru' => 'test-childhood-and-education',
+  'zxx' => 'test-childhood-and-education',
 ];
 
 $config['helfi_global_announcement.settings']['source_environment'] = 'test';
