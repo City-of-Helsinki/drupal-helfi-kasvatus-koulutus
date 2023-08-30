@@ -7,4 +7,5 @@ $config['helfi_proxy.settings']['prefixes'] = [
   'fi' => 'staging-kasvatus-ja-koulutus',
   'sv' => 'staging-fostran-och-utbildning',
   'ru' => 'staging-childhood-and-education',
+  'zxx' => 'staging-childhood-and-education',
 ];
