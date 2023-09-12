@@ -19,7 +19,6 @@ dependencies:
     - paragraphs
     - path
     - readonly_field_widget
-    - select2
 _core:
   default_config_hash: cotjiL17Qafj5pirtPax237aflvFs_-3pKHSP6wblrg
 id: tpr_unit.tpr_unit.default
@@ -89,8 +88,8 @@ content:
     third_party_settings: {  }
   contacts:
     type: readonly_field_widget
-    weight: 36
     region: content
+    weight: 36
     settings:
       label: above
       formatter_type: null
@@ -117,16 +116,6 @@ content:
       formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
-  field_categories:
-    type: readonly_field_widget
-    weight: 39
-    region: content
-    settings:
-      label: above
-      formatter_type: null
-      formatter_settings: {  }
-      show_description: false
-    third_party_settings: {  }
   field_content:
     type: paragraphs
     weight: 27
@@ -145,16 +134,6 @@ content:
         add_above: '0'
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
-    third_party_settings: {  }
-  field_hs_front_page:
-    type: entity_reference_autocomplete
-    weight: 29
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   field_lower_content:
     type: paragraphs
@@ -182,16 +161,6 @@ content:
     settings:
       sidebar: false
     third_party_settings: {  }
-  field_study_field:
-    type: select2_entity_reference
-    weight: 31
-    region: content
-    settings:
-      width: 100%
-      autocomplete: false
-      match_operator: CONTAINS
-      match_limit: 10
-    third_party_settings: {  }
   field_unit_type:
     type: entity_reference_autocomplete
     weight: 28
@@ -202,13 +171,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  hide_description:
-    type: boolean_checkbox
-    weight: 16
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   hide_sidebar_navigation:
     type: boolean_checkbox
     weight: 29
@@ -218,8 +180,8 @@ content:
     third_party_settings: {  }
   highlights:
     type: readonly_field_widget
-    weight: 32
     region: content
+    weight: 33
     settings:
       label: above
       formatter_type: null
@@ -245,8 +207,8 @@ content:
     third_party_settings: {  }
   links:
     type: readonly_field_widget
-    weight: 35
     region: content
+    weight: 31
     settings:
       label: above
       formatter_type: null
@@ -283,8 +245,8 @@ content:
     third_party_settings: {  }
   opening_hours:
     type: readonly_field_widget
-    weight: 31
     region: content
+    weight: 32
     settings:
       label: above
       formatter_type: null
@@ -293,8 +255,8 @@ content:
     third_party_settings: {  }
   other_info:
     type: readonly_field_widget
-    weight: 33
     region: content
+    weight: 34
     settings:
       label: above
       formatter_type: null
@@ -336,8 +298,8 @@ content:
     third_party_settings: {  }
   price_info:
     type: readonly_field_widget
-    weight: 34
     region: content
+    weight: 35
     settings:
       label: above
       formatter_type: null
@@ -413,5 +375,10 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_categories: true
   field_districts: true
+  field_hs_front_page: true
+  field_study_field: true
+  hide_description: true
   ontologyword_ids: true
+  show_www: true
