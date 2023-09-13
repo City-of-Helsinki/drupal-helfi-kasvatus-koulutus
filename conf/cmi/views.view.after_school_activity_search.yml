@@ -151,7 +151,7 @@ display:
       exposed_form:
         type: bef
         options:
-          submit_button: 'Search for a after-school activities'
+          submit_button: 'Search locations'
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -281,7 +281,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Sort after-school activities by address'
+            label: 'Search with a Finnish address'
             description: ''
             use_operator: false
             operator: address_search_op
@@ -444,7 +444,7 @@ display:
           plugin_id: address_search_info
           empty: false
           succeed:
-            value: 'Results organised by the address you searched for. The distance to the address is indicated in the results list after the location’s address.'
+            value: 'The locations are listed based on the address you provided.'
             format: minimal
           failed:
             value: 'Given address was not found. Please check the address. The results are now in alphabetical order.'

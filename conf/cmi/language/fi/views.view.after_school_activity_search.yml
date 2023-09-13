@@ -13,7 +13,7 @@ display:
             items_per_page_options_all_label: '- Kaikki -'
       exposed_form:
         options:
-          submit_button: 'Hae iltapäivätoimintaa'
+          submit_button: 'Etsi toimintapaikkoja'
           reset_button_label: Palauta
           exposed_sorts_label: Järjestä
           sort_asc_label: Nouseva
@@ -26,11 +26,11 @@ display:
       filters:
         address_search:
           expose:
-            label: 'Järjestä iltapäivätoiminnat osoitteen perusteella'
+            label: 'Kirjoita osoite'
       header:
         area_address_search_info:
           succeed:
-            value: "<p>Tulokset järjestettynä hakemasi osoitteen perusteella. Etäisyys annettuun osoitteeseen on kerrottu toimipisteen osoitteen jälkeen tuloslistauksessa.</p>\r\n"
+            value: "<p>Toimipaikat järjestettynä antamasi osoitteen perusteella.</p>\r\n"
             format: minimal
           failed:
             value: "<p>Voi harmi. Hakemaasi osoitetta ei löytynyt. Tarkista syöttämäsi osoite. Tulokset on nyt järjestetty aakkosjärjestykseen.</p>\r\n"
