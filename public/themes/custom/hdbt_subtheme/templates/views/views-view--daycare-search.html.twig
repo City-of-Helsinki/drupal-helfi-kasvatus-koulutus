@@ -48,7 +48,7 @@
   {{ exposed }}
   {{ attachment_before }}
 
-  <div class="unit-search__results">
+  <div class="unit-search__results" data-id-number="{{ dom_id }}">
     <span class="unit-search__count-container">
       <span class="unit-search__count">{{ total_rows }}</span>
       {% trans with {'context': 'Daycare search count'}%}location{% plural total_rows %}locations{% endtrans %}
