@@ -79,7 +79,7 @@ settings:
         weight: 0
         enabled: true
       calculator:
-        weight: 42
+        weight: 0
         enabled: true
       chart:
         weight: 0
