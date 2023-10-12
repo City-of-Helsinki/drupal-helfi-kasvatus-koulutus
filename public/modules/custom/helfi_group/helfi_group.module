@@ -153,3 +153,24 @@ function helfi_group_node_create_access(AccountInterface $account, array $contex
     ? AccessResult::allowed()
     : AccessResult::neutral();
 }
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ *
+ * #UHF-8926 Prevent group's MenuContentLink's translation form from crashing
+ * while saving. Crash was caused by missing menu_parent.
+ */
+function helfi_group_form_menu_link_content_form_alter(&$form, FormStateInterface $form_state) {
+  $entity = $form_state->getFormObject()->getEntity();
+  $menu_name = $entity->get('menu_name')->value;
+  if (
+    !$menu_name ||
+    !str_contains($menu_name, 'group')
+  ) {
+    return;
+  }
+
+  $form['menu_parent']['#type'] = 'hidden';
+  $menu_parent = sprintf('%s:%s', $menu_name, $entity->get('parent')->value);
+  $form['menu_parent']['#value'] = $menu_parent;
+}
