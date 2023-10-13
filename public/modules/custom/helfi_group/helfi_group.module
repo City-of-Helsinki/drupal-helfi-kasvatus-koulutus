@@ -15,6 +15,7 @@ use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\helfi_group\UnitFormAlter;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -173,4 +174,85 @@ function helfi_group_form_menu_link_content_form_alter(&$form, FormStateInterfac
   $form['menu_parent']['#type'] = 'hidden';
   $menu_parent = sprintf('%s:%s', $menu_name, $entity->get('parent')->value);
   $form['menu_parent']['#value'] = $menu_parent;
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ *
+ * #UHF-8926 the form alter must be run after group content menu's alter.
+ */
+function helfi_group_module_implements_alter(&$implementations, $hook) : void {
+  if ($hook === 'form_alter' && isset($implementations['helfi_group'])) {
+    $group = $implementations['helfi_group'];
+    unset($implementations['helfi_group']);
+    $implementations['helfi_group'] = $group;
+  }
+}
+
+/**
+ * Implements hook_form_node_form_alter().
+ */
+function helfi_group_form_node_form_alter(
+  array &$form,
+  FormStateInterface $form_state
+): void {
+  $form['actions']['submit']['#submit'][] = 'helfi_group_set_content_translation_status';
+
+  if ($form['menu']) {
+    $menu_parent = $form['menu']['link']['menu_parent']['#default_value'];
+    $menu_name = explode(':', $menu_parent)[0];
+
+    $result = \Drupal::entityQuery('menu_link_content')
+      ->condition('link.uri', "entity:node/{$form_state->getFormObject()->getEntity()->id()}")
+      ->condition('menu_name', [$menu_name], 'IN')
+      ->sort('id', 'ASC')
+      ->accessCheck(false)
+      ->range(0, 1)
+      ->execute();
+
+    if (!$result) {
+      return;
+    }
+
+    $menu_link_content_id = reset($result);
+    $menu_link_content = MenuLinkContent::load($menu_link_content_id);
+    if (!$menu_link_content) {
+      return;
+    }
+
+    $status = $menu_link_content->get('content_translation_status')->value;
+    $form['menu']['content_translation_status']['#default_value'] = $status;
+  }
+
+}
+
+/**
+ * #UHF-8926 menu item's translation status follows node's translation status.
+ *
+ * @param array $form
+ *   The form.
+ * @param FormStateInterface $form_state
+ *   The form state.
+ * @return void
+ *
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function helfi_group_set_content_translation_status(
+  array &$form,
+  FormStateInterface $form_state
+) : void {
+  $values = $form_state->getValue('menu');
+  $node = $form_state->getFormObject()->getEntity();
+  $langCode = $node->language()->getId();
+  if (!empty($values['entity_id'])) {
+    if (!$link = MenuLinkContent::load($values['entity_id'])) {
+      return;
+    }
+
+    if ($link->hasTranslation($langCode)) {
+      $link = $link->getTranslation($langCode);
+    }
+    $link->set('content_translation_status', $form_state->getValue('status')['value'])
+      ->save();
+  }
 }
