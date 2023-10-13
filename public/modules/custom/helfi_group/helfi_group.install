@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Contains installation functions for Kasko instance.
+ */
+
+declare(strict_types = 1);
+
+use Drupal\Core\Url;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\node\Entity\Node;
+
+function helfi_group_update_9001() {
+  $menu_name_prefix = 'group_menu_link_content-';
+
+  $query = \Drupal::entityQuery('menu_link_content')
+    //->condition('link.uri', 'entity:node/' . $node->id())
+    ->condition('menu_name', $menu_name_prefix, 'CONTAINS')
+    ->sort('id', 'ASC')
+    ->accessCheck(false);
+  $result = $query->execute();
+  if (!$result) {
+    return;
+  }
+
+  $menu_items = MenuLinkContent::loadMultiple(array_values($result));
+  $languages = ['fi', 'en', 'sv'];
+
+  foreach ($menu_items as $menu_item) {
+    $params = Url::fromUri($menu_item->get('link')->uri)->getRouteParameters();
+    $node_id = $params['node'];
+    foreach ($languages as $langcode) {
+      if ($menu_item->hasTranslation($langcode)) {
+        $menu_item = $menu_item->getTranslation($langcode);
+        $node = Node::load($node_id);
+        if ($node->hasTranslation($langcode)) {
+          $node = $node->getTranslation($langcode);
+          if ((bool) $menu_item->content_translation_status->value != (bool) $node->isPublished()) {
+            $menu_item->set('content_translation_status', $node->isPublished())->save();
+          }
+        }
+      }
+    }
+  }
+}
