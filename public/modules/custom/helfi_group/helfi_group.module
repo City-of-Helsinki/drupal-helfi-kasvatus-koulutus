@@ -206,7 +206,7 @@ function helfi_group_form_node_form_alter(
       ->condition('link.uri', "entity:node/{$form_state->getFormObject()->getEntity()->id()}")
       ->condition('menu_name', [$menu_name], 'IN')
       ->sort('id', 'ASC')
-      ->accessCheck(false)
+      ->accessCheck(FALSE)
       ->range(0, 1)
       ->execute();
 
@@ -227,13 +227,12 @@ function helfi_group_form_node_form_alter(
 }
 
 /**
- * #UHF-8926 menu item's translation status follows node's translation status.
+ * Ticket #UHF-8926: submit handler to set menu's translation status.
  *
  * @param array $form
  *   The form.
- * @param FormStateInterface $form_state
+ * @param Drupal\Core\Form\FormStateInterface $form_state
  *   The form state.
- * @return void
  *
  * @throws \Drupal\Core\Entity\EntityStorageException
  */
