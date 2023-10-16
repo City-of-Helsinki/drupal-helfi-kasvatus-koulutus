@@ -196,7 +196,7 @@ function helfi_group_form_node_form_alter(
   array &$form,
   FormStateInterface $form_state
 ): void {
-  $form['actions']['submit']['#submit'][] = 'helfi_group_set_content_translation_status';
+  $form['actions']['submit']['#submit'][] = 'helfi_group_menuitem_set_content_translation_status';
 
   if ($form['menu']) {
     $menu_parent = $form['menu']['link']['menu_parent']['#default_value'];
@@ -227,7 +227,7 @@ function helfi_group_form_node_form_alter(
 }
 
 /**
- * Ticket #UHF-8926: submit handler to set menu's translation status.
+ * Ticket #UHF-8926: submit handler to set menu items translation status.
  *
  * @param array $form
  *   The form.
@@ -236,7 +236,7 @@ function helfi_group_form_node_form_alter(
  *
  * @throws \Drupal\Core\Entity\EntityStorageException
  */
-function helfi_group_set_content_translation_status(
+function helfi_group_menuitem_set_content_translation_status(
   array &$form,
   FormStateInterface $form_state
 ) : void {
@@ -250,8 +250,8 @@ function helfi_group_set_content_translation_status(
 
     if ($link->hasTranslation($langCode)) {
       $link = $link->getTranslation($langCode);
+      $link->set('content_translation_status', $form_state->getValue('status')['value'])
+        ->save();
     }
-    $link->set('content_translation_status', $form_state->getValue('status')['value'])
-      ->save();
   }
 }
