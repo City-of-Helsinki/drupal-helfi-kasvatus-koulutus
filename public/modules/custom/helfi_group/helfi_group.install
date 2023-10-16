@@ -33,16 +33,21 @@ function helfi_group_update_9001() {
     $params = Url::fromUri($menu_item->get('link')->uri)->getRouteParameters();
     $node_id = $params['node'];
     foreach ($languages as $langcode) {
-      if ($menu_item->hasTranslation($langcode)) {
-        $menu_item = $menu_item->getTranslation($langcode);
-        $node = Node::load($node_id);
-        if ($node->hasTranslation($langcode)) {
-          $node = $node->getTranslation($langcode);
-          if ((bool) $menu_item->content_translation_status->value != (bool) $node->isPublished()) {
-            $menu_item->set('content_translation_status', $node->isPublished())->save();
-          }
-        }
+      if (!$menu_item->hasTranslation($langcode)) {
+        continue;
       }
+      
+      $menu_item = $menu_item->getTranslation($langcode);
+      $node = Node::load($node_id);
+      if (!$node->hasTranslation($langcode)) {
+        continue;
+      }
+
+      $node = $node->getTranslation($langcode);
+      if ((bool) $menu_item->content_translation_status->value != (bool) $node->isPublished()) {
+        $menu_item->set('content_translation_status', $node->isPublished())->save();
+      }
+
     }
   }
 }
