@@ -167,7 +167,7 @@ function helfi_group_form_menu_link_content_form_alter(&$form, FormStateInterfac
   if (
     !$menu_name ||
     !str_contains($menu_name, 'group') ||
-    !isset($form['menu_parent'])
+    isset($form['menu_parent'])
   ) {
     return;
   }
