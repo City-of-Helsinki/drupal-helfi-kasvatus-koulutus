@@ -158,15 +158,17 @@ function helfi_group_node_create_access(AccountInterface $account, array $contex
 /**
  * Implements hook_form_BASE_FORM_ID_alter().
  *
- * #UHF-8926 Prevent group's MenuContentLink's translation form from crashing
- * while saving. Crash was caused by missing menu_parent.
+ * #UHF-8926 Group menu emits menu parent from entity's translation form.
+ * Make sure menu_parent is always set.
+ *
  */
 function helfi_group_form_menu_link_content_form_alter(&$form, FormStateInterface $form_state) {
   $entity = $form_state->getFormObject()->getEntity();
   $menu_name = $entity->get('menu_name')->value;
   if (
     !$menu_name ||
-    !str_contains($menu_name, 'group')
+    !str_contains($menu_name, 'group') ||
+    !isset($form['menu_parent'])
   ) {
     return;
   }
@@ -180,6 +182,8 @@ function helfi_group_form_menu_link_content_form_alter(&$form, FormStateInterfac
  * Implements hook_module_implements_alter().
  *
  * #UHF-8926 the form alter must be run after group content menu's alter.
+ * Otherwise the changes made in "menu"-render array would be overridden.
+ *
  */
 function helfi_group_module_implements_alter(&$implementations, $hook) : void {
   if ($hook === 'form_alter' && isset($implementations['helfi_group'])) {
@@ -227,7 +231,7 @@ function helfi_group_form_node_form_alter(
 }
 
 /**
- * Ticket #UHF-8926: submit handler to set menu items translation status.
+ * Submit handler to set menu items translation status.
  *
  * @param array $form
  *   The form.
@@ -243,15 +247,15 @@ function helfi_group_menuitem_set_content_translation_status(
   $values = $form_state->getValue('menu');
   $node = $form_state->getFormObject()->getEntity();
   $langCode = $node->language()->getId();
-  if (!empty($values['entity_id'])) {
-    if (!$link = MenuLinkContent::load($values['entity_id'])) {
-      return;
-    }
-
-    if ($link->hasTranslation($langCode)) {
-      $link = $link->getTranslation($langCode);
-      $link->set('content_translation_status', $form_state->getValue('status')['value'])
-        ->save();
-    }
+  if (
+    !empty($values['entity_id']) ||
+    !$link = MenuLinkContent::load($values['entity_id'])
+  ) {
+    return;
+  }
+  if ($link->hasTranslation($langCode)) {
+    $link = $link->getTranslation($langCode);
+    $link->set('content_translation_status', $form_state->getValue('status')['value'])
+      ->save();
   }
 }

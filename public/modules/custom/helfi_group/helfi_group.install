@@ -14,7 +14,7 @@ use Drupal\node\Entity\Node;
 /**
  * Update group menu item's content translation status to match node's status.
  */
-function helfi_group_update_9001() {
+function helfi_group_update_9001(): void {
   $menu_name_prefix = 'group_menu_link_content-';
 
   $query = \Drupal::entityQuery('menu_link_content')
@@ -44,7 +44,7 @@ function helfi_group_update_9001() {
       }
 
       $node = $node->getTranslation($langcode);
-      if ((bool) $menu_item->content_translation_status->value != (bool) $node->isPublished()) {
+      if ((bool) $menu_item->content_translation_status->value !== $node->isPublished()) {
         $menu_item->set('content_translation_status', $node->isPublished())->save();
       }
 
