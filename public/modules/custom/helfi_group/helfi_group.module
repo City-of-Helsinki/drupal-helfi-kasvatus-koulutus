@@ -160,7 +160,6 @@ function helfi_group_node_create_access(AccountInterface $account, array $contex
  *
  * #UHF-8926 Group menu emits menu parent from entity's translation form.
  * Make sure menu_parent is always set.
- *
  */
 function helfi_group_form_menu_link_content_form_alter(&$form, FormStateInterface $form_state) {
   $entity = $form_state->getFormObject()->getEntity();
@@ -183,7 +182,6 @@ function helfi_group_form_menu_link_content_form_alter(&$form, FormStateInterfac
  *
  * #UHF-8926 the form alter must be run after group content menu's alter.
  * Otherwise the changes made in "menu"-render array would be overridden.
- *
  */
 function helfi_group_module_implements_alter(&$implementations, $hook) : void {
   if ($hook === 'form_alter' && isset($implementations['helfi_group'])) {
