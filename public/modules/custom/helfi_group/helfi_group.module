@@ -204,6 +204,10 @@ function helfi_group_form_node_form_alter(
     $menu_parent = $form['menu']['link']['menu_parent']['#default_value'];
     $menu_name = explode(':', $menu_parent)[0];
 
+    if (!str_contains($menu_name, 'group')) {
+      return;
+    }
+
     $result = \Drupal::entityQuery('menu_link_content')
       ->condition('link.uri', "entity:node/{$form_state->getFormObject()->getEntity()->id()}")
       ->condition('menu_name', [$menu_name], 'IN')
@@ -250,12 +254,16 @@ function helfi_group_menuitem_set_content_translation_status(
   array &$form,
   FormStateInterface $form_state
 ) : void {
+  $menu_parent = $form['menu']['link']['menu_parent']['#default_value'];
+  $menu_name = explode(':', $menu_parent)[0];
   $values = $form_state->getValue('menu');
   $node = $form_state->getFormObject()->getEntity();
   $langCode = $node->language()->getId();
+  $link = MenuLinkContent::load($values['entity_id']);
   if (
     empty($values['entity_id']) ||
-    !$link = MenuLinkContent::load($values['entity_id'])
+    !$link ||
+    !str_contains($menu_name, 'group')
   ) {
     return;
   }
