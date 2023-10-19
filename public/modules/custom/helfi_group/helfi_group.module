@@ -15,6 +15,7 @@ use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\helfi_group\UnitFormAlter;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -152,4 +153,123 @@ function helfi_group_node_create_access(AccountInterface $account, array $contex
   )
     ? AccessResult::allowed()
     : AccessResult::neutral();
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ *
+ * #UHF-8926 Group menu emits menu parent from entity's translation form.
+ * Make sure menu_parent is always set.
+ */
+function helfi_group_form_menu_link_content_form_alter(&$form, FormStateInterface $form_state) {
+  $entity = $form_state->getFormObject()->getEntity();
+  $menu_name = $entity->get('menu_name')->value;
+  if (
+    !$menu_name ||
+    !str_contains($menu_name, 'group') ||
+    isset($form['menu_parent'])
+  ) {
+    return;
+  }
+
+  $form['menu_parent']['#type'] = 'hidden';
+  $menu_parent = sprintf('%s:%s', $menu_name, $entity->get('parent')->value);
+  $form['menu_parent']['#value'] = $menu_parent;
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ *
+ * #UHF-8926 the form alter must be run after group content menu's alter.
+ * Otherwise the changes made in "menu"-render array would be overridden.
+ */
+function helfi_group_module_implements_alter(&$implementations, $hook) : void {
+  if ($hook === 'form_alter' && isset($implementations['helfi_group'])) {
+    $group = $implementations['helfi_group'];
+    unset($implementations['helfi_group']);
+    $implementations['helfi_group'] = $group;
+  }
+}
+
+/**
+ * Implements hook_form_node_form_alter().
+ */
+function helfi_group_form_node_form_alter(
+  array &$form,
+  FormStateInterface $form_state
+): void {
+  $form['actions']['submit']['#submit'][] = 'helfi_group_menuitem_set_content_translation_status';
+
+  if ($form['menu']) {
+    $menu_parent = $form['menu']['link']['menu_parent']['#default_value'];
+    $menu_name = explode(':', $menu_parent)[0];
+
+    if (!str_contains($menu_name, 'group')) {
+      return;
+    }
+
+    $result = \Drupal::entityQuery('menu_link_content')
+      ->condition('link.uri', "entity:node/{$form_state->getFormObject()->getEntity()->id()}")
+      ->condition('menu_name', [$menu_name], 'IN')
+      ->sort('id', 'ASC')
+      ->accessCheck(FALSE)
+      ->range(0, 1)
+      ->execute();
+
+    if (!$result) {
+      return;
+    }
+
+    $current_language = $form_state
+      ->getFormObject()
+      ->getEntity()
+      ->language()
+      ->getId();
+
+    $menu_link_content_id = reset($result);
+    $menu_link_content = MenuLinkContent::load($menu_link_content_id);
+    if (!$menu_link_content || !$menu_link_content->hasTranslation($current_language)) {
+      return;
+    }
+
+    $menu_link_content = $menu_link_content->getTranslation($current_language);
+    $status = $menu_link_content->get('content_translation_status')->value;
+    $form['menu']['content_translation_status']['#default_value'] = $status;
+    $form["menu"]["content_translation_status"]["#description"] = t('Tämä arvo muuttuu automaattisesti tallentaessa sisällön julkaisutilan mukaan.');
+  }
+
+}
+
+/**
+ * Submit handler to set menu items translation status.
+ *
+ * @param array $form
+ *   The form.
+ * @param Drupal\Core\Form\FormStateInterface $form_state
+ *   The form state.
+ *
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function helfi_group_menuitem_set_content_translation_status(
+  array &$form,
+  FormStateInterface $form_state
+) : void {
+  $menu_parent = $form['menu']['link']['menu_parent']['#default_value'];
+  $menu_name = explode(':', $menu_parent)[0];
+  $values = $form_state->getValue('menu');
+  $node = $form_state->getFormObject()->getEntity();
+  $langCode = $node->language()->getId();
+  $link = MenuLinkContent::load($values['entity_id']);
+  if (
+    empty($values['entity_id']) ||
+    !$link ||
+    !str_contains($menu_name, 'group')
+  ) {
+    return;
+  }
+  if ($link->hasTranslation($langCode)) {
+    $link = $link->getTranslation($langCode);
+    $link->set('content_translation_status', $form_state->getValue('status')['value'])
+      ->save();
+  }
 }
