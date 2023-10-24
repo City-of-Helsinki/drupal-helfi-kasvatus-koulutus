@@ -202,8 +202,11 @@ function helfi_group_form_node_form_alter(
 
   if ($form['menu']) {
     $menu_parent = $form['menu']['link']['menu_parent']['#default_value'];
-    $menu_name = explode(':', $menu_parent)[0];
+    if (!$menu_parent) {
+      return;
+    }
 
+    $menu_name = explode(':', $menu_parent)[0];
     if (!str_contains($menu_name, 'group')) {
       return;
     }
