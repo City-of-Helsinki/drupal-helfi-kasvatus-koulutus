@@ -258,7 +258,11 @@ function helfi_group_menuitem_set_content_translation_status(
   FormStateInterface $form_state
 ) : void {
   $menu_parent = $form['menu']['link']['menu_parent']['#default_value'];
+  if (!$menu_parent) {
+    return;
+  }
   $menu_name = explode(':', $menu_parent)[0];
+
   $values = $form_state->getValue('menu');
   $node = $form_state->getFormObject()->getEntity();
   $langCode = $node->language()->getId();
