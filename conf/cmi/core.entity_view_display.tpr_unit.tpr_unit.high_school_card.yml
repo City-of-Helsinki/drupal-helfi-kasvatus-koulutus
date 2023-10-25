@@ -231,3 +231,6 @@ hidden:
   search_api_excerpt: true
   show_www: true
   streetview_entrance_url: true
+  toc_enabled: true
+  topical: true
+  unit_picture_caption: true
