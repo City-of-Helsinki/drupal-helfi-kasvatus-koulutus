@@ -238,7 +238,7 @@ function helfi_group_form_node_form_alter(
     $menu_link_content = $menu_link_content->getTranslation($current_language);
     $status = $menu_link_content->get('content_translation_status')->value;
     $form['menu']['content_translation_status']['#default_value'] = $status;
-    $form["menu"]["content_translation_status"]["#description"] = t('Tämä arvo muuttuu automaattisesti tallentaessa sisällön julkaisutilan mukaan.');
+    $form['menu']['content_translation_status']['#description'] = 'Tämä arvo muuttuu automaattisesti tallentaessa sisällön julkaisutilan mukaan.';
   }
 
 }
