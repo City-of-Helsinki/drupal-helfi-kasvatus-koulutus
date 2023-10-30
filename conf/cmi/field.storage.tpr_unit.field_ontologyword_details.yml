@@ -1,0 +1,19 @@
+uuid: 9b23d149-a34b-4310-a4cc-1a35688a867a
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+id: tpr_unit.field_ontologyword_details
+field_name: field_ontologyword_details
+entity_type: tpr_unit
+type: entity_reference
+settings:
+  target_type: tpr_ontology_word_details
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
