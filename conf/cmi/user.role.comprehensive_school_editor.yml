@@ -57,6 +57,7 @@ permissions:
   - 'mark as hidden in editoria11y'
   - 'schedule publishing of nodes'
   - 'translate editable entities'
+  - 'update any tpr_unit'
   - 'update media'
   - 'use text format full_html'
   - 'use text format minimal'
