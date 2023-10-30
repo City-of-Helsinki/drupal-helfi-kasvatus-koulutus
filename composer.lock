@@ -3924,16 +3924,16 @@
         },
         {
             "name": "drupal/hdbt",
-            "version": "5.6.24",
+            "version": "5.6.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "878d4a389ce1531806eb693259b2853316c8faf5"
+                "reference": "09c80a3399d9319f1dfb837e190113f0a6c6effb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/878d4a389ce1531806eb693259b2853316c8faf5",
-                "reference": "878d4a389ce1531806eb693259b2853316c8faf5",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/09c80a3399d9319f1dfb837e190113f0a6c6effb",
+                "reference": "09c80a3399d9319f1dfb837e190113f0a6c6effb",
                 "shasum": ""
             },
             "require": {
@@ -3951,10 +3951,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/5.6.24",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/5.6.25",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2023-10-27T06:23:32+00:00"
+            "time": "2023-10-30T12:30:23+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
@@ -4043,16 +4043,16 @@
         },
         {
             "name": "drupal/helfi_api_base",
-            "version": "2.5.8",
+            "version": "2.5.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base.git",
-                "reference": "c8ed69e045bae960fff5b71179d09f62ea53651a"
+                "reference": "2c5bfce0f9415ae35d7a4c70d9f4ed9a42a6dc88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-api-base/zipball/c8ed69e045bae960fff5b71179d09f62ea53651a",
-                "reference": "c8ed69e045bae960fff5b71179d09f62ea53651a",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-api-base/zipball/2c5bfce0f9415ae35d7a4c70d9f4ed9a42a6dc88",
+                "reference": "2c5bfce0f9415ae35d7a4c70d9f4ed9a42a6dc88",
                 "shasum": ""
             },
             "require": {
@@ -4062,7 +4062,8 @@
                 "firebase/php-jwt": "^6.5",
                 "php": "^8.1",
                 "t4web/composer-lock-parser": "^1.0",
-                "textalk/websocket": "^1.6"
+                "textalk/websocket": "^1.6",
+                "webmozart/assert": "^1.0"
             },
             "conflict": {
                 "drupal/helfi_debug": "*"
@@ -4078,10 +4079,10 @@
             ],
             "description": "Helfi - API Base",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base/tree/2.5.8",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base/tree/2.5.9",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base/issues"
             },
-            "time": "2023-10-18T05:44:50+00:00"
+            "time": "2023-10-30T13:56:18+00:00"
         },
         {
             "name": "drupal/helfi_azure_fs",
@@ -4208,12 +4209,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "39a47dc154d17891f544d61d2e4d731eeedb2d72"
+                "reference": "2f7ee1752a81305e06992bc4c3516a3e6b89906a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/39a47dc154d17891f544d61d2e4d731eeedb2d72",
-                "reference": "39a47dc154d17891f544d61d2e4d731eeedb2d72",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/2f7ee1752a81305e06992bc4c3516a3e6b89906a",
+                "reference": "2f7ee1752a81305e06992bc4c3516a3e6b89906a",
                 "shasum": ""
             },
             "require": {
@@ -4320,7 +4321,7 @@
                 "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/4.x",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2023-10-30T10:17:30+00:00"
+            "time": "2023-10-30T12:30:33+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -14451,6 +14452,64 @@
                 "source": "https://github.com/webflo/drupal-finder/tree/1.2.2"
             },
             "time": "2020-10-27T09:42:17+00:00"
+        },
+        {
+            "name": "webmozart/assert",
+            "version": "1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmozarts/assert.git",
+                "reference": "11cb2199493b2f8a3b53e7f19068fc6aac760991"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/11cb2199493b2f8a3b53e7f19068fc6aac760991",
+                "reference": "11cb2199493b2f8a3b53e7f19068fc6aac760991",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "php": "^7.2 || ^8.0"
+            },
+            "conflict": {
+                "phpstan/phpstan": "<0.12.20",
+                "vimeo/psalm": "<4.6.1 || 4.6.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5.13"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.10-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webmozart\\Assert\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                }
+            ],
+            "description": "Assertions to validate method input/output with nice error messages.",
+            "keywords": [
+                "assert",
+                "check",
+                "validate"
+            ],
+            "support": {
+                "issues": "https://github.com/webmozarts/assert/issues",
+                "source": "https://github.com/webmozarts/assert/tree/1.11.0"
+            },
+            "time": "2022-06-03T18:03:27+00:00"
         }
     ],
     "packages-dev": [
@@ -18675,64 +18734,6 @@
                 }
             ],
             "time": "2021-07-28T10:34:58+00:00"
-        },
-        {
-            "name": "webmozart/assert",
-            "version": "1.11.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webmozarts/assert.git",
-                "reference": "11cb2199493b2f8a3b53e7f19068fc6aac760991"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webmozarts/assert/zipball/11cb2199493b2f8a3b53e7f19068fc6aac760991",
-                "reference": "11cb2199493b2f8a3b53e7f19068fc6aac760991",
-                "shasum": ""
-            },
-            "require": {
-                "ext-ctype": "*",
-                "php": "^7.2 || ^8.0"
-            },
-            "conflict": {
-                "phpstan/phpstan": "<0.12.20",
-                "vimeo/psalm": "<4.6.1 || 4.6.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^8.5.13"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.10-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Webmozart\\Assert\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@gmail.com"
-                }
-            ],
-            "description": "Assertions to validate method input/output with nice error messages.",
-            "keywords": [
-                "assert",
-                "check",
-                "validate"
-            ],
-            "support": {
-                "issues": "https://github.com/webmozarts/assert/issues",
-                "source": "https://github.com/webmozarts/assert/tree/1.11.0"
-            },
-            "time": "2022-06-03T18:03:27+00:00"
         },
         {
             "name": "weitzman/drupal-test-traits",
