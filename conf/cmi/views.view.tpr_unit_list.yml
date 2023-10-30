@@ -6,8 +6,6 @@ dependencies:
     - helfi_tpr
     - user
     - views_bulk_operations
-    - views_bulk_edit
-    - content_lock
 _core:
   default_config_hash: 0Q9MnLuLAYwltkBeCL-al8z-gc3-M2SFIWM50exDgxg
 id: tpr_unit_list
@@ -430,6 +428,15 @@ display:
             date_format: long
             custom_date_format: ''
             timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
           group_column: value
           group_columns: {  }
           group_rows: true
