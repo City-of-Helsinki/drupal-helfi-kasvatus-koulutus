@@ -101,7 +101,6 @@ permissions:
   - 'assign read_only role'
   - 'assign school_editor role'
   - 'break content lock'
-  - 'bypass group access'
   - 'cancel account'
   - 'change own username'
   - 'create announcement content'
