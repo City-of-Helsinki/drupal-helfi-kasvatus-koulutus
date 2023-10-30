@@ -17,6 +17,7 @@
         "drupal/group_content_menu": "^2.0",
         "drupal/hdbt": "^5.0",
         "drupal/hdbt_admin": "^2.0",
+        "drupal/helfi_api_base": "dev-UHF-9113-drupal-10-support",
         "drupal/helfi_azure_fs": "^2.0",
         "drupal/helfi_drupal_tools": "dev-main",
         "drupal/helfi_navigation": "^2.0",
