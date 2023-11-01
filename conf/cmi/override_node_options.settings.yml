@@ -1,2 +1,2 @@
-general_permissions: 0
-specific_permissions: 1
+general_permissions: false
+specific_permissions: true
