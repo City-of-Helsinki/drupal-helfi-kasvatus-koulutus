@@ -1755,101 +1755,6 @@
             }
         },
         {
-            "name": "drupal/ckeditor",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/ckeditor.git",
-                "reference": "1.0.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ckeditor-1.0.2.zip",
-                "reference": "1.0.2",
-                "shasum": "fec2ca9ad852a00c7b9584cb6040dc860364c481"
-            },
-            "require": {
-                "drupal/core": "^9.4 || ^10"
-            },
-            "require-dev": {
-                "drupal/classy": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "1.0.2",
-                    "datestamp": "1695740655",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "dczepierga",
-                    "homepage": "https://www.drupal.org/user/911466"
-                },
-                {
-                    "name": "hass",
-                    "homepage": "https://www.drupal.org/user/85918"
-                },
-                {
-                    "name": "jcisio",
-                    "homepage": "https://www.drupal.org/user/210762"
-                },
-                {
-                    "name": "Jorrit",
-                    "homepage": "https://www.drupal.org/user/161217"
-                },
-                {
-                    "name": "lauriii",
-                    "homepage": "https://www.drupal.org/user/1078742"
-                },
-                {
-                    "name": "Magnus",
-                    "homepage": "https://www.drupal.org/user/73919"
-                },
-                {
-                    "name": "mkesicki",
-                    "homepage": "https://www.drupal.org/user/922884"
-                },
-                {
-                    "name": "nod_",
-                    "homepage": "https://www.drupal.org/user/598310"
-                },
-                {
-                    "name": "p.wiaderny",
-                    "homepage": "https://www.drupal.org/user/2956619"
-                },
-                {
-                    "name": "vokiel",
-                    "homepage": "https://www.drupal.org/user/2793801"
-                },
-                {
-                    "name": "Wim Leers",
-                    "homepage": "https://www.drupal.org/user/99777"
-                },
-                {
-                    "name": "wwalc",
-                    "homepage": "https://www.drupal.org/user/184556"
-                },
-                {
-                    "name": "xjm",
-                    "homepage": "https://www.drupal.org/user/65776"
-                }
-            ],
-            "description": "WYSIWYG editing for rich text fields using CKEditor.",
-            "homepage": "https://www.drupal.org/project/ckeditor",
-            "support": {
-                "source": "https://git.drupalcode.org/project/ckeditor"
-            }
-        },
-        {
             "name": "drupal/config_filter",
             "version": "2.6.0",
             "source": {
@@ -2097,16 +2002,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "10.1.5",
+            "version": "10.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "1272c35d547e844e7ebf3fe5513542291cda8cec"
+                "reference": "33695caf467e3e1e8c75d42215df57bee31be9ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/1272c35d547e844e7ebf3fe5513542291cda8cec",
-                "reference": "1272c35d547e844e7ebf3fe5513542291cda8cec",
+                "url": "https://api.github.com/repos/drupal/core/zipball/33695caf467e3e1e8c75d42215df57bee31be9ec",
+                "reference": "33695caf467e3e1e8c75d42215df57bee31be9ec",
                 "shasum": ""
             },
             "require": {
@@ -2251,9 +2156,9 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/10.1.5"
+                "source": "https://github.com/drupal/core/tree/10.1.6"
             },
-            "time": "2023-10-04T21:37:59+00:00"
+            "time": "2023-11-01T11:59:20+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -4043,16 +3948,16 @@
         },
         {
             "name": "drupal/helfi_api_base",
-            "version": "2.5.9",
+            "version": "2.5.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base.git",
-                "reference": "2c5bfce0f9415ae35d7a4c70d9f4ed9a42a6dc88"
+                "reference": "caedd5a415d6dcd6a25ce6e8793b1079b6149c32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-api-base/zipball/2c5bfce0f9415ae35d7a4c70d9f4ed9a42a6dc88",
-                "reference": "2c5bfce0f9415ae35d7a4c70d9f4ed9a42a6dc88",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-api-base/zipball/caedd5a415d6dcd6a25ce6e8793b1079b6149c32",
+                "reference": "caedd5a415d6dcd6a25ce6e8793b1079b6149c32",
                 "shasum": ""
             },
             "require": {
@@ -4070,6 +3975,7 @@
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+                "dg/bypass-finals": "^1.0",
                 "donatj/mock-webserver": "dev-master",
                 "drupal/coder": "^8.3"
             },
@@ -4079,10 +3985,10 @@
             ],
             "description": "Helfi - API Base",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base/tree/2.5.9",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base/tree/2.5.10",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base/issues"
             },
-            "time": "2023-10-30T13:56:18+00:00"
+            "time": "2023-11-02T06:57:19+00:00"
         },
         {
             "name": "drupal/helfi_azure_fs",
@@ -4209,18 +4115,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "946cf043a8366adb208b91fc051610c99eda5334"
+                "reference": "5d0b81f0716a66bff467b591140fe0e48fe51ebc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/946cf043a8366adb208b91fc051610c99eda5334",
-                "reference": "946cf043a8366adb208b91fc051610c99eda5334",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/5d0b81f0716a66bff467b591140fe0e48fe51ebc",
+                "reference": "5d0b81f0716a66bff467b591140fe0e48fe51ebc",
                 "shasum": ""
             },
             "require": {
                 "drupal/admin_toolbar": "^3.0",
                 "drupal/allowed_formats": "^2.0",
-                "drupal/ckeditor": "^1.0",
                 "drupal/config_ignore": "^2.3",
                 "drupal/config_rewrite": "^1.4",
                 "drupal/content_lock": "^2.2",
@@ -4321,7 +4226,7 @@
                 "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/4.x",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2023-11-01T06:23:16+00:00"
+            "time": "2023-11-01T07:30:01+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -4369,16 +4274,16 @@
         },
         {
             "name": "drupal/helfi_tpr",
-            "version": "2.2.9",
+            "version": "2.2.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr.git",
-                "reference": "bc323aaf05e72d3fa5e80ad53eb3a710dc4b7fb5"
+                "reference": "a562d26f7c8eb866455be49dc6ec767edff2c263"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/bc323aaf05e72d3fa5e80ad53eb3a710dc4b7fb5",
-                "reference": "bc323aaf05e72d3fa5e80ad53eb3a710dc4b7fb5",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/a562d26f7c8eb866455be49dc6ec767edff2c263",
+                "reference": "a562d26f7c8eb866455be49dc6ec767edff2c263",
                 "shasum": ""
             },
             "require": {
@@ -4404,10 +4309,10 @@
             ],
             "description": "TPR integration",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/2.2.9",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/2.2.10",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/issues"
             },
-            "time": "2023-10-27T06:52:56+00:00"
+            "time": "2023-11-02T10:54:20+00:00"
         },
         {
             "name": "drupal/helfi_tunnistamo",
