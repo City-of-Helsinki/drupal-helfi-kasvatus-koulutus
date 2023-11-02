@@ -13,6 +13,7 @@
         "drupal/core": "^10.0",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/flexible_permissions": "^1.0",
+        "drupal/gin": "^3.0@RC",
         "drupal/group": "^2.0",
         "drupal/group_content_menu": "^2.0",
         "drupal/hdbt": "6.x-dev",
