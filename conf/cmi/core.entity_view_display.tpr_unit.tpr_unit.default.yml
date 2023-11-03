@@ -17,6 +17,7 @@ dependencies:
     - address
     - entity_reference_revisions
     - helfi_address_search
+    - helfi_kasko_content
     - helfi_tpr
     - imagecache_external
     - link
@@ -135,10 +136,9 @@ content:
     weight: 17
     region: content
   field_ontologyword_details:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
+    type: tpr_ontologyword_details_formatter
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
     weight: 28
     region: content
