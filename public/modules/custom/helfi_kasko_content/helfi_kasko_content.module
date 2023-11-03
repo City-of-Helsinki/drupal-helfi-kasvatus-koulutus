@@ -236,3 +236,56 @@ function helfi_kasko_content_views_post_execute($view) {
     }
   }
 }
+
+/**
+ * Implements hook_theme().
+ */
+function helfi_kasko_content_theme() {
+  return [
+    'tpr_ontologyword_details_formatter' => [
+      'template' => 'tpr-ontologyword-details-formatter',
+      'variables' => [
+        'a1' => [
+          'label' => NULL,
+          'items' => [],
+        ],
+        'a2' => [
+          'label' => NULL,
+          'items' => [],
+        ],
+        'b1' => [
+          'label' => NULL,
+          'items' => [],
+        ],
+        'b2' => [
+          'label' => NULL,
+          'items' => [],
+        ],
+        'bilingual_education' => [
+          'label' => NULL,
+          'items' => [],
+        ],
+        'language_immersion' => [
+          'label' => NULL,
+          'items' => [],
+        ],
+        'language_enriched_education' => [
+          'label' => NULL,
+          'items' => [],
+        ],
+        'special_emphasis_1' => [
+          'label' => NULL,
+          'items' => [],
+        ],
+        'special_emphasis_3' => [
+          'label' => NULL,
+          'items' => [],
+        ],
+        'special_emphasis_7' => [
+          'label' => NULL,
+          'items' => [],
+        ],
+      ],
+    ],
+  ];
+}
