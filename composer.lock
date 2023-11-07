@@ -4326,16 +4326,16 @@
         },
         {
             "name": "drupal/helfi_proxy",
-            "version": "3.0.6",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-proxy.git",
-                "reference": "66121d5241d9cff17021f8a197a2d79361d06f80"
+                "reference": "b14b5fc48eb3df0c88b2e77176561c94402674bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-proxy/zipball/66121d5241d9cff17021f8a197a2d79361d06f80",
-                "reference": "66121d5241d9cff17021f8a197a2d79361d06f80",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-proxy/zipball/b14b5fc48eb3df0c88b2e77176561c94402674bf",
+                "reference": "b14b5fc48eb3df0c88b2e77176561c94402674bf",
                 "shasum": ""
             },
             "require": {
@@ -4347,6 +4347,7 @@
                 "php": "^8.0"
             },
             "conflict": {
+                "drupal/core": "<10.1",
                 "drupal/helfi_tunnistamo": "<=2.2.1"
             },
             "require-dev": {
@@ -4358,15 +4359,22 @@
                 "phpspec/prophecy-phpunit": "^2"
             },
             "type": "drupal-module",
+            "extra": {
+                "patches": {
+                    "drupal/core": {
+                        "[#3385550] Language negotiation breaks updating Drupal 9 to 10": "https://raw.githubusercontent.com/City-of-Helsinki/drupal-module-helfi-proxy/ffbde3654e0011e237a17ea1cb3a7291685e0c30/patches/3385550.patch"
+                    }
+                }
+            },
             "license": [
                 "GPL-2.0-or-later"
             ],
             "description": "Provides various fixes so we can serve multiple Drupal instances in one domain.",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-proxy/tree/3.0.6",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-proxy/tree/3.1.1",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-proxy/issues"
             },
-            "time": "2023-09-04T11:31:52+00:00"
+            "time": "2023-11-07T08:55:52+00:00"
         },
         {
             "name": "drupal/helfi_tpr",
