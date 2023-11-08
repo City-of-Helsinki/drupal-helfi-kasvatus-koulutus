@@ -1,0 +1,91 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Language program and weighted curriculum education"
+msgstr "Språkprogram och intensifierad undervisning"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "School year"
+msgstr "Läsåret"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Language studies"
+msgstr "Språkstudier"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Foreign language starting in 1st grade (A1)"
+msgstr "Främmande språk som börjar i åk 1 (A1)"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Optional foreign language starting in 3rd grade (A2)"
+msgstr "Valbart främmande språk som börjar i åk 3 (A2)"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Second national language starting in 6th grade (B1)"
+msgstr "Det andra inhemska språket som börjar i åk 6 (B1)"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Optional foreign language starting in 8th grade (B2)"
+msgstr "Valbart främmande språk som börjar i åk 8 (B2)"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Bilingual education"
+msgstr "Tvåspråkig undervisning"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Language immersion"
+msgstr "Språkbad"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Language-enriched education"
+msgstr "Språkberikad undervisning"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Weighted curriculum education"
+msgstr "Intensifierad undervisning"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Weighted curriculum education starting in 1st grade"
+msgstr "Intensifierad undervisning som börjar i åk 1"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Weighted curriculum education starting in 3rd grade"
+msgstr "Intensifierad undervisning som börjar i åk 3"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Weighted curriculum education starting in 7th grade"
+msgstr "Intensifierad undervisning som börjar i åk 7"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish-English"
+msgstr "finska-engelska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish-Swedish"
+msgstr "finska-svenska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish-German"
+msgstr "finska-tyska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish-Chinese"
+msgstr "finska-kinesiska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish-Spanish"
+msgstr "finska-spanska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish-Northern Sami"
+msgstr "finska-nordsamiska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish-Estonian"
+msgstr "finska-estniska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish-Russian"
+msgstr "finska-ryska"
