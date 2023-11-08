@@ -11,10 +11,10 @@ mode: default
 content:
   detail_items:
     type: tpr_ontology_word_detail_item
-    label: inline
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 1
     region: content
   name:
     type: string
@@ -24,14 +24,6 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  ontologyword_id:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 2
-    region: content
   school_details:
     type: tpr_school_details
     label: above
@@ -39,15 +31,9 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-  unit_id:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 1
-    region: content
 hidden:
   langcode: true
   name_override: true
+  ontologyword_id: true
   search_api_excerpt: true
+  unit_id: true

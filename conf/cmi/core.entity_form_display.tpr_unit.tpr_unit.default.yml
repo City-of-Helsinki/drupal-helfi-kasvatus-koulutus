@@ -163,6 +163,16 @@ content:
       sidebar: false
       use_details: true
     third_party_settings: {  }
+  field_ontologyword_details:
+    type: readonly_field_widget
+    weight: 40
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
   field_unit_type:
     type: entity_reference_autocomplete
     weight: 30
@@ -413,7 +423,6 @@ hidden:
   field_categories: true
   field_districts: true
   field_hs_front_page: true
-  field_ontologyword_details: true
   field_study_field: true
   hide_description: true
   ontologyword_ids: true
