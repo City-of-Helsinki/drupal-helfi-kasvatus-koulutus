@@ -4,10 +4,10 @@ declare(strict_types = 1);
 
 namespace Drupal\helfi_kasko_content\EventSubscriber;
 
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\migrate\Event\MigrateEvents;
 use Drupal\migrate\Event\MigratePreRowSaveEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Drupal\Core\Entity\EntityTypeManagerInterface;
 
 /**
  * Subscribe to migrate event in order to set Ontology word details field.

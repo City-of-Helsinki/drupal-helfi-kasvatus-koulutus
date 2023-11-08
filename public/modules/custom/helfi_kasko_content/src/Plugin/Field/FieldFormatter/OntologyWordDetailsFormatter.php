@@ -4,10 +4,14 @@ declare(strict_types = 1);
 
 namespace Drupal\helfi_kasko_content\Plugin\Field\FieldFormatter;
 
+use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\FormatterBase;
-use Drupal\helfi_tpr\Entity\Unit;
 use Drupal\helfi_kasko_content\UnitCategoryUtility;
+use Drupal\helfi_kasko_content\UnitOntologyWordDetailsUtility;
+use Drupal\helfi_school_addons\SchoolUtility;
+use Drupal\helfi_tpr\Entity\Unit;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Field formatter to render TPR unit's Ontologyword details.
@@ -23,6 +27,54 @@ use Drupal\helfi_kasko_content\UnitCategoryUtility;
 final class OntologyWordDetailsFormatter extends FormatterBase {
 
   /**
+   * The UnitOntologyWordDetailsUtility.
+   *
+   * @var \Drupal\helfi_kasko_content\UnitOntologyWordDetailsUtility
+   */
+  protected $unitOntologyWordDetailsUtility;
+
+  /**
+   * Constructs a FormatterBase object.
+   *
+   * @param string $plugin_id
+   *   The plugin_id for the formatter.
+   * @param mixed $plugin_definition
+   *   The plugin implementation definition.
+   * @param \Drupal\Core\Field\FieldDefinitionInterface $field_definition
+   *   The definition of the field to which the formatter is associated.
+   * @param array $settings
+   *   The formatter settings.
+   * @param string $label
+   *   The formatter label display setting.
+   * @param string $view_mode
+   *   The view mode.
+   * @param array $third_party_settings
+   *   Any third party settings.
+   * @param \Drupal\helfi_kasko_content\UnitOntologyWordDetailsUtility $unit_ontologyword_details_utility
+   *   Select icon configuration.
+   */
+  public function __construct($plugin_id, $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, $label, $view_mode, array $third_party_settings, UnitOntologyWordDetailsUtility $unit_ontologyword_details_utility) {
+    parent::__construct($plugin_id, $plugin_definition, $field_definition, $settings, $label, $view_mode, $third_party_settings);
+    $this->unitOntologyWordDetailsUtility = $unit_ontologyword_details_utility;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $plugin_id,
+      $plugin_definition,
+      $configuration['field_definition'],
+      $configuration['settings'],
+      $configuration['label'],
+      $configuration['view_mode'],
+      $configuration['third_party_settings'],
+      $container->get('helfi_kasko_content.unit_ontologyword_details_utility')
+    );
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function viewElements(FieldItemListInterface $items, $langcode): array {
@@ -31,164 +83,60 @@ final class OntologyWordDetailsFormatter extends FormatterBase {
       throw new \InvalidArgumentException('The "tpr_ontologyword_details_formatter" can only be used with tpr_unit entities.');
     }
 
-    // Show only for comprehensive schools
+    // Show only for comprehensive schools.
     if (!UnitCategoryUtility::entityHasCategory($entity, UnitCategoryUtility::COMPREHENSIVE_SCHOOL)) {
       return [];
     }
 
-    $elements = [
-      '#theme' => 'tpr_ontologyword_details_formatter'
-    ];
-
-    $ontologywordDetails = $items->referencedEntities();
-
-    $keysLabels = [
-      '1-1' => [
-        'key' => '#special_emphasis_1',
-        'label' => '1. luokalta alkava painotettu opetus',
-      ],
-      '2-2' => [
-        'key' => '#special_emphasis_3',
-        'label' => '3. luokalta alkava painotettu opetus',
-      ],
-      '3-3' => [
-        'key' => '#special_emphasis_7',
-        'label' => '7. luokalta alkava painotettu opetus',
-      ],
-      '15-26' => [
-        'key' => '#a1',
-        'label' => '1. luokalta alkava vieras kieli (A1)',
-      ],
-      '27-38' => [
-        'key' => '#a2',
-        'label' => '3. luokalta alkava vieras kieli (A2)',
-      ],
-      '101-112' => [
-        'key' => '#b1',
-        'label' => '6. luokalta alkava vieras kieli (B1)',
-      ],
-      '113-123' => [
-        'key' => '#b2',
-        'label' => '8. luokalta alkava vieras kieli (B2)',
-      ],
-      '293-297' => [
-        'key' => '#language_immersion',
-        'label' => 'Kielikylpyopetus',
-      ],
-      '904-909' => [
-        'key' => '#bilingual_education',
-        'label' => 'Kaksikielinen opetus',
-      ],
-      '910-911' => [
-        'key' => '#language_enriched_education',
-        'label' => 'Kielirikasteinen opetus',
-      ],
-    ];
-
-    $languageEducationMap = [
-      15 => t('English'),
-      16 => t('Spanish'),
-      17 => t('Hebrew'),
-      18 => t('Italian'),
-      19 => t('Chinese'),
-      20 => t('Latin'),
-      21 => t('French'),
-      22 => t('Swedish'),
-      23 => t('German'),
-      24 => t('Finnish'),
-      25 => t('Russian'),
-      26 => t('Estonian'),
-      27 => t('English'),
-      28 => t('Spanish'),
-      29 => t('Hebrew'),
-      30 => t('Italian'),
-      31 => t('Chinese'),
-      32 => t('Latin'),
-      33 => t('French'),
-      34 => t('Swedish'),
-      35 => t('German'),
-      36 => t('Finnish'),
-      37 => t('Russian'),
-      38 => t('Estonian'),
-      101 => t('English'),
-      102 => t('Spanish'),
-      103 => t('Hebrew'),
-      104 => t('Italian'),
-      105 => t('Chinese'),
-      106 => t('Latin'),
-      107 => t('French'),
-      108 => t('Swedish'),
-      109 => t('German'),
-      110 => t('Finnish'),
-      111 => t('Russian'),
-      112 => t('Estonian'),
-      113 => t('English'),
-      114 => t('Spanish'),
-      115 => t('Hebrew'),
-      116 => t('Italian'),
-      117 => t('Chinese'),
-      118 => t('Latin'),
-      119 => t('French'),
-      120 => t('Swedish'),
-      121 => t('German'),
-      122 => t('Finnish'),
-      123 => t('Russian'),
-      293 => t('Finnish-English'),
-      295 => t('Finnish-Swedish'),
-      297 => t('Finnish-German'),
-      904 => t('Finnish-English'),
-      905 => t('Finnish-Chinese'),
-      906 => t('Finnish-Spanish'),
-      907 => t('Finnish-Northern Sami'),
-      908 => t('Finnish-Estonian'),
-      909 => t('Finnish-Russian'),
-      910 => t('Finnish-English'),
-      911 => t('Finnish-Russian'),
-    ];
-
+    $elements = [];
     $emphasizedEducationItems = [];
+    $schoolYear = SchoolUtility::getCurrentComprehensiveSchoolYear();
+    $startingYear = SchoolUtility::splitStartYear($schoolYear);
+    $ontologywordDetails = $items->referencedEntities();
 
     foreach ($ontologywordDetails as $ontologywordDetail) {
       /** @var \Drupal\helfi_tpr\Entity\OntologyWordDetails $ontologywordDetail */
+      $ontologywordDetail = $ontologywordDetail->hasTranslation($langcode) ? $ontologywordDetail->getTranslation($langcode) : $ontologywordDetail;
       $ontologywordId = $ontologywordDetail->get('ontologyword_id')->getString();
       $detailItems = $ontologywordDetail->get('detail_items');
       $ontologywordIds = [];
-
-      $elementsKeysLabels = $this->findInRange($ontologywordId, $keysLabels);
+      $elementKeyLabel = $this->unitOntologyWordDetailsUtility->findOntologyWordKeysLabelsbyId($ontologywordId);
 
       foreach ($detailItems as $detailItem) {
         // Show only current schoolyear items.
-        // TODO: get value from settings.
-        if ($detailItem->get('schoolyear')->getString() === "2023–2024") {
+        // This can be done as schoolyear string comparison
+        // if TPR fixes their data.
+        // Comprehensive schools schoolyear data from TPR
+        // uses differentUnicode char U+2013 than high school
+        // and drupal settings data that uses U+002D char.
+        if (str_starts_with($detailItem->get('schoolyear')->getValue(), $startingYear)) {
           if (($ontologywordId >= 1 && $ontologywordId <= 3)) {
             $ontologywordIds[] = $detailItem->get('clarification')->getString();
-          } else {
-            $emphasizedEducationItems[$elementsKeysLabels['key']][] = $languageEducationMap[$ontologywordId];
+          }
+          else {
+            $emphasizedEducationItems[$elementKeyLabel['key']][] = $this->unitOntologyWordDetailsUtility->findLanguageEducationbyId($ontologywordId);
           }
         }
       }
 
       if (!empty($ontologywordIds)) {
-        $emphasizedEducationItems[$elementsKeysLabels['key']] = $ontologywordIds;
+        $emphasizedEducationItems[$elementKeyLabel['key']] = $ontologywordIds;
       }
 
-      $elements[$elementsKeysLabels['key']] = [
-        '#label' => $elementsKeysLabels['label'],
-        '#items' => $emphasizedEducationItems[$elementsKeysLabels['key']]
-      ];
+      if (!empty($emphasizedEducationItems)) {
+        $elements[$elementKeyLabel['key']] = [
+          '#label' => $elementKeyLabel['label'],
+          '#items' => $emphasizedEducationItems[$elementKeyLabel['key']],
+        ];
+      }
+    }
+
+    if (!empty($elements)) {
+      $elements['#theme'] = 'tpr_ontologyword_details_formatter';
+      $elements['#schoolyear'] = $schoolYear;
     }
 
     return $elements;
   }
 
-  private function findInRange($number, $array) {
-    foreach ($array as $key => $value) {
-      list($min, $max) = explode('-', (string) $key);
-      if ($number >= $min && $number <= $max) {
-        return $value;
-      }
-    }
-
-    return null;
-  }
 }

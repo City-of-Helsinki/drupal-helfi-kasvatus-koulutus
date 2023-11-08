@@ -9,3 +9,6 @@ dependencies:
   - elasticsearch_connector:elasticsearch_connector
   - helfi_platform_config:helfi_react_search
   - helfi_tpr:helfi_tpr
+  - helfi_tpr:helfi_school_addons
+'interface translation project': helfi_kasko_content
+'interface translation server pattern': modules/custom/helfi_kasko_content/translations/%language.po
