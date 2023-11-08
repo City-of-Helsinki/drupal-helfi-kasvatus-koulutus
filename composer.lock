@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b2e992e66bf2e81d11cbc82dfda2ebd4",
+    "content-hash": "acd7626ddb98257f644851f9214f6979",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4042,16 +4042,16 @@
         },
         {
             "name": "drupal/helfi_api_base",
-            "version": "2.5.11",
+            "version": "dev-UHF-9256_install_debug_rest_config",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base.git",
-                "reference": "cd300f71fcf464111636eec7c1da7f4bc855f772"
+                "reference": "82fbd82b32af486792311d32dce703131c42a35d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-api-base/zipball/cd300f71fcf464111636eec7c1da7f4bc855f772",
-                "reference": "cd300f71fcf464111636eec7c1da7f4bc855f772",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-api-base/zipball/82fbd82b32af486792311d32dce703131c42a35d",
+                "reference": "82fbd82b32af486792311d32dce703131c42a35d",
                 "shasum": ""
             },
             "require": {
@@ -4079,10 +4079,10 @@
             ],
             "description": "Helfi - API Base",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base/tree/2.5.11",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base/tree/UHF-9256_install_debug_rest_config",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base/issues"
             },
-            "time": "2023-11-06T08:22:25+00:00"
+            "time": "2023-11-08T09:34:17+00:00"
         },
         {
             "name": "drupal/helfi_azure_fs",
@@ -18800,6 +18800,7 @@
         "drupal/gin": 5,
         "drupal/hdbt": 20,
         "drupal/hdbt_admin": 20,
+        "drupal/helfi_api_base": 20,
         "drupal/helfi_drupal_tools": 20,
         "drupal/helfi_platform_config": 20
     },
