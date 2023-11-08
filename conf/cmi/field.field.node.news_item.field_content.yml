@@ -2,13 +2,14 @@ uuid: 13ada9e3-2472-4fe9-b78d-07fd8d22d765
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.node.field_content
-    - node.type.news_item
-    - paragraphs.paragraphs_type.banner
-    - paragraphs.paragraphs_type.image
-    - paragraphs.paragraphs_type.remote_video
-    - paragraphs.paragraphs_type.text
+  enforced:
+    config:
+      - field.storage.node.field_content
+      - node.type.news_item
+      - paragraphs.paragraphs_type.banner
+      - paragraphs.paragraphs_type.image
+      - paragraphs.paragraphs_type.remote_video
+      - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
 _core:

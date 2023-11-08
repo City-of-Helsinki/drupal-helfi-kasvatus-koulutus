@@ -2,11 +2,12 @@ uuid: a4e28800-501c-4040-90ba-57b902cdec76
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.field.paragraph.list_of_links_item.field_list_of_links_desc
-    - field.field.paragraph.list_of_links_item.field_list_of_links_image
-    - field.field.paragraph.list_of_links_item.field_list_of_links_link
-    - paragraphs.paragraphs_type.list_of_links_item
+  enforced:
+    config:
+      - field.field.paragraph.list_of_links_item.field_list_of_links_desc
+      - field.field.paragraph.list_of_links_item.field_list_of_links_image
+      - field.field.paragraph.list_of_links_item.field_list_of_links_link
+      - paragraphs.paragraphs_type.list_of_links_item
   module:
     - link
 _core:

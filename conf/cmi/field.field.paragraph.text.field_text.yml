@@ -2,9 +2,10 @@ uuid: 2c367d6e-1492-4bd8-9c73-4b2ee52d42de
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.paragraph.field_text
-    - paragraphs.paragraphs_type.text
+  enforced:
+    config:
+      - field.storage.paragraph.field_text
+      - paragraphs.paragraphs_type.text
   module:
     - allowed_formats
     - text

@@ -2,11 +2,12 @@ uuid: 13109bc8-3534-4354-9c94-3a50f41a12e6
 langcode: en
 status: true
 dependencies:
-  config:
-    - core.entity_view_mode.tpr_service.teaser
   module:
     - helfi_tpr
     - user
+  enforced:
+    config:
+      - core.entity_view_mode.tpr_service.teaser
 _core:
   default_config_hash: 42qkvrqMtYpQiMgt2YU8fcfrF2DGfBmfrwlRksq3laE
 id: unit_services

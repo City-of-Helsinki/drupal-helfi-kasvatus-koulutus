@@ -2,17 +2,18 @@ uuid: 4d0a2471-b122-490e-a2f2-ad8c7387e807
 langcode: en
 status: true
 dependencies:
-  config:
-    - image.style.original_l
-    - image.style.original_l_2x
-    - image.style.original_m
-    - image.style.original_m_2x
-    - image.style.original_s
-    - image.style.original_s_2x
-    - image.style.original_xs
-    - image.style.original_xs_2x
-    - image.style.original_xxs
-    - image.style.original_xxs_2x
+  enforced:
+    config:
+      - image.style.original_l
+      - image.style.original_l_2x
+      - image.style.original_m
+      - image.style.original_m_2x
+      - image.style.original_s
+      - image.style.original_s_2x
+      - image.style.original_xs
+      - image.style.original_xs_2x
+      - image.style.original_xxs
+      - image.style.original_xxs_2x
   module:
     - helfi_image_styles
 _core:

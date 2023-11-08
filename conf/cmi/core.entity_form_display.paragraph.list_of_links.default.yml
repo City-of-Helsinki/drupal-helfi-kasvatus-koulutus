@@ -2,11 +2,12 @@ uuid: fc6885f3-7e83-4b27-a094-d52e40462373
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.field.paragraph.list_of_links.field_list_of_links_design
-    - field.field.paragraph.list_of_links.field_list_of_links_links
-    - field.field.paragraph.list_of_links.field_list_of_links_title
-    - paragraphs.paragraphs_type.list_of_links
+  enforced:
+    config:
+      - field.field.paragraph.list_of_links.field_list_of_links_design
+      - field.field.paragraph.list_of_links.field_list_of_links_links
+      - field.field.paragraph.list_of_links.field_list_of_links_title
+      - paragraphs.paragraphs_type.list_of_links
   module:
     - hdbt_admin_tools
     - paragraphs

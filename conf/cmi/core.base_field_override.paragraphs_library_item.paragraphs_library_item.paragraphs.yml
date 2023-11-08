@@ -2,26 +2,25 @@ uuid: c469b39b-b030-429d-b842-369be6b3c5c3
 langcode: en
 status: true
 dependencies:
-  config:
-    - paragraphs.paragraphs_type.accordion
-    - paragraphs.paragraphs_type.banner
-    - paragraphs.paragraphs_type.columns
-    - paragraphs.paragraphs_type.contact_card_listing
-    - paragraphs.paragraphs_type.content_cards
-    - paragraphs.paragraphs_type.content_liftup
-    - paragraphs.paragraphs_type.image
-    - paragraphs.paragraphs_type.liftup_with_image
-    - paragraphs.paragraphs_type.list_of_links
-    - paragraphs.paragraphs_type.map
-    - paragraphs.paragraphs_type.service_list
-    - paragraphs.paragraphs_type.sidebar_text
-    - paragraphs.paragraphs_type.text
-    - paragraphs.paragraphs_type.unit_search
-  module:
-    - entity_reference_revisions
-    - paragraphs_library
   enforced:
+    config:
+      - paragraphs.paragraphs_type.accordion
+      - paragraphs.paragraphs_type.banner
+      - paragraphs.paragraphs_type.columns
+      - paragraphs.paragraphs_type.contact_card_listing
+      - paragraphs.paragraphs_type.content_cards
+      - paragraphs.paragraphs_type.content_liftup
+      - paragraphs.paragraphs_type.image
+      - paragraphs.paragraphs_type.liftup_with_image
+      - paragraphs.paragraphs_type.list_of_links
+      - paragraphs.paragraphs_type.map
+      - paragraphs.paragraphs_type.service_list
+      - paragraphs.paragraphs_type.sidebar_text
+      - paragraphs.paragraphs_type.text
+      - paragraphs.paragraphs_type.unit_search
     module:
+      - entity_reference_revisions
+      - paragraphs_library
       - helfi_base_content
 _core:
   default_config_hash: _Nbhr4JLQXcrcmDFzHXgntvTpv2ZLX_zza-h7gjrYws

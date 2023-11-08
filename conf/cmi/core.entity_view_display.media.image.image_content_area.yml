@@ -2,12 +2,13 @@ uuid: 609e088f-7dbb-43c0-aa3b-22ed4ef774d5
 langcode: en
 status: true
 dependencies:
-  config:
-    - core.entity_view_mode.media.image_content_area
-    - field.field.media.image.field_media_image
-    - field.field.media.image.field_photographer
-    - media.type.image
-    - responsive_image.styles.image__3_2_content_area
+  enforced:
+    config:
+      - core.entity_view_mode.media.image_content_area
+      - field.field.media.image.field_media_image
+      - field.field.media.image.field_photographer
+      - media.type.image
+      - responsive_image.styles.image__3_2_content_area
   module:
     - responsive_image
 _core:

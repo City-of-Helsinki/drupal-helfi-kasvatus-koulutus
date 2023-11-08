@@ -2,12 +2,13 @@ uuid: 1c93bdb7-9b51-49a6-87b7-f878c7233460
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.field.paragraph.liftup_with_image.field_liftup_with_image_desc
-    - field.field.paragraph.liftup_with_image.field_liftup_with_image_design
-    - field.field.paragraph.liftup_with_image.field_liftup_with_image_image
-    - field.field.paragraph.liftup_with_image.field_liftup_with_image_title
-    - paragraphs.paragraphs_type.liftup_with_image
+  enforced:
+    config:
+      - field.field.paragraph.liftup_with_image.field_liftup_with_image_desc
+      - field.field.paragraph.liftup_with_image.field_liftup_with_image_design
+      - field.field.paragraph.liftup_with_image.field_liftup_with_image_image
+      - field.field.paragraph.liftup_with_image.field_liftup_with_image_title
+      - paragraphs.paragraphs_type.liftup_with_image
   module:
     - options
     - text

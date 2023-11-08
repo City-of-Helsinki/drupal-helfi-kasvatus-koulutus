@@ -2,10 +2,11 @@ uuid: 3e08a81e-4ead-41fe-a8f1-b0308fe2bb59
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.tpr_service.field_sidebar_content
-    - paragraphs.paragraphs_type.from_library
-    - paragraphs.paragraphs_type.sidebar_text
+  enforced:
+    config:
+      - field.storage.tpr_service.field_sidebar_content
+      - paragraphs.paragraphs_type.from_library
+      - paragraphs.paragraphs_type.sidebar_text
   module:
     - entity_reference_revisions
     - helfi_tpr

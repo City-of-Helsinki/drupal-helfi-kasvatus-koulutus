@@ -2,8 +2,9 @@ uuid: 30d33b31-b0e6-43e7-bc2a-852b98828104
 langcode: en
 status: true
 dependencies:
-  config:
-    - group.content_type.group_content_type_cb62eb2a38c4f
+  enforced:
+    config:
+      - group.content_type.group_content_type_cb62eb2a38c4f
   module:
     - content_translation
 third_party_settings:

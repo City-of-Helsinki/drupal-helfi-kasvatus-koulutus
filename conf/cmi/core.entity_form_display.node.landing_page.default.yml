@@ -2,13 +2,14 @@ uuid: bae1d255-643f-40f2-830f-df8c35758773
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.field.node.landing_page.field_content
-    - field.field.node.landing_page.field_has_hero
-    - field.field.node.landing_page.field_hero
-    - field.field.node.landing_page.field_liftup_image
-    - field.field.node.landing_page.field_metatags
-    - node.type.landing_page
+  enforced:
+    config:
+      - field.field.node.landing_page.field_content
+      - field.field.node.landing_page.field_has_hero
+      - field.field.node.landing_page.field_hero
+      - field.field.node.landing_page.field_liftup_image
+      - field.field.node.landing_page.field_metatags
+      - node.type.landing_page
   module:
     - hdbt_admin_tools
     - media_library

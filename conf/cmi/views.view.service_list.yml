@@ -2,13 +2,14 @@ uuid: 955bad3c-ad2a-4083-b2b5-3fbb14fd92d5
 langcode: en
 status: true
 dependencies:
-  config:
-    - core.entity_view_mode.tpr_service.teaser
-    - core.entity_view_mode.tpr_service.teaser_search_result
   module:
     - helfi_tpr
     - text
     - user
+  enforced:
+    config:
+      - core.entity_view_mode.tpr_service.teaser
+      - core.entity_view_mode.tpr_service.teaser_search_result
 _core:
   default_config_hash: MvCiaSrdVcljMT3wLlt5V47it0_DgXogcHidiHT4sug
 id: service_list

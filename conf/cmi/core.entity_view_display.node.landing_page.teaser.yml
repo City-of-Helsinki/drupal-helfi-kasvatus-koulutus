@@ -2,14 +2,15 @@ uuid: 4d901502-596e-4830-9c98-12e3d66abc61
 langcode: en
 status: true
 dependencies:
-  config:
-    - core.entity_view_mode.node.teaser
-    - field.field.node.landing_page.field_content
-    - field.field.node.landing_page.field_has_hero
-    - field.field.node.landing_page.field_hero
-    - field.field.node.landing_page.field_liftup_image
-    - field.field.node.landing_page.field_metatags
-    - node.type.landing_page
+  enforced:
+    config:
+      - core.entity_view_mode.node.teaser
+      - field.field.node.landing_page.field_content
+      - field.field.node.landing_page.field_has_hero
+      - field.field.node.landing_page.field_hero
+      - field.field.node.landing_page.field_liftup_image
+      - field.field.node.landing_page.field_metatags
+      - node.type.landing_page
   module:
     - user
 _core:

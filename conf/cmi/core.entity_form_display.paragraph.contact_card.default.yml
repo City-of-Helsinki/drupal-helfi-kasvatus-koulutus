@@ -2,17 +2,18 @@ uuid: 49bdbbee-a135-4d34-8782-f44b8bb84d5c
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.field.paragraph.contact_card.field_contact_description
-    - field.field.paragraph.contact_card.field_contact_image
-    - field.field.paragraph.contact_card.field_contact_image_photographer
-    - field.field.paragraph.contact_card.field_contact_name
-    - field.field.paragraph.contact_card.field_contact_social_media
-    - field.field.paragraph.contact_card.field_contact_title
-    - field.field.paragraph.contact_card.field_email
-    - field.field.paragraph.contact_card.field_phone_number
-    - image.style.thumbnail
-    - paragraphs.paragraphs_type.contact_card
+  enforced:
+    config:
+      - field.field.paragraph.contact_card.field_contact_description
+      - field.field.paragraph.contact_card.field_contact_image
+      - field.field.paragraph.contact_card.field_contact_image_photographer
+      - field.field.paragraph.contact_card.field_contact_name
+      - field.field.paragraph.contact_card.field_contact_social_media
+      - field.field.paragraph.contact_card.field_contact_title
+      - field.field.paragraph.contact_card.field_email
+      - field.field.paragraph.contact_card.field_phone_number
+      - image.style.thumbnail
+      - paragraphs.paragraphs_type.contact_card
   module:
     - focal_point
     - paragraphs

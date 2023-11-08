@@ -2,15 +2,13 @@ uuid: 29519a37-a64e-45ea-bf77-64ca8c2dc8f5
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.paragraph.field_accordion_items
-    - paragraphs.paragraphs_type.accordion
-    - paragraphs.paragraphs_type.accordion_item
-  module:
-    - entity_reference_revisions
   enforced:
     config:
+      - field.storage.paragraph.field_accordion_items
+      - paragraphs.paragraphs_type.accordion
       - paragraphs.paragraphs_type.accordion_item
+  module:
+    - entity_reference_revisions
 _core:
   default_config_hash: PCUbQBrVhsW-yyr2nuJTneoebeVthz457CEgW9QDdMk
 id: paragraph.accordion.field_accordion_items

@@ -2,11 +2,12 @@ uuid: 2d84d206-a313-4d33-88b7-3bd6c912bd62
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.paragraph.field_columns_right_column
-    - paragraphs.paragraphs_type.columns
-    - paragraphs.paragraphs_type.image
-    - paragraphs.paragraphs_type.text
+  enforced:
+    config:
+      - field.storage.paragraph.field_columns_right_column
+      - paragraphs.paragraphs_type.columns
+      - paragraphs.paragraphs_type.image
+      - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
 _core:

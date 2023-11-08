@@ -2,12 +2,13 @@ uuid: 34e3bc02-9518-4d75-bf2b-408e1f24c3c1
 langcode: en
 status: true
 dependencies:
-  config:
-    - core.entity_form_mode.media.media_library
-    - field.field.media.image.field_media_image
-    - field.field.media.image.field_photographer
-    - image.style.media_library
-    - media.type.image
+  enforced:
+    config:
+      - core.entity_form_mode.media.media_library
+      - field.field.media.image.field_media_image
+      - field.field.media.image.field_photographer
+      - image.style.media_library
+      - media.type.image
   module:
     - focal_point
 _core:

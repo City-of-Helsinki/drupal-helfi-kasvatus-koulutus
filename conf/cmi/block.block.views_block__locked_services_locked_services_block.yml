@@ -2,8 +2,9 @@ uuid: 220ccf99-5250-4357-a33b-8b01672fb621
 langcode: en
 status: true
 dependencies:
-  config:
-    - views.view.locked_services
+  enforced:
+    config:
+      - views.view.locked_services
   module:
     - system
     - views

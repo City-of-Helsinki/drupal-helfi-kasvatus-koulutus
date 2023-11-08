@@ -2,16 +2,17 @@ uuid: 25b71bb3-7958-459a-9b01-863510e92cb4
 langcode: en
 status: true
 dependencies:
-  config:
-    - core.entity_view_mode.tpr_unit.vocational_school_card
-    - field.field.tpr_unit.tpr_unit.field_categories
-    - field.field.tpr_unit.tpr_unit.field_content
-    - field.field.tpr_unit.tpr_unit.field_hs_front_page
-    - field.field.tpr_unit.tpr_unit.field_lower_content
-    - field.field.tpr_unit.tpr_unit.field_metatags
-    - field.field.tpr_unit.tpr_unit.field_study_field
-    - field.field.tpr_unit.tpr_unit.field_unit_type
-    - responsive_image.styles.image__3_2
+  enforced:
+    config:
+      - core.entity_view_mode.tpr_unit.vocational_school_card
+      - field.field.tpr_unit.tpr_unit.field_categories
+      - field.field.tpr_unit.tpr_unit.field_content
+      - field.field.tpr_unit.tpr_unit.field_hs_front_page
+      - field.field.tpr_unit.tpr_unit.field_lower_content
+      - field.field.tpr_unit.tpr_unit.field_metatags
+      - field.field.tpr_unit.tpr_unit.field_study_field
+      - field.field.tpr_unit.tpr_unit.field_unit_type
+      - responsive_image.styles.image__3_2
   module:
     - address
     - entity_reference_revisions

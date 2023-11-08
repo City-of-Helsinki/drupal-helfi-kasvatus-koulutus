@@ -2,14 +2,15 @@ uuid: 1228a356-fff7-4032-872f-ad7885d6579c
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.field.paragraph.accordion.field_accordion_description
-    - field.field.paragraph.accordion.field_accordion_design
-    - field.field.paragraph.accordion.field_accordion_heading_level
-    - field.field.paragraph.accordion.field_accordion_items
-    - field.field.paragraph.accordion.field_accordion_title
-    - field.field.paragraph.accordion.field_accordion_title_level
-    - paragraphs.paragraphs_type.accordion
+  enforced:
+    config:
+      - field.field.paragraph.accordion.field_accordion_description
+      - field.field.paragraph.accordion.field_accordion_design
+      - field.field.paragraph.accordion.field_accordion_heading_level
+      - field.field.paragraph.accordion.field_accordion_items
+      - field.field.paragraph.accordion.field_accordion_title
+      - field.field.paragraph.accordion.field_accordion_title_level
+      - paragraphs.paragraphs_type.accordion
   module:
     - entity_reference_revisions
     - options

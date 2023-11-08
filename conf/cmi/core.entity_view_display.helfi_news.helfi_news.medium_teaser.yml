@@ -2,8 +2,9 @@ uuid: e27e0a77-3800-449f-a8ff-61ba8785fdd9
 langcode: en
 status: true
 dependencies:
-  config:
-    - core.entity_view_mode.helfi_news.medium_teaser
+  enforced:
+    config:
+      - core.entity_view_mode.helfi_news.medium_teaser
   module:
     - external_entities
     - imagecache_external

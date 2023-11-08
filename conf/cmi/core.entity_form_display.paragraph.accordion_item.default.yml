@@ -2,17 +2,15 @@ uuid: 3bc1ca0c-8629-41a2-82f6-df44f2da4dd8
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.field.paragraph.accordion_item.field_accordion_item_content
-    - field.field.paragraph.accordion_item.field_accordion_item_heading
-    - field.field.paragraph.accordion_item.field_icon
-    - paragraphs.paragraphs_type.accordion_item
+  enforced:
+    config:
+      - field.field.paragraph.accordion_item.field_accordion_item_content
+      - field.field.paragraph.accordion_item.field_accordion_item_heading
+      - field.field.paragraph.accordion_item.field_icon
+      - paragraphs.paragraphs_type.accordion_item
   module:
     - hdbt_admin_tools
     - paragraphs
-  enforced:
-    config:
-      - paragraphs.paragraphs_type.accordion_item
 _core:
   default_config_hash: 7N37krPnWHQwmRjb9_0yq6TseyB-RZ-qkVpklV7rR98
 id: paragraph.accordion_item.default

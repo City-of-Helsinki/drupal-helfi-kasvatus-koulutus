@@ -2,10 +2,10 @@ uuid: ebab2fb3-1244-4a78-b9b3-99daf87f9128
 langcode: en
 status: true
 dependencies:
-  module:
-    - entity_reference_revisions
-    - paragraphs
   enforced:
+    module:
+      - entity_reference_revisions
+      - paragraphs
     config:
       - paragraphs.paragraphs_type.accordion
 _core:
