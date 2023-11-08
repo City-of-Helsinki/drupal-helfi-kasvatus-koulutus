@@ -90,4 +90,50 @@ msgctxt "TPR Ontologyword details schools"
 msgid "Finnish-Russian"
 msgstr "suomi-venäjä"
 
+msgctxt "TPR Ontologyword details schools"
+msgid "English"
+msgstr "englanti"
 
+msgctxt "TPR Ontologyword details schools"
+msgid "Spanish"
+msgstr "espanja"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Hebrew"
+msgstr "heprea"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Italian"
+msgstr "italia"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Chinese"
+msgstr "kiina"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Latin"
+msgstr "latina"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "French"
+msgstr "ranska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Swedish"
+msgstr "ruotsi"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "German"
+msgstr "saksa"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish"
+msgstr "suomi"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Russian"
+msgstr "venäjä"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Estonian"
+msgstr "eesti"

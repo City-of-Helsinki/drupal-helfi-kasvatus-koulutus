@@ -89,3 +89,51 @@ msgstr "finska-estniska"
 msgctxt "TPR Ontologyword details schools"
 msgid "Finnish-Russian"
 msgstr "finska-ryska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "English"
+msgstr "engelska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Spanish"
+msgstr "spanska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Hebrew"
+msgstr "hebreiska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Italian"
+msgstr "italiensa"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Chinese"
+msgstr "kinesiska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Latin"
+msgstr "latin"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "French"
+msgstr "franska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Swedish"
+msgstr "svenska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "German"
+msgstr "tyska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish"
+msgstr "finska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Russian"
+msgstr "ryska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Estonian"
+msgstr "estniska"

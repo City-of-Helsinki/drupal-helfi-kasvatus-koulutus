@@ -243,7 +243,7 @@ function helfi_kasko_content_views_post_execute($view) {
 function helfi_kasko_content_theme() {
   return [
     'tpr_ontologyword_details_formatter' => [
-      'template' => 'tpr-ontologyword-details-formatter',
+      'template' => 'tpr-unit-ontologyword-details',
       'variables' => [
         'schoolyear' => NULL,
         'a1' => [

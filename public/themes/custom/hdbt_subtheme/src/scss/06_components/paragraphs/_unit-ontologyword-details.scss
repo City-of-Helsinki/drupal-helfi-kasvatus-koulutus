@@ -1,0 +1,26 @@
+
+.unit__ontologyword-details {
+  h5 {
+    margin-bottom: $spacing;
+  }
+}
+
+.unit__ontologyword-details__schoolyear {
+  @include heading-hyphens;
+  @include font('h4');
+  display: block;
+  padding-top: $spacing;
+  margin-top: $spacing;
+}
+
+.unit__ontologyword-details-row {
+  @include font('body');
+  margin-bottom: $spacing;
+
+  .unit__ontologyword-details-row__label {
+    @include font('h6');
+    align-items: flex-start;
+    display: flex;
+    margin-bottom: 8px;
+  }
+}
