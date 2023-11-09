@@ -9,6 +9,7 @@ declare(strict_types = 1);
 
 use Drupal\Core\Entity\EntityStorageException;
 use Drupal\helfi_platform_config\ConfigHelper;
+use Drupal\helfi_kasko_content\SchoolUtility;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\taxonomy\Entity\Vocabulary;
 
@@ -113,4 +114,13 @@ function helfi_kasko_content_update_9002() {
       }
     }
   }
+}
+
+/**
+ * Update schoolyear Drupal state.
+ */
+function helfi_kasko_content_update_9003() {
+  $highSchoolYear = \Drupal::state()->get('helfi_school_addons.school_year') ? (int) \Drupal::state()->get('helfi_school_addons.school_year') : '2023-2024';
+  SchoolUtility::setCurrentHighSchoolYear(SchoolUtility::composeSchoolYear($highSchoolYear));
+  SchoolUtility::setCurrentComprehensiveSchoolYear('2023-2024');
 }

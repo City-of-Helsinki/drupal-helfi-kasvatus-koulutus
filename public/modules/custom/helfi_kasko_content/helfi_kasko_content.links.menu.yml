@@ -1,0 +1,6 @@
+helfi_kasko_content.admin_form:
+  title: 'School settings'
+  description: 'Admin school settings.'
+  route_name: helfi_kasko_content.admin_form
+  parent: system.admin_config_services
+  weight: 95

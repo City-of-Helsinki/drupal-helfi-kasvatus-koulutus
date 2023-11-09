@@ -290,3 +290,39 @@ function helfi_kasko_content_theme(): array {
     ],
   ];
 }
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function helfi_kasko_content_views_data_alter(array &$data) {
+  $data['tpr_unit']['emphasis_filter'] = [
+    'title' => t('Emphasis filter'),
+    'filter' => [
+      'title' => t('Emphasis filter'),
+      'help' => 'Filters units by emphasis.',
+      'field' => 'nid',
+      'id' => 'emphasis_filter',
+    ],
+  ];
+
+  $data['tpr_unit']['educational_mission_filter'] = [
+    'title' => t('Educational mission'),
+    'filter' => [
+      'title' => t('Educational mission'),
+      'help' => 'Filters units by educational mission.',
+      'field' => 'nid',
+      'id' => 'educational_mission_filter',
+    ],
+  ];
+
+  $data['tpr_unit']['study_programme_type_filter'] = [
+    'title' => t('Study programme type'),
+    'filter' => [
+      'title' => t('Study programme type'),
+      'help' => 'Filters units by study programme type.',
+      'field' => 'nid',
+      'id' => 'study_programme_type_filter',
+    ],
+  ];
+}
+
