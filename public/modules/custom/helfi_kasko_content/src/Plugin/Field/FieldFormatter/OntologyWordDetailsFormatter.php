@@ -91,7 +91,6 @@ final class OntologyWordDetailsFormatter extends FormatterBase {
     $elements = [];
     $emphasizedEducationItems = [];
     $schoolYear = SchoolUtility::getCurrentComprehensiveSchoolYear();
-    $startingYear = SchoolUtility::splitStartYear($schoolYear);
     $ontologywordDetails = $items->referencedEntities();
 
     foreach ($ontologywordDetails as $ontologywordDetail) {
@@ -104,12 +103,7 @@ final class OntologyWordDetailsFormatter extends FormatterBase {
 
       foreach ($detailItems as $detailItem) {
         // Show only current schoolyear items.
-        // This can be done as schoolyear string comparison
-        // if TPR fixes their data.
-        // Comprehensive schools schoolyear data from TPR
-        // uses differentUnicode char U+2013 than high school
-        // and drupal settings data that uses U+002D char.
-        if (str_starts_with($detailItem->get('schoolyear')->getValue(), $startingYear)) {
+        if ($detailItem->get('schoolyear')->getValue() === $schoolYear) {
           if (($ontologywordId >= 1 && $ontologywordId <= 3)) {
             $ontologywordIds[] = $detailItem->get('clarification')->getString();
           }
