@@ -29,7 +29,7 @@ abstract class SchoolDetailsBase extends InOperator {
    */
   public function init(ViewExecutable $view, DisplayPluginBase $display, array &$options = NULL) {
     parent::init($view, $display, $options);
-    $this->valueTitle = t('Allowed clarifications');
+    $this->valueTitle = $this->t('Allowed clarifications');
     $this->definition['options callback'] = [$this, 'generateOptions'];
   }
 

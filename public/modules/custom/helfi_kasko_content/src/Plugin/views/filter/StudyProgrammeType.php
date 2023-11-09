@@ -25,7 +25,7 @@ class StudyProgrammeType extends InOperator {
    */
   public function init(ViewExecutable $view, DisplayPluginBase $display, array &$options = NULL) {
     parent::init($view, $display, $options);
-    $this->valueTitle = t('Allowed values');
+    $this->valueTitle = $this->t('Allowed values');
     $this->definition['options callback'] = [$this, 'generateOptions'];
   }
 
@@ -99,8 +99,8 @@ class StudyProgrammeType extends InOperator {
    */
   protected function generateOptions(): array {
     return [
-      'general' => t('The general programme or study programme'),
-      'adult' => t('The upper secondary school for adults or a study programme'),
+      'general' => $this->t('The general programme or study programme'),
+      'adult' => $this->t('The upper secondary school for adults or a study programme'),
     ];
   }
 

@@ -7,9 +7,9 @@ namespace Drupal\helfi_kasko_content\Plugin\Field\FieldFormatter;
 use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\FormatterBase;
+use Drupal\helfi_kasko_content\SchoolUtility;
 use Drupal\helfi_kasko_content\UnitCategoryUtility;
 use Drupal\helfi_kasko_content\UnitOntologyWordDetailsUtility;
-use Drupal\helfi_kasko_content\SchoolUtility;
 use Drupal\helfi_tpr\Entity\Unit;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 

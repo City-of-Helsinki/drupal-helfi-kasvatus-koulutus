@@ -28,7 +28,7 @@ class SchoolSettingsForm extends FormBase {
     $currentComprehensiveSchoolYear = SchoolUtility::getCurrentComprehensiveSchoolYear();
 
     $form['current_school_year_info'] = [
-      '#markup' => '<p>' . t('Current high school year:') . ' ' . ($currentHighSchoolYear ? $currentHighSchoolYear : '-') . '</p>',
+      '#markup' => '<p>' . $this->t('Current high school year:') . ' ' . ($currentHighSchoolYear ? $currentHighSchoolYear : '-') . '</p>',
     ];
 
     $form['high_school_year_first'] = [
@@ -37,11 +37,11 @@ class SchoolSettingsForm extends FormBase {
       '#min' => 2020,
       '#max' => 9999,
       '#default_value' => ($currentHighSchoolYear ? SchoolUtility::splitStartYear($currentHighSchoolYear) : ''),
-      '#description' => t('Select the starting year for a high school year period. For example, selecting "2022" would set the school year to "2022-2023".'),
+      '#description' => $this->t('Select the starting year for a high school year period. For example, selecting "2022" would set the school year to "2022-2023".'),
     ];
 
     $form['current_comprehensive_school_year_info'] = [
-      '#markup' => '<p>' . t('Current comprehensive school year:') . ' ' . ($currentComprehensiveSchoolYear ? $currentComprehensiveSchoolYear : '-') . '</p>',
+      '#markup' => '<p>' . $this->t('Current comprehensive school year:') . ' ' . ($currentComprehensiveSchoolYear ? $currentComprehensiveSchoolYear : '-') . '</p>',
     ];
 
     $form['comprehensive_school_year_first'] = [
@@ -50,7 +50,7 @@ class SchoolSettingsForm extends FormBase {
       '#min' => 2020,
       '#max' => 9999,
       '#default_value' => ($currentComprehensiveSchoolYear ? SchoolUtility::splitStartYear($currentComprehensiveSchoolYear) : ''),
-      '#description' => t('Select the starting year for a comprehensive school year period. For example, selecting "2022" would set the school year to "2022-2023".'),
+      '#description' => $this->t('Select the starting year for a comprehensive school year period. For example, selecting "2022" would set the school year to "2022-2023".'),
     ];
 
     $form['submit'] = [

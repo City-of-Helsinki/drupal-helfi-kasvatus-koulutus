@@ -325,4 +325,3 @@ function helfi_kasko_content_views_data_alter(array &$data) {
     ],
   ];
 }
-
