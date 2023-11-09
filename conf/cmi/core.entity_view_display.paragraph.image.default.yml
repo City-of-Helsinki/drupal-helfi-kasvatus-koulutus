@@ -2,12 +2,11 @@ uuid: 2b5a9d2a-60f3-40ea-80cb-5cea8ea207b9
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.field.paragraph.image.field_image
-      - field.field.paragraph.image.field_image_caption
-      - field.field.paragraph.image.field_original_aspect_ratio
-      - paragraphs.paragraphs_type.image
+  config:
+    - field.field.paragraph.image.field_image
+    - field.field.paragraph.image.field_image_caption
+    - field.field.paragraph.image.field_original_aspect_ratio
+    - paragraphs.paragraphs_type.image
 _core:
   default_config_hash: WOIjdvfdwRn0wIU-TyaRDV4PKTm77QLskpKljuLGk5Q
 id: paragraph.image.default

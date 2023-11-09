@@ -2,14 +2,14 @@ uuid: 220ccf99-5250-4357-a33b-8b01672fb621
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - views.view.locked_services
   module:
     - system
     - views
   theme:
     - hdbt_admin
+  enforced:
+    config:
+      - views.view.locked_services
 id: views_block__locked_services_locked_services_block
 theme: hdbt_admin
 region: content

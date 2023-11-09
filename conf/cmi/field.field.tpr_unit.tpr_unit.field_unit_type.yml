@@ -2,10 +2,9 @@ uuid: 013e5672-c943-4ba8-8340-624583c7eff3
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.storage.tpr_unit.field_unit_type
-      - taxonomy.vocabulary.unit_type
+  config:
+    - field.storage.tpr_unit.field_unit_type
+    - taxonomy.vocabulary.unit_type
   module:
     - helfi_tpr
 _core:

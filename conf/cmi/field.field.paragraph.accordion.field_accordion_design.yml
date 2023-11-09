@@ -2,10 +2,9 @@ uuid: fe7160d0-cd1f-417e-a5e9-f042649b5a07
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.storage.paragraph.field_accordion_design
-      - paragraphs.paragraphs_type.accordion
+  config:
+    - field.storage.paragraph.field_accordion_design
+    - paragraphs.paragraphs_type.accordion
   module:
     - options
 _core:

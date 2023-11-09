@@ -2,14 +2,13 @@ uuid: 7ac5e022-2491-4b75-8206-f47a90f7ab72
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.storage.paragraph.field_accordion_item_content
-      - paragraphs.paragraphs_type.accordion_item
-      - paragraphs.paragraphs_type.columns
-      - paragraphs.paragraphs_type.image
-      - paragraphs.paragraphs_type.phasing
-      - paragraphs.paragraphs_type.text
+  config:
+    - field.storage.paragraph.field_accordion_item_content
+    - paragraphs.paragraphs_type.accordion_item
+    - paragraphs.paragraphs_type.columns
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.phasing
+    - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
 _core:

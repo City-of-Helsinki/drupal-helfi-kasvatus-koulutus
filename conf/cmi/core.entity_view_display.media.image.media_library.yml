@@ -2,13 +2,12 @@ uuid: bc11b72a-8ded-4b91-87bc-8f0ece9bbb66
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - core.entity_view_mode.media.media_library
-      - field.field.media.image.field_media_image
-      - field.field.media.image.field_photographer
-      - image.style.medium
-      - media.type.image
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_photographer
+    - image.style.medium
+    - media.type.image
   module:
     - image
 _core:

@@ -2,13 +2,13 @@ uuid: a1c2fcfe-4bcc-4324-a304-3342ccd684bf
 langcode: en
 status: true
 dependencies:
+  module:
+    - gnode
+    - node
   enforce:
     config:
       - group.type.upper_secondary_school
       - node.type.landing_page
-  module:
-    - gnode
-    - node
 id: group_content_type_cb62eb2a38c4f
 group_type: upper_secondary_school
 content_plugin: 'group_node:landing_page'

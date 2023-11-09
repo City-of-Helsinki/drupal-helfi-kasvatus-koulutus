@@ -2,12 +2,11 @@ uuid: deb67172-e8dd-4e67-aa94-6d7db1839c66
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.field.media.image.field_media_image
-      - field.field.media.image.field_photographer
-      - image.style.large
-      - media.type.image
+  config:
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_photographer
+    - image.style.large
+    - media.type.image
   module:
     - image
 _core:

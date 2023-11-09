@@ -2,15 +2,14 @@ uuid: a4c4f338-598b-4acf-8a5f-e1c78d00d732
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.field.paragraph.target_group_link_item.field_icon
-      - field.field.paragraph.target_group_link_item.field_target_group_item_link
-      - field.field.paragraph.target_group_link_item.field_target_group_item_subtitle
-      - paragraphs.paragraphs_type.target_group_link_item
+  config:
+    - field.field.paragraph.target_group_link_item.field_icon
+    - field.field.paragraph.target_group_link_item.field_target_group_item_link
+    - field.field.paragraph.target_group_link_item.field_target_group_item_subtitle
+    - paragraphs.paragraphs_type.target_group_link_item
   module:
-    - hdbt_admin_tools
     - link
+    - hdbt_admin_tools
 _core:
   default_config_hash: KD89aqMiKmJcWgPj05TsKprgmY9BzDTWPZG6_b5-V9g
 id: paragraph.target_group_link_item.default

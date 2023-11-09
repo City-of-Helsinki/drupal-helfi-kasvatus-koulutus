@@ -2,14 +2,13 @@ uuid: b0d683e1-cdac-43e5-873a-8899d2ad2ffd
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.field.node.landing_page.field_content
-      - field.field.node.landing_page.field_has_hero
-      - field.field.node.landing_page.field_hero
-      - field.field.node.landing_page.field_liftup_image
-      - field.field.node.landing_page.field_metatags
-      - node.type.landing_page
+  config:
+    - field.field.node.landing_page.field_content
+    - field.field.node.landing_page.field_has_hero
+    - field.field.node.landing_page.field_hero
+    - field.field.node.landing_page.field_liftup_image
+    - field.field.node.landing_page.field_metatags
+    - node.type.landing_page
   module:
     - entity_reference_revisions
     - metatag

@@ -2,11 +2,10 @@ uuid: 42500f44-8f17-4876-b995-5a1bfaf59335
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.field.paragraph.sidebar_text.field_sidebar_text_text
-      - field.field.paragraph.sidebar_text.field_sidebar_text_title
-      - paragraphs.paragraphs_type.sidebar_text
+  config:
+    - field.field.paragraph.sidebar_text.field_sidebar_text_text
+    - field.field.paragraph.sidebar_text.field_sidebar_text_title
+    - paragraphs.paragraphs_type.sidebar_text
   module:
     - allowed_formats
     - text

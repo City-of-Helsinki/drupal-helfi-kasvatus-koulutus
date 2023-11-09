@@ -2,21 +2,19 @@ uuid: 2493d217-f990-4e5b-b3d4-8ba29c5066f1
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.field.paragraph.contact_card.field_contact_description
-      - field.field.paragraph.contact_card.field_contact_image
-      - field.field.paragraph.contact_card.field_contact_image_photographer
-      - field.field.paragraph.contact_card.field_contact_name
-      - field.field.paragraph.contact_card.field_contact_social_media
-      - field.field.paragraph.contact_card.field_contact_title
-      - field.field.paragraph.contact_card.field_email
-      - field.field.paragraph.contact_card.field_phone_number
-      - image.style.1_1_l
-      - paragraphs.paragraphs_type.contact_card
+  config:
+    - field.field.paragraph.contact_card.field_contact_description
+    - field.field.paragraph.contact_card.field_contact_image
+    - field.field.paragraph.contact_card.field_contact_image_photographer
+    - field.field.paragraph.contact_card.field_contact_name
+    - field.field.paragraph.contact_card.field_contact_social_media
+    - field.field.paragraph.contact_card.field_contact_title
+    - field.field.paragraph.contact_card.field_email
+    - field.field.paragraph.contact_card.field_phone_number
+    - image.style.1_1_l
+    - paragraphs.paragraphs_type.contact_card
   module:
     - entity_reference_revisions
-    - helfi_platform_config
     - image
     - telephone
 _core:
@@ -39,8 +37,6 @@ content:
     settings:
       image_link: ''
       image_style: 1_1_l
-      image_loading:
-        attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content

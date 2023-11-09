@@ -2,15 +2,14 @@ uuid: 97b7a3b3-ed50-495d-9735-84ec76370d31
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.field.paragraph.hero.field_hero_desc
-      - field.field.paragraph.hero.field_hero_design
-      - field.field.paragraph.hero.field_hero_image
-      - field.field.paragraph.hero.field_hero_link
-      - field.field.paragraph.hero.field_hero_link_design
-      - field.field.paragraph.hero.field_hero_title
-      - paragraphs.paragraphs_type.hero
+  config:
+    - field.field.paragraph.hero.field_hero_desc
+    - field.field.paragraph.hero.field_hero_design
+    - field.field.paragraph.hero.field_hero_image
+    - field.field.paragraph.hero.field_hero_link
+    - field.field.paragraph.hero.field_hero_link_design
+    - field.field.paragraph.hero.field_hero_title
+    - paragraphs.paragraphs_type.hero
   module:
     - hdbt_admin_tools
     - media_library

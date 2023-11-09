@@ -2,12 +2,11 @@ uuid: c676b0c8-04b0-4983-ba0a-eeaa2e37b881
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.field.media.image.field_media_image
-      - field.field.media.image.field_photographer
-      - image.style.media_library
-      - media.type.image
+  config:
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_photographer
+    - image.style.media_library
+    - media.type.image
   module:
     - focal_point
     - path

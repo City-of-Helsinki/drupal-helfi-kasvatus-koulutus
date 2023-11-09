@@ -2,10 +2,9 @@ uuid: 7fd71379-0fd7-479f-9a77-61d41ba6c01d
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.storage.paragraph.field_unit_contact_title
-      - paragraphs.paragraphs_type.unit_contact_card
+  config:
+    - field.storage.paragraph.field_unit_contact_title
+    - paragraphs.paragraphs_type.unit_contact_card
 _core:
   default_config_hash: BBtHOIG5Kl00da2A5MGqujVP7Mv30KLIQo0EppzL_6Y
 id: paragraph.unit_contact_card.field_unit_contact_title

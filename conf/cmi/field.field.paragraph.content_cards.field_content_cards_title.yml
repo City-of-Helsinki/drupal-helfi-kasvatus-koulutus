@@ -2,10 +2,9 @@ uuid: 7011da2b-e276-4ef4-ac11-066b3b1f2a75
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.storage.paragraph.field_content_cards_title
-      - paragraphs.paragraphs_type.content_cards
+  config:
+    - field.storage.paragraph.field_content_cards_title
+    - paragraphs.paragraphs_type.content_cards
 _core:
   default_config_hash: UjjafINB_n2850H73UyHp-FArxbKGwbRX-uLwFP8FvQ
 id: paragraph.content_cards.field_content_cards_title

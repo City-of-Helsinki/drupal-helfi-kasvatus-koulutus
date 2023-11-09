@@ -2,13 +2,12 @@ uuid: 0c0cbec2-1a14-41df-b955-ed0592d552f5
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.field.paragraph.chart.field_chart_chart
-      - field.field.paragraph.chart.field_chart_description
-      - field.field.paragraph.chart.field_chart_title
-      - field.field.paragraph.chart.field_iframe_title
-      - paragraphs.paragraphs_type.chart
+  config:
+    - field.field.paragraph.chart.field_chart_chart
+    - field.field.paragraph.chart.field_chart_description
+    - field.field.paragraph.chart.field_chart_title
+    - field.field.paragraph.chart.field_iframe_title
+    - paragraphs.paragraphs_type.chart
   module:
     - text
 _core:

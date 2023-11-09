@@ -2,15 +2,14 @@ uuid: 72b86c64-c93c-4aec-be26-f87276a82cc2
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.field.paragraph.hero.field_hero_desc
-      - field.field.paragraph.hero.field_hero_design
-      - field.field.paragraph.hero.field_hero_image
-      - field.field.paragraph.hero.field_hero_link
-      - field.field.paragraph.hero.field_hero_link_design
-      - field.field.paragraph.hero.field_hero_title
-      - paragraphs.paragraphs_type.hero
+  config:
+    - field.field.paragraph.hero.field_hero_desc
+    - field.field.paragraph.hero.field_hero_design
+    - field.field.paragraph.hero.field_hero_image
+    - field.field.paragraph.hero.field_hero_link
+    - field.field.paragraph.hero.field_hero_link_design
+    - field.field.paragraph.hero.field_hero_title
+    - paragraphs.paragraphs_type.hero
   module:
     - link
     - options

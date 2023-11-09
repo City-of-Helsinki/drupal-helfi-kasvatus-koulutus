@@ -2,12 +2,11 @@ uuid: 937f54ca-6f1d-4076-9b4f-6c2144c2e239
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.field.paragraph.content_cards.field_content_cards_content
-      - field.field.paragraph.content_cards.field_content_cards_design
-      - field.field.paragraph.content_cards.field_content_cards_title
-      - paragraphs.paragraphs_type.content_cards
+  config:
+    - field.field.paragraph.content_cards.field_content_cards_content
+    - field.field.paragraph.content_cards.field_content_cards_design
+    - field.field.paragraph.content_cards.field_content_cards_title
+    - paragraphs.paragraphs_type.content_cards
   module:
     - hdbt_admin_tools
 id: paragraph.content_cards.default

@@ -2,10 +2,9 @@ uuid: 03e0d70e-6f9c-437d-8ab4-de91a1b6618d
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.storage.paragraph.field_content_cards_design
-      - paragraphs.paragraphs_type.content_cards
+  config:
+    - field.storage.paragraph.field_content_cards_design
+    - paragraphs.paragraphs_type.content_cards
   module:
     - options
 _core:

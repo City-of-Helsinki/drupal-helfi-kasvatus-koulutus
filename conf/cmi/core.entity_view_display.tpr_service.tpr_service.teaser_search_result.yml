@@ -2,13 +2,12 @@ uuid: 583c9539-65b2-4d21-9488-4834ec986d78
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - core.entity_view_mode.tpr_service.teaser_search_result
-      - field.field.tpr_service.tpr_service.field_content
-      - field.field.tpr_service.tpr_service.field_lower_content
-      - field.field.tpr_service.tpr_service.field_metatags
-      - field.field.tpr_service.tpr_service.field_sidebar_content
+  config:
+    - core.entity_view_mode.tpr_service.teaser_search_result
+    - field.field.tpr_service.tpr_service.field_content
+    - field.field.tpr_service.tpr_service.field_lower_content
+    - field.field.tpr_service.tpr_service.field_metatags
+    - field.field.tpr_service.tpr_service.field_sidebar_content
   module:
     - helfi_tpr
     - text

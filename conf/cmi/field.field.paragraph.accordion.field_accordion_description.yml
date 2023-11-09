@@ -2,10 +2,9 @@ uuid: db6d14f2-432b-4e74-b15d-1a8593302d5d
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.storage.paragraph.field_accordion_description
-      - paragraphs.paragraphs_type.accordion
+  config:
+    - field.storage.paragraph.field_accordion_description
+    - paragraphs.paragraphs_type.accordion
   module:
     - allowed_formats
     - text
@@ -25,5 +24,6 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
+settings:
+  allowed_formats: {  }
 field_type: text_long

@@ -2,13 +2,12 @@ uuid: 4d14291d-f600-410c-b643-ba3db7d72ca9
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.field.paragraph.liftup_with_image.field_liftup_with_image_desc
-      - field.field.paragraph.liftup_with_image.field_liftup_with_image_design
-      - field.field.paragraph.liftup_with_image.field_liftup_with_image_image
-      - field.field.paragraph.liftup_with_image.field_liftup_with_image_title
-      - paragraphs.paragraphs_type.liftup_with_image
+  config:
+    - field.field.paragraph.liftup_with_image.field_liftup_with_image_desc
+    - field.field.paragraph.liftup_with_image.field_liftup_with_image_design
+    - field.field.paragraph.liftup_with_image.field_liftup_with_image_image
+    - field.field.paragraph.liftup_with_image.field_liftup_with_image_title
+    - paragraphs.paragraphs_type.liftup_with_image
   module:
     - hdbt_admin_tools
     - media_library

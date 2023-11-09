@@ -2,10 +2,9 @@ uuid: f93d429d-8526-42fd-9e37-ae8247a12801
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.field.paragraph.text.field_text
-      - paragraphs.paragraphs_type.text
+  config:
+    - field.field.paragraph.text.field_text
+    - paragraphs.paragraphs_type.text
   module:
     - text
 _core:

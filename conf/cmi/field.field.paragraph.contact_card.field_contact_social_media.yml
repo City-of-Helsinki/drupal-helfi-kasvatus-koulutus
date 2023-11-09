@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_contact_social_media
     - paragraphs.paragraphs_type.contact_card
-    - paragraphs.paragraphs_type.social_media_link
   module:
     - entity_reference_revisions
 _core:

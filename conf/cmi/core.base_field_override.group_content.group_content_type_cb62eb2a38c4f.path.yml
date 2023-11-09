@@ -2,11 +2,11 @@ uuid: 96f6e2c7-ff25-4cfe-a386-ca4ab7430ea4
 langcode: en
 status: true
 dependencies:
+  module:
+    - path
   enforced:
     config:
       - group.content_type.group_content_type_cb62eb2a38c4f
-  module:
-    - path
 id: group_content.group_content_type_cb62eb2a38c4f.path
 field_name: path
 entity_type: group_content

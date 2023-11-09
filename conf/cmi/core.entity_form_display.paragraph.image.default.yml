@@ -2,15 +2,13 @@ uuid: 9ebf9b12-08c3-41ec-8313-6e0831e3205c
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.field.paragraph.image.field_image
-      - field.field.paragraph.image.field_image_caption
-      - field.field.paragraph.image.field_original_aspect_ratio
-      - paragraphs.paragraphs_type.image
+  config:
+    - field.field.paragraph.image.field_image
+    - field.field.paragraph.image.field_image_caption
+    - field.field.paragraph.image.field_original_aspect_ratio
+    - paragraphs.paragraphs_type.image
   module:
     - media_library
-
 _core:
   default_config_hash: O8iGrVUXLpTDbk7UIkhPgVIPzm04oWVf3vbj83CIISc
 id: paragraph.image.default

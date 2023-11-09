@@ -2,12 +2,11 @@ uuid: 369e4cc4-ab9a-4419-95b3-d2b63008de0f
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - field.field.paragraph.content_cards.field_content_cards_content
-      - field.field.paragraph.content_cards.field_content_cards_design
-      - field.field.paragraph.content_cards.field_content_cards_title
-      - paragraphs.paragraphs_type.content_cards
+  config:
+    - field.field.paragraph.content_cards.field_content_cards_content
+    - field.field.paragraph.content_cards.field_content_cards_design
+    - field.field.paragraph.content_cards.field_content_cards_title
+    - paragraphs.paragraphs_type.content_cards
   module:
     - options
 _core:
