@@ -120,7 +120,7 @@ function helfi_kasko_content_update_9002() {
  * Update schoolyear Drupal state.
  */
 function helfi_kasko_content_update_9003() {
-  $highSchoolYear = \Drupal::state()->get('helfi_school_addons.school_year') ? (int) \Drupal::state()->get('helfi_school_addons.school_year') : '2023-2024';
+  $highSchoolYear = \Drupal::state()->get('helfi_school_addons.school_year') ? (int) \Drupal::state()->get('helfi_school_addons.school_year') : 2023;
   SchoolUtility::setCurrentHighSchoolYear(SchoolUtility::composeSchoolYear($highSchoolYear));
   SchoolUtility::setCurrentComprehensiveSchoolYear('2023-2024');
 }
