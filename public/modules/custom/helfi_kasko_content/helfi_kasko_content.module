@@ -240,7 +240,7 @@ function helfi_kasko_content_views_post_execute($view) {
 /**
  * Implements hook_theme().
  */
-function helfi_kasko_content_theme() {
+function helfi_kasko_content_theme(): array {
   return [
     'tpr_ontologyword_details_formatter' => [
       'template' => 'tpr-unit-ontologyword-details',

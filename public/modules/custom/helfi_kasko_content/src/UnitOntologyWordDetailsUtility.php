@@ -95,7 +95,7 @@ class UnitOntologyWordDetailsUtility {
    * @return array|null
    *   KeyLabel array or null.
    */
-  public function findOntologyWordKeysLabelsbyId($id): Array|null {
+  public function findOntologyWordKeysLabelsbyId($id): array|null {
     $ontologyDetailsIdRangeToKeysLabels = [
       '1-1' => [
         'key' => '#special_emphasis_1',
