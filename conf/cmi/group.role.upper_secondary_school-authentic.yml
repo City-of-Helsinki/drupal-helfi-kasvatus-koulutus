@@ -4,6 +4,12 @@ status: true
 dependencies:
   config:
     - group.type.upper_secondary_school
+    - group.content_type.group_content_type_5e8b00831189e
+    - group.content_type.group_content_type_8cf71fbe8b0c4
+    - group.content_type.group_content_type_b0ee7f3e08749
+    - group.content_type.group_content_type_c5fd8986910a1
+    - group.content_type.group_content_type_c28cd27128f0f
+    - group.content_type.group_content_type_cb62eb2a38c4f
     - user.role.authenticated
 id: upper_secondary_school-authentic
 label: Authenticated

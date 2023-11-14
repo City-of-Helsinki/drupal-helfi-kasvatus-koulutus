@@ -2,9 +2,10 @@ uuid: a8786458-7028-41ae-b9fd-85ed2db06403
 langcode: en
 status: true
 dependencies:
-  config:
-    - group.type.upper_secondary_school
-    - node.type.page
+  enforced:
+    config:
+      - group.type.upper_secondary_school
+      - node.type.page
   module:
     - gnode
     - node
