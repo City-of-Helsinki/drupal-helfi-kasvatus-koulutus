@@ -2,11 +2,11 @@ uuid: ecb52d00-d2e3-40cb-a1db-d6b8897d01cc
 langcode: en
 status: true
 dependencies:
+  module:
+    - user
   enforced:
     config:
       - group.type.upper_secondary_school
-  module:
-    - user
 id: group_content_type_c28cd27128f0f
 group_type: upper_secondary_school
 content_plugin: group_membership

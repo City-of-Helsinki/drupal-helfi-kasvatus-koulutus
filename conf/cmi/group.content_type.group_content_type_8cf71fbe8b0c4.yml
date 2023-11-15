@@ -2,13 +2,13 @@ uuid: e3ceb31a-6348-49cd-ab9d-e8db7b8b226c
 langcode: en
 status: true
 dependencies:
+  module:
+    - gnode
+    - node
   enforced:
     config:
       - group.type.upper_secondary_school
       - node.type.news_item
-  module:
-    - gnode
-    - node
 id: group_content_type_8cf71fbe8b0c4
 group_type: upper_secondary_school
 content_plugin: 'group_node:news_item'

@@ -2,12 +2,12 @@ uuid: 85c42ef2-47c0-4448-a610-ac7fa4ce3e4a
 langcode: en
 status: true
 dependencies:
+  module:
+    - group_content_menu
   enforced:
     config:
       - group.type.upper_secondary_school
       - group_content_menu.group_content_menu_type.kasko_group_menu
-  module:
-    - group_content_menu
 id: group_content_type_c5fd8986910a1
 group_type: upper_secondary_school
 content_plugin: 'group_content_menu:kasko_group_menu'

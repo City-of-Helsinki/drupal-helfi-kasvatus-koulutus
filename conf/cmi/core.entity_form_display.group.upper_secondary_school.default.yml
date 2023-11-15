@@ -2,11 +2,12 @@ uuid: 15bc8c47-7996-40d0-937c-92ff2f7b8054
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.field.group.upper_secondary_school.field_group_news_parent
-    - group.type.upper_secondary_school
   module:
     - select2
+  enforced:
+    config:
+      - field.field.group.upper_secondary_school.field_group_news_parent
+      - group.type.upper_secondary_school
 id: group.upper_secondary_school.default
 targetEntityType: group
 bundle: upper_secondary_school

@@ -2,15 +2,15 @@ uuid: e067ff73-3a29-4fb6-a1bb-442994b3cbd5
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - group_content_menu.group_content_menu_type.kasko_group_menu
   module:
     - block
     - group
     - group_content_menu
   theme:
     - hdbt_subtheme
+  enforced:
+    config:
+      - group_content_menu.group_content_menu_type.kasko_group_menu
 id: groupmenu
 theme: hdbt_subtheme
 region: sidebar_first
