@@ -18,7 +18,6 @@
         "drupal/group_content_menu": "^2.0",
         "drupal/hdbt": "6.x-dev",
         "drupal/hdbt_admin": "3.x-dev",
-        "drupal/helfi_api_base": "dev-UHF-9256_install_debug_rest_config",
         "drupal/helfi_azure_fs": "^2.0",
         "drupal/helfi_drupal_tools": "dev-main",
         "drupal/helfi_navigation": "^2.0",
