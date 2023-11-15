@@ -359,6 +359,16 @@ content:
       formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
+  subgroup:
+    type: readonly_field_widget
+    weight: 40
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
   toc_enabled:
     type: boolean_checkbox
     weight: 3
@@ -415,4 +425,3 @@ hidden:
   field_study_field: true
   hide_description: true
   ontologyword_ids: true
-  show_www: true
