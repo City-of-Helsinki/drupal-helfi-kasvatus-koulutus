@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "048d79b9c23d3521d462fd3fb1b963dd",
+    "content-hash": "985a07dc2b6f66622897222cabbf86ff",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2704,17 +2704,17 @@
         },
         {
             "name": "drupal/editoria11y",
-            "version": "2.1.3",
+            "version": "2.1.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/editoria11y.git",
-                "reference": "2.1.3"
+                "reference": "2.1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/editoria11y-2.1.3.zip",
-                "reference": "2.1.3",
-                "shasum": "d050d25a6daf2cf59bfd9bcc9cdb9b060d9dc5f6"
+                "url": "https://ftp.drupal.org/files/projects/editoria11y-2.1.4.zip",
+                "reference": "2.1.4",
+                "shasum": "7024e8e43d044f6ab52ab522fb6149e65004f509"
             },
             "require": {
                 "drupal/core": "^9 || ^10"
@@ -2722,8 +2722,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.3",
-                    "datestamp": "1697057896",
+                    "version": "2.1.4",
+                    "datestamp": "1700076307",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3922,17 +3922,69 @@
             }
         },
         {
+            "name": "drupal/hal",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/hal.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/hal-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "606106bd17e7691611c0bd22b4aed9888a6b6983"
+            },
+            "require": {
+                "drupal/core": "^10"
+            },
+            "require-dev": {
+                "drupal/aggregator": "2.x-dev",
+                "drupal/entity_reference_revisions": "1.x-dev"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1658902138",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bbrala",
+                    "homepage": "https://www.drupal.org/user/3366066"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                }
+            ],
+            "description": "Hypermedia Application Language (HAL)",
+            "homepage": "https://www.drupal.org/project/hal",
+            "support": {
+                "source": "https://git.drupalcode.org/project/hal"
+            }
+        },
+        {
             "name": "drupal/hdbt",
             "version": "6.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "208ce49b6a98cb46b8b8cd0e658b3cd1f07746cb"
+                "reference": "05d2280eab35c6695283c92233158831bcaa6cbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/208ce49b6a98cb46b8b8cd0e658b3cd1f07746cb",
-                "reference": "208ce49b6a98cb46b8b8cd0e658b3cd1f07746cb",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/05d2280eab35c6695283c92233158831bcaa6cbb",
+                "reference": "05d2280eab35c6695283c92233158831bcaa6cbb",
                 "shasum": ""
             },
             "require": {
@@ -3953,7 +4005,7 @@
                 "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.x",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2023-11-06T07:19:12+00:00"
+            "time": "2023-11-13T11:29:28+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
@@ -4212,16 +4264,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "dev-UHF-9256_drupal10",
+            "version": "4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "3135c017f829c9c8cca042c1f23364d7cdfff008"
+                "reference": "ec63805b22254802668985f45e65075649d9d631"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/3135c017f829c9c8cca042c1f23364d7cdfff008",
-                "reference": "3135c017f829c9c8cca042c1f23364d7cdfff008",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/ec63805b22254802668985f45e65075649d9d631",
+                "reference": "ec63805b22254802668985f45e65075649d9d631",
                 "shasum": ""
             },
             "require": {
@@ -4245,6 +4297,7 @@
                 "drupal/field_group": "^3.1",
                 "drupal/focal_point": "^2.0",
                 "drupal/gin_toolbar": "^1.0@rc",
+                "drupal/hal": "^2.0",
                 "drupal/helfi_api_base": "*",
                 "drupal/helfi_tpr": "*",
                 "drupal/image_style_quality": "^1.4",
@@ -4260,6 +4313,7 @@
                 "drupal/paragraphs_asymmetric_translation_widgets": "^1.0",
                 "drupal/pathauto": "^1.8",
                 "drupal/publication_date": "^2.0@beta",
+                "drupal/rdf": "^2.0",
                 "drupal/redirect": "^1.6",
                 "drupal/role_delegation": "^1.1",
                 "drupal/scheduler": "^1.3",
@@ -4318,9 +4372,6 @@
                     },
                     "drupal/simple_sitemap": {
                         "[#UHF-8514] Fix frontpage URLs in sitemap. (https://www.drupal.org/i/3264573)": "https://raw.githubusercontent.com/City-of-Helsinki/drupal-helfi-platform-config/55722f695264bbaf6062f46e400e905c761fd5b7/patches/simple_sitemap-3264573-respect-frontpage-configuration.patch"
-                    },
-                    "drupal/view_unpublished": {
-                        "[#UHF-9256] Fix missing dynamic permission dependencies.": "https://raw.githubusercontent.com/City-of-Helsinki/drupal-helfi-platform-config/cbb944ae79643ba7ed895db3fac7f3b3d90ac850/patches/view_unpublished_permissions_missing_dependencies.patch"
                     }
                 }
             },
@@ -4329,10 +4380,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/UHF-9256_drupal10",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/4.x",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2023-11-15T11:24:20+00:00"
+            "time": "2023-11-15T14:06:06+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -5838,6 +5889,83 @@
                     "url": "https://www.patreon.com/mfb"
                 }
             ]
+        },
+        {
+            "name": "drupal/rdf",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/rdf.git",
+                "reference": "2.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/rdf-2.1.1.zip",
+                "reference": "2.1.1",
+                "shasum": "9c897d1313abdabbe80806d79643faffaa0b2466"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10.0",
+                "easyrdf/easyrdf": "^0.9 || ^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.1",
+                    "datestamp": "1666340902",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Arto",
+                    "homepage": "https://www.drupal.org/user/26089"
+                },
+                {
+                    "name": "bbrala",
+                    "homepage": "https://www.drupal.org/user/3366066"
+                },
+                {
+                    "name": "bhuga",
+                    "homepage": "https://www.drupal.org/user/186547"
+                },
+                {
+                    "name": "febbraro",
+                    "homepage": "https://www.drupal.org/user/43670"
+                },
+                {
+                    "name": "jmiccolis",
+                    "homepage": "https://www.drupal.org/user/31731"
+                },
+                {
+                    "name": "linclark",
+                    "homepage": "https://www.drupal.org/user/396253"
+                },
+                {
+                    "name": "miglius",
+                    "homepage": "https://www.drupal.org/user/18741"
+                },
+                {
+                    "name": "scor",
+                    "homepage": "https://www.drupal.org/user/52142"
+                },
+                {
+                    "name": "smustgrave",
+                    "homepage": "https://www.drupal.org/user/3252890"
+                }
+            ],
+            "description": "Enriches your content with metadata to let other applications (e.g. search engines, aggregators) better understand its relationships and attributes",
+            "homepage": "https://www.drupal.org/project/rdf",
+            "support": {
+                "source": "https://git.drupalcode.org/project/rdf"
+            }
         },
         {
             "name": "drupal/readonly_field_widget",
@@ -7352,6 +7480,81 @@
                 }
             ],
             "time": "2023-10-31T14:18:28+00:00"
+        },
+        {
+            "name": "easyrdf/easyrdf",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/easyrdf/easyrdf.git",
+                "reference": "c7b0a9dbcb211eb7de03ee99ff5b52d17f2a8e64"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/easyrdf/easyrdf/zipball/c7b0a9dbcb211eb7de03ee99ff5b52d17f2a8e64",
+                "reference": "c7b0a9dbcb211eb7de03ee99ff5b52d17f2a8e64",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-mbstring": "*",
+                "ext-pcre": "*",
+                "ext-xmlreader": "*",
+                "lib-libxml": "*",
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "code-lts/doctum": "^5",
+                "ml/json-ld": "~1.0",
+                "phpunit/phpunit": "^7",
+                "semsol/arc2": "^2.4",
+                "squizlabs/php_codesniffer": "3.*",
+                "zendframework/zend-http": "~2.3"
+            },
+            "suggest": {
+                "ml/json-ld": "~1.0",
+                "semsol/arc2": "~2.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "EasyRdf\\": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nicholas Humfrey",
+                    "email": "njh@aelius.com",
+                    "homepage": "http://www.aelius.com/njh/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Alexey Zakhlestin",
+                    "email": "indeyets@gmail.com",
+                    "homepage": "http://indeyets.ru/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "EasyRdf is a PHP library designed to make it easy to consume and produce RDF.",
+            "homepage": "http://www.easyrdf.org/",
+            "keywords": [
+                "Linked Data",
+                "RDF",
+                "Semantic Web",
+                "Turtle",
+                "rdfa",
+                "sparql"
+            ],
+            "support": {
+                "forum": "http://groups.google.com/group/easyrdf/",
+                "issues": "http://github.com/easyrdf/easyrdf/issues",
+                "source": "https://github.com/easyrdf/easyrdf/tree/1.1.1"
+            },
+            "time": "2020-12-02T08:47:31+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -11431,7 +11634,7 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.3.0",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
@@ -11478,7 +11681,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.3.0"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.4.0"
             },
             "funding": [
                 {
@@ -11652,7 +11855,7 @@
         },
         {
             "name": "symfony/event-dispatcher-contracts",
-            "version": "v3.3.0",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher-contracts.git",
@@ -11708,7 +11911,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.3.0"
+                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.4.0"
             },
             "funding": [
                 {
@@ -11947,16 +12150,16 @@
         },
         {
             "name": "symfony/http-client-contracts",
-            "version": "v3.3.0",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client-contracts.git",
-                "reference": "3b66325d0176b4ec826bffab57c9037d759c31fb"
+                "reference": "1ee70e699b41909c209a0c930f11034b93578654"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/3b66325d0176b4ec826bffab57c9037d759c31fb",
-                "reference": "3b66325d0176b4ec826bffab57c9037d759c31fb",
+                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/1ee70e699b41909c209a0c930f11034b93578654",
+                "reference": "1ee70e699b41909c209a0c930f11034b93578654",
                 "shasum": ""
             },
             "require": {
@@ -12005,7 +12208,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/http-client-contracts/tree/v3.3.0"
+                "source": "https://github.com/symfony/http-client-contracts/tree/v3.4.0"
             },
             "funding": [
                 {
@@ -12021,7 +12224,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-23T14:45:45+00:00"
+            "time": "2023-07-30T20:28:31+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -13590,16 +13793,16 @@
         },
         {
             "name": "symfony/service-contracts",
-            "version": "v3.3.0",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "40da9cc13ec349d9e4966ce18b5fbcd724ab10a4"
+                "reference": "b3313c2dbffaf71c8de2934e2ea56ed2291a3838"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/40da9cc13ec349d9e4966ce18b5fbcd724ab10a4",
-                "reference": "40da9cc13ec349d9e4966ce18b5fbcd724ab10a4",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/b3313c2dbffaf71c8de2934e2ea56ed2291a3838",
+                "reference": "b3313c2dbffaf71c8de2934e2ea56ed2291a3838",
                 "shasum": ""
             },
             "require": {
@@ -13652,7 +13855,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/service-contracts/tree/v3.3.0"
+                "source": "https://github.com/symfony/service-contracts/tree/v3.4.0"
             },
             "funding": [
                 {
@@ -13668,7 +13871,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-23T14:45:45+00:00"
+            "time": "2023-07-30T20:28:31+00:00"
         },
         {
             "name": "symfony/string",
@@ -13758,16 +13961,16 @@
         },
         {
             "name": "symfony/translation-contracts",
-            "version": "v3.3.0",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation-contracts.git",
-                "reference": "02c24deb352fb0d79db5486c0c79905a85e37e86"
+                "reference": "dee0c6e5b4c07ce851b462530088e64b255ac9c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/02c24deb352fb0d79db5486c0c79905a85e37e86",
-                "reference": "02c24deb352fb0d79db5486c0c79905a85e37e86",
+                "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/dee0c6e5b4c07ce851b462530088e64b255ac9c5",
+                "reference": "dee0c6e5b4c07ce851b462530088e64b255ac9c5",
                 "shasum": ""
             },
             "require": {
@@ -13816,7 +14019,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/translation-contracts/tree/v3.3.0"
+                "source": "https://github.com/symfony/translation-contracts/tree/v3.4.0"
             },
             "funding": [
                 {
@@ -13832,7 +14035,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-30T17:17:10+00:00"
+            "time": "2023-07-25T15:08:44+00:00"
         },
         {
             "name": "symfony/validator",
@@ -18801,10 +19004,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/gin": 5,
-        "drupal/hdbt": 20,
-        "drupal/hdbt_admin": 20,
-        "drupal/helfi_drupal_tools": 20,
-        "drupal/helfi_platform_config": 20
+        "drupal/helfi_drupal_tools": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
