@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.tpr_unit.high_school_card
   module:
-    - helfi_school_addons
+    - helfi_kasko_content
     - helfi_tpr
     - user
 _core:

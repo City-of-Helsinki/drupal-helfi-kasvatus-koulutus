@@ -1,0 +1,63 @@
+
+{% macro ontologyword_detail_render(ontologyword_detail) %}
+  <div class="unit__ontologyword-details-row">
+    <label class="unit__ontologyword-details-row__label">{{ ontologyword_detail['#label'] }}:</label>
+    {% for item in ontologyword_detail['#items'] %}
+      {{ item }}{% if not loop.last %},{% endif %}
+    {% endfor %}
+  </div>
+{% endmacro %}
+
+<div class="unit__ontologyword-details">
+  <h4 class="unit__ontologyword-details__schoolyear">{{ 'School year'|t({}, {'context': 'TPR Ontologyword details schools'}) }} {{ schoolyear }}</h4>
+  {% if a1['#items'] or a2['#items'] or b1['#items'] or b2['#items'] %}
+    <h5>{{ 'Language studies'|t({}, {'context': 'TPR Ontologyword details schools'}) }}</h5>
+    {% if a1['#items'] %}
+      {{ _self.ontologyword_detail_render(a1) }}
+    {% endif %}
+
+    {% if a2['#items'] %}
+      {{ _self.ontologyword_detail_render(a2) }}
+    {% endif %}
+
+    {% if b1['#items'] %}
+      {{ _self.ontologyword_detail_render(b1) }}
+    {% endif %}
+
+    {% if b2['#items'] %}
+      {{ _self.ontologyword_detail_render(b2) }}
+    {% endif %}
+  {% endif %}
+
+  {% if bilingual_education['#items'] or language_immersion['#items'] or language_enriched_education['#items'] %}
+    <h5>{{ 'Bilingual education'|t({}, {'context': 'TPR Ontologyword details schools'}) }}</h5>
+    {% if bilingual_education['#items'] %}
+      {{ _self.ontologyword_detail_render(bilingual_education) }}
+    {% endif %}
+
+    {% if language_immersion['#items'] %}
+      {{ _self.ontologyword_detail_render(language_immersion) }}
+    {% endif %}
+
+    {% if language_enriched_education['#items'] %}
+      {{ _self.ontologyword_detail_render(language_enriched_education) }}
+    {% endif %}
+  {% endif %}
+
+  {% if special_emphasis_1['#items'] or special_emphasis_3['#items'] or special_emphasis_7['#items'] %}
+    <h5>{{ 'Weighted curriculum education'|t({}, {'context': 'TPR Ontologyword details schools'}) }}</h5>
+
+    {% if special_emphasis_1['#items'] %}
+      {{ _self.ontologyword_detail_render(special_emphasis_1) }}
+    {% endif %}
+
+    {% if special_emphasis_3['#items'] %}
+      {{ _self.ontologyword_detail_render(special_emphasis_3) }}
+    {% endif %}
+
+    {% if special_emphasis_7['#items'] %}
+      {{ _self.ontologyword_detail_render(special_emphasis_7) }}
+    {% endif %}
+  {% endif %}
+</div>
+

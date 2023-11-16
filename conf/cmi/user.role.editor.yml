@@ -27,7 +27,7 @@ dependencies:
     - filter
     - group
     - helfi_api_base
-    - helfi_school_addons
+    - helfi_kasko_content
     - helfi_tpr
     - locale
     - media

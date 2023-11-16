@@ -236,3 +236,92 @@ function helfi_kasko_content_views_post_execute($view) {
     }
   }
 }
+
+/**
+ * Implements hook_theme().
+ */
+function helfi_kasko_content_theme(): array {
+  return [
+    'tpr_ontologyword_details_formatter' => [
+      'template' => 'tpr-unit-ontologyword-details',
+      'variables' => [
+        'schoolyear' => NULL,
+        'a1' => [
+          '#label' => NULL,
+          '#items' => [],
+        ],
+        'a2' => [
+          '#label' => NULL,
+          '#items' => [],
+        ],
+        'b1' => [
+          '#label' => NULL,
+          '#items' => [],
+        ],
+        'b2' => [
+          '#label' => NULL,
+          '#items' => [],
+        ],
+        'bilingual_education' => [
+          '#label' => NULL,
+          '#items' => [],
+        ],
+        'language_immersion' => [
+          '#label' => NULL,
+          '#items' => [],
+        ],
+        'language_enriched_education' => [
+          '#label' => NULL,
+          '#items' => [],
+        ],
+        'special_emphasis_1' => [
+          '#label' => NULL,
+          '#items' => [],
+        ],
+        'special_emphasis_3' => [
+          '#label' => NULL,
+          '#items' => [],
+        ],
+        'special_emphasis_7' => [
+          '#label' => NULL,
+          '#items' => [],
+        ],
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function helfi_kasko_content_views_data_alter(array &$data) {
+  $data['tpr_unit']['emphasis_filter'] = [
+    'title' => t('Emphasis filter'),
+    'filter' => [
+      'title' => t('Emphasis filter'),
+      'help' => 'Filters units by emphasis.',
+      'field' => 'nid',
+      'id' => 'emphasis_filter',
+    ],
+  ];
+
+  $data['tpr_unit']['educational_mission_filter'] = [
+    'title' => t('Educational mission'),
+    'filter' => [
+      'title' => t('Educational mission'),
+      'help' => 'Filters units by educational mission.',
+      'field' => 'nid',
+      'id' => 'educational_mission_filter',
+    ],
+  ];
+
+  $data['tpr_unit']['study_programme_type_filter'] = [
+    'title' => t('Study programme type'),
+    'filter' => [
+      'title' => t('Study programme type'),
+      'help' => 'Filters units by study programme type.',
+      'field' => 'nid',
+      'id' => 'study_programme_type_filter',
+    ],
+  ];
+}

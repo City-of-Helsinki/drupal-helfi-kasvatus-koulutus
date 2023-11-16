@@ -1,0 +1,27 @@
+uuid: bc61eadf-6aa1-4a88-9675-ae4063ed527b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tpr_unit.field_ontologyword_details
+  module:
+    - helfi_tpr
+id: tpr_unit.tpr_unit.field_ontologyword_details
+field_name: field_ontologyword_details
+entity_type: tpr_unit
+bundle: tpr_unit
+label: 'Ontologyword details'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:tpr_ontology_word_details'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

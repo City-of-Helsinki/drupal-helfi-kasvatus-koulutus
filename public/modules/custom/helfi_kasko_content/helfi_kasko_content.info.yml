@@ -2,6 +2,7 @@ name: 'Helfi KASKO Content'
 type: module
 description: 'Performs alterations to content.'
 core_version_requirement: ^9 || ^10
+configure: helfi_kasko_content.admin_form
 dependencies:
   - drupal:content_translation
   - drupal:language
@@ -12,3 +13,5 @@ dependencies:
   - helfi_tpr:helfi_tpr
   - override_node_options:override_node_options
   - search_api:search_api
+'interface translation project': helfi_kasko_content
+'interface translation server pattern': modules/custom/helfi_kasko_content/translations/%language.po

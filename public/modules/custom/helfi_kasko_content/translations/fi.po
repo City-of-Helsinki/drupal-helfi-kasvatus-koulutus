@@ -1,0 +1,139 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Language program and weighted curriculum education"
+msgstr "Kieliohjelma ja painotettu opetus"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "School year"
+msgstr "Lukuvuosi"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Language studies"
+msgstr "Kielten opetus"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Foreign language starting in 1st grade (A1)"
+msgstr "1. luokalta alkava vieras kieli (A1)"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Optional foreign language starting in 3rd grade (A2)"
+msgstr "3. luokalta alkava vieras kieli (A2)"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Second national language starting in 6th grade (B1)"
+msgstr "6. luokalta alkava vieras kieli (B1)"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Optional foreign language starting in 8th grade (B2)"
+msgstr "8. luokalta alkava vieras kieli (B2)"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Bilingual education"
+msgstr "Kaksikielinen opetus"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Language immersion"
+msgstr "Kielikylpyopetus"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Language-enriched education"
+msgstr "Kielirikasteinen opetus"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Weighted curriculum education"
+msgstr "Painotettu opetus"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Weighted curriculum education starting in 1st grade"
+msgstr "1. luokalta alkava painotettu opetus"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Weighted curriculum education starting in 3rd grade"
+msgstr "3. luokalta alkava painotettu opetus"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Weighted curriculum education starting in 7th grade"
+msgstr "7. luokalta alkava painotettu opetus"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish-English"
+msgstr "suomi-englanti"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish-Swedish"
+msgstr "suomi-ruotsi"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish-German"
+msgstr "suomi-saksa"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish-Chinese"
+msgstr "suomi-kiina"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish-Spanish"
+msgstr "suomi-espanja"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish-Northern Sami"
+msgstr "suomi-pohjoissaame"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish-Estonian"
+msgstr "suomi-eesti"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish-Russian"
+msgstr "suomi-venäjä"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "English"
+msgstr "englanti"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Spanish"
+msgstr "espanja"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Hebrew"
+msgstr "heprea"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Italian"
+msgstr "italia"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Chinese"
+msgstr "kiina"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Latin"
+msgstr "latina"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "French"
+msgstr "ranska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Swedish"
+msgstr "ruotsi"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "German"
+msgstr "saksa"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish"
+msgstr "suomi"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Russian"
+msgstr "venäjä"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Estonian"
+msgstr "eesti"
