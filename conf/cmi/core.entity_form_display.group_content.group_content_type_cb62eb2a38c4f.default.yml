@@ -2,8 +2,9 @@ uuid: 00d4dc41-8d34-4438-9b93-be7a6165fb59
 langcode: en
 status: true
 dependencies:
-  config:
-    - group.content_type.group_content_type_cb62eb2a38c4f
+  enforced:
+    config:
+      - group.content_type.group_content_type_cb62eb2a38c4f
 id: group_content.group_content_type_cb62eb2a38c4f.default
 targetEntityType: group_content
 bundle: group_content_type_cb62eb2a38c4f

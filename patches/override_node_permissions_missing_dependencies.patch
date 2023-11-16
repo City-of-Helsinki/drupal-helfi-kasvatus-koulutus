@@ -1,0 +1,56 @@
+diff --git a/src/NodePermissions.php b/src/NodePermissions.php
+index 0dc163a..89c549d 100644
+--- a/src/NodePermissions.php
++++ b/src/NodePermissions.php
+@@ -80,33 +80,27 @@ class NodePermissions {
+       $type = $node_type->id();
+       $label = $node_type->label();
+
+-      $permissions["override $type published option"] = [
+-        'title' => $this->t("Override %name published option.", ["%name" => $label]),
++      $permissionTypes = [
++        'published option',
++        'promote to front page option',
++        'sticky option',
++        'revision option',
++        'revision log entry',
++        'authored on option',
++        'authored by option',
+       ];
+
+-      $permissions["override $type promote to front page option"] = [
+-        'title' => $this->t("Override %name promote to front page option.", ["%name" => $label]),
+-      ];
+-
+-      $permissions["override $type sticky option"] = [
+-        'title' => $this->t("Override %name sticky option.", ["%name" => $label]),
+-      ];
+-
+-      $permissions["override $type revision option"] = [
+-        'title' => $this->t("Override %name revision option.", ["%name" => $label]),
+-      ];
+-
+-      $permissions["enter $type revision log entry"] = [
+-        'title' => $this->t("Enter %name revision log entry.", ["%name" => $label]),
+-      ];
+-
+-      $permissions["override $type authored on option"] = [
+-        'title' => $this->t("Override %name authored on option.", ["%name" => $label]),
+-      ];
+-
+-      $permissions["override $type authored by option"] = [
+-        'title' => $this->t("Override %name authored by option.", ["%name" => $label]),
+-      ];
++      foreach ($permissionTypes as $permissionType) {
++        $permissionKey = "override $type $permissionType";
++        $permissions[$permissionKey] = [
++          'dependencies' => [
++            $node_type->getConfigDependencyKey() => [
++              $node_type->getConfigDependencyName()
++            ],
++          ],
++          'title' => $this->t("Override %name $permissionType.", ["%name" => $label]),
++        ];
++      }
+     }
+   }

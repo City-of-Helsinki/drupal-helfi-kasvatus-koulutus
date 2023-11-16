@@ -2,10 +2,11 @@ uuid: 2942768d-963a-4b47-a623-1068a7b1bc6b
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.paragraph.field_group_news_archive
-    - node.type.landing_page
-    - paragraphs.paragraphs_type.group_news
+  enforced:
+    config:
+      - field.storage.paragraph.field_group_news_archive
+      - node.type.landing_page
+      - paragraphs.paragraphs_type.group_news
 id: paragraph.group_news.field_group_news_archive
 field_name: field_group_news_archive
 entity_type: paragraph

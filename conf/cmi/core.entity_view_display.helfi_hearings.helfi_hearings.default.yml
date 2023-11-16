@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - responsive_image.styles.image__3_2
+    - responsive_image.styles.gallery_thumbnail
   module:
     - external_entities
     - imagecache_external

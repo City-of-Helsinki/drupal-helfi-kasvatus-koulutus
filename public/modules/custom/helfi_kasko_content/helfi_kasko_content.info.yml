@@ -6,6 +6,9 @@ dependencies:
   - drupal:content_translation
   - drupal:language
   - drupal:taxonomy
+  - drupal:user
   - elasticsearch_connector:elasticsearch_connector
   - helfi_platform_config:helfi_react_search
   - helfi_tpr:helfi_tpr
+  - override_node_options:override_node_options
+  - search_api:search_api

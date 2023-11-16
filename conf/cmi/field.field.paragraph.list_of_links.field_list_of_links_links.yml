@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_list_of_links_links
     - paragraphs.paragraphs_type.list_of_links
-    - paragraphs.paragraphs_type.list_of_links_item
   module:
     - entity_reference_revisions
 _core:

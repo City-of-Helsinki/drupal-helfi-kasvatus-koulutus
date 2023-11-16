@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - views.view.news
     - field.storage.node.field_main_image
     - media.type.image
     - node.type.news_item
