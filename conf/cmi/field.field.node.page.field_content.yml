@@ -45,36 +45,33 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      accordion: accordion
-      banner: banner
-      chart: chart
+      calculator: calculator
+      group_news: group_news
+      high_school_search: high_school_search
+      vocational_school_search: vocational_school_search
+      text: text
       columns: columns
+      image: image
+      accordion: accordion
+      list_of_links: list_of_links
       contact_card_listing: contact_card_listing
       content_cards: content_cards
       content_liftup: content_liftup
+      banner: banner
       event_list: event_list
-      from_library: from_library
-      group_news: group_news
-      high_school_search: high_school_search
-      image: image
-      list_of_links: list_of_links
-      map: map
       news_list: news_list
+      from_library: from_library
       phasing: phasing
+      chart: chart
       remote_video: remote_video
-      text: text
+      map: map
       unit_search: unit_search
-      vocational_school_search: vocational_school_search
-      calculator: calculator
       service_list_search: service_list_search
     negate: 0
     target_bundles_drag_drop:
       accordion:
         weight: 0
         enabled: true
-      accordion_item:
-        weight: 40
-        enabled: false
       banner:
         weight: 0
         enabled: true
@@ -87,9 +84,6 @@ settings:
       columns:
         weight: 0
         enabled: true
-      contact_card:
-        weight: 45
-        enabled: false
       contact_card_listing:
         weight: 0
         enabled: true
@@ -99,9 +93,6 @@ settings:
       content_liftup:
         weight: 0
         enabled: true
-      daycare_search:
-        weight: 49
-        enabled: false
       event_list:
         weight: 0
         enabled: true
@@ -111,27 +102,15 @@ settings:
       group_news:
         weight: 0
         enabled: true
-      group_news_archive:
-        weight: 53
-        enabled: false
-      hero:
-        weight: 54
-        enabled: false
       high_school_search:
         weight: 0
         enabled: true
       image:
         weight: 0
         enabled: true
-      liftup_with_image:
-        weight: 57
-        enabled: false
       list_of_links:
         weight: 0
         enabled: true
-      list_of_links_item:
-        weight: 59
-        enabled: false
       map:
         weight: 0
         enabled: true
@@ -141,39 +120,12 @@ settings:
       phasing:
         weight: 0
         enabled: true
-      phasing_item:
-        weight: 63
-        enabled: false
-      popular_service_item:
-        weight: 64
-        enabled: false
-      popular_services:
-        weight: 65
-        enabled: false
       remote_video:
         weight: 0
         enabled: true
-      school_search:
-        weight: 67
-        enabled: false
-      service_list:
-        weight: 68
-        enabled: false
       service_list_search:
         weight: 0
         enabled: true
-      sidebar_text:
-        weight: 70
-        enabled: false
-      social_media_link:
-        weight: 71
-        enabled: false
-      target_group_link_item:
-        weight: 72
-        enabled: false
-      target_group_links:
-        weight: 73
-        enabled: false
       text:
         weight: 0
         enabled: true

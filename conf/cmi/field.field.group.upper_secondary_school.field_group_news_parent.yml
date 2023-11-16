@@ -2,11 +2,16 @@ uuid: 9d937370-9b37-4d75-92d3-868b0ddb4a17
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.group.field_group_news_parent
-    - group.type.upper_secondary_school
-    - node.type.landing_page
-    - node.type.page
+  module:
+    - helfi_group
+    - group
+    - gnode
+  enforced:
+    config:
+      - field.storage.group.field_group_news_parent
+      - group.type.upper_secondary_school
+      - node.type.landing_page
+      - node.type.page
 id: group.upper_secondary_school.field_group_news_parent
 field_name: field_group_news_parent
 entity_type: group

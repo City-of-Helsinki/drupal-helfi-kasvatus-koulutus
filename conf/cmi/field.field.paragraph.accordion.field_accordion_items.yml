@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_accordion_items
     - paragraphs.paragraphs_type.accordion
-    - paragraphs.paragraphs_type.accordion_item
   module:
     - entity_reference_revisions
   enforced:

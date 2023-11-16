@@ -2,11 +2,12 @@ uuid: 94e2859d-f6d0-428c-a984-17af2b7f096c
 langcode: en
 status: true
 dependencies:
-  config:
-    - group.type.upper_secondary_school
   module:
     - helfi_group
     - helfi_tpr
+  enforced:
+    config:
+      - group.type.upper_secondary_school
 id: group_content_type_5e8b00831189e
 group_type: upper_secondary_school
 content_plugin: group_tpr_unit
