@@ -38,7 +38,7 @@ class SchoolUtility {
   /**
    * Helper function to set the current high school year.
    *
-   * @param string $school_year
+   * @param string $schoolYear
    *   The current school year, e.g. "2022-2023".
    */
   public static function setCurrentHighSchoolYear(string $schoolYear) {
@@ -48,7 +48,7 @@ class SchoolUtility {
   /**
    * Helper function to set the comprehensive current school year.
    *
-   * @param string $school_year
+   * @param string $schoolYear
    *   The current school year, e.g. "2022-2023".
    */
   public static function setCurrentComprehensiveSchoolYear(string $schoolYear) {
