@@ -21,6 +21,6 @@
     @include font('h6');
     align-items: flex-start;
     display: flex;
-    margin-bottom: 8px;
+    margin-bottom: $spacing-half;
   }
 }

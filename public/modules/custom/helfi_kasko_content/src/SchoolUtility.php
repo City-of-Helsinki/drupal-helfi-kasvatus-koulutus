@@ -38,21 +38,21 @@ class SchoolUtility {
   /**
    * Helper function to set the current high school year.
    *
-   * @param string $school_year
+   * @param string $schoolYear
    *   The current school year, e.g. "2022-2023".
    */
-  public static function setCurrentHighSchoolYear(string $school_year) {
-    \Drupal::state()->set(self::HIGH_SCHOOL_YEAR_KEY, $school_year);
+  public static function setCurrentHighSchoolYear(string $schoolYear) {
+    \Drupal::state()->set(self::HIGH_SCHOOL_YEAR_KEY, $schoolYear);
   }
 
   /**
    * Helper function to set the comprehensive current school year.
    *
-   * @param string $school_year
+   * @param string $schoolYear
    *   The current school year, e.g. "2022-2023".
    */
-  public static function setCurrentComprehensiveSchoolYear(string $school_year) {
-    \Drupal::state()->set(self::COMPREHENSIVE_SCHOOL_YEAR_KEY, $school_year);
+  public static function setCurrentComprehensiveSchoolYear(string $schoolYear) {
+    \Drupal::state()->set(self::COMPREHENSIVE_SCHOOL_YEAR_KEY, $schoolYear);
   }
 
   /**

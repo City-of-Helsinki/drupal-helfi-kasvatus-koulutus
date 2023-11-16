@@ -2,12 +2,13 @@ uuid: 3cd59381-6aff-4c0f-af77-77f174acb784
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.tpr_unit.field_hs_front_page
-    - node.type.landing_page
-    - node.type.page
   module:
     - helfi_tpr
+  enforced:
+    config:
+      - field.storage.tpr_unit.field_hs_front_page
+      - node.type.landing_page
+      - node.type.page
 id: tpr_unit.tpr_unit.field_hs_front_page
 field_name: field_hs_front_page
 entity_type: tpr_unit

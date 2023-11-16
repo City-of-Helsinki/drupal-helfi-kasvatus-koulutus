@@ -5,6 +5,11 @@ dependencies:
   config:
     - field.storage.group_content.group_roles
     - group.content_type.group_content_type_c28cd27128f0f
+    - group.type.upper_secondary_school
+  module:
+    - helfi_group
+    - group
+    - gnode
 id: group_content.group_content_type_c28cd27128f0f.group_roles
 field_name: group_roles
 entity_type: group_content

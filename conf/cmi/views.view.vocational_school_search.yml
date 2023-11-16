@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.tpr_unit.vocational_school_card
     - taxonomy.vocabulary.vocational_studies
   module:
     - helfi_tpr
     - taxonomy
     - user
+  enforced:
+    config:
+      - core.entity_view_mode.tpr_unit.vocational_school_card
 _core:
   default_config_hash: Qi_H9S0h8L3oK0pwRXFvyfqE1rtbScL6G5En1FHfQ9I
 id: vocational_school_search

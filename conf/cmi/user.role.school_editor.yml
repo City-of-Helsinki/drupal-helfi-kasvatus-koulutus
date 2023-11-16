@@ -20,6 +20,7 @@ dependencies:
     - helfi_tpr
     - media
     - node
+    - override_node_options
     - publication_date
     - scheduler
     - system
@@ -46,6 +47,7 @@ permissions:
   - 'create remote_video media'
   - 'delete media'
   - 'delete own file media'
+  - 'delete own files'
   - 'delete own hel_map media'
   - 'delete own helfi_chart media'
   - 'delete own image media'
