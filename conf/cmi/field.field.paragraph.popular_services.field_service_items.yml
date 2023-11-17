@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_service_items
+    - paragraphs.paragraphs_type.popular_service_item
     - paragraphs.paragraphs_type.popular_services
   module:
     - entity_reference_revisions
