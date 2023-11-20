@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_target_group_item
+    - paragraphs.paragraphs_type.target_group_link_item
     - paragraphs.paragraphs_type.target_group_links
   module:
     - entity_reference_revisions
