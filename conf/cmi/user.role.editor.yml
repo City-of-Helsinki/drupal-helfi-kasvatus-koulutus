@@ -27,7 +27,7 @@ dependencies:
     - filter
     - group
     - helfi_api_base
-    - helfi_school_addons
+    - helfi_kasko_content
     - helfi_tpr
     - locale
     - media
@@ -103,6 +103,7 @@ permissions:
   - 'delete news_item revisions'
   - 'delete own announcement content'
   - 'delete own file media'
+  - 'delete own files'
   - 'delete own hel_map media'
   - 'delete own helfi_chart media'
   - 'delete own image media'

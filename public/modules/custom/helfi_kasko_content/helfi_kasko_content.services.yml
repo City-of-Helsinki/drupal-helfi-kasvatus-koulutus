@@ -2,6 +2,15 @@ services:
   Drupal\helfi_kasko_content\EventSubscriber\UnitCategorySubscriber:
     tags:
       - { name: 'event_subscriber' }
-  Drupal\helfi_kasko_content\EventSubscriber\MappingSubscriber:
+  Drupal\helfi_kasko_content\EventSubscriber\KaskoElasticIndexSubscriber:
     tags:
       - { name: 'event_subscriber' }
+  Drupal\helfi_kasko_content\EventSubscriber\UnitOntologyWordDetailsSubscriber:
+    arguments:
+      - '@entity_type.manager'
+    tags:
+      - { name: 'event_subscriber' }
+  helfi_kasko_content.unit_ontologyword_details_utility:
+    class: Drupal\helfi_kasko_content\UnitOntologyWordDetailsUtility
+    arguments:
+      - '@language_manager'

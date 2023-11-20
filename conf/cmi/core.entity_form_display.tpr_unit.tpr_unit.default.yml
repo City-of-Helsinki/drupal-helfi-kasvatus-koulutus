@@ -9,6 +9,7 @@ dependencies:
     - field.field.tpr_unit.tpr_unit.field_hs_front_page
     - field.field.tpr_unit.tpr_unit.field_lower_content
     - field.field.tpr_unit.tpr_unit.field_metatags
+    - field.field.tpr_unit.tpr_unit.field_ontologyword_details
     - field.field.tpr_unit.tpr_unit.field_study_field
     - field.field.tpr_unit.tpr_unit.field_unit_type
   module:
@@ -19,6 +20,7 @@ dependencies:
     - paragraphs
     - path
     - readonly_field_widget
+    - select2
 _core:
   default_config_hash: C2Xc2BwYmiIL9SayNQLxaufcoqA5SLusFthQgnmb10A
 id: tpr_unit.tpr_unit.default
@@ -161,6 +163,16 @@ content:
     settings:
       sidebar: false
       use_details: true
+    third_party_settings: {  }
+  field_ontologyword_details:
+    type: readonly_field_widget
+    weight: 40
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
     third_party_settings: {  }
   field_unit_type:
     type: entity_reference_autocomplete

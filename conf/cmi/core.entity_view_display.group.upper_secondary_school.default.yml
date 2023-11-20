@@ -5,6 +5,11 @@ dependencies:
   config:
     - field.field.group.upper_secondary_school.field_group_news_parent
     - group.type.upper_secondary_school
+  module:
+    - helfi_group
+    - group
+    - gnode
+    - node
 id: group.upper_secondary_school.default
 targetEntityType: group
 bundle: upper_secondary_school
