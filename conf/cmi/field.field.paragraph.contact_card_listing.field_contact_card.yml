@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_contact_card
-    - paragraphs.paragraphs_type.contact_card
     - paragraphs.paragraphs_type.contact_card_listing
   module:
     - entity_reference_revisions
