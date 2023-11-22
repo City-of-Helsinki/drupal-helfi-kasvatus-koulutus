@@ -3978,16 +3978,16 @@
         },
         {
             "name": "drupal/hdbt",
-            "version": "6.0.2",
+            "version": "6.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "5c92f8ae5c2a529a89ecb690cfac878584f9cedd"
+                "reference": "1b684fd0536568c758a0862275b3fd384450e415"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/5c92f8ae5c2a529a89ecb690cfac878584f9cedd",
-                "reference": "5c92f8ae5c2a529a89ecb690cfac878584f9cedd",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/1b684fd0536568c758a0862275b3fd384450e415",
+                "reference": "1b684fd0536568c758a0862275b3fd384450e415",
                 "shasum": ""
             },
             "require": {
@@ -4005,10 +4005,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.0.2",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.0.3",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2023-11-21T09:33:37+00:00"
+            "time": "2023-11-22T12:25:03+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
@@ -4141,16 +4141,16 @@
         },
         {
             "name": "drupal/helfi_azure_fs",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-azure-fs.git",
-                "reference": "92684fb57edbe6fbc2704c57637ba877583de254"
+                "reference": "bfd7671b58300db948d8cd230b4756ecca73c237"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-azure-fs/zipball/92684fb57edbe6fbc2704c57637ba877583de254",
-                "reference": "92684fb57edbe6fbc2704c57637ba877583de254",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-azure-fs/zipball/bfd7671b58300db948d8cd230b4756ecca73c237",
+                "reference": "bfd7671b58300db948d8cd230b4756ecca73c237",
                 "shasum": ""
             },
             "require": {
@@ -4174,10 +4174,10 @@
             ],
             "description": "Helfi - Azure FS",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-azure-fs/tree/2.0.1",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-azure-fs/tree/2.0.2",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-azure-fs/issues"
             },
-            "time": "2023-11-08T06:50:43+00:00"
+            "time": "2023-11-21T07:23:44+00:00"
         },
         {
             "name": "drupal/helfi_drupal_tools",
@@ -4267,16 +4267,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "4.0.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "0302b326ad9804a77dafd2e6336a547917bd4a4d"
+                "reference": "f2ee2c06ffde87d5ea74d29d92f5439bf0c9b220"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/0302b326ad9804a77dafd2e6336a547917bd4a4d",
-                "reference": "0302b326ad9804a77dafd2e6336a547917bd4a4d",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/f2ee2c06ffde87d5ea74d29d92f5439bf0c9b220",
+                "reference": "f2ee2c06ffde87d5ea74d29d92f5439bf0c9b220",
                 "shasum": ""
             },
             "require": {
@@ -4387,10 +4387,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/4.0.0",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/4.0.1",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2023-11-16T07:54:31+00:00"
+            "time": "2023-11-22T08:48:14+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -14471,26 +14471,27 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.7.1",
+            "version": "v3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "a0ce373a0ca3bf6c64b9e3e2124aca502ba39554"
+                "reference": "9d15f0ac07f44dc4217883ec6ae02fd555c6f71d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a0ce373a0ca3bf6c64b9e3e2124aca502ba39554",
-                "reference": "a0ce373a0ca3bf6c64b9e3e2124aca502ba39554",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9d15f0ac07f44dc4217883ec6ae02fd555c6f71d",
+                "reference": "9d15f0ac07f44dc4217883ec6ae02fd555c6f71d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.5",
                 "symfony/polyfill-ctype": "^1.8",
-                "symfony/polyfill-mbstring": "^1.3"
+                "symfony/polyfill-mbstring": "^1.3",
+                "symfony/polyfill-php80": "^1.22"
             },
             "require-dev": {
                 "psr/container": "^1.0|^2.0",
-                "symfony/phpunit-bridge": "^5.4.9|^6.3"
+                "symfony/phpunit-bridge": "^5.4.9|^6.3|^7.0"
             },
             "type": "library",
             "autoload": {
@@ -14526,7 +14527,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.7.1"
+                "source": "https://github.com/twigphp/Twig/tree/v3.8.0"
             },
             "funding": [
                 {
@@ -14538,7 +14539,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-08-28T11:09:02+00:00"
+            "time": "2023-11-21T18:54:41+00:00"
         },
         {
             "name": "twistor/flysystem-stream-wrapper",
