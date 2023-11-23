@@ -17,6 +17,7 @@ dependencies:
     - address
     - entity_reference_revisions
     - helfi_address_search
+    - helfi_kasko_content
     - helfi_tpr
     - imagecache_external
     - link
@@ -24,7 +25,7 @@ dependencies:
     - telephone
     - text
 _core:
-  default_config_hash: 7xcZTrrfS31z_AAdwrXSDrgd2PAqTWFPgY-XoAEjXQ0
+  default_config_hash: tfkOTFeDgVhyd9NcyUP7yambOlzTfsjNcKwlLHPsbhw
 id: tpr_unit.tpr_unit.default
 targetEntityType: tpr_unit
 bundle: tpr_unit
@@ -36,7 +37,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 14
+    weight: 16
     region: content
   accessibility_phone:
     type: string
@@ -44,14 +45,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 13
+    weight: 15
     region: content
   accessibility_sentences:
     type: tpr_accessibility_sentence
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 21
+    weight: 23
     region: content
   accessibility_www:
     type: link
@@ -63,14 +64,14 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 15
+    weight: 17
     region: content
   address:
     type: address_plain
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   address_postal:
     type: string
@@ -78,21 +79,21 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 9
+    weight: 11
     region: content
   call_charge_info:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 11
+    weight: 13
     region: content
   contacts:
     type: tpr_connection
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 26
+    weight: 30
     region: content
   description:
     type: text_default
@@ -107,7 +108,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 8
+    weight: 10
     region: content
   field_content:
     type: entity_reference_revisions_entity_view
@@ -116,7 +117,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 20
+    weight: 22
     region: content
   field_lower_content:
     type: entity_reference_revisions_entity_view
@@ -125,7 +126,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 22
+    weight: 24
     region: content
   field_metatags:
     type: metatag_empty_formatter
@@ -146,7 +147,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 23
+    weight: 27
     region: content
   latitude:
     type: string
@@ -154,14 +155,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 24
+    weight: 28
     region: content
   links:
     type: tpr_connection
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 25
+    weight: 29
     region: content
   longitude:
     type: string
@@ -169,7 +170,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 23
+    weight: 25
     region: content
   name:
     type: string
@@ -192,14 +193,14 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 7
+    weight: 9
     region: content
   other_info:
     type: tpr_connection
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 18
+    weight: 20
     region: content
   phone:
     type: telephone_link
@@ -207,7 +208,7 @@ content:
     settings:
       title: ''
     third_party_settings: {  }
-    weight: 6
+    weight: 8
     region: content
   picture_url:
     type: imagecache_external_responsive_image
@@ -216,7 +217,7 @@ content:
       imagecache_external_link: ''
       imagecache_external_responsive_style: image__3_2
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   picture_url_override:
     type: entity_reference_entity_view
@@ -225,14 +226,14 @@ content:
       view_mode: image
       link: false
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   price_info:
     type: tpr_connection
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 19
+    weight: 21
     region: content
   provided_languages:
     type: string
@@ -240,7 +241,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 23
+    weight: 26
     region: content
   service_map_embed:
     type: service_map_embed
@@ -250,7 +251,7 @@ content:
       link_title: 'Open larger map'
       target: true
     third_party_settings: {  }
-    weight: 10
+    weight: 12
     region: content
   services:
     type: entity_reference_label
@@ -275,21 +276,21 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   topical:
     type: tpr_connection
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 27
+    weight: 31
     region: content
   unit_picture_caption:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 7
     region: content
   www:
     type: link
@@ -301,7 +302,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 12
+    weight: 14
     region: content
 hidden:
   created: true
