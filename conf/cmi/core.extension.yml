@@ -36,7 +36,6 @@ module:
   filter: 0
   flexible_permissions: 0
   flysystem: 0
-  flysystem_azure: 0
   focal_point: 0
   gin_toolbar: 0
   gnode: 0
