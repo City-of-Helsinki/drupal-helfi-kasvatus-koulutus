@@ -200,7 +200,7 @@ function helfi_group_form_node_form_alter(
 ): void {
   $form['actions']['submit']['#submit'][] = 'helfi_group_menuitem_set_content_translation_status';
 
-  if ($form['menu']) {
+  if ($form['menu'] && array_key_exists('link', $form['menu'])) {
     $menu_parent = $form['menu']['link']['menu_parent']['#default_value'];
     if (!$menu_parent) {
       return;
