@@ -108,16 +108,18 @@ function helfi_kasko_content_preprocess_block(&$variables) {
   }
   $first_paragraph_gray = &$variables['content']['hero_block']['#first_paragraph_grey'];
 
-  // Check if the content field first paragraph is High school search
+  // Check if the content field first paragraph is unit search clone
   // and add classes accordingly.
-  if (
-    $paragraph->getType() === 'after_school_activity_search' ||
-    $paragraph->getType() === 'daycare_search' ||
-    $paragraph->getType() === 'high_school_search' ||
-    $paragraph->getType() === 'playground_search' ||
-    $paragraph->getType() === 'school_search' ||
-    $paragraph->getType() === 'vocational_school_search'
-  ) {
+  $paragraph_types = [
+    'after_school_activity_search',
+    'daycare_search',
+    'high_school_search',
+    'playground_search',
+    'school_search',
+    'vocational_school_search'
+  ];
+
+  if (in_array($paragraph->getType(), $paragraph_types)) {
     $first_paragraph_gray = 'has-first-gray-bg-block';
 
     // If lead_in field has value, unset 1st gray paragraph class.
