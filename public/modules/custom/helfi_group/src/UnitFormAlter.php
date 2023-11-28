@@ -58,7 +58,7 @@ class UnitFormAlter extends NodeFormAlter {
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
   public function alter(array &$form, FormStateInterface $form_state): void {
-    $formObject= $form_state->getFormObject();
+    $formObject = $form_state->getFormObject();
     assert($formObject instanceof EntityFormInterface);
     $unit = $formObject->getEntity();
     $groups = $this->getEntityGroups($form_state, $unit);

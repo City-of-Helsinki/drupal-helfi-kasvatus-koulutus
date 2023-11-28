@@ -15,6 +15,12 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
  */
 class KaskoElasticIndexSubscriber implements EventSubscriberInterface {
 
+  /**
+   * Constructs a new instance.
+   *
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager
+   *   The entity type manager.
+   */
   public function __construct(private readonly EntityTypeManagerInterface $entityTypeManager) {
   }
 
