@@ -116,7 +116,7 @@ function helfi_kasko_content_preprocess_block(&$variables) {
     'high_school_search',
     'playground_search',
     'school_search',
-    'vocational_school_search'
+    'vocational_school_search',
   ];
 
   if (in_array($paragraph->getType(), $paragraph_types)) {
