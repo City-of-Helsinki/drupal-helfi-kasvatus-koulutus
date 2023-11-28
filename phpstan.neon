@@ -1,0 +1,19 @@
+parameters:
+  fileExtensions:
+      - php
+      - module
+      - install
+      - theme
+  paths:
+    - ./public/modules/custom
+    - ./public/themes/custom
+  excludePaths:
+    - vendor
+  level: 3
+  checkMissingIterableValueType: false
+  treatPhpDocTypesAsCertain: false
+  drupal:
+    entityMapping:
+      group_content:
+        class: Drupal\group\Entity\GroupRelationship
+        storage: Drupal\group\Entity\Storage\GroupRelationshipStorage

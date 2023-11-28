@@ -5,12 +5,15 @@ declare(strict_types = 1);
 namespace Drupal\helfi_kasko_content\Plugin\views\filter;
 
 use Drupal\Core\Language\LanguageInterface;
+use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\helfi_kasko_content\SchoolUtility;
 use Drupal\helfi_tpr\Entity\OntologyWordDetails;
 use Drupal\views\Plugin\views\display\DisplayPluginBase;
 use Drupal\views\Plugin\views\filter\InOperator;
+use Drupal\views\Plugin\views\query\Sql;
 use Drupal\views\ViewExecutable;
 use Drupal\views\Views;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Base views filter class for school details.
@@ -25,11 +28,33 @@ abstract class SchoolDetailsBase extends InOperator {
   protected ?int $wordId = NULL;
 
   /**
+   * The language manager service.
+   *
+   * @var \Drupal\Core\Language\LanguageManagerInterface
+   */
+  protected LanguageManagerInterface $languageManager;
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(
+    ContainerInterface $container,
+    array $configuration,
+    $plugin_id,
+    $plugin_definition
+  ) : self {
+    $instance = parent::create($container, $configuration, $plugin_id,
+      $plugin_definition);
+    $instance->languageManager = $container->get('language_manager');
+    return $instance;
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function init(ViewExecutable $view, DisplayPluginBase $display, array &$options = NULL) {
     parent::init($view, $display, $options);
-    $this->valueTitle = $this->t('Allowed clarifications');
+    $this->valueTitle = (string) $this->t('Allowed clarifications');
     $this->definition['options callback'] = [$this, 'generateOptions'];
   }
 
@@ -68,9 +93,11 @@ abstract class SchoolDetailsBase extends InOperator {
     ];
     /** @var \Drupal\views\Plugin\views\join\JoinPluginBase $owdFdJoin */
     $owdFdJoin = Views::pluginManager('join')->createInstance('standard', $owdFdConfiguration);
+    assert($this->query instanceof Sql);
+
     $this->query->addRelationship('owd_fd', $owdFdJoin, 'tpr_unit_field_data');
 
-    $language = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
+    $language = $this->languageManager->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
     $this->query->addWhere('AND', 'owd_fd.langcode', $language);
     $this->query->addWhere('AND', 'owd_fd.ontologyword_id', $wordId);
 
@@ -105,7 +132,7 @@ abstract class SchoolDetailsBase extends InOperator {
       return [];
     }
 
-    $langcode = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
+    $langcode = $this->languageManager->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
     $schoolYear = SchoolUtility::getCurrentHighSchoolYear();
     if ($schoolYear === NULL) {
       return [];

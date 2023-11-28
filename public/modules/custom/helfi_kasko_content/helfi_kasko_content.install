@@ -14,24 +14,6 @@ use Drupal\taxonomy\Entity\Term;
 use Drupal\taxonomy\Entity\Vocabulary;
 
 /**
- * Import vocational_studies taxonomy config if not existing.
- */
-function helfi_kasko_content_update_9001() {
-  if (Vocabulary::load('vocational_studies')) {
-    return;
-  }
-
-  $configLocation = dirname(__FILE__) . '/config/install/';
-  ConfigHelper::installNewConfig($configLocation, 'taxonomy.vocabulary.vocational_studies');
-  ConfigHelper::installNewConfig($configLocation, 'language.content_settings.taxonomy_term.vocational_studies');
-
-  // Use the same UUIDs existing at site's config directory.
-  $configFactory = \Drupal::service('config.factory');
-  $configFactory->getEditable('taxonomy.vocabulary.vocational_studies')->set('uuid', 'cfd5c601-be12-42f8-a2bc-1f9ab9ef0320')->save();
-  $configFactory->getEditable('language.content_settings.taxonomy_term.vocational_studies')->set('uuid', 'fc452295-6641-4c07-8e27-f35f1e52e8ce')->save();
-}
-
-/**
  * Set initial vocational study terms.
  */
 function helfi_kasko_content_update_9002() {

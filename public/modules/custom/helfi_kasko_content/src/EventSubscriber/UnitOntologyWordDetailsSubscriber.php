@@ -17,7 +17,7 @@ class UnitOntologyWordDetailsSubscriber implements EventSubscriberInterface {
   /**
    * The constructor.
    *
-   * @param Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager
    *   The entity type manager.
    */
   public function __construct(readonly private EntityTypeManagerInterface $entityTypeManager) {}

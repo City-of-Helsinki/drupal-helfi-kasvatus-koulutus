@@ -5,7 +5,7 @@ declare(strict_types = 1);
 namespace Drupal\helfi_group;
 
 use Drupal\Core\Entity\ContentEntityInterface;
-use Drupal\group\Entity\Group;
+use Drupal\group\Entity\GroupInterface;
 use Drupal\group\Entity\GroupRelationship;
 
 /**
@@ -19,10 +19,10 @@ class GroupUtility {
    * @param \Drupal\Core\Entity\ContentEntityInterface $entity
    *   The entity which group is returned.
    *
-   * @return \Drupal\group\Entity\Group|null
+   * @return \Drupal\group\Entity\GroupInterface|null
    *   The group that contains the node or NULL.
    */
-  public static function getGroup(ContentEntityInterface $entity): ?Group {
+  public static function getGroup(ContentEntityInterface $entity): ?GroupInterface {
     $groupContents = GroupRelationship::loadByEntity($entity);
     return !empty($groupContents) ? reset($groupContents)->getGroup() : NULL;
   }

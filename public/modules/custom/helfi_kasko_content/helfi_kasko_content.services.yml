@@ -3,6 +3,8 @@ services:
     tags:
       - { name: 'event_subscriber' }
   Drupal\helfi_kasko_content\EventSubscriber\KaskoElasticIndexSubscriber:
+    arguments:
+      - '@entity_type.manager'
     tags:
       - { name: 'event_subscriber' }
   Drupal\helfi_kasko_content\EventSubscriber\UnitOntologyWordDetailsSubscriber:
