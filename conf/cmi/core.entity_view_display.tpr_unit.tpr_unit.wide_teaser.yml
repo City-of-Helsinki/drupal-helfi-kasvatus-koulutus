@@ -93,6 +93,7 @@ hidden:
   contacts: true
   created: true
   description: true
+  description_override: true
   email: true
   field_categories: true
   field_content: true

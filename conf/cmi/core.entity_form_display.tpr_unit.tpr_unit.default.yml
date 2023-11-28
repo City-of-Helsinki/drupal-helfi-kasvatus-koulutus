@@ -21,6 +21,7 @@ dependencies:
     - path
     - readonly_field_widget
     - select2
+    - text
 _core:
   default_config_hash: iGJgv-B14-RUdc8dyC_MKfM3icDg5Cae4kFwC0MjyGQ
 id: tpr_unit.tpr_unit.default
@@ -60,7 +61,7 @@ content:
     third_party_settings: {  }
   address:
     type: readonly_field_widget
-    weight: 19
+    weight: 20
     region: content
     settings:
       label: above
@@ -70,7 +71,7 @@ content:
     third_party_settings: {  }
   address_postal:
     type: readonly_field_widget
-    weight: 21
+    weight: 22
     region: content
     settings:
       label: above
@@ -80,7 +81,7 @@ content:
     third_party_settings: {  }
   call_charge_info:
     type: readonly_field_widget
-    weight: 20
+    weight: 21
     region: content
     settings:
       label: above
@@ -90,7 +91,7 @@ content:
     third_party_settings: {  }
   contacts:
     type: readonly_field_widget
-    weight: 39
+    weight: 40
     region: content
     settings:
       label: above
@@ -108,6 +109,14 @@ content:
       formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
+  description_override:
+    type: text_textarea
+    weight: 19
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   email:
     type: readonly_field_widget
     weight: 10
@@ -119,25 +128,6 @@ content:
       show_description: false
     third_party_settings: {  }
   field_content:
-    type: paragraphs
-    weight: 28
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: text
-      features:
-        add_above: '0'
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
-  field_lower_content:
     type: paragraphs
     weight: 29
     region: content
@@ -156,9 +146,28 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
+  field_lower_content:
+    type: paragraphs
+    weight: 30
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: text
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 27
+    weight: 28
     region: content
     settings:
       sidebar: false
@@ -176,7 +185,7 @@ content:
     third_party_settings: {  }
   field_unit_type:
     type: entity_reference_autocomplete
-    weight: 30
+    weight: 31
     region: content
     settings:
       match_operator: CONTAINS
@@ -186,14 +195,14 @@ content:
     third_party_settings: {  }
   hide_sidebar_navigation:
     type: boolean_checkbox
-    weight: 31
+    weight: 32
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   highlights:
     type: readonly_field_widget
-    weight: 36
+    weight: 37
     region: content
     settings:
       label: above
@@ -210,7 +219,7 @@ content:
     third_party_settings: {  }
   latitude:
     type: readonly_field_widget
-    weight: 22
+    weight: 23
     region: content
     settings:
       label: above
@@ -220,7 +229,7 @@ content:
     third_party_settings: {  }
   links:
     type: readonly_field_widget
-    weight: 33
+    weight: 34
     region: content
     settings:
       label: above
@@ -230,7 +239,7 @@ content:
     third_party_settings: {  }
   longitude:
     type: readonly_field_widget
-    weight: 23
+    weight: 24
     region: content
     settings:
       label: above
@@ -258,7 +267,7 @@ content:
     third_party_settings: {  }
   opening_hours:
     type: readonly_field_widget
-    weight: 35
+    weight: 36
     region: content
     settings:
       label: above
@@ -268,7 +277,7 @@ content:
     third_party_settings: {  }
   other_info:
     type: readonly_field_widget
-    weight: 37
+    weight: 38
     region: content
     settings:
       label: above
@@ -311,7 +320,7 @@ content:
     third_party_settings: {  }
   price_info:
     type: readonly_field_widget
-    weight: 38
+    weight: 39
     region: content
     settings:
       label: above
@@ -321,7 +330,7 @@ content:
     third_party_settings: {  }
   provided_languages:
     type: readonly_field_widget
-    weight: 32
+    weight: 33
     region: content
     settings:
       label: above
@@ -331,7 +340,7 @@ content:
     third_party_settings: {  }
   service_map_embed:
     type: readonly_field_widget
-    weight: 25
+    weight: 26
     region: content
     settings:
       label: above
@@ -341,7 +350,7 @@ content:
     third_party_settings: {  }
   services:
     type: readonly_field_widget
-    weight: 26
+    weight: 27
     region: content
     settings:
       label: above
@@ -398,7 +407,7 @@ content:
     third_party_settings: {  }
   topical:
     type: readonly_field_widget
-    weight: 34
+    weight: 35
     region: content
     settings:
       label: above
