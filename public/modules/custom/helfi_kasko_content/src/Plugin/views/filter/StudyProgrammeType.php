@@ -5,14 +5,11 @@ declare(strict_types = 1);
 namespace Drupal\helfi_kasko_content\Plugin\views\filter;
 
 use Drupal\Core\Language\LanguageInterface;
-use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\helfi_kasko_content\SchoolUtility;
 use Drupal\views\Plugin\views\display\DisplayPluginBase;
-use Drupal\views\Plugin\views\filter\InOperator;
 use Drupal\views\Plugin\views\query\Sql;
 use Drupal\views\ViewExecutable;
 use Drupal\views\Views;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Filter school units by study programme type.
@@ -21,29 +18,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *
  * @ViewsFilter("study_programme_type_filter")
  */
-class StudyProgrammeType extends InOperator {
-
-  /**
-   * The language manager service.
-   *
-   * @var \Drupal\Core\Language\LanguageManagerInterface
-   */
-  private LanguageManagerInterface $languageManager;
-
-  /**
-   * {@inheritdoc}
-   */
-  public static function create(
-    ContainerInterface $container,
-    array $configuration,
-    $plugin_id,
-    $plugin_definition
-  ) : self {
-    $instance = parent::create($container, $configuration, $plugin_id,
-      $plugin_definition);
-    $instance->languageManager = $container->get('language_manager');
-    return $instance;
-  }
+class StudyProgrammeType extends InOperatorBase {
 
   /**
    * {@inheritdoc}
