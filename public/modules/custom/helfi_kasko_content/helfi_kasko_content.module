@@ -110,7 +110,14 @@ function helfi_kasko_content_preprocess_block(&$variables) {
 
   // Check if the content field first paragraph is High school search
   // and add classes accordingly.
-  if ($paragraph->getType() === 'high_school_search') {
+  if (
+    $paragraph->getType() === 'after_school_activity_search' ||
+    $paragraph->getType() === 'daycare_search' ||
+    $paragraph->getType() === 'high_school_search' ||
+    $paragraph->getType() === 'playground_search' ||
+    $paragraph->getType() === 'school_search' ||
+    $paragraph->getType() === 'vocational_school_search'
+  ) {
     $first_paragraph_gray = 'has-first-gray-bg-block';
 
     // If lead_in field has value, unset 1st gray paragraph class.
