@@ -53,6 +53,7 @@ function helfi_group_tokens($type, $tokens, array $data, array $options, Bubblea
         if (!$group->hasField('field_group_news_parent')) {
           break;
         }
+        // @phpstan-ignore-next-line
         if (!$newsParent = $group?->get('field_group_news_parent')
           ?->first()
           ?->get('entity')
@@ -66,7 +67,7 @@ function helfi_group_tokens($type, $tokens, array $data, array $options, Bubblea
         $langcode = \Drupal::languageManager()
           ->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)
           ->getId();
-        /** @var \Drupal\Core\Entity\EntityInterface $newsParent */
+        /** @var \Drupal\Core\Entity\ContentEntityInterface $newsParent */
         if ($newsParent->hasTranslation($langcode)) {
           $newsParent = $newsParent->getTranslation($langcode);
         }

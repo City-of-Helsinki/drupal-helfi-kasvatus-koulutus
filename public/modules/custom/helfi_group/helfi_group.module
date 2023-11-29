@@ -10,6 +10,7 @@ declare(strict_types = 1);
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Access\AccessResultAllowed;
 use Drupal\Core\Access\AccessResultNeutral;
+use Drupal\Core\Entity\EntityFormInterface;
 use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
@@ -162,7 +163,11 @@ function helfi_group_node_create_access(AccountInterface $account, array $contex
  * Make sure menu_parent is always set.
  */
 function helfi_group_form_menu_link_content_form_alter(&$form, FormStateInterface $form_state) {
-  $entity = $form_state->getFormObject()->getEntity();
+  $formObject = $form_state->getFormObject();
+  assert($formObject instanceof EntityFormInterface);
+
+  /** @var \Drupal\Core\Entity\ContentEntityInterface $entity */
+  $entity = $formObject->getEntity();
   $menu_name = $entity->get('menu_name')->value;
   if (
     !$menu_name ||
@@ -210,9 +215,12 @@ function helfi_group_form_node_form_alter(
     if (!str_contains($menu_name, 'group')) {
       return;
     }
+    $formObject = $form_state->getFormObject();
+    assert($formObject instanceof EntityFormInterface);
+    $entity = $formObject->getEntity();
 
     $result = \Drupal::entityQuery('menu_link_content')
-      ->condition('link.uri', "entity:node/{$form_state->getFormObject()->getEntity()->id()}")
+      ->condition('link.uri', "entity:node/{$entity->id()}")
       ->condition('menu_name', [$menu_name], 'IN')
       ->sort('id', 'ASC')
       ->accessCheck(FALSE)
@@ -223,9 +231,7 @@ function helfi_group_form_node_form_alter(
       return;
     }
 
-    $current_language = $form_state
-      ->getFormObject()
-      ->getEntity()
+    $current_language = $entity
       ->language()
       ->getId();
 
@@ -238,6 +244,7 @@ function helfi_group_form_node_form_alter(
     $menu_link_content = $menu_link_content->getTranslation($current_language);
     $status = $menu_link_content->get('content_translation_status')->value;
     $form['menu']['content_translation_status']['#default_value'] = $status;
+    // @phpcs:ignore
     $form['menu']['content_translation_status']['#description'] = 'Tämä arvo muuttuu automaattisesti tallentaessa sisällön julkaisutilan mukaan.';
   }
 
@@ -263,8 +270,12 @@ function helfi_group_menuitem_set_content_translation_status(
   }
   $menu_name = explode(':', $menu_parent)[0];
 
+  $formObject = $form_state->getFormObject();
+  assert($formObject instanceof EntityFormInterface);
+
   $values = $form_state->getValue('menu');
-  $node = $form_state->getFormObject()->getEntity();
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $formObject->getEntity();
   $langCode = $node->language()->getId();
   $link = MenuLinkContent::load($values['entity_id']);
   if (

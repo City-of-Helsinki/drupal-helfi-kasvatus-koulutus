@@ -101,7 +101,7 @@ function helfi_kasko_content_preprocess_block(&$variables) {
 
   if (
     empty($paragraph) ||
-    !in_array($entity->getType(), ['landing_page', 'page']) ||
+    !in_array($entity->bundle(), ['landing_page', 'page']) ||
     !$paragraph instanceof ParagraphInterface
   ) {
     return;
@@ -116,6 +116,7 @@ function helfi_kasko_content_preprocess_block(&$variables) {
     // If lead_in field has value, unset 1st gray paragraph class.
     if (
       $entity->hasField('field_lead_in') &&
+      // @phpstan-ignore-next-line
       !$entity->field_lead_in->isEmpty()
     ) {
       $first_paragraph_gray = '';
@@ -125,6 +126,7 @@ function helfi_kasko_content_preprocess_block(&$variables) {
     // If table of contents is enabled, unset 1st gray paragraph class.
     if (
       $entity->hasField('toc_enabled') &&
+      // @phpstan-ignore-next-line
       $entity->toc_enabled->value == TRUE
     ) {
       $first_paragraph_gray = '';
@@ -132,7 +134,7 @@ function helfi_kasko_content_preprocess_block(&$variables) {
     }
 
     // Special cases if the node type is page.
-    if ($entity->getType() === 'page') {
+    if ($entity->bundle() === 'page') {
       // Load menu links for the current page entity.
       $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
       $menu_links = $menu_link_manager->loadLinksByRoute(

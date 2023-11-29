@@ -5,15 +5,46 @@ declare(strict_types = 1);
 namespace Drupal\helfi_group;
 
 use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Entity\EntityFormInterface;
+use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Plugin\Context\ContextRepositoryInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\group_content_menu\NodeFormAlter;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\menu_link_content\MenuLinkContentInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Helper class to handle altering unit forms.
  */
 class UnitFormAlter extends NodeFormAlter {
+
+  use StringTranslationTrait;
+
+  /**
+   * The context repository.
+   *
+   * @var \Drupal\Core\Plugin\Context\ContextRepositoryInterface
+   */
+  private ContextRepositoryInterface $contextRepository;
+
+  /**
+   * The entity repository.
+   *
+   * @var \Drupal\Core\Entity\EntityRepositoryInterface
+   */
+  private EntityRepositoryInterface $entityRepository;
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) : self {
+    $instance = parent::create($container);
+    $instance->contextRepository = $container->get('context.repository');
+    $instance->entityRepository = $container->get('entity.repository');
+    return $instance;
+  }
 
   /**
    * Alter unit forms to use GroupContentMenu options with units in groups.
@@ -27,7 +58,9 @@ class UnitFormAlter extends NodeFormAlter {
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
   public function alter(array &$form, FormStateInterface $form_state): void {
-    $unit = $form_state->getFormObject()->getEntity();
+    $formObject = $form_state->getFormObject();
+    assert($formObject instanceof EntityFormInterface);
+    $unit = $formObject->getEntity();
     $groups = $this->getEntityGroups($form_state, $unit);
 
     if (empty($groups) || !isset($form['menu'])) {
@@ -41,25 +74,25 @@ class UnitFormAlter extends NodeFormAlter {
     // Alter the relevant menu parts.
     $form['menu']['enabled'] = [
       '#type' => 'checkbox',
-      '#title' => t('Provide a menu link'),
+      '#title' => $this->t('Provide a menu link'),
       '#default_value' => !$menuLink->isNew() && $menuLink->hasTranslation($unit->language()->getId()),
     ];
 
     $form['menu']['published'] = [
       '#type' => 'checkbox',
-      '#title' => t('Enabled'),
+      '#title' => $this->t('Enabled'),
       '#default_value' => $menuLink->isNew() || $menuLink->isPublished(),
       '#states' => [
         'invisible' => [
           'input[name="menu[enabled]"]' => ['checked' => FALSE],
         ],
       ],
-      '#description' => t('All languages'),
+      '#description' => $this->t('All languages'),
     ];
 
     $form['menu']['link']['title'] = [
       '#type' => 'textfield',
-      '#title' => t('Menu link title'),
+      '#title' => $this->t('Menu link title'),
       '#default_value' => $menuLink->label(),
     ];
 
@@ -135,8 +168,8 @@ class UnitFormAlter extends NodeFormAlter {
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
   protected function getDefaultMenuLink(ContentEntityInterface $entity, array $menuNames) : MenuLinkContentInterface {
-    /** @var \Drupal\menu_link_content\Entity\MenuLinkContent $menuLink */
     if (!$menuLink = $entity->get('menu_link')->entity) {
+      /** @var \Drupal\menu_link_content\Entity\MenuLinkContent $menuLink */
       $storage = $this->entityTypeManager
         ->getStorage('menu_link_content');
 
@@ -150,7 +183,8 @@ class UnitFormAlter extends NodeFormAlter {
 
       $menuLink = empty($results) ? MenuLinkContent::create([]) : MenuLinkContent::load(reset($results));
     }
-    return \Drupal::service('entity.repository')->getTranslationFromContext($menuLink);
+    /** @var \Drupal\menu_link_content\MenuLinkContentInterface */
+    return $this->entityRepository->getTranslationFromContext($menuLink);
   }
 
 }

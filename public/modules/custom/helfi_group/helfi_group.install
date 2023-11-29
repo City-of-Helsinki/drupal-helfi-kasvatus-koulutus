@@ -30,6 +30,7 @@ function helfi_group_update_9001(): void {
   $languages = ['fi', 'en', 'sv'];
 
   foreach ($menu_items as $menu_item) {
+    // @phpstan-ignore-next-line
     $params = Url::fromUri($menu_item->get('link')->uri)->getRouteParameters();
     $node_id = $params['node'];
     foreach ($languages as $langcode) {

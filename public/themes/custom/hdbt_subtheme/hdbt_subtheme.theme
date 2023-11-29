@@ -216,10 +216,6 @@ function hdbt_subtheme_preprocess_page(&$variables) {
  *   Content entity, like tpr_service, tpr_unit or node.
  */
 function _hdbt_subtheme_sidebar_menu_visibility(array &$variables, ContentEntityInterface $entity) {
-  if (empty($entity)) {
-    return;
-  }
-
   $menu_link_manager = Drupal::service('plugin.manager.menu.link');
 
   // Load menu links for the current page entity.

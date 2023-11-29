@@ -19,10 +19,10 @@ class UnitOntologyWordDetailsUtility {
    * @param string $id
    *   Ontologyword id.
    *
-   * @return Drupal\Core\StringTranslation\TranslatableMarkup|null
+   * @return \Drupal\Core\StringTranslation\TranslatableMarkup|null
    *   Translable markup
    */
-  public function findLanguageEducationbyId($id): TranslatableMarkup|null {
+  public function findLanguageEducationbyId($id): ?TranslatableMarkup {
     $context = ['context' => 'TPR Ontologyword details schools'];
 
     $ontologyDetailsIdsToLang = [
