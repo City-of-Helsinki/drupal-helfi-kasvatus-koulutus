@@ -8,7 +8,6 @@ display:
           label: Otsikko
         type:
           label: Sisältötyyppi
-          separator: ', '
         name:
           label: Kirjoittaja
         status:
@@ -30,7 +29,7 @@ display:
             last: 'Viimeinen »'
       exposed_form:
         options:
-          submit_button: Suodatin
+          submit_button: Suodata
           reset_button_label: Palauta
           exposed_sorts_label: Lajittele
           sort_asc_label: Nousevasti
@@ -53,8 +52,6 @@ display:
             group_items:
               1:
                 title: Julkaistu
-              2:
-                title: Julkaisematon
         langcode:
           expose:
             label: Kieli
