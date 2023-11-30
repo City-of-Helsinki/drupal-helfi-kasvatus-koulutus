@@ -58,6 +58,7 @@ class UnitOntologyWordDetailsUtility {
       106 => $this->t('Latin', [], $context),
       107 => $this->t('French', [], $context),
       108 => $this->t('Swedish', [], $context),
+      109 => $this->t('German', [], $context),
       110 => $this->t('Finnish', [], $context),
       111 => $this->t('Russian', [], $context),
       112 => $this->t('Estonian', [], $context),
@@ -72,6 +73,7 @@ class UnitOntologyWordDetailsUtility {
       121 => $this->t('German', [], $context),
       122 => $this->t('Finnish', [], $context),
       123 => $this->t('Russian', [], $context),
+      124 => $this->t('Estonian', [], $context),
       293 => $this->t('Finnish-English', [], $context),
       295 => $this->t('Finnish-Swedish', [], $context),
       297 => $this->t('Finnish-German', [], $context),
@@ -125,7 +127,7 @@ class UnitOntologyWordDetailsUtility {
         'key' => '#b1',
         'label' => $this->t('Second national language starting in 6th grade (B1)', [], $context),
       ],
-      '113-123' => [
+      '113-124' => [
         'key' => '#b2',
         'label' => $this->t('Optional foreign language starting in 8th grade (B2)', [], $context),
       ],
