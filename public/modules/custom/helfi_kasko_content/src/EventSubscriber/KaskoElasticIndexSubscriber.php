@@ -86,9 +86,7 @@ class KaskoElasticIndexSubscriber implements EventSubscriberInterface {
           $params['body'][$key]['ontologyword_ids'] = $ontologywordIds;
         }
 
-        if (!empty($ontologywordClarifications)) {
-          $params['body'][$key]['ontologyword_details_clarifications'] = $ontologywordClarifications;
-        }
+        $params['body'][$key]['ontologyword_details_clarifications'] = $ontologywordClarifications;
 
       }
     }
