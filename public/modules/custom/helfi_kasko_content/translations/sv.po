@@ -137,3 +137,39 @@ msgstr "ryska"
 msgctxt "TPR Ontologyword details schools"
 msgid "Estonian"
 msgstr "estniska"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Language immersion (English)"
+msgstr "Språkbad (engelska)"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Language immersion (Swedish)"
+msgstr "Språkbad (svenska)"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Language immersion (German)"
+msgstr "Språkbad (tyska)"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Language-enriched education (Finnish-English)"
+msgstr "Språkberikad undervisning (finska-engelska)"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Language-enriched education (Finnish-Russian)"
+msgstr "Språkberikad undervisning (finska-ryska)"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "A1-language"
+msgstr "A1-språket"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "A2-language"
+msgstr "A2-språket"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "B1-language"
+msgstr "B1-språket"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "B2-language"
+msgstr "B2-språket"
