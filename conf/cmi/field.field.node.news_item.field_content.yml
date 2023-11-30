@@ -15,12 +15,8 @@ dependencies:
     config:
       - field.storage.node.field_content
       - node.type.news_item
-      - paragraphs.paragraphs_type.banner
-      - paragraphs.paragraphs_type.image
-      - paragraphs.paragraphs_type.remote_video
-      - paragraphs.paragraphs_type.text
 _core:
-  default_config_hash: IngfOhrKiEet-oQmwX1eM35bf74Y_YNZwZWRJtt4Qg0
+  default_config_hash: ccAEOoK1MFeLfWgQXVHdmHRfWbX25IoVjBF7cPtzD9k
 id: node.news_item.field_content
 field_name: field_content
 entity_type: node

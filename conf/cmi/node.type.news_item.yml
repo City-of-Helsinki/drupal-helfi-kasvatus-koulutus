@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - override_node_options
     - menu_ui
     - scheduler
 third_party_settings:
