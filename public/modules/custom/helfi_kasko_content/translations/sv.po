@@ -173,3 +173,7 @@ msgstr "B1-språket"
 msgctxt "TPR Ontologyword details schools"
 msgid "B2-language"
 msgstr "B2-språket"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Language offering"
+msgstr "Språkutbudet"
