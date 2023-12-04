@@ -105,3 +105,16 @@ function helfi_kasko_content_update_9003() {
   SchoolUtility::setCurrentHighSchoolYear(SchoolUtility::composeSchoolYear($highSchoolYear));
   SchoolUtility::setCurrentComprehensiveSchoolYear('2023-2024');
 }
+
+/**
+ * Update school search translations.
+ */
+function helfi_kasko_content_update_9004() {
+  // Update translations manually as js translations might not
+  // get translated due to libraries not being loaded via render arrays.
+  foreach ([
+    'themes/contrib/hdbt/dist/js/school-search.min.js',
+  ] as $file) {
+    _locale_parse_js_file($file);
+  }
+}
