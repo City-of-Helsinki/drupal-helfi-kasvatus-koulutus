@@ -9,27 +9,8 @@ declare(strict_types = 1);
 
 use Drupal\Core\Entity\EntityStorageException;
 use Drupal\helfi_kasko_content\SchoolUtility;
-use Drupal\helfi_platform_config\ConfigHelper;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\taxonomy\Entity\Vocabulary;
-
-/**
- * Import vocational_studies taxonomy config if not existing.
- */
-function helfi_kasko_content_update_9001() {
-  if (Vocabulary::load('vocational_studies')) {
-    return;
-  }
-
-  $configLocation = dirname(__FILE__) . '/config/install/';
-  ConfigHelper::installNewConfig($configLocation, 'taxonomy.vocabulary.vocational_studies');
-  ConfigHelper::installNewConfig($configLocation, 'language.content_settings.taxonomy_term.vocational_studies');
-
-  // Use the same UUIDs existing at site's config directory.
-  $configFactory = \Drupal::service('config.factory');
-  $configFactory->getEditable('taxonomy.vocabulary.vocational_studies')->set('uuid', 'cfd5c601-be12-42f8-a2bc-1f9ab9ef0320')->save();
-  $configFactory->getEditable('language.content_settings.taxonomy_term.vocational_studies')->set('uuid', 'fc452295-6641-4c07-8e27-f35f1e52e8ce')->save();
-}
 
 /**
  * Set initial vocational study terms.
@@ -123,4 +104,17 @@ function helfi_kasko_content_update_9003() {
   $highSchoolYear = \Drupal::state()->get('helfi_school_addons.school_year') ? (int) \Drupal::state()->get('helfi_school_addons.school_year') : 2023;
   SchoolUtility::setCurrentHighSchoolYear(SchoolUtility::composeSchoolYear($highSchoolYear));
   SchoolUtility::setCurrentComprehensiveSchoolYear('2023-2024');
+}
+
+/**
+ * Update school search translations.
+ */
+function helfi_kasko_content_update_9004() {
+  // Update translations manually as js translations might not
+  // get translated due to libraries not being loaded via render arrays.
+  foreach ([
+    'themes/contrib/hdbt/dist/js/school-search.min.js',
+  ] as $file) {
+    _locale_parse_js_file($file);
+  }
 }
