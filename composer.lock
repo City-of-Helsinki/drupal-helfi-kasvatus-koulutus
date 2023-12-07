@@ -2098,16 +2098,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "10.1.6",
+            "version": "10.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "33695caf467e3e1e8c75d42215df57bee31be9ec"
+                "reference": "54415049a721ede65318e3980b402af59bc35913"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/33695caf467e3e1e8c75d42215df57bee31be9ec",
-                "reference": "33695caf467e3e1e8c75d42215df57bee31be9ec",
+                "url": "https://api.github.com/repos/drupal/core/zipball/54415049a721ede65318e3980b402af59bc35913",
+                "reference": "54415049a721ede65318e3980b402af59bc35913",
                 "shasum": ""
             },
             "require": {
@@ -2252,9 +2252,9 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/10.1.6"
+                "source": "https://github.com/drupal/core/tree/10.1.7"
             },
-            "time": "2023-11-01T11:59:20+00:00"
+            "time": "2023-12-06T09:22:56+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -4455,16 +4455,16 @@
         },
         {
             "name": "drupal/helfi_tpr",
-            "version": "2.3.1",
+            "version": "2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr.git",
-                "reference": "1c35432dba2972ff608b038849cd2e83e98ebe83"
+                "reference": "6d5e7f0e71042610e4ac12216a37a28d82c5a69d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/1c35432dba2972ff608b038849cd2e83e98ebe83",
-                "reference": "1c35432dba2972ff608b038849cd2e83e98ebe83",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/6d5e7f0e71042610e4ac12216a37a28d82c5a69d",
+                "reference": "6d5e7f0e71042610e4ac12216a37a28d82c5a69d",
                 "shasum": ""
             },
             "require": {
@@ -4490,10 +4490,10 @@
             ],
             "description": "TPR integration",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/2.3.1",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/2.3.2",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/issues"
             },
-            "time": "2023-11-21T11:43:29+00:00"
+            "time": "2023-12-07T09:25:06+00:00"
         },
         {
             "name": "drupal/helfi_tunnistamo",
