@@ -6,7 +6,6 @@ namespace Drupal\helfi_kasko_content\EventSubscriber;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\elasticsearch_connector\Event\BuildIndexParamsEvent;
-use Drupal\elasticsearch_connector\Event\PrepareIndexMappingEvent;
 use Drupal\helfi_kasko_content\SchoolUtility;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
@@ -29,30 +28,8 @@ class KaskoElasticIndexSubscriber implements EventSubscriberInterface {
    */
   public static function getSubscribedEvents(): array {
     return [
-      PrepareIndexMappingEvent::PREPARE_INDEX_MAPPING => 'addCoordinatesField',
       BuildIndexParamsEvent::BUILD_PARAMS => 'modifyOntologywordDetailsFields',
     ];
-  }
-
-  /**
-   * Set mapping for unit's coordinates as geo_point field.
-   *
-   * @param \Drupal\elasticsearch_connector\Event\PrepareIndexMappingEvent $event
-   *   Event emitted by elasticsearch_connector.
-   */
-  public function addCoordinatesField(PrepareIndexMappingEvent $event): void {
-    /** @var array $params */
-    $params = $event->getIndexMappingParams();
-
-    if ($params['index'] !== 'schools') {
-      return;
-    }
-
-    $params['body']['properties']['coordinates'] = [
-      'type' => 'geo_point',
-    ];
-
-    $event->setIndexMappingParams($params);
   }
 
   /**
