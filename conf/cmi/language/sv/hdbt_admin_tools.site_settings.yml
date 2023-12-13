@@ -1,4 +1,4 @@
 site_settings:
-  theme_color: metro
-  default_icon: face-smile
+  theme_color: suomenlinna
+  default_icon: abstract-1
   koro: pulse
