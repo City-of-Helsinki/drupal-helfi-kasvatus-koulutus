@@ -29,13 +29,16 @@
     {% set view_mode_class = 'card--vocational-school-teaser' %}
     {% set unit_url_external = false %}
   {% else %}
-    {% set view_mode_class = 'card--comprehensive-school-teaser' %}
+    {% set view_mode_class = [
+      'card--comprehensive-school-teaser',
+      not content_entity_published ? 'card--unpublished',
+    ] %}
     {% set unit_url_external = false %}
   {% endif %}
 
   {% if view_mode == 'comprehensive_school_card' %}
     {% embed '@hdbt/component/card.twig' with {
-      card_modifier_class: view_mode_class,
+      card_modifier_class: view_mode_class|join(' '),
       card_image: card_image,
       card_title: card_title,
       card_url: unit_url,
