@@ -17,6 +17,7 @@ dependencies:
     - address
     - entity_reference_revisions
     - helfi_address_search
+    - helfi_kasko_content
     - helfi_tpr
     - imagecache_external
     - link
