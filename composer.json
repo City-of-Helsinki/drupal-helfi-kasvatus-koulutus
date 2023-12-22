@@ -29,6 +29,7 @@
         "drupal/raven": "^4.0",
         "drupal/redis": "^1.5",
         "drupal/stage_file_proxy": "^2.0",
+        "drupal/variationcache": "^1.4",
         "drush/drush": "^12.0"
     },
     "require-dev": {
@@ -45,8 +46,7 @@
         "weitzman/drupal-test-traits": "^2.1"
     },
     "conflict": {
-        "drupal/drupal": "*",
-        "drupal/variationcache": "<1.4"
+        "drupal/drupal": "*"
     },
     "config": {
         "optimize-autoloader": true,
