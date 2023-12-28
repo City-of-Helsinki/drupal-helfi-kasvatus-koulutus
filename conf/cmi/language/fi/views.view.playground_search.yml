@@ -31,9 +31,6 @@ display:
             format: full_html
       header:
         area_address_search_info:
-          succeed:
-            value: '<p>Tulokset järjestettynä hakemasi osoitteen perusteella. Etäisyys annettuun osoitteeseen on kerrottu toimipisteen osoitteen jälkeen tuloslistauksessa.</p>'
-            format: minimal
           failed:
             value: '<p>Voi harmi. Hakemaasi osoitetta ei löytynyt. Tarkista syöttämäsi osoite. Tulokset on nyt järjestetty aakkosjärjestykseen.</p>'
             format: minimal
