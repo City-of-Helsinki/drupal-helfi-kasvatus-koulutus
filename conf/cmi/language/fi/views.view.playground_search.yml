@@ -14,25 +14,31 @@ display:
             items_per_page_options_all_label: '- Kaikki -'
       exposed_form:
         options:
-          submit_button: 'Hae leikkipuistoa'
+          submit_button: Etsi
           reset_button_label: Palauta
           exposed_sorts_label: Järjestä
           sort_asc_label: Nouseva
           sort_desc_label: Laskeva
+          bef:
+            filter:
+              address_search:
+                advanced:
+                  placeholder_text: 'Esim. Kotikatu 1'
       empty:
         area:
           content:
-            value: "<p>Valitsemillasi suodatuksilla ei löytynyt yhtään leikkipuistoa.</p>\r\n\r\n<p>Kokeile jotain toista valintaa.</p>\r\n"
+            value: '<p>Valitsemillasi suodatuksilla ei löytynyt yhtään leikkipuistoa.</p><p>Kokeile jotain toista valintaa.</p>'
             format: full_html
       header:
         area_address_search_info:
           succeed:
-            value: "<p>Tulokset järjestettynä hakemasi osoitteen perusteella. Etäisyys annettuun osoitteeseen on kerrottu toimipisteen osoitteen jälkeen tuloslistauksessa.</p>\r\n"
+            value: '<p>Tulokset järjestettynä hakemasi osoitteen perusteella. Etäisyys annettuun osoitteeseen on kerrottu toimipisteen osoitteen jälkeen tuloslistauksessa.</p>'
             format: minimal
           failed:
-            value: "<p>Voi harmi. Hakemaasi osoitetta ei löytynyt. Tarkista syöttämäsi osoite. Tulokset on nyt järjestetty aakkosjärjestykseen.</p>\r\n"
+            value: '<p>Voi harmi. Hakemaasi osoitetta ei löytynyt. Tarkista syöttämäsi osoite. Tulokset on nyt järjestetty aakkosjärjestykseen.</p>'
             format: minimal
       filters:
         address_search:
           expose:
-            label: 'Järjestä leikkipuistot osoitteen perusteella'
+            label: Osoite
+            description: 'Kirjoita kadunnimi ja talonumero'
