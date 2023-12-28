@@ -11,6 +11,7 @@ display:
         address_search:
           expose:
             label: Adress
+            description: 'Ange gatunamnet och husnumret'
         tpr_provided_languages:
           expose:
             label: 'Välj verksamhetsspråk'

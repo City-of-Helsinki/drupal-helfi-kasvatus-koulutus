@@ -6,6 +6,7 @@ display:
         address_search:
           expose:
             label: Osoite
+            description: 'Kirjoita kadunnimi ja talonumero'
         tpr_provided_languages:
           expose:
             label: 'Valitse päiväkodin toimintakieli'

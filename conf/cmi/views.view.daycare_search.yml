@@ -302,7 +302,7 @@ display:
           expose:
             operator_id: ''
             label: Address
-            description: ''
+            description: 'Enter street name and house number'
             use_operator: false
             operator: address_search_op
             operator_limit_selection: false
