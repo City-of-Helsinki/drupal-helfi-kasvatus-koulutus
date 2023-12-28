@@ -5,15 +5,15 @@ display:
       empty:
         area:
           content:
-            value: "<p class=\"unit-search__no-results-title\">Inga verksamhetsställen hittades med de filter du valt.</p>\r\n\r\n<p class=\"unit-search__no-results-desc\">Försök med ett annat val.</p>\r\n"
+            value: '<p>Inga verksamhetsställen hittades med de filter du valt.</p><p>Försök med ett annat val.</p>'
             format: full_html
       filters:
         address_search:
           expose:
-            label: 'Sortera daghem efter adress'
+            label: Adress
         tpr_provided_languages:
           expose:
-            label: 'Filtrera efter språk'
+            label: 'Välj verksamhetsspråk'
         field_categories_value:
           group_info:
             label: Alternativ
@@ -28,16 +28,13 @@ display:
                 title: 'Språkbad finska-svenska'
               5:
                 title: Klubbar
-      exposed_form:
-        options:
-          submit_button: 'Sök daghem'
+          expose:
+            description: ''
+            placeholder: ''
       header:
         area_address_search_info:
-          succeed:
-            value: "<p>Resultaten sorterade enligt adressen du sökte med. Avståndet till den angivna adressen står efter verksamhetsställets adress i resultatlistan.</p>\r\n"
-            format: minimal
           failed:
-            value: "<p>Tyvärr kunde adressen du sökte inte hittas. Kontrollera adressen du uppgav.&nbsp;Resultaten är nu i alfabetisk ordning.</p>\r\n"
+            value: '<p>Tyvärr kunde adressen du sökte inte hittas. Kontrollera adressen du uppgav.&nbsp;Resultaten är nu i alfabetisk ordning.</p>'
             format: minimal
       pager:
         options:
@@ -48,4 +45,16 @@ display:
             last: Sista
           expose:
             items_per_page_label: 'Artiklar per sida'
-            items_per_page_options_all_label: '- Allt -'
+            items_per_page_options_all_label: Alla
+      exposed_form:
+        options:
+          submit_button: Sök
+          bef:
+            filter:
+              address_search:
+                advanced:
+                  placeholder_text: 'T.ex. Hemgatan 1'
+              field_categories_value:
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: '- Alla - | Alla'
