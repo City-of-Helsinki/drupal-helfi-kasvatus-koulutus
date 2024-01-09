@@ -18,7 +18,7 @@ dependencies:
     - helfi_address_search
     - helfi_tpr
 _core:
-  default_config_hash: wvPWnthIC7o8oa1gJ6jI0ex6xi12GVsZEN5zyrlCLoU
+  default_config_hash: f5AGkO_5_TgZ9InGKOLMyzbGFaCCTKeiPJYeGuTLnq0
 id: tpr_unit.tpr_unit.minimal
 targetEntityType: tpr_unit
 bundle: tpr_unit
@@ -58,6 +58,7 @@ hidden:
   created: true
   description: true
   email: true
+  enrich_description: true
   field_categories: true
   field_content: true
   field_districts: true
