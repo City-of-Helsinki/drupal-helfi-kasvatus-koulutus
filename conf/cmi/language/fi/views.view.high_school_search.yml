@@ -3,6 +3,11 @@ display:
   default:
     display_title: Oletus
     display_options:
+      empty:
+        area:
+          content:
+            value: "<p>Ei tuloksia</p>\r\n"
+            format: full_html
       exposed_form:
         options:
           submit_button: Käytä
@@ -10,23 +15,32 @@ display:
           exposed_sorts_label: Järjestä
           sort_asc_label: Nouseva
           sort_desc_label: Laskeva
-      empty:
-        area:
-          content:
-            value: "<p>Ei tuloksia</p>\r\n"
-            format: full_html
+          bef:
+            filter:
+              emphasis_filter:
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: '- Kaikki - | Kaikki'
+              educational_mission_filter:
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: '- Kaikki - | Kaikki'
+              study_programme_type_filter:
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: '- Kaikki - | Kaikki'
   block:
     display_title: Lohko
     display_options:
       filters:
         emphasis_filter:
           expose:
-            label: 'Valitse lukion painotus'
+            label: 'Lukion painotus'
         educational_mission_filter:
           expose:
-            label: 'Valitse erikoislukion painotus (erityistehtävä)'
+            label: 'Erikoislukion painotus (erityistehtävä)'
         study_programme_type_filter:
           expose:
-            label: 'Valitse yleislukio tai aikuislukio'
+            label: 'Yleislukio tai aikuislukio'
   entity_reference:
     display_title: Entiteettiviittaus

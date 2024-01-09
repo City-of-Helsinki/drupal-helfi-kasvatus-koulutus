@@ -4,17 +4,33 @@ display:
       empty:
         area:
           content:
-            value: "<p>No results</p>\r\n"
+            value: '<p>No results</p>'
             format: full_html
+      exposed_form:
+        options:
+          bef:
+            filter:
+              emphasis_filter:
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: '- Alla - | Alla'
+              educational_mission_filter:
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: '- Alla - | Alla'
+              study_programme_type_filter:
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: '- Alla - | Alla'
   block:
     display_options:
       filters:
         emphasis_filter:
           expose:
-            label: 'Välj profilering för gymnasium'
+            label: 'Gymnasiets profilering'
         educational_mission_filter:
           expose:
-            label: 'Välj profilering för specialiseringsgymnasium (särskild utbildningsuppgift)'
+            label: 'Specialiseringsgymnasiets profilering'
         study_programme_type_filter:
           expose:
-            label: 'Välj allmänt gymnasium eller vuxengymnasium'
+            label: 'Allmänt gymnasium eller vuxengymnasium'
