@@ -50,10 +50,9 @@
 
   <div class="unit-search__results" data-id-number="{{ dom_id }}">
     {% if total_rows %}
-      <span class="unit-search__count-container">
-        <span class="unit-search__count">{{ total_rows }}</span>
-        {% trans with {'context': 'Playground search count'}%}location{% plural total_rows %}locations{% endtrans %}
-      </span>
+      <h3 class="unit-search__count-container">
+        {{ total_rows }} {% trans with {'context': 'Playground search count'}%}playground or family house{% plural total_rows %}playgrounds or family houses{% endtrans %}
+      </h3>
     {% endif %}
 
     {% if header %}

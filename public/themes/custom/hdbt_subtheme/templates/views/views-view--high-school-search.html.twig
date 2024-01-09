@@ -60,10 +60,9 @@
 
   <div class="unit-search__results" data-drupal-selector="tabbed-content" data-id-number="{{ dom_id }}">
     <div class="unit-search__result-actions">
-      <span class="unit-search__count-container">
-        <span class="unit-search__count">{{ total_rows }}</span>
-        {% trans with {'context': 'High school search count'}%}general upper secondary school{% plural total_rows %}general upper secondary schools{% endtrans %}
-      </span>
+      <h3 class="unit-search__count-container">
+        {{ total_rows }} {% trans with {'context': 'High school search count'}%}general upper secondary school{% plural total_rows %}general upper secondary schools{% endtrans %}
+      </h3>
       <div class="tabs tabs--unit-search"
            role="tablist"
            aria-label="{{ 'Toggle between list and map view'|t({}, {'context': 'Tab-list of unit-search'}) }}">
@@ -72,13 +71,13 @@
                 id="tab-1--{{ dom_id }}"
                 role="tab"
                 aria-selected="false"
-                aria-controls="tab-1__content--{{ dom_id }}">{{ 'Show results as a list'|t }}</button>
+                aria-controls="tab-1__content--{{ dom_id }}">{{ 'View as a list'|t }}</button>
         <button class="tab tab--map"
                 data-drupal-selector="tab-2--{{ dom_id }}"
                 id="tab-2--{{ dom_id }}"
                 role="tab"
                 aria-selected="false"
-                aria-controls="tab-2__content--{{ dom_id }}">{{ 'Show results on a map'|t }}</button>
+                aria-controls="tab-2__content--{{ dom_id }}">{{ 'View in a map'|t }}</button>
       </div>
     </div>
     <div class="tab__content"

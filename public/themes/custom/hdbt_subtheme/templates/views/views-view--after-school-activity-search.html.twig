@@ -50,10 +50,9 @@
 
   <div class="unit-search__results">
      {% if total_rows %}
-      <span class="unit-search__count-container">
-        <span class="unit-search__count">{{ total_rows }}</span>
-        {% trans with {'context': 'After-school activity search count'}%}location{% plural total_rows %}locations{% endtrans %}
-      </span>
+      <h3 class="unit-search__count-container">
+        {{ total_rows }} {% trans with {'context': 'After-school activity search count'}%}activity location{% plural total_rows %}activity locations{% endtrans %}
+      </h3>
     {% endif %}
 
     {% if header %}

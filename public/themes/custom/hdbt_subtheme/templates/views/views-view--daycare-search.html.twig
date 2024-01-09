@@ -49,10 +49,9 @@
   {{ attachment_before }}
 
   <div class="unit-search__results" data-id-number="{{ dom_id }}">
-    <span class="unit-search__count-container">
-      <span class="unit-search__count">{{ total_rows }}</span>
-      {% trans with {'context': 'Daycare search count'}%}location{% plural total_rows %}locations{% endtrans %}
-    </span>
+    <h3 class="unit-search__count-container">
+      {{ total_rows }} {% trans with {'context': 'Daycare search count'}%}daycare centre{% plural total_rows %}daycare centres{% endtrans %}
+    </h3>
 
     {% if header %}
       {{ header }}

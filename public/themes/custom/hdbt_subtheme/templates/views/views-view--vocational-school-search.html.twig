@@ -54,10 +54,9 @@
   {{ attachment_before }}
 
   <div class="unit-search__results" data-id-number="{{ dom_id }}">
-    <span class="unit-search__count-container">
-      <span class="unit-search__count">{{ total_rows }}</span>
-      {% trans with {'context': 'Vocational school search count'}%}unit{% plural total_rows %}units{% endtrans %}
-    </span>
+    <h3 class="unit-search__count-container">
+      {{ total_rows }} {% trans with {'context': 'Vocational school search count'}%}unit{% plural total_rows %}units{% endtrans %}
+    </h3>
 
     <div class="unit-search__result--list">
       {{ rows }}
