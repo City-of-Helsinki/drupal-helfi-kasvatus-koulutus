@@ -61,7 +61,11 @@
   <div class="unit-search__results" data-drupal-selector="tabbed-content" data-id-number="{{ dom_id }}">
     <div class="unit-search__result-actions">
       <h3 class="unit-search__count-container">
-        {{ total_rows }} {% trans with {'context': 'High school search count'}%}general upper secondary school{% plural total_rows %}general upper secondary schools{% endtrans %}
+        {%- if total_rows -%}
+          {{ total_rows }} {% trans with {'context': 'High school search count'}%}general upper secondary school{% plural total_rows %}general upper secondary schools{% endtrans %}
+        {%- else -%}
+          {{ 'No results'|t({}, {'context' : 'Unit search no results title'}) }}
+        {%- endif -%}
       </h3>
       <div class="tabs tabs--unit-search"
            role="tablist"
@@ -90,7 +94,9 @@
       <div class="unit-search__result--list">
         {{ rows }}
       </div>
-      {{ empty }}
+      {%- if empty -%}
+        <p>{{ 'No results were found for the criteria you entered. Try changing your search criteria.'|t({}, {'context' : 'Unit search no results text'}) }}</p>
+      {%- endif -%}
       {{ pager }}
     </div>
     <div class="tab__content"
