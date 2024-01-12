@@ -12,4 +12,4 @@ display:
             label: 'Välj ett utbildningsområde'
       exposed_form:
         options:
-          submit_button: Filtrera
+          submit_button: Sök

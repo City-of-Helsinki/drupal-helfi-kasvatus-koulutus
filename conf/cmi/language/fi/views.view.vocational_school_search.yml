@@ -12,4 +12,4 @@ display:
             label: 'Valitse koulutusala'
       exposed_form:
         options:
-          submit_button: Käytä
+          submit_button: Etsi
