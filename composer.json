@@ -115,6 +115,9 @@
             "drupal/override_node_options": {
                 "Fix for Adding non-existent permissions to a role is not allowed error during site install.": "./patches/override_node_permissions_missing_dependencies.patch"
             }
+        },
+        "patchLevel": {
+            "drupal/core": "-p2"
         }
     },
     "repositories": [

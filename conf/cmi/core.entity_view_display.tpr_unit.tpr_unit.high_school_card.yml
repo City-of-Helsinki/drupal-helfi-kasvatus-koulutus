@@ -217,6 +217,7 @@ content:
 hidden:
   contacts: true
   created: true
+  enrich_description: true
   field_categories: true
   field_districts: true
   field_ontologyword_details: true

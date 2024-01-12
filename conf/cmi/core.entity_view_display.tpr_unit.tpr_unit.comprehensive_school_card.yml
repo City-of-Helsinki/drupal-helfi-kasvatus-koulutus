@@ -93,6 +93,7 @@ hidden:
   contacts: true
   created: true
   email: true
+  enrich_description: true
   field_categories: true
   field_content: true
   field_districts: true
