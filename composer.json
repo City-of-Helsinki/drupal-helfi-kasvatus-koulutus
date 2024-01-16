@@ -29,6 +29,7 @@
         "drupal/raven": "^4.0",
         "drupal/redis": "^1.5",
         "drupal/stage_file_proxy": "^2.0",
+        "drupal/variationcache": "^1.4",
         "drush/drush": "^12.0"
     },
     "require-dev": {
@@ -45,9 +46,6 @@
         "weitzman/drupal-test-traits": "^2.1"
     },
     "conflict": {
-        "drupal/core": ">=10.2",
-        "drupal/core-composer-scaffold": ">=10.2",
-        "drupal/core-dev": ">=10.2",
         "drupal/drupal": "*"
     },
     "config": {
@@ -107,7 +105,8 @@
         },
         "patches": {
             "drupal/group": {
-                "https://www.drupal.org/project/group/issues/2815971": "https://www.drupal.org/files/issues/2023-06-13/group-context-2815971-46.patch"
+                "https://www.drupal.org/project/group/issues/2815971": "https://www.drupal.org/files/issues/2023-06-13/group-context-2815971-46.patch",
+                "Duplicate revision(version) tab around Group's admin pages": "https://www.drupal.org/files/issues/2023-12-12/group-revision-tabs-appear-twice-3397063-15.patch"
             },
             "drupal/group_content_menu": {
                 "https://www.drupal.org/project/group_content_menu/issues/3209011": "https://www.drupal.org/files/issues/2021-04-21/group_content_menu-active_trail_cache_problem-3209011-10.patch",

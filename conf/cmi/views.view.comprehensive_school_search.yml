@@ -1,18 +1,18 @@
-uuid: 7b567dc2-030a-4051-ae59-972e101d4b4f
+uuid: ca896c45-4a87-46f9-862f-a445cc9973d0
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.tpr_unit.comprehensive_school_card
+    - search_api.index.schools
   module:
-    - helfi_tpr
+    - search_api
 id: comprehensive_school_search
 label: 'Comprehensive school search'
 module: views
-description: ''
+description: 'Comprehensive school search - peruskouluhaku'
 tag: ''
-base_table: tpr_unit_field_data
-base_field: id
+base_table: search_api_index_schools
+base_field: search_api_id
 display:
   default:
     id: default
@@ -22,16 +22,14 @@ display:
     display_options:
       title: 'Comprehensive school search'
       fields:
-        name:
-          id: name
-          table: tpr_unit_field_data
-          field: name
+        search_api_rendered_item:
+          id: search_api_rendered_item
+          table: search_api_index_schools
+          field: search_api_rendered_item
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: null
-          entity_field: name
-          plugin_id: field
+          plugin_id: search_api_rendered_item
           label: ''
           exclude: false
           alter:
@@ -65,7 +63,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -73,19 +71,9 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
+          view_modes:
+            'entity:tpr_unit':
+              tpr_unit: comprehensive_school_card
       pager:
         type: full
         options:
@@ -94,10 +82,10 @@ display:
           total_pages: null
           id: 0
           tags:
-            next: Next
-            previous: Previous
-            first: First
-            last: Last
+            next: 'Next'
+            previous: 'Previous'
+            first: 'First'
+            last: 'Last'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -121,20 +109,18 @@ display:
         type: none
         options: {  }
       cache:
-        type: tag
+        type: search_api_tag
         options: {  }
       empty: {  }
       sorts:
         name:
           id: name
-          table: tpr_unit_field_data
+          table: search_api_index_schools
           field: name
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: tpr_unit
-          entity_field: name
-          plugin_id: standard
+          plugin_id: search_api
           order: ASC
           expose:
             label: ''
@@ -142,94 +128,14 @@ display:
           exposed: false
       arguments: {  }
       filters:
-        field_categories_value:
-          id: field_categories_value
-          table: tpr_unit__field_categories
-          field: field_categories_value
+        search_api_language:
+          id: search_api_language
+          table: search_api_index_schools
+          field: search_api_language
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: string
-          operator: '='
-          value: 'comprehensive school'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        status_extra:
-          id: status_extra
-          table: tpr_unit_field_data
-          field: status_extra
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: tpr_unit
-          plugin_id: tpr_status
-          operator: '='
-          value: ''
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        langcode:
-          id: langcode
-          table: tpr_unit_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: tpr_unit
-          entity_field: langcode
-          plugin_id: language
+          plugin_id: search_api_language
           operator: in
           value:
             '***LANGUAGE_language_content***': '***LANGUAGE_language_content***'
@@ -262,61 +168,25 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        address__locality:
-          id: address__locality
-          table: tpr_unit_field_data
-          field: address__locality
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: tpr_unit
-          entity_field: address
-          plugin_id: string
-          operator: contains
-          value: Helsinki
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups: {  }
       style:
         type: default
       row:
-        type: 'entity:tpr_unit'
+        type: fields
         options:
-          relationship: none
-          view_mode: comprehensive_school_card
+          default_field_elements: true
+          inline:
+            search_api_rendered_item: search_api_rendered_item
+          separator: ''
+          hide_empty: false
       query:
-        type: views_query
+        type: search_api_query
         options:
-          query_comment: ''
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
+          bypass_access: false
+          skip_access: false
+          preserve_facet_query_args: false
           query_tags: {  }
       relationships: {  }
       header: {  }
@@ -325,11 +195,11 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - user
-      tags: {  }
+      tags:
+        - 'config:search_api.index.schools'
+        - 'search_api_list:schools'
   block:
     id: block
     display_title: Block
@@ -340,8 +210,8 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - user
-      tags: {  }
+      tags:
+        - 'config:search_api.index.schools'
+        - 'search_api_list:schools'

@@ -4,12 +4,18 @@ display:
       empty:
         area:
           content:
-            value: "<p>Inget resultat.</p>\r\n"
+            value: '<p>Inget resultat.</p>'
             format: minimal
       filters:
         field_study_field_target_id:
           expose:
-            label: 'Välj ett utbildningsområde'
+            label: Utbildningsområde
       exposed_form:
         options:
           submit_button: Sök
+          bef:
+            filter:
+              field_study_field_target_id:
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: '- Alla - | Alla'

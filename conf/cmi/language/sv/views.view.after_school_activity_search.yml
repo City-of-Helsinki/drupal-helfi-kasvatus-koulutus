@@ -14,21 +14,27 @@ display:
             items_per_page_options_all_label: '- Allt -'
       exposed_form:
         options:
-          submit_button: 'Sök verksamhetsställen'
+          submit_button: Sök
+          bef:
+            filter:
+              address_search:
+                advanced:
+                  placeholder_text: 'T.ex. Hemgatan 1'
       empty:
         area:
           content:
-            value: "<p>Inga verksamhetsställen hittades med de filter du valt.</p>\r\n\r\n<p>Försök med ett annat val.</p>\r\n"
+            value: '<p>Inga verksamhetsställen hittades med de filter du valt.</p><p>Försök med ett annat val.</p>'
             format: full_html
       filters:
         address_search:
           expose:
-            label: 'Sök på svenskspråkig adress.'
+            label: Adress
+            description: 'Ange gatunamnet och husnumret'
       header:
         area_address_search_info:
           succeed:
-            value: "<p>Verksamhetsställena står listade efter adressen du sökte på.</p>\r\n"
+            value: '<p>Verksamhetsställena står listade efter adressen du sökte på.</p>'
             format: minimal
           failed:
-            value: "<p>Tyvärr kunde adressen du sökte inte hittas. Kontrollera adressen du uppgav.&nbsp;Resultaten är nu i alfabetisk ordning.</p>\r\n"
+            value: '<p>Tyvärr kunde adressen du sökte inte hittas. Kontrollera adressen du uppgav.&nbsp;Resultaten är nu i alfabetisk ordning.</p>'
             format: minimal
