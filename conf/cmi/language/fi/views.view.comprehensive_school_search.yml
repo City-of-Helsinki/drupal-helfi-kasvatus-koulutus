@@ -1,0 +1,25 @@
+label: Peruskouluhaku
+display:
+  default:
+    display_title: Oletus
+    display_options:
+      title: Peruskouluhaku
+      pager:
+        options:
+          tags:
+            next: Seuraava
+            previous: Edellinen
+            first: Ensimmäinen
+            last: Viimeinen
+          expose:
+            items_per_page_label: 'Kohteita sivulla'
+            items_per_page_options_all_label: '- Kaikki -'
+      exposed_form:
+        options:
+          submit_button: Käytä
+          reset_button_label: Palauta
+          exposed_sorts_label: Järjestä
+          sort_asc_label: Nouseva
+          sort_desc_label: Laskeva
+  block:
+    display_title: Lohko
