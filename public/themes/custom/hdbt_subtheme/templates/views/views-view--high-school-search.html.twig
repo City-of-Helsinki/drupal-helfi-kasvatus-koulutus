@@ -60,10 +60,13 @@
 
   <div class="unit-search__results" data-drupal-selector="tabbed-content" data-id-number="{{ dom_id }}">
     <div class="unit-search__result-actions">
-      <span class="unit-search__count-container">
-        <span class="unit-search__count">{{ total_rows }}</span>
-        {% trans with {'context': 'High school search count'}%}general upper secondary school{% plural total_rows %}general upper secondary schools{% endtrans %}
-      </span>
+      <h3 class="unit-search__count-container">
+        {%- if total_rows -%}
+          {{ total_rows }} {% trans with {'context': 'High school search count'}%}general upper secondary school{% plural total_rows %}general upper secondary schools{% endtrans %}
+        {%- else -%}
+          {{ 'No results'|t({}, {'context' : 'Unit search no results title'}) }}
+        {%- endif -%}
+      </h3>
       <div class="tabs tabs--unit-search"
            role="tablist"
            aria-label="{{ 'Toggle between list and map view'|t({}, {'context': 'Tab-list of unit-search'}) }}">
@@ -72,13 +75,13 @@
                 id="tab-1--{{ dom_id }}"
                 role="tab"
                 aria-selected="false"
-                aria-controls="tab-1__content--{{ dom_id }}">{{ 'Show results as a list'|t }}</button>
+                aria-controls="tab-1__content--{{ dom_id }}">{{ 'View as a list'|t }}</button>
         <button class="tab tab--map"
                 data-drupal-selector="tab-2--{{ dom_id }}"
                 id="tab-2--{{ dom_id }}"
                 role="tab"
                 aria-selected="false"
-                aria-controls="tab-2__content--{{ dom_id }}">{{ 'Show results on a map'|t }}</button>
+                aria-controls="tab-2__content--{{ dom_id }}">{{ 'View in a map'|t }}</button>
       </div>
     </div>
     <div class="tab__content"
@@ -91,7 +94,9 @@
       <div class="unit-search__result--list">
         {{ rows }}
       </div>
-      {{ empty }}
+      {%- if empty -%}
+        <p>{{ 'No results were found for the criteria you entered. Try changing your search criteria.'|t({}, {'context' : 'Unit search no results text'}) }}</p>
+      {%- endif -%}
       {{ pager }}
     </div>
     <div class="tab__content"

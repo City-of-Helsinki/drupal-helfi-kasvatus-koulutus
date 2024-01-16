@@ -49,10 +49,13 @@
   {{ attachment_before }}
 
   <div class="unit-search__results">
-    <span class="unit-search__count-container">
-      <span class="unit-search__count">{{ total_rows }}</span>
-      {% trans with {'context': 'Comprehensive school search count'}%}school{% plural total_rows %}schools{% endtrans %}
-    </span>
+    <h3 class="unit-search__count-container">
+      {%- if total_rows -%}
+        {{ total_rows }} {% trans with {'context': 'Comprehensive school search count'}%}school{% plural total_rows %}schools{% endtrans %}
+      {%- else -%}
+        {{ 'No results'|t({}, {'context' : 'Unit search no results title'}) }}
+      {%- endif -%}
+    </h3>
 
     {% if header %}
       {{ header }}
@@ -60,7 +63,9 @@
 
     {{ rows }}
 
-    {{ empty }}
+    {%- if empty -%}
+      <p>{{ 'No results were found for the criteria you entered. Try changing your search criteria.'|t({}, {'context' : 'Unit search no results text'}) }}</p>
+    {%- endif -%}
     {{ pager }}
   </div>
 
