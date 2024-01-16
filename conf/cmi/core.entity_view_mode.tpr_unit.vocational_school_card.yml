@@ -6,5 +6,6 @@ dependencies:
     - helfi_tpr
 id: tpr_unit.vocational_school_card
 label: 'Vocational school card'
+description: ''
 targetEntityType: tpr_unit
 cache: true

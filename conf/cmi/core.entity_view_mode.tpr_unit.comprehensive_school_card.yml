@@ -6,5 +6,6 @@ dependencies:
     - helfi_tpr
 id: tpr_unit.comprehensive_school_card
 label: 'Comprehensive school card'
+description: ''
 targetEntityType: tpr_unit
 cache: true

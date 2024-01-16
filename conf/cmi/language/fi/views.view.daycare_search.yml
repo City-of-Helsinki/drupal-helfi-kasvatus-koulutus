@@ -24,9 +24,6 @@ display:
                 title: 'Kielikylpy suomi-ruotsi'
               5:
                 title: Kerhot
-          expose:
-            description: ''
-            placeholder: ''
       empty:
         area:
           content:
