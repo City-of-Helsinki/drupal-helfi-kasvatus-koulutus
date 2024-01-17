@@ -151,7 +151,7 @@ display:
       exposed_form:
         type: bef
         options:
-          submit_button: 'Search locations'
+          submit_button: Search
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -170,11 +170,12 @@ display:
               allow_secondary: false
               secondary_label: 'Advanced options'
               secondary_open: false
+              reset_button_always_show: false
             filter:
               address_search:
                 plugin_id: default
                 advanced:
-                  placeholder_text: ''
+                  placeholder_text: 'For example, Kotikatu 1'
                   rewrite:
                     filter_rewrite_values: ''
                   collapsible: false
@@ -237,7 +238,6 @@ display:
           default_argument_type: fixed
           default_argument_options:
             argument: 'After-school activities'
-          default_argument_skip_url: false
           summary_options:
             base_path: ''
             count: true
@@ -281,8 +281,8 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Search with a Finnish address'
-            description: ''
+            label: Address
+            description: 'Enter street name and house number'
             use_operator: false
             operator: address_search_op
             operator_limit_selection: false
@@ -303,6 +303,7 @@ display:
               editor: '0'
               admin: '0'
               debug_api: '0'
+              super_administrator: '0'
           is_grouped: false
           group_info:
             label: ''

@@ -4,12 +4,18 @@ display:
       empty:
         area:
           content:
-            value: "<p>Ei tuloksia.</p>\r\n"
+            value: '<p>Ei tuloksia.</p>'
             format: minimal
       filters:
         field_study_field_target_id:
           expose:
-            label: 'Valitse koulutusala'
+            label: Koulutusala
       exposed_form:
         options:
-          submit_button: Käytä
+          submit_button: Etsi
+          bef:
+            filter:
+              field_study_field_target_id:
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: '- Kaikki - | Kaikki'

@@ -144,14 +144,14 @@ display:
             items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: All
             offset: false
             offset_label: Offset
           quantity: 9
       exposed_form:
         type: bef
         options:
-          submit_button: 'Search for a daycare centre'
+          submit_button: Search
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -170,11 +170,12 @@ display:
               allow_secondary: false
               secondary_label: 'Advanced options'
               secondary_open: false
+              reset_button_always_show: false
             filter:
               address_search:
                 plugin_id: default
                 advanced:
-                  placeholder_text: ''
+                  placeholder_text: 'For example, Kotikatu 1'
                   rewrite:
                     filter_rewrite_values: ''
                   collapsible: false
@@ -190,12 +191,12 @@ display:
                 select_all_none: false
                 select_all_none_nested: false
                 display_inline: false
-              daycare_options:
+              field_categories_value:
                 plugin_id: default
                 advanced:
-                  sort_options: false
+                  placeholder_text: ''
                   rewrite:
-                    filter_rewrite_values: ''
+                    filter_rewrite_values: '- Any - | All'
                   collapsible: false
                   is_secondary: false
       access:
@@ -256,7 +257,6 @@ display:
           default_argument_type: fixed
           default_argument_options:
             argument: Daycare
-          default_argument_skip_url: false
           summary_options:
             base_path: ''
             count: true
@@ -300,8 +300,8 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Sort daycare centres by address'
-            description: ''
+            label: Address
+            description: 'Enter street name and house number'
             use_operator: false
             operator: address_search_op
             operator_limit_selection: false
@@ -313,11 +313,16 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
-              content_producer: '0'
-              school_editor: '0'
               read_only: '0'
+              daycare_editor: '0'
+              playground_editor: '0'
+              comprehensive_school_editor: '0'
+              school_editor: '0'
+              content_producer: '0'
               editor: '0'
               admin: '0'
+              debug_api: '0'
+              super_administrator: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -429,7 +434,7 @@ display:
           exposed: true
           expose:
             operator_id: tpr_provided_languages_op
-            label: 'Filter by language of instruction'
+            label: 'Choose the operating language'
             description: ''
             use_operator: false
             operator: tpr_provided_languages_op
@@ -442,11 +447,16 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
-              content_producer: '0'
-              school_editor: '0'
               read_only: '0'
+              daycare_editor: '0'
+              playground_editor: '0'
+              comprehensive_school_editor: '0'
+              school_editor: '0'
+              content_producer: '0'
               editor: '0'
               admin: '0'
+              debug_api: '0'
+              super_administrator: '0'
             reduce: true
           is_grouped: false
           group_info:
@@ -567,7 +577,7 @@ display:
           plugin_id: address_search_info
           empty: false
           succeed:
-            value: 'Results organised by the address you searched for. The distance to the address is indicated in the results list after the location’s address.'
+            value: ''
             format: minimal
           failed:
             value: 'Given address was not found. Please check the address. The results are now in alphabetical order.'
@@ -583,6 +593,7 @@ display:
         - user
         - user.permissions
       tags:
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.comprehensive_school_card'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.default'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.high_school_card'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.minimal'
@@ -606,6 +617,7 @@ display:
         - user
         - user.permissions
       tags:
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.comprehensive_school_card'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.default'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.high_school_card'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.minimal'

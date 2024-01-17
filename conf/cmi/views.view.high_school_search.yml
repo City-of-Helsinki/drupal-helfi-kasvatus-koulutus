@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.tpr_unit.high_school_card
   module:
+    - better_exposed_filters
     - helfi_kasko_content
     - helfi_tpr
     - user
@@ -161,15 +162,53 @@ display:
         options:
           offset: 0
       exposed_form:
-        type: basic
+        type: bef
         options:
-          submit_button: Use
+          submit_button: Search
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: Sort
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          text_input_required_format: full_html
+          bef:
+            general:
+              autosubmit: false
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: false
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              secondary_open: false
+              reset_button_always_show: false
+            filter:
+              emphasis_filter:
+                plugin_id: default
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: '- Any - | All'
+                  collapsible: false
+                  is_secondary: false
+              educational_mission_filter:
+                plugin_id: default
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: '- Any - | All'
+                  collapsible: false
+                  is_secondary: false
+              study_programme_type_filter:
+                plugin_id: default
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: '- Any - | All'
+                  collapsible: false
+                  is_secondary: false
       access:
         type: perm
         options:
@@ -242,7 +281,6 @@ display:
           title: ''
           default_argument_type: node
           default_argument_options: {  }
-          default_argument_skip_url: false
           summary_options:
             base_path: ''
             count: true
@@ -594,9 +632,6 @@ display:
           operator: in
           value:
             all: all
-            'kansainvälisyys (globaalikansalainen)': 'kansainvälisyys (globaalikansalainen)'
-            'kielet ja kansainvälisyys': 'kielet ja kansainvälisyys'
-            'luonnontieteet, yhteiskuntatieteet': 'luonnontieteet, yhteiskuntatieteet'
             'media ja yhteiskunta': 'media ja yhteiskunta'
             musiikki: musiikki
             teknologia: teknologia
@@ -606,7 +641,7 @@ display:
           exposed: true
           expose:
             operator_id: emphasis_filter_op
-            label: 'Select a special emphasis'
+            label: 'Special emphasis'
             description: ''
             use_operator: false
             operator: emphasis_filter_op
@@ -619,9 +654,16 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
-              admin: '0'
-              content_producer: '0'
               read_only: '0'
+              daycare_editor: '0'
+              playground_editor: '0'
+              comprehensive_school_editor: '0'
+              school_editor: '0'
+              content_producer: '0'
+              editor: '0'
+              admin: '0'
+              debug_api: '0'
+              super_administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -650,7 +692,6 @@ display:
             'englanninkielinen IB-opetus': 'englanninkielinen IB-opetus'
             ilmaisutaito: ilmaisutaito
             kuvataide: kuvataide
-            luonnontieteet: luonnontieteet
             musiikki: musiikki
             tanssi: tanssi
             urheilu: urheilu
@@ -658,7 +699,7 @@ display:
           exposed: true
           expose:
             operator_id: educational_mission_filter_op
-            label: 'Select a special educational task'
+            label: 'Special educational task'
             description: ''
             use_operator: false
             operator: educational_mission_filter_op
@@ -671,9 +712,16 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
-              admin: '0'
-              content_producer: '0'
               read_only: '0'
+              daycare_editor: '0'
+              playground_editor: '0'
+              comprehensive_school_editor: '0'
+              school_editor: '0'
+              content_producer: '0'
+              editor: '0'
+              admin: '0'
+              debug_api: '0'
+              super_administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -705,7 +753,7 @@ display:
           exposed: true
           expose:
             operator_id: study_programme_type_filter_op
-            label: 'Select general programme or upper secondary school for adults'
+            label: 'General programme or Upper secondary school for adults'
             description: ''
             use_operator: false
             operator: study_programme_type_filter_op
@@ -718,9 +766,16 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
-              admin: '0'
-              content_producer: '0'
               read_only: '0'
+              daycare_editor: '0'
+              playground_editor: '0'
+              comprehensive_school_editor: '0'
+              school_editor: '0'
+              content_producer: '0'
+              editor: '0'
+              admin: '0'
+              debug_api: '0'
+              super_administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
