@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.tpr_unit.minimal
+    - core.entity_view_mode.tpr_unit.after_school_activity_card
     - taxonomy.vocabulary.unit_type
   module:
     - better_exposed_filters
@@ -76,7 +76,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          view_mode: minimal
+          view_mode: after_school_activity_card
         distance:
           id: distance
           table: tpr_unit
@@ -461,6 +461,7 @@ display:
         - user
         - user.permissions
       tags:
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.after_school_activity_card'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.comprehensive_school_card'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.default'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.high_school_card'
@@ -485,6 +486,7 @@ display:
         - user
         - user.permissions
       tags:
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.after_school_activity_card'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.comprehensive_school_card'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.default'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.high_school_card'
