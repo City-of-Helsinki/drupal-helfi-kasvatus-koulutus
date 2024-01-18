@@ -21,6 +21,7 @@ dependencies:
     - paragraphs
     - path
     - readonly_field_widget
+    - select2
     - text
 _core:
   default_config_hash: ilRrdsHOQ6StmQoz8EXvQCOoYTo8L_o2ZG8gNzEbtZM
@@ -175,6 +176,16 @@ content:
     settings:
       sidebar: false
       use_details: true
+    third_party_settings: {  }
+  field_ontologyword_details:
+    type: readonly_field_widget
+    weight: 40
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
     third_party_settings: {  }
   field_unit_type:
     type: entity_reference_autocomplete
@@ -373,6 +384,16 @@ content:
       formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
+  subgroup:
+    type: readonly_field_widget
+    weight: 40
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
   toc_enabled:
     type: boolean_checkbox
     weight: 3
@@ -426,9 +447,7 @@ hidden:
   field_categories: true
   field_districts: true
   field_hs_front_page: true
-  field_ontologyword_details: true
   field_study_field: true
   hide_description: true
   ontologyword_ids: true
   show_www: true
-  subgroup: true
