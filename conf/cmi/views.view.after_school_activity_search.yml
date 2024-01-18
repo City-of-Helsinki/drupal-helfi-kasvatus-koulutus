@@ -180,6 +180,17 @@ display:
                     filter_rewrite_values: ''
                   collapsible: false
                   is_secondary: false
+              tpr_provided_languages:
+                plugin_id: bef
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: false
       access:
         type: perm
         options:
@@ -385,6 +396,59 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        tpr_provided_languages:
+          id: tpr_provided_languages
+          table: tpr_unit__provided_languages
+          field: tpr_provided_languages
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: tpr_unit
+          plugin_id: tpr_provided_languages
+          operator: in
+          value:
+            fi: fi
+            sv: sv
+          group: 1
+          exposed: true
+          expose:
+            operator_id: tpr_provided_languages_op
+            label: 'Select the operating language'
+            description: ''
+            use_operator: false
+            operator: tpr_provided_languages_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: languages
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              read_only: '0'
+              daycare_editor: '0'
+              playground_editor: '0'
+              comprehensive_school_editor: '0'
+              school_editor: '0'
+              content_producer: '0'
+              editor: '0'
+              admin: '0'
+              debug_api: '0'
+              super_administrator: '0'
+            reduce: true
           is_grouped: false
           group_info:
             label: ''
