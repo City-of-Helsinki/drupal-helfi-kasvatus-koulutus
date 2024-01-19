@@ -17,6 +17,7 @@ dependencies:
     - address
     - entity_reference_revisions
     - helfi_address_search
+    - helfi_kasko_content
     - helfi_tpr
     - imagecache_external
     - link
@@ -139,7 +140,14 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 17
+    weight: 19
+    region: content
+  field_ontologyword_details:
+    type: tpr_ontologyword_details_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 28
     region: content
   highlights:
     type: tpr_connection
@@ -258,7 +266,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 16
+    weight: 18
+    region: content
+  subgroup:
+    type: tpr_connection
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 32
     region: content
   toc_enabled:
     type: boolean
@@ -301,7 +316,6 @@ hidden:
   field_categories: true
   field_districts: true
   field_hs_front_page: true
-  field_ontologyword_details: true
   field_study_field: true
   field_unit_type: true
   hide_description: true
@@ -309,4 +323,3 @@ hidden:
   search_api_excerpt: true
   show_www: true
   streetview_entrance_url: true
-  subgroup: true
