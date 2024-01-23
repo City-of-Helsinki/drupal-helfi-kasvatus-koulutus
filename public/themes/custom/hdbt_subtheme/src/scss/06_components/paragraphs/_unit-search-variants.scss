@@ -1,34 +1,42 @@
-$card_spacing: $spacing-and-half;
+.unit-search--high-school .views--unit-search .views-exposed-form,
+.unit-search--vocational-school .views--unit-search .views-exposed-form {
+  @include breakpoint($breakpoint-m) {
+    align-items: flex-end;
+    column-gap: $spacing-and-half;
+    display: grid;
+    grid-template-areas:
+    'filter filter filter'
+    'submit . .';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    row-gap: $spacing-double;
+  }
 
-.unit-search--high-school .views--unit-search,
-.unit-search--vocational-school .views--unit-search {
-  .views-exposed-form {
+  .form-item {
+    margin-bottom: $spacing-double;
+
     @include breakpoint($breakpoint-m) {
-      margin-left: -$spacing-and-half;
+      margin-bottom: 0;
+      width: 100%;
     }
+  }
 
-    .form-item,
-    .form-actions {
-      margin-bottom: $spacing-double;
+  .form-actions {
+    grid-area: submit;
+    width: 100%;
+  }
 
-      @include breakpoint($breakpoint-m) {
-        margin-bottom: 0;
-        padding-left: $spacing-and-half;
-        width: 25%;
-      }
-    }
+  .form-submit {
+    margin-top: 0;
+    max-width: 280px; // Max-width for button from hds/designs.
+    min-width: 44px; // Min-width for button from hds/designs.
+    width: 100%;
+  }
 
-    .form-actions .form-submit {
-      @include breakpoint($breakpoint-m) {
-        margin-left: 0;
-      }
-    }
-
-    label {
-      display: block;
-      font-weight: 500;
-      margin-bottom: $spacing-quarter;
-    }
+  label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: $spacing-quarter;
   }
 }
 
@@ -52,10 +60,6 @@ $card_spacing: $spacing-and-half;
       // Sort by distance to an address
       &:first-child {
         margin-top: 0;
-        @include breakpoint($breakpoint-m) {
-          margin-right: 30%;
-          width: 70%;
-        }
       }
     }
   }
@@ -71,6 +75,7 @@ $card_spacing: $spacing-and-half;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+
     // Compensate the checkboxes height so that it matches the select height.
     @include breakpoint($breakpoint-m) {
       margin-bottom: $spacing;
@@ -86,13 +91,15 @@ $card_spacing: $spacing-and-half;
 
   // Submit button
   .form-actions {
-    margin-top: $spacing-and-half;
+    margin-top: $spacing;
+    width: 100%;
 
-    // The submit button needs to be next to the sort by distance element in the designs.
-    @include breakpoint($breakpoint-m) {
-      position: absolute;
-      right: 0;
-      top: 4px; // There is 4px gap since the element is slightly shorter than the sort by distance element.
+    .form-submit {
+      display: inline-flex;
+      margin-top: $spacing;
+      max-width: 280px; // Max-width for button from hds/designs.
+      min-width: 44px; // Min-width for button from hds/designs.
+      width: 100%;
     }
   }
 }
@@ -111,29 +118,27 @@ $card_spacing: $spacing-and-half;
 
 // If there is sidebar on the basic page and the high school search is on the
 // upper content of the site the filters can't fit so they need to be adjusted.
-.has-sidebar .components--upper .unit-search--high-school .views--unit-search {
-  .views-exposed-form {
+.has-sidebar .components--upper .unit-search--high-school .views--unit-search .views-exposed-form {
+  @include breakpoint($breakpoint-l) {
+    margin-left: 0;
+  }
+
+  @include breakpoint($breakpoint-xl) {
+    margin-left: -$spacing-and-half;
+  }
+
+  .form-item,
+  .form-actions {
     @include breakpoint($breakpoint-l) {
-      margin-left: 0;
+      margin-bottom: $spacing-double;
+      padding-left: 0;
+      width: 100%;
     }
 
     @include breakpoint($breakpoint-xl) {
-      margin-left: -$spacing-and-half;
-    }
-
-    .form-item,
-    .form-actions {
-      @include breakpoint($breakpoint-l) {
-        margin-bottom: $spacing-double;
-        padding-left: 0;
-        width: 100%;
-      }
-
-      @include breakpoint($breakpoint-xl) {
-        margin-bottom: 0;
-        padding-left: $spacing-and-half;
-        width: 25%;
-      }
+      margin-bottom: 0;
+      padding-left: $spacing-and-half;
+      width: 25%;
     }
   }
 }
