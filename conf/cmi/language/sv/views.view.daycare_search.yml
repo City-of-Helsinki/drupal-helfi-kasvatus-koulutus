@@ -29,9 +29,6 @@ display:
                 title: 'Språkbad finska-svenska'
               5:
                 title: Klubbar
-          expose:
-            description: ''
-            placeholder: ''
       header:
         area_address_search_info:
           failed:
