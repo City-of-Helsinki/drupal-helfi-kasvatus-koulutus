@@ -2664,10 +2664,6 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "Greg Boggs",
-                    "homepage": "https://www.drupal.org/user/153069"
-                },
-                {
                     "name": "hmartens",
                     "homepage": "https://www.drupal.org/user/622826"
                 },
@@ -3985,16 +3981,16 @@
         },
         {
             "name": "drupal/hdbt",
-            "version": "6.4.4",
+            "version": "6.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "9e2324b27d7580c59cf0fc976cf4e6bf2fec2d46"
+                "reference": "1728bc4ce9cbb7284f0a7e99617b69242c541345"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/9e2324b27d7580c59cf0fc976cf4e6bf2fec2d46",
-                "reference": "9e2324b27d7580c59cf0fc976cf4e6bf2fec2d46",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/1728bc4ce9cbb7284f0a7e99617b69242c541345",
+                "reference": "1728bc4ce9cbb7284f0a7e99617b69242c541345",
                 "shasum": ""
             },
             "require": {
@@ -4012,10 +4008,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.4.4",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.4.5",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2024-01-23T08:20:48+00:00"
+            "time": "2024-01-26T09:23:39+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
@@ -4460,16 +4456,16 @@
         },
         {
             "name": "drupal/helfi_tpr",
-            "version": "2.3.4",
+            "version": "2.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr.git",
-                "reference": "2847282524718049218005a96bab1938dd760aef"
+                "reference": "c14c8634c913125faf96d217d11bac4a456049a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/2847282524718049218005a96bab1938dd760aef",
-                "reference": "2847282524718049218005a96bab1938dd760aef",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/c14c8634c913125faf96d217d11bac4a456049a8",
+                "reference": "c14c8634c913125faf96d217d11bac4a456049a8",
                 "shasum": ""
             },
             "require": {
@@ -4495,23 +4491,23 @@
             ],
             "description": "TPR integration",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/2.3.4",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/2.3.5",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/issues"
             },
-            "time": "2024-01-16T13:52:58+00:00"
+            "time": "2024-01-26T07:55:57+00:00"
         },
         {
             "name": "drupal/helfi_tunnistamo",
-            "version": "3.0.3",
+            "version": "3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-tunnistamo.git",
-                "reference": "95844e13d22af91f3ae4d69f9e55edb63215943a"
+                "reference": "07c25d907de18d26f203463203129bd67608526d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tunnistamo/zipball/95844e13d22af91f3ae4d69f9e55edb63215943a",
-                "reference": "95844e13d22af91f3ae4d69f9e55edb63215943a",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tunnistamo/zipball/07c25d907de18d26f203463203129bd67608526d",
+                "reference": "07c25d907de18d26f203463203129bd67608526d",
                 "shasum": ""
             },
             "require": {
@@ -4528,10 +4524,10 @@
             ],
             "description": "Tunnistamo integration",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tunnistamo/tree/3.0.3",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tunnistamo/tree/3.0.4",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-tunnistamo/issues"
             },
-            "time": "2024-01-09T07:24:18+00:00"
+            "time": "2024-01-25T07:06:50+00:00"
         },
         {
             "name": "drupal/image_style_quality",
@@ -4648,17 +4644,17 @@
         },
         {
             "name": "drupal/imagemagick",
-            "version": "3.6.0",
+            "version": "3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/imagemagick.git",
-                "reference": "8.x-3.6"
+                "reference": "8.x-3.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/imagemagick-8.x-3.6.zip",
-                "reference": "8.x-3.6",
-                "shasum": "b4efc5ff6ab5469475f0ef7242eba0c7eda1c75c"
+                "url": "https://ftp.drupal.org/files/projects/imagemagick-8.x-3.7.zip",
+                "reference": "8.x-3.7",
+                "shasum": "2698db0ccc4a76d44ebbbfcabe9e70d25ae3db9b"
             },
             "require": {
                 "drupal/core": "^10.1",
@@ -4668,8 +4664,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.6",
-                    "datestamp": "1703241142",
+                    "version": "8.x-3.7",
+                    "datestamp": "1706096705",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
