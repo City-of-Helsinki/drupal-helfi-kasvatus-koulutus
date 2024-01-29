@@ -13,6 +13,7 @@ use Drupal\Core\Session\AccountInterface;
 use Drupal\helfi_kasko_content\UnitCategoryUtility;
 use Drupal\helfi_platform_config\DTO\ParagraphTypeCollection;
 use Drupal\paragraphs\ParagraphInterface;
+use Drupal\user\UserInterface;
 
 /**
  * Implements hook_ENTITY_TYPE_access().
@@ -335,4 +336,20 @@ function helfi_kasko_content_views_data_alter(array &$data) {
       'id' => 'study_programme_type_filter',
     ],
   ];
+}
+
+/**
+ * Implements hook_openid_connect_pre_authorize().
+ */
+function helfi_kasko_content_openid_connect_pre_authorize(UserInterface|bool $account, array $context) : bool {
+  $pluginId = $context['plugin_id'];
+  $userinfo = $context['userinfo'] ?? NULL;
+  $email = $userinfo['email'] ?? NULL;
+
+  return match ($pluginId) {
+    // @todo remove when edu.hel.fi clients work with tunnistamo.
+    'tunnistamo' => $email === helfi_tunnistamo_create_email($userinfo),
+    'keycloak' => $email !== helfi_tunnistamo_create_email($userinfo),
+    default => TRUE,
+  };
 }
