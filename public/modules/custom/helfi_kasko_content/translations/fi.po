@@ -177,3 +177,6 @@ msgstr "B2-kieli"
 msgctxt "TPR Ontologyword details schools"
 msgid "Language offering"
 msgstr "Kielitarjonta"
+
+msgid "Only edu.hel.fi users are allowed to log in with this method"
+msgstr "Vain edu.hel.fi käyttäjät voivat kirjautua tällä kirjautumistavalla."
