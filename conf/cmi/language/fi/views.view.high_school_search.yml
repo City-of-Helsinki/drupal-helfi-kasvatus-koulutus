@@ -6,11 +6,11 @@ display:
       empty:
         area:
           content:
-            value: "<p>Ei tuloksia</p>\r\n"
+            value: '<p>Ei tuloksia</p>'
             format: full_html
       exposed_form:
         options:
-          submit_button: Käytä
+          submit_button: Etsi
           reset_button_label: Palauta
           exposed_sorts_label: Järjestä
           sort_asc_label: Nouseva
@@ -29,6 +29,16 @@ display:
                 advanced:
                   rewrite:
                     filter_rewrite_values: '- Kaikki - | Kaikki'
+      pager:
+        options:
+          tags:
+            next: Seuraava
+            previous: Edellinen
+            first: Ensimmäinen
+            last: Viimeinen
+          expose:
+            items_per_page_label: 'Kohteita per sivu'
+            items_per_page_options_all_label: '- Kaikki -'
   block:
     display_title: Lohko
     display_options:
