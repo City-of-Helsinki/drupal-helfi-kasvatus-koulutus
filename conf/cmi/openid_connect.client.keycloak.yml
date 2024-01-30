@@ -15,7 +15,7 @@ settings:
   iss_allowed_domains: ''
   is_production: 0
   auto_login: 0
-  environment_url: 'https://tunnistamo.test.hel.ninja/openid'
+  environment_url: ''
   client_scopes: 'openid,email'
   client_roles: {  }
 
