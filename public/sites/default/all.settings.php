@@ -36,3 +36,6 @@ $config['react_search.settings']['sentry_dsn_react'] = getenv('SENTRY_DSN_REACT'
 // @todo remove separate client once edu.hel.fi users work with keycloak.
 $config['openid_connect.client.keycloak']['settings']['client_id'] = getenv('KEYCLOAK_CLIENT_ID');
 $config['openid_connect.client.keycloak']['settings']['client_secret'] = getenv('KEYCLOAK_CLIENT_SECRET');
+if ($keycloak_environment_url = getenv('KEYCLOAK_ENVIRONMENT_URL')) {
+  $config['openid_connect.client.keycloak']['settings']['environment_url'] = $keycloak_environment_url;
+}
