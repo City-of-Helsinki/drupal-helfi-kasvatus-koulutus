@@ -1,0 +1,11 @@
+uuid: e6488cfa-a137-4c20-aba9-94297b9307fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+id: tpr_unit.after_school_activity_card
+label: 'After-school activity card'
+description: ''
+targetEntityType: tpr_unit
+cache: true

@@ -30,6 +30,9 @@ display:
           expose:
             label: Adress
             description: 'Ange gatunamnet och husnumret'
+        tpr_provided_languages:
+          expose:
+            label: 'Välj verksamhetsspråk'
       header:
         area_address_search_info:
           succeed:

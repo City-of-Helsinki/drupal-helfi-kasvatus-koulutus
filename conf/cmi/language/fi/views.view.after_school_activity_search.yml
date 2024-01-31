@@ -33,6 +33,9 @@ display:
           expose:
             label: Osoite
             description: 'Kirjoita kadunnimi ja talonumero'
+        tpr_provided_languages:
+          expose:
+            label: 'Valitse toimintakieli'
       header:
         area_address_search_info:
           succeed:
