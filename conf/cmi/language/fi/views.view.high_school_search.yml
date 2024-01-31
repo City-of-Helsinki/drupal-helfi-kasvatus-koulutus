@@ -29,16 +29,6 @@ display:
                 advanced:
                   rewrite:
                     filter_rewrite_values: '- Kaikki - | Kaikki'
-      pager:
-        options:
-          tags:
-            next: Seuraava
-            previous: Edellinen
-            first: Ensimmäinen
-            last: Viimeinen
-          expose:
-            items_per_page_label: 'Kohteita per sivu'
-            items_per_page_options_all_label: '- Kaikki -'
   block:
     display_title: Lohko
     display_options:
