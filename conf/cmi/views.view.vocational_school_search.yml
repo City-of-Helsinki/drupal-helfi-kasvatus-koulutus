@@ -476,6 +476,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - user
         - user.permissions
       tags: {  }
   block:
@@ -492,6 +493,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - user
         - user.permissions
       tags: {  }
   entity_reference:
