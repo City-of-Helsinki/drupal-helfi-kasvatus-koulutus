@@ -1,4 +1,4 @@
-uuid: 9ffec99b-43ed-43f9-9cab-df2808a404a3
+uuid: 734bd97e-6964-42d0-80ad-2b641885ae6b
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - helfi_tunnistamo
 _core:
   default_config_hash: nGpk9fP8YMhP_c3Sz_aCQFVhAJyN6eJI6E4Qpnqna-A
-id: tunnistamo
-label: Teacher sign in
+id: keycloak
+label: Tunnistamo
 plugin: tunnistamo
 settings:
   client_id: placeholder
@@ -15,7 +15,7 @@ settings:
   iss_allowed_domains: ''
   is_production: 0
   auto_login: 0
-  environment_url: 'https://tunnistamo.test.hel.ninja/openid'
+  environment_url: ''
   client_scopes: 'openid,email'
   client_roles: {  }
-  debug_log: false
+

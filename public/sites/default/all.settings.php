@@ -27,6 +27,13 @@ $config['elastic_proxy.settings']['elastic_proxy_url'] = getenv('ELASTIC_PROXY_U
 // Sentry DSN for React.
 $config['react_search.settings']['sentry_dsn_react'] = getenv('SENTRY_DSN_REACT');
 
+// @todo remove separate client once edu.hel.fi users work with keycloak (UHF-9531).
+$config['openid_connect.client.keycloak']['settings']['client_id'] = getenv('KEYCLOAK_CLIENT_ID');
+$config['openid_connect.client.keycloak']['settings']['client_secret'] = getenv('KEYCLOAK_CLIENT_SECRET');
+if ($keycloak_environment_url = getenv('KEYCLOAK_ENVIRONMENT_URL')) {
+  $config['openid_connect.client.keycloak']['settings']['environment_url'] = $keycloak_environment_url;
+}
+
 $additionalEnvVars = [
   'AZURE_BLOB_STORAGE_SAS_TOKEN|BLOBSTORAGE_SAS_TOKEN',
   'AZURE_BLOB_STORAGE_NAME',
@@ -50,7 +57,12 @@ $additionalEnvVars = [
   'ELASTIC_USER',
   'ELASTIC_PASSWORD',
   'SENTRY_DSN_REACT',
+  // @todo remove separate client once edu.hel.fi users work with keycloak (UHF-9531).
+  'KEYCLOAK_CLIENT_ID',
+  'KEYCLOAK_CLIENT_SECRET',
+  'KEYCLOAK_ENVIRONMENT_URL',
 ];
+
 foreach ($additionalEnvVars as $var) {
   $preflight_checks['environmentVariables'][] = $var;
 }
