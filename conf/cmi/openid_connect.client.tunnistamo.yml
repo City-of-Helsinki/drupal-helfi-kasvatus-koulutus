@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: nGpk9fP8YMhP_c3Sz_aCQFVhAJyN6eJI6E4Qpnqna-A
 id: tunnistamo
-label: edu.hel.fi
+label: Teacher sign in
 plugin: tunnistamo
 settings:
   client_id: placeholder

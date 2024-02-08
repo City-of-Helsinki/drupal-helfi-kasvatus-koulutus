@@ -8,6 +8,7 @@
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
@@ -360,8 +361,31 @@ function helfi_kasko_content_openid_connect_pre_authorize(UserInterface|bool $ac
 
   if (!$allowLogin && $pluginId === 'tunnistamo') {
     \Drupal::messenger()
-      ->addError(new TranslatableMarkup("Only edu.hel.fi users are allowed to log in with this method."));
+      ->addError(new TranslatableMarkup("Only teachers are allowed to log in with this method."));
   }
 
   return $allowLogin;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function helfi_kasko_content_form_openid_connect_login_form_alter(&$form, FormStateInterface $form_state) : void {
+  // UHF-9531: Add help text to teacher login button.
+  // @todo remove once separate login is no longer needed for edu users.
+  if (isset($form['openid_connect_client_tunnistamo_login'])) {
+    $build['button'] = $form['openid_connect_client_tunnistamo_login'];
+    $build['button']['#value'] = new TranslatableMarkup('Teacher sign in', [], [
+      'context' => 'Kasko teacher sign in',
+    ]);
+    $build['help'] = [
+      '#prefix' => '<p>',
+      '#suffix' => '</p>',
+      '#plain_text' => new TranslatableMarkup('Sign in like before using your Helsinki1 credentials.', [], [
+        'context' => 'Kasko teacher sign in',
+      ]),
+    ];
+
+    $form['openid_connect_client_tunnistamo_login'] = $build;
+  }
 }
