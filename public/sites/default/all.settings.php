@@ -57,6 +57,7 @@ $additionalEnvVars = [
   'ELASTIC_USER',
   'ELASTIC_PASSWORD',
   'SENTRY_DSN_REACT',
+  // @todo remove separate client once edu.hel.fi users work with keycloak (UHF-9531).
   'KEYCLOAK_CLIENT_ID',
   'KEYCLOAK_CLIENT_SECRET',
   'KEYCLOAK_ENVIRONMENT_URL',
