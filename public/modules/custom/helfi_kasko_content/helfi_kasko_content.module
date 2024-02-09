@@ -341,33 +341,6 @@ function helfi_kasko_content_views_data_alter(array &$data) {
 }
 
 /**
- * Implements hook_openid_connect_pre_authorize().
- */
-function helfi_kasko_content_openid_connect_pre_authorize(UserInterface|bool $account, array $context) : bool {
-  $pluginId = $context['plugin_id'];
-  $userinfo = $context['userinfo'] ?? NULL;
-  $email = $userinfo['email'] ?? NULL;
-
-  // Helsinki-profiili has issues with edu.hel.fi users:
-  // https://helsinkisolutionoffice.atlassian.net/browse/HP-2147.
-  // As a workaround, kasko has a separate client that still uses old
-  // Tunnistamo. This prevents non edu.hel.fi users from using tunnistamo.
-  // @todo remove when edu.hel.fi clients work with Helsinki-profiili.
-  $allowLogin = match ($pluginId) {
-    'tunnistamo' => $email === helfi_tunnistamo_create_email($userinfo),
-    'keycloak' => $email !== helfi_tunnistamo_create_email($userinfo),
-    default => TRUE,
-  };
-
-  if (!$allowLogin && $pluginId === 'tunnistamo') {
-    \Drupal::messenger()
-      ->addError(new TranslatableMarkup("Only teachers are allowed to log in with this method."));
-  }
-
-  return $allowLogin;
-}
-
-/**
  * Implements hook_form_FORM_ID_alter().
  */
 function helfi_kasko_content_form_openid_connect_login_form_alter(&$form, FormStateInterface $form_state) : void {
