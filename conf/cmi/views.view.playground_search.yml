@@ -131,7 +131,7 @@ display:
         type: full
         options:
           offset: 0
-          items_per_page: 50
+          items_per_page: 15
           total_pages: null
           id: 0
           tags:
@@ -461,6 +461,7 @@ display:
         - user
         - user.permissions
       tags:
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.after_school_activity_card'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.comprehensive_school_card'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.default'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.high_school_card'
@@ -485,6 +486,7 @@ display:
         - user
         - user.permissions
       tags:
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.after_school_activity_card'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.comprehensive_school_card'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.default'
         - 'config:core.entity_view_display.tpr_unit.tpr_unit.high_school_card'

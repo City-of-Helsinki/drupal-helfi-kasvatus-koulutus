@@ -6,11 +6,11 @@ display:
       empty:
         area:
           content:
-            value: "<p>Ei tuloksia</p>\r\n"
+            value: '<p>Ei tuloksia</p>'
             format: full_html
       exposed_form:
         options:
-          submit_button: Käytä
+          submit_button: Etsi
           reset_button_label: Palauta
           exposed_sorts_label: Järjestä
           sort_asc_label: Nouseva
