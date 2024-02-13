@@ -177,14 +177,3 @@ msgstr "B2-kieli"
 msgctxt "TPR Ontologyword details schools"
 msgid "Language offering"
 msgstr "Kielitarjonta"
-
-msgid "Only teachers are allowed to log in with this method"
-msgstr "Vain opettajat voivat kirjautua tällä kirjautumistavalla."
-
-msgctxt "Kasko teacher sign in"
-msgid "Teacher sign in"
-msgstr "Opettajien kirjautuminen"
-
-msgctxt "Kasko teacher sign in"
-msgid "Sign in like before using your Helsinki1 credentials."
-msgstr "Kirjaudu kuten ennenkin, mutta käytä opettajien omaa kirjautumispainiketta."

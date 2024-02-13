@@ -5,7 +5,7 @@
  * Helfi Group module handles customizations for the group module.
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Access\AccessResultAllowed;

@@ -177,11 +177,3 @@ msgstr "B2-språket"
 msgctxt "TPR Ontologyword details schools"
 msgid "Language offering"
 msgstr "Språkutbudet"
-
-msgctxt "Kasko teacher sign in"
-msgid "Teacher sign in"
-msgstr "Logga in (lärare)"
-
-msgctxt "Kasko teacher sign in"
-msgid "Sign in like before using your Helsinki1 credentials."
-msgstr "Logga in som förut med dina Helsinki1-uppgifter."

@@ -5,7 +5,7 @@
  * Contains installation functions for Kasko instance.
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 use Drupal\Core\Entity\EntityStorageException;
 use Drupal\helfi_kasko_content\SchoolUtility;
