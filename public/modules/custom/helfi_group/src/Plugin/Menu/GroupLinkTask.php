@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Drupal\helfi_group\Plugin\Menu;
 
@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 /**
  * Add group parameter using current node.
  */
-class GroupLinkTask extends LocalTaskDefault implements ContainerFactoryPluginInterface {
+final class GroupLinkTask extends LocalTaskDefault implements ContainerFactoryPluginInterface {
 
   /**
    * Constructs a new instance.
