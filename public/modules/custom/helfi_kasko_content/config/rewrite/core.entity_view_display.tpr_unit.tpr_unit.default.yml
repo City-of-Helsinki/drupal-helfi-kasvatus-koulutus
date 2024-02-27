@@ -1,0 +1,18 @@
+dependencies:
+  module:
+    - helfi_kasko_content
+content:
+  field_ontologyword_details:
+    type: tpr_ontologyword_details_formatter
+    label: hidden
+    settings: { }
+    third_party_settings: { }
+    weight: 28
+    region: content
+  subgroup:
+    type: tpr_connection
+    label: hidden
+    settings: { }
+    third_party_settings: { }
+    weight: 32
+    region: content
