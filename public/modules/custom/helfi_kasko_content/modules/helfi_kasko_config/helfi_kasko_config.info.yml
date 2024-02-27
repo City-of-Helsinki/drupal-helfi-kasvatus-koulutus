@@ -1,0 +1,7 @@
+name: 'Helfi KASKO Config'
+type: module
+core_version_requirement: ^9 || ^10
+dependencies:
+  - helfi_kasko_content:helfi_kasko_content
+  - helfi_platform_config:helfi_tpr_config
+  - helfi_platform_config:helfi_platform_config

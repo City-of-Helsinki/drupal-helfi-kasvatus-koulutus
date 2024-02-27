@@ -1,0 +1,24 @@
+dependencies:
+  module:
+    - select2
+content:
+  field_ontologyword_details:
+    type: readonly_field_widget
+    weight: 40
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: { }
+      show_description: false
+    third_party_settings: { }
+  subgroup:
+    type: readonly_field_widget
+    weight: 40
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: { }
+      show_description: false
+    third_party_settings: { }

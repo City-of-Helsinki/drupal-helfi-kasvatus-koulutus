@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Contains alterations for config.
+ */
+
+declare(strict_types=1);
+
+use Drupal\config_rewrite\ConfigRewriterInterface;
+
+/**
+ * Implements hook_rewrite_config_update().
+ */
+function helfi_kasko_config_rewrite_config_update(string $module, ConfigRewriterInterface $configRewriter): void {
+  // UHF-9491: Ensure custom config is not rewritten:
+  if ($module === 'helfi_tpr_config') {
+    // Rewrite helfi_tpr_config configuration.
+    $configRewriter->rewriteModuleConfig('helfi_kasko_config');
+  }
+}
