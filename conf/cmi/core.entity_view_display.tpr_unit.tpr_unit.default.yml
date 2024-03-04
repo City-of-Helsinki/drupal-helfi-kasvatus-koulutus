@@ -17,13 +17,13 @@ dependencies:
     - address
     - entity_reference_revisions
     - helfi_address_search
-    - helfi_kasko_content
     - helfi_tpr
     - imagecache_external
     - link
     - metatag
     - telephone
     - text
+    - helfi_kasko_content
 _core:
   default_config_hash: SoKM8cPSwNeMsP8ZRG0b8B8n-e1Uy9yoMmPk018vmoY
 id: tpr_unit.tpr_unit.default
@@ -140,14 +140,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 19
-    region: content
-  field_ontologyword_details:
-    type: tpr_ontologyword_details_formatter
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 28
+    weight: 17
     region: content
   highlights:
     type: tpr_connection
@@ -266,14 +259,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 18
-    region: content
-  subgroup:
-    type: tpr_connection
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 32
+    weight: 16
     region: content
   toc_enabled:
     type: boolean
@@ -311,11 +297,26 @@ content:
     third_party_settings: {  }
     weight: 12
     region: content
+  field_ontologyword_details:
+    type: tpr_ontologyword_details_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  subgroup:
+    type: tpr_connection
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 32
+    region: content
 hidden:
   created: true
   field_categories: true
   field_districts: true
   field_hs_front_page: true
+  field_ontologyword_details: true
   field_study_field: true
   field_unit_type: true
   hide_description: true
@@ -323,3 +324,4 @@ hidden:
   search_api_excerpt: true
   show_www: true
   streetview_entrance_url: true
+  subgroup: true
