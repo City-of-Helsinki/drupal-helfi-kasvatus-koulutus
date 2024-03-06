@@ -132,7 +132,8 @@ function hdbt_subtheme_form_views_exposed_form_alter(&$form, $form_state) {
     $form['actions']['submit']['#value'] = $paragraph
       ->get('field_hs_search_meta_button')
       ->value;
-  } else {
+  }
+  else {
     $form['actions']['submit']['#value'] = t('Search', [], ['context' => 'High school search']);
   }
 }
