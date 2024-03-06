@@ -4,11 +4,6 @@
     align-items: flex-end;
     column-gap: $spacing-and-half;
     display: grid;
-    grid-template-areas:
-    'filter filter filter'
-    'submit . .';
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
     row-gap: $spacing-double;
   }
 
@@ -37,6 +32,27 @@
     display: block;
     font-weight: 500;
     margin-bottom: $spacing-quarter;
+  }
+}
+
+.unit-search--high-school .views--unit-search .views-exposed-form {
+  @include breakpoint($breakpoint-m) {
+    grid-template-areas:
+    'filter filter'
+    'filter filter'
+    'submit .';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+}
+
+.unit-search--vocational-school .views--unit-search .views-exposed-form {
+  @include breakpoint($breakpoint-m) {
+    grid-template-areas:
+    'filter'
+    'submit';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
   }
 }
 

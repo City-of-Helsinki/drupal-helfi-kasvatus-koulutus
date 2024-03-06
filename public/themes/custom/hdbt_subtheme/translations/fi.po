@@ -2,6 +2,10 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
+msgctxt "High school search"
+msgid "Search"
+msgstr "Etsi"
+
 msgctxt "High school search count"
 msgid "general upper secondary school"
 msgid_plural "general upper secondary schools"
