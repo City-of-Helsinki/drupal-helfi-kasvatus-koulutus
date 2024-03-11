@@ -128,7 +128,7 @@ function hdbt_subtheme_form_views_exposed_form_alter(&$form, $form_state) {
     return;
   }
 
-  if ($paragraph->hasField('field_hs_search_meta_button') && $paragraph->get('field_hs_search_meta_button')->value) {
+  if (!$paragraph->get('field_hs_search_meta_button')->isEmpty()) {
     $form['actions']['submit']['#value'] = $paragraph
       ->get('field_hs_search_meta_button')
       ->value;
