@@ -177,6 +177,16 @@ content:
       sidebar: false
       use_details: true
     third_party_settings: {  }
+  field_ontologyword_details:
+    type: readonly_field_widget
+    weight: 40
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
   field_unit_type:
     type: entity_reference_autocomplete
     weight: 30
@@ -374,6 +384,16 @@ content:
       formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
+  subgroup:
+    type: readonly_field_widget
+    weight: 40
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
   toc_enabled:
     type: boolean_checkbox
     weight: 3
@@ -415,26 +435,6 @@ content:
   www:
     type: readonly_field_widget
     weight: 13
-    region: content
-    settings:
-      label: above
-      formatter_type: null
-      formatter_settings: {  }
-      show_description: false
-    third_party_settings: {  }
-  field_ontologyword_details:
-    type: readonly_field_widget
-    weight: 40
-    region: content
-    settings:
-      label: above
-      formatter_type: null
-      formatter_settings: {  }
-      show_description: false
-    third_party_settings: {  }
-  subgroup:
-    type: readonly_field_widget
-    weight: 40
     region: content
     settings:
       label: above
