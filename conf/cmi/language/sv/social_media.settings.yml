@@ -6,7 +6,7 @@ social_media:
   facebook_msg:
     attributes: "target|_blank\r\nclass|facebook-msg\r\nrel|noopener noreferrer"
   linkedin:
-    api_url: 'http://www.linkedin.com/shareArticle?mini=true&url=[current-page:url]&title=[current-page:title]&source=[current-page:url]'
+    api_url: 'https://www.linkedin.com/sharing/share-offsite/?url=[current-page:url]'
     text: 'Share in Linkedin'
     attributes: "target|_blank\r\nclass|linkedin"
   twitter:
