@@ -21,8 +21,8 @@ dependencies:
     - paragraphs
     - path
     - readonly_field_widget
-    - select2
     - text
+    - select2
 _core:
   default_config_hash: ilRrdsHOQ6StmQoz8EXvQCOoYTo8L_o2ZG8gNzEbtZM
 id: tpr_unit.tpr_unit.default
@@ -447,7 +447,9 @@ hidden:
   field_categories: true
   field_districts: true
   field_hs_front_page: true
+  field_ontologyword_details: true
   field_study_field: true
   hide_description: true
   ontologyword_ids: true
   show_www: true
+  subgroup: true

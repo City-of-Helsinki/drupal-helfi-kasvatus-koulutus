@@ -4,11 +4,7 @@
     align-items: flex-end;
     column-gap: $spacing-and-half;
     display: grid;
-    grid-template-areas:
-    'filter filter filter'
-    'submit . .';
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
     row-gap: $spacing-double;
   }
 
@@ -27,7 +23,6 @@
   }
 
   .form-submit {
-    margin-top: 0;
     max-width: 280px; // Max-width for button from hds/designs.
     min-width: 44px; // Min-width for button from hds/designs.
     width: 100%;
@@ -37,6 +32,25 @@
     display: block;
     font-weight: 500;
     margin-bottom: $spacing-quarter;
+  }
+}
+
+.unit-search--high-school .views--unit-search .views-exposed-form {
+  @include breakpoint($breakpoint-m) {
+    grid-template-areas:
+    'filter filter'
+    'filter filter'
+    'submit .';
+    grid-template-rows: auto auto auto;
+  }
+}
+
+.unit-search--vocational-school .views--unit-search .views-exposed-form {
+  @include breakpoint($breakpoint-m) {
+    grid-template-areas:
+    'filter .'
+    'submit .';
+    grid-template-rows: auto auto;
   }
 }
 
