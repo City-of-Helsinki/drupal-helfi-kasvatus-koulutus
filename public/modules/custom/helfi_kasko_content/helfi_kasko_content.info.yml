@@ -9,7 +9,9 @@ dependencies:
   - drupal:language
   - drupal:taxonomy
   - drupal:user
+  - drupal:path
   - elasticsearch_connector:elasticsearch_connector
+  - helfi_platform_config:hdbt_admin_tools
   - helfi_platform_config:helfi_react_search
   - helfi_tpr:helfi_tpr
   - override_node_options:override_node_options
