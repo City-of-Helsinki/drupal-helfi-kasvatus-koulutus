@@ -1,5 +1,19 @@
+config_rewrite:
+  replace: [
+    'dependencies.module',
+    'hidden'
+  ]
 dependencies:
   module:
+    - allowed_formats
+    - hdbt_admin_tools
+    - helfi_tpr
+    - media_library
+    - metatag
+    - paragraphs
+    - path
+    - readonly_field_widget
+    - text
     - select2
 content:
   field_ontologyword_details:
@@ -9,9 +23,9 @@ content:
     settings:
       label: above
       formatter_type: null
-      formatter_settings: { }
+      formatter_settings: {  }
       show_description: false
-    third_party_settings: { }
+    third_party_settings: {  }
   subgroup:
     type: readonly_field_widget
     weight: 40
@@ -19,6 +33,15 @@ content:
     settings:
       label: above
       formatter_type: null
-      formatter_settings: { }
+      formatter_settings: {  }
       show_description: false
-    third_party_settings: { }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_categories: true
+  field_districts: true
+  field_hs_front_page: true
+  field_study_field: true
+  hide_description: true
+  ontologyword_ids: true
+  show_www: true
