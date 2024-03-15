@@ -29,9 +29,9 @@ display:
       exposed_form:
         options:
           submit_button: Filtrera
-          exposed_sorts_label: Sort
-          sort_asc_label: Ascending
-          sort_desc_label: Descending
+          exposed_sorts_label: 'Sortera efter'
+          sort_asc_label: Stigande
+          sort_desc_label: Fallande
       filters:
         name:
           expose:
