@@ -28,7 +28,7 @@ content:
     third_party_settings: { }
   field_hs_front_page:
     type: entity_reference_autocomplete
-    weight: 29
+    weight: 31
     region: content
     settings:
       match_operator: CONTAINS
