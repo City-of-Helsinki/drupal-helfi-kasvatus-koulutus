@@ -1,0 +1,7 @@
+config_rewrite:
+  replace: ['dependencies.module']
+dependencies:
+  module:
+    - menu_ui
+    - override_node_options
+    - scheduler

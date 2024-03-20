@@ -1,5 +1,19 @@
+config_rewrite:
+  replace: [
+    'dependencies.module',
+    'hidden'
+  ]
 dependencies:
   module:
+    - address
+    - entity_reference_revisions
+    - helfi_address_search
+    - helfi_tpr
+    - imagecache_external
+    - link
+    - metatag
+    - telephone
+    - text
     - helfi_kasko_content
 content:
   field_ontologyword_details:
@@ -16,3 +30,15 @@ content:
     third_party_settings: { }
     weight: 32
     region: content
+hidden:
+  created: true
+  field_categories: true
+  field_districts: true
+  field_hs_front_page: true
+  field_study_field: true
+  field_unit_type: true
+  hide_description: true
+  langcode: true
+  search_api_excerpt: true
+  show_www: true
+  streetview_entrance_url: true

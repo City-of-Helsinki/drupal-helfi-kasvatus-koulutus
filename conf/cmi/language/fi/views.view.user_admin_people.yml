@@ -21,6 +21,8 @@ display:
           label: 'Käyttäjä jo'
         access:
           label: 'Viimeksi paikalla'
+          settings:
+            past_format: '@interval sitten'
         operations:
           label: Toimenpiteet
         mail:
@@ -38,7 +40,7 @@ display:
             offset_label: Offset
       exposed_form:
         options:
-          submit_button: Suodatin
+          submit_button: Suodata
           reset_button_label: Palauta
           exposed_sorts_label: Lajittele
           sort_asc_label: Nousevasti
