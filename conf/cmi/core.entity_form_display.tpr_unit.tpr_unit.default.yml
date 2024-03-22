@@ -24,7 +24,7 @@ dependencies:
     - text
     - select2
 _core:
-  default_config_hash: ilRrdsHOQ6StmQoz8EXvQCOoYTo8L_o2ZG8gNzEbtZM
+  default_config_hash: u4cfdWUfiLgxWmusemjNf4p9sa_VCrlVLyYe8slNTEk
 id: tpr_unit.tpr_unit.default
 targetEntityType: tpr_unit
 bundle: tpr_unit
@@ -422,6 +422,26 @@ content:
       formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
+  field_categories:
+    type: readonly_field_widget
+    weight: 39
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_hs_front_page:
+    type: entity_reference_autocomplete
+    weight: 31
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_ontologyword_details:
     type: readonly_field_widget
     weight: 40
@@ -431,6 +451,23 @@ content:
       formatter_type: null
       formatter_settings: {  }
       show_description: false
+    third_party_settings: {  }
+  field_study_field:
+    type: select2_entity_reference
+    weight: 31
+    region: content
+    settings:
+      width: 100%
+      autocomplete: false
+      match_operator: CONTAINS
+      match_limit: 10
+    third_party_settings: {  }
+  hide_description:
+    type: boolean_checkbox
+    weight: 18
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   subgroup:
     type: readonly_field_widget
@@ -444,10 +481,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_categories: true
   field_districts: true
-  field_hs_front_page: true
-  field_study_field: true
-  hide_description: true
   ontologyword_ids: true
-  show_www: true
