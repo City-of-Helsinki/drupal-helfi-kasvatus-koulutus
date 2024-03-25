@@ -1,4 +1,4 @@
-uuid: eedddf81-2cab-4187-bd59-223d65f930f7
+uuid: 34834b6c-3c8f-4a16-b6e2-084caae33817
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ _core:
 id: news_item_fi
 label: 'News item | FI'
 type: 'canonical_entities:node'
-pattern: 'uutiset/[node:short-title]'
+pattern: '[group-news-parent:path]/[node:short-title]'
 selection_criteria:
   6bd3a713-4f32-4ea3-84f2-bd3c0faae75e:
     id: 'entity_bundle:node'
