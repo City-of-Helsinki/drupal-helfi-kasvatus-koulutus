@@ -60,7 +60,7 @@ display:
             label: Otsikko
       empty:
         area_text_custom:
-          content: 'Lukittuja toimipisteitä ei ole.'
+          content: 'Lukittua sisältöä ei ole.'
   page_1:
     display_title: Sivu
     display_options:
