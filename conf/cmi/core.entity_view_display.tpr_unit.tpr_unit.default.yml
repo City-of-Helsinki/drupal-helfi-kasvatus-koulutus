@@ -25,7 +25,7 @@ dependencies:
     - text
     - helfi_kasko_content
 _core:
-  default_config_hash: SoKM8cPSwNeMsP8ZRG0b8B8n-e1Uy9yoMmPk018vmoY
+  default_config_hash: 8GmiJoVZmgbZpZ9jGuNv_AQg3EgThOq06AsznzuWOGk
 id: tpr_unit.tpr_unit.default
 targetEntityType: tpr_unit
 bundle: tpr_unit
@@ -103,10 +103,9 @@ content:
     weight: 2
     region: content
   email:
-    type: string
+    type: email_mailto
     label: hidden
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
     weight: 8
     region: content
@@ -141,13 +140,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 17
-    region: content
-  field_ontologyword_details:
-    type: tpr_ontologyword_details_formatter
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 28
     region: content
   highlights:
     type: tpr_connection
@@ -268,13 +260,6 @@ content:
     third_party_settings: {  }
     weight: 16
     region: content
-  subgroup:
-    type: tpr_connection
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 32
-    region: content
   toc_enabled:
     type: boolean
     label: hidden
@@ -311,12 +296,25 @@ content:
     third_party_settings: {  }
     weight: 12
     region: content
+  field_ontologyword_details:
+    type: tpr_ontologyword_details_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  subgroup:
+    type: tpr_connection
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 32
+    region: content
 hidden:
   created: true
   field_categories: true
   field_districts: true
   field_hs_front_page: true
-  field_ontologyword_details: true
   field_study_field: true
   field_unit_type: true
   hide_description: true
@@ -324,4 +322,3 @@ hidden:
   search_api_excerpt: true
   show_www: true
   streetview_entrance_url: true
-  subgroup: true
