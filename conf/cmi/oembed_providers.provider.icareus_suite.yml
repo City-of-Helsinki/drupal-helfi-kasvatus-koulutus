@@ -2,6 +2,8 @@ uuid: de159bff-a942-49f6-bf36-60826bc6c2e0
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: xqAoab3RpoZ36mhZClLPbQFg4fppDaQIS-spV_33m44
 id: icareus_suite
 label: 'Icareus Suite'
 provider_url: 'https://www.helsinkikanava.fi'
