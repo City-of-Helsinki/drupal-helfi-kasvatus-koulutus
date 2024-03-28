@@ -107,7 +107,7 @@ final class OntologyWordDetailsFormatter extends FormatterBase {
           if (($ontologywordId >= 1 && $ontologywordId <= 3)) {
             $ontologywordIds[] = $detailItem->get('clarification')->getString();
           }
-          else {
+          elseif ($elementKeyLabel) {
             $emphasizedEducationItems[$elementKeyLabel['key']][] = $this->unitOntologyWordDetailsUtility->findLanguageEducationbyId($ontologywordId);
           }
         }
@@ -117,7 +117,7 @@ final class OntologyWordDetailsFormatter extends FormatterBase {
         $emphasizedEducationItems[$elementKeyLabel['key']] = $ontologywordIds;
       }
 
-      if (!empty($emphasizedEducationItems)) {
+      if (!empty($emphasizedEducationItems) && !empty($elementKeyLabel)) {
         $elements[$elementKeyLabel['key']] = [
           '#label' => $elementKeyLabel['label'],
           '#items' => $emphasizedEducationItems[$elementKeyLabel['key']],
