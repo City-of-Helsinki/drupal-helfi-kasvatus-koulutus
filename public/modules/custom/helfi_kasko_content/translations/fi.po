@@ -59,6 +59,10 @@ msgid "Weighted curriculum education starting in 7th grade"
 msgstr "7. luokalta alkava painotettu opetus"
 
 msgctxt "TPR Ontologyword details schools"
+msgid "Teaching in English"
+msgstr "Englanninkielinen opetus"
+
+msgctxt "TPR Ontologyword details schools"
 msgid "Finnish-English"
 msgstr "suomi-englanti"
 
