@@ -92,7 +92,6 @@ permissions:
   - 'administer tpr_unit'
   - 'administer url aliases'
   - 'administer users'
-  - 'assign admin role'
   - 'assign comprehensive_school_editor role'
   - 'assign content_producer role'
   - 'assign daycare_editor role'
