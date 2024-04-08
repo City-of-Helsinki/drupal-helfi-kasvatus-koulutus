@@ -133,6 +133,16 @@ content:
       allowed_formats:
         hide_help: '1'
         hide_guidelines: '1'
+  field_categories:
+    type: readonly_field_widget
+    weight: 39
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
   field_content:
     type: paragraphs
     weight: 31
@@ -151,6 +161,16 @@ content:
         add_above: '0'
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
+    third_party_settings: {  }
+  field_hs_front_page:
+    type: entity_reference_autocomplete
+    weight: 31
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_lower_content:
     type: paragraphs
@@ -179,6 +199,16 @@ content:
       sidebar: false
       use_details: true
     third_party_settings: {  }
+  field_ontologyword_details:
+    type: readonly_field_widget
+    weight: 40
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
   field_phone_label:
     type: string_textfield
     weight: 11
@@ -194,6 +224,16 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  field_study_field:
+    type: select2_entity_reference
+    weight: 31
+    region: content
+    settings:
+      width: 100%
+      autocomplete: false
+      match_operator: CONTAINS
+      match_limit: 10
+    third_party_settings: {  }
   field_unit_type:
     type: entity_reference_autocomplete
     weight: 34
@@ -203,6 +243,13 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  hide_description:
+    type: boolean_checkbox
+    weight: 18
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   hide_sidebar_navigation:
     type: boolean_checkbox
@@ -391,6 +438,16 @@ content:
       formatter_settings: {  }
       show_description: false
     third_party_settings: {  }
+  subgroup:
+    type: readonly_field_widget
+    weight: 40
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
   toc_enabled:
     type: boolean_checkbox
     weight: 3
@@ -432,63 +489,6 @@ content:
   www:
     type: readonly_field_widget
     weight: 15
-    region: content
-    settings:
-      label: above
-      formatter_type: null
-      formatter_settings: {  }
-      show_description: false
-    third_party_settings: {  }
-  field_categories:
-    type: readonly_field_widget
-    weight: 39
-    region: content
-    settings:
-      label: above
-      formatter_type: null
-      formatter_settings: {  }
-      show_description: false
-    third_party_settings: {  }
-  field_hs_front_page:
-    type: entity_reference_autocomplete
-    weight: 31
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_ontologyword_details:
-    type: readonly_field_widget
-    weight: 40
-    region: content
-    settings:
-      label: above
-      formatter_type: null
-      formatter_settings: {  }
-      show_description: false
-    third_party_settings: {  }
-  field_study_field:
-    type: select2_entity_reference
-    weight: 31
-    region: content
-    settings:
-      width: 100%
-      autocomplete: false
-      match_operator: CONTAINS
-      match_limit: 10
-    third_party_settings: {  }
-  hide_description:
-    type: boolean_checkbox
-    weight: 18
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  subgroup:
-    type: readonly_field_widget
-    weight: 40
     region: content
     settings:
       label: above
