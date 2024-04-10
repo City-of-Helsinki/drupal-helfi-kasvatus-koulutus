@@ -10,6 +10,8 @@ dependencies:
     - field.field.tpr_unit.tpr_unit.field_lower_content
     - field.field.tpr_unit.tpr_unit.field_metatags
     - field.field.tpr_unit.tpr_unit.field_ontologyword_details
+    - field.field.tpr_unit.tpr_unit.field_phone_label
+    - field.field.tpr_unit.tpr_unit.field_phone_with_contacts
     - field.field.tpr_unit.tpr_unit.field_study_field
     - field.field.tpr_unit.tpr_unit.field_unit_type
     - responsive_image.styles.image__3_2
@@ -25,7 +27,7 @@ dependencies:
     - text
     - helfi_kasko_content
 _core:
-  default_config_hash: 8GmiJoVZmgbZpZ9jGuNv_AQg3EgThOq06AsznzuWOGk
+  default_config_hash: KKLuQo4x7W4plteNKkenZDXlAFJZq_JIKLNpkVpMvY0
 id: tpr_unit.tpr_unit.default
 targetEntityType: tpr_unit
 bundle: tpr_unit
@@ -140,6 +142,31 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 17
+    region: content
+  field_ontologyword_details:
+    type: tpr_ontologyword_details_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_phone_label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_phone_with_contacts:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 33
     region: content
   highlights:
     type: tpr_connection
@@ -260,6 +287,13 @@ content:
     third_party_settings: {  }
     weight: 16
     region: content
+  subgroup:
+    type: tpr_connection
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 32
+    region: content
   toc_enabled:
     type: boolean
     label: hidden
@@ -295,20 +329,6 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 12
-    region: content
-  field_ontologyword_details:
-    type: tpr_ontologyword_details_formatter
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 28
-    region: content
-  subgroup:
-    type: tpr_connection
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 32
     region: content
 hidden:
   created: true

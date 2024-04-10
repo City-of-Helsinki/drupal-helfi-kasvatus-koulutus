@@ -11,6 +11,8 @@ dependencies:
     - field.field.tpr_unit.tpr_unit.field_lower_content
     - field.field.tpr_unit.tpr_unit.field_metatags
     - field.field.tpr_unit.tpr_unit.field_ontologyword_details
+    - field.field.tpr_unit.tpr_unit.field_phone_label
+    - field.field.tpr_unit.tpr_unit.field_phone_with_contacts
     - field.field.tpr_unit.tpr_unit.field_study_field
     - field.field.tpr_unit.tpr_unit.field_unit_type
   module:
@@ -18,7 +20,7 @@ dependencies:
     - helfi_address_search
     - helfi_tpr
 _core:
-  default_config_hash: f5AGkO_5_TgZ9InGKOLMyzbGFaCCTKeiPJYeGuTLnq0
+  default_config_hash: hyQdtfnFAHflVh30neHIGf5Q1EQKwQ6Fh8L40BGc6Q4
 id: tpr_unit.tpr_unit.minimal
 targetEntityType: tpr_unit
 bundle: tpr_unit
@@ -66,6 +68,8 @@ hidden:
   field_lower_content: true
   field_metatags: true
   field_ontologyword_details: true
+  field_phone_label: true
+  field_phone_with_contacts: true
   field_study_field: true
   field_unit_type: true
   hide_description: true
