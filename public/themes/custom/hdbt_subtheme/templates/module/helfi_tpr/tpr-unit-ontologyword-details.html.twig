@@ -9,9 +9,9 @@
 {% endmacro %}
 
 <div class="unit__ontologyword-details">
-  <h4 class="unit__ontologyword-details__schoolyear">{{ 'School year'|t({}, {'context': 'TPR Ontologyword details schools'}) }} {{ schoolyear }}</h4>
+  <h3 class="unit__ontologyword-details__schoolyear">{{ 'School year'|t({}, {'context': 'TPR Ontologyword details schools'}) }} {{ schoolyear }}</h3>
   {% if a1['#items'] or a2['#items'] or b1['#items'] or b2['#items'] %}
-    <h5>{{ 'Language studies'|t({}, {'context': 'TPR Ontologyword details schools'}) }}</h5>
+    <h4 class="unit__ontologyword-details__detail-group">{{ 'Language studies'|t({}, {'context': 'TPR Ontologyword details schools'}) }}</h4>
     {% if a1['#items'] %}
       {{ _self.ontologyword_detail_render(a1) }}
     {% endif %}
@@ -30,7 +30,7 @@
   {% endif %}
 
   {% if bilingual_education['#items'] or language_immersion['#items'] or language_enriched_education['#items'] %}
-    <h5>{{ 'Bilingual education'|t({}, {'context': 'TPR Ontologyword details schools'}) }}</h5>
+    <h4 class="unit__ontologyword-details__detail-group">{{ 'Bilingual education'|t({}, {'context': 'TPR Ontologyword details schools'}) }}</h4>
     {% if bilingual_education['#items'] %}
       {{ _self.ontologyword_detail_render(bilingual_education) }}
     {% endif %}
@@ -45,7 +45,7 @@
   {% endif %}
 
   {% if special_emphasis_1['#items'] or special_emphasis_3['#items'] or special_emphasis_7['#items'] %}
-    <h5>{{ 'Weighted curriculum education'|t({}, {'context': 'TPR Ontologyword details schools'}) }}</h5>
+    <h4 class="unit__ontologyword-details__detail-group">{{ 'Weighted curriculum education'|t({}, {'context': 'TPR Ontologyword details schools'}) }}</h4>
 
     {% if special_emphasis_1['#items'] %}
       {{ _self.ontologyword_detail_render(special_emphasis_1) }}
