@@ -3984,16 +3984,16 @@
         },
         {
             "name": "drupal/hdbt",
-            "version": "6.5.3",
+            "version": "6.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "e416a8a30b24b2789222df0f106b69f6396c92d1"
+                "reference": "0d3268793c2bc1a838dd540d89c478d673c47666"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/e416a8a30b24b2789222df0f106b69f6396c92d1",
-                "reference": "e416a8a30b24b2789222df0f106b69f6396c92d1",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/0d3268793c2bc1a838dd540d89c478d673c47666",
+                "reference": "0d3268793c2bc1a838dd540d89c478d673c47666",
                 "shasum": ""
             },
             "require": {
@@ -4011,10 +4011,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.5.3",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.5.4",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2024-04-17T05:06:56+00:00"
+            "time": "2024-04-17T12:09:51+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
@@ -4307,16 +4307,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "4.3.47",
+            "version": "4.3.48",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "714f675e021eba2036cc4f7ac334887589b3c0c5"
+                "reference": "a854d31a4833b8f7b3ebe468faceb97c121a1dd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/714f675e021eba2036cc4f7ac334887589b3c0c5",
-                "reference": "714f675e021eba2036cc4f7ac334887589b3c0c5",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/a854d31a4833b8f7b3ebe468faceb97c121a1dd5",
+                "reference": "a854d31a4833b8f7b3ebe468faceb97c121a1dd5",
                 "shasum": ""
             },
             "require": {
@@ -4433,10 +4433,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/4.3.47",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/4.3.48",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2024-04-12T11:30:15+00:00"
+            "time": "2024-04-17T12:09:58+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -13875,16 +13875,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.9.0",
+            "version": "v3.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "47857eebb197745f66369b76c044a2359e3cc5b9"
+                "reference": "664647f46bf68a98cf5af27b42de8017a3e2d878"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/47857eebb197745f66369b76c044a2359e3cc5b9",
-                "reference": "47857eebb197745f66369b76c044a2359e3cc5b9",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/664647f46bf68a98cf5af27b42de8017a3e2d878",
+                "reference": "664647f46bf68a98cf5af27b42de8017a3e2d878",
                 "shasum": ""
             },
             "require": {
@@ -13938,7 +13938,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.9.0"
+                "source": "https://github.com/twigphp/Twig/tree/v3.9.1"
             },
             "funding": [
                 {
@@ -13950,7 +13950,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-16T16:04:21+00:00"
+            "time": "2024-04-17T09:00:00+00:00"
         },
         {
             "name": "twistor/flysystem-stream-wrapper",
