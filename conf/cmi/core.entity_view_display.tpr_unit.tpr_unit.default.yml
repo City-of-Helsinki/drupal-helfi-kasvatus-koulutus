@@ -27,7 +27,7 @@ dependencies:
     - text
     - helfi_kasko_content
 _core:
-  default_config_hash: KKLuQo4x7W4plteNKkenZDXlAFJZq_JIKLNpkVpMvY0
+  default_config_hash: 8yqntKJ5sVjYrAf4wrF72PSSJYKBKApvvSNACQEMvSY
 id: tpr_unit.tpr_unit.default
 targetEntityType: tpr_unit
 bundle: tpr_unit
@@ -142,13 +142,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 17
-    region: content
-  field_ontologyword_details:
-    type: tpr_ontologyword_details_formatter
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 28
     region: content
   field_phone_label:
     type: string
@@ -287,13 +280,6 @@ content:
     third_party_settings: {  }
     weight: 16
     region: content
-  subgroup:
-    type: tpr_connection
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 32
-    region: content
   toc_enabled:
     type: boolean
     label: hidden
@@ -329,6 +315,20 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 12
+    region: content
+  field_ontologyword_details:
+    type: tpr_ontologyword_details_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  subgroup:
+    type: tpr_connection
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 32
     region: content
 hidden:
   created: true
