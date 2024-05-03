@@ -1,3 +1,7 @@
-.news-archive .hds-pagination-container {
+.news-archive--group-news {
   max-width: $content-width-max;
+
+  .news-listing__item {
+    border-bottom: 1px solid $color-black-5;
+  }
 }
