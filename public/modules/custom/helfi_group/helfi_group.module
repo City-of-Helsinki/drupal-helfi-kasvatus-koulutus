@@ -95,7 +95,7 @@ function helfi_group_entity_field_access(
   $operation,
   FieldDefinitionInterface $field_definition,
   AccountInterface $account,
-  FieldItemListInterface $items = NULL
+  FieldItemListInterface $items = NULL,
 ) {
   if ($field_definition->getname() == 'status' && !empty($items)) {
     /** @var \Drupal\node\Entity\Node $entity */
@@ -201,7 +201,7 @@ function helfi_group_module_implements_alter(&$implementations, $hook) : void {
  */
 function helfi_group_form_node_form_alter(
   array &$form,
-  FormStateInterface $form_state
+  FormStateInterface $form_state,
 ): void {
   $form['actions']['submit']['#submit'][] = 'helfi_group_menuitem_set_content_translation_status';
 
@@ -262,7 +262,7 @@ function helfi_group_form_node_form_alter(
  */
 function helfi_group_menuitem_set_content_translation_status(
   array &$form,
-  FormStateInterface $form_state
+  FormStateInterface $form_state,
 ) : void {
   $menu_parent = $form['menu']['link']['menu_parent']['#default_value'];
   if (!$menu_parent) {
