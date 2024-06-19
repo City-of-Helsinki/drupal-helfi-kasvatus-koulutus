@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1838441c82ef9ce5e5acdd2041a94a21",
+    "content-hash": "b9f6cf1d1a8b3f8e49896ebcdb7f8d81",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3599,27 +3599,27 @@
         },
         {
             "name": "drupal/gin",
-            "version": "3.0.0-rc11",
+            "version": "3.0.0-rc10",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "8.x-3.0-rc11"
+                "reference": "8.x-3.0-rc10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-rc11.zip",
-                "reference": "8.x-3.0-rc11",
-                "shasum": "532000cb8497412fb4b26efc362c7fc9efc44546"
+                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-rc10.zip",
+                "reference": "8.x-3.0-rc10",
+                "shasum": "f79fd895dd1f16c3af457bfaed5527f5b5bc752c"
             },
             "require": {
-                "drupal/core": "^9 || ^10 || ^11",
+                "drupal/core": "^9 || ^10",
                 "drupal/gin_toolbar": "^1.0@beta"
             },
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.0-rc11",
-                    "datestamp": "1718354743",
+                    "version": "8.x-3.0-rc10",
+                    "datestamp": "1712686345",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
@@ -3917,16 +3917,16 @@
         },
         {
             "name": "drupal/hdbt_admin",
-            "version": "3.1.8",
+            "version": "3.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt-admin.git",
-                "reference": "d2e146b0215a5d6098d38f87548b999af2b43468"
+                "reference": "cf42941ff22dd9163d0591b4564fb28ab0c3bd0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/d2e146b0215a5d6098d38f87548b999af2b43468",
-                "reference": "d2e146b0215a5d6098d38f87548b999af2b43468",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/cf42941ff22dd9163d0591b4564fb28ab0c3bd0b",
+                "reference": "cf42941ff22dd9163d0591b4564fb28ab0c3bd0b",
                 "shasum": ""
             },
             "require": {
@@ -3934,6 +3934,7 @@
                 "drupal/gin": "^3.0@rc"
             },
             "conflict": {
+                "drupal/gin": ">3.0.0-rc10",
                 "drupal/helfi_platform_config": "<4.3"
             },
             "type": "drupal-theme",
@@ -3945,10 +3946,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/3.1.8",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/3.1.9",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/issues"
             },
-            "time": "2024-05-24T05:30:41+00:00"
+            "time": "2024-06-19T09:51:57+00:00"
         },
         {
             "name": "drupal/health_check",
@@ -19363,7 +19364,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/gin": 5,
         "drupal/helfi_drupal_tools": 20
     },
     "prefer-stable": true,
