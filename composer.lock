@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b9f6cf1d1a8b3f8e49896ebcdb7f8d81",
+    "content-hash": "0b213b0e87ed5622fea59bb8f708bbe8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4433,16 +4433,16 @@
         },
         {
             "name": "drupal/helfi_tunnistamo",
-            "version": "3.0.7",
+            "version": "dev-UHF-10169-eduad",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-tunnistamo.git",
-                "reference": "881201f804fd6350c8c4705a677619b25fd49c72"
+                "reference": "9e9340ad5e91c4600095f57a4df7352cbb84ef10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tunnistamo/zipball/881201f804fd6350c8c4705a677619b25fd49c72",
-                "reference": "881201f804fd6350c8c4705a677619b25fd49c72",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tunnistamo/zipball/9e9340ad5e91c4600095f57a4df7352cbb84ef10",
+                "reference": "9e9340ad5e91c4600095f57a4df7352cbb84ef10",
                 "shasum": ""
             },
             "require": {
@@ -4459,10 +4459,10 @@
             ],
             "description": "Tunnistamo integration",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tunnistamo/tree/3.0.7",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tunnistamo/tree/UHF-10169-eduad",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-tunnistamo/issues"
             },
-            "time": "2024-06-18T07:56:54+00:00"
+            "time": "2024-06-20T16:26:47+00:00"
         },
         {
             "name": "drupal/image_style_quality",
@@ -19364,7 +19364,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/helfi_drupal_tools": 20
+        "drupal/helfi_drupal_tools": 20,
+        "drupal/helfi_tunnistamo": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
