@@ -6,5 +6,6 @@ _core:
   default_config_hash: WZlqmVE7IG7NlPwHTf-2r9OKJxNlmb7H-WuoBvyheCE
 name: 'News group'
 vid: news_group
-description: ''
+description: null
 weight: 0
+new_revision: false
