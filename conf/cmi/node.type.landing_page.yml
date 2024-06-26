@@ -4,7 +4,6 @@ status: true
 dependencies:
   module:
     - menu_ui
-    - override_node_options
     - scheduler
 third_party_settings:
   menu_ui:
@@ -29,7 +28,7 @@ _core:
 name: 'Landing page'
 type: landing_page
 description: 'Content type for the front page of a section or theme. A landing page consists of highlight areas, content listings and links.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - role_delegation
     - user
 _core:
   default_config_hash: GbPVHdpSCucZ1MunS3Lai6FtyVVfmP9rJHk1GZ73JY0
@@ -479,6 +480,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
