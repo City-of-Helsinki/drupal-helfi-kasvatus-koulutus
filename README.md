@@ -38,3 +38,39 @@ This will log you inside the app container:
 ```
 $ make shell
 ```
+
+## Instance specific features
+
+### Custom paragraphs
+
+#### After-school activity search (after_school_activity_search)
+
+#### Daycare search (daycare_search)
+
+#### Group news (group_news)
+
+#### Group news archive (group_news_archive)
+
+#### High school search (high_school_search)
+
+#### Playground search (playground_search)
+
+#### School search (school_search)
+
+#### Vocational School Search (vocational_school_search)
+
+### Custom roles
+
+#### Daycare editor
+
+#### Playground editor
+
+#### Comprehensive school editor
+
+#### Upper secondary school editor
+
+### Groups
+
+### Group news
+
+### Group menus
