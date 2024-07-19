@@ -45,8 +45,7 @@ $ make shell
 
 ## Instance specific features
 
-The KASKO instance has multiple React searches and features provided by the Group module that other instances don’t
-have.
+The KASKO instance has multiple React searches and features provided by the Group module.
 
 ### Custom paragraphs
 
