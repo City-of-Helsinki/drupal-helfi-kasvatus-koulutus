@@ -50,7 +50,8 @@ have.
 
 This search paragraph lists TPR units that are tagged with the `unit_type` vocabulary term _After-school activity_.
 
-- The filter search is a _view_ (`after_school_activity_search`) with exposed filters.
+- The filter search is a _view_ (`after_school_activity_search`) with exposed filters. The view configuration can be
+found in [here](https://github.com/City-of-Helsinki/drupal-helfi-kasvatus-koulutus/blob/dev/conf/cmi/views.view.after_school_activity_search.yml).
 - No React front.
 - The paragraph has editable title and description fields
 - Can be added to landing pages and the lower content region of standard pages.
@@ -59,18 +60,32 @@ This search paragraph lists TPR units that are tagged with the `unit_type` vocab
 
 This search paragraph lists TPR units that are tagged with the `unit_type` vocabulary term _Daycare_.
 
-- The filter search is a _view_ (`daycare_search`) with exposed filters.
+- The filter search is a _view_ (`daycare_search`) with exposed filters. The view configuration can be found in [here](https://github.com/City-of-Helsinki/drupal-helfi-kasvatus-koulutus/blob/dev/conf/cmi/views.view.daycare_search.yml).
 - No React front.
 - The paragraph has editable title and description fields
 - Can be added to landing pages and the lower content region of standard pages.
 
 #### <a name="group-news"></a>Group news (group_news)
 
-TBD
+The _Group news_ paragraph lists latest news of a selected group. The block uses a view called `latest_group_news` that
+has two displays for different amount of news listed.
+
+The number of news items to be displayed can be selected from the paragraph field `field_group_news_number_of_news`.
+This selection determines the view display to be used. The related logic can be found in the `hdbt_subtheme` under the
+group news paragraph template [here](https://github.com/City-of-Helsinki/drupal-helfi-kasvatus-koulutus/blob/dev/public/themes/custom/hdbt_subtheme/templates/paragraph/paragraph--group-news.html.twig).
+
+Additionally, the paragraph has a field called `field_group_news_group_id` that is used to identify the group whose
+news should be displayed, and a field called `field_group_news_archive` where you can define the landing page to which
+the paragraph should link. The paragraph also includes editable fields for the title and description.
+
+You can add the paragraph to landing pages and the higher and lower content regions of standard pages.
 
 #### <a name="group-news-archive"></a>Group news archive (group_news_archive)
 
-TBD
+The _Group news archive_ is simple paged list of all news the selected group has. The paragraph includes only one field
+called `field_group_news_group_id` that is used to identify the group whose news should be displayed. The list is
+a view called `group_news_archive` and its configuration can be found [here](https://github.com/City-of-Helsinki/drupal-helfi-kasvatus-koulutus/blob/dev/conf/cmi/views.view.group_news_archive.yml).
+You can add the paragraph to landing pages.
 
 #### <a name="high-school-search"></a>High school search (high_school_search)
 
@@ -86,11 +101,12 @@ schools or display them on a map.
 The exposed form has additional functionality provided by `high-school-search.js`, which makes it possible to select a
 value only for the _Emphasis_ or _Mission_ drop-down. This helps avoid searches that yield no results.
 
-- The filter search is a _view_ (`high_school_search`) with exposed filters.
+- The filter search is a _view_ (`high_school_search`) with exposed filters. The view configuration can be found in
+[here](https://github.com/City-of-Helsinki/drupal-helfi-kasvatus-koulutus/blob/dev/conf/cmi/views.view.high_school_search.yml).
 - The results can be displayed as a list or on a map.
 - No React front.
 - The paragraph has editable title, description, units and search button fields.
-- Can be added to landing pages and the lower content region of standard pages.
+- Can be added to landing pages and the higher and lower content regions of standard pages.
 - The javascript `high-school-search.js` can be found [here](https://github.com/City-of-Helsinki/drupal-helfi-kasvatus-koulutus/blob/dev/public/themes/custom/hdbt_subtheme/src/js/high-school-search.js).
 
 #### <a name="playground-search"></a>Playground search (playground_search)
@@ -100,11 +116,23 @@ This search paragraph lists TPR units that are tagged with the `unit_type` vocab
 - The filter search is a _view_ (`playground_search`) with exposed filters.
 - No React front.
 - The paragraph has editable title and description fields
-- Can be added to landing pages and the higher and lower content regions of standard pages.
+- Can be added to landing pages and lower content regions of standard pages.
 
 #### School search (school_search)
 
+The _School search_ paragraph provides a tabbed interface that allows users to either find the nearest school by
+entering a street address or find any school by filtering through the school's information. The search results are
+displayed in a tabbed format, offering both a list view and a map view.
 
+This search functionality is built with React and utilizes a views listing (`comprehensive_school_search`) as a
+fallback when JavaScript is disabled. All React-based searches are located in the `hdbt` theme, where most of the
+related logic is implemented.
+
+- The fallback listing is a _view_ called (`comprehensive_school_search`) and it doesn't have any filters. The fallback
+view configuration can be found in [here](https://github.com/City-of-Helsinki/drupal-helfi-kasvatus-koulutus/blob/dev/conf/cmi/views.view.comprehensive_school_search.yml).
+- The search has a React front and the code can be found [here](https://github.com/City-of-Helsinki/drupal-hdbt/tree/main/src/js/react/apps/school-search).
+- The paragraph has editable title and description fields.
+- Can be added to landing pages.
 
 #### <a name="vocational-school-search"></a>Vocational School Search (vocational_school_search)
 
@@ -115,7 +143,8 @@ The units are selected manually in the paragraph field `field_vs_search_units`, 
 display based on the field's content. It is also possible to change the form's submit button text by writing the desired
 text in the `field_vs_search_meta_button` field.
 
-- The filter search is a _view_ (`vocational_school_search`) with exposed filter.
+- The filter search is a _view_ (`vocational_school_search`) with exposed filter. The view configuration can be found in
+[here](https://github.com/City-of-Helsinki/drupal-helfi-kasvatus-koulutus/blob/dev/conf/cmi/views.view.vocational_school_search.yml).
 - No React front.
 - The paragraph has editable title, description, units and search button fields.
 - Can be added to landing pages and the higher and lower content regions of standard pages.
