@@ -2,8 +2,8 @@
 
 KASKO, short for kasvatus ja koulutus, is the site for the department responsible for childhood and education in the
 city of Helsinki. The site includes multiple unit searches and a bit complex system built using the Group contrib module
-for upper secondary schools. Additionally, it is the only core instance, aside from the Etusivu instance, that has the
-News feature enabled.
+for upper secondary schools. Additionally, this  instance has the News feature enabled and used for upper secondary
+schools.
 
 ## Environments
 
