@@ -1,4 +1,9 @@
-# City of Helsinki - KASKO Drupal 9 project
+# City of Helsinki - KASKO Drupal project
+
+KASKO, short for kasvatus ja koulutus, is the site for the department responsible for childhood and education in the
+city of Helsinki. The site includes multiple unit searches and a bit complex system built using the Group contrib module
+for upper secondary schools. Additionally, it is the only core instance, aside from the Etusivu instance, that has the
+News feature enabled.
 
 ## Environments
 
@@ -187,12 +192,14 @@ news items and announcements inside the group content.
 There is also a custom module called `helfi_group` that modifies group menus, alters the standard translation features
 for nodes under group control, and allows TPR unit entities to be managed within the group.
 
-Since groups can have their own news items, the news feature is enabled in the KASKO instance but is limited to upper
-secondary schools. Each school can publish its own news, which is displayed within the school’s specific area. Other
-KASKO-related news is created in the Etusivu instance in the same manner as other news, and the enabled news feature
-does not affect this process.
-
 - The custom module `helfi_group` can be found from [here](https://github.com/City-of-Helsinki/drupal-helfi-kasvatus-koulutus/tree/dev/public/modules/custom/helfi_group).
+
+### News feature
+
+Since [groups](#groups) can have their own news items, the news feature is enabled in the KASKO instance, but it is
+limited to upper secondary schools. Each school can publish its own news, which is displayed within the school’s
+specific area. Other KASKO-related news is created in the Etusivu instance in the same manner as other news, and the
+enabled news feature does not affect this process.
 
 #### Common issues
 
