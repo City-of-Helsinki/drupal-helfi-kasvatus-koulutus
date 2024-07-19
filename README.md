@@ -51,7 +51,7 @@ have.
 
 ### Custom paragraphs
 
-#### <a name="after-school-search"></a>After-school activity search (after_school_activity_search)
+#### After-school activity search (after_school_activity_search)
 
 This search paragraph lists TPR units that are tagged with the `unit_type` vocabulary term _After-school activity_.
 
@@ -61,7 +61,7 @@ found in [here](https://github.com/City-of-Helsinki/drupal-helfi-kasvatus-koulut
 - The paragraph has editable title and description fields
 - Can be added to landing pages and the lower content region of standard pages.
 
-#### <a name="daycare-search"></a>Daycare search (daycare_search)
+#### Daycare search (daycare_search)
 
 This search paragraph lists TPR units that are tagged with the `unit_type` vocabulary term _Daycare_.
 
@@ -70,7 +70,7 @@ This search paragraph lists TPR units that are tagged with the `unit_type` vocab
 - The paragraph has editable title and description fields
 - Can be added to landing pages and the lower content region of standard pages.
 
-#### <a name="group-news"></a>Group news (group_news)
+#### Group news (group_news)
 
 The _Group news_ paragraph lists latest news of a selected group. The block uses a view called `latest_group_news` that
 has two displays for different amount of news listed.
@@ -85,14 +85,14 @@ the paragraph should link. The paragraph also includes editable fields for the t
 
 You can add the paragraph to landing pages and the higher and lower content regions of standard pages.
 
-#### <a name="group-news-archive"></a>Group news archive (group_news_archive)
+#### Group news archive (group_news_archive)
 
 The _Group news archive_ is simple paged list of all news the selected group has. The paragraph includes only one field
 called `field_group_news_group_id` that is used to identify the group whose news should be displayed. The list is
 a view called `group_news_archive` and its configuration can be found [here](https://github.com/City-of-Helsinki/drupal-helfi-kasvatus-koulutus/blob/dev/conf/cmi/views.view.group_news_archive.yml).
 You can add the paragraph to landing pages.
 
-#### <a name="high-school-search"></a>High school search (high_school_search)
+#### High school search (high_school_search)
 
 The _High school search_ lists high schools, also referred to as upper secondary schools in this instance. This search
 was one of the first implementations of the unit searches, and it has a slightly different structure compared to the
@@ -114,7 +114,7 @@ value only for the _Emphasis_ or _Mission_ drop-down. This helps avoid searches 
 - Can be added to landing pages and the higher and lower content regions of standard pages.
 - The javascript `high-school-search.js` can be found [here](https://github.com/City-of-Helsinki/drupal-helfi-kasvatus-koulutus/blob/dev/public/themes/custom/hdbt_subtheme/src/js/high-school-search.js).
 
-#### <a name="playground-search"></a>Playground search (playground_search)
+#### Playground search (playground_search)
 
 This search paragraph lists TPR units that are tagged with the `unit_type` vocabulary term _Playground_.
 
@@ -139,9 +139,9 @@ view configuration can be found in [here](https://github.com/City-of-Helsinki/dr
 - The paragraph has editable title and description fields.
 - Can be added to landing pages.
 
-#### <a name="vocational-school-search"></a>Vocational School Search (vocational_school_search)
+#### Vocational School Search (vocational_school_search)
 
-The _Vocational school search_ was created based on the [High school search](#high-school-search), so it has
+The _Vocational school search_ was created based on the [High school search](#high-school-search-high_school_search), so it has
 similarities in the implementation details.
 
 The units are selected manually in the paragraph field `field_vs_search_units`, and the view filters the TPR units to
@@ -182,7 +182,7 @@ edit nodes. To gain these permissions, users must be assigned to an upper second
 necessary editing rights for nodes within the group. This group grants other required permissions such as to use media
 entities and access to TPR units and services entities. More information about groups can be found [here](#groups).
 
-### <a name="groups"></a>Groups
+### Groups
 
 Unlike other instances, KASKO has the Group contrib module enabled. This module restricts upper secondary school
 editors’ access to a specific set of nodes and allows them to create dedicated website for their school within the KASKO
@@ -213,7 +213,7 @@ Administrator role, you can see the group that you belong to on the listing.
 
 Each of the upper secondary school groups can have news specific to their school. The news items are functionally the
 same as those used in the Etusivu instance, but they are limited to the school's designated area. News is displayed in
-two different paragraphs: [Group News](#group-news) and [Group News Archive](#group-news-archive).
+two different paragraphs: [Group News](#group-news-group_news) and [Group News Archive](#group-news-archive-group_news_archive).
 
 News items also have the _Override Node Options_ feature enabled, which is not part of the standard installation. This
 allows _upper secondary school editors_ to override the _News Item Published_ option without needing permissions to
@@ -239,10 +239,10 @@ a specific way. You can check the template in [here](https://github.com/City-of-
 Also the TPR unit ontology word details template is overridden in `hdbt_subtheme` in a more detailed way. Check out the
 template [here](https://github.com/City-of-Helsinki/drupal-helfi-kasvatus-koulutus/blob/dev/public/themes/custom/hdbt_subtheme/templates/module/helfi_tpr/tpr-unit-ontologyword-details.html.twig).
 
-### <a name="tpr-unit-categorization"></a>TPR unit categorization
+### TPR unit categorization
 
 In KASKO instance the TPR units are categorized based on some of the ontology IDs they have in the TPR API. The
-categories are then saved to a field called [Categories](#categories) in the `helfi_kasko_content` custom module in
+categories are then saved to a field called [Categories](#categories-field_categories) in the `helfi_kasko_content` custom module in
 [this file](https://github.com/City-of-Helsinki/drupal-helfi-kasvatus-koulutus/blob/dev/public/modules/custom/helfi_kasko_content/src/UnitCategoryUtility.php).
 The categories are then used on role assignment based on unit category and as search filters.
 
@@ -252,7 +252,7 @@ The categories are then used on role assignment based on unit category and as se
 
 Unlike other instances, KASKO has some additional fields on TPR units.
 
-#### <a name="categories"></a>Categories (field_categories)
+#### Categories (field_categories)
 
 Field categories is used to save the TPR unit categorization that is done based on the `ontologyword_ids`. Read more
 about it in the [TPR unit categorization section](#tpr-unit-categorization).
@@ -266,12 +266,12 @@ possibly **deprecated** field.
 
 This field is used to save _language program and weighted curriculum education_ information for TPR units. If the
 information is present it is shown on the TPR unit entity page. This field is also used in filtering the
-[High school search](#high-school-search) results. The field rendering is done in the `hdbt` theme [here](https://github.com/City-of-Helsinki/drupal-hdbt/blob/main/templates/module/helfi_tpr/tpr-unit.html.twig).
+[High school search](#high-school-search-high_school_search) results. The field rendering is done in the `hdbt` theme [here](https://github.com/City-of-Helsinki/drupal-hdbt/blob/main/templates/module/helfi_tpr/tpr-unit.html.twig).
 
 #### Study field (field_study_field)
 
 Taxonomy term reference field that is used to categorize the vocational schools. The field is used in filtering the
-[Vocational school search](#vocational-school-search).
+[Vocational school search](#vocational-school-search-vocational_school_search).
 
 ### TPR unit fields that are not use elsewhere
 
