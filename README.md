@@ -182,10 +182,10 @@ entities and access to TPR units and services entities. More information about g
 
 ### Groups
 
-Unlike other instances, KASKO has the Group contrib module enabled. This module restricts upper secondary school
-editors’ access to a specific set of nodes and allows them to create dedicated website for their school within the KASKO
-instance. Groups are used only for upper secondary schools and the groups can have standard pages, landing pages,
-news items and announcements inside the group content.
+KASKO has the Group contrib module enabled. This module restricts upper secondary school editors’ access to a specific
+set of nodes and allows them to create dedicated website for their school within the KASKO instance. Groups are used
+only for upper secondary schools and the groups can have standard pages, landing pages, news items and announcements
+inside the group content.
 
 There is also a custom module called `helfi_group` that modifies group menus, alters the standard translation features
 for nodes under group control, and allows TPR unit entities to be managed within the group.
@@ -248,7 +248,7 @@ The categories are then used on role assignment based on unit category and as se
 
 ### TPR unit custom fields
 
-Unlike other instances, KASKO has some additional fields on TPR units.
+KASKO has some additional fields on TPR units.
 
 #### Categories (field_categories)
 
@@ -264,17 +264,18 @@ possibly **deprecated** field.
 
 This field is used to save _language program and weighted curriculum education_ information for TPR units. If the
 information is present it is shown on the TPR unit entity page. This field is also used in filtering the
-[High school search](#high-school-search-high_school_search) results. The field rendering is done in the `hdbt` theme [here](https://github.com/City-of-Helsinki/drupal-hdbt/blob/main/templates/module/helfi_tpr/tpr-unit.html.twig).
+[High school search](#high-school-search-high_school_search) results. The field rendering is done in the `hdbt` theme
+[here](https://github.com/City-of-Helsinki/drupal-hdbt/blob/main/templates/module/helfi_tpr/tpr-unit.html.twig).
 
 #### Study field (field_study_field)
 
 Taxonomy term reference field that is used to categorize the vocational schools. The field is used in filtering the
 [Vocational school search](#vocational-school-search-vocational_school_search).
 
-### TPR unit fields that are not use elsewhere
+### Globally available TPR unit fields with customizations
 
-There are also fields that are available globally for all the instances to use, but are used only in KASKO. This can
-however change if some of the other instances would for some reason need to functionality.
+The following fields are available globally for all instances to use, but in KASKO, they are customized compared to the
+standard format.
 
 #### Hide description (hide_description)
 
