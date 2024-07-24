@@ -179,7 +179,7 @@ content:
     label: hidden
     settings:
       imagecache_external_link: ''
-      imagecache_external_responsive_style: image__3_2
+      imagecache_external_responsive_style: card
     third_party_settings: {  }
     weight: 3
     region: content
@@ -196,8 +196,8 @@ content:
     type: service_map_embed
     label: hidden
     settings:
-      iframe_title: 'Sijainti kartalla'
-      link_title: 'Avaa kartta uuteen ikkunaan'
+      iframe_title: 'Location on map'
+      link_title: 'Open the map in a new window'
       target: true
     third_party_settings: {  }
     weight: 10
