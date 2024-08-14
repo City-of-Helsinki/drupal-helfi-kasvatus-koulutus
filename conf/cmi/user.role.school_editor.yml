@@ -10,7 +10,9 @@ dependencies:
     - media.type.helfi_chart
     - media.type.image
     - media.type.remote_video
+    - node.type.landing_page
     - node.type.news_item
+    - node.type.page
   module:
     - content_translation
     - editoria11y
@@ -24,6 +26,7 @@ dependencies:
     - publication_date
     - scheduler
     - system
+    - tfa
     - toolbar
     - view_unpublished
 id: school_editor
@@ -52,6 +55,7 @@ permissions:
   - 'delete own helfi_chart media'
   - 'delete own image media'
   - 'delete own remote_video media'
+  - 'disable own tfa'
   - 'edit own file media'
   - 'edit own hel_map media'
   - 'edit own helfi_chart media'
@@ -63,6 +67,7 @@ permissions:
   - 'override page published option'
   - 'schedule publishing of nodes'
   - 'set news_item published on date'
+  - 'setup own tfa'
   - 'translate editable entities'
   - 'update media'
   - 'use text format full_html'
