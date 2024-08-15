@@ -22,6 +22,7 @@ dependencies:
     - node
     - scheduler
     - system
+    - tfa
 id: comprehensive_school_editor
 label: 'Comprehensive school editor'
 weight: -5
@@ -50,6 +51,7 @@ permissions:
   - 'delete own helfi_chart media'
   - 'delete own image media'
   - 'delete own remote_video media'
+  - 'disable own tfa'
   - 'edit own file media'
   - 'edit own hel_map media'
   - 'edit own helfi_chart media'
@@ -57,6 +59,7 @@ permissions:
   - 'edit own remote_video media'
   - 'mark as hidden in editoria11y'
   - 'schedule publishing of nodes'
+  - 'setup own tfa'
   - 'translate editable entities'
   - 'update any tpr_unit'
   - 'update media'
