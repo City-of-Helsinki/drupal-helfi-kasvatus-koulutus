@@ -27,7 +27,6 @@
         "drupal/override_node_options": "^2.6",
         "drupal/raven": "^5.0",
         "drupal/redis": "^1.5",
-        "drupal/stage_file_proxy": "^2.0",
         "drupal/variationcache": "^1.4",
         "drush/drush": "^12.0"
     },
