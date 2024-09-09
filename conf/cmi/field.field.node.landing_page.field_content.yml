@@ -30,6 +30,7 @@ dependencies:
     - paragraphs.paragraphs_type.service_list
     - paragraphs.paragraphs_type.service_list_search
     - paragraphs.paragraphs_type.target_group_links
+    - paragraphs.paragraphs_type.unit_contact_card
     - paragraphs.paragraphs_type.unit_search
     - paragraphs.paragraphs_type.vocational_school_search
   module:
@@ -77,6 +78,7 @@ settings:
       service_list: service_list
       service_list_search: service_list_search
       unit_search: unit_search
+      unit_contact_card: unit_contact_card
     negate: 0
     target_bundles_drag_drop:
       after_school_activity_search:
@@ -153,6 +155,9 @@ settings:
         enabled: true
       target_group_links:
         weight: 12
+        enabled: true
+      unit_contact_card:
+        weight: 18
         enabled: true
       unit_search:
         weight: 17
