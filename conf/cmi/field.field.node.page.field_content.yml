@@ -25,6 +25,7 @@ dependencies:
     - paragraphs.paragraphs_type.remote_video
     - paragraphs.paragraphs_type.service_list_search
     - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.unit_contact_card
     - paragraphs.paragraphs_type.unit_search
     - paragraphs.paragraphs_type.vocational_school_search
   module:
@@ -67,6 +68,7 @@ settings:
       content_liftup: content_liftup
       service_list_search: service_list_search
       unit_search: unit_search
+      unit_contact_card: unit_contact_card
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -128,6 +130,9 @@ settings:
         enabled: true
       text:
         weight: 0
+        enabled: true
+      unit_contact_card:
+        weight: 18
         enabled: true
       unit_search:
         weight: 17
