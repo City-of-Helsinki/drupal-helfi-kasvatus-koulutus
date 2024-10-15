@@ -363,7 +363,7 @@ function helfi_kasko_content_form_node_announcement_edit_form_alter(&$form): voi
  *   The form.
  */
 function _helfi_kasko_content_announcement_exception(array &$form): void {
-  /** @var Drupal\Core\Session\AccountInterface $account */
+  /** @var \Drupal\user\Entity\User $account */
   $account = \Drupal::currentUser()->getAccount();
   $user_roles = $account->getRoles(TRUE);
   if (!in_array('comprehensive_school_editor', $user_roles)) {
