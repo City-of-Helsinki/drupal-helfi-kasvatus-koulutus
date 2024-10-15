@@ -10,6 +10,7 @@ dependencies:
     - media.type.helfi_chart
     - media.type.image
     - media.type.remote_video
+    - node.type.announcement
   module:
     - content_translation
     - editoria11y
@@ -20,11 +21,13 @@ dependencies:
     - helfi_tpr
     - media
     - node
+    - publication_date
     - scheduler
     - system
     - tfa
+    - view_unpublished
 id: comprehensive_school_editor
-label: 'Comprehensive school editor'
+label: 'Peruskoulujen sisällöntuottaja'
 weight: -5
 is_admin: null
 permissions:
@@ -38,6 +41,7 @@ permissions:
   - 'admin comprehensive school units'
   - 'cancel account'
   - 'change own username'
+  - 'create announcement content'
   - 'create file media'
   - 'create hel_map media'
   - 'create helfi_chart media'
@@ -45,6 +49,7 @@ permissions:
   - 'create media'
   - 'create remote_video media'
   - 'delete media'
+  - 'delete own announcement content'
   - 'delete own file media'
   - 'delete own files'
   - 'delete own hel_map media'
@@ -52,13 +57,16 @@ permissions:
   - 'delete own image media'
   - 'delete own remote_video media'
   - 'disable own tfa'
+  - 'edit own announcement content'
   - 'edit own file media'
   - 'edit own hel_map media'
   - 'edit own helfi_chart media'
   - 'edit own image media'
   - 'edit own remote_video media'
   - 'mark as hidden in editoria11y'
+  - 'revert announcement revisions'
   - 'schedule publishing of nodes'
+  - 'set announcement published on date'
   - 'setup own tfa'
   - 'translate editable entities'
   - 'update any tpr_unit'
@@ -66,6 +74,8 @@ permissions:
   - 'use text format full_html'
   - 'use text format minimal'
   - 'view all media revisions'
+  - 'view announcement revisions'
+  - 'view any unpublished announcement content'
   - 'view editoria11y checker'
   - 'view own unpublished content'
   - 'view own unpublished media'
