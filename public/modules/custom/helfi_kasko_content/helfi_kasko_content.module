@@ -363,6 +363,7 @@ function helfi_kasko_content_form_node_announcement_edit_form_alter(&$form): voi
  *   The form.
  */
 function _helfi_kasko_content_announcement_exception(array &$form): void {
+  /** @var AccountInterface $account */
   $account = \Drupal::currentUser()->getAccount();
   $user_roles = $account->getRoles(TRUE);
   if (!in_array('comprehensive_school_editor', $user_roles)) {
@@ -373,7 +374,7 @@ function _helfi_kasko_content_announcement_exception(array &$form): void {
     Role::loadMultiple(),
     fn($role) => $role->hasPermission('create announcement content')
   );
-  $other_user_roles = array_intersect($roles_with_permission, $user_roles);
+  $other_user_roles = array_intersect(array_keys($roles_with_permission), $user_roles);
 
   // User might have other roles than comprehensive school editor.
   // in that case, we don't want to alter anything.
