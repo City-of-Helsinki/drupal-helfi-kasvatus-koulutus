@@ -259,7 +259,7 @@ about it in the [TPR unit categorization section](#tpr-unit-categorization).
 
 Comprehensive school editor (peruskoulun sisällöntuottaja) can create, edit, translate and delete their own announcements.
 They can also see all unpublished announcements.
-The announcement node form has role specific alteration which prevents user from creating site wide announcements.
+An form alter has been created for announcement node. It prevents comprehensive school editor from creating an site wide announcement.
 
 #### [DEPRECATED] High school front page (field_hs_front_page)
 
