@@ -353,16 +353,16 @@ function helfi_kasko_content_form_node_announcement_edit_form_alter(&$form): voi
 }
 
 /**
- * #UHF-10763 Alter announcement form for comprehensive school editor.
+ * UHF-10763 Alter announcement form for comprehensive school editor.
  *
  * Comprehensive school editor must be able to create announcements
  * for unit pages. Prevent site wide announcements and allow only adding
  * unit pages.
  *
- * @param $form
+ * @param array $form
  *   The form.
  */
-function _helfi_kasko_content_announcement_exception(&$form): void {
+function _helfi_kasko_content_announcement_exception(array &$form): void {
   $account = \Drupal::currentUser()->getAccount();
   $user_roles = $account->getRoles(TRUE);
   if (!in_array('comprehensive_school_editor', $user_roles)) {
