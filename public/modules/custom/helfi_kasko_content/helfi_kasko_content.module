@@ -342,7 +342,15 @@ function helfi_kasko_content_views_data_alter(array &$data) {
  *
  * #UHF-10763 allow a certain role to create announcement for specific pages.
  */
-function helfi_kasko_content_form_node_announcement_form_alter(&$form, &$form_state, $form_id) {
+function helfi_kasko_content_form_node_announcement_form_alter(&$form) {
+  _helfi_kasko_content_announcement_exception($form);
+}
+
+function helfi_kasko_content_form_node_announcement_edit_form_alter(&$form) {
+  _helfi_kasko_content_announcement_exception($form);
+}
+
+function _helfi_kasko_content_announcement_exception(&$form) {
   $user_roles = \Drupal::currentUser()->getAccount()->getRoles();
   if (!in_array('comprehensive_school_editor', $user_roles)) {
     return;
