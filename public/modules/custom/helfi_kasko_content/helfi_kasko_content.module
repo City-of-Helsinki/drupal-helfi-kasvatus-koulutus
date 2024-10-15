@@ -336,3 +336,28 @@ function helfi_kasko_content_views_data_alter(array &$data) {
     ],
   ];
 }
+
+/**
+ * Implements hook_form_alter().
+ *
+ * #UHF-10763 allow a certain role to create announcement for specific pages.
+ */
+function helfi_kasko_content_form_node_announcement_form_alter(&$form, &$form_state, $form_id) {
+  $user_roles = \Drupal::currentUser()->getAccount()->getRoles();
+  if (!in_array('comprehensive_school_editor', $user_roles)) {
+    return;
+  }
+
+  // Set unit pages selection required (Toimipistesivu).
+  $form['field_announcement_unit_pages']['widget']['#required'] = TRUE;
+  $info = t('Add the school you want to show the announcement. This field is required.');
+  $form['field_announcement_unit_pages']['widget']['#description'] = $info;
+
+  // Prevent creating a site wide announcement.
+  $form['field_announcement_all_pages']['widget']['value']['#default_value'] = FALSE;
+  $form['field_announcement_all_pages']['#access'] = FALSE;
+
+  // Prevent adding service pages (Palvelusivu) or content page (Sisältösivu).
+  $form['field_announcement_service_pages']['#access'] = FALSE;
+  $form['field_announcement_content_pages']['#access'] = FALSE;
+}
