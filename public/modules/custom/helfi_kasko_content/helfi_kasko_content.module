@@ -387,7 +387,7 @@ function _helfi_kasko_content_announcement_exception(array &$form): void {
 
   // Set unit pages selection required (Toimipistesivu).
   $form['field_announcement_unit_pages']['widget']['#required'] = TRUE;
-  $info = t('Add the school you want to show the announcement. This field is required.');
+  $info = t('Add the school you want to create the announcement for. This field is required.');
   $form['field_announcement_unit_pages']['widget']['#description'] = $info;
 
   // Prevent creating a site wide announcement.
