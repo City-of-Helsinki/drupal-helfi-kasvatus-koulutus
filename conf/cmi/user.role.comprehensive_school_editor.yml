@@ -27,7 +27,7 @@ dependencies:
     - tfa
     - view_unpublished
 id: comprehensive_school_editor
-label: 'Peruskoulujen sisällöntuottaja'
+label: 'Comprehensive school editor'
 weight: -5
 is_admin: null
 permissions:
