@@ -60,6 +60,8 @@
   // Daycare and playground search filters
   .bef-exposed-form {
     @include breakpoint($breakpoint-m) {
+      align-items: flex-start;
+      gap: $spacing-and-half;
       position: relative;
     }
 
@@ -68,12 +70,14 @@
       margin-top: $spacing-and-half;
 
       @include breakpoint($breakpoint-m) {
+        margin-top: 0;
         width: auto;
       }
 
       // Sort by distance to an address
       &:first-child {
         margin-top: 0;
+        width: 100%;
       }
     }
   }
@@ -83,15 +87,26 @@
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
+
+    // Emulate hds-text-input__label styles since the legend is used here in a similar way.
+    .fieldset-legend {
+      color: var(--label-color-default);
+      display: block;
+      font-size: var(--fontsize-body-m);
+      font-weight: 500;
+      margin-bottom: var(--spacing-3-xs);
+    }
   }
 
   .bef-checkboxes {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
 
     // Compensate the checkboxes height so that it matches the select height.
     @include breakpoint($breakpoint-m) {
+      flex-direction: row;
       margin-bottom: $spacing;
     }
 
