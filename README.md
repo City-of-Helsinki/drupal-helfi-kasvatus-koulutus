@@ -255,6 +255,12 @@ KASKO has some additional fields on TPR units.
 Field categories is used to save the TPR unit categorization that is done based on the `ontologyword_ids`. Read more
 about it in the [TPR unit categorization section](#tpr-unit-categorization).
 
+### Announcements for user with role "comprehensive school editor"
+
+Comprehensive school editor (peruskoulun sisällöntuottaja) can create, edit, translate and delete their own announcements.
+They can also see all unpublished announcements.
+An form alter has been created for announcement node. It prevents comprehensive school editor from creating a site wide announcement.
+
 #### [DEPRECATED] High school front page (field_hs_front_page)
 
 Reference field where the upper secondary school (high school) front page used to be added. Appears to be unused and
