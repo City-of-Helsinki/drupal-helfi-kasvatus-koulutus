@@ -5,6 +5,8 @@
  * Builds extra placeholder replacement tokens for groups.
  */
 
+declare(strict_types=1);
+
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Render\BubbleableMetadata;
 use Drupal\helfi_group\GroupUtility;
