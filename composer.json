@@ -25,7 +25,6 @@
         "drupal/helfi_tpr": "^2.0",
         "drupal/helfi_tunnistamo": "^3",
         "drupal/override_node_options": "^2.6",
-        "drupal/raven": "^5.0",
         "drupal/redis": "^1.5",
         "drupal/variationcache": "^1.4",
         "drush/drush": "^12.0"
