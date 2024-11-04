@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Drupal\helfi_kasko_content\EventSubscriber;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\elasticsearch_connector\Event\BuildIndexParamsEvent;
+use Drupal\elasticsearch_connector\Event\IndexParamsEvent;
 use Drupal\helfi_kasko_content\SchoolUtility;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
@@ -20,7 +20,9 @@ class KaskoElasticIndexSubscriber implements EventSubscriberInterface {
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager
    *   The entity type manager.
    */
-  public function __construct(private readonly EntityTypeManagerInterface $entityTypeManager) {
+  public function __construct(
+    private readonly EntityTypeManagerInterface $entityTypeManager
+  ) {
   }
 
   /**
@@ -28,23 +30,22 @@ class KaskoElasticIndexSubscriber implements EventSubscriberInterface {
    */
   public static function getSubscribedEvents(): array {
     return [
-      BuildIndexParamsEvent::BUILD_PARAMS => 'modifyOntologywordDetailsFields',
+      IndexParamsEvent::class => 'modifyOntologywordDetailsFields',
     ];
   }
 
   /**
    * Index only current schoolyear Ontologyword ids and clarifications.
    *
-   * @param \Drupal\elasticsearch_connector\Event\BuildIndexParamsEvent $event
+   * @param \Drupal\elasticsearch_connector\Event\IndexParamsEvent $event
    *   Event emitted by elasticsearch_connector.
    */
-  public function modifyOntologywordDetailsFields(BuildIndexParamsEvent $event): void {
+  public function modifyOntologywordDetailsFields(IndexParamsEvent $event): void {
     if ($event->getIndexName() !== 'schools') {
       return;
     }
 
-    /** @var array $params */
-    $params = $event->getElasticIndexParams();
+    $params = $event->getParams();
     $schoolYear = SchoolUtility::getCurrentComprehensiveSchoolYear();
 
     foreach ($params['body'] as $key => $body) {
@@ -53,9 +54,14 @@ class KaskoElasticIndexSubscriber implements EventSubscriberInterface {
 
       if (isset($body['ontologyword_details_clarifications'])) {
         foreach ($body['ontologyword_details_clarifications'] as $ontologywordDetailId) {
+          [$language] = $body['search_api_language'];
+
           /** @var \Drupal\helfi_tpr\Entity\OntologyWordDetails $ontologywordDetail */
-          $ontologywordDetail = $this->entityTypeManager->getStorage('tpr_ontology_word_details')->load($ontologywordDetailId);
-          $ontologywordDetail = $ontologywordDetail->hasTranslation($body['_language']) ? $ontologywordDetail->getTranslation($body['_language']) : $ontologywordDetail;
+          $ontologywordDetail = $this->entityTypeManager
+            ->getStorage('tpr_ontology_word_details')
+            ->load($ontologywordDetailId);
+
+          $ontologywordDetail = $ontologywordDetail->hasTranslation($language) ? $ontologywordDetail->getTranslation($language) : $ontologywordDetail;
           $ontologywordId = $ontologywordDetail->get('ontologyword_id')->getString();
           $detailItems = $ontologywordDetail->get('detail_items');
 
@@ -80,7 +86,7 @@ class KaskoElasticIndexSubscriber implements EventSubscriberInterface {
       }
     }
 
-    $event->setElasticIndexParams($params);
+    $event->setParams($params);
   }
 
 }
