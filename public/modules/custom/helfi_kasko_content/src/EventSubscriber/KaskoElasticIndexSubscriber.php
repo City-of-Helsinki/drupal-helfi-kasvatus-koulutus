@@ -21,7 +21,7 @@ class KaskoElasticIndexSubscriber implements EventSubscriberInterface {
    *   The entity type manager.
    */
   public function __construct(
-    private readonly EntityTypeManagerInterface $entityTypeManager
+    private readonly EntityTypeManagerInterface $entityTypeManager,
   ) {
   }
 
