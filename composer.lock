@@ -4907,20 +4907,20 @@
         },
         {
             "name": "drupal/image_style_quality",
-            "version": "1.6.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/image_style_quality.git",
-                "reference": "8.x-1.6"
+                "reference": "8.x-1.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/image_style_quality-8.x-1.6.zip",
-                "reference": "8.x-1.6",
-                "shasum": "262f63471c3765eb7c944476f18b27fb82bdeaa1"
+                "url": "https://ftp.drupal.org/files/projects/image_style_quality-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "3cb3d326e3df3b78cadc91bae1fd9de17dd27bc7"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/core": "^8 || ^9 || ^10 || ^11",
                 "php": ">=7.4"
             },
             "require-dev": {
@@ -4934,8 +4934,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.6",
-                    "datestamp": "1679497333",
+                    "version": "8.x-1.7",
+                    "datestamp": "1730925822",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4956,7 +4956,7 @@
                     "homepage": "https://www.drupal.org/user/1463982"
                 },
                 {
-                    "name": "Sam152",
+                    "name": "sam152",
                     "homepage": "https://www.drupal.org/user/1485048"
                 }
             ],
@@ -14618,16 +14618,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.14.0",
+            "version": "v3.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "126b2c97818dbff0cdf3fbfc881aedb3d40aae72"
+                "reference": "f405356d20fb43603bcadc8b09bfb676cb04a379"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/126b2c97818dbff0cdf3fbfc881aedb3d40aae72",
-                "reference": "126b2c97818dbff0cdf3fbfc881aedb3d40aae72",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/f405356d20fb43603bcadc8b09bfb676cb04a379",
+                "reference": "f405356d20fb43603bcadc8b09bfb676cb04a379",
                 "shasum": ""
             },
             "require": {
@@ -14681,7 +14681,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.14.0"
+                "source": "https://github.com/twigphp/Twig/tree/v3.14.1"
             },
             "funding": [
                 {
@@ -14693,7 +14693,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-09T17:55:12+00:00"
+            "time": "2024-11-06T18:17:38+00:00"
         },
         {
             "name": "twistor/flysystem-stream-wrapper",
