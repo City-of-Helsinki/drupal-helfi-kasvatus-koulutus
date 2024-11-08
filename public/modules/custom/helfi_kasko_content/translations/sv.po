@@ -181,3 +181,7 @@ msgstr "B2-språket"
 msgctxt "TPR Ontologyword details schools"
 msgid "Language offering"
 msgstr "Språkutbudet"
+
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish-Swedish"
+msgstr "finska-svenska"
