@@ -182,6 +182,10 @@ msgctxt "TPR Ontologyword details schools"
 msgid "Language offering"
 msgstr "Kielitarjonta"
 
+msgctxt "TPR Ontologyword details schools"
+msgid "Finnish-Swedish"
+msgstr "suomi-ruotsi"
+
 msgctxt "Announcement exception info"
 msgid "Add the school you want to create the announcement for. This field is required."
 msgstr "Syötä koulu, jonka sivulla poikkeusilmoitus näytetään. Tämä kenttä on pakollinen."

@@ -2,9 +2,14 @@ uuid: 66be132d-2184-4b74-8f13-a79d758b964f
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.tpr_unit.field_ontologyword_details
+    - search_api.server.elastic_kasko
   module:
     - helfi_tpr
+    - search_api
     - helfi_kasko_content
+    - helfi_react_search
   enforced:
     config:
       - field.storage.tpr_unit.field_ontologyword_details
@@ -32,7 +37,7 @@ field_settings:
   coordinates:
     label: Coordinates
     property_path: coordinates
-    type: object
+    type: location
   id:
     label: ID
     datasource_id: 'entity:tpr_unit'
