@@ -44,6 +44,7 @@ module:
   group: 0
   group_content_menu: 0
   hdbt_admin_tools: 0
+  hdbt_cookie_banner: 0
   health_check: 0
   helfi_address_search: 0
   helfi_api_base: 0
@@ -52,7 +53,6 @@ module:
   helfi_calculator: 0
   helfi_ckeditor: 0
   helfi_etusivu_entities: 0
-  helfi_eu_cookie_compliance: 0
   helfi_group: 0
   helfi_image_styles: 0
   helfi_kasko_config: 0
@@ -185,7 +185,6 @@ module:
   paragraphs: 11
   publication_date: 99
   minimal: 1000
-  eu_cookie_compliance: 1001
 theme:
   stable9: 0
   claro: 0
