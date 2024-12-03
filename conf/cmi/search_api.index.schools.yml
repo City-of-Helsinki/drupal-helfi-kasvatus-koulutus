@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.tpr_unit.field_ontologyword_details
-    - search_api.server.elastic_kasko
+    - search_api.server.default
   module:
     - helfi_kasko_content
     - helfi_react_search
@@ -12,7 +12,7 @@ dependencies:
   enforced:
     config:
       - field.storage.tpr_unit.field_ontologyword_details
-      - search_api.server.elastic_kasko
+      - search_api.server.default
     module:
       - search_api
       - helfi_react_search
@@ -143,4 +143,4 @@ options:
   cron_limit: 50
   index_directly: true
   track_changes_in_references: true
-server: elastic_kasko
+server: default
