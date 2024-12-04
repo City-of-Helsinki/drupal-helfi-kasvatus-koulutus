@@ -26,11 +26,11 @@ dependencies:
     - content_translation
     - editoria11y
     - entity_usage
-    - eu_cookie_compliance
     - file
     - filter
     - group
     - group_content_menu
+    - hdbt_cookie_banner
     - helfi_api_base
     - helfi_kasko_content
     - helfi_tpr
@@ -78,10 +78,9 @@ permissions:
   - 'access user profiles'
   - 'admin school settings'
   - 'administer blocks'
-  - 'administer eu cookie compliance categories'
-  - 'administer eu cookie compliance popup'
   - 'administer group'
   - 'administer group content menu types'
+  - 'administer hdbt_cookie_banner'
   - 'administer menu'
   - 'administer nodes'
   - 'administer paragraphs library'

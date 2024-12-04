@@ -4,7 +4,7 @@ status: true
 dependencies:
   module:
     - elasticsearch_connector
-id: elastic_kasko
+id: default
 name: 'Elastic kasko'
 description: ''
 backend: elasticsearch
