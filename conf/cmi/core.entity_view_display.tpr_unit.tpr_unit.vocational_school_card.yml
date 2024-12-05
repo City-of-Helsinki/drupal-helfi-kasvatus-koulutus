@@ -15,7 +15,7 @@ dependencies:
     - field.field.tpr_unit.tpr_unit.field_phone_with_contacts
     - field.field.tpr_unit.tpr_unit.field_study_field
     - field.field.tpr_unit.tpr_unit.field_unit_type
-    - responsive_image.styles.image__3_2
+    - responsive_image.styles.card
   module:
     - address
     - entity_reference_revisions
@@ -38,7 +38,7 @@ dependencies:
       - field.field.tpr_unit.tpr_unit.field_ontologyword_details
       - field.field.tpr_unit.tpr_unit.field_study_field
       - field.field.tpr_unit.tpr_unit.field_unit_type
-      - responsive_image.styles.image__3_2
+      - responsive_image.styles.card
 _core:
   default_config_hash: 2R6fCnxqAEIItVBo_RZsOmxxfH1h7s4rGXJrZ7U3pTM
 id: tpr_unit.tpr_unit.vocational_school_card
