@@ -23,7 +23,7 @@ class StudyProgrammeType extends InOperatorBase {
   /**
    * {@inheritdoc}
    */
-  public function init(ViewExecutable $view, DisplayPluginBase $display, array &$options = NULL) {
+  public function init(ViewExecutable $view, DisplayPluginBase $display, ?array &$options = NULL) {
     parent::init($view, $display, $options);
     $this->valueTitle = (string) $this->t('Allowed values');
     $this->definition['options callback'] = [$this, 'generateOptions'];

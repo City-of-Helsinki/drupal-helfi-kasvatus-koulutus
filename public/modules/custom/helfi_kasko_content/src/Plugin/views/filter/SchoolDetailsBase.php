@@ -27,7 +27,7 @@ abstract class SchoolDetailsBase extends InOperatorBase {
   /**
    * {@inheritdoc}
    */
-  public function init(ViewExecutable $view, DisplayPluginBase $display, array &$options = NULL) {
+  public function init(ViewExecutable $view, DisplayPluginBase $display, ?array &$options = NULL) {
     parent::init($view, $display, $options);
     $this->valueTitle = (string) $this->t('Allowed clarifications');
     $this->definition['options callback'] = [$this, 'generateOptions'];
