@@ -15,7 +15,7 @@ dependencies:
     - field.field.tpr_unit.tpr_unit.field_phone_with_contacts
     - field.field.tpr_unit.tpr_unit.field_study_field
     - field.field.tpr_unit.tpr_unit.field_unit_type
-    - responsive_image.styles.image__3_2
+    - responsive_image.styles.card
   module:
     - address
     - entity_reference_revisions
