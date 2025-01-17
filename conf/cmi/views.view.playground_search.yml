@@ -288,7 +288,7 @@ display:
             operator: address_search_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: address_search
+            identifier: address
             required: false
             remember: false
             multiple: false
