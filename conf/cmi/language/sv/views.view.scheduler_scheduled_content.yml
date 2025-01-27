@@ -14,10 +14,10 @@ display:
           label: Författare
           separator: ', '
         status:
-          label: Status
           settings:
             format_custom_true: Publicerad
             format_custom_false: 'Ej publicerad'
+          label: Status
           separator: ', '
         publish_on:
           label: 'Publicera den'
@@ -35,8 +35,6 @@ display:
           expose:
             label: Innehållstyp
         status:
-          expose:
-            label: Status
           group_info:
             label: 'Status för publicering'
             group_items:
@@ -44,6 +42,8 @@ display:
                 title: Publicerad
               2:
                 title: 'Ej publicerad'
+          expose:
+            label: Status
         langcode:
           expose:
             label: Språk
