@@ -147,22 +147,7 @@ function helfi_kasko_content_preprocess_block(&$variables) {
 
     // Special cases if the node type is page.
     if ($entity->bundle() === 'page') {
-      // Load menu links for the current page entity.
-      $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
-      $menu_links = $menu_link_manager->loadLinksByRoute(
-        "entity.{$entity->getEntityTypeId()}.canonical",
-        [$entity->getEntityTypeId() => $entity->id()]
-      );
-
-      // If the page is in navigation set a different value for 1st gray
-      // paragraph class.
-      if (!empty($menu_links) && is_array($menu_links)) {
-        $menu_Link = reset($menu_links);
-
-        if ($menu_Link->isEnabled()) {
-          $first_paragraph_gray = 'has-first-gray-bg-block--desktop';
-        }
-      }
+      $first_paragraph_gray = 'has-first-gray-bg-block--desktop';
     }
   }
 }

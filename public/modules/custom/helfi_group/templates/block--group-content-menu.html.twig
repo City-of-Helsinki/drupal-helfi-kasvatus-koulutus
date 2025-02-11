@@ -39,6 +39,9 @@
   {% set section_menu_title_current = null %}
 {% endif %}
 
+{% set section_menu_title_link = attributes.id ~ '-menu-link'|clean_id %}
+{% set section_menu_aria_controls = attributes.id ~ '-menu-wrapper'|clean_id %}
+
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 <nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby') }} class="sidebar-navigation sidebar-navigation--section-navigation">
   <div class="section-navigation__header">
