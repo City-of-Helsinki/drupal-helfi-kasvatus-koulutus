@@ -1,7 +1,7 @@
-(function (Drupal) {
+(function(Drupal) {
   Drupal.behaviors.HighSchoolSearch = {};
 
-  Drupal.behaviors.HighSchoolSearch.attach = function (context) {
+  Drupal.behaviors.HighSchoolSearch.attach = function(context) {
     // Find all select elements inside high school search.
     const selectElements = context.querySelectorAll(
       '.unit-search--high-school .js-form-item-emphasis .form-select, ' +
@@ -14,8 +14,8 @@
       }
     );
 
-    for (let select of selectElements) {
-      select.addEventListener('change', function (){
+    for (const select of selectElements) {
+      select.addEventListener('change', function(){
         disableOtherSelects(this, selectElements);
       });
     }
@@ -48,12 +48,12 @@
   // than 'All' and enable them all if they all have 'All' option selected.
   function disableOtherSelects(selected, selectElements) {
     if (selected.value !== 'All') {
-      for (let select of selectElements) {
+      for (const select of selectElements) {
         toggleSelectActivity(select, select !== selected);
       }
     }
     else {
-      for (let select of selectElements) {
+      for (const select of selectElements) {
         if (select !== selected) {
           toggleSelectActivity(select, false);
         }
