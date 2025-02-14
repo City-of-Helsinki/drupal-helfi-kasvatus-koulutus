@@ -27,6 +27,10 @@ msgid "Second national language starting in 6th grade (B1)"
 msgstr "6. luokalta alkava vieras kieli (B1)"
 
 msgctxt "TPR Ontologyword details schools"
+msgid "Optional foreign language starting in 7th grade (B2)"
+msgstr "7. luokalta alkava vieras kieli (B2)"
+
+msgctxt "TPR Ontologyword details schools"
 msgid "Optional foreign language starting in 8th grade (B2)"
 msgstr "8. luokalta alkava vieras kieli (B2)"
 

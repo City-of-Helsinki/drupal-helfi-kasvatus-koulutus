@@ -12,6 +12,7 @@ use Drupal\helfi_kasko_content\UnitCategoryUtility;
 use Drupal\helfi_kasko_content\UnitOntologyWordDetailsUtility;
 use Drupal\helfi_tpr\Entity\Unit;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 
 /**
  * Field formatter to render TPR unit's Ontologyword details.
@@ -92,6 +93,19 @@ final class OntologyWordDetailsFormatter extends FormatterBase {
     $emphasizedEducationItems = [];
     $schoolYear = SchoolUtility::getCurrentComprehensiveSchoolYear();
     $ontologywordDetails = $items->referencedEntities();
+    $isSwedishSchool = FALSE;
+
+    if (
+      $entity->hasField('field_categories') &&
+      !$entity->field_categories->isEmpty()
+    ) {
+      $values = $entity->field_categories->getValue();
+      foreach ($values as $value) {
+        if ($value['value'] === 'basic education in Swedish') {
+          $isSwedishSchool = TRUE;
+        }
+      }
+    }
 
     foreach ($ontologywordDetails as $ontologywordDetail) {
       /** @var \Drupal\helfi_tpr\Entity\OntologyWordDetails $ontologywordDetail */
@@ -122,6 +136,16 @@ final class OntologyWordDetailsFormatter extends FormatterBase {
           '#label' => $elementKeyLabel['label'],
           '#items' => $emphasizedEducationItems[$elementKeyLabel['key']],
         ];
+      }
+
+      // For Swedish schools the B2 language starts from the 7th grade so the label
+      // of the ontology element needs to be altered.
+      if ($isSwedishSchool && $elementKeyLabel['key'] === '#b2') {
+        $elements[$elementKeyLabel['key']]['#label'] = new TranslatableMarkup(
+          'Optional foreign language starting in 7th grade (B2)',
+          [],
+          ['context' => 'TPR Ontologyword details schools']
+        );
       }
     }
 
