@@ -142,7 +142,7 @@ final class OntologyWordDetailsFormatter extends FormatterBase {
       // of the ontology element needs to be altered.
       if ($isSwedishSchool && $elementKeyLabel['key'] === '#b2') {
         $elements[$elementKeyLabel['key']]['#label'] = new TranslatableMarkup(
-          'Optional foreign language starting in 7th grade (B2)',
+          'Language starting in 7th grade (B2)',
           [],
           ['context' => 'TPR Ontologyword details schools']
         );
