@@ -93,7 +93,9 @@ final class OntologyWordDetailsFormatter extends FormatterBase {
     $emphasizedEducationItems = [];
     $schoolYear = SchoolUtility::getCurrentComprehensiveSchoolYear();
     $ontologywordDetails = $items->referencedEntities();
-    $isSwedishSchool = FALSE;
+
+    // Determine if the school is Swedish-speaking school.
+    $isSwedishSpeakingSchool = FALSE;
 
     if (
       $entity->hasField('field_categories') &&
@@ -102,7 +104,7 @@ final class OntologyWordDetailsFormatter extends FormatterBase {
       $values = $entity->field_categories->getValue();
       foreach ($values as $value) {
         if ($value['value'] === 'basic education in Swedish') {
-          $isSwedishSchool = TRUE;
+          $isSwedishSpeakingSchool = TRUE;
         }
       }
     }
@@ -140,7 +142,7 @@ final class OntologyWordDetailsFormatter extends FormatterBase {
 
       // For Swedish schools the B2 language starts from the 7th grade so the label
       // of the ontology element needs to be altered.
-      if ($isSwedishSchool && $elementKeyLabel['key'] === '#b2') {
+      if ($isSwedishSpeakingSchool && $elementKeyLabel['key'] === '#b2') {
         $elements[$elementKeyLabel['key']]['#label'] = new TranslatableMarkup(
           'Language starting in 7th grade (B2)',
           [],
