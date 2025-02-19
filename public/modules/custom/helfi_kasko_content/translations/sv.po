@@ -35,6 +35,10 @@ msgid "Language starting in 8th grade (B2)"
 msgstr "Språk som börjar i åk 8 (B2)"
 
 msgctxt "TPR Ontologyword details schools"
+msgid "Language starting in 7th or 8th grade (B2)"
+msgstr "Språk som börjar i åk 7 eller 8 (B2)"
+
+msgctxt "TPR Ontologyword details schools"
 msgid "Bilingual education"
 msgstr "Tvåspråkig undervisning"
 

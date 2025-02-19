@@ -35,6 +35,10 @@ msgid "Language starting in 8th grade (B2)"
 msgstr "8. luokalta alkava kieli (B2)"
 
 msgctxt "TPR Ontologyword details schools"
+msgid "Language starting in 7th or 8th grade (B2)"
+msgstr "7. tai 8. luokalta alkava kieli (B2)"
+
+msgctxt "TPR Ontologyword details schools"
 msgid "Bilingual education"
 msgstr "Kaksikielinen opetus"
 
