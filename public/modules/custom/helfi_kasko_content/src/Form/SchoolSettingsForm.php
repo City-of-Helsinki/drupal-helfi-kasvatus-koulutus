@@ -53,6 +53,14 @@ class SchoolSettingsForm extends FormBase {
       '#description' => $this->t('Select the starting year for a comprehensive school year period. For example, selecting "2022" would set the school year to "2022-2023".'),
     ];
 
+    $form['additional_schools'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('List of additional schools to school index'),
+      '#default_value' => implode(',', SchoolUtility::getAdditionalSchools()),
+      '#description' => $this->t('Schools should be linked to the correct services in TPR, but in some cases, this is not possible. With this field, TPR units can be marked as schools in the school index by adding their IDs as a comma-separated list. Example: <code>1234,2345,3456</code>. <strong>Note!</strong> Elastic search index must be reindexed if the values are changed.', options: ['context' => 'helfi react search']),
+      '#rows' => 2,
+    ];
+
     $form['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Save'),
@@ -68,6 +76,7 @@ class SchoolSettingsForm extends FormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     SchoolUtility::setCurrentHighSchoolYear(SchoolUtility::composeSchoolYear((int) $form_state->getValue('high_school_year_first')));
     SchoolUtility::setCurrentComprehensiveSchoolYear(SchoolUtility::composeSchoolYear((int) $form_state->getValue('comprehensive_school_year_first')));
+    SchoolUtility::setAdditionalSchools($form_state->getValue('additional_schools'));
   }
 
 }
