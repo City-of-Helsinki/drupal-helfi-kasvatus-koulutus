@@ -140,11 +140,11 @@ final class OntologyWordDetailsFormatter extends FormatterBase {
         ];
       }
 
-      // For Swedish schools the B2 language starts from the 7th grade so the label
-      // of the ontology element needs to be altered.
+      // For Swedish schools the B2 language starts from the 7th grade so the
+      // label of the ontology element needs to be altered.
       if ($isSwedishSpeakingSchool && $elementKeyLabel['key'] === '#b2') {
         $elements[$elementKeyLabel['key']]['#label'] = new TranslatableMarkup(
-          'Language starting in 7th grade (B2)',
+          'Language starting in Grade 7 (B2)',
           [],
           ['context' => 'TPR Ontologyword details schools']
         );

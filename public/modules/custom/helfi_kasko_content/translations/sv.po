@@ -15,27 +15,27 @@ msgid "Language studies"
 msgstr "Språkstudier"
 
 msgctxt "TPR Ontologyword details schools"
-msgid "Language starting in 1st grade (A1)"
+msgid "Language starting in Grade 1 (A1)"
 msgstr "Språk som börjar i åk 1 (A1)"
 
 msgctxt "TPR Ontologyword details schools"
-msgid "Language starting in 3rd grade (A2)"
+msgid "Language starting in Grade 3 (A2)"
 msgstr "Språk som börjar i åk 3 (A2)"
 
 msgctxt "TPR Ontologyword details schools"
-msgid "Language starting in 6th grade (B1)"
+msgid "Language starting in Grade 6 (B1)"
 msgstr "Språk som börjar i åk 6 (B1)"
 
 msgctxt "TPR Ontologyword details schools"
-msgid "Language starting in 7th grade (B2)"
+msgid "Language starting in Grade 7 (B2)"
 msgstr "Språk som börjar i åk 7 (B2)"
 
 msgctxt "TPR Ontologyword details schools"
-msgid "Language starting in 8th grade (B2)"
+msgid "Language starting in Grade 8 (B2)"
 msgstr "Språk som börjar i åk 8 (B2)"
 
 msgctxt "TPR Ontologyword details schools"
-msgid "Language starting in 7th or 8th grade (B2)"
+msgid "Language starting in Grade 7 or 8 (B2)"
 msgstr "Språk som börjar i åk 7 eller 8 (B2)"
 
 msgctxt "TPR Ontologyword details schools"

@@ -15,27 +15,27 @@ msgid "Language studies"
 msgstr "Kielten opetus"
 
 msgctxt "TPR Ontologyword details schools"
-msgid "Language starting in 1st grade (A1)"
+msgid "Language starting in Grade 1 (A1)"
 msgstr "1. luokalta alkava kieli (A1)"
 
 msgctxt "TPR Ontologyword details schools"
-msgid "Language starting in 3rd grade (A2)"
+msgid "Language starting in Grade 3 (A2)"
 msgstr "3. luokalta alkava kieli (A2)"
 
 msgctxt "TPR Ontologyword details schools"
-msgid "Language starting in 6th grade (B1)"
+msgid "Language starting in Grade 6 (B1)"
 msgstr "6. luokalta alkava kieli (B1)"
 
 msgctxt "TPR Ontologyword details schools"
-msgid "Language starting in 7th grade (B2)"
+msgid "Language starting in Grade 7 (B2)"
 msgstr "7. luokalta alkava kieli (B2)"
 
 msgctxt "TPR Ontologyword details schools"
-msgid "Language starting in 8th grade (B2)"
+msgid "Language starting in Grade 8 (B2)"
 msgstr "8. luokalta alkava kieli (B2)"
 
 msgctxt "TPR Ontologyword details schools"
-msgid "Language starting in 7th or 8th grade (B2)"
+msgid "Language starting in Grade 7 or 8 (B2)"
 msgstr "7. tai 8. luokalta alkava kieli (B2)"
 
 msgctxt "TPR Ontologyword details schools"
