@@ -73,10 +73,42 @@ class SchoolSettingsForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
+  public function validateForm(array &$form, FormStateInterface $form_state): void {
+    parent::validateForm($form, $form_state);
+
+    $values = $form_state->getValues();
+
+    // Validate additional schools input.
+    if (
+      !empty($values['additional_schools']) &&
+      !$this->isValidString($values['additional_schools'])
+    ) {
+      $form_state->setErrorByName('additional_schools',
+        $this->t('The list of additional schools must be a comma-separated list of integers')
+      );
+    }
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state): void {
     SchoolUtility::setCurrentHighSchoolYear(SchoolUtility::composeSchoolYear((int) $form_state->getValue('high_school_year_first')));
     SchoolUtility::setCurrentComprehensiveSchoolYear(SchoolUtility::composeSchoolYear((int) $form_state->getValue('comprehensive_school_year_first')));
     SchoolUtility::setAdditionalSchools($form_state->getValue('additional_schools'));
+  }
+
+  /**
+   * Validates a comma-separated string.
+   *
+   * @param string $value
+   *   Input string.
+   *
+   * @return bool
+   *   True if input is valid.
+   */
+  private function isValidString(string $value): bool {
+    return $value === '' || preg_match('/^\s*\d+(?:\s*,\s*\d+)*\s*$/', $value);
   }
 
 }
