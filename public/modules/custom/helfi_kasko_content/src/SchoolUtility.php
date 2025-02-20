@@ -12,9 +12,9 @@ class SchoolUtility {
   /**
    * School year key used with State API and additional schools.
    */
-  private const HIGH_SCHOOL_YEAR_KEY = 'helfi_kasko_content.high_school_year';
-  private const COMPREHENSIVE_SCHOOL_YEAR_KEY = 'helfi_kasko_content.comprehensive_school_year';
-  private const ADDITIONAL_SCHOOLS = 'helfi_kasko_content.additional_schools_to_school_index';
+  public const HIGH_SCHOOL_YEAR_KEY = 'helfi_kasko_content.high_school_year';
+  public const COMPREHENSIVE_SCHOOL_YEAR_KEY = 'helfi_kasko_content.comprehensive_school_year';
+  public const ADDITIONAL_SCHOOLS = 'helfi_kasko_content.additional_schools_to_school_index';
 
   /**
    * Helper function to get the current high school year.
