@@ -39,14 +39,14 @@ class SchoolUtility {
   /**
    * Helper function to get the additional schools.
    *
-   * @return array|null
+   * @return array
    *   The school IDs as an array.
    */
-  public static function getAdditionalSchools(): ?array {
+  public static function getAdditionalSchools(): array {
     $schools = \Drupal::state()->get(self::ADDITIONAL_SCHOOLS);
 
     if (empty($schools)) {
-      return NULL;
+      return [];
     }
 
     // Explode the string into an array and trim each element.
