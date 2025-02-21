@@ -117,19 +117,19 @@ class UnitOntologyWordDetailsUtility {
       ],
       '15-26' => [
         'key' => '#a1',
-        'label' => $this->t('Foreign language starting in 1st grade (A1)', [], $context),
+        'label' => $this->t('Language starting in Grade 1 (A1)', [], $context),
       ],
       '27-38' => [
         'key' => '#a2',
-        'label' => $this->t('Optional foreign language starting in 3rd grade (A2)', [], $context),
+        'label' => $this->t('Language starting in Grade 3 (A2)', [], $context),
       ],
       '101-112' => [
         'key' => '#b1',
-        'label' => $this->t('Second national language starting in 6th grade (B1)', [], $context),
+        'label' => $this->t('Language starting in Grade 6 (B1)', [], $context),
       ],
       '113-124' => [
         'key' => '#b2',
-        'label' => $this->t('Optional foreign language starting in 8th grade (B2)', [], $context),
+        'label' => $this->t('Language starting in Grade 8 (B2)', [], $context),
       ],
       '293-297' => [
         'key' => '#language_immersion',
