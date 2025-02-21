@@ -12,6 +12,7 @@ use Drupal\helfi_kasko_content\Form\SchoolSettingsForm;
 /**
  * Tests the SchoolSettingsForm form.
  *
+ * @coversDefaultClass \Drupal\helfi_kasko_content\Form\SchoolSettingsForm
  * @group helfi_kasko_content
  */
 class SchoolSettingsFormTest extends KernelTestBase {
@@ -34,6 +35,9 @@ class SchoolSettingsFormTest extends KernelTestBase {
 
   /**
    * Tests form validation for valid and invalid JSON.
+   *
+   * @covers ::validateForm
+   * @covers ::isValidString
    */
   public function testValidateForm(): void {
     $form = SchoolSettingsForm::create($this->container);
@@ -86,6 +90,10 @@ class SchoolSettingsFormTest extends KernelTestBase {
 
   /**
    * Tests form submission.
+   *
+   * @covers ::getFormId
+   * @covers ::buildForm
+   * @covers ::submitForm
    */
   public function testFormSubmission(): void {
     $form_object = SchoolSettingsForm::create($this->container);
