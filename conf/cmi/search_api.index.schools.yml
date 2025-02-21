@@ -127,7 +127,7 @@ processor_settings:
   entity_status: {  }
   entity_type: {  }
   helfi_kasko_content_additional_filters: {  }
-  is_school: {  }
+  helfi_kasko_content_is_school: {  }
   language_with_fallback: {  }
   media_reference_to_object:
     fields:
