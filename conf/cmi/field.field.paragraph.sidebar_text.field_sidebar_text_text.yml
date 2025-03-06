@@ -13,7 +13,7 @@ third_party_settings:
     allowed_formats:
       - minimal
 _core:
-  default_config_hash: wIwMdo6OAIW_0F8UPMdoBOqJIF0AGhXSa-2lmStWKWc
+  default_config_hash: txEL8z9FtAXqiaL5MkyAIDwvU_hO255PQklk-Ub9w7s
 id: paragraph.sidebar_text.field_sidebar_text_text
 field_name: field_sidebar_text_text
 entity_type: paragraph
