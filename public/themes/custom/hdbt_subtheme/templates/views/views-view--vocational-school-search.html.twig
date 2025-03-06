@@ -5,11 +5,7 @@
  */
 #}
 
-{% embed '@hdbt/component/unit-search.twig' with { 
-  modifier_class: [
-    'views--unit-search',
-  ]
-}%}
+{% embed '@hdbt/component/unit-search.twig' %}
   {% block count_container%}
     {%- if total_rows -%}
       {{ total_rows }} {% trans with {'context': 'Vocational school search count'}%}unit{% plural total_rows %}units{% endtrans %}
