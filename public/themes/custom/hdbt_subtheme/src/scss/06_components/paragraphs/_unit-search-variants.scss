@@ -1,5 +1,5 @@
-.unit-search--high-school .views--unit-search .views-exposed-form,
-.unit-search--vocational-school .views--unit-search .views-exposed-form {
+.unit-search--high-school .unit-search__content .views-exposed-form,
+.unit-search--vocational-school .unit-search__content .views-exposed-form {
   @include breakpoint($breakpoint-m) {
     align-items: flex-end;
     column-gap: $spacing-and-half;
@@ -35,7 +35,7 @@
   }
 }
 
-.unit-search--high-school .views--unit-search .views-exposed-form {
+.unit-search--high-school .unit-search__content .views-exposed-form {
   @include breakpoint($breakpoint-m) {
     grid-template-areas:
     'filter filter'
@@ -45,7 +45,7 @@
   }
 }
 
-.unit-search--vocational-school .views--unit-search .views-exposed-form {
+.unit-search--vocational-school .unit-search__content .views-exposed-form {
   @include breakpoint($breakpoint-m) {
     grid-template-areas:
     'filter .'
@@ -147,7 +147,7 @@
 
 // If there is sidebar on the basic page and the high school search is on the
 // upper content of the site the filters can't fit so they need to be adjusted.
-.has-sidebar .components--upper .unit-search--high-school .views--unit-search .views-exposed-form {
+.has-sidebar .components--upper .unit-search--high-school .unit-search__content .views-exposed-form {
   @include breakpoint($breakpoint-l) {
     margin-left: 0;
   }
