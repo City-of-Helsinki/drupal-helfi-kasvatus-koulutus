@@ -341,7 +341,6 @@ function helfi_kasko_content_form_node_announcement_form_alter(&$form): void {
  * Implements hook_form_FORM_ID_alter().
  */
 function helfi_kasko_content_form_node_announcement_edit_form_alter(&$form): void {
-  /** @var \Drupal\user\Entity\User $account */
   $account = \Drupal::currentUser()->getAccount();
 
   _helfi_kasko_content_announcement_exception($form, $account);
