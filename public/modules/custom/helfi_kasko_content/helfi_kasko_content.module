@@ -28,7 +28,6 @@ function helfi_kasko_content_platform_config_grant_permissions() : array {
       'create announcement content',
       'delete own announcement content',
       'edit own announcement content',
-      'revert announcement revisions',
       'view announcement revisions',
     ]
   ];
