@@ -20,6 +20,21 @@ use Drupal\group\Entity\GroupMembership;
 use Drupal\user\Entity\Role;
 
 /**
+ * Implements hook_platform_config_grant_permissions().
+ */
+function helfi_kasko_content_platform_config_grant_permissions() : array {
+  return [
+    'school_editor' => [
+      'create announcement content',
+      'delete own announcement content',
+      'edit own announcement content',
+      'revert announcement revisions',
+      'view announcement revisions',
+    ]
+  ];
+}
+
+/**
  * Implements hook_ENTITY_TYPE_access().
  */
 function helfi_kasko_content_tpr_unit_access(EntityInterface $entity, $operation, AccountInterface $account) : AccessResult {
