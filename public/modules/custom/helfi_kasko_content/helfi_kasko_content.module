@@ -438,7 +438,7 @@ function _helfi_kasko_content_announcement_school_editor_exception(array &$form,
   $form['field_announcement_all_pages']['#access'] = FALSE;
 
   // Get all group related nodes and set them as announcement target pages.
-  /** @var \Drupal\group\Entity\GroupMembership $group */
+  /** @var \Drupal\group\Entity\GroupMembership $membership */
   $membership = reset($groupMemberships);
 
   $entities = $membership->getGroup()->getRelatedEntities();
