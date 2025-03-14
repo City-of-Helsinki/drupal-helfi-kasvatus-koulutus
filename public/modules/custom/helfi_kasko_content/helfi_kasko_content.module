@@ -433,7 +433,7 @@ function _helfi_kasko_content_announcement_school_editor_exception(array &$form,
   );
   $other_user_roles = array_intersect(array_keys($roles_with_permission), $user_roles);
 
-  // User might have other roles than comprehensive school editor.
+  // User might have other roles than school editor.
   // in that case, we don't want to alter anything.
   if (
     $account->hasRole('school_editor') &&
