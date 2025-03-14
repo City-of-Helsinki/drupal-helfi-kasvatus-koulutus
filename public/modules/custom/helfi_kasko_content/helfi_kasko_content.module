@@ -443,19 +443,27 @@ function _helfi_kasko_content_announcement_school_editor_exception(array &$form,
     return;
   }
 
+  // Always disable the fields that user may not edit.
+  $form['field_announcement_all_pages']['widget']['value']['#default_value'] = FALSE;
+  $form['field_announcement_all_pages']['#access'] = FALSE;
+
+  // Prevent adding service pages (Palvelusivu)
+  $form['field_announcement_service_pages']['#access'] = FALSE;
+
+  $form['field_announcement_content_pages']['#disabled'] = TRUE;
+
+  $form['field_announcement_unit_pages']['#disabled'] = TRUE;
+
   if (!$groupMemberships = GroupMembership::loadByUser($account)) {
     return;
   }
 
-  // Prevent from creating a site wide announcement.
-  $form['field_announcement_all_pages']['widget']['value']['#default_value'] = FALSE;
-  $form['field_announcement_all_pages']['#access'] = FALSE;
-
-  // Get all group related nodes and set them as announcement target pages.
+  // Get all group related nodes and set them as target pages.
   /** @var \Drupal\group\Entity\GroupMembership $membership */
   $membership = reset($groupMemberships);
   $entities = $membership->getGroup()->getRelatedEntities();
 
+  // Preset content pages.
   $nodes = array_filter(
     $entities,
     fn($entity) =>
@@ -464,23 +472,17 @@ function _helfi_kasko_content_announcement_school_editor_exception(array &$form,
   );
   $node_ids = array_map(fn($entity) => $entity->id(), $nodes);
 
+  $info = t('The announcement will be shown on all pages related to your school.');
+  $form['field_announcement_content_pages']['widget']['#default_value'] = $node_ids;
+  $form['field_announcement_content_pages']['widget']['#description'] = $info;
+
+  // Preset units.
   $units = array_filter(
     $entities,
     fn($entity) => $entity->getEntityTypeId() === 'tpr_unit'
   );
   $unit_ids = array_map(fn($entity) => $entity->id(), $units);
 
-  // Preset content pages.
-  $info = t('The announcement will be shown on all pages related to your school.');
-  $form['field_announcement_content_pages']['widget']['#default_value'] = $node_ids;
-  $form['field_announcement_content_pages']['widget']['#description'] = $info;
-  $form['field_announcement_content_pages']['#disabled'] = TRUE;
-
-  // Preset units.
   $form['field_announcement_unit_pages']['widget']['#default_value'] = $unit_ids;
-  $form['field_announcement_unit_pages']['#disabled'] = TRUE;
-
-  // Prevent adding service pages (Palvelusivu)
-  $form['field_announcement_service_pages']['#access'] = FALSE;
 
 }
