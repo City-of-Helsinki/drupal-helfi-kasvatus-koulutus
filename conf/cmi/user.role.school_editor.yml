@@ -10,6 +10,7 @@ dependencies:
     - media.type.helfi_chart
     - media.type.image
     - media.type.remote_video
+    - node.type.announcement
     - node.type.landing_page
     - node.type.news_item
     - node.type.page
@@ -30,7 +31,7 @@ dependencies:
     - toolbar
     - view_unpublished
 id: school_editor
-label: 'Upper secondary school editor'
+label: 'Lukioiden sisällöntuottaja'
 weight: -4
 is_admin: null
 permissions:
@@ -42,6 +43,7 @@ permissions:
   - 'access user profiles'
   - 'cancel account'
   - 'change own username'
+  - 'create announcement content'
   - 'create file media'
   - 'create hel_map media'
   - 'create helfi_chart media'
@@ -49,6 +51,7 @@ permissions:
   - 'create media'
   - 'create remote_video media'
   - 'delete media'
+  - 'delete own announcement content'
   - 'delete own file media'
   - 'delete own files'
   - 'delete own hel_map media'
@@ -56,6 +59,7 @@ permissions:
   - 'delete own image media'
   - 'delete own remote_video media'
   - 'disable own tfa'
+  - 'edit own announcement content'
   - 'edit own file media'
   - 'edit own hel_map media'
   - 'edit own helfi_chart media'
@@ -65,6 +69,7 @@ permissions:
   - 'override landing_page published option'
   - 'override news_item published option'
   - 'override page published option'
+  - 'revert announcement revisions'
   - 'schedule publishing of nodes'
   - 'set news_item published on date'
   - 'setup own tfa'
@@ -73,6 +78,7 @@ permissions:
   - 'use text format full_html'
   - 'use text format minimal'
   - 'view all media revisions'
+  - 'view announcement revisions'
   - 'view any unpublished content'
   - 'view editoria11y checker'
   - 'view own unpublished content'

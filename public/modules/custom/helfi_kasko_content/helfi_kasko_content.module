@@ -12,10 +12,13 @@ use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Session\UserSession;
 use Drupal\helfi_kasko_content\UnitCategoryUtility;
 use Drupal\helfi_platform_config\DTO\ParagraphTypeCollection;
 use Drupal\paragraphs\ParagraphInterface;
+use Drupal\group\Entity\GroupMembership;
 use Drupal\user\Entity\Role;
+
 
 /**
  * Implements hook_ENTITY_TYPE_access().
@@ -329,14 +332,21 @@ function helfi_kasko_content_views_data_alter(array &$data) {
  * Implements hook_form_FORM_ID_alter().
  */
 function helfi_kasko_content_form_node_announcement_form_alter(&$form): void {
-  _helfi_kasko_content_announcement_exception($form);
+  $account = \Drupal::currentUser()->getAccount();
+
+  _helfi_kasko_content_announcement_exception($form, $account);
+  _helfi_kasko_content_announcement_school_editor_exception($form, $account);
 }
 
 /**
  * Implements hook_form_FORM_ID_alter().
  */
 function helfi_kasko_content_form_node_announcement_edit_form_alter(&$form): void {
-  _helfi_kasko_content_announcement_exception($form);
+  /** @var \Drupal\user\Entity\User $account */
+  $account = \Drupal::currentUser()->getAccount();
+
+  _helfi_kasko_content_announcement_exception($form, $account);
+  _helfi_kasko_content_announcement_school_editor_exception($form, $account);
 }
 
 /**
@@ -348,10 +358,10 @@ function helfi_kasko_content_form_node_announcement_edit_form_alter(&$form): voi
  *
  * @param array $form
  *   The form.
+ * @param \Drupal\Core\Session\UserSession $account
+ *   The user account.
  */
-function _helfi_kasko_content_announcement_exception(array &$form): void {
-  /** @var \Drupal\user\Entity\User $account */
-  $account = \Drupal::currentUser()->getAccount();
+function _helfi_kasko_content_announcement_exception(array &$form, UserSession $account): void {
   $user_roles = $account->getRoles(TRUE);
   if (!in_array('comprehensive_school_editor', $user_roles)) {
     return;
@@ -367,7 +377,8 @@ function _helfi_kasko_content_announcement_exception(array &$form): void {
   // in that case, we don't want to alter anything.
   if (
     $account->hasRole('comprehensive_school_editor') &&
-    count($other_user_roles) >= 2
+    count($other_user_roles) >= 2 &&
+    !$account->hasRole('school_editor')
   ) {
     return;
   }
