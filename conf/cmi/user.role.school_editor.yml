@@ -69,7 +69,6 @@ permissions:
   - 'override landing_page published option'
   - 'override news_item published option'
   - 'override page published option'
-  - 'revert announcement revisions'
   - 'schedule publishing of nodes'
   - 'set news_item published on date'
   - 'setup own tfa'
