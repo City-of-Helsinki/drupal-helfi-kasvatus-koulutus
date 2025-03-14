@@ -330,7 +330,7 @@ function helfi_kasko_content_views_data_alter(array &$data) {
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function helfi_kasko_content_form_node_announcement_form_alter(&$form): void {
+function helfi_kasko_content_form_node_announcement_form_alter(&$form, $x): void {
   $account = \Drupal::currentUser()->getAccount();
 
   _helfi_kasko_content_announcement_exception($form, $account);
@@ -340,7 +340,7 @@ function helfi_kasko_content_form_node_announcement_form_alter(&$form): void {
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function helfi_kasko_content_form_node_announcement_edit_form_alter(&$form): void {
+function helfi_kasko_content_form_node_announcement_edit_form_alter(&$form, $x): void {
   /** @var \Drupal\user\Entity\User $account */
   $account = \Drupal::currentUser()->getAccount();
 
@@ -442,7 +442,12 @@ function _helfi_kasko_content_announcement_school_editor_exception(array &$form,
   $membership = reset($groupMemberships);
 
   $entities = $membership->getGroup()->getRelatedEntities();
-  $nodes = array_filter($entities, fn($entity) => $entity->getEntityTypeId() === 'node');
+  $nodes = array_filter(
+    $entities,
+    fn($entity) =>
+      $entity->getEntityTypeId() === 'node' &&
+      $entity->bundle() !== 'news_item'
+  );
   $node_ids = array_map(fn($entity) => $entity->id(), $nodes);
 
   $info = t('The announcement will be shown on all pages related to your school.');
