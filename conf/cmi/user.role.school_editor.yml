@@ -31,7 +31,7 @@ dependencies:
     - toolbar
     - view_unpublished
 id: school_editor
-label: 'Lukioiden sisällöntuottaja'
+label: 'Upper secondary school editor'
 weight: -4
 is_admin: null
 permissions:
