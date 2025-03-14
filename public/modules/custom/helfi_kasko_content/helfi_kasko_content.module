@@ -397,7 +397,7 @@ function _helfi_kasko_content_announcement_exception(array &$form, UserSession $
 }
 
 /**
- * UHF-11889 Allow school editors to create announcements for their group.
+ * UHF-10889 Allow school editors to create announcements for their group.
  *
  * Create announcement which is automatically targeted to all group pages.
  * Allow announcements for unit pages. Prevented site wide announcements.
