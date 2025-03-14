@@ -29,7 +29,7 @@ function helfi_kasko_content_platform_config_grant_permissions() : array {
       'delete own announcement content',
       'edit own announcement content',
       'view announcement revisions',
-    ]
+    ],
   ];
 }
 
