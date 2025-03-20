@@ -49,6 +49,12 @@ msgctxt "Group news archive link"
 msgid "All news"
 msgstr "Alla nyheter"
 
+msgctxt "Group news count"
+msgid "news"
+msgid_plural "news"
+msgstr[0] "nyhet"
+msgstr[1] "nyheter"
+
 msgid "Language of instruction"
 msgstr "Undervisningsspråk"
 

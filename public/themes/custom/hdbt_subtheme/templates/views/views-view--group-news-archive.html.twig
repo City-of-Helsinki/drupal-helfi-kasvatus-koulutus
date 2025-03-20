@@ -1,0 +1,11 @@
+{% embed '@hdbt/component/unit-search.twig' with {
+  title: 'Uusimmat uutiset'|t,
+  }%}
+  {% block count_container%}
+    {%- if total_rows -%}
+      {{ total_rows }} {% trans with {'context': 'Group news count'}%}news{% plural total_rows %}news{% endtrans %}
+    {%- else -%}
+      {{ 'No results'|t({}, {'context' : 'Unit search no results title'}) }}
+    {%- endif -%}
+  {% endblock count_container %}
+{% endembed %}

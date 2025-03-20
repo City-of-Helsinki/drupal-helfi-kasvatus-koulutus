@@ -179,6 +179,7 @@ function helfi_kasko_content_helfi_paragraph_types() : array {
           'vocational_school_search' => 18,
           'high_school_search' => 20,
           'group_news' => 21,
+          'group_news_archive' => 22,
         ],
         'field_lower_content' => [
           'vocational_school_search' => 18,
