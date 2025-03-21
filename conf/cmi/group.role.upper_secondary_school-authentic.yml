@@ -19,6 +19,7 @@ scope: outsider
 global_role: authenticated
 group_type: upper_secondary_school
 permissions:
+  - 'view group_node:announcement entity'
   - 'view group_node:landing_page content'
   - 'view group_node:landing_page entity'
   - 'view group_node:news_item content'
