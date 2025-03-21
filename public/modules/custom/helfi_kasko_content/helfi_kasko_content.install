@@ -128,3 +128,10 @@ function helfi_kasko_content_update_9004() {
     _locale_parse_js_file($file);
   }
 }
+
+/**
+ * UHF-10494 - Adds groups news paragraph to basic page.
+ */
+function helfi_kasko_content_update_9005() {
+  helfi_platform_config_update_paragraph_target_types();
+}

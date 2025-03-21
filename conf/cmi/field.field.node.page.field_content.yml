@@ -15,6 +15,7 @@ dependencies:
     - paragraphs.paragraphs_type.event_list
     - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.group_news
+    - paragraphs.paragraphs_type.group_news_archive
     - paragraphs.paragraphs_type.high_school_search
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.image_gallery
@@ -69,6 +70,7 @@ settings:
       service_list_search: service_list_search
       unit_search: unit_search
       unit_contact_card: unit_contact_card
+      group_news_archive: group_news_archive
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -100,6 +102,9 @@ settings:
         enabled: true
       group_news:
         weight: 21
+        enabled: true
+      group_news_archive:
+        weight: 22
         enabled: true
       high_school_search:
         weight: 20
