@@ -64,6 +64,10 @@ msgid_plural "news"
 msgstr[0] "uutinen"
 msgstr[1] "uutista"
 
+msgctxt "Group news title"
+msgid "Latest news"
+msgstr "Uusimmat uutiset"
+
 msgid "Language of instruction"
 msgstr "Opetuskieli"
 

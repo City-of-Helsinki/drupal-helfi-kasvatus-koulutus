@@ -55,6 +55,10 @@ msgid_plural "news"
 msgstr[0] "nyhet"
 msgstr[1] "nyheter"
 
+msgctxt "Group news title"
+msgid "Latest news"
+msgstr "Senaste nytt"
+
 msgid "Language of instruction"
 msgstr "Undervisningsspråk"
 

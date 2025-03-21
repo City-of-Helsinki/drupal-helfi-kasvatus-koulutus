@@ -1,5 +1,5 @@
 {% embed '@hdbt/component/unit-search.twig' with {
-  title: 'Uusimmat uutiset'|t,
+  title: 'Latest news'|t({}, {'context' : 'Group news title'}),
   }%}
   {% block count_container%}
     {%- if total_rows -%}
