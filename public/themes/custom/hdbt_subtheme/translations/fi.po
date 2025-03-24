@@ -58,6 +58,16 @@ msgctxt "Group news archive link"
 msgid "All news"
 msgstr "Kaikki uutiset"
 
+msgctxt "Group news count"
+msgid "news"
+msgid_plural "news"
+msgstr[0] "uutinen"
+msgstr[1] "uutista"
+
+msgctxt "Group news title"
+msgid "Latest news"
+msgstr "Uusimmat uutiset"
+
 msgid "Language of instruction"
 msgstr "Opetuskieli"
 
