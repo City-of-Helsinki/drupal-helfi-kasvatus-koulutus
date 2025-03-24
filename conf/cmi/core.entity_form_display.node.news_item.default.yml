@@ -71,7 +71,7 @@ third_party_settings:
         description: ''
         required_fields: true
 _core:
-  default_config_hash: 8VB52G7NLFlO7n5sxx7SGXc03Mixt3Kogv33toVIV2Q
+  default_config_hash: 4idwAdzBNTQx52km5yufL0uOiF01vQLSO2JIpnb2AnE
 id: node.news_item.default
 targetEntityType: node
 bundle: news_item
@@ -200,9 +200,9 @@ content:
     third_party_settings: {  }
   simple_sitemap:
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   status:
     type: boolean_checkbox
     weight: 14
