@@ -51,6 +51,7 @@ settings:
       vocational_school_search: vocational_school_search
       high_school_search: high_school_search
       group_news: group_news
+      group_news_archive: group_news_archive
       text: text
       accordion: accordion
       banner: banner
@@ -70,7 +71,6 @@ settings:
       service_list_search: service_list_search
       unit_search: unit_search
       unit_contact_card: unit_contact_card
-      group_news_archive: group_news_archive
     negate: 0
     target_bundles_drag_drop:
       accordion:
