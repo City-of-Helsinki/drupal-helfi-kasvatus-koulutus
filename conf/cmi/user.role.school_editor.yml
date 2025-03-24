@@ -43,6 +43,7 @@ permissions:
   - 'access user profiles'
   - 'cancel account'
   - 'change own username'
+  - 'create announcement content'
   - 'create file media'
   - 'create hel_map media'
   - 'create helfi_chart media'
