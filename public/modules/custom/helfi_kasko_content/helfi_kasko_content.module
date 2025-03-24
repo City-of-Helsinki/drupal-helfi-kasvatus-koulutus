@@ -468,7 +468,8 @@ function _helfi_kasko_content_announcement_school_editor_exception(array &$form,
     $entities,
     fn($entity) =>
       $entity->getEntityTypeId() === 'node' &&
-      $entity->bundle() !== 'news_item'
+      $entity->bundle() !== 'news_item' &&
+      $entity->bundle() !== 'announcement'
   );
   $node_ids = array_map(fn($entity) => $entity->id(), $nodes);
 
