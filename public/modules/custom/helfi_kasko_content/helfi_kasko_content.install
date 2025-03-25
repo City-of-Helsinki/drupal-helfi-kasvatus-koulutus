@@ -11,6 +11,16 @@ use Drupal\Core\Entity\EntityStorageException;
 use Drupal\helfi_kasko_content\SchoolUtility;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\taxonomy\Entity\Vocabulary;
+use Drupal\user\Entity\Role;
+
+/**
+ * Implements hook_install().
+ */
+function helfi_kasko_content_install() : void {
+  if (!Role::load('school_editor')) {
+    Role::create(['id' => 'school_editor', 'label' => 'Upper secondary school editor'])->save();
+  }
+}
 
 /**
  * Set initial vocational study terms.
@@ -117,4 +127,11 @@ function helfi_kasko_content_update_9004() {
   ] as $file) {
     _locale_parse_js_file($file);
   }
+}
+
+/**
+ * UHF-10494 - Adds groups news paragraph to basic page.
+ */
+function helfi_kasko_content_update_9005() {
+  helfi_platform_config_update_paragraph_target_types();
 }

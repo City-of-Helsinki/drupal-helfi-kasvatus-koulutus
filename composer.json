@@ -103,11 +103,10 @@
                 "Duplicate revision(version) tab around Group's admin pages": "https://www.drupal.org/files/issues/2023-12-12/group-revision-tabs-appear-twice-3397063-15.patch"
             },
             "drupal/group_content_menu": {
-                "https://www.drupal.org/project/group_content_menu/issues/3209011": "https://www.drupal.org/files/issues/2021-04-21/group_content_menu-active_trail_cache_problem-3209011-10.patch",
-                "concat array with null fix": "./patches/group_menu_content_array_concat_error.patch"
+                "Fix for a whitescreen caused by merging array with null.": "patches/group_menu_content_array_concat_error.patch"
             },
             "drupal/override_node_options": {
-                "Fix for Adding non-existent permissions to a role is not allowed error during site install.": "./patches/override_node_permissions_missing_dependencies.patch"
+                "Fix for adding non-existent permissions to a role is not allowed error during site install.": "patches/override_node_permissions_missing_dependencies.patch"
             }
         },
         "patchLevel": {

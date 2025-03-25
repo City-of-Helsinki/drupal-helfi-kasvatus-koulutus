@@ -1,7 +1,11 @@
 .news-archive--group-news {
   max-width: $content-width-max;
 
-  .news-listing__item {
-    border-bottom: 1px solid $color-black-5;
+  .unit-search__results {
+    margin-top: $spacing-double;
+  }
+
+  .card--news-item {
+    border: 1px solid $color-black-50;
   }
 }
