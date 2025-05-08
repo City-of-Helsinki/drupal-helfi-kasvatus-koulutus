@@ -7,6 +7,8 @@ module:
   allowed_formats: 0
   basic_auth: 0
   better_exposed_filters: 0
+  big_pipe: 0
+  big_pipe_sessionless: 0
   block: 0
   breakpoint: 0
   ckeditor5: 0
