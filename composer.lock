@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "00858cb4cf249d0c02e8402d847ed05f",
+    "content-hash": "7a86fb01b89d7d3a838aee7099650087",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4688,16 +4688,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "4.14.0",
+            "version": "dev-UHF-X_views_translations",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "4655949a81dd3c49ebdf8861ddd65a64a6f11faf"
+                "reference": "075e7e24591d904e329764076c1f2108f0f22191"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/4655949a81dd3c49ebdf8861ddd65a64a6f11faf",
-                "reference": "4655949a81dd3c49ebdf8861ddd65a64a6f11faf",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/075e7e24591d904e329764076c1f2108f0f22191",
+                "reference": "075e7e24591d904e329764076c1f2108f0f22191",
                 "shasum": ""
             },
             "require": {
@@ -4782,6 +4782,9 @@
                     "drupal/content_lock": {
                         "[#UHF-4553] Fix unlock content button redirect": "https://raw.githubusercontent.com/City-of-Helsinki/drupal-helfi-platform-config/82081691e4a6d05b3716052d5fff46a04027bdc3/patches/content-lock-uhf-4553.patch"
                     },
+                    "drupal/search_api": {
+                        "[#UHF-10647] Patch for fixing install on update hook": "https://raw.githubusercontent.com/City-of-Helsinki/drupal-helfi-platform-config/f9d8086fb9926c7e6fb6a3d446f9644424f9d1f7/patches/UHF-10647-search-api.patch"
+                    },
                     "drupal/core": {
                         "[#UHF-181] Hide untranslated menu links (https://www.drupal.org/project/drupal/issues/3091246)": "https://www.drupal.org/files/issues/2023-12-18/3091246--allow-menu-tree-manipulators-alter--24.patch",
                         "[#UHF-3812] Ajax exposed filters not working for multiple instances of the same Views block placed on one page (https://www.drupal.org/project/drupal/issues/3163299)": "https://www.drupal.org/files/issues/2023-05-07/3163299-104-D10.patch",
@@ -4818,10 +4821,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/4.14.0",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/UHF-X_views_translations",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2025-05-15T10:07:37+00:00"
+            "time": "2025-05-15T19:51:33+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -20519,11 +20522,12 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/helfi_drupal_tools": 20
+        "drupal/helfi_drupal_tools": 20,
+        "drupal/helfi_platform_config": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
+    "platform": [],
+    "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }
