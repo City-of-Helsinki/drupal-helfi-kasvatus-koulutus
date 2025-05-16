@@ -16,6 +16,7 @@ dependencies:
     - field_group
     - hdbt_admin_tools
     - helfi_platform_config
+    - helfi_recommendations
     - media_library
     - paragraphs
     - path
