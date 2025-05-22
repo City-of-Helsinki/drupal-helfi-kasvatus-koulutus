@@ -2,8 +2,9 @@ uuid: e067ff73-3a29-4fb6-a1bb-442994b3cbd5
 langcode: en
 status: true
 dependencies:
+  config:
+    - group_content_menu.group_content_menu_type.kasko_group_menu
   module:
-    - block
     - group
     - group_content_menu
   theme:
@@ -25,8 +26,10 @@ settings:
   context_mapping:
     group: '@group.group_route_context:group'
   level: 2
-  depth: 2
+  depth: 0
   expand_all_items: true
+  relative_visibility: false
+  theme_hook_suggestion: ''
 visibility:
   group_type:
     id: group_type
