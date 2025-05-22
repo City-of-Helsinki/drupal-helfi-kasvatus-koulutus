@@ -307,3 +307,14 @@ function hdbt_subtheme_preprocess_field(&$variables) {
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function hdbt_subtheme_preprocess_menu(&$variables): void {
+  // Menu, mobile menu, fallback menu and sidebar menu tree depth.
+  // Counting from "instance", "main level", "level 3", "level 4", "level 5"...
+  $menu_depth = 6;
+  $variables['menu_depth'] = $menu_depth;
+  $variables['#attached']['drupalSettings']['menu_depth'] = $menu_depth;
+}
