@@ -4346,16 +4346,16 @@
         },
         {
             "name": "drupal/hdbt",
-            "version": "6.11.7",
+            "version": "6.11.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "bb201a586b67a0a7b9c4fd3b0420504532d6e3a3"
+                "reference": "c437ec7ef1ed28b78fd8ad070556099233754609"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/bb201a586b67a0a7b9c4fd3b0420504532d6e3a3",
-                "reference": "bb201a586b67a0a7b9c4fd3b0420504532d6e3a3",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/c437ec7ef1ed28b78fd8ad070556099233754609",
+                "reference": "c437ec7ef1ed28b78fd8ad070556099233754609",
                 "shasum": ""
             },
             "require": {
@@ -4374,10 +4374,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.11.7",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.11.8",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2025-05-26T08:34:18+00:00"
+            "time": "2025-05-28T08:23:51+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
@@ -4650,16 +4650,16 @@
         },
         {
             "name": "drupal/helfi_navigation",
-            "version": "2.2.7",
+            "version": "2.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-navigation.git",
-                "reference": "fe96472f7c317bfac99d4a88ec1bb1e91f17edc4"
+                "reference": "86e20d6c3300f20ab6da4ddf49f9b1afc0178570"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-navigation/zipball/fe96472f7c317bfac99d4a88ec1bb1e91f17edc4",
-                "reference": "fe96472f7c317bfac99d4a88ec1bb1e91f17edc4",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-navigation/zipball/86e20d6c3300f20ab6da4ddf49f9b1afc0178570",
+                "reference": "86e20d6c3300f20ab6da4ddf49f9b1afc0178570",
                 "shasum": ""
             },
             "require": {
@@ -4677,23 +4677,23 @@
             ],
             "description": "Helfi - Navigation",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-navigation/tree/2.2.7",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-navigation/tree/2.2.9",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-navigation/issues"
             },
-            "time": "2025-02-21T14:53:43+00:00"
+            "time": "2025-05-28T11:33:29+00:00"
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "4.14.6",
+            "version": "4.14.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "f2b1e2e8a521e24bf2a660389456e6935b7f5592"
+                "reference": "29e6301d1817edaba1e5dcb03910f5b601314d67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/f2b1e2e8a521e24bf2a660389456e6935b7f5592",
-                "reference": "f2b1e2e8a521e24bf2a660389456e6935b7f5592",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/29e6301d1817edaba1e5dcb03910f5b601314d67",
+                "reference": "29e6301d1817edaba1e5dcb03910f5b601314d67",
                 "shasum": ""
             },
             "require": {
@@ -4817,10 +4817,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/4.14.6",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/4.14.8",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2025-05-26T08:34:26+00:00"
+            "time": "2025-05-28T10:20:18+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -6868,6 +6868,10 @@
                 {
                     "name": "benjy",
                     "homepage": "https://www.drupal.org/user/1852732"
+                },
+                {
+                    "name": "dieterholvoet",
+                    "homepage": "https://www.drupal.org/user/3567222"
                 },
                 {
                     "name": "jeroent",
@@ -11111,24 +11115,25 @@
         },
         {
             "name": "phrity/util-errorhandler",
-            "version": "1.1.1",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirn-se/phrity-util-errorhandler.git",
-                "reference": "483228156e06673963902b1cc1e6bd9541ab4d5e"
+                "reference": "61813189e4525fde4aecad3df849829d526d6f76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirn-se/phrity-util-errorhandler/zipball/483228156e06673963902b1cc1e6bd9541ab4d5e",
-                "reference": "483228156e06673963902b1cc1e6bd9541ab4d5e",
+                "url": "https://api.github.com/repos/sirn-se/phrity-util-errorhandler/zipball/61813189e4525fde4aecad3df849829d526d6f76",
+                "reference": "61813189e4525fde4aecad3df849829d526d6f76",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.4 | ^8.0"
+                "php": "^8.1"
             },
             "require-dev": {
                 "php-coveralls/php-coveralls": "^2.0",
-                "phpunit/phpunit": "^9.0 | ^10.0 | ^11.0",
+                "phpstan/phpstan": "^2.0",
+                "phpunit/phpunit": "^10.0 | ^11.0  | ^12.0",
                 "squizlabs/php_codesniffer": "^3.5"
             },
             "type": "library",
@@ -11156,9 +11161,9 @@
             ],
             "support": {
                 "issues": "https://github.com/sirn-se/phrity-util-errorhandler/issues",
-                "source": "https://github.com/sirn-se/phrity-util-errorhandler/tree/1.1.1"
+                "source": "https://github.com/sirn-se/phrity-util-errorhandler/tree/1.2.0"
             },
-            "time": "2024-09-12T06:49:16+00:00"
+            "time": "2025-05-26T18:26:51+00:00"
         },
         {
             "name": "politsin/jquery-ui-touch-punch",
