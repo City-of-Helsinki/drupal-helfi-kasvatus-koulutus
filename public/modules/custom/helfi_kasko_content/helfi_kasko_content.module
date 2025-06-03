@@ -8,14 +8,12 @@
 declare(strict_types=1);
 
 use Drupal\Core\Access\AccessResult;
-use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Session\UserSession;
 use Drupal\helfi_kasko_content\UnitCategoryUtility;
 use Drupal\helfi_platform_config\DTO\ParagraphTypeCollection;
-use Drupal\paragraphs\ParagraphInterface;
 use Drupal\group\Entity\GroupMembership;
 use Drupal\user\Entity\Role;
 
@@ -94,42 +92,10 @@ function helfi_kasko_content_form_views_exposed_form_alter(&$form, $form_state) 
 }
 
 /**
- * Implements hook_preprocess_HOOK().
+ * Implements hook_first_paragraph_grey_alter().
  */
-function helfi_kasko_content_preprocess_block(&$variables) {
-  if ($variables['plugin_id'] !== 'hero_block') {
-    return;
-  }
-
-  // Get current entity and entity version.
-  $entity_matcher = \Drupal::service('helfi_platform_config.entity_version_matcher')->getType();
-
-  /** @var \Drupal\Core\Entity\ContentEntityInterface $entity */
-  $entity = $entity_matcher['entity'];
-
-  // No need to continue if current entity doesn't have hero set.
-  if (
-    !$entity instanceof ContentEntityInterface ||
-    !$entity->hasField('field_has_hero') ||
-    !(bool) $entity->get('field_has_hero')->value ||
-    $entity->get('field_content')->isEmpty()
-  ) {
-    return;
-  }
-  $paragraph = $entity->get('field_content')->first()->get('entity')->getValue();
-
-  if (
-    empty($paragraph) ||
-    !in_array($entity->bundle(), ['landing_page', 'page']) ||
-    !$paragraph instanceof ParagraphInterface
-  ) {
-    return;
-  }
-  $first_paragraph_gray = &$variables['content']['hero_block']['#first_paragraph_grey'];
-
-  // Check if the content field first paragraph is unit search clone
-  // and add classes accordingly.
-  $paragraph_types = [
+function helfi_kasko_content_first_paragraph_grey_alter(array &$paragraphs): void {
+  $paragraphs = [
     'after_school_activity_search',
     'daycare_search',
     'high_school_search',
@@ -137,35 +103,6 @@ function helfi_kasko_content_preprocess_block(&$variables) {
     'school_search',
     'vocational_school_search',
   ];
-
-  if (in_array($paragraph->getType(), $paragraph_types)) {
-    $first_paragraph_gray = 'has-first-gray-bg-block';
-
-    // If lead_in field has value, unset 1st gray paragraph class.
-    if (
-      $entity->hasField('field_lead_in') &&
-      // @phpstan-ignore-next-line
-      !$entity->field_lead_in->isEmpty()
-    ) {
-      $first_paragraph_gray = '';
-      return;
-    }
-
-    // If table of contents is enabled, unset 1st gray paragraph class.
-    if (
-      $entity->hasField('toc_enabled') &&
-      // @phpstan-ignore-next-line
-      $entity->toc_enabled->value == TRUE
-    ) {
-      $first_paragraph_gray = '';
-      return;
-    }
-
-    // Special cases if the node type is page.
-    if ($entity->bundle() === 'page') {
-      $first_paragraph_gray = 'has-first-gray-bg-block--desktop';
-    }
-  }
 }
 
 /**
