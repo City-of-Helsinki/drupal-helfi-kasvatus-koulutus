@@ -593,7 +593,16 @@ display:
         - url.query_args
         - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.after_school_activity_card'
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.comprehensive_school_card'
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.default'
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.high_school_card'
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.minimal'
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.teaser'
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.teaser_with_image'
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.vocational_school_card'
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.wide_teaser'
   block:
     id: block
     display_title: Block
@@ -609,4 +618,13 @@ display:
         - url.query_args
         - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.after_school_activity_card'
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.comprehensive_school_card'
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.default'
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.high_school_card'
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.minimal'
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.teaser'
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.teaser_with_image'
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.vocational_school_card'
+        - 'config:core.entity_view_display.tpr_unit.tpr_unit.wide_teaser'
