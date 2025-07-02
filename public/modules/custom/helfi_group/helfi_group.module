@@ -187,7 +187,7 @@ function helfi_group_form_menu_link_content_form_alter(&$form, FormStateInterfac
  * Implements hook_module_implements_alter().
  *
  * #UHF-8926 the form alter must be run after group content menu's alter.
- * Otherwise the changes made in "menu"-render array would be overridden.
+ * Otherwise, the changes made in "menu"-render array would be overridden.
  */
 function helfi_group_module_implements_alter(&$implementations, $hook) : void {
   if ($hook === 'form_alter' && isset($implementations['helfi_group'])) {
@@ -212,9 +212,11 @@ function helfi_group_form_node_form_alter(
 
   if (isset($form['menu']) && array_key_exists('link', $form['menu'])) {
     if ($entity instanceof NodeInterface) {
+      /** @var \Drupal\node\NodeTypeInterface $type */
+      $type = $entity->get('type')
+        ->entity;
 
-      $type_menus_ids = $entity->get('type')
-        ->entity
+      $type_menus_ids = $type
         ->getThirdPartySetting('menu_ui', 'available_menus', ['main']);
 
       if (empty($type_menus_ids)) {
