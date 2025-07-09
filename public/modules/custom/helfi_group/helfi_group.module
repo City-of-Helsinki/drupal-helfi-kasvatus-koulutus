@@ -17,6 +17,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\helfi_group\UnitFormAlter;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\node\NodeInterface;
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -186,7 +187,7 @@ function helfi_group_form_menu_link_content_form_alter(&$form, FormStateInterfac
  * Implements hook_module_implements_alter().
  *
  * #UHF-8926 the form alter must be run after group content menu's alter.
- * Otherwise the changes made in "menu"-render array would be overridden.
+ * Otherwise, the changes made in "menu"-render array would be overridden.
  */
 function helfi_group_module_implements_alter(&$implementations, $hook) : void {
   if ($hook === 'form_alter' && isset($implementations['helfi_group'])) {
@@ -205,8 +206,28 @@ function helfi_group_form_node_form_alter(
 ): void {
   $form['actions']['submit']['#submit'][] = 'helfi_group_menuitem_set_content_translation_status';
 
-  if ($form['menu'] && array_key_exists('link', $form['menu'])) {
+  $formObject = $form_state->getFormObject();
+  assert($formObject instanceof EntityFormInterface);
+  $entity = $formObject->getEntity();
+
+  if (isset($form['menu']) && array_key_exists('link', $form['menu'])) {
+    if ($entity instanceof NodeInterface) {
+      /** @var \Drupal\node\NodeTypeInterface $type */
+      $type = $entity->get('type')
+        ->entity;
+
+      $type_menus_ids = $type
+        ->getThirdPartySetting('menu_ui', 'available_menus', ['main']);
+
+      if (empty($type_menus_ids)) {
+        // Hide menu selector if node type has no available menus.
+        $form['menu']['#access'] = FALSE;
+
+        return;
+      }
+    }
     $menu_parent = $form['menu']['link']['menu_parent']['#default_value'];
+
     if (!$menu_parent) {
       return;
     }
@@ -215,9 +236,6 @@ function helfi_group_form_node_form_alter(
     if (!str_contains($menu_name, 'group')) {
       return;
     }
-    $formObject = $form_state->getFormObject();
-    assert($formObject instanceof EntityFormInterface);
-    $entity = $formObject->getEntity();
 
     $result = \Drupal::entityQuery('menu_link_content')
       ->condition('link.uri', "entity:node/{$entity->id()}")
