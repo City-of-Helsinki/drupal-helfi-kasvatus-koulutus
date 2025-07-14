@@ -3,17 +3,19 @@
 }
 
 .unit__ontologyword-details__schoolyear {
-  @include heading-hyphens;
-  @include font('h4');
   display: block;
   margin-top: $spacing;
   padding-top: $spacing;
+
+  @include heading-hyphens;
+  @include font('h4');
 }
 
 .unit__ontologyword-details__detail-group {
-  @include font('h5');
   margin-bottom: $spacing-half;
   margin-top: $spacing-and-half;
+
+  @include font('h5');
 }
 
 .unit__ontologyword-details-row {
@@ -21,8 +23,9 @@
   margin-bottom: $spacing;
 
   .unit__ontologyword-details-row__label {
-    @include font('h6');
     align-items: flex-start;
     display: flex;
+
+    @include font('h6');
   }
 }
