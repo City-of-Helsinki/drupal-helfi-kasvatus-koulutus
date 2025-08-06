@@ -5,11 +5,7 @@
  */
 #}
 
-{% embed '@hdbt/component/content-list-with-count.twig' with { 
-  modifier_class: [
-    'views--unit-search--large-volume',
-  ]
-}%}
+{% embed '@hdbt/component/content-list-with-count.twig' %}
   {% block count_container%}
     {%- if total_rows -%}
       {{ total_rows }} {% trans with {'context': 'Comprehensive school search count'}%}school{% plural total_rows %}schools{% endtrans %}
