@@ -3565,30 +3565,32 @@
         },
         {
             "name": "drupal/external_entities",
-            "version": "2.0.0-beta1",
+            "version": "3.0.0-beta5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/external_entities.git",
-                "reference": "8.x-2.0-beta1"
+                "reference": "3.0.0-beta5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/external_entities-8.x-2.0-beta1.zip",
-                "reference": "8.x-2.0-beta1",
-                "shasum": "6aea914a6037e354e422d44955eebca878e27059"
+                "url": "https://ftp.drupal.org/files/projects/external_entities-3.0.0-beta5.zip",
+                "reference": "3.0.0-beta5",
+                "shasum": "44bc3811fd70b7c4b4f1e9718b23644c737071ce"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9 || ^10",
-                "galbar/jsonpath": "^2.0"
+                "drupal/core": "^10.1 || ^11",
+                "galbar/jsonpath": "^2.0||^3.0"
             },
             "require-dev": {
-                "drupal/inline_entity_form": "^1.0"
+                "drupal/dbxschema": "*",
+                "drupal/inline_entity_form": "^3.0@RC",
+                "drupal/pathauto": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.0-beta1",
-                    "datestamp": "1706886572",
+                    "version": "3.0.0-beta5",
+                    "datestamp": "1744822161",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -4318,16 +4320,16 @@
         },
         {
             "name": "drupal/hdbt",
-            "version": "6.14.3",
+            "version": "6.14.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "ade6da1f464774b9a6800b6724228a373d4ad061"
+                "reference": "8f2ccd10ba031e4f7048793893d7556ecd14f1b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/ade6da1f464774b9a6800b6724228a373d4ad061",
-                "reference": "ade6da1f464774b9a6800b6724228a373d4ad061",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/8f2ccd10ba031e4f7048793893d7556ecd14f1b7",
+                "reference": "8f2ccd10ba031e4f7048793893d7556ecd14f1b7",
                 "shasum": ""
             },
             "require": {
@@ -4346,10 +4348,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.14.3",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.14.4",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2025-09-05T11:02:51+00:00"
+            "time": "2025-09-10T10:46:32+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
@@ -4655,16 +4657,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "4.16.17",
+            "version": "4.16.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "f452dca4f8ac10fdc8b8e7a53fcbb58fde56a2c3"
+                "reference": "6428ed790315cf281c539c9d5fc92cdd5b2ea491"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/f452dca4f8ac10fdc8b8e7a53fcbb58fde56a2c3",
-                "reference": "f452dca4f8ac10fdc8b8e7a53fcbb58fde56a2c3",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/6428ed790315cf281c539c9d5fc92cdd5b2ea491",
+                "reference": "6428ed790315cf281c539c9d5fc92cdd5b2ea491",
                 "shasum": ""
             },
             "require": {
@@ -4685,7 +4687,7 @@
                 "drupal/elasticsearch_connector": "^8.0@alpha",
                 "drupal/entity_browser": "^2.5",
                 "drupal/entity_usage": "^2.0@beta",
-                "drupal/external_entities": "^2.0@beta",
+                "drupal/external_entities": "^3.0",
                 "drupal/field_group": "^3.1",
                 "drupal/focal_point": "^2.0",
                 "drupal/gin_toolbar": "^2.1",
@@ -4787,10 +4789,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/4.16.17",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/4.16.19",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2025-09-08T09:37:26+00:00"
+            "time": "2025-09-10T08:31:13+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -5802,7 +5804,7 @@
                 "drupal/hal": "^1 || ^2 || ^9",
                 "drupal/metatag_dc": "*",
                 "drupal/metatag_open_graph": "*",
-                "drupal/page_manager": "^4.0",
+                "drupal/page_manager": "*",
                 "drupal/redirect": "^1.0",
                 "ergebnis/composer-normalize": "*",
                 "mpyw/phpunit-patch-serializable-comparison": "*"
@@ -8758,16 +8760,16 @@
         },
         {
             "name": "galbar/jsonpath",
-            "version": "2.1",
+            "version": "3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Galbar/JsonPath-PHP.git",
-                "reference": "346de727387b46148562209a0df2b9ae6cb551cd"
+                "reference": "61bfdd51729ac95413aaf64112b93b6fb3dbd786"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Galbar/JsonPath-PHP/zipball/346de727387b46148562209a0df2b9ae6cb551cd",
-                "reference": "346de727387b46148562209a0df2b9ae6cb551cd",
+                "url": "https://api.github.com/repos/Galbar/JsonPath-PHP/zipball/61bfdd51729ac95413aaf64112b93b6fb3dbd786",
+                "reference": "61bfdd51729ac95413aaf64112b93b6fb3dbd786",
                 "shasum": ""
             },
             "require": {
@@ -8803,9 +8805,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Galbar/JsonPath-PHP/issues",
-                "source": "https://github.com/Galbar/JsonPath-PHP/tree/2.1"
+                "source": "https://github.com/Galbar/JsonPath-PHP/tree/3.0"
             },
-            "time": "2022-08-18T13:55:30+00:00"
+            "time": "2023-03-05T19:47:06+00:00"
         },
         {
             "name": "grasmash/expander",
