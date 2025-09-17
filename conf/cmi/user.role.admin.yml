@@ -33,6 +33,7 @@ dependencies:
     - hdbt_cookie_banner
     - helfi_api_base
     - helfi_kasko_content
+    - helfi_recommendations
     - helfi_tpr
     - locale
     - media
@@ -248,6 +249,7 @@ permissions:
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view page revisions'
+  - 'view recommendation score'
   - 'view remote entities'
   - 'view scheduled content'
   - 'view the administration theme'
