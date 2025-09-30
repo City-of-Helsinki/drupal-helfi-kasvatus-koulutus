@@ -2,16 +2,15 @@ uuid: 024e5ca2-65fb-4551-9aec-c41580fac205
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.paragraph.field_vs_search_description
+    - paragraphs.paragraphs_type.vocational_school_search
   module:
-    - allowed_formats
     - text
   enforced:
     config:
       - field.storage.paragraph.field_vs_search_description
       - paragraphs.paragraphs_type.vocational_school_search
-third_party_settings:
-  allowed_formats:
-    allowed_formats: {  }
 id: paragraph.vocational_school_search.field_vs_search_description
 field_name: field_vs_search_description
 entity_type: paragraph

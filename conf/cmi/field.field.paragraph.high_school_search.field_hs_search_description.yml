@@ -6,11 +6,7 @@ dependencies:
     - field.storage.paragraph.field_hs_search_description
     - paragraphs.paragraphs_type.high_school_search
   module:
-    - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    allowed_formats: {  }
 id: paragraph.high_school_search.field_hs_search_description
 field_name: field_hs_search_description
 entity_type: paragraph
