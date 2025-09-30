@@ -6,11 +6,7 @@ dependencies:
     - field.storage.paragraph.field_playground_search_desc
     - paragraphs.paragraphs_type.playground_search
   module:
-    - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    allowed_formats: {  }
 id: paragraph.playground_search.field_playground_search_desc
 field_name: field_playground_search_desc
 entity_type: paragraph

@@ -6,11 +6,7 @@ dependencies:
     - field.storage.paragraph.field_after_school_search_desc
     - paragraphs.paragraphs_type.after_school_activity_search
   module:
-    - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    allowed_formats: {  }
 id: paragraph.after_school_activity_search.field_after_school_search_desc
 field_name: field_after_school_search_desc
 entity_type: paragraph

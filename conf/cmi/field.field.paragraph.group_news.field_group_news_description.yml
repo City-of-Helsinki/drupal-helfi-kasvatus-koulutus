@@ -6,11 +6,7 @@ dependencies:
     - field.storage.paragraph.field_group_news_description
     - paragraphs.paragraphs_type.group_news
   module:
-    - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    allowed_formats: {  }
 id: paragraph.group_news.field_group_news_description
 field_name: field_group_news_description
 entity_type: paragraph
