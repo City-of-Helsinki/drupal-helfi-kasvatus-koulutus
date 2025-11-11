@@ -1,3 +1,4 @@
+/* stylelint-disable max-nesting-depth */
 // Use Dart Sass math module to perform calculations.
 // https://sass-lang.com/documentation/modules/math
 @use "sass:math";
@@ -6,7 +7,7 @@
 @mixin font-size($font-size, $line-height: "") {
   @if $font-size == 'inherit' {
     @error 'No inherit values allowed in font-size mixin!';
-  } @else if unit($font-size) == 'rem' {
+  } @else if math.unit($font-size) == 'rem' {
     font-size: $font-size;
   } @else {
     font-size: math.div($font-size, $base-font-size) * 1rem;
@@ -15,21 +16,21 @@
   // Handle the line-height.
   @if $line-height != "" {
     // Check if line-height is in px.
-    @if unit($line-height) == 'px' {
+    @if math.unit($line-height) == 'px' {
       line-height: math.div($line-height, $base-font-size) * 1rem;
-    }
-    @else {
+    } @else {
       // Check if line-height is in rem and handle the line-height.
-      @if unit($line-height) == 'rem' {
+      @if math.unit($line-height) == 'rem' {
         line-height: $line-height;
       }
+
       // The line-height is a multiplier.
       @else {
         $font-size-px: nounit($font-size);
         $base-font-size-px: nounit($base-font-size);
 
         // Convert the font-size if it is in rem.
-        @if unit($font-size) == 'rem' {
+        @if math.unit($font-size) == 'rem' {
           $font-size-px: nounit($font-size) * nounit($base-font-size);
         }
 
