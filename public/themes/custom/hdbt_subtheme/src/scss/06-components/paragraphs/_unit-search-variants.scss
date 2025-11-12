@@ -1,3 +1,4 @@
+/* stylelint-disable max-nesting-depth -- @todo UHF-12501 */
 .unit-search--high-school .unit-search__content .views-exposed-form,
 .unit-search--vocational-school .unit-search__content .views-exposed-form {
   @include breakpoint($breakpoint-m) {
