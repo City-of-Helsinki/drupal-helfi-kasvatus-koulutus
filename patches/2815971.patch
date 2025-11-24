@@ -1,5 +1,4 @@
 From 348d1b5d84d55378c120ff5acb60b3b01e55f666 Mon Sep 17 00:00:00 2001
-From: Karl Shea <karl@weilstreet.com>
 Date: Mon, 6 May 2024 14:52:11 -0500
 Subject: [PATCH 01/10] Patch #52
 
@@ -226,7 +225,6 @@ GitLab
 
 
 From 258bd1a66ce96c3218431459d22ae09c62976656 Mon Sep 17 00:00:00 2001
-From: Karl Shea <karl@weilstreet.com>
 Date: Mon, 6 May 2024 14:57:14 -0500
 Subject: [PATCH 02/10] Use EntityInterface instead of NodeInterface
 
@@ -262,7 +260,6 @@ GitLab
 
 
 From e48b7b2260ce790a69b0b8b2ae60d513593bb2e6 Mon Sep 17 00:00:00 2001
-From: Karl Shea <karl@weilstreet.com>
 Date: Mon, 6 May 2024 15:01:56 -0500
 Subject: [PATCH 03/10] Use group_content
 
@@ -302,7 +299,6 @@ GitLab
 
 
 From 8872744a50e62d0bacbb0af4c785443ede991c87 Mon Sep 17 00:00:00 2001
-From: Scott Joudry <sj@slydevil.com>
 Date: Fri, 12 Jul 2024 16:05:28 -0300
 Subject: [PATCH 04/10] For non-group permissions, only the group id is
  available from the parameters. Check for that.
@@ -365,7 +361,6 @@ GitLab
 
 
 From 4c58cf891cebbeb5203d95cd790ac76b0a939c7f Mon Sep 17 00:00:00 2001
-From: Karl Shea <karl@weilstreet.com>
 Date: Fri, 1 Nov 2024 15:01:50 -0500
 Subject: [PATCH 05/10] Fix imports
 
@@ -403,7 +398,6 @@ GitLab
 
 
 From 14a2584787930871ba91d8613d0c281342a08a76 Mon Sep 17 00:00:00 2001
-From: Karl Shea <karl@weilstreet.com>
 Date: Fri, 1 Nov 2024 15:07:22 -0500
 Subject: [PATCH 06/10] phpcs
 
@@ -476,7 +470,6 @@ GitLab
 
 
 From 35a7d2c3d3ed3e375e5428d0b59c450e38157e02 Mon Sep 17 00:00:00 2001
-From: Karl Shea <karl@weilstreet.com>
 Date: Fri, 1 Nov 2024 15:20:06 -0500
 Subject: [PATCH 07/10] Fix phpstan?
 
@@ -504,7 +497,6 @@ GitLab
 
 
 From 3a790565df6f29e0f6d854face7c3462bee97788 Mon Sep 17 00:00:00 2001
-From: Karl Shea <karl@weilstreet.com>
 Date: Fri, 1 Nov 2024 15:26:55 -0500
 Subject: [PATCH 08/10] Import order
 
@@ -531,7 +523,6 @@ GitLab
 
 
 From 93a091ea4ff364ad607d46e703c368facd5dffc0 Mon Sep 17 00:00:00 2001
-From: Karl Shea <karl@weilstreet.com>
 Date: Fri, 1 Nov 2024 15:39:57 -0500
 Subject: [PATCH 09/10] phpcs silliness
 
@@ -558,7 +549,6 @@ GitLab
 
 
 From c498696fdd84895cd9d1a8fedd033f8a4bb9af9d Mon Sep 17 00:00:00 2001
-From: Karl Shea <karl@weilstreet.com>
 Date: Fri, 1 Nov 2024 15:48:20 -0500
 Subject: [PATCH 10/10] Insanity
 
