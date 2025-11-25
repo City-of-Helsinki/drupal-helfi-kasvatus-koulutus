@@ -11,11 +11,3 @@ high-school-search:
   dependencies:
     - hdbt/tabs
     - core/drupal
-
-high-school-mobile-menu:
-  version: 1.x
-  js:
-    dist/js/high-school-mobile-menu.min.js: { }
-  dependencies:
-    - core/drupal
-    - core/jquery
