@@ -41,6 +41,8 @@ display:
           text: 'Radera nod'
         dropbutton:
           label: Funktioner
+        edit_node:
+          text: Redigera
       filters:
         status:
           expose:

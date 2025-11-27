@@ -1,4 +1,4 @@
-label: 'Ajastettu sisältö'
+label: Ajastettu
 description: 'Etsi ja ylläpidä ajastettua sisältöä.'
 display:
   default:
@@ -56,7 +56,7 @@ display:
             next: Seuraava
             first: Ensimmäinen
             last: Viimeinen
-      title: 'Ajastettu sisältö'
+      title: Ajastettu
       empty:
         area_text_custom:
           content: 'Ei vielä ajastettua sisältöä.'
@@ -89,4 +89,4 @@ display:
       empty:
         area_text_custom:
           content: '{{ arguments.uid }} käyttäjä ei ole ajastanut sisältöä.'
-    display_title: Käyttäjäprofiili
+    display_title: Käyttäjä
