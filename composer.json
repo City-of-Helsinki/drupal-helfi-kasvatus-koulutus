@@ -9,9 +9,9 @@
     "require": {
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.6.7",
-        "drupal/better_exposed_filters": "^6.0",
-        "drupal/core-composer-scaffold": "^10|^11",
-        "drupal/flexible_permissions": "^1.0",
+        "drupal/better_exposed_filters": "^7.0",
+        "drupal/core-composer-scaffold": "^10 || ^11",
+        "drupal/flexible_permissions": "^2.0",
         "drupal/group": "^2.0",
         "drupal/group_content_menu": "^2.0",
         "drupal/hdbt": "^6.0",
@@ -19,7 +19,7 @@
         "drupal/helfi_azure_fs": "^2.0",
         "drupal/helfi_drupal_tools": "dev-main",
         "drupal/helfi_navigation": "^2.0",
-        "drupal/helfi_platform_config": "^4.0",
+        "drupal/helfi_platform_config": "^5.0",
         "drupal/helfi_proxy": "^3.0",
         "drupal/helfi_tpr": "^2.0",
         "drupal/helfi_tunnistamo": "^3",
@@ -31,7 +31,7 @@
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
         "dg/bypass-finals": "^1.5",
-        "drupal/core-dev": "^10|^11",
+        "drupal/core-dev": "^10 || ^11",
         "jangregor/phpstan-prophecy": "^1.0",
         "phpstan/phpstan-deprecation-rules": "^1.1",
         "weitzman/drupal-test-traits": "^2.1"
@@ -99,7 +99,7 @@
         },
         "patches": {
             "drupal/group": {
-                "https://www.drupal.org/project/group/issues/2815971": "https://www.drupal.org/files/issues/2023-06-13/group-context-2815971-46.patch",
+                "https://www.drupal.org/project/group/issues/2815971": "./patches/2815971.patch",
                 "Duplicate revision(version) tab around Group's admin pages": "https://www.drupal.org/files/issues/2023-12-12/group-revision-tabs-appear-twice-3397063-15.patch"
             },
             "drupal/override_node_options": {

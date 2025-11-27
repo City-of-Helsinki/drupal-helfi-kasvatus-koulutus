@@ -2,18 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Drupal\helfi_group;
+namespace Drupal\helfi_group\Hook;
 
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityFormInterface;
 use Drupal\Core\Entity\EntityRepositoryInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Hook\Attribute\Hook;
+use Drupal\Core\Hook\Order\OrderAfter;
+use Drupal\Core\Menu\MenuParentFormSelectorInterface;
 use Drupal\Core\Plugin\Context\ContextRepositoryInterface;
+use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\group_content_menu\NodeFormAlter;
+use Drupal\group_content_menu\Hook\NodeFormAlter;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\menu_link_content\MenuLinkContentInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Helper class to handle altering unit forms.
@@ -22,28 +26,14 @@ class UnitFormAlter extends NodeFormAlter {
 
   use StringTranslationTrait;
 
-  /**
-   * The context repository.
-   *
-   * @var \Drupal\Core\Plugin\Context\ContextRepositoryInterface
-   */
-  private ContextRepositoryInterface $contextRepository;
-
-  /**
-   * The entity repository.
-   *
-   * @var \Drupal\Core\Entity\EntityRepositoryInterface
-   */
-  private EntityRepositoryInterface $entityRepository;
-
-  /**
-   * {@inheritdoc}
-   */
-  public static function create(ContainerInterface $container) : self {
-    $instance = parent::create($container);
-    $instance->contextRepository = $container->get('context.repository');
-    $instance->entityRepository = $container->get('entity.repository');
-    return $instance;
+  public function __construct(
+    private ContextRepositoryInterface $contextRepository,
+    private EntityRepositoryInterface $entityRepository,
+    EntityTypeManagerInterface $entityTypeManager,
+    MenuParentFormSelectorInterface $menuParentSelector,
+    AccountProxyInterface $currentUser,
+  ) {
+    parent::__construct($entityTypeManager, $menuParentSelector, $currentUser);
   }
 
   /**
@@ -57,6 +47,7 @@ class UnitFormAlter extends NodeFormAlter {
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
+  #[Hook(hook: 'form_tpr_unit_form_alter', order: new OrderAfter(['menu_ui']))]
   public function alter(array &$form, FormStateInterface $form_state): void {
     $formObject = $form_state->getFormObject();
     assert($formObject instanceof EntityFormInterface);
