@@ -39,3 +39,5 @@ content:
 hidden:
   description: true
   path: true
+  publish_on: true
+  unpublish_on: true

@@ -61,7 +61,7 @@ display:
             next: Nästa
             first: Första
             last: Sista
-      title: 'Schemalagt innehåll'
+      title: Schemalagd
       empty:
         area_text_custom:
           content: 'Inget schemalagt innehåll.'
@@ -83,5 +83,6 @@ display:
         uid:
           exception:
             title: Alla
-label: 'Schemalagt innehåll'
+    display_title: Användare
+label: Schemalagd
 description: 'Hitta och hantera schemalagt innehåll.'
