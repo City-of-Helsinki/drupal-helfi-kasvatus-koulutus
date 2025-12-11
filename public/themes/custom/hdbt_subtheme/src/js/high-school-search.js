@@ -15,9 +15,7 @@
           select.dataset.ariaDisabled = 'true';
         } else {
           helpText.textContent = '';
-          select.parentElement?.classList.remove(
-            'hdbt--select-wrapper--disabled',
-          );
+          select.parentElement?.classList.remove('hdbt--select-wrapper--disabled');
           select.disabled = false;
           select.dataset.ariaDisabled = 'false';
         }
@@ -28,9 +26,7 @@
       const disableOtherSelects = (selected, selectElements) => {
         if (selected.value !== 'All') {
           /** biome-ignore lint/suspicious/useIterableCallbackReturn: @todo UHF-12501 */
-          selectElements.forEach((select) =>
-            toggleSelectActivity(select, select !== selected),
-          );
+          selectElements.forEach((select) => toggleSelectActivity(select, select !== selected));
         } else {
           selectElements.forEach((select) => {
             if (select !== selected) {
@@ -47,14 +43,10 @@
       );
 
       /** biome-ignore lint/suspicious/useIterableCallbackReturn: @todo UHF-12501 */
-      selectElements.forEach((select) =>
-        disableOtherSelects(select, selectElements),
-      );
+      selectElements.forEach((select) => disableOtherSelects(select, selectElements));
 
       selectElements.forEach((select) => {
-        select.addEventListener('change', () =>
-          disableOtherSelects(select, selectElements),
-        );
+        select.addEventListener('change', () => disableOtherSelects(select, selectElements));
       });
     },
   };
