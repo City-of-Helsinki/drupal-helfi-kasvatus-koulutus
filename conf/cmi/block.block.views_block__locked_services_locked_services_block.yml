@@ -2,6 +2,8 @@ uuid: 220ccf99-5250-4357-a33b-8b01672fb621
 langcode: en
 status: true
 dependencies:
+  config:
+    - views.view.locked_services
   module:
     - system
     - views
@@ -22,7 +24,7 @@ settings:
   label_display: visible
   provider: views
   views_label: ''
-  items_per_page: none
+  items_per_page: null
 visibility:
   request_path:
     id: request_path

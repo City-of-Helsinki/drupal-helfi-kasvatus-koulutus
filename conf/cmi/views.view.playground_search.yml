@@ -172,6 +172,9 @@ display:
               secondary_label: 'Advanced options'
               secondary_open: false
               reset_button_always_show: false
+              autosubmit_textfield_minimum_length: 3
+              autosubmit_breakpoint: ''
+              auto_submit_sort_only: false
             filter:
               address_search:
                 plugin_id: default
@@ -179,8 +182,15 @@ display:
                   placeholder_text: 'For example, Kotikatu 1'
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
                   is_secondary: false
+                  collapsible_disable_automatic_open: false
+                  hide_label: false
+                  field_classes: ''
+                  open_by_default: false
+                  sort_options_method: alphabetical_asc
+                  sort_options_natural: true
       access:
         type: perm
         options:
@@ -294,17 +304,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              read_only: '0'
-              daycare_editor: '0'
-              playground_editor: '0'
-              comprehensive_school_editor: '0'
-              school_editor: '0'
-              content_producer: '0'
-              editor: '0'
-              admin: '0'
-              debug_api: '0'
-              super_administrator: '0'
           is_grouped: false
           group_info:
             label: ''
