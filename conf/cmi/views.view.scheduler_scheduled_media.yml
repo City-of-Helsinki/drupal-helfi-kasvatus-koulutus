@@ -1,41 +1,41 @@
-uuid: 50b1f13e-23f8-42df-bbb2-f58c0f8ff0ce
+uuid: 34d909d7-fccc-4a4d-b712-565712f92403
 langcode: en
 status: true
 dependencies:
+  config:
+    - system.menu.admin
   module:
-    - entity_usage
-    - paragraphs
-    - paragraphs_library
+    - media
     - user
-_core:
-  default_config_hash: 67G2lyvlXJE8P8b1oAheELEdM5i74aipXfDIZCpAsdQ
-id: paragraphs_library
-label: 'Paragraphs library'
+  enforced:
+    module:
+      - scheduler
+id: scheduler_scheduled_media
+label: 'Scheduled Media'
 module: views
-description: ''
+description: 'Find and manage scheduled media.'
 tag: ''
-base_table: paragraphs_library_item_field_data
-base_field: id
+base_table: media_field_revision
+base_field: vid
 display:
   default:
     id: default
-    display_title: Default
+    display_title: Master
     display_plugin: default
     position: 0
     display_options:
-      title: 'Paragraphs library'
+      title: 'Scheduled Media'
       fields:
-        label:
-          id: label
-          table: paragraphs_library_item_field_data
-          field: label
+        media_bulk_form:
+          id: media_bulk_form
+          table: media
+          field: media_bulk_form
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: paragraphs_library_item
-          entity_field: label
-          plugin_id: field
-          label: Label
+          entity_type: media
+          plugin_id: bulk_form
+          label: 'Bulk update'
           exclude: false
           alter:
             alter_text: false
@@ -68,6 +68,60 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          action_title: Action
+          include_exclude: exclude
+          selected_actions: {  }
+        name:
+          id: name
+          table: media_field_revision
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: media
+          entity_field: name
+          plugin_id: field
+          label: 'Media Name'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
           element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
@@ -79,7 +133,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: false
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -90,17 +144,17 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        type:
-          id: type
-          table: paragraphs_item_field_data
-          field: type
-          relationship: paragraphs__target_id
+        bundle:
+          id: bundle
+          table: media_field_data
+          field: bundle
+          relationship: mid
           group_type: group
           admin_label: ''
-          entity_type: paragraph
-          entity_field: type
+          entity_type: media
+          entity_field: bundle
           plugin_id: field
-          label: Type
+          label: 'Media type'
           exclude: false
           alter:
             alter_text: false
@@ -144,7 +198,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: false
+            link: true
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -155,17 +209,17 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        paragraphs__target_id:
-          id: paragraphs__target_id
-          table: paragraphs_library_item_field_data
-          field: paragraphs__target_id
+        uid:
+          id: uid
+          table: media_field_revision
+          field: uid
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: paragraphs_library_item
-          entity_field: paragraphs
+          entity_type: media
+          entity_field: uid
           plugin_id: field
-          label: Paragraphs
+          label: Author
           exclude: false
           alter:
             alter_text: false
@@ -207,12 +261,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: paragraph_summary
-          settings: {  }
-          group_column: entity_id
-          group_columns:
-            target_id: target_id
-            target_revision_id: target_revision_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -221,18 +274,18 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        langcode:
-          id: langcode
-          table: paragraphs_library_item_field_data
-          field: langcode
+        status:
+          id: status
+          table: media_field_revision
+          field: status
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: paragraphs_library_item
-          entity_field: langcode
+          entity_type: media
+          entity_field: status
           plugin_id: field
-          label: Language
-          exclude: true
+          label: Status
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -273,10 +326,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: language
+          type: boolean
           settings:
-            link_to_entity: false
-            native_language: false
+            format: custom
+            format_custom_false: Unpublished
+            format_custom_true: Published
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -287,140 +341,17 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        id:
-          id: id
-          table: paragraphs_library_item_field_data
-          field: id
+        publish_on:
+          id: publish_on
+          table: media_field_revision
+          field: publish_on
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: paragraphs_library_item
-          entity_field: id
+          entity_type: media
+          entity_field: publish_on
           plugin_id: field
-          label: ID
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: true
-          group_column: entity_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        count:
-          id: count
-          table: entity_usage
-          field: count
-          relationship: paragraphs_library_item_to_usage_entity
-          group_type: count
-          admin_label: ''
-          plugin_id: numeric
-          label: Used
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: true
-            path: 'admin/content/entity-usage/paragraphs_library_item/{{ id }}'
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ','
-          format_plural: false
-          format_plural_string: !!binary MSBwbGFjZQNAY291bnQgcGxhY2Vz
-          prefix: ''
-          suffix: ''
-        changed:
-          id: changed
-          table: paragraphs_library_item_field_data
-          field: changed
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: paragraphs_library_item
-          entity_field: changed
-          plugin_id: field
-          label: Changed
+          label: 'Publish on'
           exclude: false
           alter:
             alter_text: false
@@ -467,16 +398,74 @@ display:
             date_format: short
             custom_date_format: ''
             timezone: ''
-            tooltip:
-              date_format: ''
-              custom_date_format: ''
-            time_diff:
-              enabled: false
-              future_format: '@interval hence'
-              past_format: '@interval ago'
-              granularity: 2
-              refresh: 60
-          group_column: entity_id
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        unpublish_on:
+          id: unpublish_on
+          table: media_field_revision
+          field: unpublish_on
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: media
+          entity_field: unpublish_on
+          plugin_id: field
+          label: 'Unpublish on'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: timestamp
+          settings:
+            date_format: short
+            custom_date_format: ''
+            timezone: ''
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -488,12 +477,12 @@ display:
           field_api_classes: false
         operations:
           id: operations
-          table: paragraphs_library_item
+          table: media_revision
           field: operations
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: paragraphs_library_item
+          entity_type: media
           plugin_id: entity_operations
           label: Operations
           exclude: false
@@ -536,18 +525,19 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          destination: true
+          destination: false
       pager:
-        type: mini
+        type: full
         options:
           offset: 0
-          pagination_heading_level: h4
           items_per_page: 50
           total_pages: null
           id: 0
           tags:
-            next: ››
-            previous: ‹‹
+            next: 'next ›'
+            previous: '‹ previous'
+            first: '« first'
+            last: 'last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -560,7 +550,7 @@ display:
         type: basic
         options:
           submit_button: Filter
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -569,7 +559,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'administer paragraphs library'
+          perm: 'view scheduled media'
       cache:
         type: tag
         options: {  }
@@ -583,34 +573,33 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'No library items available.'
+          content: 'No scheduled media.'
           tokenize: false
       sorts: {  }
       arguments: {  }
       filters:
-        label:
-          id: label
-          table: paragraphs_library_item_field_data
-          field: label
+        latest_revision:
+          id: latest_revision
+          table: media_revision
+          field: latest_revision
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: paragraphs_library_item
-          entity_field: label
-          plugin_id: string
-          operator: contains
+          entity_type: media
+          plugin_id: latest_revision
+          operator: '='
           value: ''
           group: 1
-          exposed: true
+          exposed: false
           expose:
-            operator_id: label_op
-            label: Label
+            operator_id: ''
+            label: ''
             description: ''
             use_operator: false
-            operator: label_op
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: label
+            identifier: ''
             required: false
             remember: false
             multiple: false
@@ -618,40 +607,80 @@ display:
               authenticated: authenticated
           is_grouped: false
           group_info:
-            label: Label
-            description: null
-            identifier: label
+            label: ''
+            description: ''
+            identifier: ''
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
             default_group_multiple: {  }
-            group_items:
-              - {  }
-        type:
-          id: type
-          table: paragraphs_item_field_data
-          field: type
-          relationship: paragraphs__target_id
+            group_items: {  }
+        name:
+          id: name
+          table: media_field_revision
+          field: name
+          relationship: none
           group_type: group
           admin_label: ''
-          entity_type: paragraph
-          entity_field: type
+          entity_type: media
+          entity_field: name
+          plugin_id: string
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: name_op
+            label: 'Media name'
+            description: ''
+            use_operator: false
+            operator: name_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: name
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        bundle:
+          id: bundle
+          table: media_field_data
+          field: bundle
+          relationship: mid
+          group_type: group
+          admin_label: ''
+          entity_type: media
+          entity_field: bundle
           plugin_id: bundle
           operator: in
           value: {  }
           group: 1
           exposed: true
           expose:
-            operator_id: type_op
+            operator_id: bundle_op
             label: Type
             description: ''
             use_operator: false
-            operator: type_op
+            operator: bundle_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: type
+            identifier: bundle
             required: false
             remember: false
             multiple: false
@@ -670,34 +699,83 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        default_langcode:
-          id: default_langcode
-          table: paragraphs_library_item_field_data
-          field: default_langcode
+        status:
+          id: status
+          table: media_field_revision
+          field: status
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: paragraphs_library_item
-          entity_field: default_langcode
+          entity_type: media
+          entity_field: status
           plugin_id: boolean
           operator: '='
-          value: '1'
+          value: ''
           group: 1
-          exposed: false
+          exposed: true
           expose:
             operator_id: ''
-            label: ''
+            label: Status
             description: ''
             use_operator: false
-            operator: ''
+            operator: status_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: ''
+            identifier: status
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
+          is_grouped: true
+          group_info:
+            label: 'Published status'
+            description: ''
+            identifier: status
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: Published
+                operator: '='
+                value: '1'
+              2:
+                title: Unpublished
+                operator: '='
+                value: '0'
+        langcode:
+          id: langcode
+          table: media_field_revision
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: media
+          entity_field: langcode
+          plugin_id: language
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: langcode_op
+            label: Language
+            description: ''
+            use_operator: false
+            operator: langcode_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: langcode
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -710,19 +788,23 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        default_langcode_1:
-          id: default_langcode_1
-          table: paragraphs_item_field_data
-          field: default_langcode
-          relationship: paragraphs__target_id
+        publish_on:
+          id: publish_on
+          table: media_field_revision
+          field: publish_on
+          relationship: none
           group_type: group
           admin_label: ''
-          entity_type: paragraph
-          entity_field: default_langcode
-          plugin_id: boolean
-          operator: '='
-          value: '1'
-          group: 1
+          entity_type: media
+          entity_field: publish_on
+          plugin_id: date
+          operator: 'not empty'
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 2
           exposed: false
           expose:
             operator_id: ''
@@ -738,6 +820,56 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        unpublish_on:
+          id: unpublish_on
+          table: media_field_revision
+          field: unpublish_on
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: media
+          entity_field: unpublish_on
+          plugin_id: date
+          operator: 'not empty'
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: null
+            max_placeholder: null
+            placeholder: null
           is_grouped: false
           group_info:
             label: ''
@@ -753,7 +885,8 @@ display:
       filter_groups:
         operator: AND
         groups:
-          - AND
+          1: AND
+          2: OR
       style:
         type: table
         options:
@@ -761,38 +894,60 @@ display:
           row_class: ''
           default_row_class: true
           columns:
-            label: label
-            type: type
-            id: id
-            count: count
+            media_bulk_form: media_bulk_form
+            name: name
+            bundle: bundle
+            uid: uid
+            status: status
+            publish_on: publish_on
+            unpublish_on: unpublish_on
             operations: operations
-          default: '-1'
+          default: publish_on
           info:
-            label:
-              sortable: false
+            media_bulk_form:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            name:
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            type:
-              sortable: false
+            bundle:
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            id:
-              sortable: false
+            uid:
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            count:
-              sortable: false
+            status:
+              sortable: true
               default_sort_order: asc
-              align: views-align-right
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            publish_on:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            unpublish_on:
+              sortable: true
+              default_sort_order: asc
+              align: ''
               separator: ''
               empty_column: false
               responsive: ''
@@ -802,7 +957,7 @@ display:
               empty_column: false
               responsive: ''
           override: true
-          sticky: false
+          sticky: true
           summary: ''
           empty_table: true
           caption: ''
@@ -819,28 +974,17 @@ display:
           replica: false
           query_tags: {  }
       relationships:
-        paragraphs__target_id:
-          id: paragraphs__target_id
-          table: paragraphs_library_item_field_data
-          field: paragraphs__target_id
+        mid:
+          id: mid
+          table: media_field_revision
+          field: mid
           relationship: none
           group_type: group
-          admin_label: Paragraphs
-          entity_type: paragraphs_library_item
-          entity_field: paragraphs
-          plugin_id: standard
-          required: true
-        paragraphs_library_item_to_usage_entity:
-          id: paragraphs_library_item_to_usage_entity
-          table: paragraphs_library_item
-          field: paragraphs_library_item_to_usage_entity
-          relationship: none
-          group_type: group
-          admin_label: 'Usage information (Paragraphs library item)'
-          entity_type: paragraphs_library_item
+          admin_label: 'Media Field'
+          entity_type: media
+          entity_field: mid
           plugin_id: standard
           required: false
-      group_by: true
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -853,14 +997,81 @@ display:
         - url.query_args
         - user.permissions
       tags: {  }
-  page_1:
-    id: page_1
-    display_title: Page
+  overview:
+    id: overview
+    display_title: 'Media Overview'
     display_plugin: page
     position: 1
     display_options:
+      display_description: 'Overview of all scheduled media, via main admin content page'
       display_extenders: {  }
-      path: admin/content/paragraphs
+      path: admin/content/media/scheduled
+      menu:
+        type: normal
+        title: 'Scheduled Media'
+        description: 'Media items that are scheduled for publishing or unpublishing'
+        weight: 0
+        expanded: false
+        menu_name: admin
+        parent: system.admin_content
+        context: '0'
+    cache_metadata:
+      max-age: 0
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  user_page:
+    id: user_page
+    display_title: User
+    display_plugin: page
+    position: 2
+    display_options:
+      access:
+        type: perm
+        options:
+          perm: 'view media'
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: true
+          content: 'No scheduled media for user {{ arguments.uid }}'
+          tokenize: true
+      arguments:
+        uid:
+          id: uid
+          table: media_field_revision
+          field: uid
+          entity_type: media
+          entity_field: uid
+          plugin_id: entity_target_id
+          target_entity_type_id: user
+      defaults:
+        empty: false
+        access: false
+        arguments: false
+      display_description: "Scheduled media on user profile, showing just that user's scheduled media"
+      display_comment: 'Access to the user view is controlled via SchedulerRouteSubscriber::alterRoutes(). The high-level permission "view media" is added to satisfy the security_review module'
+      display_extenders: {  }
+      path: user/%user/scheduled_media
+      menu:
+        type: tab
+        title: 'Scheduled Media'
+        description: 'Scheduled Media by this user'
+        weight: -1
+        expanded: false
+        menu_name: account
+        parent: user.page
+        context: '0'
     cache_metadata:
       max-age: 0
       contexts:
