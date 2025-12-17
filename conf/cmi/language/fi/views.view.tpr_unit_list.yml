@@ -1,8 +1,11 @@
-label: 'TPR Toimipisteet'
 display:
   default:
-    display_title: Oletus
     display_options:
+      empty:
+        area:
+          content:
+            format: plain_text
+            value: 'Ei tuloksia.'
       exposed_form:
         options:
           submit_button: Käytä
@@ -22,6 +25,9 @@ display:
             items_per_page_options_all_label: '- Kaikki -'
             offset_label: Offset
       fields:
+        id:
+          label: ID
+          separator: ', '
         name:
           label: Nimi
           separator: ', '
@@ -39,9 +45,6 @@ display:
           separator: ', '
         operations:
           label: Toimenpiteet
-        id:
-          label: ID
-          separator: ', '
       filters:
         combine:
           expose:
@@ -53,10 +56,7 @@ display:
       header:
         result:
           content: 'Näytetään @start - @end / @total'
-      empty:
-        area:
-          content:
-            value: 'Ei tuloksia.'
-            format: plain_text
+    display_title: Oletus
   page_1:
     display_title: Sivu
+label: 'TPR Toimipisteet'

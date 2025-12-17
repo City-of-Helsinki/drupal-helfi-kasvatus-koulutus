@@ -3,24 +3,7 @@ display:
   default:
     display_title: Förvald
     display_options:
-      exposed_form:
-        options:
-          submit_button: Verkställ
-          reset_button_label: Återställ
-          exposed_sorts_label: 'Sortera efter'
-          sort_asc_label: Stigande
-          sort_desc_label: Fallande
-      pager:
-        options:
-          tags:
-            previous: Föregående
-            next: Nästa
-            first: Första
-            last: Sista
-          expose:
-            items_per_page_label: 'Inlägg per sida'
-            items_per_page_options_all_label: '- Alla -'
-            offset_label: Kompensera
+      title: Noder
       fields:
         title:
           label: Titel
@@ -31,16 +14,43 @@ display:
         status:
           label: Status
           settings:
-            format_custom_true: Publicerad
             format_custom_false: 'Ej publicerad'
+            format_custom_true: Publicerad
           separator: ', '
         changed:
           label: Uppdaterad
           separator: ', '
+        edit_node:
+          text: Redigera
         delete_node:
           text: 'Radera nod'
         dropbutton:
           label: Funktioner
+      pager:
+        options:
+          tags:
+            next: Nästa
+            previous: Föregående
+            first: Första
+            last: Sista
+          expose:
+            items_per_page_label: 'Inlägg per sida'
+            items_per_page_options_all_label: '- Alla -'
+            offset_label: Kompensera
+      exposed_form:
+        options:
+          submit_button: Verkställ
+          reset_button_label: Återställ
+          exposed_sorts_label: 'Sortera efter'
+          sort_asc_label: Stigande
+          sort_desc_label: Fallande
+      empty:
+        area_text_custom:
+          content: 'Inget innehåll tillgängligt.'
+      arguments:
+        gid:
+          exception:
+            title: Alla
       filters:
         status:
           expose:
@@ -55,14 +65,6 @@ display:
         type:
           expose:
             label: Typ
-      empty:
-        area_text_custom:
-          content: 'Inget innehåll tillgängligt.'
-      arguments:
-        gid:
-          exception:
-            title: Alla
-      title: Noder
   page_1:
     display_title: Sida
     display_options:

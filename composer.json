@@ -10,7 +10,7 @@
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.6.7",
         "drupal/better_exposed_filters": "^7.0",
-        "drupal/core-composer-scaffold": "^10 || ^11",
+        "drupal/core-composer-scaffold": "^11",
         "drupal/flexible_permissions": "^2.0",
         "drupal/group": "^2.0",
         "drupal/group_content_menu": "^2.0",
