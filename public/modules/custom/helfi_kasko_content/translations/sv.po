@@ -68,7 +68,7 @@ msgstr "Intensifierad undervisning som börjar i åk 7"
 
 msgctxt "TPR Ontologyword details schools"
 msgid "Teaching in English"
-msgstr "Undervisning på engelska"
+msgstr "Engelska"
 
 msgctxt "TPR Ontologyword details schools"
 msgid "Finnish-English"

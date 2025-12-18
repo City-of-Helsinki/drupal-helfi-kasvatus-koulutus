@@ -65,6 +65,7 @@ class AdditionalFilters extends ProcessorPluginBase {
       'grades_7_9' => UnitCategoryUtility::entityHasCategory($object, UnitCategoryUtility::GRADES_7_9),
       'finnish_education' => UnitCategoryUtility::entityHasCategory($object, UnitCategoryUtility::FINNISH_BASIC_EDUCATION),
       'swedish_education' => UnitCategoryUtility::entityHasCategory($object, UnitCategoryUtility::SWEDISH_BASIC_EDUCATION),
+      'english_education' => UnitCategoryUtility::entityHasCategory($object, UnitCategoryUtility::ENGLISH_BASIC_EDUCATION),
     ];
 
     $itemFields = $item->getFields();

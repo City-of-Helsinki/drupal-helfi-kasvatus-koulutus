@@ -68,7 +68,7 @@ msgstr "7. luokalta alkava painotettu opetus"
 
 msgctxt "TPR Ontologyword details schools"
 msgid "Teaching in English"
-msgstr "Englanninkielinen opetus"
+msgstr "Englanti"
 
 msgctxt "TPR Ontologyword details schools"
 msgid "Finnish-English"
