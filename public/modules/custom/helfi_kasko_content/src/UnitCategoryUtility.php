@@ -16,7 +16,6 @@ class UnitCategoryUtility {
   public const PLAYGROUND = 'playground';
   public const FINNISH_BASIC_EDUCATION = 'basic education in Finnish';
   public const SWEDISH_BASIC_EDUCATION = 'basic education in Swedish';
-  public const ENGLISH_BASIC_EDUCATION = 'basic education in English';
   public const GRADES_1_6 = 'basic education for grades 1-6';
   public const GRADES_7_9 = 'basic education for grades 7-9';
   public const DAYCARE_PART_TIME = 'part-time day care (child day care)';
@@ -51,10 +50,6 @@ class UnitCategoryUtility {
     self::SWEDISH_BASIC_EDUCATION => [
       601,
       602,
-    ],
-    self::ENGLISH_BASIC_EDUCATION => [
-      149,
-      150,
     ],
     self::GRADES_1_6 => [
       601,
