@@ -1,0 +1,22 @@
+diff --git a/src/Plugin/Group/Relation/GroupRelationTypeManager.php b/src/Plugin/Group/Relation/GroupRelationTypeManager.php
+index 4a405ea..d3f0f07 100644
+--- a/src/Plugin/Group/Relation/GroupRelationTypeManager.php
++++ b/src/Plugin/Group/Relation/GroupRelationTypeManager.php
+@@ -315,8 +315,15 @@ class GroupRelationTypeManager extends DefaultPluginManager implements GroupRela
+   public function installEnforced(?GroupTypeInterface $group_type = NULL) {
+     $enforced = [];
+ 
+-    // Gather the ID of all plugins that are marked as enforced.
+-    foreach ($this->getDefinitions() as $plugin_id => $group_relation_type) {
++    try {
++      $definitions = $this->getDefinitions();
++    }
++    catch (\Error $exception) {
++      // All group relation entity type definitions are not available during
++      // first cache rebuild after site install.
++      return;
++    }
++    foreach ($definitions as $plugin_id => $group_relation_type) {
+       assert($group_relation_type instanceof GroupRelationTypeInterface);
+       if ($group_relation_type->isEnforced()) {
+         $enforced[] = $plugin_id;
