@@ -1,11 +1,20 @@
 diff --git a/src/Plugin/Group/Relation/GroupRelationTypeManager.php b/src/Plugin/Group/Relation/GroupRelationTypeManager.php
-index 4a405ea..d3f0f07 100644
+index 4a405ea..982bbcd 100644
 --- a/src/Plugin/Group/Relation/GroupRelationTypeManager.php
 +++ b/src/Plugin/Group/Relation/GroupRelationTypeManager.php
+@@ -129,7 +129,7 @@ class GroupRelationTypeManager extends DefaultPluginManager implements GroupRela
+       throw new InvalidPluginDefinitionException($plugin_id, sprintf('The "%s" plugin defines entity access over group entities. This should be dealt with by altering the group permissions of the current user.', $plugin_id));
+     }
+
+-    if ($this->entityTypeManager->getDefinition($entity_type_id)->entityClassImplements(ConfigEntityInterface::class)) {
++    if ($this->entityTypeManager->getDefinition($entity_type_id, FALSE)->entityClassImplements(ConfigEntityInterface::class)) {
+       $definition->set('config_entity_type', TRUE);
+     }
+   }
 @@ -315,8 +315,15 @@ class GroupRelationTypeManager extends DefaultPluginManager implements GroupRela
    public function installEnforced(?GroupTypeInterface $group_type = NULL) {
      $enforced = [];
- 
+
 -    // Gather the ID of all plugins that are marked as enforced.
 -    foreach ($this->getDefinitions() as $plugin_id => $group_relation_type) {
 +    try {
