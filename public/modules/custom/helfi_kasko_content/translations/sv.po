@@ -67,10 +67,6 @@ msgid "Weighted curriculum education starting in 7th grade"
 msgstr "Intensifierad undervisning som börjar i åk 7"
 
 msgctxt "TPR Ontologyword details schools"
-msgid "Teaching in English"
-msgstr "Engelska"
-
-msgctxt "TPR Ontologyword details schools"
 msgid "Finnish-English"
 msgstr "finska-engelska"
 
