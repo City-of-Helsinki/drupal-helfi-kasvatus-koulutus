@@ -100,7 +100,11 @@
         "patches": {
             "drupal/group": {
                 "https://www.drupal.org/project/group/issues/2815971": "./patches/2815971.patch",
-                "Duplicate revision(version) tab around Group's admin pages": "https://www.drupal.org/files/issues/2023-12-12/group-revision-tabs-appear-twice-3397063-15.patch"
+                "Duplicate revision(version) tab around Group's admin pages": "https://www.drupal.org/files/issues/2023-12-12/group-revision-tabs-appear-twice-3397063-15.patch",
+                "Fix for group relation type entity type definitions not available first cache rebuild after site install": "./patches/group_relation_type_entity_type_definitions_during_cache_rebuild.patch"
+            },
+            "drupal/group_content_menu": {
+                "Fix for group_content_menu derivative definition load during first cache rebuild after site install": "./patches/group_content_menu_derivative_definition_load_during_cache_rebuild.patch"
             },
             "drupal/override_node_options": {
                 "Fix for adding non-existent permissions to a role is not allowed error during site install.": "patches/override_node_permissions_missing_dependencies.patch"
