@@ -28,6 +28,8 @@ class AdditionalFilters extends ProcessorPluginBase {
 
   use SupportsUnitIndexTrait;
 
+  const ENGLISH_EDUCATION_TERM_IDS = [149, 150];
+
   /**
    * {@inheritdoc}
    */
@@ -65,6 +67,7 @@ class AdditionalFilters extends ProcessorPluginBase {
       'grades_7_9' => UnitCategoryUtility::entityHasCategory($object, UnitCategoryUtility::GRADES_7_9),
       'finnish_education' => UnitCategoryUtility::entityHasCategory($object, UnitCategoryUtility::FINNISH_BASIC_EDUCATION),
       'swedish_education' => UnitCategoryUtility::entityHasCategory($object, UnitCategoryUtility::SWEDISH_BASIC_EDUCATION),
+      'english_education' => $this->hasEnglishEducation($object),
     ];
 
     $itemFields = $item->getFields();
@@ -75,4 +78,25 @@ class AdditionalFilters extends ProcessorPluginBase {
     }
   }
 
+  /**
+   * Check if entity has English education category.
+   *
+   * @param \Drupal\helfi_tpr\Entity\TprEntityBase $entity
+   *   The TPR entity.
+   *
+   * @return bool
+   *   TRUE if entity has English education category, FALSE otherwise.
+   */
+  private function hasEnglishEducation(TprEntityBase $entity): bool {
+    if (!$entity->hasField('ontologyword_ids')) {
+      return FALSE;
+    }
+
+    foreach ($entity->get('ontologyword_ids')->getValue() as $term) {
+      if (in_array($term['value'], self::ENGLISH_EDUCATION_TERM_IDS)) {
+        return TRUE;
+      }
+    }
+    return FALSE;
+  }
 }
