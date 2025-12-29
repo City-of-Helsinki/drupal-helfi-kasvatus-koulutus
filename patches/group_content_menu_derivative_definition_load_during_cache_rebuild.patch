@@ -1,0 +1,27 @@
+diff --git a/src/Plugin/Group/Relation/GroupMenuDeriver.php b/src/Plugin/Group/Relation/GroupMenuDeriver.php
+index f7008f1..53d1a43 100644
+--- a/src/Plugin/Group/Relation/GroupMenuDeriver.php
++++ b/src/Plugin/Group/Relation/GroupMenuDeriver.php
+@@ -16,7 +16,21 @@ class GroupMenuDeriver extends DeriverBase {
+    * {@inheritdoc}
+    */
+   public function getDerivativeDefinitions($base_plugin_definition) {
+-    foreach (GroupContentMenuType::loadMultiple() as $name => $group_menu_type) {
++    $entity_type_manager = \Drupal::entityTypeManager();
++    if (!$entity_type_manager->hasDefinition('group_content_type')) {
++      return $this->derivatives;
++    }
++
++    try {
++      $types = GroupContentMenuType::loadMultiple();
++    }
++    catch (\Throwable $e) {
++      // Getting the derivative definitions during early container rebuilds
++      // or partial installs can cause errors.
++      return $this->derivatives;
++    }
++
++    foreach ($types as $name => $group_menu_type) {
+       $label = $group_menu_type->label();
+ 
+       $this->derivatives[$name] = clone $base_plugin_definition;

@@ -1,7 +1,7 @@
 name: 'Helfi KASKO Content'
 type: module
 description: 'Performs alterations to content.'
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10 || ^11
 configure: helfi_kasko_content.admin_form
 dependencies:
   - allowed_formats:allowed_formats

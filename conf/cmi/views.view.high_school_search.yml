@@ -176,8 +176,11 @@ display:
           bef:
             general:
               autosubmit: false
+              auto_submit_sort_only: false
+              autosubmit_breakpoint: ''
               autosubmit_exclude_textfield: false
               autosubmit_textfield_delay: 500
+              autosubmit_textfield_minimum_length: 3
               autosubmit_hide: false
               input_required: false
               allow_secondary: false
@@ -189,26 +192,47 @@ display:
                 plugin_id: default
                 advanced:
                   sort_options: false
+                  sort_options_method: alphabetical_asc
+                  sort_options_natural: true
                   rewrite:
                     filter_rewrite_values: '- Any - | All'
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
+                  open_by_default: false
                   is_secondary: false
+                  hide_label: false
+                  field_classes: ''
               educational_mission_filter:
                 plugin_id: default
                 advanced:
                   sort_options: false
+                  sort_options_method: alphabetical_asc
+                  sort_options_natural: true
                   rewrite:
                     filter_rewrite_values: '- Any - | All'
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
+                  open_by_default: false
                   is_secondary: false
+                  hide_label: false
+                  field_classes: ''
               study_programme_type_filter:
                 plugin_id: default
                 advanced:
                   sort_options: false
+                  sort_options_method: alphabetical_asc
+                  sort_options_natural: true
                   rewrite:
                     filter_rewrite_values: '- Any - | All'
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
+                  open_by_default: false
                   is_secondary: false
+                  hide_label: false
+                  field_classes: ''
       access:
         type: perm
         options:
@@ -423,10 +447,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              admin: '0'
-              content_producer: '0'
-              read_only: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -476,10 +496,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              admin: '0'
-              content_producer: '0'
-              read_only: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -653,17 +669,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              read_only: '0'
-              daycare_editor: '0'
-              playground_editor: '0'
-              comprehensive_school_editor: '0'
-              school_editor: '0'
-              content_producer: '0'
-              editor: '0'
-              admin: '0'
-              debug_api: '0'
-              super_administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -711,17 +716,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              read_only: '0'
-              daycare_editor: '0'
-              playground_editor: '0'
-              comprehensive_school_editor: '0'
-              school_editor: '0'
-              content_producer: '0'
-              editor: '0'
-              admin: '0'
-              debug_api: '0'
-              super_administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -765,17 +759,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              read_only: '0'
-              daycare_editor: '0'
-              playground_editor: '0'
-              comprehensive_school_editor: '0'
-              school_editor: '0'
-              content_producer: '0'
-              editor: '0'
-              admin: '0'
-              debug_api: '0'
-              super_administrator: '0'
             reduce: false
           is_grouped: false
           group_info:

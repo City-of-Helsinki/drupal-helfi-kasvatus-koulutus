@@ -15,7 +15,6 @@ use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountInterface;
-use Drupal\helfi_group\UnitFormAlter;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\node\NodeInterface;
 
@@ -77,14 +76,6 @@ function helfi_group_theme($existing, $type, $theme, $path) {
       'base hook' => 'menu__group_menu',
     ],
   ];
-}
-
-/**
- * Implements hook_form_BASE_FORM_ID_alter().
- */
-function helfi_group_form_tpr_unit_form_alter(&$form, FormStateInterface $form_state) {
-  \Drupal::classResolver(UnitFormAlter::class)
-    ->alter($form, $form_state);
 }
 
 /**

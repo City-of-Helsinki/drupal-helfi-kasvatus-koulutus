@@ -2,7 +2,7 @@ name: 'HELfi Group'
 type: module
 description: 'Provides Group module customization.'
 package: HELfi
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10 || ^11
 dependencies:
   - group
   - group_content_menu
