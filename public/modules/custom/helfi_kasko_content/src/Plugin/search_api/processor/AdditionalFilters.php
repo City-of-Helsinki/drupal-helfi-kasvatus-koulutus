@@ -99,4 +99,5 @@ class AdditionalFilters extends ProcessorPluginBase {
     }
     return FALSE;
   }
+
 }
