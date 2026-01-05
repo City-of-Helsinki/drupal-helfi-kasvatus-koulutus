@@ -16,7 +16,9 @@
     {% block component_content %}
       {# Hook React app to this div #}
       <div id="helfi-school-search" data-paragraph-id="{{ paragraph.id() }}">
-        {{ drupal_view('comprehensive_school_search', 'block') }}
+        <noscript>
+          {{ 'This feature requires JavaScript to be enabled'|t }}
+        </noscript>
       </div>
     {% endblock %}
   {% endembed %}
