@@ -17,7 +17,9 @@
       {# Hook React app to this div #}
       <div id="helfi-school-search" data-paragraph-id="{{ paragraph.id() }}">
         <noscript>
-          {{ 'This feature requires JavaScript to be enabled'|t }}
+          {% trans with {'context': 'Generic javascript required message'} %}
+            This content requires JavaScript. Your browser doesn't support JavaScript or it is disabled. Please check your browser settings and try again.
+          {% tran %}
         </noscript>
       </div>
     {% endblock %}
