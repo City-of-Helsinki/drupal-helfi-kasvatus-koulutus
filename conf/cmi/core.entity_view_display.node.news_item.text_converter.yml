@@ -38,6 +38,7 @@ content:
     weight: 2
     region: content
 hidden:
+  changed_at: true
   field_main_image: true
   field_main_image_caption: true
   field_news_item_links_link: true
