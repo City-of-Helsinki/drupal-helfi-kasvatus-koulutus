@@ -59,7 +59,10 @@ class Controller extends ControllerBase {
         $subEvent = $this->client->getEvent($subEventId);
 
         if ($subEvent[$langcode] ?? FALSE) {
-          $subEvents[$subEventId] = $subEvent[$langcode];
+          $subEvents[] = [
+            '#theme' => 'cross_institutional_studies_card',
+            '#event' => $subEvent[$langcode],
+          ];
         }
       }
       catch (GuzzleException) {

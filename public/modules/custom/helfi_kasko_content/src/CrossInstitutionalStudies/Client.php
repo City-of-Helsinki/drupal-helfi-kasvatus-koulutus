@@ -9,6 +9,7 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\helfi_kasko_content\CrossInstitutionalStudies\DTO\Event;
 use Drupal\helfi_kasko_content\CrossInstitutionalStudies\DTO\Image;
 use Drupal\helfi_kasko_content\CrossInstitutionalStudies\DTO\Keyword;
+use Drupal\helfi_kasko_content\CrossInstitutionalStudies\DTO\Language;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Utils;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
@@ -78,11 +79,14 @@ class Client {
           $image->photographer_name ?? NULL,
           $image->alt_text ?? NULL,
         ), $event->images ?? []),
-        array_filter(array_map(static fn($keyword) => Keyword::tryFrom($keyword->{'@id'}), $event->keywords ?? [])),
-        ($event->start_date ?? FALSE) ? (new \DateTimeImmutable($event->start_time))->getTimestamp() : NULL,
-        ($event->end_date ?? FALSE) ? (new \DateTimeImmutable($event->end_time))->getTimestamp() : NULL,
+        array_filter(array_map(static fn($keyword) => Keyword::tryFrom(basename(rtrim($keyword->{'@id'}, '/'))), $event->keywords ?? [])),
+        isset($event->start_time) ? (new \DateTimeImmutable($event->start_time))->getTimestamp() : NULL,
+        isset($event->end_time) ? (new \DateTimeImmutable($event->end_time))->getTimestamp() : NULL,
         $event->location_extra_info->{$langcode},
         array_map(static fn($sub_event) => basename(rtrim($sub_event->{'@id'}, '/')), $event->sub_events ?? []),
+        array_map(static fn($language) => Language::tryFrom(basename(rtrim($language->{'@id'}, '/'))), $event->in_language ?? []),
+        $event->min_capacity ?? NULL,
+        $event->max_capacity ?? NULL,
       );
     }
 

@@ -34,6 +34,12 @@ final readonly class Event {
    *   Extra information about the location of the event.
    * @param array<string> $sub_events
    *   List of sub events.
+   * @param array<\Drupal\helfi_kasko_content\CrossInstitutionalStudies\DTO\Language> $in_language
+   *   List of languages.
+   * @param int|null $min_capacity
+   *   Minimum capacity of the event.
+   * @param int|null $max_capacity
+   *   Maximum capacity of the event.
    */
   public function __construct(
     public string $id,
@@ -47,6 +53,9 @@ final readonly class Event {
     public int|NULL $end_date,
     public string|NULL $location_extra_info,
     public array $sub_events,
+    public array $in_language,
+    public int|NULL $min_capacity,
+    public int|NULL $max_capacity,
   ) {
   }
 
