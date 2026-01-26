@@ -7,7 +7,6 @@ namespace Drupal\helfi_kasko_content\Hook;
 use Drupal\Core\Hook\Attribute\Hook;
 use Drupal\Core\Url;
 use Drupal\helfi_kasko_content\CrossInstitutionalStudies\Client;
-use Drupal\helfi_kasko_content\CrossInstitutionalStudies\DTO\Event;
 use GuzzleHttp\Exception\GuzzleException;
 
 /**
@@ -45,30 +44,6 @@ class CrossInstitutionalStudies {
       catch (GuzzleException) {
       }
     }
-  }
-
-  /**
-   * Implements hook_preprocess_HOOK().
-   */
-  #[Hook('preprocess_cross_institutional_studies')]
-  public function preprocessCrossInstitutionalStudies(array &$build): void {
-    $event = $build['event'];
-    assert($event instanceof Event);
-
-    foreach ($event->images as $image) {
-      $build['images'][] = [
-        '#theme' => 'imagecache_external',
-        '#uri' => $image->url,
-        '#style_name' => 'medium',
-        '#alt' => $image->alt_text,
-      ];
-    }
-
-    $build['description'] = [
-      '#type' => 'processed_text',
-      '#text' => $event->description ?? '',
-      '#format' => 'full_html',
-    ];
   }
 
 }

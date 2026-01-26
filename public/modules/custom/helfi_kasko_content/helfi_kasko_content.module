@@ -199,6 +199,8 @@ function helfi_kasko_content_theme(): array {
       'variables' => [
         'event' => NULL,
         'sub_events' => [],
+        'images' => [],
+        'description' => NULL,
       ],
     ],
     'tpr_ontologyword_details_formatter' => [

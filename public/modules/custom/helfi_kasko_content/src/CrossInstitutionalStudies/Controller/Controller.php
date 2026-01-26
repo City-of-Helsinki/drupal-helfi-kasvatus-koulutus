@@ -73,6 +73,21 @@ class Controller extends ControllerBase {
       '#sub_events' => $subEvents,
     ];
 
+    foreach ($event->images as $image) {
+      $build['#images'][] = [
+        '#theme' => 'imagecache_external',
+        '#uri' => $image->url,
+        '#style_name' => 'medium',
+        '#alt' => $image->alt_text,
+      ];
+    }
+
+    $build['#description'] = [
+      '#type' => 'processed_text',
+      '#text' => $event->description ?? '',
+      '#format' => 'full_html',
+    ];
+
     $config = $this->config('helfi_kasko_content.settings');
     $cache->setCacheMaxAge($config->get('courses_max_age') ?? 3600);
     $cache->addCacheableDependency($config);
