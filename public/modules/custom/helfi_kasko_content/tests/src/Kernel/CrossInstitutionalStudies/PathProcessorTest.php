@@ -50,13 +50,13 @@ class PathProcessorTest extends KernelTestBase {
 
     $tests = [
       'fi' => [
-        '/cross-institutional-studies/v2/event-123' => '/ristiinopiskelu/v2/event-123',
+        '/cross-institutional-studies/event-123' => '/ristiinopiskelu/event-123',
       ],
       'sv' => [
-        '/cross-institutional-studies/v2/event-123' => '/korsstudier/v2/event-123',
+        '/cross-institutional-studies/event-123' => '/korsstudier/event-123',
       ],
       'en' => [
-        '/cross-institutional-studies/v2/event-123' => '/cross-institutional-studies/v2/event-123',
+        '/cross-institutional-studies/event-123' => '/cross-institutional-studies/event-123',
       ],
     ];
 
@@ -77,9 +77,9 @@ class PathProcessorTest extends KernelTestBase {
     $this->assertInstanceOf(ConfigurableLanguageManagerInterface::class, $languageManager);
 
     $tests = [
-      'fi' => '/ristiinopiskelu/v2/event-123',
-      'sv' => '/korsstudier/v2/event-123',
-      'en' => '/cross-institutional-studies/v2/event-123',
+      'fi' => '/ristiinopiskelu/event-123',
+      'sv' => '/korsstudier/event-123',
+      'en' => '/cross-institutional-studies/event-123',
     ];
 
     foreach ($tests as $langcode => $expectedPath) {

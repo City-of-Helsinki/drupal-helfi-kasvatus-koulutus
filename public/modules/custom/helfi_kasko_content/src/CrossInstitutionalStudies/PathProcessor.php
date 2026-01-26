@@ -32,15 +32,15 @@ readonly class PathProcessor implements InboundPathProcessorInterface, OutboundP
 
     try {
       $pattern = match($langcode) {
-        'fi' => '/ristiinopiskelu/v2/',
-        'sv' => '/korsstudier/v2/',
+        'fi' => '/ristiinopiskelu/',
+        'sv' => '/korsstudier/',
         // No need to alter the English path here.
       };
 
       // Skip if the path does not match.
       if (str_starts_with($path, $pattern)) {
         // Return the English path that the controller expects.
-        return '/cross-institutional-studies/v2/' . substr($path, strlen($pattern));
+        return '/cross-institutional-studies/' . substr($path, strlen($pattern));
       }
     }
     catch (\UnhandledMatchError) {
@@ -54,25 +54,26 @@ readonly class PathProcessor implements InboundPathProcessorInterface, OutboundP
    * {@inheritDoc}
    */
   public function processOutbound($path, &$options = [], ?Request $request = NULL, ?BubbleableMetadata $bubbleable_metadata = NULL): string {
-    if (str_starts_with($path, '/cross-institutional-studies/v2/')) {
-      if (isset($options['language'])) {
-        $langcode = $options['language'];
+    if (
+      str_starts_with($path, '/cross-institutional-studies/') &&
+      isset($options['language'])
+    ) {
+      $langcode = $options['language'];
 
-        if ($options['language'] instanceof LanguageInterface) {
-          $langcode = $options['language']->getId();
-        }
+      if ($options['language'] instanceof LanguageInterface) {
+        $langcode = $options['language']->getId();
+      }
 
-        try {
-          $translated = match($langcode) {
-            'fi' => '/ristiinopiskelu/v2/',
-            'sv' => '/korsstudier/v2/',
-            // No need to alter the English path here.
-          };
+      try {
+        $translated = match($langcode) {
+          'fi' => '/ristiinopiskelu/',
+          'sv' => '/korsstudier/',
+          // No need to alter the English path here.
+        };
 
-          return $translated . substr($path, strlen('/cross-institutional-studies/v2/'));
-        }
-        catch (\UnhandledMatchError) {
-        }
+        return $translated . substr($path, strlen('/cross-institutional-studies/'));
+      }
+      catch (\UnhandledMatchError) {
       }
     }
 
