@@ -7,3 +7,15 @@ helfi_kasko_content.admin_form:
     _permission: 'admin school settings'
   options:
     _admin_route: TRUE
+
+helfi_kasko_content.cross_institutional_studies:
+  # FIXME Replace with a real path once this feature is ready.
+  # FIXME Replace paths in PathProcessor once this feature is ready.
+  path: '/cross-institutional-studies/v2/{id}'
+  defaults:
+    _controller: '\Drupal\helfi_kasko_content\CrossInstitutionalStudies\Controller\Controller::build'
+    _title_callback: '\Drupal\helfi_kasko_content\CrossInstitutionalStudies\Controller\Controller::title'
+  requirements:
+    _permission: 'access content'
+    # FIXME forbids unauthenticated users while this feature is in development.
+    _user_is_logged_in: yes
