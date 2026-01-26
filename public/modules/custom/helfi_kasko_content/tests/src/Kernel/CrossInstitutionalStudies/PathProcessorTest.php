@@ -89,11 +89,6 @@ class PathProcessorTest extends KernelTestBase {
 
       $this->assertEquals($expectedPath, urldecode($url->toString()));
     }
-
-    // Path processor should work without a language parameter.
-    $languageManager->setCurrentLanguage(ConfigurableLanguage::load('fi'));
-    $url = Url::fromRoute('helfi_kasko_content.cross_institutional_studies', ['id' => 'event-123']);
-    $this->assertEquals('/ristiinopiskelu/v2/event-123', urldecode($url->toString()));
   }
 
 }

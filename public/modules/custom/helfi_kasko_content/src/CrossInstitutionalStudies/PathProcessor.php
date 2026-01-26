@@ -61,21 +61,18 @@ readonly class PathProcessor implements InboundPathProcessorInterface, OutboundP
         if ($options['language'] instanceof LanguageInterface) {
           $langcode = $options['language']->getId();
         }
-      }
-      else {
-        $langcode = $this->languageManager->getCurrentLanguage()->getId();
-      }
 
-      try {
-        $translated = match($langcode) {
-          'fi' => '/ristiinopiskelu/v2/',
-          'sv' => '/korsstudier/v2/',
-          // No need to alter the English path here.
-        };
+        try {
+          $translated = match($langcode) {
+            'fi' => '/ristiinopiskelu/v2/',
+            'sv' => '/korsstudier/v2/',
+            // No need to alter the English path here.
+          };
 
-        return $translated . substr($path, strlen('/cross-institutional-studies/v2/'));
-      }
-      catch (\UnhandledMatchError) {
+          return $translated . substr($path, strlen('/cross-institutional-studies/v2/'));
+        }
+        catch (\UnhandledMatchError) {
+        }
       }
     }
 
