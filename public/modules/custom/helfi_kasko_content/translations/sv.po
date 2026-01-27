@@ -189,3 +189,67 @@ msgstr "Språkutbudet"
 msgctxt "TPR Ontologyword details schools"
 msgid "Finnish-Swedish"
 msgstr "finska-svenska"
+
+msgctxt "LinkedEvents API"
+msgid "Estonian"
+msgstr "estniska"
+
+msgctxt "LinkedEvents API"
+msgid "French"
+msgstr "franska"
+
+msgctxt "LinkedEvents API"
+msgid "Somali"
+msgstr "somaliska"
+
+msgctxt "LinkedEvents API"
+msgid "Spanish"
+msgstr "spanska"
+
+msgctxt "LinkedEvents API"
+msgid "Turkish"
+msgstr "turkiska"
+
+msgctxt "LinkedEvents API"
+msgid "Persian"
+msgstr "persiska"
+
+msgctxt "LinkedEvents API"
+msgid "Arabic"
+msgstr "arabiska"
+
+msgctxt "LinkedEvents API"
+msgid "Chinese"
+msgstr "kinesiska"
+
+msgctxt "LinkedEvents API"
+msgid "Finnish"
+msgstr "finska"
+
+msgctxt "LinkedEvents API"
+msgid "English"
+msgstr "engelska"
+
+msgctxt "LinkedEvents API"
+msgid "Swedish"
+msgstr "svenska"
+
+msgctxt "LinkedEvents API"
+msgid "Russian"
+msgstr "ryska"
+
+msgctxt "LinkedEvents API"
+msgid "contact learning"
+msgstr "kontaktstudier"
+
+msgctxt "LinkedEvents API"
+msgid "hybrid learning"
+msgstr "hybrid studier"
+
+msgctxt "LinkedEvents API"
+msgid "online learning"
+msgstr "nätstudier"
+
+msgctxt "LinkedEvents API"
+msgid "remote learning"
+msgstr "distansundervisning"
