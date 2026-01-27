@@ -134,3 +134,14 @@ function helfi_kasko_content_update_9004() {
  */
 function helfi_kasko_content_update_9005() {
 }
+
+/**
+ * UHF-12440: Add new config options.
+ */
+function helfi_kasko_content_update_11001(): void {
+  \Drupal::configFactory()
+    ->getEditable('helfi_kasko_content.settings')
+    ->set('linked_events_api_url', 'https://api.hel.fi/linkedevents/v1')
+    ->set('courses_max_age', 3600)
+    ->save();
+}

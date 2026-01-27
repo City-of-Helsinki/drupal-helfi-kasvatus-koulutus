@@ -1,0 +1,46 @@
+{#
+  Template for cource loaded from linked events.
+
+  TODO: https://helsinkisolutionoffice.atlassian.net/browse/UHF-11944.
+
+  See Drupal\helfi_kasko_content\CrossInstitutionalStudies\Controller\Controller.php
+  See available variables with: {{ dd(_context) }}
+#}
+
+<p>
+  {{ event.short_description }}
+</p>
+<div>
+  {{ images }}
+</div>
+<h2>{{ 'Course description' | t }}</h2>
+{{ description }}
+
+<div style="background-color: dimgrey">
+  <h3>{{ 'Course information' | t }}</h3>
+
+  <label>{{ 'Course' | t }}</label>
+  <span>{{ event.title }}</span>
+
+  {% if event.start_date and event.end_date %}
+    <label>{{ 'Date' | t }}</label>
+    <span>{{ event.start_date | format_date('short') }} - {{ event.end_date | format_date('short') }}</span>
+  {% endif %}
+
+  <label>{{ 'Type' | t }}</label>
+  <span>{{ event.keywords | map(keyword => keyword.getlabel()) | join(', ') }}</span>
+
+  {# Show location if event has location and the type is contact learning. #}
+  {% if enum('Drupal\\helfi_kasko_content\\CrossInstitutionalStudies\\DTO\\Keyword').ContactLearning in event.keywords and event.location_extra_info %}
+  <label>{{ 'Location' | t }}</label>
+  <span>{{ event.location_extra_info }}</span>
+  {% endif %}
+
+  <label>{{ 'Language' | t }}</label>
+  <span>{{ event.in_language | map(language => language.getlabel()) | join(', ') }}</span>
+</div>
+
+{% if sub_events is not empty %}
+  <h2>{{ 'Other course completion options' | t }}</h2>
+  {{ sub_events }}
+{% endif %}

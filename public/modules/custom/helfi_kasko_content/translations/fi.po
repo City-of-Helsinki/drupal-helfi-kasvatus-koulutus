@@ -193,3 +193,68 @@ msgstr "suomi-ruotsi"
 msgctxt "Announcement exception info"
 msgid "Add the school you want to create the announcement for. This field is required."
 msgstr "Syötä koulu, jonka sivulla poikkeusilmoitus näytetään. Tämä kenttä on pakollinen."
+
+msgctxt "LinkedEvents API"
+msgid "Estonian"
+msgstr "viro"
+
+msgctxt "LinkedEvents API"
+msgid "French"
+msgstr "ranska"
+
+msgctxt "LinkedEvents API"
+msgid "Somali"
+msgstr "somali"
+
+msgctxt "LinkedEvents API"
+msgid "Spanish"
+msgstr "espanja"
+
+msgctxt "LinkedEvents API"
+msgid "Turkish"
+msgstr "turkki"
+
+msgctxt "LinkedEvents API"
+msgid "Persian"
+msgstr "persia"
+
+msgctxt "LinkedEvents API"
+msgid "Arabic"
+msgstr "arabia"
+
+msgctxt "LinkedEvents API"
+msgid "Chinese"
+msgstr "kiina"
+
+msgctxt "LinkedEvents API"
+msgid "Finnish"
+msgstr "suomi"
+
+msgctxt "LinkedEvents API"
+msgid "English"
+msgstr "englanti"
+
+msgctxt "LinkedEvents API"
+msgid "Swedish"
+msgstr "ruotsi"
+
+msgctxt "LinkedEvents API"
+msgid "Russian"
+msgstr "venäjä"
+
+msgctxt "LinkedEvents API"
+msgid "contact learning"
+msgstr "lähiopiskelu"
+
+msgctxt "LinkedEvents API"
+msgid "hybrid learning"
+msgstr "hybridiopiskelu"
+
+msgctxt "LinkedEvents API"
+msgid "online learning"
+msgstr "verkko-opiskelu"
+
+msgctxt "LinkedEvents API"
+msgid "remote learning"
+msgstr "etäopiskelu"
+
