@@ -29,6 +29,10 @@ display:
                 advanced:
                   rewrite:
                     filter_rewrite_values: '- Kaikki - | Kaikki'
+              high_school_language:
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
   block:
     display_title: Lohko
     display_options:
@@ -42,5 +46,8 @@ display:
         study_programme_type_filter:
           expose:
             label: 'Yleislukio tai aikuislukio'
+        high_school_language:
+          expose:
+            label: Opetuskieli
   entity_reference:
     display_title: Entiteettiviittaus
