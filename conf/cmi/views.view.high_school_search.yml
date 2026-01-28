@@ -532,7 +532,7 @@ display:
             group_items: {  }
         high_school_language:
           id: high_school_language
-          table: tpr_unit__provided_languages
+          table: tpr_unit_field_data
           field: high_school_language
           relationship: none
           group_type: group
@@ -835,7 +835,7 @@ display:
             group_items: {  }
         high_school_language:
           id: high_school_language
-          table: tpr_unit__provided_languages
+          table: tpr_unit_field_data
           field: high_school_language
           relationship: none
           group_type: group
