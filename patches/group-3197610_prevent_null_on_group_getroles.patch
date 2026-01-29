@@ -1,0 +1,18 @@
+diff --git a/src/Entity/GroupMembershipTrait.php b/src/Entity/GroupMembershipTrait.php
+index 49eef3e..52c9099 100644
+--- a/src/Entity/GroupMembershipTrait.php
++++ b/src/Entity/GroupMembershipTrait.php
+@@ -36,9 +36,12 @@ trait GroupMembershipTrait {
+    * {@inheritdoc}
+    */
+   public function getRoles($include_synchronized = TRUE) {
++    /** @var \Drupal\group\Entity\Storage\GroupRoleStorageInterface $group_role_storage */
+     $group_role_storage = $this->entityTypeManager()->getStorage('group_role');
+     assert($group_role_storage instanceof GroupRoleStorageInterface);
+-    return $group_role_storage->loadByUserAndGroup($this->getEntity(), $this->getGroup(), $include_synchronized);
++    return $this->getGroup() !== NULL
++      ? $group_role_storage->loadByUserAndGroup($this->getEntity(), $this->getGroup(), $include_synchronized)
++      : [];
+   }
+ 
+   /**

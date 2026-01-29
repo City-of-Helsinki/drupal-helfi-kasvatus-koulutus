@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ea3a28030ae1c6775032f1fd4ce4704",
+    "content-hash": "a4762df109075acfb26d09f33f229881",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4393,17 +4393,17 @@
         },
         {
             "name": "drupal/group_content_menu",
-            "version": "2.0.7",
+            "version": "2.0.8",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/group_content_menu.git",
-                "reference": "2.0.7"
+                "reference": "2.0.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/group_content_menu-2.0.7.zip",
-                "reference": "2.0.7",
-                "shasum": "19e39c29229c6039666b42ff00604cef94684bbe"
+                "url": "https://ftp.drupal.org/files/projects/group_content_menu-2.0.8.zip",
+                "reference": "2.0.8",
+                "shasum": "a6d347525650a52f2a7f8a02f5f12ef863806354"
             },
             "require": {
                 "drupal/core": "^10.3 || >=11.1.7 <11.2 || ^11.2",
@@ -4415,8 +4415,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.7",
-                    "datestamp": "1754662795",
+                    "version": "2.0.8",
+                    "datestamp": "1767282134",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
