@@ -54,13 +54,17 @@ class HighSchoolLanguageTest extends UnitTestCase {
    * @covers ::query
    */
   public function testQueryWithSwedish(): void {
+    $capturedIds = [];
     $query = $this->createMock(Sql::class);
     $query->expects($this->once())
       ->method('addWhere')
       ->with(
         $this->anything(),
         'tpr_unit_field_data.id',
-        [7051, 6820, 6901],
+        $this->callback(function ($ids) use (&$capturedIds) {
+          $capturedIds = $ids;
+          return TRUE;
+        }),
         'IN'
       );
 
@@ -68,6 +72,11 @@ class HighSchoolLanguageTest extends UnitTestCase {
     $this->filter->value = ['sv'];
     $this->filter->options['group'] = 1;
     $this->filter->query();
+
+    $this->assertCount(3, $capturedIds);
+    $this->assertContains(7051, $capturedIds);
+    $this->assertContains(6820, $capturedIds);
+    $this->assertContains(6901, $capturedIds);
   }
 
   /**
@@ -76,13 +85,17 @@ class HighSchoolLanguageTest extends UnitTestCase {
    * @covers ::query
    */
   public function testQueryWithEnglish(): void {
+    $capturedIds = [];
     $query = $this->createMock(Sql::class);
     $query->expects($this->once())
       ->method('addWhere')
       ->with(
         $this->anything(),
         'tpr_unit_field_data.id',
-        [34442, 30863],
+        $this->callback(function ($ids) use (&$capturedIds) {
+          $capturedIds = $ids;
+          return TRUE;
+        }),
         'IN'
       );
 
@@ -90,6 +103,10 @@ class HighSchoolLanguageTest extends UnitTestCase {
     $this->filter->value = ['en'];
     $this->filter->options['group'] = 1;
     $this->filter->query();
+
+    $this->assertCount(2, $capturedIds);
+    $this->assertContains(34442, $capturedIds);
+    $this->assertContains(30863, $capturedIds);
   }
 
   /**
@@ -104,6 +121,7 @@ class HighSchoolLanguageTest extends UnitTestCase {
 
     $this->filter->query = $query;
     $this->filter->value = [];
+    $this->assertEmpty($this->filter->value);
     $this->filter->query();
   }
 
@@ -113,13 +131,17 @@ class HighSchoolLanguageTest extends UnitTestCase {
    * @covers ::query
    */
   public function testQueryWithFinnish(): void {
+    $capturedIds = [];
     $query = $this->createMock(Sql::class);
     $query->expects($this->once())
       ->method('addWhere')
       ->with(
         $this->anything(),
         'tpr_unit_field_data.id',
-        $this->callback(fn($ids) => is_array($ids) && count($ids) === 12),
+        $this->callback(function ($ids) use (&$capturedIds) {
+          $capturedIds = $ids;
+          return TRUE;
+        }),
         'IN'
       );
 
@@ -127,6 +149,40 @@ class HighSchoolLanguageTest extends UnitTestCase {
     $this->filter->value = ['fi'];
     $this->filter->options['group'] = 1;
     $this->filter->query();
+
+    $this->assertCount(12, $capturedIds);
+    $this->assertContains(15061, $capturedIds);
+    $this->assertContains(73120, $capturedIds);
+  }
+
+  /**
+   * Tests query method with multiple languages selected.
+   *
+   * @covers ::query
+   */
+  public function testQueryWithMultipleLanguages(): void {
+    $capturedIds = [];
+    $query = $this->createMock(Sql::class);
+    $query->expects($this->once())
+      ->method('addWhere')
+      ->with(
+        $this->anything(),
+        'tpr_unit_field_data.id',
+        $this->callback(function ($ids) use (&$capturedIds) {
+          $capturedIds = $ids;
+          return TRUE;
+        }),
+        'IN'
+      );
+
+    $this->filter->query = $query;
+    $this->filter->value = ['sv', 'en'];
+    $this->filter->options['group'] = 1;
+    $this->filter->query();
+
+    $this->assertCount(5, $capturedIds);
+    $this->assertContains(7051, $capturedIds);
+    $this->assertContains(34442, $capturedIds);
   }
 
 }
