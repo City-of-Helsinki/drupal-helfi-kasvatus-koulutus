@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ea3a28030ae1c6775032f1fd4ce4704",
+    "content-hash": "a4762df109075acfb26d09f33f229881",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4393,17 +4393,17 @@
         },
         {
             "name": "drupal/group_content_menu",
-            "version": "2.0.7",
+            "version": "2.0.8",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/group_content_menu.git",
-                "reference": "2.0.7"
+                "reference": "2.0.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/group_content_menu-2.0.7.zip",
-                "reference": "2.0.7",
-                "shasum": "19e39c29229c6039666b42ff00604cef94684bbe"
+                "url": "https://ftp.drupal.org/files/projects/group_content_menu-2.0.8.zip",
+                "reference": "2.0.8",
+                "shasum": "a6d347525650a52f2a7f8a02f5f12ef863806354"
             },
             "require": {
                 "drupal/core": "^10.3 || >=11.1.7 <11.2 || ^11.2",
@@ -4415,8 +4415,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.7",
-                    "datestamp": "1754662795",
+                    "version": "2.0.8",
+                    "datestamp": "1767282134",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4489,16 +4489,16 @@
         },
         {
             "name": "drupal/hdbt_admin",
-            "version": "3.4.11",
+            "version": "3.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt-admin.git",
-                "reference": "b208d83deb73e32812d195a12ed229123f4565f8"
+                "reference": "cc0f0a31ee4b67974c317eb80f7accde86966246"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/b208d83deb73e32812d195a12ed229123f4565f8",
-                "reference": "b208d83deb73e32812d195a12ed229123f4565f8",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/cc0f0a31ee4b67974c317eb80f7accde86966246",
+                "reference": "cc0f0a31ee4b67974c317eb80f7accde86966246",
                 "shasum": ""
             },
             "require": {
@@ -4518,10 +4518,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/3.4.11",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/3.4.12",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/issues"
             },
-            "time": "2026-01-21T12:39:56+00:00"
+            "time": "2026-01-22T13:17:46+00:00"
         },
         {
             "name": "drupal/health_check",
