@@ -195,6 +195,19 @@ function helfi_kasko_content_views_post_execute($view) {
  */
 function helfi_kasko_content_theme(): array {
   return [
+    'cross_institutional_studies' => [
+      'variables' => [
+        'event' => NULL,
+        'sub_events' => [],
+        'images' => [],
+        'description' => NULL,
+      ],
+    ],
+    'cross_institutional_studies_card' => [
+      'variables' => [
+        'event' => NULL,
+      ],
+    ],
     'tpr_ontologyword_details_formatter' => [
       'template' => 'tpr-unit-ontologyword-details',
       'variables' => [

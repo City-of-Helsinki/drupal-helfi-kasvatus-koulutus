@@ -1,4 +1,8 @@
 services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
   Drupal\helfi_kasko_content\EventSubscriber\UnitCategorySubscriber:
     tags:
       - { name: 'event_subscriber' }
@@ -16,3 +20,10 @@ services:
     class: Drupal\helfi_kasko_content\UnitOntologyWordDetailsUtility
     arguments:
       - '@language_manager'
+
+  Drupal\helfi_kasko_content\CrossInstitutionalStudies\Client: ~
+
+  Drupal\helfi_kasko_content\CrossInstitutionalStudies\PathProcessor:
+    tags:
+      - { name: path_processor_inbound, priority: 200 }
+      - { name: path_processor_outbound }
