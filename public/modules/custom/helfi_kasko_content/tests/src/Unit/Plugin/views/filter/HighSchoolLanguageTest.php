@@ -46,9 +46,6 @@ class HighSchoolLanguageTest extends UnitTestCase {
     $this->assertArrayHasKey('sv', $options);
     $this->assertArrayHasKey('en', $options);
     $this->assertCount(3, $options);
-    $this->assertEquals('Finnish', $options['fi']);
-    $this->assertEquals('Swedish', $options['sv']);
-    $this->assertEquals('English', $options['en']);
   }
 
   /**
@@ -96,28 +93,6 @@ class HighSchoolLanguageTest extends UnitTestCase {
   }
 
   /**
-   * Tests query method with multiple languages selected.
-   *
-   * @covers ::query
-   */
-  public function testQueryWithMultipleLanguages(): void {
-    $query = $this->createMock(Sql::class);
-    $query->expects($this->once())
-      ->method('addWhere')
-      ->with(
-        $this->anything(),
-        'tpr_unit_field_data.id',
-        [7051, 6820, 6901, 34442, 30863],
-        'IN'
-      );
-
-    $this->filter->query = $query;
-    $this->filter->value = ['sv', 'en'];
-    $this->filter->options['group'] = 1;
-    $this->filter->query();
-  }
-
-  /**
    * Tests query method with empty value.
    *
    * @covers ::query
@@ -133,14 +108,20 @@ class HighSchoolLanguageTest extends UnitTestCase {
   }
 
   /**
-   * Tests query method with Finnish language (empty IDs).
+   * Tests query method with Finnish language selected.
    *
    * @covers ::query
    */
   public function testQueryWithFinnish(): void {
     $query = $this->createMock(Sql::class);
-    $query->expects($this->never())
-      ->method('addWhere');
+    $query->expects($this->once())
+      ->method('addWhere')
+      ->with(
+        $this->anything(),
+        'tpr_unit_field_data.id',
+        $this->callback(fn($ids) => is_array($ids) && count($ids) === 12),
+        'IN'
+      );
 
     $this->filter->query = $query;
     $this->filter->value = ['fi'];

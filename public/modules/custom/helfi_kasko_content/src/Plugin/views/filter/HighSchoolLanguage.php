@@ -23,8 +23,7 @@ class HighSchoolLanguage extends InOperator {
    */
   private const LANGUAGE_UNIT_IDS = [
     'fi' => [
-      30684,
-      30685,
+      15061,
       30851,
       30852,
       30853,
@@ -33,7 +32,9 @@ class HighSchoolLanguage extends InOperator {
       30858,
       30862,
       30863,
-      73210,
+      30864,
+      30865,
+      73120,
     ],
     'sv' => [7051, 6820, 6901],
     'en' => [34442, 30863],
