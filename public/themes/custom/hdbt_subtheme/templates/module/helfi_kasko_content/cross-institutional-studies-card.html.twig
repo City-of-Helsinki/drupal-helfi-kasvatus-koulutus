@@ -1,0 +1,48 @@
+{#
+  Template for cource loaded from linked events.
+
+  TODO: https://helsinkisolutionoffice.atlassian.net/browse/UHF-11944.
+
+  See Drupal\helfi_kasko_content\CrossInstitutionalStudies\Controller\Controller.php
+  See available variables with: {{ dd(_context) }}
+#}
+
+{% set card_metas =  [] %}
+
+{% if event.start_date and event.end_date %}
+  {% set card_metas = card_metas|merge([{
+    icon: 'calendar',
+    label: 'Date and time' | t({}, { context: 'Cross institutional studies' }),
+    content: event.start_date | format_date('short') ~ ' - ' ~ event.end_date | format_date('short'),
+  }]) %}
+{% endif %}
+
+{% if event.keywords is not empty %}
+  {% set card_metas = card_metas|merge([{
+    icon: 'locate',
+    label: 'Mode of teaching' | t({}, { context: 'Cross institutional studies' }),
+    content: event.keywords | map(keyword => keyword.getlabel()) | join(', '),
+  }]) %}
+{% endif %}
+
+{% if event.in_language is not empty %}
+  {% set card_metas = card_metas|merge([{
+    icon: 'globe',
+    label: 'Language of instruction' | t({}, { context: 'Cross institutional studies' }),
+    content: event.in_language | map(language => language.getlabel()) | join(', '),
+  }]) %}
+{% endif %}
+
+
+{% set card_url = url('helfi_kasko_content.cross_institutional_studies', { id: event.id }) %}
+
+{% embed '@hdbt/component/card.twig' with {
+    card_modifier_class: 'card--cross-institutional-course card--border',
+    card_title_level: 'h3',
+    card_title_lang: 'fi',
+    card_title: event.title,
+    card_url: card_url['#markup'],
+    card_url_external: true,
+    card_metas: card_metas,
+  } %}
+{% endembed %}
