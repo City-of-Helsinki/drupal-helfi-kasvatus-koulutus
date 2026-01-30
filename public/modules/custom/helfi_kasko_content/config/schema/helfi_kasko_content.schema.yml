@@ -27,3 +27,8 @@ views.filter.study_programme_type_filter:
   type: views.filter.in_operator
   label: 'Allowed values'
 
+# Schema definition for high school language filter.
+views.filter.high_school_language:
+  type: views.filter.in_operator
+  label: 'Allowed languages'
+

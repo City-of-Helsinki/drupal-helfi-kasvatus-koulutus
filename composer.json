@@ -97,7 +97,8 @@
         },
         "patches": {
             "drupal/group": {
-                "https://www.drupal.org/project/group/issues/2815971": "./patches/2815971.patch",
+                "Prevent null when loading group membership roles (https://www.drupal.org/i/3197610)": "./patches/group-3197610_prevent_null_on_group_getroles.patch",
+                "https://www.drupal.org/i/2815971": "./patches/2815971.patch",
                 "Duplicate revision(version) tab around Group's admin pages": "https://www.drupal.org/files/issues/2023-12-12/group-revision-tabs-appear-twice-3397063-15.patch",
                 "Fix for group relation type entity type definitions not available first cache rebuild after site install": "./patches/group_relation_type_entity_type_definitions_during_cache_rebuild.patch"
             },

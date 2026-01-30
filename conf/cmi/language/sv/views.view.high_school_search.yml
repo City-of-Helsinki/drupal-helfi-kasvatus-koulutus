@@ -22,6 +22,10 @@ display:
                 advanced:
                   rewrite:
                     filter_rewrite_values: '- Alla - | Alla'
+              high_school_language:
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
   block:
     display_options:
       filters:
@@ -34,3 +38,6 @@ display:
         study_programme_type_filter:
           expose:
             label: 'Allmänt gymnasium eller vuxengymnasium'
+        high_school_language:
+          expose:
+            label: Undervisningsspråk
