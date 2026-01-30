@@ -7,40 +7,99 @@
   See available variables with: {{ dd(_context) }}
 #}
 
-<p>
-  {{ event.short_description }}
-</p>
-<div>
-  {{ images }}
-</div>
-<h2>{{ 'Course description' | t }}</h2>
-{{ description }}
+{%
+  set classes = [
+    'course-unit',
+    'course-unit--full'
+  ]
+%}
 
-<div style="background-color: dimgrey">
-  <h3>{{ 'Course information' | t }}</h3>
+<article{{ attributes.addClass(classes) }}>
 
-  <label>{{ 'Course' | t }}</label>
-  <span>{{ event.title }}</span>
-
-  {% if event.start_date and event.end_date %}
-    <label>{{ 'Date' | t }}</label>
-    <span>{{ event.start_date | format_date('short') }} - {{ event.end_date | format_date('short') }}</span>
+  {% if event.short_description %}
+    {% embed "@hdbt/misc/lead-in.twig" with { content: event.short_description } %}{% endembed %}
+    <div class="page-divider"></div>
   {% endif %}
 
-  <label>{{ 'Type' | t }}</label>
-  <span>{{ event.keywords | map(keyword => keyword.getlabel()) | join(', ') }}</span>
+  {% block main_content %}
+    <div class="components">
+      {% if images %}
+        {% embed "@hdbt/misc/component.twig" with {
+          component_classes: [ 'component--course-unit-main-image' ],
+        } %}
+          {% block component_content %}
+            {% include '@hdbt/misc/image-with-caption.twig' with {
+              figure_class: 'main-image',
+              image: images[0],
+              image_caption: images[0]['#alt'],
+            } %}
+          {% endblock component_content %}
+        {% endembed %}
+      {% endif  %}
 
-  {# Show location if event has location and the type is contact learning. #}
-  {% if enum('Drupal\\helfi_kasko_content\\CrossInstitutionalStudies\\DTO\\Keyword').ContactLearning in event.keywords and event.location_extra_info %}
-  <label>{{ 'Location' | t }}</label>
-  <span>{{ event.location_extra_info }}</span>
-  {% endif %}
+      {% embed "@hdbt/misc/component.twig" with {
+        component_classes: [ 'component--course-unit' ],
+        component_title: 'Study unit description' | t({}, { context: 'Cross institutional studies' }),
+        component_title_level: 'h2',
+      } %}
+        {% block component_content %}
+          {{ description }}
+        {% endblock component_content %}
+      {% endembed %}
 
-  <label>{{ 'Language' | t }}</label>
-  <span>{{ event.in_language | map(language => language.getlabel()) | join(', ') }}</span>
-</div>
+      {% embed "@hdbt/misc/component.twig" with {
+        component_classes: [ 'component--course-unit', 'component--course-unit-details' ],
+        component_title: 'Study unit details' | t({}, { context: 'Cross institutional studies' }),
+        component_title_level: 'h3',
+      } %}
+        {% block component_content %}
+          <div class="course-unit-details__item">
+            <span>{{ 'Study unit' | t({}, { context: 'Cross institutional studies' }) }}</span>
+            <span>{{ event.title }}</span>
+          </div>
 
-{% if sub_events is not empty %}
-  <h2>{{ 'Other course completion options' | t }}</h2>
-  {{ sub_events }}
-{% endif %}
+          {% if event.start_date and event.end_date %}
+            <div class="course-unit-details__item">
+              <span>{{ 'Date and time' | t({}, { context: 'Cross institutional studies' }) }}</span>
+              <span>{{ event.start_date | format_date('short') }} - {{ event.end_date | format_date('short') }}</span>
+            </div>
+          {% endif %}
+
+          {% if event.keywords is not empty %}
+            <div class="course-unit-details__item">
+              <span>{{ 'Mode of teaching' | t({}, { context: 'Cross institutional studies' }) }}</span>
+              <span>{{ event.keywords | map(keyword => keyword.getlabel()) | join(', ') }}</span>
+            </div>
+          {% endif %}
+
+          {# Show location if event has location and the type is contact learning. #}
+          {% if enum('Drupal\\helfi_kasko_content\\CrossInstitutionalStudies\\DTO\\Keyword').ContactLearning in event.keywords and event.location_extra_info %}
+            <div class="course-unit-details__item">
+              <span>{{ 'Location' | t({}, { context: 'Cross institutional studies' }) }}</span>
+              <span>{{ event.location_extra_info }}</span>
+            </div>
+          {% endif %}
+
+          {% if event.in_language is not empty %}
+            <div class="course-unit-details__item">
+              <span>{{ 'Language of instruction' | t({}, { context: 'Cross institutional studies' }) }}</span>
+              <span>{{ event.in_language | map(language => language.getlabel()) | join(', ') }}</span>
+            </div>
+          {% endif %}
+        {% endblock component_content %}
+      {% endembed %}
+
+      {% if sub_events %}
+        {% embed "@hdbt/misc/component.twig" with {
+          component_classes: [ 'component--course-unit' ],
+          component_title: 'Other options for completing the study unit' | t({}, { context: 'Cross institutional studies' }),
+          component_title_level: 'h2',
+          } %}
+            {% block component_content %}
+              {{ sub_events }}
+            {% endblock component_content %}
+        {% endembed %}
+      {% endif %}
+    </div>
+  {% endblock main_content %}
+</article>
