@@ -16,3 +16,76 @@ index 49eef3e..52c9099 100644
    }
  
    /**
+diff --git a/src/Entity/GroupRelationship.php b/src/Entity/GroupRelationship.php
+index 75d440d..ccfeb4b 100644
+--- a/src/Entity/GroupRelationship.php
++++ b/src/Entity/GroupRelationship.php
+@@ -86,6 +86,12 @@ class GroupRelationship extends ContentEntityBase implements GroupRelationshipIn
+    * {@inheritdoc}
+    */
+   public function getRelationshipType() {
++    if (
++      !$this->hasField('type') ||
++      $this->get('type')->isEmpty()
++    ) {
++      return NULL;
++    }
+     return $this->get('type')->entity;
+   }
+ 
+@@ -93,6 +99,12 @@ class GroupRelationship extends ContentEntityBase implements GroupRelationshipIn
+    * {@inheritdoc}
+    */
+   public function getGroup() {
++    if (
++      !$this->hasField('gid') ||
++      $this->get('gid')->isEmpty()
++    ) {
++      return NULL;
++    }
+     return $this->get('gid')->entity;
+   }
+ 
+diff --git a/src/GroupMembership.php b/src/GroupMembership.php
+index a3eec41..d92f274 100644
+--- a/src/GroupMembership.php
++++ b/src/GroupMembership.php
+@@ -34,7 +34,7 @@ class GroupMembership implements CacheableDependencyInterface {
+    *   GroupRelationship entity that is not based on the GroupMembership plugin.
+    */
+   public function __construct(GroupRelationshipInterface $group_relationship) {
+-    if ($group_relationship->getRelationshipType()->getPluginId() == 'group_membership') {
++    if ($group_relationship->getRelationshipType()?->getPluginId() == 'group_membership') {
+       $this->groupRelationship = $group_relationship;
+     }
+     else {
+diff --git a/src/GroupMembershipLoader.php b/src/GroupMembershipLoader.php
+index 4e1d291..eb3fd42 100644
+--- a/src/GroupMembershipLoader.php
++++ b/src/GroupMembershipLoader.php
+@@ -6,6 +6,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
+ use Drupal\Core\Session\AccountInterface;
+ use Drupal\group\Entity\GroupInterface;
+ use Drupal\group\Entity\GroupMembership as NewGroupMembership;
++use Drupal\group\Entity\GroupRelationshipInterface;
+ 
+ /**
+  * Loader for GroupRelationship entities using the 'group_membership' plugin.
+@@ -38,7 +39,16 @@ class GroupMembershipLoader implements GroupMembershipLoaderInterface {
+   protected function wrapGroupRelationshipEntities($entities) {
+     $group_memberships = [];
+     foreach ($entities as $group_relationship) {
+-      $group_memberships[] = new GroupMembership($group_relationship);
++      if (!$group_relationship instanceof GroupRelationshipInterface) {
++        continue;
++      }
++      try {
++        $group_memberships[] = new GroupMembership($group_relationship);
++      }
++      catch (\Exception $e) {
++        // Skip the group membership as the entity is not based on the
++        // GroupMembership plugin.
++      }
+     }
+     return $group_memberships;
+   }
