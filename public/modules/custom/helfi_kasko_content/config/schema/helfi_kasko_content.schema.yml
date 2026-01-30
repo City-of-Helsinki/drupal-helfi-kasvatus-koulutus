@@ -1,3 +1,13 @@
+helfi_kasko_content.settings:
+  type: config_object
+  mapping:
+    linked_events_api_url:
+      type: string
+      label: 'Linked events url'
+    courses_max_age:
+      type: integer
+      label: 'Cache max age'
+
 views.filter.daycare_options:
   type: views.filter.in_operator
   label: 'Allowed options'
@@ -16,4 +26,9 @@ views.filter.educational_mission_filter:
 views.filter.study_programme_type_filter:
   type: views.filter.in_operator
   label: 'Allowed values'
+
+# Schema definition for high school language filter.
+views.filter.high_school_language:
+  type: views.filter.in_operator
+  label: 'Allowed languages'
 

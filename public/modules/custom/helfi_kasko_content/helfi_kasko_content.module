@@ -195,6 +195,19 @@ function helfi_kasko_content_views_post_execute($view) {
  */
 function helfi_kasko_content_theme(): array {
   return [
+    'cross_institutional_studies' => [
+      'variables' => [
+        'event' => NULL,
+        'sub_events' => [],
+        'images' => [],
+        'description' => NULL,
+      ],
+    ],
+    'cross_institutional_studies_card' => [
+      'variables' => [
+        'event' => NULL,
+      ],
+    ],
     'tpr_ontologyword_details_formatter' => [
       'template' => 'tpr-unit-ontologyword-details',
       'variables' => [
@@ -275,6 +288,16 @@ function helfi_kasko_content_views_data_alter(array &$data) {
       'help' => 'Filters units by study programme type.',
       'field' => 'nid',
       'id' => 'study_programme_type_filter',
+    ],
+  ];
+
+  $data['tpr_unit_field_data']['high_school_language'] = [
+    'title' => t('High school language'),
+    'filter' => [
+      'title' => t('High school language'),
+      'help' => 'Filters high school units by language of instruction.',
+      'field' => 'id',
+      'id' => 'high_school_language',
     ],
   ];
 }

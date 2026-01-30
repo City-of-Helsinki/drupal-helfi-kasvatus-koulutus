@@ -30,7 +30,7 @@ final class GroupMenuFilterByLanguage implements EventSubscriberInterface {
   }
 
   /**
-   * Responds to MenuLinkTreeEvents::ALTER_MANIPULATORS event.
+   * Responds to MenuLinkTreeManipulatorsAlterEvent event.
    *
    * @param \Drupal\Core\Menu\MenuLinkTreeManipulatorsAlterEvent $event
    *   The event to subscribe to.
@@ -40,7 +40,7 @@ final class GroupMenuFilterByLanguage implements EventSubscriberInterface {
       return;
     }
 
-    $manipulators = &$event->getManipulators();
+    $manipulators = $event->getManipulators();
 
     $menuName = NULL;
     foreach ($event->getTree() as $item) {
@@ -59,6 +59,8 @@ final class GroupMenuFilterByLanguage implements EventSubscriberInterface {
       'callable' => 'menu_block_current_language_tree_manipulator::filterLanguages',
       'args' => [['menu_link_content']],
     ];
+
+    $event->setManipulators($manipulators);
   }
 
   /**
@@ -66,7 +68,7 @@ final class GroupMenuFilterByLanguage implements EventSubscriberInterface {
    */
   public static function getSubscribedEvents() : array {
     return [
-      'menu.link_tree.alter_manipulators' => [
+      MenuLinkTreeManipulatorsAlterEvent::class => [
         ['filter'],
       ],
     ];
