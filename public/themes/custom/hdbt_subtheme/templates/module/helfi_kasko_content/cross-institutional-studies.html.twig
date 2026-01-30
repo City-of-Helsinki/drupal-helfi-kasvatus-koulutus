@@ -1,0 +1,119 @@
+{#
+  Template for cource loaded from linked events.
+
+  TODO: https://helsinkisolutionoffice.atlassian.net/browse/UHF-11944.
+
+  See Drupal\helfi_kasko_content\CrossInstitutionalStudies\Controller\Controller.php
+  See available variables with: {{ dd(_context) }}
+#}
+
+{%
+  set classes = [
+    'course-unit',
+    'course-unit--full'
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+
+  {% if event.short_description %}
+    {% embed "@hdbt/misc/lead-in.twig" with { content: event.short_description } %}{% endembed %}
+    <div class="page-divider"></div>
+  {% endif %}
+
+  {% block main_content %}
+    <div class="components">
+      {% if images %}
+        {% embed "@hdbt/misc/component.twig" with {
+          component_classes: [ 'component--course-unit__main-image' ],
+        } %}
+          {% block component_content %}
+            {% include '@hdbt/misc/image-with-caption.twig' with {
+              figure_class: 'main-image',
+              image: images[0],
+              image_caption: {
+                credit: images[0]["#attributes"]["data-photographer"],
+                caption_identifier_class: 'image__caption',
+              },
+            } %}
+          {% endblock component_content %}
+        {% endembed %}
+      {% endif  %}
+
+      {% embed "@hdbt/misc/component.twig" with {
+        component_classes: [ 'component--course-unit' ],
+        component_title: 'Study unit description' | t({}, { context: 'Cross institutional studies' }),
+        component_title_level: 'h2',
+      } %}
+        {% block component_content %}
+          {{ description }}
+        {% endblock component_content %}
+      {% endembed %}
+
+      {% embed "@hdbt/misc/component.twig" with {
+        component_classes: [ 'component--course-unit', 'component--course-unit__unit-details' ],
+        component_title: 'Study unit details' | t({}, { context: 'Cross institutional studies' }),
+        component_title_level: 'h3',
+      } %}
+        {% block component_content %}
+          <div class="course-unit-details__item">
+            <span>{{ 'Study unit' | t({}, { context: 'Cross institutional studies' }) }}</span>
+            <span>{{ event.title }}</span>
+          </div>
+
+          {% if event.start_date and event.end_date %}
+            <div class="course-unit-details__item">
+              <span>{{ 'Date and time' | t({}, { context: 'Cross institutional studies' }) }}</span>
+              <span>{{ event.start_date | format_date('short') }} - {{ event.end_date | format_date('short') }}</span>
+            </div>
+          {% endif %}
+
+          {% if event.keywords is not empty %}
+            <div class="course-unit-details__item">
+              <span>{{ 'Mode of teaching' | t({}, { context: 'Cross institutional studies' }) }}</span>
+              <span>{{ event.keywords | map(keyword => keyword.getlabel()) | join(', ') }}</span>
+            </div>
+          {% endif %}
+
+          {# Show location if event has location and the type is contact learning. #}
+          {% if enum('Drupal\\helfi_kasko_content\\CrossInstitutionalStudies\\DTO\\Keyword').ContactLearning in event.keywords and event.location_extra_info %}
+            <div class="course-unit-details__item">
+              <span>{{ 'Location' | t({}, { context: 'Cross institutional studies' }) }}</span>
+              <span>{{ event.location_extra_info }}</span>
+            </div>
+          {% endif %}
+
+          {% if event.in_language is not empty %}
+            <div class="course-unit-details__item">
+              <span>{{ 'Language of instruction' | t({}, { context: 'Cross institutional studies' }) }}</span>
+              <span>{{ event.in_language | map(language => language.getlabel()) | join(', ') }}</span>
+            </div>
+          {% endif %}
+
+          {% set link_attributes = {
+            'data-hds-component': 'button',
+          } %}
+          {% set link_title = 'Sign up on Wilma' | t({}, { context: 'Cross institutional studies' }) %}
+          {# To-do: change to actual link #}
+          {% set link_url = 'https://example.com' %}
+
+          {% if link_url %}
+            {{ link(link_title, link_url, link_attributes) }}
+          {% endif %}
+        {% endblock component_content %}
+      {% endembed %}
+
+      {% if sub_events %}
+        {% embed "@hdbt/misc/component.twig" with {
+          component_classes: [ 'component--course-unit' ],
+          component_title: 'Other options for completing the study unit' | t({}, { context: 'Cross institutional studies' }),
+          component_title_level: 'h2',
+          } %}
+            {% block component_content %}
+              {{ sub_events }}
+            {% endblock component_content %}
+        {% endembed %}
+      {% endif %}
+    </div>
+  {% endblock main_content %}
+</article>

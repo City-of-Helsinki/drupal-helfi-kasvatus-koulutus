@@ -253,3 +253,35 @@ msgstr "nätstudier"
 msgctxt "LinkedEvents API"
 msgid "remote learning"
 msgstr "distansundervisning"
+
+msgctxt "Cross institutional studies"
+msgid "Study unit description"
+msgstr "Beskrivning av studieavsnittet"
+
+msgctxt "Cross institutional studies"
+msgid "Study unit details"
+msgstr "Uppgifter om studieavsnittet"
+
+msgctxt "Cross institutional studies"
+msgid "Study unit"
+msgstr "Studieavsnitt"
+
+msgctxt "Cross institutional studies"
+msgid "Date and time"
+msgstr "Tidpunkt"
+
+msgctxt "Cross institutional studies"
+msgid "Mode of teaching"
+msgstr "Studieform"
+
+msgctxt "Cross institutional studies"
+msgid "Language of instruction"
+msgstr "Undervisningsspråk"
+
+msgctxt "Cross institutional studies"
+msgid "Sign up on Wilma"
+msgstr "Anmäl dig i Wilma"
+
+msgctxt "Cross institutional studies"
+msgid "Other options for completing the study unit"
+msgstr "Andra alternativ att avlägga studieavsnittet"
