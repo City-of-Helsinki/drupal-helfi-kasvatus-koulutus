@@ -22,6 +22,11 @@
       font-weight: $font-weight-bold;
     }
   }
+
+  a[href][data-hds-component="button"] {
+    margin-top: $spacing;
+    width: fit-content;
+  }
 }
 
 .component--course-unit .component__content {

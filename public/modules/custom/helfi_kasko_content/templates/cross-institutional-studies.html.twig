@@ -86,6 +86,17 @@
               <span>{{ event.in_language | map(language => language.getlabel()) | join(', ') }}</span>
             </div>
           {% endif %}
+
+          {% set link_attributes = {
+            'data-hds-component': 'button',
+          } %}
+          {% set link_title = 'Sign up on Wilma' | t({}, { context: 'Cross institutional studies' }) %}
+          {# To-do: change to actual link #}
+          {% set link_url = 'https://example.com' %}
+
+          {% if link_url %}
+            {{ link(link_title, link_url, link_attributes) }}
+          {% endif %}
         {% endblock component_content %}
       {% endembed %}
 
