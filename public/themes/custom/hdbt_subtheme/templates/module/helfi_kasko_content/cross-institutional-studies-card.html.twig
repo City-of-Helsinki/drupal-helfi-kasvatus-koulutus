@@ -7,7 +7,7 @@
   See available variables with: {{ dd(_context) }}
 #}
 
-{% set card_metas =  [] %}
+{% set card_metas = [] %}
 
 {% if event.start_date and event.end_date %}
   {% set card_metas = card_metas|merge([{

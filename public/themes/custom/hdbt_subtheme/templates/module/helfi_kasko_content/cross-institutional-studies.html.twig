@@ -25,13 +25,16 @@
     <div class="components">
       {% if images %}
         {% embed "@hdbt/misc/component.twig" with {
-          component_classes: [ 'component--course-unit-main-image' ],
+          component_classes: [ 'component--course-unit__main-image' ],
         } %}
           {% block component_content %}
             {% include '@hdbt/misc/image-with-caption.twig' with {
               figure_class: 'main-image',
               image: images[0],
-              image_caption: images[0]['#alt'],
+              image_caption: {
+                credit: images[0]["#attributes"]["data-photographer"],
+                caption_identifier_class: 'image__caption',
+              },
             } %}
           {% endblock component_content %}
         {% endembed %}
@@ -48,7 +51,7 @@
       {% endembed %}
 
       {% embed "@hdbt/misc/component.twig" with {
-        component_classes: [ 'component--course-unit', 'component--course-unit-details' ],
+        component_classes: [ 'component--course-unit', 'component--course-unit__unit-details' ],
         component_title: 'Study unit details' | t({}, { context: 'Cross institutional studies' }),
         component_title_level: 'h3',
       } %}

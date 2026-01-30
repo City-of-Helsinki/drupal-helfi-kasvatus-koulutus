@@ -82,6 +82,9 @@ class Controller extends ControllerBase {
         '#uri' => $image->url,
         '#style_name' => 'medium',
         '#alt' => $image->alt_text,
+        '#attributes' => [
+          'data-photographer' => $image->photographer_name,
+        ],
       ];
     }
 
