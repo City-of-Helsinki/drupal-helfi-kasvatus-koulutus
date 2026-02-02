@@ -93,7 +93,7 @@ abstract class SchoolDetailsBase extends InOperatorBase {
       $this->query->addWhere('AND', 'di.detail_items_schoolyear', $schoolYear);
     }
 
-    $this->query->addWhere('AND', 'di.detail_items_clarification', $this->value);
+    $this->query->addWhere('AND', 'di.detail_items_clarification', $this->value, 'IN');
   }
 
   /**
