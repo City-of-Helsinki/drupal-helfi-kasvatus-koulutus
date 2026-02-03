@@ -11,13 +11,17 @@
               'filters that were dimmed, select the option "All" on the selected filter.',
           );
           select.parentElement?.classList.add('hdbt--select-wrapper--disabled');
-          select.disabled = true;
-          select.dataset.ariaDisabled = 'true';
+
+          // Disabling the field with js interferes with ajax.
+          select.classList.add('disabled', 'noclick');
+          select.value = 'All';
+          select.setAttribute('aria-disabled', 'true');
         } else {
           helpText.textContent = '';
+
+          select.classList.remove('disabled', 'noclick');
           select.parentElement?.classList.remove('hdbt--select-wrapper--disabled');
-          select.disabled = false;
-          select.dataset.ariaDisabled = 'false';
+          select.setAttribute('aria-disabled', 'false');
         }
       };
 
