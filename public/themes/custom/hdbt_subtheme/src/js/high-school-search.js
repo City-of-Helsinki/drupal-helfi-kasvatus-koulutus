@@ -25,8 +25,7 @@
         }
       };
 
-      // Disable all other selects except the one that has some OTHER option selected
-      // than 'All' and enable them all if they all have 'All' option selected.
+      // Only one of the two emphasis fields may be selected.
       const disableOtherSelects = (selected, selectElements) => {
         if (selected.value !== 'All') {
           /** biome-ignore lint/suspicious/useIterableCallbackReturn: @todo UHF-12501 */
