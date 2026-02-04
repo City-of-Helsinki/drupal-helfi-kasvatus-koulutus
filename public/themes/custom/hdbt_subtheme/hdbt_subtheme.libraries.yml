@@ -1,11 +1,11 @@
 global-styling:
-  version: 1.x
+  version: HELFI_DEPLOYMENT_IDENTIFIER
   css:
     theme:
       dist/css/styles.min.css: {}
 
 high-school-search:
-  version: 1.x
+  version: HELFI_DEPLOYMENT_IDENTIFIER
   js:
     dist/js/high-school-search.min.js: { }
   dependencies:
