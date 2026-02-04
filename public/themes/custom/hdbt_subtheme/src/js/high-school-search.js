@@ -12,7 +12,7 @@
           );
           select.parentElement?.classList.add('hdbt--select-wrapper--disabled');
 
-          // Disabling the field with js interferes with ajax.
+          // Disabling the field by `select.disabled=true` interferes with ajax.
           select.classList.add('disabled', 'noclick');
           select.value = 'All';
           select.setAttribute('aria-disabled', 'true');
