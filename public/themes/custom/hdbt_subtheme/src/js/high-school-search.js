@@ -11,18 +11,21 @@
               'filters that were dimmed, select the option "All" on the selected filter.',
           );
           select.parentElement?.classList.add('hdbt--select-wrapper--disabled');
-          select.disabled = true;
-          select.dataset.ariaDisabled = 'true';
+
+          // Disabling the field by `select.disabled=true` interferes with ajax.
+          select.classList.add('disabled', 'noclick');
+          select.value = 'All';
+          select.setAttribute('aria-disabled', 'true');
         } else {
           helpText.textContent = '';
+
+          select.classList.remove('disabled', 'noclick');
           select.parentElement?.classList.remove('hdbt--select-wrapper--disabled');
-          select.disabled = false;
-          select.dataset.ariaDisabled = 'false';
+          select.setAttribute('aria-disabled', 'false');
         }
       };
 
-      // Disable all other selects except the one that has some OTHER option selected
-      // than 'All' and enable them all if they all have 'All' option selected.
+      // Only one of the two emphasis fields may be selected.
       const disableOtherSelects = (selected, selectElements) => {
         if (selected.value !== 'All') {
           /** biome-ignore lint/suspicious/useIterableCallbackReturn: @todo UHF-12501 */
