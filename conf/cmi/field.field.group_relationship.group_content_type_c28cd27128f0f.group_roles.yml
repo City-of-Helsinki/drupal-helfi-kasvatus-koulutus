@@ -3,16 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.group_content.group_roles
-    - group.content_type.group_content_type_c28cd27128f0f
+    - field.storage.group_relationship.group_roles
+    - group.relationship_type.group_content_type_c28cd27128f0f
     - group.type.upper_secondary_school
   module:
     - helfi_group
     - group
     - gnode
-id: group_content.group_content_type_c28cd27128f0f.group_roles
+id: group_relationship.group_content_type_c28cd27128f0f.group_roles
 field_name: group_roles
-entity_type: group_content
+entity_type: group_relationship
 bundle: group_content_type_c28cd27128f0f
 label: Roles
 description: ''

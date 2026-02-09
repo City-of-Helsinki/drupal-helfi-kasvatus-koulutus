@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - group.content_type.group_content_type_58b0b198db3e6
-id: group_content.group_content_type_58b0b198db3e6.default
-targetEntityType: group_content
+    - group.relationship_type.group_content_type_58b0b198db3e6
+id: group_relationship.group_content_type_58b0b198db3e6.default
+targetEntityType: group_relationship
 bundle: group_content_type_58b0b198db3e6
 mode: default
 content:

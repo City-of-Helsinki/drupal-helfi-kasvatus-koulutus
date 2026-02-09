@@ -413,14 +413,14 @@ display:
           text: 'Edit unit'
           output_url_as_text: false
           absolute: false
-        delete_group_content:
-          id: delete_group_content
-          table: group_content
-          field: delete_group_content
-          relationship: group_content
+        delete_group_relationship:
+          id: delete_group_relationship
+          table: group_relationship
+          field: delete_group_relationship
+          relationship: group_relationship
           group_type: group
           admin_label: 'Delete relation link'
-          entity_type: group_content
+          entity_type: group_relationship
           plugin_id: entity_link_delete
           label: 'Link to delete Group content'
           exclude: true
@@ -517,9 +517,9 @@ display:
           hide_alter_empty: true
           destination: true
           fields:
-            view_group_content: view_group_content
-            edit_group_content: edit_group_content
-            delete_group_content: delete_group_content
+            view_group_relationship: view_group_relationship
+            edit_group_relationship: edit_group_relationship
+            delete_group_relationship: delete_group_relationship
             edit_tpr_unit: edit_tpr_unit
             id: '0'
             name: '0'
@@ -570,12 +570,12 @@ display:
       arguments:
         gid:
           id: gid
-          table: group_content_field_data
+          table: group_relationship_field_data
           field: gid
-          relationship: group_content
+          relationship: group_relationship
           group_type: group
           admin_label: ''
-          entity_type: group_content
+          entity_type: group_relationship
           entity_field: gid
           plugin_id: group_id
           default_action: 'access denied'
@@ -666,7 +666,7 @@ display:
             content_translation_status: content_translation_status
             content_translation_changed: content_translation_changed
             edit_tpr_unit: edit_tpr_unit
-            delete_group_content: delete_group_content
+            delete_group_relationship: delete_group_relationship
             dropbutton: dropbutton
           default: content_translation_status
           info:
@@ -712,7 +712,7 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            delete_group_content:
+            delete_group_relationship:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -744,17 +744,17 @@ display:
           replica: false
           query_tags: {  }
       relationships:
-        group_content:
-          id: group_content
+        group_relationship:
+          id: group_relationship
           table: tpr_unit_field_data
-          field: group_content
+          field: group_relationship
           relationship: none
           group_type: group
           admin_label: 'TPR - Unit group content'
           entity_type: tpr_unit
-          plugin_id: group_content_to_entity_reverse
+          plugin_id: group_relationship_to_entity_reverse
           required: true
-          group_content_plugins:
+          group_relation_plugins:
             group_tpr_unit: group_tpr_unit
       header: {  }
       footer: {  }

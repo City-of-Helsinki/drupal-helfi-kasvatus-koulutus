@@ -34,10 +34,6 @@ display:
         created:
           label: Liittynyt
           separator: ', '
-        edit_group_content:
-          text: 'Muokkaa jäsenyyttä'
-        delete_group_content:
-          text: 'Poista jäsenyys'
         dropbutton:
           label: Toiminnot
       empty:

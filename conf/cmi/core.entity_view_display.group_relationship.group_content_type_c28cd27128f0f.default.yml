@@ -3,10 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.group_content.group_content_type_c28cd27128f0f.group_roles
-    - group.content_type.group_content_type_c28cd27128f0f
-id: group_content.group_content_type_c28cd27128f0f.default
-targetEntityType: group_content
+    - field.field.group_relationship.group_content_type_c28cd27128f0f.group_roles
+    - group.relationship_type.group_content_type_c28cd27128f0f
+id: group_relationship.group_content_type_c28cd27128f0f.default
+targetEntityType: group_relationship
 bundle: group_content_type_c28cd27128f0f
 mode: default
 content:

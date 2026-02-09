@@ -450,9 +450,9 @@ display:
           hide_alter_empty: true
           destination: true
           fields:
-            view_group_content: view_group_content
-            edit_group_content: edit_group_content
-            delete_group_content: delete_group_content
+            view_group_relationship: view_group_relationship
+            edit_group_relationship: edit_group_relationship
+            delete_group_relationship: delete_group_relationship
             edit_node: edit_node
             delete_node: delete_node
             title: '0'
@@ -516,10 +516,10 @@ display:
           id: gid
           table: group_relationship_field_data
           field: gid
-          relationship: group_content
+          relationship: group_relationship
           group_type: group
           admin_label: ''
-          entity_type: group_content
+          entity_type: group_relationship
           entity_field: gid
           plugin_id: group_id
           default_action: 'access denied'
@@ -649,9 +649,9 @@ display:
             type: type
             status: status
             changed: changed
-            view_group_content: view_group_content
-            edit_group_content: edit_group_content
-            delete_group_content: delete_group_content
+            view_group_relationship: view_group_relationship
+            edit_group_relationship: edit_group_relationship
+            delete_group_relationship: delete_group_relationship
             edit_node: edit_node
             delete_node: delete_node
             dropbutton: dropbutton
@@ -685,21 +685,21 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            view_group_content:
+            view_group_relationship:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            edit_group_content:
+            edit_group_relationship:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            delete_group_content:
+            delete_group_relationship:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -750,17 +750,17 @@ display:
           replica: false
           query_tags: {  }
       relationships:
-        group_content:
-          id: group_content
+        group_relationship:
+          id: group_relationship
           table: node_field_data
-          field: group_content
+          field: group_relationship
           relationship: none
           group_type: group
           admin_label: 'Content relation'
           entity_type: node
-          plugin_id: group_content_to_entity_reverse
+          plugin_id: group_relationship_to_entity_reverse
           required: true
-          group_content_plugins: {  }
+          group_relation_plugins: {  }
       header: {  }
       footer: {  }
       display_extenders: {  }

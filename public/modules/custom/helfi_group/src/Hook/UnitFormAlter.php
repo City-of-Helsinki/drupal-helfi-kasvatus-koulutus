@@ -130,7 +130,7 @@ class UnitFormAlter extends NodeFormAlter {
 
     // Get the groups for existing entity.
     $groupContents = $this->entityTypeManager
-      ->getStorage('group_content')
+      ->getStorage('group_relationship')
       ->loadByEntity($entity);
 
     $group_ids = [];

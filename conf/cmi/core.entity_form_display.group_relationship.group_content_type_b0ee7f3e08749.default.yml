@@ -1,12 +1,13 @@
-uuid: 72e7da8e-abdd-4913-884e-daf3637d6f94
+uuid: 6f289634-ab1d-4a7d-ba9d-6340c3745346
 langcode: en
 status: true
 dependencies:
-  config:
-    - group.content_type.group_content_type_58b0b198db3e6
-id: group_content.group_content_type_58b0b198db3e6.default
-targetEntityType: group_content
-bundle: group_content_type_58b0b198db3e6
+  enforced:
+    config:
+      - group.content_type.group_content_type_b0ee7f3e08749
+id: group_relationship.group_content_type_b0ee7f3e08749.default
+targetEntityType: group_relationship
+bundle: group_content_type_b0ee7f3e08749
 mode: default
 content:
   entity_id:
