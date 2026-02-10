@@ -1,0 +1,39 @@
+.component--course-unit__unit-details {
+  .component__container {
+    background-color: $color-engel-light;
+    padding: $spacing-and-half;
+
+    @include breakpoint($breakpoint-l) {
+      padding: $spacing-double;
+    }
+  }
+
+  .component__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing;
+    margin-block-start: $spacing;
+  }
+
+  .course-unit-details__item {
+    display:flex;
+    flex-direction: column;
+
+    span:first-child {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  a[data-hds-component="button"] {
+    margin-top: $spacing;
+    width: fit-content;
+  }
+}
+
+.component--course-unit .component__content {
+  @include font('body');
+}
+
+.component--course-unit__main-image .main-image {
+  padding: 0;
+}

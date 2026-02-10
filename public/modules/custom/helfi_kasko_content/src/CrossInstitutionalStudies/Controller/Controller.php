@@ -78,10 +78,14 @@ class Controller extends ControllerBase {
 
     foreach ($event->images as $image) {
       $build['#images'][] = [
-        '#theme' => 'imagecache_external',
+        '#theme' => 'imagecache_external_responsive',
         '#uri' => $image->url,
         '#style_name' => 'medium',
         '#alt' => $image->alt_text,
+        '#responsive_image_style_id' => 'main_image',
+        '#attributes' => [
+          'data-photographer' => $image->photographer_name,
+        ],
       ];
     }
 
