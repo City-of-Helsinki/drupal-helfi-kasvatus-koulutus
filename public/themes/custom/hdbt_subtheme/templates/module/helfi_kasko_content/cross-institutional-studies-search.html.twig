@@ -1,0 +1,32 @@
+<article>
+  <div class="components components--computed components--cross-institutional-studies-search">
+    {% embed "@hdbt/misc/component.twig" with
+      {
+        component_classes: [
+          'component--react-search',
+          'component--event-list',
+          'component--full-width',
+        ],
+        component_title: 'Placeholder'|t({}, {'context': 'Cross institutional studies search'}),
+        component_description: 'placeholder'
+      }
+    %}
+      {% block component_content %}
+        {# Hook React app to this div #}
+        {{ attach_library('hdbt/event-list') }}
+        <div
+          id="helfi-events-search"
+          data-paragraph-id="cross-institutional-studies-search"
+        >
+        </div>
+        {# Indicate JS not enabled #}
+        <noscript>
+          <div class="event-list__javascript-disabled">
+            {{ 'Placeholder'|t }}
+          </div>
+        </noscript>
+      {% endblock %}
+    {% endembed %}
+
+  </div>
+</article>

@@ -17,3 +17,10 @@ helfi_kasko_content.cross_institutional_studies:
     _permission: 'access content'
     # FIXME forbids unauthenticated users while this feature is in development.
     _user_is_logged_in: yes
+
+helfi_kasko_content.cross_institutional_studies_search:
+  path: '/cross-institutional-studies-search'
+  defaults:
+    _controller: '\Drupal\helfi_kasko_content\CrossInstitutionalStudies\Controller\SearchController::content'
+  requirements:
+    _permission: 'access content'

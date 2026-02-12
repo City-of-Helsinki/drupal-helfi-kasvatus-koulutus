@@ -208,6 +208,10 @@ function helfi_kasko_content_theme(): array {
         'event' => NULL,
       ],
     ],
+    'cross_institutional_studies_search' => [
+      'template' => 'cross-institutional-studies-search',
+      'variables' => [],
+    ],
     'tpr_ontologyword_details_formatter' => [
       'template' => 'tpr-unit-ontologyword-details',
       'variables' => [
