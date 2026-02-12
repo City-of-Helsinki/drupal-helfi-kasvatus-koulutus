@@ -1,0 +1,18 @@
+uuid: 0187f554-95d4-407c-9628-3abc66c665d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.upper_secondary_school
+id: group.upper_secondary_school.changed
+field_name: changed
+entity_type: group
+bundle: upper_secondary_school
+label: 'Changed on'
+description: 'The time that the group was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,18 @@
+uuid: 46134b14-64a7-4963-a3d0-6fbbd068d15b
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.content_type.group_content_type_c28cd27128f0f
+id: group_content.group_content_type_c28cd27128f0f.created
+field_name: created
+entity_type: group_content
+bundle: group_content_type_c28cd27128f0f
+label: 'Created on'
+description: 'The time that the group content was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created
