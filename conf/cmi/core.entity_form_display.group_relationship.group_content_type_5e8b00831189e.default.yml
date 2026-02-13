@@ -4,7 +4,7 @@ status: true
 dependencies:
   enforced:
     config:
-      - group.content_type.group_content_type_5e8b00831189e
+      - group.relationship_type.group_content_type_5e8b00831189e
 id: group_relationship.group_content_type_5e8b00831189e.default
 targetEntityType: group_relationship
 bundle: group_content_type_5e8b00831189e

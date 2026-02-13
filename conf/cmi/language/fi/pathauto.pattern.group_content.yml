@@ -1,4 +1,4 @@
 label: 'Ryhmän sisältö'
 relationships:
-  'group_content:langcode:language':
+  'group_relationship:langcode:language':
     label: Kieli
