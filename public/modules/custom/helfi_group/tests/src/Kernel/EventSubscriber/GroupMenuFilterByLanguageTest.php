@@ -43,9 +43,12 @@ class GroupMenuFilterByLanguageTest extends EntityKernelTestBase {
     'content_translation',
     'link',
     'helfi_group',
+    'helfi_tpr',
     'menu_block_current_language',
     'language',
     'locale',
+    'flexible_permissions',
+    'group',
   ];
 
   /**
