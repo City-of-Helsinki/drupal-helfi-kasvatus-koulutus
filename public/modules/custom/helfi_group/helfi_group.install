@@ -7,9 +7,11 @@
 
 declare(strict_types=1);
 
+use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Url;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\node\Entity\Node;
+use Drupal\pathauto\PathautoState;
 
 /**
  * Update group menu item's content translation status to match node's status.
@@ -50,5 +52,57 @@ function helfi_group_update_9001(): void {
       }
 
     }
+  }
+}
+
+/**
+ * Update path aliases for group news items.
+ */
+function helfi_group_update_9002(&$sandbox): void {
+  $query = \Drupal::entityQuery('node')
+    ->condition('type', 'news_item')
+    ->accessCheck(FALSE);
+  $result = $query->execute();
+
+  if (!$result) {
+    return;
+  }
+
+  // Use the sandbox to store the information needed to track progression.
+  if (!isset($sandbox['current'])) {
+    // The count of entities visited so far.
+    $sandbox['current'] = 0;
+    // Total entities that must be visited.
+    $sandbox['max'] = count($result);
+  }
+
+  // Process 50 entities at a time.
+  $limit = 50;
+  $nids = array_slice($result, $sandbox['current'], $limit);
+  $nodes = Node::loadMultiple($nids);
+  $languageManager = \Drupal::languageManager();
+  foreach ($nodes as $node) {
+    // Set current languages to match node's language for proper
+    // token replacement.
+    $languageManager->setCurrentLanguage($node->language(), LanguageInterface::TYPE_CONTENT);
+    $languageManager->setCurrentLanguage($node->language(), LanguageInterface::TYPE_URL);
+
+    // Update Entity URL alias.
+    $path_value = $node->get('path')->getValue();
+    $path_value = $path_value ?: [[]];
+    $path_value[0]['pathauto'] = PathautoState::CREATE;
+    $node->set('path', $path_value);
+    \Drupal::service('pathauto.generator')->updateEntityAlias($node, 'bulkupdate', ['message' => TRUE]);
+
+    // Update our progress information.
+    $sandbox['current']++;
+  }
+
+  \Drupal::messenger()->addMessage($sandbox['current'] . ' items processed.');
+
+  $sandbox['#finished'] = empty($sandbox['max']) ? 1 : ($sandbox['current'] / $sandbox['max']);
+
+  if ($sandbox['#finished'] >= 1) {
+    \Drupal::messenger()->addMessage('The batch URL Alias update is finished.');
   }
 }
