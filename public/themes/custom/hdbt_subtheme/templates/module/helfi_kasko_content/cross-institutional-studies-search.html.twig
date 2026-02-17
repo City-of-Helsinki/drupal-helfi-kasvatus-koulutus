@@ -7,8 +7,8 @@
           'component--event-list',
           'component--full-width',
         ],
-        component_title: 'Placeholder'|t({}, {'context': 'Cross institutional studies search'}),
-        component_description: 'placeholder'
+        component_title: 'Search for online and distance studies in general upper secondary schools'|t({}, {'context': 'Cross institutional studies search'}),
+        component_description: 'Use this search tool to find online and distance courses offered by the City of Helsinki. You can search for courses by name. You can also filter the results by start time, mode of teaching, level of study, or language of instruction.'|t({}, {'context': 'Cross institutional studies search'}),
       }
     %}
       {% block component_content %}
@@ -22,7 +22,7 @@
         {# Indicate JS not enabled #}
         <noscript>
           <div class="event-list__javascript-disabled">
-            {{ 'Placeholder'|t }}
+            {{ 'You must enable JavaScript in your browser for event list to work'|t }}
           </div>
         </noscript>
       {% endblock %}

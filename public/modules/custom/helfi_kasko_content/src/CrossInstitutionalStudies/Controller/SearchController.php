@@ -11,28 +11,30 @@ use Drupal\Core\Url;
  * Controller for cross studies search.
  */
 class SearchController extends ControllerBase {
-
-  public const BASE_URL = 'https://tapahtumat.hel.fi';
-  public const API_URL = 'https://api.hel.fi/linkedevents/v1/event/';
-
+  
   public function content() {
 
     $defaultOptions = [
+      // This should possibly be toggled on once we have production data
+      // 'all_ongoing' => 'true',
       'event_type' => 'Course',
-      'super_event' => 'agm4rv5hjq', 
+      'super_event' => 'helsinki:agm4rv5hjq', 
     ];
 
-    $eventsApiUrl = Url::fromUri(self::API_URL, ['query' => $defaultOptions])->toString();
+    $config = $this->config('helfi_kasko_content.settings');
+
+    $eventsApiUrl = Url::fromUri($config->get('linked_events_api_url'), ['query' => $defaultOptions])->toString();
 
     return [
       '#attached' => [
         'drupalSettings' => [
           'helfi_events' => [
-            'baseUrl' => self::BASE_URL,
+            'baseUrl' => 'https://helfi-kasko.docker.so',
             'data' => [
               'cross-institutional-studies-search' => [
                 'events_api_url' => $eventsApiUrl,
                 'field_event_count' => 10,
+                'useCrossInstitutionalStudiesForm' => TRUE,
               ],
             ],
           ],
