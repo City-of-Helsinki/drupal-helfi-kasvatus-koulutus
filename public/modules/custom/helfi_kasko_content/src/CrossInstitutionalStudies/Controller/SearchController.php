@@ -6,12 +6,17 @@ namespace Drupal\helfi_kasko_content\CrossInstitutionalStudies\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Url;
+use Drupal\helfi_api_base\Environment\EnvironmentResolverInterface;
 
 /**
  * Controller for cross studies search.
  */
 class SearchController extends ControllerBase {
-  
+
+  public function __construct(
+    private readonly EnvironmentResolverInterface $environmentResolver,
+  ) {}
+
   public function content() {
 
     $defaultOptions = [
@@ -23,13 +28,13 @@ class SearchController extends ControllerBase {
 
     $config = $this->config('helfi_kasko_content.settings');
 
-    $eventsApiUrl = Url::fromUri($config->get('linked_events_api_url'), ['query' => $defaultOptions])->toString();
+    $eventsApiUrl = Url::fromUri($config->get('linked_events_api_url') . '/event', ['query' => $defaultOptions])->toString();
 
     return [
       '#attached' => [
         'drupalSettings' => [
           'helfi_events' => [
-            'baseUrl' => 'https://helfi-kasko.docker.so',
+            'baseUrl' => $this->environmentResolver->getActiveEnvironment()->getBaseUrl(),
             'data' => [
               'cross-institutional-studies-search' => [
                 'events_api_url' => $eventsApiUrl,
