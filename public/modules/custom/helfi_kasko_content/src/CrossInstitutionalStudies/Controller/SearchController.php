@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Drupal\helfi_kasko_content\CrossInstitutionalStudies\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\Core\Url;
 use Drupal\helfi_api_base\Environment\EnvironmentResolverInterface;
 
@@ -17,7 +18,17 @@ class SearchController extends ControllerBase {
     private readonly EnvironmentResolverInterface $environmentResolver,
   ) {}
 
-  public function content() {
+  /**
+   * Returns title for the page.
+   */
+  public function title(): TranslatableMarkup {
+    return $this->t('Online and distance studies of City of Helsinki general upper secondary schools', [], ['context' => 'Cross institutional studies search']);
+  }
+
+  /**
+   * Returns a renderable array.
+   */
+  public function content() : array {
 
     $defaultOptions = [
       // This should possibly be toggled on once we have production data

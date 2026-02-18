@@ -22,6 +22,7 @@ helfi_kasko_content.cross_institutional_studies_search:
   path: '/cross-institutional-studies-search'
   defaults:
     _controller: '\Drupal\helfi_kasko_content\CrossInstitutionalStudies\Controller\SearchController::content'
+    _title_callback: '\Drupal\helfi_kasko_content\CrossInstitutionalStudies\Controller\SearchController::title'
   requirements:
     _permission: 'access content'
     # FIXME forbids unauthenticated users while this feature is in development.
