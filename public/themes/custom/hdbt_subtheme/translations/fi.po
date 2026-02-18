@@ -186,3 +186,11 @@ msgid "1 course"
 msgid_plural "@count courses"
 msgstr[0] "1 kurssi"
 msgstr[1] "@count kurssia"
+
+msgctxt "Cross-institutional studies: sort label"
+msgid "Sort search results"
+msgstr "Järjestä hakutulokset"
+
+msgctxt "Cross-institutional studies: sort option"
+msgid "Alphabetical order"
+msgstr "Aakkosjärjestys"
