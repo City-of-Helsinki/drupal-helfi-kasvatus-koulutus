@@ -98,11 +98,9 @@ function helfi_group_update_9002(&$sandbox): void {
     $sandbox['current']++;
   }
 
-  \Drupal::messenger()->addMessage($sandbox['current'] . ' items processed.');
-
   $sandbox['#finished'] = empty($sandbox['max']) ? 1 : ($sandbox['current'] / $sandbox['max']);
 
   if ($sandbox['#finished'] >= 1) {
-    \Drupal::messenger()->addMessage('The batch URL Alias update is finished.');
+    \Drupal::messenger()->addMessage('Url alias updated for ' . $sandbox['current'] . ' news items.');
   }
 }
