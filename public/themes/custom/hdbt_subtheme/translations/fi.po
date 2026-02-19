@@ -173,6 +173,22 @@ msgctxt "Cross-institutional studies: Teaching mode filter placeholder"
 msgid "All modes of teaching"
 msgstr "Kaikki opiskelumuodot"
 
+msgctxt "Cross-institutional studies: Teaching mode filter option"
+msgid "Contact teaching"
+msgstr "Lähiopetus"
+
+msgctxt "Cross-institutional studies: Teaching mode filter option"
+msgid "Remote teaching"
+msgstr "Etäopetus"
+
+msgctxt "Cross-institutional studies: Teaching mode filter option"
+msgid "Hybrid teaching"
+msgstr "Monimuoto-opetus"
+
+msgctxt "Cross-institutional studies: Teaching mode filter option"
+msgid "Online teaching"
+msgstr "Verkko-opetus"
+
 msgctxt "Cross-institutional studies: language of instruction filter label"
 msgid "Language of instruction"
 msgstr "Opetuskieli"
@@ -194,3 +210,7 @@ msgstr "Järjestä hakutulokset"
 msgctxt "Cross-institutional studies: sort option"
 msgid "Alphabetical order"
 msgstr "Aakkosjärjestys"
+
+msgctxt "Cross-institutional studies"
+msgid "Date and time"
+msgstr "Ajankohta"
