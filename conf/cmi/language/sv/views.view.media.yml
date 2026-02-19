@@ -4,6 +4,7 @@ display:
       filters:
         status:
           expose:
+            description: ''
             label: Sant
           group_info:
             label: 'Status för publicering'

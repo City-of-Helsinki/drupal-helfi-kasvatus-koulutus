@@ -5,7 +5,7 @@ content:
         ESERVICE:
           label: 'Sähköinen palvelu'
         EMAIL:
-          label: Sähköpostiosoite
+          label: Sähköposti
         TELEPHONE:
           label: Puhelin
         PRINTABLE_FORM:
