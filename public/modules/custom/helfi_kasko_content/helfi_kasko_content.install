@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 use Drupal\Core\Entity\EntityStorageException;
 use Drupal\helfi_kasko_content\SchoolUtility;
+use Drupal\path_alias\Entity\PathAlias;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\taxonomy\Entity\Vocabulary;
 use Drupal\user\Entity\Role;
@@ -144,4 +145,26 @@ function helfi_kasko_content_update_11001(): void {
     ->set('linked_events_api_url', 'https://api.hel.fi/linkedevents/v1')
     ->set('courses_max_age', 3600)
     ->save();
+}
+
+/**
+ * UHF-12620: Cross institutional studies search path aliases.
+ */
+function helfi_kasko_content_update_11002(): void {
+  $paths = [
+    [
+      'path' => '/cross-institutional-studies-search',
+      'alias' => '/ristiinopiskeluhaku',
+      'langcode' => 'fi',
+    ],
+    [
+      'path' => '/cross-institutional-studies-search',
+      'alias' => '/korsstudiersök',
+      'langcode' => 'sv',
+    ],
+  ];
+  
+  foreach ($paths as $path) {
+    PathAlias::create($path)->save();
+  }
 }
