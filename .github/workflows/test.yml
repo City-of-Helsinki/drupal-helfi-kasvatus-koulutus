@@ -5,7 +5,7 @@ on:
 name: CI
 jobs:
   tests:
-    uses: city-of-helsinki/drupal-gh-actions/.github/workflows/project-tests.yml@use-make-commands
+    uses: city-of-helsinki/drupal-gh-actions/.github/workflows/project-tests.yml@main
     secrets:
       sonarcloud_token: ${{ secrets.SONAR_TOKEN }}
 

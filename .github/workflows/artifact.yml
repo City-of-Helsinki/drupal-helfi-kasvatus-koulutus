@@ -7,7 +7,7 @@ on:
 name: Build artifacts
 jobs:
   build:
-    uses: city-of-helsinki/drupal-gh-actions/.github/workflows/build-artifact.yml@use-make-commands
+    uses: city-of-helsinki/drupal-gh-actions/.github/workflows/build-artifact.yml@main
     secrets:
       sentry_crons: ${{ secrets.SENTRY_CRONS }}
 
