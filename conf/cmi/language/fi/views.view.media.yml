@@ -4,6 +4,7 @@ display:
       filters:
         status:
           expose:
+            description: ''
             label: Tosi
           group_info:
             label: Julkaisutila

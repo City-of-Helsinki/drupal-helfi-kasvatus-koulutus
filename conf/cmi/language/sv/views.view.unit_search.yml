@@ -41,7 +41,6 @@ display:
         combine:
           expose:
             label: Sök
-            placeholder: 'Type in unit name or address'
           group_info:
             label: 'Kombinera filterfält'
     display_title: Förvald
