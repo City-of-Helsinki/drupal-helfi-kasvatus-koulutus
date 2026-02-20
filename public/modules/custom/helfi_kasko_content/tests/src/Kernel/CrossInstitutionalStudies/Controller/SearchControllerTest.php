@@ -70,7 +70,7 @@ class SearchControllerTest extends KernelTestBase {
     $this->assertTrue($drupalSettings['useExperimentalGhosts']);
 
     $eventsSettings = $drupalSettings['helfi_events'];
-    $this->assertNotEmpty($eventsSettings['baseUrl']);
+    $this->assertNotEmpty($eventsSettings['baseUrls']);
 
     $searchData = $eventsSettings['data']['cross-institutional-studies-search'];
     $this->assertStringContainsString('linkedevents.api.test.hel.ninja', $searchData['events_api_url']);
