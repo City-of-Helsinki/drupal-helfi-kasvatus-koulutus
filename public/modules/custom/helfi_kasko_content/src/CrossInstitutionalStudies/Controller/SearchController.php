@@ -41,11 +41,17 @@ class SearchController extends ControllerBase {
 
     $eventsApiUrl = Url::fromUri($config->get('linked_events_api_url') . '/event', ['query' => $defaultOptions])->toString();
 
+    $availableLanguages = ['fi', 'sv', 'en'];
+
     return [
       '#attached' => [
         'drupalSettings' => [
           'helfi_events' => [
-            'baseUrl' => $this->environmentResolver->getActiveEnvironment()->getBaseUrl(),
+            'baseUrls' => array_reduce(
+              $availableLanguages,
+              fn(array $carry, string $language) => $carry + [$language => $this->environmentResolver->getActiveEnvironment()->getUrl($language)],
+              []
+            ),
             'data' => [
               'cross-institutional-studies-search' => [
                 'events_api_url' => $eventsApiUrl,
