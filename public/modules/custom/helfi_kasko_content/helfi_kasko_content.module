@@ -208,6 +208,16 @@ function helfi_kasko_content_theme(): array {
         'event' => NULL,
       ],
     ],
+    'cross_institutional_studies_search' => [
+      'template' => 'cross-institutional-studies-search',
+      'variables' => [],
+    ],
+    'cross_institutional_studies_hero_block' => [
+      'template' => 'cross-institutional-studies-hero-block',
+      'variables' => [
+        'hero_title' => NULL,
+      ],
+    ],
     'tpr_ontologyword_details_formatter' => [
       'template' => 'tpr-unit-ontologyword-details',
       'variables' => [
@@ -446,4 +456,22 @@ function _helfi_kasko_content_announcement_school_editor_exception(array &$form,
 
   $form['field_announcement_unit_pages']['widget']['#default_value'] = $unit_ids;
 
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function helfi_kasko_content_preprocess_page(array &$variables) {
+  if (\Drupal::routeMatch()->getRouteName() === 'helfi_kasko_content.cross_institutional_studies_search') {
+    $variables['has_hero'] = TRUE;
+  }
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function helfi_kasko_content_preprocess_html(array &$variables) {
+  if (\Drupal::routeMatch()->getRouteName() === 'helfi_kasko_content.cross_institutional_studies_search') {
+    $variables['theme_color'] = 'summer';
+  }
 }
