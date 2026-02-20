@@ -14,8 +14,6 @@ use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Tests the cross-institutional studies search controller.
- *
- * @coversDefaultClass \Drupal\helfi_kasko_content\CrossInstitutionalStudies\Controller\SearchController
  */
 #[Group('helfi_kasko_content')]
 class SearchControllerTest extends KernelTestBase {
@@ -47,8 +45,6 @@ class SearchControllerTest extends KernelTestBase {
 
   /**
    * Tests that title() returns the expected translatable markup.
-   *
-   * @covers ::title
    */
   public function testTitle(): void {
     $controller = $this->container->get(SearchController::class);
@@ -63,8 +59,6 @@ class SearchControllerTest extends KernelTestBase {
 
   /**
    * Tests that content() returns the expected render array structure.
-   *
-   * @covers ::content
    */
   public function testContent(): void {
     $controller = $this->container->get(SearchController::class);

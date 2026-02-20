@@ -11,8 +11,6 @@ use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Tests the CrossInstitutionalStudiesHeroBlock block plugin.
- *
- * @coversDefaultClass \Drupal\helfi_kasko_content\Plugin\Block\CrossInstitutionalStudiesHeroBlock
  */
 #[Group('helfi_kasko_content')]
 class CrossInstitutionalStudiesHeroBlockTest extends UnitTestCase {
@@ -38,8 +36,6 @@ class CrossInstitutionalStudiesHeroBlockTest extends UnitTestCase {
 
   /**
    * Tests that build() returns the expected render array.
-   *
-   * @covers ::build
    */
   public function testBuild(): void {
     $build = $this->block->build();
