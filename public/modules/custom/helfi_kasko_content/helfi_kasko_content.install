@@ -163,7 +163,7 @@ function helfi_kasko_content_update_11002(): void {
       'langcode' => 'sv',
     ],
   ];
-  
+
   foreach ($paths as $path) {
     PathAlias::create($path)->save();
   }

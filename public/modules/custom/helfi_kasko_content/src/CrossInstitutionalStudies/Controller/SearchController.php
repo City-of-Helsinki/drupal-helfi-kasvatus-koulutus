@@ -32,9 +32,9 @@ class SearchController extends ControllerBase {
 
     $defaultOptions = [
       // This should possibly be toggled on once we have production data
-      // 'all_ongoing' => 'true',
+      // 'all_ongoing' => 'true',.
       'event_type' => 'Course',
-      'super_event' => 'helsinki:agm4rv5hjq', 
+      'super_event' => 'helsinki:agm4rv5hjq',
     ];
 
     $config = $this->config('helfi_kasko_content.settings');
@@ -60,4 +60,5 @@ class SearchController extends ControllerBase {
       '#theme' => 'cross_institutional_studies_search',
     ];
   }
+
 }
