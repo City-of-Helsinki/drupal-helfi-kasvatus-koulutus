@@ -75,7 +75,7 @@ final class HelfiGroupMenuBlock extends GroupMenuBlock implements ContainerFacto
   public function build() {
     $menu_name = $this->getMenuName();
     // If unable to determine the menu, prevent the block from rendering.
-    if (!$menu_name = $this->getMenuName()) {
+    if (!$menu_name) {
       return [];
     }
 
