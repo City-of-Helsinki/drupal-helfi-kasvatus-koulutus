@@ -201,10 +201,8 @@ final class HelfiGroupMenuBlock extends GroupMenuBlock implements ContainerFacto
     if ($links) {
       $found = reset($links);
     }
-    if ($found) {
-      if ($parents = $this->menuLinkManager->getParentIds($found->getPluginId())) {
-        $active_trail = $parents + $active_trail;
-      }
+    if ($found && $parents = $this->menuLinkManager->getParentIds($found->getPluginId())) {
+      $active_trail = $parents + $active_trail;
     }
 
     return $active_trail;
