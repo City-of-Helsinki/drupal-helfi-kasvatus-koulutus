@@ -5,21 +5,16 @@ declare(strict_types=1);
 namespace Drupal\helfi_group\Plugin\Block;
 
 use Drupal\group_content_menu\GroupContentMenuInterface;
-use Drupal\group_content_menu\Plugin\Block\GroupMenuBlock;
-use Drupal\Core\Menu\MenuActiveTrailInterface;
-use Drupal\Core\Menu\MenuLinkTreeInterface;
-use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\group_content_menu\Plugin\Block\GroupMenuBlock as OriginalGroupMenuBlock;
 use Drupal\node\NodeInterface;
 use Drupal\group\Entity\GroupInterface;
-use Drupal\Core\Menu\MenuLinkManagerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Overrides the generic Menu block.
+ * Overrides the Group Content Menu block.
  */
-final class HelfiGroupMenuBlock extends GroupMenuBlock implements ContainerFactoryPluginInterface {
+final class GroupMenuBlock extends OriginalGroupMenuBlock implements ContainerFactoryPluginInterface {
 
   /**
    * The route match service.
@@ -38,41 +33,17 @@ final class HelfiGroupMenuBlock extends GroupMenuBlock implements ContainerFacto
   /**
    * {@inheritdoc}
    */
-  public function __construct(
-    array $configuration,
-    $plugin_id,
-    $plugin_definition,
-    MenuLinkTreeInterface $menu_tree,
-    MenuActiveTrailInterface $menu_active_trail,
-    EntityTypeManagerInterface $entity_type_manager,
-    RouteMatchInterface $route_match,
-    MenuLinkManagerInterface $menu_link_manager,
-  ) {
-    parent::__construct($configuration, $plugin_id, $plugin_definition, $menu_tree, $menu_active_trail, $entity_type_manager);
-    $this->routeMatch = $route_match;
-    $this->menuLinkManager = $menu_link_manager;
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition): self {
+    $instance = parent::create($container, $configuration, $plugin_id, $plugin_definition);
+    $instance->routeMatch = $container->get('current_route_match');
+    $instance->menuLinkManager = $container->get('plugin.manager.menu.link');
+    return $instance;
   }
 
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
-    return new static(
-      $configuration,
-      $plugin_id,
-      $plugin_definition,
-      $container->get('menu.link_tree'),
-      $container->get('menu.active_trail'),
-      $container->get('entity_type.manager'),
-      $container->get('current_route_match'),
-      $container->get('plugin.manager.menu.link'),
-    );
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function build() {
+  public function build(): array {
     $menu_name = $this->getMenuName();
     // If unable to determine the menu, prevent the block from rendering.
     if (!$menu_name) {

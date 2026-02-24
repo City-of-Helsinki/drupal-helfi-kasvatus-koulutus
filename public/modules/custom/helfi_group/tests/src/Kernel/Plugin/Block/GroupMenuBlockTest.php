@@ -7,7 +7,7 @@ namespace Drupal\Tests\helfi_group\Kernel\Plugin\Block;
 use Drupal\group_content_menu\Entity\GroupContentMenu;
 use Drupal\group_content_menu\Entity\GroupContentMenuType;
 use Drupal\group_content_menu\GroupContentMenuInterface;
-use Drupal\helfi_group\Plugin\Block\HelfiGroupMenuBlock;
+use Drupal\helfi_group\Plugin\Block\GroupMenuBlock;
 use Drupal\KernelTests\KernelTestBase;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\node\Entity\Node;
@@ -24,9 +24,9 @@ use Symfony\Component\HttpFoundation\InputBag;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * Kernel tests for HelfiGroupMenuBlock.
+ * Kernel tests for GroupMenuBlock.
  */
-class HelfiGroupMenuBlockTest extends KernelTestBase {
+class GroupMenuBlockTest extends KernelTestBase {
 
   use GroupTestTrait;
   use UserCreationTrait;
@@ -92,7 +92,7 @@ class HelfiGroupMenuBlockTest extends KernelTestBase {
     $this->setCurrentUser($this->createUser());
 
     // Create the group content menu type that BlockAlter replaces with
-    // HelfiGroupMenuBlock.
+    // Drupal\helfi_group\Plugin\Block\GroupMenuBlock.
     GroupContentMenuType::create([
       'id' => 'kasko_group_menu',
       'label' => 'Kasko group menu',
@@ -158,12 +158,12 @@ class HelfiGroupMenuBlockTest extends KernelTestBase {
   }
 
   /**
-   * Tests that the block uses HelfiGroupMenuBlock class (via block_alter).
+   * Tests that the block uses GroupMenuBlock class (via block_alter).
    */
-  public function testBlockUsesHelfiGroupMenuBlockClass(): void {
+  public function testBlockUsesGroupMenuBlockClass(): void {
     $block = $this->createBlock();
 
-    $this->assertInstanceOf(HelfiGroupMenuBlock::class, $block);
+    $this->assertInstanceOf(GroupMenuBlock::class, $block);
   }
 
   /**
@@ -336,13 +336,13 @@ class HelfiGroupMenuBlockTest extends KernelTestBase {
    *   Configuration overrides (merged with block defaults). Use for level/depth
    *   when testing getActiveTrailForNewsItem behavior.
    *
-   * @return \Drupal\helfi_group\Plugin\Block\HelfiGroupMenuBlock
+   * @return \Drupal\helfi_group\Plugin\Block\GroupMenuBlock
    *   The block plugin instance.
    */
   private function createBlock(
     ?GroupInterface $group = NULL,
     array $configuration = [],
-  ): HelfiGroupMenuBlock {
+  ): GroupMenuBlock {
     $block = $this->container->get('plugin.manager.block')->createInstance(
       self::BLOCK_PLUGIN_ID,
       $configuration + self::DEFAULT_BLOCK_CONFIG
