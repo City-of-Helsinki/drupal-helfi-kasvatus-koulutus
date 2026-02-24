@@ -290,3 +290,6 @@ msgctxt "Cross institutional studies"
 msgid "Other options for completing the study unit"
 msgstr "Opintojakson muut suoritusvaihtoehdot"
 
+msgctxt "Cross institutional studies search"
+msgid "Online and distance studies of City of Helsinki general upper secondary schools"
+msgstr "Helsingin kaupungin lukioiden verkko- ja etäopetus"

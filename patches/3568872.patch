@@ -1,0 +1,89 @@
+diff --git a/src/Entity/Group.php b/src/Entity/Group.php
+index 4c6b05f8c0fa640a467d0141088bd6d62cf6a048..4ea0934b35899376684536172fca56e40662f198 100644
+--- a/src/Entity/Group.php
++++ b/src/Entity/Group.php
+@@ -135,7 +135,10 @@ class Group extends EditorialContentEntityBase implements GroupInterface {
+    * {@inheritdoc}
+    */
+   public function getGroupType() {
+-    return $this->type->entity;
++    /** @var \Drupal\Core\Field\EntityReferenceFieldItemList $type_field */
++    $type_field = $this->get('type');
++    $referenced_entities = $type_field->referencedEntities();
++    return $referenced_entities[0] ?? NULL;
+   }
+ 
+   /**
+diff --git a/src/Entity/GroupRelationship.php b/src/Entity/GroupRelationship.php
+index 06338494006f4fe268c0a88b7428e981d0be1663..9869793740c85ea1e26d5591384411b315425d6c 100644
+--- a/src/Entity/GroupRelationship.php
++++ b/src/Entity/GroupRelationship.php
+@@ -84,14 +84,20 @@ class GroupRelationship extends ContentEntityBase implements GroupRelationshipIn
+    * {@inheritdoc}
+    */
+   public function getRelationshipType() {
+-    return $this->get('type')->entity;
++    /** @var \Drupal\Core\Field\EntityReferenceFieldItemList $type_field */
++    $type_field = $this->get('type');
++    $referenced_entities = $type_field->referencedEntities();
++    return $referenced_entities[0] ?? NULL;
+   }
+ 
+   /**
+    * {@inheritdoc}
+    */
+   public function getGroup() {
+-    return $this->get('gid')->entity;
++    /** @var \Drupal\Core\Field\EntityReferenceFieldItemList $gid_field */
++    $gid_field = $this->get('gid');
++    $referenced_entities = $gid_field->referencedEntities();
++    return $referenced_entities[0] ?? NULL;
+   }
+ 
+   /**
+@@ -105,7 +111,10 @@ class GroupRelationship extends ContentEntityBase implements GroupRelationshipIn
+    * {@inheritdoc}
+    */
+   public function getGroupType() {
+-    return $this->get('group_type')->entity;
++    /** @var \Drupal\Core\Field\EntityReferenceFieldItemList $group_type_field */
++    $group_type_field = $this->get('group_type');
++    $referenced_entities = $group_type_field->referencedEntities();
++    return $referenced_entities[0] ?? NULL;
+   }
+ 
+   /**
+@@ -119,13 +128,18 @@ class GroupRelationship extends ContentEntityBase implements GroupRelationshipIn
+    * {@inheritdoc}
+    */
+   public function getEntity() {
++    /** @var \Drupal\Core\Field\EntityReferenceFieldItemList $entity_id_field */
++    $entity_id_field = $this->get('entity_id');
++    $referenced_entities = $entity_id_field->referencedEntities();
++    $entity = $referenced_entities[0] ?? NULL;
++
+     if ($this->getPlugin()->getRelationType()->handlesConfigEntityType()) {
+-      if ($entity = $this->get('entity_id')->entity) {
++      if ($entity) {
+         assert($entity instanceof ConfigWrapperInterface);
+         return $entity->getConfigEntity();
+       }
+     }
+-    return $this->get('entity_id')->entity;
++    return $entity;
+   }
+ 
+   /**
+@@ -133,7 +147,11 @@ class GroupRelationship extends ContentEntityBase implements GroupRelationshipIn
+    */
+   public function getEntityId() {
+     if ($this->getPlugin()->getRelationType()->handlesConfigEntityType()) {
+-      if ($entity = $this->get('entity_id')->entity) {
++      /** @var \Drupal\Core\Field\EntityReferenceFieldItemList $entity_id_field */
++      $entity_id_field = $this->get('entity_id');
++      $referenced_entities = $entity_id_field->referencedEntities();
++      $entity = $referenced_entities[0] ?? NULL;
++      if ($entity) {
+         assert($entity instanceof ConfigWrapperInterface);
+         return $entity->getConfigEntityId();
+       }

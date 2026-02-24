@@ -23,6 +23,7 @@ class PathProcessorTest extends KernelTestBase {
    * {@inheritdoc}
    */
   protected static $modules = [
+    'helfi_api_base',
     'helfi_kasko_content',
     'language',
   ];

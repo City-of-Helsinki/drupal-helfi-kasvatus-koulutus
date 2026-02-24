@@ -128,10 +128,11 @@ class UnitFormAlter extends NodeFormAlter {
       return [$group];
     }
 
+    /** @var \Drupal\group\Entity\Storage\GroupRelationshipStorageInterface $storage */
+    $storage = $this->entityTypeManager
+      ->getStorage('group_relationship');
     // Get the groups for existing entity.
-    $groupContents = $this->entityTypeManager
-      ->getStorage('group_content')
-      ->loadByEntity($entity);
+    $groupContents = $storage->loadByEntity($entity);
 
     $group_ids = [];
     foreach ($groupContents as $groupContent) {

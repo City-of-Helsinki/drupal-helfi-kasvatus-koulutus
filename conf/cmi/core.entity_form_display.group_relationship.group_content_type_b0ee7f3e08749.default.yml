@@ -1,0 +1,26 @@
+uuid: 6f289634-ab1d-4a7d-ba9d-6340c3745346
+langcode: en
+status: true
+dependencies:
+  enforced:
+    config:
+      - group.relationship_type.group_content_type_b0ee7f3e08749
+id: group_relationship.group_content_type_b0ee7f3e08749.default
+targetEntityType: group_relationship
+bundle: group_content_type_b0ee7f3e08749
+mode: default
+content:
+  entity_id:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  path: true
+  uid: true

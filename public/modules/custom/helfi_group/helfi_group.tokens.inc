@@ -78,10 +78,19 @@ function helfi_group_tokens($type, $tokens, array $data, array $options, Bubblea
           break;
         }
 
+        // Resolve the path to its alias so the token works in both normal
+        // requests and during update hooks. In update hooks the path_alias
+        // outbound processor is disabled (see UpdateServiceProvider), so
+        // toUrl('canonical')->toString() would return the internal path
+        // (e.g. node/123). Using the alias manager directly returns the
+        // alias in both contexts.
+        $internal_path = $newsParent->toUrl('canonical')->getInternalPath();
+        $path = \Drupal::service('path_alias.manager')->getAliasByPath("/$internal_path", $langcode);
+
         // Set the token replacement using the news parent path, but filtering
         // out langcode and site prefix sections.
         $replacements[$original] = _helfi_group_filter_path(
-          $newsParent->toUrl('canonical')->toString(),
+          $path,
           [
             $langcode,
             _helfi_group_get_site_prefix($langcode),

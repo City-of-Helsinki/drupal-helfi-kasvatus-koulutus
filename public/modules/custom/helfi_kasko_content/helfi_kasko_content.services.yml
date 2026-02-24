@@ -22,6 +22,7 @@ services:
       - '@language_manager'
 
   Drupal\helfi_kasko_content\CrossInstitutionalStudies\Client: ~
+  Drupal\helfi_kasko_content\CrossInstitutionalStudies\Controller\SearchController: ~
 
   Drupal\helfi_kasko_content\CrossInstitutionalStudies\PathProcessor:
     tags:

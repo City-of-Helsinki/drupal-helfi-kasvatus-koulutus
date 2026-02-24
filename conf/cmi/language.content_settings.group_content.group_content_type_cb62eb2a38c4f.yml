@@ -6,7 +6,7 @@ dependencies:
     - content_translation
   enforced:
     config:
-      - group.content_type.group_content_type_cb62eb2a38c4f
+      - group.relationship_type.group_content_type_cb62eb2a38c4f
 third_party_settings:
   content_translation:
     enabled: false
