@@ -4,11 +4,13 @@ declare(strict_types=1);
 
 namespace Drupal\helfi_group\Plugin\Block;
 
+use Drupal\Core\Menu\MenuLinkManagerInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\group\Entity\GroupInterface;
 use Drupal\group_content_menu\GroupContentMenuInterface;
 use Drupal\group_content_menu\Plugin\Block\GroupMenuBlock as OriginalGroupMenuBlock;
 use Drupal\node\NodeInterface;
-use Drupal\group\Entity\GroupInterface;
-use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -21,14 +23,14 @@ final class GroupMenuBlock extends OriginalGroupMenuBlock implements ContainerFa
    *
    * @var \Drupal\Core\Routing\RouteMatchInterface
    */
-  protected $routeMatch;
+  private RouteMatchInterface $routeMatch;
 
   /**
    * The menu link manager service.
    *
    * @var \Drupal\Core\Menu\MenuLinkManagerInterface
    */
-  protected $menuLinkManager;
+  private MenuLinkManagerInterface $menuLinkManager;
 
   /**
    * {@inheritdoc}
