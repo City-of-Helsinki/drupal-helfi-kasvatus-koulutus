@@ -141,13 +141,49 @@ msgid_plural "schools"
 msgstr[0] "koulu"
 msgstr[1] "koulua"
 
-msgctxt "Cross institutional studies search"
+msgctxt "Cross institutional studies"
+msgid "You must enable JavaScript in your browser for search to work"
+msgstr "Haun toimimiseksi sinun tulee sallia JavaScript selaimessasi"
+
+msgctxt "Cross institutional studies"
 msgid "Search for online and distance studies in general upper secondary schools"
 msgstr "Etsi lukioiden verkko- ja etäopetusta"
 
-msgctxt "Cross institutional studies search"
+msgctxt "Cross institutional studies"
 msgid "Use this search tool to find online and distance courses offered by the City of Helsinki. You can search for courses by name. You can also filter the results by start time, mode of teaching, level of study, or language of instruction."
 msgstr "Löydät hausta Helsingin kaupungin verkko- ja etäkurssit. Voit hakea hakusanalla kurssien nimiä. Voit myös rajata tuloksia aloitusajankohdan, opiskelumuodon, opintojen tason tai opetuskielen mukaan."
+
+msgctxt "Cross institutional studies"
+msgid "Study unit description"
+msgstr "Opintojakson kuvaus"
+
+msgctxt "Cross institutional studies"
+msgid "Study unit details"
+msgstr "Opintojakson tiedot"
+
+msgctxt "Cross institutional studies"
+msgid "Study unit"
+msgstr "Opintojakso"
+
+msgctxt "Cross institutional studies"
+msgid "Date and time"
+msgstr "Ajankohta"
+
+msgctxt "Cross institutional studies"
+msgid "Mode of teaching"
+msgstr "Opiskelumuoto"
+
+msgctxt "Cross institutional studies"
+msgid "Language of instruction"
+msgstr "Opetuskieli"
+
+msgctxt "Cross institutional studies"
+msgid "Sign up on Wilma"
+msgstr "Ilmoittaudu Wilmassa"
+
+msgctxt "Cross institutional studies"
+msgid "Other options for completing the study unit"
+msgstr "Opintojakson muut suoritusvaihtoehdot"
 
 msgctxt "Cross-institutional studies: search input label"
 msgid "Search word"
