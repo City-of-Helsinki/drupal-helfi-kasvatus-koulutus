@@ -40,6 +40,8 @@ final readonly class Event {
    *   Minimum capacity of the event.
    * @param int|null $max_capacity
    *   Maximum capacity of the event.
+   * @param string|null $super_event
+   *   ID of the super event.
    */
   public function __construct(
     public string $id,
@@ -56,6 +58,7 @@ final readonly class Event {
     public array $in_language,
     public int|NULL $min_capacity,
     public int|NULL $max_capacity,
+    public string|NULL $super_event = NULL,
   ) {
   }
 

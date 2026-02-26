@@ -16,11 +16,13 @@ use Drupal\Tests\helfi_api_base\Traits\ApiTestTrait;
 use Drupal\Tests\user\Traits\UserCreationTrait;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * Tests cross-institutional studies controller.
  */
 #[Group('helfi_kasko_content')]
+#[RunTestsInSeparateProcesses]
 class ControllerTest extends KernelTestBase {
 
   use ApiTestTrait;
@@ -117,6 +119,40 @@ class ControllerTest extends KernelTestBase {
   }
 
   /**
+   * Tests controller with a sub-event fetches siblings from super event.
+   */
+  public function testControllerWithSubEvent(): void {
+    $this->setUpCurrentUser(permissions: ['access content']);
+
+    $client = $this->createMockHttpClient([
+      // First request: the sub-event itself (gets cached).
+      new Response(200, [], $this->createEventResponse('sub-event-1', superEvent: 'parent-event')),
+      // Second request: the super event (to get sibling sub_events).
+      new Response(200, [], $this->createEventResponse('parent-event', ['sub-event-1', 'sub-event-2', 'sub-event-3'])),
+      // Third and fourth requests: sibling sub-events (sub-event-1
+      // is filtered out as current event).
+      new Response(200, [], $this->createEventResponse('sub-event-2', superEvent: 'parent-event')),
+      new Response(200, [], $this->createEventResponse('sub-event-3', superEvent: 'parent-event')),
+    ]);
+
+    $this->container->set('http_client', $client);
+
+    $request = $this->getMockedRequest(Url::fromRoute('helfi_kasko_content.cross_institutional_studies', [
+      'id' => 'sub-event-1',
+    ])->toString());
+
+    $response = $this->processRequest($request);
+
+    $this->assertEquals(200, $response->getStatusCode());
+    $content = $response->getContent();
+    $this->assertStringContainsString('Short description for sub-event-1', $content);
+    // Current event (sub-event-1) should not appear as a sub-event card link.
+    $this->assertStringNotContainsString('cross-institutional-studies/sub-event-1', $content);
+    $this->assertStringContainsString('Test Event sub-event-2', $content);
+    $this->assertStringContainsString('Test Event sub-event-3', $content);
+  }
+
+  /**
    * Tests language switcher hook for custom controller.
    */
   public function testLangSwitcher(): void {
@@ -155,8 +191,8 @@ class ControllerTest extends KernelTestBase {
   /**
    * Creates a mock event response.
    */
-  private function createEventResponse(string $id, array $subEvents = []): string {
-    return json_encode([
+  private function createEventResponse(string $id, array $subEvents = [], ?string $superEvent = NULL): string {
+    $data = [
       'id' => $id,
       'name' => (object) [
         'en' => "Test Event $id",
@@ -184,7 +220,13 @@ class ControllerTest extends KernelTestBase {
         static fn (string $subEventId) => (object) ['@id' => "https://linkedevents.api.test.hel.ninja/v1/event/$subEventId/"],
         $subEvents
       ),
-    ]);
+    ];
+
+    if ($superEvent) {
+      $data['super_event'] = (object) ['@id' => "https://linkedevents.api.test.hel.ninja/v1/event/$superEvent/"];
+    }
+
+    return json_encode($data);
   }
 
 }
