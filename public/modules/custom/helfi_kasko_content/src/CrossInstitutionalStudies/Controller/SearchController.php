@@ -22,7 +22,7 @@ class SearchController extends ControllerBase {
    * Returns title for the page.
    */
   public function title(): TranslatableMarkup {
-    return $this->t('Online and distance studies of City of Helsinki general upper secondary schools', [], ['context' => 'Cross institutional studies search']);
+    return $this->t('Online and distance studies of City of Helsinki general upper secondary schools', [], ['context' => 'Cross institutional studies']);
   }
 
   /**

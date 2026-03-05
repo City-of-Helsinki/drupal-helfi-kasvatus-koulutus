@@ -22,7 +22,7 @@ final class CrossInstitutionalStudiesHeroBlock extends BlockBase {
    */
   public function build(): array {
     return [
-      '#hero_title' => $this->t('Online and distance studies of City of Helsinki general upper secondary schools', [], ['context' => 'Cross institutional studies search']),
+      '#hero_title' => $this->t('Online and distance studies of City of Helsinki general upper secondary schools', [], ['context' => 'Cross institutional studies']),
       '#theme' => 'cross_institutional_studies_hero_block',
     ];
   }
