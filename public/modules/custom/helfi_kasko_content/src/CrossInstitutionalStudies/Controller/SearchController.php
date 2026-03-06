@@ -31,10 +31,8 @@ class SearchController extends ControllerBase {
   public function content() : array {
 
     $defaultOptions = [
-      // This should possibly be toggled on once we have production data
-      // 'all_ongoing' => 'true',.
-      'event_type' => 'Course',
-      'super_event' => 'helsinki:agm4rv5hjq',
+      'all_ongoing' => 'true',
+      'keyword' => 'helsinki:secondary_schools_cross_institutional_studies'
     ];
 
     $config = $this->config('helfi_kasko_content.settings');
