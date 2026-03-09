@@ -175,3 +175,15 @@ msgstr "Anmäl dig i Wilma"
 msgctxt "Cross institutional studies"
 msgid "Other options for completing the study unit"
 msgstr "Andra alternativ att avlägga studieavsnittet"
+
+msgctxt "Cross-institutional studies: date filter option"
+msgid "Autumn"
+msgstr "Höst"
+
+msgctxt "Cross-institutional studies: date filter option"
+msgid "Spring"
+msgstr "Vår"
+
+msgctxt "Cross-institutional studies: date filter option"
+msgid "Summer"
+msgstr "Sommar"
