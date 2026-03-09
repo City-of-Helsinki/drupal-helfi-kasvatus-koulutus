@@ -184,15 +184,3 @@ msgstr "Ilmoittaudu Wilmassa"
 msgctxt "Cross institutional studies"
 msgid "Other options for completing the study unit"
 msgstr "Opintojakson muut suoritusvaihtoehdot"
-
-msgctxt "Cross-institutional studies: date filter option"
-msgid "Autumn"
-msgstr "Syksy"
-
-msgctxt "Cross-institutional studies: date filter option"
-msgid "Spring"
-msgstr "Kevät"
-
-msgctxt "Cross-institutional studies: date filter option"
-msgid "Summer"
-msgstr "Kesä"
