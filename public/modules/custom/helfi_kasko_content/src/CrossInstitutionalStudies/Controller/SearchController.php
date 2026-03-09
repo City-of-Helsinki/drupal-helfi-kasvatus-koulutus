@@ -32,7 +32,8 @@ class SearchController extends ControllerBase {
 
     $defaultOptions = [
       'all_ongoing' => 'true',
-      'keyword' => 'helsinki:secondary_schools_cross_institutional_studies'
+      'keyword' => 'helsinki:secondary_schools_cross_institutional_studies',
+      'event_type' => 'course',
     ];
 
     $config = $this->config('helfi_kasko_content.settings');
