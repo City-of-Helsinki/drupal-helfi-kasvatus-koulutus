@@ -87,6 +87,7 @@ class Client {
         array_map(static fn($language) => Language::tryFrom(basename(rtrim($language->{'@id'}, '/'))), $event->in_language ?? []),
         $event->min_capacity ?? NULL,
         $event->max_capacity ?? NULL,
+        isset($event->super_event->{'@id'}) ? basename(rtrim($event->super_event->{'@id'}, '/')) : NULL,
       );
     }
 

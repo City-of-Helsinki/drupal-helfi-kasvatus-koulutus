@@ -131,3 +131,47 @@ msgid "school"
 msgid_plural "schools"
 msgstr[0] "skola"
 msgstr[1] "skolor"
+
+msgctxt "Cross institutional studies"
+msgid "You must enable JavaScript in your browser for search to work"
+msgstr "Du måste aktivera JavaScript i din webbläsare för att sökningen ska fungera"
+
+msgctxt "Cross institutional studies"
+msgid "Search for online and distance studies in general upper secondary schools"
+msgstr "Sök gymnasiers webb- och distansundervisning"
+
+msgctxt "Cross institutional studies"
+msgid "Use this search tool to find online and distance courses offered by the City of Helsinki. You can search for courses by name. You can also filter the results by start time, mode of teaching, level of study, or language of instruction."
+msgstr "Du hittar Helsingfors stads webb- och distanskurser i sökningen. Med ett sökord kan du söka kursernas namn. Du kan också avgränsa resultaten efter starttidpunkt, studieform, studienivå eller undervisningsspråk."
+
+msgctxt "Cross institutional studies"
+msgid "Study unit description"
+msgstr "Beskrivning av studieavsnittet"
+
+msgctxt "Cross institutional studies"
+msgid "Study unit details"
+msgstr "Uppgifter om studieavsnittet"
+
+msgctxt "Cross institutional studies"
+msgid "Study unit"
+msgstr "Studieavsnitt"
+
+msgctxt "Cross institutional studies"
+msgid "Date and time"
+msgstr "Tidpunkt"
+
+msgctxt "Cross institutional studies"
+msgid "Mode of teaching"
+msgstr "Studieform"
+
+msgctxt "Cross institutional studies"
+msgid "Language of instruction"
+msgstr "Undervisningsspråk"
+
+msgctxt "Cross institutional studies"
+msgid "Sign up on Wilma"
+msgstr "Anmäl dig i Wilma"
+
+msgctxt "Cross institutional studies"
+msgid "Other options for completing the study unit"
+msgstr "Andra alternativ att avlägga studieavsnittet"

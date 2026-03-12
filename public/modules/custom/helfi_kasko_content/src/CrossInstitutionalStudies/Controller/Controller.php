@@ -51,8 +51,24 @@ class Controller extends ControllerBase {
       "cross_institutional_studies:$id",
     ]);
 
+    // If this is a sub_event, fetch sibling sub_events from the super event.
+    $subEventIds = $event->sub_events;
+    if (empty($subEventIds) && $event->super_event) {
+      $cache->addCacheTags(["cross_institutional_studies:{$event->super_event}"]);
+
+      try {
+        $superEvents = $this->client->getEvent($event->super_event);
+
+        if ($superEvent = $superEvents[$langcode] ?? FALSE) {
+          $subEventIds = array_filter($superEvent->sub_events, fn (string $subEventId) => $subEventId !== $event->id);
+        }
+      }
+      catch (GuzzleException) {
+      }
+    }
+
     $subEvents = [];
-    foreach ($event->sub_events as $subEventId) {
+    foreach ($subEventIds as $subEventId) {
       $cache->addCacheTags(["cross_institutional_studies:$subEventId"]);
 
       try {
