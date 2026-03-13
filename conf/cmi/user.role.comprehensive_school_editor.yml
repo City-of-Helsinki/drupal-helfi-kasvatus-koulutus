@@ -67,6 +67,7 @@ permissions:
   - 'revert announcement revisions'
   - 'schedule publishing of nodes'
   - 'set announcement published on date'
+  - 'set any published on date'
   - 'setup own tfa'
   - 'translate editable entities'
   - 'update any tpr_unit'
