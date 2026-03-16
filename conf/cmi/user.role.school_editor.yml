@@ -70,6 +70,7 @@ permissions:
   - 'override news_item published option'
   - 'override page published option'
   - 'schedule publishing of nodes'
+  - 'set any published on date'
   - 'set news_item published on date'
   - 'setup own tfa'
   - 'translate editable entities'

@@ -20,6 +20,7 @@ dependencies:
     - helfi_tpr
     - media
     - node
+    - publication_date
     - scheduler
     - system
     - tfa
@@ -59,6 +60,7 @@ permissions:
   - 'edit own remote_video media'
   - 'mark as hidden in editoria11y'
   - 'schedule publishing of nodes'
+  - 'set any published on date'
   - 'setup own tfa'
   - 'translate editable entities'
   - 'update media'
