@@ -14,7 +14,6 @@ settings:
   client_secret: ''
   iss_allowed_domains: ''
   prompt: {  }
-  auto_login: 0
   environment_url: ''
   client_scopes: 'openid,email'
   client_roles: {  }
