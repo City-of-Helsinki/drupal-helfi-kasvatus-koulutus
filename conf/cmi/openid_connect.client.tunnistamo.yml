@@ -13,8 +13,7 @@ settings:
   client_id: ''
   client_secret: ''
   iss_allowed_domains: ''
-  prompt:
-    - login
+  prompt: {  }
   auto_login: 0
   environment_url: ''
   client_scopes: 'openid,email'
