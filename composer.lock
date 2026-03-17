@@ -4601,12 +4601,12 @@
             "version": "6.16.50",
             "source": {
                 "type": "git",
-                "url": "git@github.com:city-of-helsinki/drupal-hdbt.git",
+                "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
                 "reference": "94fb625bb0ba7093fe46292a8fe47695050e3ea4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/city-of-helsinki/drupal-hdbt/zipball/94fb625bb0ba7093fe46292a8fe47695050e3ea4",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/94fb625bb0ba7093fe46292a8fe47695050e3ea4",
                 "reference": "94fb625bb0ba7093fe46292a8fe47695050e3ea4",
                 "shasum": ""
             },
@@ -4625,6 +4625,10 @@
             "keywords": [
                 "Drupal"
             ],
+            "support": {
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.16.50",
+                "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
+            },
             "time": "2026-03-16T10:55:09+00:00"
         },
         {
@@ -4931,12 +4935,12 @@
             "version": "5.1.22",
             "source": {
                 "type": "git",
-                "url": "git@github.com:city-of-helsinki/drupal-helfi-platform-config.git",
+                "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
                 "reference": "cd605d93e3f2266c6c8766464c84899024382415"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/city-of-helsinki/drupal-helfi-platform-config/zipball/cd605d93e3f2266c6c8766464c84899024382415",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/cd605d93e3f2266c6c8766464c84899024382415",
                 "reference": "cd605d93e3f2266c6c8766464c84899024382415",
                 "shasum": ""
             },
@@ -5051,6 +5055,10 @@
                 "GPL-2.0-or-later"
             ],
             "description": "HELfi platform config",
+            "support": {
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/5.1.22",
+                "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
+            },
             "time": "2026-03-10T11:57:22+00:00"
         },
         {
@@ -21286,5 +21294,5 @@
     "prefer-lowest": false,
     "platform": {},
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
