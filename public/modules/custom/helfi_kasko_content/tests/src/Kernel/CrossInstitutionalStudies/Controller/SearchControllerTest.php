@@ -11,11 +11,13 @@ use Drupal\helfi_kasko_content\CrossInstitutionalStudies\Controller\SearchContro
 use Drupal\KernelTests\KernelTestBase;
 use Drupal\Tests\helfi_api_base\Traits\EnvironmentResolverTrait;
 use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * Tests the cross-institutional studies search controller.
  */
 #[Group('helfi_kasko_content')]
+#[RunTestsInSeparateProcesses]
 class SearchControllerTest extends KernelTestBase {
 
   use EnvironmentResolverTrait;

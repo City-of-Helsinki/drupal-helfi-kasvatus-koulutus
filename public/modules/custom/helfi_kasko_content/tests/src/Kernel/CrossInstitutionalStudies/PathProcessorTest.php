@@ -11,12 +11,14 @@ use Drupal\KernelTests\KernelTestBase;
 use Drupal\language\ConfigurableLanguageManagerInterface;
 use Drupal\language\Entity\ConfigurableLanguage;
 use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Tests cross-institutional studies path processor.
  */
 #[Group('helfi_kasko_content')]
+#[RunTestsInSeparateProcesses]
 class PathProcessorTest extends KernelTestBase {
 
   /**

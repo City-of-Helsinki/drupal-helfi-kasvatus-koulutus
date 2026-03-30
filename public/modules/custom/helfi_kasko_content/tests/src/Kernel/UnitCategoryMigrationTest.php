@@ -13,13 +13,15 @@ use Drupal\helfi_tpr\Entity\Unit;
 use Drupal\migrate\Event\MigrateEvents;
 use Drupal\migrate\Event\MigratePreRowSaveEvent;
 use Drupal\Tests\helfi_tpr\Kernel\MigrationTestBase;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
  * Tests TPR Unit migration for categories field.
- *
- * @group helfi_kasko_content
  */
+#[Group('helfi_kasko_content')]
+#[RunTestsInSeparateProcesses]
 class UnitCategoryMigrationTest extends MigrationTestBase implements EventSubscriberInterface {
 
   /**

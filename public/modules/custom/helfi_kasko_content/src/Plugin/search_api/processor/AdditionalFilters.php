@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace Drupal\helfi_kasko_content\Plugin\search_api\processor;
 
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\helfi_kasko_content\UnitCategoryUtility;
 use Drupal\helfi_react_search\SupportsUnitIndexTrait;
 use Drupal\helfi_tpr\Entity\TprEntityBase;
+use Drupal\search_api\Attribute\SearchApiProcessor;
 use Drupal\search_api\Datasource\DatasourceInterface;
 use Drupal\search_api\Item\ItemInterface;
 use Drupal\search_api\Processor\ProcessorPluginBase;
@@ -14,21 +16,20 @@ use Drupal\search_api\Processor\ProcessorProperty;
 
 /**
  * Marks the entity with additional info for filtering.
- *
- * @SearchApiProcessor(
- *   id = "helfi_kasko_content_additional_filters",
- *   label = @Translation("Extra filters data"),
- *   description = @Translation("Marks entity with extra info for filtering"),
- *   stages = {
- *     "add_properties" = 0,
- *   }
- * )
  */
+#[SearchApiProcessor(
+  id: 'helfi_kasko_content_additional_filters',
+  label: new TranslatableMarkup('Extra filters data'),
+  description: new TranslatableMarkup('Marks entity with extra info for filtering'),
+  stages: [
+    'add_properties' => 0,
+  ]
+)]
 class AdditionalFilters extends ProcessorPluginBase {
 
   use SupportsUnitIndexTrait;
 
-  const ENGLISH_EDUCATION_TERM_IDS = [149, 150];
+  const array ENGLISH_EDUCATION_TERM_IDS = [149, 150];
 
   /**
    * {@inheritdoc}

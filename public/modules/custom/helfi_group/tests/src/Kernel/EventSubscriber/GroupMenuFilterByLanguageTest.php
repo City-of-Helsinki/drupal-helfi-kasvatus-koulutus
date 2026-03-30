@@ -11,10 +11,14 @@ use Drupal\node\Entity\Node;
 use Drupal\node\Entity\NodeType;
 use Drupal\system\Entity\Menu;
 use Drupal\Tests\content_translation\Traits\ContentTranslationTestTrait;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * Tests the GroupMenuFilterByLanguage event subscriber.
  */
+#[Group('helfi_group')]
+#[RunTestsInSeparateProcesses]
 class GroupMenuFilterByLanguageTest extends EntityKernelTestBase {
 
   use ContentTranslationTestTrait;
