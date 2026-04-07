@@ -259,37 +259,5 @@ msgid "remote learning"
 msgstr "etäopiskelu"
 
 msgctxt "Cross institutional studies"
-msgid "Study unit description"
-msgstr "Opintojakson kuvaus"
-
-msgctxt "Cross institutional studies"
-msgid "Study unit details"
-msgstr "Opintojakson tiedot"
-
-msgctxt "Cross institutional studies"
-msgid "Study unit"
-msgstr "Opintojakso"
-
-msgctxt "Cross institutional studies"
-msgid "Date and time"
-msgstr "Ajankohta"
-
-msgctxt "Cross institutional studies"
-msgid "Mode of teaching"
-msgstr "Opiskelumuoto"
-
-msgctxt "Cross institutional studies"
-msgid "Language of instruction"
-msgstr "Opetuskieli"
-
-msgctxt "Cross institutional studies"
-msgid "Sign up on Wilma"
-msgstr "Ilmoittaudu Wilmassa"
-
-msgctxt "Cross institutional studies"
-msgid "Other options for completing the study unit"
-msgstr "Opintojakson muut suoritusvaihtoehdot"
-
-msgctxt "Cross institutional studies search"
 msgid "Online and distance studies of City of Helsinki general upper secondary schools"
 msgstr "Helsingin kaupungin lukioiden verkko- ja etäopetus"

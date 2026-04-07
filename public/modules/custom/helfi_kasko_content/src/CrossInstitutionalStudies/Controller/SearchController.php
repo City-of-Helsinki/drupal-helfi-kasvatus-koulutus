@@ -22,7 +22,7 @@ class SearchController extends ControllerBase {
    * Returns title for the page.
    */
   public function title(): TranslatableMarkup {
-    return $this->t('Online and distance studies of City of Helsinki general upper secondary schools', [], ['context' => 'Cross institutional studies search']);
+    return $this->t('Online and distance studies of City of Helsinki general upper secondary schools', [], ['context' => 'Cross institutional studies']);
   }
 
   /**
@@ -31,10 +31,9 @@ class SearchController extends ControllerBase {
   public function content() : array {
 
     $defaultOptions = [
-      // This should possibly be toggled on once we have production data
-      // 'all_ongoing' => 'true',.
+      'all_ongoing' => 'true',
+      'keyword' => 'helsinki:secondary_schools_cross_institutional_studies',
       'event_type' => 'Course',
-      'super_event' => 'helsinki:agm4rv5hjq',
     ];
 
     $config = $this->config('helfi_kasko_content.settings');

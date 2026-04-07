@@ -75,7 +75,6 @@ class SearchControllerTest extends KernelTestBase {
     $searchData = $eventsSettings['data']['cross-institutional-studies-search'];
     $this->assertStringContainsString('linkedevents.api.test.hel.ninja', $searchData['events_api_url']);
     $this->assertStringContainsString('event_type=Course', $searchData['events_api_url']);
-    $this->assertStringContainsString('super_event', $searchData['events_api_url']);
     $this->assertEquals(10, $searchData['field_event_count']);
     $this->assertTrue($searchData['useCrossInstitutionalStudiesForm']);
   }
