@@ -1,0 +1,726 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Function helfi_group_update_9002\\(\\) has parameter \\$sandbox with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.install
+
+		-
+			message: "#^Function helfi_group_entity_field_access\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_entity_field_access\\(\\) has parameter \\$items with generic interface Drupal\\\\Core\\\\Field\\\\FieldItemListInterface but does not specify its types\\: T$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_entity_field_access\\(\\) has parameter \\$items with no value type specified in iterable type Drupal\\\\Core\\\\Field\\\\FieldItemListInterface\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_entity_field_access\\(\\) has parameter \\$operation with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_form_menu_link_content_form_alter\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_form_menu_link_content_form_alter\\(\\) has parameter \\$form with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_form_node_form_alter\\(\\) has parameter \\$form with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_menu_local_tasks_alter\\(\\) has parameter \\$data with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_menu_local_tasks_alter\\(\\) has parameter \\$route_name with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_menuitem_set_content_translation_status\\(\\) has parameter \\$form with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_module_implements_alter\\(\\) has parameter \\$hook with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_module_implements_alter\\(\\) has parameter \\$implementations with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_node_create_access\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_node_create_access\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_node_create_access\\(\\) has parameter \\$entity_bundle with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_preprocess_block\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_preprocess_block\\(\\) has parameter \\$variables with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_theme\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_theme\\(\\) has parameter \\$existing with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_theme\\(\\) has parameter \\$path with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_theme\\(\\) has parameter \\$theme with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_theme\\(\\) has parameter \\$type with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Using nullsafe method call on non\\-nullable type mixed\\. Use \\-\\> instead\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.module
+
+		-
+			message: "#^Function helfi_group_token_info\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.tokens.inc
+
+		-
+			message: "#^Function helfi_group_tokens\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.tokens.inc
+
+		-
+			message: "#^Function helfi_group_tokens\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.tokens.inc
+
+		-
+			message: "#^Function helfi_group_tokens\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.tokens.inc
+
+		-
+			message: "#^Function helfi_group_tokens\\(\\) has parameter \\$tokens with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.tokens.inc
+
+		-
+			message: "#^Function helfi_group_tokens\\(\\) has parameter \\$type with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/helfi_group.tokens.inc
+
+		-
+			message: "#^Method Drupal\\\\helfi_group\\\\Hook\\\\BlockAlter\\:\\:alter\\(\\) has parameter \\$definitions with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/src/Hook/BlockAlter.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_group\\\\Hook\\\\UnitFormAlter\\:\\:alter\\(\\) has parameter \\$form with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/src/Hook/UnitFormAlter.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_group\\\\Hook\\\\UnitFormAlter\\:\\:getDefaultMenuLink\\(\\) has parameter \\$menuNames with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/src/Hook/UnitFormAlter.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_group\\\\Hook\\\\UnitFormAlter\\:\\:getEntityGroups\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/src/Hook/UnitFormAlter.php
+
+		-
+			message: "#^Parameter \\#1 \\$entity of method Drupal\\\\helfi_group\\\\Hook\\\\UnitFormAlter\\:\\:getDefaultMenuLink\\(\\) expects Drupal\\\\Core\\\\Entity\\\\ContentEntityInterface, Drupal\\\\Core\\\\Entity\\\\EntityInterface given\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/src/Hook/UnitFormAlter.php
+
+		-
+			message: "#^Parameter \\#2 \\$entity of method Drupal\\\\helfi_group\\\\Hook\\\\UnitFormAlter\\:\\:getEntityGroups\\(\\) expects Drupal\\\\Core\\\\Entity\\\\ContentEntityInterface, Drupal\\\\Core\\\\Entity\\\\EntityInterface given\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/src/Hook/UnitFormAlter.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_group\\\\Plugin\\\\Block\\\\GroupMenuBlock\\:\\:build\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/src/Plugin/Block/GroupMenuBlock.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_group\\\\Plugin\\\\Block\\\\GroupMenuBlock\\:\\:create\\(\\) has parameter \\$configuration with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/src/Plugin/Block/GroupMenuBlock.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_group\\\\Plugin\\\\Block\\\\GroupMenuBlock\\:\\:getActiveTrailForNewsItem\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/src/Plugin/Block/GroupMenuBlock.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_group\\\\Plugin\\\\Menu\\\\GroupLinkTask\\:\\:__construct\\(\\) has parameter \\$configuration with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/src/Plugin/Menu/GroupLinkTask.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_group\\\\Plugin\\\\Menu\\\\GroupLinkTask\\:\\:__construct\\(\\) has parameter \\$plugin_definition with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/src/Plugin/Menu/GroupLinkTask.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_group\\\\Plugin\\\\Menu\\\\GroupLinkTask\\:\\:create\\(\\) has parameter \\$configuration with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/src/Plugin/Menu/GroupLinkTask.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_group\\\\Plugin\\\\Menu\\\\GroupLinkTask\\:\\:getRouteParameters\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/src/Plugin/Menu/GroupLinkTask.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_group\\\\Routing\\\\RouteSubscriber\\:\\:alterRoutes\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/src/Routing/RouteSubscriber.php
+
+		-
+			message: "#^Call to an undefined method object\\:\\:setContextValue\\(\\)\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/tests/src/Kernel/Plugin/Block/GroupMenuBlockTest.php
+
+		-
+			message: "#^Method Drupal\\\\Tests\\\\helfi_group\\\\Kernel\\\\Plugin\\\\Block\\\\GroupMenuBlockTest\\:\\:createBlock\\(\\) has parameter \\$configuration with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/tests/src/Kernel/Plugin/Block/GroupMenuBlockTest.php
+
+		-
+			message: "#^Method Drupal\\\\Tests\\\\helfi_group\\\\Kernel\\\\Plugin\\\\Block\\\\GroupMenuBlockTest\\:\\:createBlock\\(\\) should return Drupal\\\\helfi_group\\\\Plugin\\\\Block\\\\GroupMenuBlock but returns object\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/tests/src/Kernel/Plugin/Block/GroupMenuBlockTest.php
+
+		-
+			message: "#^Method Drupal\\\\Tests\\\\helfi_group\\\\Kernel\\\\Plugin\\\\Block\\\\GroupMenuBlockTest\\:\\:pushRequestWithRoute\\(\\) has parameter \\$raw_variables with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/tests/src/Kernel/Plugin/Block/GroupMenuBlockTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$account of method Drupal\\\\Tests\\\\helfi_group\\\\Kernel\\\\Plugin\\\\Block\\\\GroupMenuBlockTest\\:\\:setCurrentUser\\(\\) expects Drupal\\\\Core\\\\Session\\\\AccountInterface, Drupal\\\\user\\\\Entity\\\\User\\|false given\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/tests/src/Kernel/Plugin/Block/GroupMenuBlockTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$group_type_id of method Drupal\\\\group\\\\Entity\\\\Storage\\\\GroupRelationshipTypeStorageInterface\\:\\:getRelationshipTypeId\\(\\) expects string, int\\|string\\|null given\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_group/tests/src/Kernel/Plugin/Block/GroupMenuBlockTest.php
+
+		-
+			message: "#^Function helfi_kasko_content_update_9002\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.install
+
+		-
+			message: "#^Function helfi_kasko_content_update_9003\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.install
+
+		-
+			message: "#^Function helfi_kasko_content_update_9004\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.install
+
+		-
+			message: "#^Function helfi_kasko_content_update_9005\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.install
+
+		-
+			message: "#^Function _helfi_kasko_content_announcement_exception\\(\\) has parameter \\$form with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function _helfi_kasko_content_announcement_school_editor_exception\\(\\) has parameter \\$form with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function helfi_kasko_content_first_paragraph_grey_alter\\(\\) has parameter \\$paragraphs with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function helfi_kasko_content_form_node_announcement_edit_form_alter\\(\\) has parameter \\$form with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function helfi_kasko_content_form_node_announcement_form_alter\\(\\) has parameter \\$form with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function helfi_kasko_content_form_views_exposed_form_alter\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function helfi_kasko_content_form_views_exposed_form_alter\\(\\) has parameter \\$form with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function helfi_kasko_content_form_views_exposed_form_alter\\(\\) has parameter \\$form_state with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function helfi_kasko_content_helfi_paragraph_types\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function helfi_kasko_content_platform_config_grant_permissions\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function helfi_kasko_content_preprocess_html\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function helfi_kasko_content_preprocess_html\\(\\) has parameter \\$variables with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function helfi_kasko_content_preprocess_page\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function helfi_kasko_content_preprocess_page\\(\\) has parameter \\$variables with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function helfi_kasko_content_theme\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function helfi_kasko_content_tpr_unit_access\\(\\) has parameter \\$operation with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function helfi_kasko_content_views_data_alter\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function helfi_kasko_content_views_data_alter\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function helfi_kasko_content_views_post_execute\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Function helfi_kasko_content_views_post_execute\\(\\) has parameter \\$view with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Parameter \\#2 \\$account of function _helfi_kasko_content_announcement_exception expects Drupal\\\\Core\\\\Session\\\\UserSession, Drupal\\\\Core\\\\Session\\\\AccountInterface given\\.$#"
+			count: 2
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Parameter \\#2 \\$account of function _helfi_kasko_content_announcement_school_editor_exception expects Drupal\\\\Core\\\\Session\\\\UserSession, Drupal\\\\Core\\\\Session\\\\AccountInterface given\\.$#"
+			count: 2
+			path: public/modules/custom/helfi_kasko_content/helfi_kasko_content.module
+
+		-
+			message: "#^Expression on left side of \\?\\? is not nullable\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/CrossInstitutionalStudies/Client.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\CrossInstitutionalStudies\\\\Controller\\\\Controller\\:\\:build\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/CrossInstitutionalStudies/Controller/Controller.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\CrossInstitutionalStudies\\\\Controller\\\\SearchController\\:\\:content\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/CrossInstitutionalStudies/Controller/SearchController.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\CrossInstitutionalStudies\\\\PathProcessor\\:\\:processOutbound\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/CrossInstitutionalStudies/PathProcessor.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Form\\\\SchoolSettingsForm\\:\\:buildForm\\(\\) has parameter \\$form with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Form/SchoolSettingsForm.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Form\\\\SchoolSettingsForm\\:\\:buildForm\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Form/SchoolSettingsForm.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Form\\\\SchoolSettingsForm\\:\\:submitForm\\(\\) has parameter \\$form with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Form/SchoolSettingsForm.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Form\\\\SchoolSettingsForm\\:\\:validateForm\\(\\) has parameter \\$form with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Form/SchoolSettingsForm.php
+
+		-
+			message: "#^Dead catch \\- GuzzleHttp\\\\Exception\\\\GuzzleException is never thrown in the try block\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Hook/CrossInstitutionalStudies.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Hook\\\\CrossInstitutionalStudies\\:\\:languageSwitchLinksAlter\\(\\) has parameter \\$links with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Hook/CrossInstitutionalStudies.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Hook\\\\CrossInstitutionalStudies\\:\\:languageSwitchLinksAlter\\(\\) has parameter \\$type with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Hook/CrossInstitutionalStudies.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\Block\\\\CrossInstitutionalStudiesHeroBlock\\:\\:build\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/Block/CrossInstitutionalStudiesHeroBlock.php
+
+		-
+			message: "#^Class Drupal\\\\helfi_kasko_content\\\\Plugin\\\\Field\\\\FieldFormatter\\\\OntologyWordDetailsFormatter extends generic class Drupal\\\\Core\\\\Field\\\\FormatterBase but does not specify its types\\: T$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/Field/FieldFormatter/OntologyWordDetailsFormatter.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\Field\\\\FieldFormatter\\\\OntologyWordDetailsFormatter\\:\\:__construct\\(\\) has parameter \\$settings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/Field/FieldFormatter/OntologyWordDetailsFormatter.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\Field\\\\FieldFormatter\\\\OntologyWordDetailsFormatter\\:\\:__construct\\(\\) has parameter \\$third_party_settings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/Field/FieldFormatter/OntologyWordDetailsFormatter.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\Field\\\\FieldFormatter\\\\OntologyWordDetailsFormatter\\:\\:create\\(\\) has parameter \\$configuration with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/Field/FieldFormatter/OntologyWordDetailsFormatter.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\Field\\\\FieldFormatter\\\\OntologyWordDetailsFormatter\\:\\:viewElements\\(\\) has parameter \\$items with generic interface Drupal\\\\Core\\\\Field\\\\FieldItemListInterface but does not specify its types\\: T$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/Field/FieldFormatter/OntologyWordDetailsFormatter.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\Field\\\\FieldFormatter\\\\OntologyWordDetailsFormatter\\:\\:viewElements\\(\\) has parameter \\$items with no value type specified in iterable type Drupal\\\\Core\\\\Field\\\\FieldItemListInterface\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/Field/FieldFormatter/OntologyWordDetailsFormatter.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\Field\\\\FieldFormatter\\\\OntologyWordDetailsFormatter\\:\\:viewElements\\(\\) should return array\\<int, array\\<int\\|string, mixed\\>\\> but returns array\\<array\\<string, mixed\\>\\|string\\|null\\>\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/Field/FieldFormatter/OntologyWordDetailsFormatter.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\search_api\\\\processor\\\\AdditionalFilters\\:\\:addFieldValues\\(\\) has parameter \\$item with no value type specified in iterable type Drupal\\\\search_api\\\\Item\\\\ItemInterface\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/search_api/processor/AdditionalFilters.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\search_api\\\\processor\\\\IsSchool\\:\\:alterIndexedItems\\(\\) has parameter \\$items with no value type specified in iterable type Drupal\\\\search_api\\\\Item\\\\ItemInterface\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/search_api/processor/IsSchool.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\search_api\\\\processor\\\\IsSchool\\:\\:shouldIndex\\(\\) has parameter \\$item with no value type specified in iterable type Drupal\\\\search_api\\\\Item\\\\ItemInterface\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/search_api/processor/IsSchool.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\views\\\\filter\\\\HighSchoolLanguage\\:\\:init\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/views/filter/HighSchoolLanguage.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\views\\\\filter\\\\InOperatorBase\\:\\:create\\(\\) has parameter \\$configuration with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/views/filter/InOperatorBase.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\views\\\\filter\\\\SchoolDetailsBase\\:\\:init\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/views/filter/SchoolDetailsBase.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\views\\\\filter\\\\SchoolDetailsBase\\:\\:init\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/views/filter/SchoolDetailsBase.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\views\\\\filter\\\\SchoolDetailsBase\\:\\:query\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/views/filter/SchoolDetailsBase.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\views\\\\filter\\\\SchoolDetailsBase\\:\\:queryByWordId\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/views/filter/SchoolDetailsBase.php
+
+		-
+			message: "#^Parameter \\#3 \\$value of method Drupal\\\\views\\\\Plugin\\\\views\\\\query\\\\Sql\\:\\:addWhere\\(\\) expects array\\|string\\|null, int given\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/views/filter/SchoolDetailsBase.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\views\\\\filter\\\\StudyProgrammeType\\:\\:init\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/views/filter/StudyProgrammeType.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\views\\\\filter\\\\StudyProgrammeType\\:\\:init\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/views/filter/StudyProgrammeType.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\views\\\\filter\\\\StudyProgrammeType\\:\\:query\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/views/filter/StudyProgrammeType.php
+
+		-
+			message: "#^Parameter \\#1 \\$group of method Drupal\\\\views\\\\Plugin\\\\views\\\\query\\\\Sql\\:\\:addWhere\\(\\) expects string, int\\|string given\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/views/filter/StudyProgrammeType.php
+
+		-
+			message: "#^Parameter \\#3 \\$value of method Drupal\\\\views\\\\Plugin\\\\views\\\\query\\\\Sql\\:\\:addWhere\\(\\) expects array\\|string\\|null, int given\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/Plugin/views/filter/StudyProgrammeType.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\SchoolUtility\\:\\:getAdditionalSchools\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/SchoolUtility.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\SchoolUtility\\:\\:setAdditionalSchools\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/SchoolUtility.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\SchoolUtility\\:\\:setCurrentComprehensiveSchoolYear\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/SchoolUtility.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\SchoolUtility\\:\\:setCurrentHighSchoolYear\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/SchoolUtility.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\SchoolUtility\\:\\:splitStartYear\\(\\) should return string but returns string\\|false\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/SchoolUtility.php
+
+		-
+			message: "#^Property Drupal\\\\helfi_kasko_content\\\\UnitCategoryUtility\\:\\:\\$categoryToIds type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/UnitCategoryUtility.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_kasko_content\\\\UnitOntologyWordDetailsUtility\\:\\:findOntologyWordKeysLabelsbyId\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/src/UnitOntologyWordDetailsUtility.php
+
+		-
+			message: "#^Parameter \\#1 \\$account of method Drupal\\\\Tests\\\\BrowserTestBase\\:\\:drupalLogin\\(\\) expects Drupal\\\\Core\\\\Session\\\\AccountInterface, Drupal\\\\user\\\\UserInterface\\|false given\\.$#"
+			count: 3
+			path: public/modules/custom/helfi_kasko_content/tests/src/Functional/UnitCategoryPermissionTest.php
+
+		-
+			message: "#^Method Drupal\\\\Tests\\\\helfi_kasko_content\\\\Kernel\\\\CrossInstitutionalStudies\\\\Controller\\\\ControllerTest\\:\\:createEventResponse\\(\\) has parameter \\$subEvents with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/tests/src/Kernel/CrossInstitutionalStudies/Controller/ControllerTest.php
+
+		-
+			message: "#^Method Drupal\\\\Tests\\\\helfi_kasko_content\\\\Kernel\\\\CrossInstitutionalStudies\\\\Controller\\\\ControllerTest\\:\\:createEventResponse\\(\\) should return string but returns string\\|false\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/tests/src/Kernel/CrossInstitutionalStudies/Controller/ControllerTest.php
+
+		-
+			message: "#^Parameter \\#2 \\$haystack of method PHPUnit\\\\Framework\\\\Assert\\:\\:assertStringContainsString\\(\\) expects string, string\\|false given\\.$#"
+			count: 7
+			path: public/modules/custom/helfi_kasko_content/tests/src/Kernel/CrossInstitutionalStudies/Controller/ControllerTest.php
+
+		-
+			message: "#^Parameter \\#2 \\$haystack of method PHPUnit\\\\Framework\\\\Assert\\:\\:assertStringNotContainsString\\(\\) expects string, string\\|false given\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/tests/src/Kernel/CrossInstitutionalStudies/Controller/ControllerTest.php
+
+		-
+			message: "#^Function _hdbt_subtheme_sidebar_menu_visibility\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function _hdbt_subtheme_sidebar_menu_visibility\\(\\) has parameter \\$variables with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_form_views_exposed_form_alter\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_form_views_exposed_form_alter\\(\\) has parameter \\$form with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_form_views_exposed_form_alter\\(\\) has parameter \\$form_state with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_preprocess_block\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_preprocess_block\\(\\) has parameter \\$variables with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_preprocess_field\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_preprocess_field\\(\\) has parameter \\$variables with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_preprocess_menu\\(\\) has parameter \\$variables with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_preprocess_page\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_preprocess_page\\(\\) has parameter \\$variables with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_preprocess_paragraph\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_preprocess_paragraph\\(\\) has parameter \\$variables with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_preprocess_tpr_unit\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_preprocess_tpr_unit\\(\\) has parameter \\$variables with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_preprocess_views_view\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_preprocess_views_view\\(\\) has parameter \\$variables with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_theme_suggestions_block_alter\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_theme_suggestions_block_alter\\(\\) has parameter \\$suggestions with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_theme_suggestions_menu_alter\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_theme_suggestions_menu_alter\\(\\) has parameter \\$suggestions with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_theme_suggestions_menu_alter\\(\\) has parameter \\$variables with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
