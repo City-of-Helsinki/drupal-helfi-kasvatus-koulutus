@@ -20,12 +20,16 @@ use Drupal\group\Entity\GroupInterface;
 use Drupal\group\Entity\GroupTypeInterface;
 use Drupal\group\Entity\Storage\GroupRelationshipTypeStorageInterface;
 use Drupal\system\Entity\Menu;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use Symfony\Component\HttpFoundation\InputBag;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Kernel tests for GroupMenuBlock.
  */
+#[Group('helfi_group')]
+#[RunTestsInSeparateProcesses]
 class GroupMenuBlockTest extends KernelTestBase {
 
   use GroupTestTrait;

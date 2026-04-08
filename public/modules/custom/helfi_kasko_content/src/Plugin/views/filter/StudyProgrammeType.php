@@ -6,6 +6,7 @@ namespace Drupal\helfi_kasko_content\Plugin\views\filter;
 
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\helfi_kasko_content\SchoolUtility;
+use Drupal\views\Attribute\ViewsFilter;
 use Drupal\views\Plugin\views\display\DisplayPluginBase;
 use Drupal\views\Plugin\views\query\Sql;
 use Drupal\views\ViewExecutable;
@@ -15,9 +16,8 @@ use Drupal\views\Views;
  * Filter school units by study programme type.
  *
  * @ingroup views_filter_handlers
- *
- * @ViewsFilter("study_programme_type_filter")
  */
+#[ViewsFilter('study_programme_type_filter')]
 class StudyProgrammeType extends InOperatorBase {
 
   /**

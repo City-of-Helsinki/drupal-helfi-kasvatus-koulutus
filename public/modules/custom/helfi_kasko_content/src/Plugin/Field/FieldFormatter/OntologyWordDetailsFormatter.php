@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\helfi_kasko_content\Plugin\Field\FieldFormatter;
 
-use Drupal\Core\Field\FieldDefinitionInterface;
+use Drupal\Core\Field\Attribute\FieldFormatter;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\FormatterBase;
 use Drupal\helfi_kasko_content\SchoolUtility;
@@ -16,63 +16,28 @@ use Drupal\Core\StringTranslation\TranslatableMarkup;
 
 /**
  * Field formatter to render TPR unit's Ontologyword details.
- *
- * @FieldFormatter(
- *   id = "tpr_ontologyword_details_formatter",
- *   label = @Translation("TPR - Ontologyword details formatter"),
- *   field_types = {
- *     "entity_reference"
- *   }
- * )
  */
+#[FieldFormatter(
+  id: 'tpr_ontologyword_details_formatter',
+  label: new TranslatableMarkup('TPR - Ontologyword details formatter'),
+  field_types: [
+    'entity_reference',
+  ]
+)]
 final class OntologyWordDetailsFormatter extends FormatterBase {
 
   /**
    * The UnitOntologyWordDetailsUtility.
-   *
-   * @var \Drupal\helfi_kasko_content\UnitOntologyWordDetailsUtility
    */
-  protected $unitOntologyWordDetailsUtility;
-
-  /**
-   * Constructs a FormatterBase object.
-   *
-   * @param string $plugin_id
-   *   The plugin_id for the formatter.
-   * @param mixed $plugin_definition
-   *   The plugin implementation definition.
-   * @param \Drupal\Core\Field\FieldDefinitionInterface $field_definition
-   *   The definition of the field to which the formatter is associated.
-   * @param array $settings
-   *   The formatter settings.
-   * @param string $label
-   *   The formatter label display setting.
-   * @param string $view_mode
-   *   The view mode.
-   * @param array $third_party_settings
-   *   Any third party settings.
-   * @param \Drupal\helfi_kasko_content\UnitOntologyWordDetailsUtility $unit_ontologyword_details_utility
-   *   Select icon configuration.
-   */
-  public function __construct($plugin_id, $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, $label, $view_mode, array $third_party_settings, UnitOntologyWordDetailsUtility $unit_ontologyword_details_utility) {
-    parent::__construct($plugin_id, $plugin_definition, $field_definition, $settings, $label, $view_mode, $third_party_settings);
-    $this->unitOntologyWordDetailsUtility = $unit_ontologyword_details_utility;
-  }
+  protected UnitOntologyWordDetailsUtility $unitOntologyWordDetailsUtility;
 
   /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
-    return new static(
-      $plugin_id,
-      $plugin_definition,
-      $configuration['field_definition'],
-      $configuration['settings'],
-      $configuration['label'],
-      $configuration['view_mode'],
-      $configuration['third_party_settings'],
-      $container->get('helfi_kasko_content.unit_ontologyword_details_utility')
-    );
+    $instance = parent::create($container, $configuration, $plugin_id, $plugin_definition);
+    $instance->unitOntologyWordDetailsUtility = $container->get('helfi_kasko_content.unit_ontologyword_details_utility');
+    return $instance;
   }
 
   /**
