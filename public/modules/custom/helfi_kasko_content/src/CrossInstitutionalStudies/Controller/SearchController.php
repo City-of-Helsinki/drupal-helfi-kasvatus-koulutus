@@ -31,14 +31,14 @@ class SearchController extends ControllerBase {
   public function content() : array {
 
     $defaultOptions = [
-      'all_ongoing' => 'true',
+      'ongoing' => 'true',
       'keyword' => 'helsinki:secondary_schools_cross_institutional_studies',
       'event_type' => 'Course',
     ];
 
     $config = $this->config('helfi_kasko_content.settings');
 
-    $eventsApiUrl = Url::fromUri($config->get('linked_events_api_url') . '/event', ['query' => $defaultOptions])->toString();
+    $eventsApiUrl = Url::fromUri($config->get('linked_events_api_url') . '/event/', ['query' => $defaultOptions])->toString();
 
     $availableLanguages = ['fi', 'sv', 'en'];
 
