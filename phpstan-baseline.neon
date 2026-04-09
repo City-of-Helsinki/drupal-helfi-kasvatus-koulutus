@@ -446,16 +446,6 @@ parameters:
 			path: public/modules/custom/helfi_kasko_content/src/Plugin/Field/FieldFormatter/OntologyWordDetailsFormatter.php
 
 		-
-			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\Field\\\\FieldFormatter\\\\OntologyWordDetailsFormatter\\:\\:__construct\\(\\) has parameter \\$settings with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: public/modules/custom/helfi_kasko_content/src/Plugin/Field/FieldFormatter/OntologyWordDetailsFormatter.php
-
-		-
-			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\Field\\\\FieldFormatter\\\\OntologyWordDetailsFormatter\\:\\:__construct\\(\\) has parameter \\$third_party_settings with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: public/modules/custom/helfi_kasko_content/src/Plugin/Field/FieldFormatter/OntologyWordDetailsFormatter.php
-
-		-
 			message: "#^Method Drupal\\\\helfi_kasko_content\\\\Plugin\\\\Field\\\\FieldFormatter\\\\OntologyWordDetailsFormatter\\:\\:create\\(\\) has parameter \\$configuration with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: public/modules/custom/helfi_kasko_content/src/Plugin/Field/FieldFormatter/OntologyWordDetailsFormatter.php
@@ -609,6 +599,26 @@ parameters:
 			message: "#^Parameter \\#2 \\$haystack of method PHPUnit\\\\Framework\\\\Assert\\:\\:assertStringNotContainsString\\(\\) expects string, string\\|false given\\.$#"
 			count: 1
 			path: public/modules/custom/helfi_kasko_content/tests/src/Kernel/CrossInstitutionalStudies/Controller/ControllerTest.php
+
+		-
+			message: "#^Method Drupal\\\\Tests\\\\helfi_kasko_content\\\\Kernel\\\\Plugin\\\\search_api\\\\Processor\\\\AdditionalFiltersTest\\:\\:getFilterValues\\(\\) has parameter \\$categories with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/tests/src/Kernel/Plugin/search_api/Processor/AdditionalFiltersTest.php
+
+		-
+			message: "#^Method Drupal\\\\Tests\\\\helfi_kasko_content\\\\Kernel\\\\Plugin\\\\search_api\\\\Processor\\\\AdditionalFiltersTest\\:\\:getFilterValues\\(\\) has parameter \\$ontologywordIds with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/tests/src/Kernel/Plugin/search_api/Processor/AdditionalFiltersTest.php
+
+		-
+			message: "#^Method Drupal\\\\Tests\\\\helfi_kasko_content\\\\Kernel\\\\Plugin\\\\search_api\\\\Processor\\\\AdditionalFiltersTest\\:\\:getFilterValues\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/tests/src/Kernel/Plugin/search_api/Processor/AdditionalFiltersTest.php
+
+		-
+			message: "#^Method Drupal\\\\Tests\\\\helfi_kasko_content\\\\Kernel\\\\Plugin\\\\search_api\\\\Processor\\\\IsSchoolTest\\:\\:createItem\\(\\) return type has no value type specified in iterable type Drupal\\\\search_api\\\\Item\\\\ItemInterface\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_kasko_content/tests/src/Kernel/Plugin/search_api/Processor/IsSchoolTest.php
 
 		-
 			message: "#^Function _hdbt_subtheme_sidebar_menu_visibility\\(\\) has no return type specified\\.$#"
