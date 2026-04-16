@@ -4,13 +4,6 @@ verbose: true
 types:
   crop: {  }
   file: {  }
-  tpr_service_channel: {  }
-  tpr_errand_service: {  }
-  tpr_ontology_word_details: {  }
-  tpr_service:
-    '*': '*'
-  tpr_unit:
-    '*': '*'
   media: {  }
   menu_link_content: {  }
   node:
@@ -30,21 +23,6 @@ form_op_lock:
     values: {  }
   file:
     mode: null
-    values: {  }
-  tpr_service_channel:
-    mode: 0
-    values: {  }
-  tpr_errand_service:
-    mode: 0
-    values: {  }
-  tpr_ontology_word_details:
-    mode: 0
-    values: {  }
-  tpr_service:
-    mode: 0
-    values: {  }
-  tpr_unit:
-    mode: 0
     values: {  }
   media:
     mode: 0
