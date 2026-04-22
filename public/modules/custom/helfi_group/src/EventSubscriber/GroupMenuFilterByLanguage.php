@@ -15,8 +15,6 @@ final class GroupMenuFilterByLanguage implements EventSubscriberInterface {
 
   /**
    * Menu to filter.
-   *
-   * @var string
    */
   protected string $menuName = 'group_menu_link_content';
 

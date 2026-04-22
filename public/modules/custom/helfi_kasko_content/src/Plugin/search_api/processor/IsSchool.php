@@ -4,26 +4,35 @@ declare(strict_types=1);
 
 namespace Drupal\helfi_kasko_content\Plugin\search_api\processor;
 
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\helfi_kasko_content\SchoolUtility;
 use Drupal\helfi_react_search\SupportsUnitIndexTrait;
-use Drupal\helfi_react_search\Plugin\search_api\processor\IsSchool as HelfiReactSearchIsSchool;
+use Drupal\search_api\Attribute\SearchApiProcessor;
 use Drupal\search_api\Item\ItemInterface;
+use Drupal\search_api\Processor\ProcessorPluginBase;
 
 /**
  * Checks if given TPR entity is a school.
- *
- * @SearchApiProcessor(
- *   id = "helfi_kasko_content_is_school",
- *   label = @Translation("School filter"),
- *   description = @Translation("Exclude non-school entities from index"),
- *   stages = {
- *     "alter_items" = 0,
- *   }
- * )
  */
-class IsSchool extends HelfiReactSearchIsSchool {
+#[SearchApiProcessor(
+  id: 'helfi_kasko_content_is_school',
+  label: new TranslatableMarkup('School filter'),
+  description: new TranslatableMarkup('Exclude non-school entities from index'),
+  stages: [
+    'alter_items' => 0,
+  ]
+)]
+class IsSchool extends ProcessorPluginBase {
 
   use SupportsUnitIndexTrait;
+
+  /**
+   * Checks the entity against these to determine if it should index.
+   */
+  const array SCHOOL_SERVICE_IDS = [
+    '3105',
+    '3106',
+  ];
 
   /**
    * {@inheritdoc}
@@ -46,12 +55,12 @@ class IsSchool extends HelfiReactSearchIsSchool {
    *
    * @return bool
    *   The result.
-   *
-   * @throws \Drupal\search_api\SearchApiException
    */
   protected function shouldIndex(ItemInterface $item): bool {
-    // Return true if the TPR unit is school.
-    if (parent::shouldIndex($item)) {
+    $object = $item->getOriginalObject()->getValue();
+    $flatValues = array_map(static fn (array $field) => $field['target_id'], $object->get('services')->getValue());
+
+    if (!empty(array_intersect($flatValues, self::SCHOOL_SERVICE_IDS))) {
       return TRUE;
     }
 

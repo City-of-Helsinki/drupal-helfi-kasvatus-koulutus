@@ -7,19 +7,18 @@ namespace Drupal\Tests\helfi_kasko_content\Unit\Plugin\views\filter;
 use Drupal\helfi_kasko_content\Plugin\views\filter\HighSchoolLanguage;
 use Drupal\Tests\UnitTestCase;
 use Drupal\views\Plugin\views\query\Sql;
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Tests the HighSchoolLanguage views filter plugin.
  *
  * @coversDefaultClass \Drupal\helfi_kasko_content\Plugin\views\filter\HighSchoolLanguage
- * @group helfi_kasko_content
  */
+#[Group('helfi_kasko_content')]
 class HighSchoolLanguageTest extends UnitTestCase {
 
   /**
    * The filter plugin under test.
-   *
-   * @var \Drupal\helfi_kasko_content\Plugin\views\filter\HighSchoolLanguage
    */
   protected HighSchoolLanguage $filter;
 
@@ -35,8 +34,6 @@ class HighSchoolLanguageTest extends UnitTestCase {
 
   /**
    * Tests that generateOptions returns the expected language options.
-   *
-   * @covers ::generateOptions
    */
   public function testGenerateOptions(): void {
     $options = $this->filter->generateOptions();
@@ -50,8 +47,6 @@ class HighSchoolLanguageTest extends UnitTestCase {
 
   /**
    * Tests query method with Swedish language selected.
-   *
-   * @covers ::query
    */
   public function testQueryWithSwedish(): void {
     $capturedIds = [];
@@ -81,8 +76,6 @@ class HighSchoolLanguageTest extends UnitTestCase {
 
   /**
    * Tests query method with English language selected.
-   *
-   * @covers ::query
    */
   public function testQueryWithEnglish(): void {
     $capturedIds = [];
@@ -111,8 +104,6 @@ class HighSchoolLanguageTest extends UnitTestCase {
 
   /**
    * Tests query method with empty value.
-   *
-   * @covers ::query
    */
   public function testQueryWithEmptyValue(): void {
     $query = $this->createMock(Sql::class);
@@ -127,8 +118,6 @@ class HighSchoolLanguageTest extends UnitTestCase {
 
   /**
    * Tests query method with Finnish language selected.
-   *
-   * @covers ::query
    */
   public function testQueryWithFinnish(): void {
     $capturedIds = [];
@@ -157,8 +146,6 @@ class HighSchoolLanguageTest extends UnitTestCase {
 
   /**
    * Tests query method with multiple languages selected.
-   *
-   * @covers ::query
    */
   public function testQueryWithMultipleLanguages(): void {
     $capturedIds = [];

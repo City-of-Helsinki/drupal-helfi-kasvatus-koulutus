@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\helfi_kasko_content\Plugin\views\filter;
 
+use Drupal\views\Attribute\ViewsFilter;
 use Drupal\views\Plugin\views\display\DisplayPluginBase;
 use Drupal\views\Plugin\views\filter\InOperator;
 use Drupal\views\Plugin\views\query\Sql;
@@ -13,15 +14,14 @@ use Drupal\views\ViewExecutable;
  * Filter high school units by provided language.
  *
  * @ingroup views_filter_handlers
- *
- * @ViewsFilter("high_school_language")
  */
+#[ViewsFilter('high_school_language')]
 class HighSchoolLanguage extends InOperator {
 
   /**
    * Mapping of language codes to TPR unit entity IDs.
    */
-  private const LANGUAGE_UNIT_IDS = [
+  private const array LANGUAGE_UNIT_IDS = [
     'fi' => [
       15061,
       30851,
