@@ -127,7 +127,7 @@ class KaskoElasticIndexSubscriberTest extends KernelTestBase {
           'search_api_language' => ['fi'],
           'ontologyword_details_clarifications' => [101],
         ],
-      ]
+      ],
     ], 'schools');
     $sut->modifyOntologywordDetailsFields($event);
     $result = $event->getParams();
