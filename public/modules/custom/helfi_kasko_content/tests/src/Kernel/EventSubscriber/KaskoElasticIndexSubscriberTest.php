@@ -101,7 +101,7 @@ class KaskoElasticIndexSubscriberTest extends KernelTestBase {
 
     // Tests that non-schools index is ignored.
     $params = ['body' => [['some_field' => 'value']]];
-    $event = new IndexParamsEvent('not_schools', $params);
+    $event = new IndexParamsEvent('not_schools', $params, 'schools');
 
     $sut->modifyOntologywordDetailsFields($event);
     $this->assertEquals($params, $event->getParams());
@@ -116,7 +116,7 @@ class KaskoElasticIndexSubscriberTest extends KernelTestBase {
         ],
       ],
     ];
-    $event = new IndexParamsEvent('schools', $params);
+    $event = new IndexParamsEvent('schools', $params, 'schools');
     $sut->modifyOntologywordDetailsFields($event);
     $this->assertEquals($params, $event->getParams());
 
@@ -127,8 +127,8 @@ class KaskoElasticIndexSubscriberTest extends KernelTestBase {
           'search_api_language' => ['fi'],
           'ontologyword_details_clarifications' => [101],
         ],
-      ],
-    ]);
+      ]
+    ], 'schools');
     $sut->modifyOntologywordDetailsFields($event);
     $result = $event->getParams();
 
@@ -146,7 +146,7 @@ class KaskoElasticIndexSubscriberTest extends KernelTestBase {
           'ontologyword_details_clarifications' => [201],
         ],
       ],
-    ]);
+    ], 'schools');
     $sut->modifyOntologywordDetailsFields($event);
     $result = $event->getParams();
 
@@ -164,7 +164,7 @@ class KaskoElasticIndexSubscriberTest extends KernelTestBase {
           'ontologyword_details_clarifications' => [301],
         ],
       ],
-    ]);
+    ], 'schools');
     $sut->modifyOntologywordDetailsFields($event);
     $result = $event->getParams();
 
