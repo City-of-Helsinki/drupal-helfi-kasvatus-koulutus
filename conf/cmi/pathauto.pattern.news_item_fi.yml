@@ -2,6 +2,8 @@ uuid: 9a2a248b-5f31-45db-b758-46d6eb46e4a2
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.news_item
   module:
     - language
     - node
