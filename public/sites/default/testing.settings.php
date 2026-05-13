@@ -21,6 +21,6 @@ $config['openid_connect.client.tunnistamo']['settings']['ad_roles'] = [
   ],
   [
     'ad_role' => '947058f4-697e-41bb-baf5-f69b49e5579a',
-    'roles' => ['super_administrator'],
+    'roles' => ['super_administrator', 'admin'],
   ],
 ];
