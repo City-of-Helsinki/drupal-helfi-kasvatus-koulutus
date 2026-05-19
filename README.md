@@ -199,13 +199,13 @@ limited to upper secondary schools. Each school can publish its own news, which 
 specific area. Other KASKO-related news is created in the Etusivu instance in the same manner as other news, and the
 enabled news feature does not affect this process.
 
-#### Common issues
+#### Super administrator access to groups
 
-The list of all groups (/admin/group) is empty even there is multiple groups in the database:
-
-Only users with _Administrator role_ (not even Super administrators currently) are able to see all groups and assign
-members to groups that they are not members themselves. If you are a member of a certain group, but you don't have the
-Administrator role, you can see the group that you belong to on the listing.
+The `helfi_group` module's `EnsureSuperAdminRolesSubscriber` runs on every `drush helfi:post-deploy`
+and grants the _Administrator_ role to user 1 and every user that has the _Super administrator_ role. The
+_Administrator_ role has the necessary site-wide group permissions to access each group, so adding it grants
+super admins full access to all groups. This is no longer necessary if AD role mapping is ever enabled on this
+instance.
 
 ### Group news
 

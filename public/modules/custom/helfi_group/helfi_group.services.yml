@@ -9,3 +9,8 @@ services:
       - '@router.admin_context'
     tags:
       - { name: 'event_subscriber' }
+
+  Drupal\helfi_group\EventSubscriber\EnsureSuperAdminRolesSubscriber:
+    autowire: true
+    tags:
+      - { name: event_subscriber }
