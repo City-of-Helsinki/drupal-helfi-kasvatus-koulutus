@@ -1,0 +1,20 @@
+uuid: fcd61d20-db1b-477c-a757-9e83452f3c87
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  user_content:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  langcode: true
+  member_for: true
+  search_api_excerpt: true
