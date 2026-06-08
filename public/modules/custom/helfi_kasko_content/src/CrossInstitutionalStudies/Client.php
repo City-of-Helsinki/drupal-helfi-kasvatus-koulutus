@@ -88,6 +88,7 @@ class Client {
         $event->min_capacity ?? NULL,
         $event->max_capacity ?? NULL,
         isset($event->super_event->{'@id'}) ? basename(rtrim($event->super_event->{'@id'}, '/')) : NULL,
+        (($event->offers[0]->info_url->{$langcode} ?? '') ?: ($event->offers[0]->info_url->fi ?? '') ?: NULL),
       );
     }
 
