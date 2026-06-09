@@ -88,8 +88,9 @@ class Client {
         $event->min_capacity ?? NULL,
         $event->max_capacity ?? NULL,
         isset($event->super_event->{'@id'}) ? basename(rtrim($event->super_event->{'@id'}, '/')) : NULL,
-        // Gets the singup link for each langcode. If only Finnish link is available and other langcodes exists,
-        // it defaults to Finnish. If no link is available at all, it defaults to NULL.
+        // Gets the singup link for each langcode. If only Finnish link is
+        // available and other langcodes exists, it defaults to Finnish.
+        // If no link is available at all, it defaults to NULL.
         (($event->offers[0]->info_url->{$langcode} ?? '') ?: ($event->offers[0]->info_url->fi ?? '') ?: NULL),
       );
     }
