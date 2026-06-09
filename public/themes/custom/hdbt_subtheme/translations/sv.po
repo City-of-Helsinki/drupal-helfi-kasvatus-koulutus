@@ -169,8 +169,8 @@ msgid "Language of instruction"
 msgstr "Undervisningsspråk"
 
 msgctxt "Cross institutional studies"
-msgid "Sign up on Wilma"
-msgstr "Anmäl dig i Wilma"
+msgid "Sign up"
+msgstr "Anmäl dig"
 
 msgctxt "Cross institutional studies"
 msgid "Other options for completing the study unit"

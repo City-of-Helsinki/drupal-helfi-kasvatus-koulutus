@@ -42,6 +42,8 @@ final readonly class Event {
    *   Maximum capacity of the event.
    * @param string|null $super_event
    *   ID of the super event.
+   * @param string|null $signup_link
+   *   Signup link from the first offer's info_url.
    */
   public function __construct(
     public string $id,
@@ -59,6 +61,7 @@ final readonly class Event {
     public int|NULL $min_capacity,
     public int|NULL $max_capacity,
     public string|NULL $super_event = NULL,
+    public string|NULL $signup_link = NULL,
   ) {
   }
 
