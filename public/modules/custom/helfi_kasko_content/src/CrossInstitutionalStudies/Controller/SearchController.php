@@ -34,6 +34,7 @@ class SearchController extends ControllerBase {
       'ongoing' => 'true',
       'keyword' => 'helsinki:secondary_schools_cross_institutional_studies',
       'event_type' => 'Course',
+      'super_event_type' => 'none',
     ];
 
     $config = $this->config('helfi_kasko_content.settings');

@@ -178,8 +178,8 @@ msgid "Language of instruction"
 msgstr "Opetuskieli"
 
 msgctxt "Cross institutional studies"
-msgid "Sign up on Wilma"
-msgstr "Ilmoittaudu Wilmassa"
+msgid "Sign up"
+msgstr "Ilmoittaudu"
 
 msgctxt "Cross institutional studies"
 msgid "Other options for completing the study unit"
