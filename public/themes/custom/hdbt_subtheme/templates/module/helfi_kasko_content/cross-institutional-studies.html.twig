@@ -93,9 +93,8 @@
           {% set link_attributes = {
             'data-hds-component': 'button',
           } %}
-          {% set link_title = 'Sign up on Wilma' | t({}, { context: 'Cross institutional studies' }) %}
-          {# To-do: change to actual link #}
-          {% set link_url = 'https://example.com' %}
+          {% set link_title = 'Sign up' | t({}, { context: 'Cross institutional studies' }) %}
+          {% set link_url = event.signup_link %}
 
           {% if link_url %}
             {{ link(link_title, link_url, link_attributes) }}
