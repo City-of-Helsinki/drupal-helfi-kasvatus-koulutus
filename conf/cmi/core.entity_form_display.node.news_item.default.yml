@@ -47,7 +47,7 @@ third_party_settings:
       label: Links
       region: content
       parent_name: ''
-      weight: 18
+      weight: 19
       format_type: fieldset
       format_settings:
         classes: ''
@@ -72,7 +72,7 @@ third_party_settings:
         description: ''
         required_fields: true
 _core:
-  default_config_hash: 4idwAdzBNTQx52km5yufL0uOiF01vQLSO2JIpnb2AnE
+  default_config_hash: eCyRF7wMS7W0uwcN3yy3XBJbBrFDx3DKDtZceBJIzCE
 id: node.news_item.default
 targetEntityType: node
 bundle: news_item
@@ -86,7 +86,7 @@ content:
     third_party_settings: {  }
   field_content:
     type: paragraphs
-    weight: 17
+    weight: 18
     region: content
     settings:
       title: Paragraph
@@ -253,4 +253,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  ai_summary: true
   hide_sidebar_navigation: true
