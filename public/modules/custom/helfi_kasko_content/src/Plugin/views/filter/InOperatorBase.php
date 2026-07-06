@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Drupal\helfi_kasko_content\Plugin\views\filter;
 
 use Drupal\Core\Language\LanguageManagerInterface;
+use Drupal\views\Plugin\ViewsHandlerManager;
 use Drupal\views\Plugin\views\filter\InOperator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -21,6 +22,13 @@ abstract class InOperatorBase extends InOperator {
   protected LanguageManagerInterface $languageManager;
 
   /**
+   * The views join plugin manager.
+   *
+   * @var \Drupal\views\Plugin\ViewsHandlerManager
+   */
+  protected ViewsHandlerManager $joinManager;
+
+  /**
    * {@inheritdoc}
    */
   public static function create(
@@ -29,9 +37,9 @@ abstract class InOperatorBase extends InOperator {
     $plugin_id,
     $plugin_definition,
   ) : static {
-    $instance = parent::create($container, $configuration, $plugin_id,
-      $plugin_definition);
+    $instance = parent::create($container, $configuration, $plugin_id, $plugin_definition);
     $instance->languageManager = $container->get('language_manager');
+    $instance->joinManager = $container->get('plugin.manager.views.join');
     return $instance;
   }
 
