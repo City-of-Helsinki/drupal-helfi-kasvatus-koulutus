@@ -241,11 +241,6 @@ parameters:
 			path: public/modules/custom/helfi_group/tests/src/Kernel/Plugin/Block/GroupMenuBlockTest.php
 
 		-
-			message: "#^Parameter \\#1 \\$account of method Drupal\\\\Tests\\\\helfi_group\\\\Kernel\\\\Plugin\\\\Block\\\\GroupMenuBlockTest\\:\\:setCurrentUser\\(\\) expects Drupal\\\\Core\\\\Session\\\\AccountInterface, Drupal\\\\user\\\\Entity\\\\User\\|false given\\.$#"
-			count: 1
-			path: public/modules/custom/helfi_group/tests/src/Kernel/Plugin/Block/GroupMenuBlockTest.php
-
-		-
 			message: "#^Parameter \\#1 \\$group_type_id of method Drupal\\\\group\\\\Entity\\\\Storage\\\\GroupRelationshipTypeStorageInterface\\:\\:getRelationshipTypeId\\(\\) expects string, int\\|string\\|null given\\.$#"
 			count: 1
 			path: public/modules/custom/helfi_group/tests/src/Kernel/Plugin/Block/GroupMenuBlockTest.php
@@ -574,11 +569,6 @@ parameters:
 			message: "#^Method Drupal\\\\helfi_kasko_content\\\\UnitOntologyWordDetailsUtility\\:\\:findOntologyWordKeysLabelsbyId\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: public/modules/custom/helfi_kasko_content/src/UnitOntologyWordDetailsUtility.php
-
-		-
-			message: "#^Parameter \\#1 \\$account of method Drupal\\\\Tests\\\\BrowserTestBase\\:\\:drupalLogin\\(\\) expects Drupal\\\\Core\\\\Session\\\\AccountInterface, Drupal\\\\user\\\\UserInterface\\|false given\\.$#"
-			count: 3
-			path: public/modules/custom/helfi_kasko_content/tests/src/Functional/UnitCategoryPermissionTest.php
 
 		-
 			message: "#^Method Drupal\\\\Tests\\\\helfi_kasko_content\\\\Kernel\\\\CrossInstitutionalStudies\\\\Controller\\\\ControllerTest\\:\\:createEventResponse\\(\\) has parameter \\$subEvents with no value type specified in iterable type array\\.$#"

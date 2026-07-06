@@ -10,7 +10,6 @@ use Drupal\views\Attribute\ViewsFilter;
 use Drupal\views\Plugin\views\display\DisplayPluginBase;
 use Drupal\views\Plugin\views\query\Sql;
 use Drupal\views\ViewExecutable;
-use Drupal\views\Views;
 
 /**
  * Filter school units by study programme type.
@@ -62,7 +61,7 @@ class StudyProgrammeType extends InOperatorBase {
       'operator' => '=',
     ];
     /** @var \Drupal\views\Plugin\views\join\JoinPluginBase $owdFdJoin */
-    $owdFdJoin = Views::pluginManager('join')->createInstance('standard', $owdFdConfiguration);
+    $owdFdJoin = $this->joinManager->createInstance('standard', $owdFdConfiguration);
     assert($this->query instanceof Sql);
     $this->query->addRelationship('owd_fd_spt', $owdFdJoin, 'tpr_unit_field_data');
 
@@ -78,7 +77,7 @@ class StudyProgrammeType extends InOperatorBase {
       'operator' => '=',
     ];
     /** @var \Drupal\views\Plugin\views\join\JoinPluginBase $diJoin */
-    $diJoin = Views::pluginManager('join')->createInstance('standard', $diConfiguration);
+    $diJoin = $this->joinManager->createInstance('standard', $diConfiguration);
     $this->query->addRelationship('di_spt', $diJoin, 'owd_fd_spt');
 
     $schoolYear = SchoolUtility::getCurrentHighSchoolYear();

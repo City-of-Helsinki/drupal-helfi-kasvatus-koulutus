@@ -10,7 +10,6 @@ use Drupal\helfi_tpr\Entity\OntologyWordDetails;
 use Drupal\views\Plugin\views\display\DisplayPluginBase;
 use Drupal\views\Plugin\views\query\Sql;
 use Drupal\views\ViewExecutable;
-use Drupal\views\Views;
 
 /**
  * Base views filter class for school details.
@@ -67,7 +66,7 @@ abstract class SchoolDetailsBase extends InOperatorBase {
       'operator' => '=',
     ];
     /** @var \Drupal\views\Plugin\views\join\JoinPluginBase $owdFdJoin */
-    $owdFdJoin = Views::pluginManager('join')->createInstance('standard', $owdFdConfiguration);
+    $owdFdJoin = $this->joinManager->createInstance('standard', $owdFdConfiguration);
     assert($this->query instanceof Sql);
 
     $this->query->addRelationship('owd_fd', $owdFdJoin, 'tpr_unit_field_data');
@@ -85,7 +84,7 @@ abstract class SchoolDetailsBase extends InOperatorBase {
       'operator' => '=',
     ];
     /** @var \Drupal\views\Plugin\views\join\JoinPluginBase $diJoin */
-    $diJoin = Views::pluginManager('join')->createInstance('standard', $diConfiguration);
+    $diJoin = $this->joinManager->createInstance('standard', $diConfiguration);
     $this->query->addRelationship('di', $diJoin, 'owd_fd');
 
     $schoolYear = SchoolUtility::getCurrentHighSchoolYear();
