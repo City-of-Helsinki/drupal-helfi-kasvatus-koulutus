@@ -21,6 +21,7 @@ selection_criteria:
       node: node
     bundles:
       news_item: news_item
+    uuid: d3b12b5b-bb8c-4829-af2e-ca020b74facb
   e43924c5-8ff6-465f-9067-8afdfe26fd2e:
     id: language
     negate: false
@@ -28,6 +29,7 @@ selection_criteria:
       language: 'node:langcode:language'
     langcodes:
       sv: sv
+    uuid: e43924c5-8ff6-465f-9067-8afdfe26fd2e
 selection_logic: and
 weight: -9
 relationships:
