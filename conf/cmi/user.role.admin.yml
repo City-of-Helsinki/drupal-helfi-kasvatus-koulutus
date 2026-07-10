@@ -31,6 +31,7 @@ dependencies:
     - group
     - group_content_menu
     - hdbt_cookie_banner
+    - helfi_ai
     - helfi_api_base
     - helfi_kasko_content
     - helfi_recommendations
@@ -233,6 +234,7 @@ permissions:
   - 'update own tpr_ontology_word_details'
   - 'update own tpr_service'
   - 'update own tpr_unit'
+  - 'use helfi ai title suggestion'
   - 'use menu link attributes'
   - 'use text format full_html'
   - 'use text format minimal'
