@@ -11,7 +11,6 @@ use Drupal\helfi_kasko_content\CrossInstitutionalStudies\DTO\Image;
 use Drupal\helfi_kasko_content\CrossInstitutionalStudies\DTO\Keyword;
 use Drupal\helfi_kasko_content\CrossInstitutionalStudies\DTO\Language;
 use GuzzleHttp\ClientInterface;
-use GuzzleHttp\Utils;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 
 /**
@@ -51,7 +50,7 @@ class Client {
       $url = $config->get('linked_events_api_url');
       $response = $this->client->request('GET', "$url/event/$id/");
 
-      $event = Utils::jsonDecode($response->getBody()->getContents());
+      $event = json_decode($response->getBody()->getContents());
 
       $this->cache->set($cid, $event, time() + $config->get('courses_max_age') ?? 3600, [
         "cross_institutional_studies:$id",
