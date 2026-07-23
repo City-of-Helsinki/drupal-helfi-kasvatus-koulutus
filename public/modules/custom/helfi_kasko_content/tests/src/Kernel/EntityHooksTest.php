@@ -87,7 +87,7 @@ class EntityHooksTest extends KernelTestBase {
   /**
    * Data provider for unit category access.
    *
-   * @return array<int, array{string, string}>
+   * @return array<int, string[]>
    *   Each set has a category and its permission.
    */
   public static function categoryProvider(): array {
