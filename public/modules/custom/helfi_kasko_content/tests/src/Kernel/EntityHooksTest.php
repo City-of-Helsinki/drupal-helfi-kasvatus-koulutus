@@ -127,6 +127,30 @@ class EntityHooksTest extends KernelTestBase {
   }
 
   /**
+   * Test that the comprehensive school subpage paragraph types are enabled.
+   */
+  public function testComprehensiveSchoolSubpageParagraphTypes(): void {
+    // Collect enabled field and paragraph pairs for the subpage bundle.
+    $enabled = [];
+    foreach (EntityHooks::helfiParagraphTypes() as $collection) {
+      if ($collection->entityType === 'node' && $collection->bundle === 'comprehensive_school_subpage') {
+        $enabled[$collection->field][] = $collection->paragraph;
+      }
+    }
+
+    $this->assertNotEmpty($enabled);
+
+    // Hero, upper and lower content regions are available.
+    $this->assertContains('hero', $enabled['field_hero']);
+    $this->assertContains('text', $enabled['field_content']);
+    $this->assertContains('vocational_school_search', $enabled['field_content']);
+    $this->assertContains('daycare_search', $enabled['field_lower_content']);
+
+    // Sidebar content field was removed.
+    $this->assertArrayNotHasKey('field_sidebar_content', $enabled);
+  }
+
+  /**
    * Test that the comprehensive school editor may only target unit pages.
    */
   public function testAnnouncementFormAlterForComprehensiveSchoolEditor(): void {
