@@ -48,36 +48,6 @@ function helfi_kasko_content_tpr_unit_access(EntityInterface $entity, $operation
 }
 
 /**
- * Implements hook_form_FORM_ID_alter().
- */
-function helfi_kasko_content_form_views_exposed_form_alter(&$form, $form_state) {
-
-  // Handle only Unit search view form at this point.
-  if ($form['#id'] !== 'views-exposed-form-high-school-search-block') {
-    return;
-  }
-
-  // Get view from form state.
-  $view = $form_state->getStorage()['view'];
-  $current_language = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
-
-  // Apply the cached meta fields values to form values.
-  $cached = \Drupal::cache()->get(
-    $view->id() .
-    $view->current_display .
-    $current_language .
-    $view->args[0]
-  );
-
-  if ($cached) {
-    $meta_fields = $cached->data;
-    if (!empty($meta_fields['field_hs_search_meta_button'])) {
-      $form['actions']['submit']['#value'] = $meta_fields['field_hs_search_meta_button'];
-    }
-  }
-}
-
-/**
  * Implements hook_helfi_paragraph_types().
  */
 function helfi_kasko_content_helfi_paragraph_types() : array {
@@ -125,86 +95,6 @@ function helfi_kasko_content_helfi_paragraph_types() : array {
     }
   }
   return $enabled;
-}
-
-/**
- * Implements hook_views_post_execute().
- */
-function helfi_kasko_content_views_post_execute($view) {
-  if ($view->id() == 'after_school_activity_search') {
-    $current_language = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
-
-    // Remove these strings from TPR unit titles.
-    $removableStrings = [
-      'Iltapäivätoiminta /',
-      'Eftermiddagsverksamhet /',
-      'Finskspråkig eftermiddagsverksamhet /',
-      'After-school activities /',
-    ];
-
-    foreach ($view->result as &$row) {
-      if ($row->_entity->hasTranslation($current_language)) {
-        $translatedEntity = $row->_entity->getTranslation($current_language);
-        $translatedEntity->set('name', trim(str_replace($removableStrings, '', $translatedEntity->get('name')->getString())));
-      }
-      else {
-        $row->_entity->set('name', trim(str_replace($removableStrings, '', $row->_entity->get('name')->getString())));
-      }
-    }
-
-    // Sort alphabetically based on parsed title.
-    if ($current_language === 'en' || $current_language === 'sv') {
-      uasort($view->result, fn($a, $b) => $a->_entity->getTranslation($current_language)->get('name')->getString() <=> $b->_entity->getTranslation($current_language)->get('name')->getString());
-    }
-    else {
-      uasort($view->result, fn($a, $b) => $a->_entity->get('name')->getString() <=> $b->_entity->get('name')->getString());
-    }
-  }
-}
-
-/**
- * Implements hook_views_data_alter().
- */
-function helfi_kasko_content_views_data_alter(array &$data) {
-  $data['tpr_unit']['emphasis_filter'] = [
-    'title' => t('Emphasis filter'),
-    'filter' => [
-      'title' => t('Emphasis filter'),
-      'help' => 'Filters units by emphasis.',
-      'field' => 'nid',
-      'id' => 'emphasis_filter',
-    ],
-  ];
-
-  $data['tpr_unit']['educational_mission_filter'] = [
-    'title' => t('Educational mission'),
-    'filter' => [
-      'title' => t('Educational mission'),
-      'help' => 'Filters units by educational mission.',
-      'field' => 'nid',
-      'id' => 'educational_mission_filter',
-    ],
-  ];
-
-  $data['tpr_unit']['study_programme_type_filter'] = [
-    'title' => t('Study programme type'),
-    'filter' => [
-      'title' => t('Study programme type'),
-      'help' => 'Filters units by study programme type.',
-      'field' => 'nid',
-      'id' => 'study_programme_type_filter',
-    ],
-  ];
-
-  $data['tpr_unit_field_data']['high_school_language'] = [
-    'title' => t('High school language'),
-    'filter' => [
-      'title' => t('High school language'),
-      'help' => 'Filters high school units by language of instruction.',
-      'field' => 'id',
-      'id' => 'high_school_language',
-    ],
-  ];
 }
 
 /**
