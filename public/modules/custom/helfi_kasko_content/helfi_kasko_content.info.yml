@@ -10,11 +10,15 @@ dependencies:
   - drupal:taxonomy
   - drupal:user
   - drupal:path
+  - drupal:menu_ui
   - elasticsearch_connector:elasticsearch_connector
   - helfi_platform_config:hdbt_admin_tools
+  - helfi_platform_config:helfi_base_content
+  - helfi_platform_config:helfi_media
   - helfi_platform_config:helfi_react_search
   - helfi_tpr:helfi_tpr
   - override_node_options:override_node_options
+  - publication_date:publication_date
   - search_api:search_api
 'interface translation project': helfi_kasko_content
 'interface translation server pattern': modules/custom/helfi_kasko_content/translations/%language.po

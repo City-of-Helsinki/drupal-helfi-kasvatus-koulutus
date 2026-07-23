@@ -1,0 +1,75 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.comprehensive_school_subpage.field_content
+    - field.field.node.comprehensive_school_subpage.field_has_hero
+    - field.field.node.comprehensive_school_subpage.field_hero
+    - field.field.node.comprehensive_school_subpage.field_lead_in
+    - field.field.node.comprehensive_school_subpage.field_liftup_image
+    - field.field.node.comprehensive_school_subpage.field_lower_content
+    - field.field.node.comprehensive_school_subpage.field_metatags
+    - node.type.comprehensive_school_subpage
+  module:
+    - entity_reference_revisions
+    - metatag
+    - user
+id: node.comprehensive_school_subpage.default
+targetEntityType: node
+bundle: comprehensive_school_subpage
+mode: default
+content:
+  field_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_lead_in:
+    type: text_span
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_lower_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  toc_enabled:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_has_hero: true
+  field_hero: true
+  field_liftup_image: true
+  langcode: true
+  published_at: true
+  search_api_excerpt: true
