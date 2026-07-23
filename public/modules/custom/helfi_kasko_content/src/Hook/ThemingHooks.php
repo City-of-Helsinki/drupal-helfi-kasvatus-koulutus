@@ -14,8 +14,8 @@ class ThemingHooks {
   /**
    * Implements hook_theme().
    *
-   * @return array<string, string[]>
-   *
+   * @return array<string, array<string, mixed>>
+   *   Theme definitions.
    */
   #[Hook('theme')]
   public function theme(): array {
@@ -94,6 +94,9 @@ class ThemingHooks {
 
   /**
    * Implements hook_first_paragraph_grey_alter().
+   *
+   * @param string[] $paragraphs
+   *   Paragraph types shown with grey background.
    */
   #[Hook('first_paragraph_grey_alter')]
   public function firstParagraphGrey(array &$paragraphs): void {
