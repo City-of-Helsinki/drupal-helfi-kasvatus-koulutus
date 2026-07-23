@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Drupal\Tests\helfi_kasko_content\Kernel;
 
 use Drupal\Core\Cache\CacheBackendInterface;
+use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
@@ -12,6 +13,7 @@ use Drupal\helfi_kasko_content\Hook\ViewsHooks;
 use Drupal\helfi_tpr\Entity\Unit;
 use Drupal\KernelTests\KernelTestBase;
 use Drupal\language\Entity\ConfigurableLanguage;
+use Drupal\views\ResultRow;
 use Drupal\views\ViewExecutable;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
@@ -83,13 +85,18 @@ class ViewsHooksTest extends KernelTestBase {
     $view = $this->createMock(ViewExecutable::class);
     $view->method('id')->willReturn('after_school_activity_search');
     $view->result = [
-      (object) ['_entity' => $first],
-      (object) ['_entity' => $second],
+      new ResultRow(['_entity' => $first]),
+      new ResultRow(['_entity' => $second]),
     ];
 
     $this->createHook('fi')->viewsPostExecute($view);
 
-    $names = array_map(fn($row) => $row->_entity->get('name')->getString(), array_values($view->result));
+    $names = [];
+    foreach ($view->result as $row) {
+      $entity = $row->_entity;
+      assert($entity instanceof ContentEntityInterface);
+      $names[] = $entity->get('name')->getString();
+    }
     $this->assertEquals(['Koppis', 'Leppis'], $names);
   }
 
@@ -107,13 +114,18 @@ class ViewsHooksTest extends KernelTestBase {
     $view = $this->createMock(ViewExecutable::class);
     $view->method('id')->willReturn('after_school_activity_search');
     $view->result = [
-      (object) ['_entity' => $first],
-      (object) ['_entity' => $second],
+      new ResultRow(['_entity' => $first]),
+      new ResultRow(['_entity' => $second]),
     ];
 
     $this->createHook('sv')->viewsPostExecute($view);
 
-    $names = array_map(fn($row) => $row->_entity->getTranslation('sv')->get('name')->getString(), array_values($view->result));
+    $names = [];
+    foreach (array_values($view->result) as $row) {
+      $entity = $row->_entity;
+      assert($entity instanceof ContentEntityInterface);
+      $names[] = $entity->getTranslation('sv')->get('name')->getString();
+    }
     $this->assertEquals(['Koppis', 'Leppis'], $names);
   }
 

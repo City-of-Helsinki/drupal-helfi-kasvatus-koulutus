@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace Drupal\helfi_kasko_content\Hook;
 
 use Drupal\Core\Cache\CacheBackendInterface;
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Hook\Attribute\Hook;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
@@ -68,6 +70,9 @@ class ViewsHooks {
 
   /**
    * Implements hook_views_data_alter().
+   *
+   * @param array<string, mixed> $data
+   *   The views data.
    */
   #[Hook('views_data_alter')]
   public function viewsDataAlter(array &$data): void {
@@ -113,10 +118,15 @@ class ViewsHooks {
   }
 
   /**
-   * Implementshook_form_FORM_ID_alter().
+   * Implements hook_form_FORM_ID_alter().
+   *
+   * @param array<string, mixed> $form
+   *   The form.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The form state.
    */
   #[Hook('form_views_exposed_form_alter')]
-  public function viewsExposedFormAlter(&$form, $form_state) {
+  public function viewsExposedFormAlter(array &$form, FormStateInterface $form_state): void {
 
     // Handle only Unit search view form at this point.
     if ($form['#id'] !== 'views-exposed-form-high-school-search-block') {
