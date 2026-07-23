@@ -10,7 +10,7 @@ use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
- * Tests permission granting hook.
+ * Tests for permission granting hook.
  */
 #[Group('helfi_kasko_content')]
 #[RunTestsInSeparateProcesses]
@@ -27,7 +27,7 @@ class PermissionsHooksTest extends KernelTestBase {
   ];
 
   /**
-   * Tests school editor permissions are granted.
+   * Test that the school editor permissions are granted.
    */
   public function testGrantPermissions(): void {
     $hook = new PermissionsHooks();

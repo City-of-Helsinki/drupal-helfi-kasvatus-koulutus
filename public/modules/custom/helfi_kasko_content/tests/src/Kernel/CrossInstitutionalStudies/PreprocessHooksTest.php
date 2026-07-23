@@ -29,7 +29,7 @@ class PreprocessHooksTest extends KernelTestBase {
   ];
 
   /**
-   * Creates the hook with a route match that returns the given route name.
+   * Create the hook with a route match that returns the given route name.
    */
   private function createHook(string $routeName): CrossInstitutionalStudies {
     $routeMatch = $this->createMock(RouteMatchInterface::class);
@@ -42,7 +42,7 @@ class PreprocessHooksTest extends KernelTestBase {
   }
 
   /**
-   * Tests preprocess_page sets has_hero only on the search route.
+   * Test that the preprocess_page sets has_hero.
    */
   public function testPreprocessPage(): void {
     $hook = $this->createHook('helfi_kasko_content.cross_institutional_studies_search');
@@ -57,7 +57,7 @@ class PreprocessHooksTest extends KernelTestBase {
   }
 
   /**
-   * Tests preprocess_html sets the summer theme color only on the search route.
+   * Test that the preprocess_html sets the summer theme color.
    */
   public function testPreprocessHtml(): void {
     $hook = $this->createHook('helfi_kasko_content.cross_institutional_studies_search');
