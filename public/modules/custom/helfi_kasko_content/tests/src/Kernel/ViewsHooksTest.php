@@ -77,9 +77,9 @@ class ViewsHooksTest extends KernelTestBase {
    * Test that the titles are stripped and sorted on the default language.
    */
   public function testViewsPostExecute(): void {
-    $first = Unit::create(['id' => 1, 'name' => 'Iltapäivätoiminta / Leppis']);
+    $first = Unit::create(['id' => 1, 'name' => 'Iltapäivätoiminta / Ariel']);
     $first->save();
-    $second = Unit::create(['id' => 2, 'name' => 'After-school activities / Koppis']);
+    $second = Unit::create(['id' => 2, 'name' => 'After-school activities / Floora']);
     $second->save();
 
     $view = $this->createMock(ViewExecutable::class);
@@ -97,18 +97,18 @@ class ViewsHooksTest extends KernelTestBase {
       assert($entity instanceof ContentEntityInterface);
       $names[] = $entity->get('name')->getString();
     }
-    $this->assertEquals(['Koppis', 'Leppis'], $names);
+    $this->assertEquals(['Ariel', 'Floora'], $names);
   }
 
   /**
    * Test that the titles are stripped and sorted using the active translation.
    */
   public function testViewsPostExecuteTranslated(): void {
-    $first = Unit::create(['id' => 1, 'name' => 'Zebra']);
-    $first->addTranslation('sv', ['name' => 'Eftermiddagsverksamhet / Leppis']);
+    $first = Unit::create(['id' => 1, 'name' => 'Ariel']);
+    $first->addTranslation('sv', ['name' => 'Eftermiddagsverksamhet / Ariel']);
     $first->save();
-    $second = Unit::create(['id' => 2, 'name' => 'Apple']);
-    $second->addTranslation('sv', ['name' => 'Eftermiddagsverksamhet / Koppis']);
+    $second = Unit::create(['id' => 2, 'name' => 'Floora']);
+    $second->addTranslation('sv', ['name' => 'Eftermiddagsverksamhet / Floora']);
     $second->save();
 
     $view = $this->createMock(ViewExecutable::class);
@@ -126,7 +126,7 @@ class ViewsHooksTest extends KernelTestBase {
       assert($entity instanceof ContentEntityInterface);
       $names[] = $entity->getTranslation('sv')->get('name')->getString();
     }
-    $this->assertEquals(['Koppis', 'Leppis'], $names);
+    $this->assertEquals(['Ariel', 'Floora'], $names);
   }
 
   /**
