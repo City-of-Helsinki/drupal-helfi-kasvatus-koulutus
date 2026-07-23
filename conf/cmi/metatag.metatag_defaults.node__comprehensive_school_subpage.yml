@@ -1,0 +1,9 @@
+uuid: 624720cb-5f19-4d72-99fb-c520ec9f8251
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: OKVmkzhvKNBT5RMzzaBiO1Zu_rqeqohDs4i8PyWC5yI
+id: node__comprehensive_school_subpage
+label: 'Content: Comprehensive school subpage'
+tags: {  }

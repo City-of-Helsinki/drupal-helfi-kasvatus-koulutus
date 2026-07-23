@@ -1,3 +1,4 @@
+uuid: 1ce789f4-e89c-4271-ba84-c621badf1ac6
 langcode: en
 status: true
 dependencies:
@@ -5,10 +6,12 @@ dependencies:
     - node.type.comprehensive_school_subpage
   module:
     - node
+_core:
+  default_config_hash: htvDbF63F8N32QiVJXVT8Losb9kTZMuXOsyU5NDAiW0
 id: comprehensive_school_subpage_content_pattern
 label: 'Comprehensive school subpage content pattern'
 type: 'canonical_entities:node'
-pattern: '[node:menu-link:parents:join-path]/[node:title]'
+pattern: '/[node:menu-link:parents:join-path]/[node:title]'
 selection_criteria:
   a3f1c9d2-7b64-4e28-9c3a-1d2e5f6a7b8c:
     id: 'entity_bundle:node'
