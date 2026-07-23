@@ -103,45 +103,48 @@ class ViewsHooks {
    */
   #[Hook('views_data_alter')]
   public function viewsDataAlter(array &$data): void {
-    $data['tpr_unit']['emphasis_filter'] = [
-      'title' => $this->t('Emphasis filter'),
-      'filter' => [
-        'title' => $this->t('Emphasis filter'),
-        'help' => 'Filters units by emphasis.',
-        'field' => 'nid',
-        'id' => 'emphasis_filter',
+    $filters = [
+      [
+        'tpr_unit',
+        'emphasis_filter',
+        'nid',
+        $this->t('Emphasis filter'),
+        'Filters units by emphasis.',
+      ],
+      [
+        'tpr_unit',
+        'educational_mission_filter',
+        'nid',
+        $this->t('Educational mission'),
+        'Filters units by educational mission.',
+      ],
+      [
+        'tpr_unit',
+        'study_programme_type_filter',
+        'nid',
+        $this->t('Study programme type'),
+        'Filters units by study programme type.',
+      ],
+      [
+        'tpr_unit_field_data',
+        'high_school_language',
+        'id',
+        $this->t('High school language'),
+        'Filters high school units by language of instruction.',
       ],
     ];
 
-    $data['tpr_unit']['educational_mission_filter'] = [
-      'title' => $this->t('Educational mission'),
-      'filter' => [
-        'title' => $this->t('Educational mission'),
-        'help' => 'Filters units by educational mission.',
-        'field' => 'nid',
-        'id' => 'educational_mission_filter',
-      ],
-    ];
-
-    $data['tpr_unit']['study_programme_type_filter'] = [
-      'title' => $this->t('Study programme type'),
-      'filter' => [
-        'title' => $this->t('Study programme type'),
-        'help' => 'Filters units by study programme type.',
-        'field' => 'nid',
-        'id' => 'study_programme_type_filter',
-      ],
-    ];
-
-    $data['tpr_unit_field_data']['high_school_language'] = [
-      'title' => $this->t('High school language'),
-      'filter' => [
-        'title' => $this->t('High school language'),
-        'help' => 'Filters high school units by language of instruction.',
-        'field' => 'id',
-        'id' => 'high_school_language',
-      ],
-    ];
+    foreach ($filters as [$table, $id, $field, $title, $help]) {
+      $data[$table][$id] = [
+        'title' => $title,
+        'filter' => [
+          'title' => $title,
+          'help' => $help,
+          'field' => $field,
+          'id' => $id,
+        ],
+      ];
+    }
   }
 
   /**

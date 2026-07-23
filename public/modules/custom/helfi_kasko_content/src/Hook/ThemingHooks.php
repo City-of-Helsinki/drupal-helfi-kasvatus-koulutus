@@ -19,6 +19,27 @@ class ThemingHooks {
    */
   #[Hook('theme')]
   public function theme(): array {
+    // Ontologyword detail groups share the same label and items structure.
+    $ontologywordGroups = [
+      'a1',
+      'a2',
+      'b1',
+      'b2',
+      'bilingual_education',
+      'language_immersion',
+      'language_enriched_education',
+      'special_emphasis_1',
+      'special_emphasis_3',
+      'special_emphasis_7',
+    ];
+    $ontologywordVariables = ['schoolyear' => NULL];
+    foreach ($ontologywordGroups as $group) {
+      $ontologywordVariables[$group] = [
+        '#label' => NULL,
+        '#items' => [],
+      ];
+    }
+
     return [
       'cross_institutional_studies' => [
         'variables' => [
@@ -45,49 +66,7 @@ class ThemingHooks {
       ],
       'tpr_ontologyword_details_formatter' => [
         'template' => 'tpr-unit-ontologyword-details',
-        'variables' => [
-          'schoolyear' => NULL,
-          'a1' => [
-            '#label' => NULL,
-            '#items' => [],
-          ],
-          'a2' => [
-            '#label' => NULL,
-            '#items' => [],
-          ],
-          'b1' => [
-            '#label' => NULL,
-            '#items' => [],
-          ],
-          'b2' => [
-            '#label' => NULL,
-            '#items' => [],
-          ],
-          'bilingual_education' => [
-            '#label' => NULL,
-            '#items' => [],
-          ],
-          'language_immersion' => [
-            '#label' => NULL,
-            '#items' => [],
-          ],
-          'language_enriched_education' => [
-            '#label' => NULL,
-            '#items' => [],
-          ],
-          'special_emphasis_1' => [
-            '#label' => NULL,
-            '#items' => [],
-          ],
-          'special_emphasis_3' => [
-            '#label' => NULL,
-            '#items' => [],
-          ],
-          'special_emphasis_7' => [
-            '#label' => NULL,
-            '#items' => [],
-          ],
-        ],
+        'variables' => $ontologywordVariables,
       ],
     ];
   }
