@@ -7,14 +7,12 @@ namespace Drupal\Tests\helfi_kasko_content\Functional;
 use Drupal\Core\Url;
 use Drupal\Tests\helfi_tpr\Functional\MigrationTestBase;
 use Drupal\Tests\helfi_tpr\Traits\TprMigrateTrait;
-use PHPUnit\Framework\Attributes\Group;
-use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * Tests unit category permissions.
+ *
+ * @group helfi_kasko_content
  */
-#[Group('helfi_kasko_content')]
-#[RunTestsInSeparateProcesses]
 class UnitCategoryPermissionTest extends MigrationTestBase {
 
   use TprMigrateTrait;
