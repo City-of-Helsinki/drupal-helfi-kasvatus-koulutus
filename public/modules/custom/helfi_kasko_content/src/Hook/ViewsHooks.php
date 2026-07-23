@@ -11,6 +11,7 @@ use Drupal\Core\Hook\Attribute\Hook;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Drupal\views\ResultRow;
 use Drupal\views\ViewExecutable;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 
@@ -49,23 +50,49 @@ class ViewsHooks {
       'After-school activities /',
     ];
 
-    foreach ($view->result as &$row) {
-      if ($row->_entity->hasTranslation($current_language)) {
-        $translatedEntity = $row->_entity->getTranslation($current_language);
-        $translatedEntity->set('name', trim(str_replace($removableStrings, '', $translatedEntity->get('name')->getString())));
-      }
-      else {
-        $row->_entity->set('name', trim(str_replace($removableStrings, '', $row->_entity->get('name')->getString())));
-      }
+    foreach ($view->result as $row) {
+      $entity = $this->getResultEntity($row, $current_language);
+      $name = $entity->get('name')->getString();
+      $name = trim(str_replace($removableStrings, '', $name));
+      $entity->set('name', $name);
     }
 
-    // Sort alphabetically based on parsed title.
-    if ($current_language === 'en' || $current_language === 'sv') {
-      uasort($view->result, fn($a, $b) => $a->_entity->getTranslation($current_language)->get('name')->getString() <=> $b->_entity->getTranslation($current_language)->get('name')->getString());
+    // Sort alphabetically based on the parsed name.
+    uasort(
+      $view->result,
+      function (ResultRow $first, ResultRow $second) use ($current_language
+      ): int {
+        $first_entity = $this->getResultEntity($first, $current_language);
+        $second_entity = $this->getResultEntity($second, $current_language);
+
+        $first_name = $first_entity->get('name')->getString();
+        $second_name = $second_entity->get('name')->getString();
+
+        return $first_name <=> $second_name;
+      }
+    );
+  }
+
+  /**
+   * Returns the result row entity in the given language.
+   *
+   * @param \Drupal\views\ResultRow $row
+   *   The result row.
+   * @param string $langcode
+   *   The language code.
+   *
+   * @return \Drupal\Core\Entity\ContentEntityInterface
+   *   The entity translation when available.
+   */
+  private function getResultEntity(ResultRow $row, string $langcode): ContentEntityInterface {
+    $entity = $row->_entity;
+    assert($entity instanceof ContentEntityInterface);
+
+    if ($entity->hasTranslation($langcode)) {
+      return $entity->getTranslation($langcode);
     }
-    else {
-      uasort($view->result, fn($a, $b) => $a->_entity->get('name')->getString() <=> $b->_entity->get('name')->getString());
-    }
+
+    return $entity;
   }
 
   /**
