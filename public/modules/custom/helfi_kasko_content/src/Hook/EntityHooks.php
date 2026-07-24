@@ -209,6 +209,18 @@ class EntityHooks {
   }
 
   /**
+   * Implements hook_hero_visibility_alter().
+   *
+   * @param array<int, string> $form_ids
+   *   The hero form ids.
+   */
+  #[Hook('hero_visibility_alter')]
+  public function heroVisibilityAlter(array &$form_ids): void {
+    $form_ids[] = 'node_comprehensive_school_subpage_form';
+    $form_ids[] = 'node_comprehensive_school_subpage_edit_form';
+  }
+
+  /**
    * UHF-10763 Alter announcement form for comprehensive school editor.
    *
    * Comprehensive school editor must be able to create announcements

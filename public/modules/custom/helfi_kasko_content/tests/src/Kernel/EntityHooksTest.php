@@ -162,6 +162,17 @@ class EntityHooksTest extends KernelTestBase {
   }
 
   /**
+   * Test that the subpage forms show the hero visibility states.
+   */
+  public function testHeroVisibilityAlter(): void {
+    $form_ids = ['node_page_form'];
+    (new EntityHooks($this->container->get('current_user')))->heroVisibilityAlter($form_ids);
+
+    $this->assertContains('node_comprehensive_school_subpage_form', $form_ids);
+    $this->assertContains('node_comprehensive_school_subpage_edit_form', $form_ids);
+  }
+
+  /**
    * Test that the comprehensive school editor may only target unit pages.
    */
   public function testAnnouncementFormAlterForComprehensiveSchoolEditor(): void {
