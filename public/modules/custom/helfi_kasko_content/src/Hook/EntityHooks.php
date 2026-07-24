@@ -197,6 +197,18 @@ class EntityHooks {
   }
 
   /**
+   * Implements hook_helfi_toc_forms_alter().
+   *
+   * @param array<int, string> $forms
+   *   The whitelisted form ids.
+   */
+  #[Hook('helfi_toc_forms_alter')]
+  public function helfiTocFormsAlter(array &$forms): void {
+    $forms[] = 'node_comprehensive_school_subpage_form';
+    $forms[] = 'node_comprehensive_school_subpage_edit_form';
+  }
+
+  /**
    * UHF-10763 Alter announcement form for comprehensive school editor.
    *
    * Comprehensive school editor must be able to create announcements

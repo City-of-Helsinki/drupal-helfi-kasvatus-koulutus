@@ -151,6 +151,17 @@ class EntityHooksTest extends KernelTestBase {
   }
 
   /**
+   * Test that the subpage forms are whitelisted for the table of contents.
+   */
+  public function testHelfiTocFormsAlter(): void {
+    $forms = ['node_page_form'];
+    (new EntityHooks($this->container->get('current_user')))->helfiTocFormsAlter($forms);
+
+    $this->assertContains('node_comprehensive_school_subpage_form', $forms);
+    $this->assertContains('node_comprehensive_school_subpage_edit_form', $forms);
+  }
+
+  /**
    * Test that the comprehensive school editor may only target unit pages.
    */
   public function testAnnouncementFormAlterForComprehensiveSchoolEditor(): void {
