@@ -10,9 +10,11 @@ dependencies:
     - field.field.node.comprehensive_school_subpage.field_liftup_image
     - field.field.node.comprehensive_school_subpage.field_lower_content
     - field.field.node.comprehensive_school_subpage.field_metatags
+    - field.field.node.comprehensive_school_subpage.field_school_parent
     - node.type.comprehensive_school_subpage
   module:
     - hdbt_admin_tools
+    - helfi_platform_config
     - media_library
     - metatag
     - paragraphs
@@ -20,7 +22,7 @@ dependencies:
     - publication_date
     - scheduler
 _core:
-  default_config_hash: kbQFRf3fyJ_Kl7E2sgSUQvQoG2LckjQHwm3pQUiZMwA
+  default_config_hash: PQ95jXLHPF98u9aoSjJo0V4in1Gl90LHzNWEZAAscWM
 id: node.comprehensive_school_subpage.default
 targetEntityType: node
 bundle: comprehensive_school_subpage
@@ -120,6 +122,16 @@ content:
     settings:
       sidebar: false
       use_details: true
+    third_party_settings: {  }
+  field_school_parent:
+    type: helfi_linkit
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      linkit_profile: comprehensive_school_parent
+      linkit_auto_link_text: true
     third_party_settings: {  }
   hide_sidebar_navigation:
     type: boolean_checkbox

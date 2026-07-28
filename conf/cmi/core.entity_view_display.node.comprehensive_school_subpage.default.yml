@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.comprehensive_school_subpage.field_liftup_image
     - field.field.node.comprehensive_school_subpage.field_lower_content
     - field.field.node.comprehensive_school_subpage.field_metatags
+    - field.field.node.comprehensive_school_subpage.field_school_parent
     - node.type.comprehensive_school_subpage
   module:
     - entity_reference_revisions
@@ -17,7 +18,7 @@ dependencies:
     - metatag
     - user
 _core:
-  default_config_hash: sgxYXadGy0sLockO5Ut-OIDOgpaH1cAMFq0NbcFaVXA
+  default_config_hash: bBlnDyR7wW9tGDkxbifFG8-4Fr4BV9gmfCUBtVH7VVw
 id: node.comprehensive_school_subpage.default
 targetEntityType: node
 bundle: comprehensive_school_subpage
@@ -75,6 +76,7 @@ hidden:
   field_has_hero: true
   field_hero: true
   field_liftup_image: true
+  field_school_parent: true
   langcode: true
   published_at: true
   search_api_excerpt: true
