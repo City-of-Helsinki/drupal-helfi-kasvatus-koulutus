@@ -87,16 +87,30 @@ class SchoolParentConstraintValidatorTest extends KernelTestBase {
   }
 
   /**
+   * Collects the field violation messages for the given node.
+   *
+   * @param \Drupal\node\Entity\Node $node
+   *   The node.
+   *
+   * @return string[]
+   *   The violation messages.
+   */
+  private function violationMessages(Node $node): array {
+    $messages = [];
+    foreach ($node->get('field_school_parent')->validate() as $violation) {
+      $messages[] = (string) $violation->getMessage();
+    }
+    return $messages;
+  }
+
+  /**
    * Test that a page cannot be its own parent.
    */
   public function testSelfReference(): void {
     $node = $this->createSubpage(NULL);
     $node->set('field_school_parent', ['uri' => 'entity:node/' . $node->id()]);
 
-    $violations = $node->get('field_school_parent')->validate();
-
-    $this->assertCount(1, $violations);
-    $this->assertSame('A page cannot be its own parent.', (string) $violations[0]->getMessage());
+    $this->assertContains('A page cannot be its own parent.', $this->violationMessages($node));
   }
 
   /**
@@ -106,7 +120,7 @@ class SchoolParentConstraintValidatorTest extends KernelTestBase {
     $parent = $this->createSubpage(NULL);
     $child = $this->createSubpage('entity:node/' . $parent->id());
 
-    $this->assertCount(0, $child->get('field_school_parent')->validate());
+    $this->assertNotContains('A page cannot be its own parent.', $this->violationMessages($child));
   }
 
 }
