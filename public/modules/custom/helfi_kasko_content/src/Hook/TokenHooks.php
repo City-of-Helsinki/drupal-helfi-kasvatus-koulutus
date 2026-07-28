@@ -4,24 +4,20 @@ declare(strict_types=1);
 
 namespace Drupal\helfi_kasko_content\Hook;
 
-use Drupal\Core\DependencyInjection\AutowireTrait;
 use Drupal\Core\Hook\Attribute\Hook;
 use Drupal\Core\Render\BubbleableMetadata;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\linkit\Utility\LinkitHelper;
 use Drupal\path_alias\AliasManagerInterface;
-use Symfony\Component\DependencyInjection\Attribute\Autowire;
 
 /**
  * Token hooks for Helfi KASKO Content.
  */
 class TokenHooks {
 
-  use AutowireTrait;
   use StringTranslationTrait;
 
   public function __construct(
-    #[Autowire(service: 'path_alias.manager')]
     private readonly AliasManagerInterface $aliasManager,
   ) {
   }
@@ -83,7 +79,8 @@ class TokenHooks {
       // Get the linked entity and use its alias as the parent path.
       if ($parent = LinkitHelper::getEntityFromUri($uri)) {
         $bubbleableMetadata->addCacheableDependency($parent);
-        $alias = $this->aliasManager->getAliasByPath('/' . $parent->toUrl()->getInternalPath(), $node->language()->getId());
+        $internalPath = '/' . $parent->toUrl()->getInternalPath();
+        $alias = $this->aliasManager->getAliasByPath($internalPath, $node->language()->getId());
         $path = ltrim($alias, '/');
       }
     }

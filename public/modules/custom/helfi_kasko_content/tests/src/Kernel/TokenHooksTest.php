@@ -34,6 +34,7 @@ class TokenHooksTest extends KernelTestBase {
     'text',
     'link',
     'linkit',
+    'path',
     'path_alias',
     'helfi_api_base',
     'helfi_kasko_content',
@@ -61,6 +62,7 @@ class TokenHooksTest extends KernelTestBase {
     $this->installEntitySchema('path_alias');
     $this->installEntitySchema('tpr_unit');
     $this->installEntitySchema('group_relationship');
+    $this->installEntitySchema('menu_link_content');
     $this->container->get('router.builder')->rebuild();
 
     NodeType::create([
@@ -144,7 +146,6 @@ class TokenHooksTest extends KernelTestBase {
     ])->save();
 
     $child = $this->createSubpage('entity:node/' . $parent->id());
-
     $this->assertSame('schools/example-school', $this->parentPath($child));
   }
 

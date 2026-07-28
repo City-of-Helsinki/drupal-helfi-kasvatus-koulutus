@@ -12,6 +12,7 @@ dependencies:
   - drupal:taxonomy
   - drupal:user
   - drupal:path
+  - drupal:path_alias
   - drupal:menu_ui
   - elasticsearch_connector:elasticsearch_connector
   - linkit:linkit
