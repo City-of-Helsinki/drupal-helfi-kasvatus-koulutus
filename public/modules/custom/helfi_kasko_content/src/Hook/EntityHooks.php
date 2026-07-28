@@ -8,6 +8,8 @@ use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Access\AccessResultInterface;
 use Drupal\Core\DependencyInjection\AutowireTrait;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Hook\Attribute\Hook;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Session\AccountProxyInterface;
@@ -194,6 +196,47 @@ class EntityHooks {
 
     $this->announcementException($form, $account);
     $this->announcementSchoolEditorException($form, $account);
+  }
+
+  /**
+   * Implements hook_field_widget_single_element_form_alter().
+   *
+   * @param array<string, mixed> $element
+   *   The widget element.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The form state.
+   * @param array<string, mixed> $context
+   *   The widget context.
+   */
+  #[Hook('field_widget_single_element_form_alter')]
+  public function fieldWidgetSingleElementFormAlter(array &$element, FormStateInterface $form_state, array $context): void {
+    $definition = $context['items']->getFieldDefinition();
+
+    // Linkit widget overwrites the description for school parent field.
+    if ($definition->getName() === 'field_school_parent' && isset($element['uri'])) {
+      $element['uri']['#description'] = $definition->getDescription();
+    }
+  }
+
+  /**
+   * Implements hook_entity_bundle_field_info_alter().
+   *
+   * @param array<string, mixed> $fields
+   *   The bundle fields.
+   * @param \Drupal\Core\Entity\EntityTypeInterface $entity_type
+   *   The entity type.
+   * @param string $bundle
+   *   The bundle.
+   */
+  #[Hook('entity_bundle_field_info_alter')]
+  public function entityBundleFieldInfoAlter(array &$fields, EntityTypeInterface $entity_type, string $bundle): void {
+    if (
+      $entity_type->id() === 'node' &&
+      $bundle === 'comprehensive_school_subpage' &&
+      isset($fields['field_school_parent'])
+    ) {
+      $fields['field_school_parent']->addConstraint('SchoolParent');
+    }
   }
 
   /**

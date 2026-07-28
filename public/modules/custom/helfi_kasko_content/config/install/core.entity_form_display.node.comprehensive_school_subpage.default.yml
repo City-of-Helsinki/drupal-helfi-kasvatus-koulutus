@@ -9,9 +9,12 @@ dependencies:
     - field.field.node.comprehensive_school_subpage.field_liftup_image
     - field.field.node.comprehensive_school_subpage.field_lower_content
     - field.field.node.comprehensive_school_subpage.field_metatags
+    - field.field.node.comprehensive_school_subpage.field_school_parent
     - node.type.comprehensive_school_subpage
   module:
     - hdbt_admin_tools
+    - link
+    - linkit
     - media_library
     - metatag
     - paragraphs
@@ -124,6 +127,16 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  field_school_parent:
+    type: helfi_linkit
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      linkit_profile: comprehensive_school_parent
+      linkit_auto_link_text: true
     third_party_settings: {  }
   langcode:
     type: language_select

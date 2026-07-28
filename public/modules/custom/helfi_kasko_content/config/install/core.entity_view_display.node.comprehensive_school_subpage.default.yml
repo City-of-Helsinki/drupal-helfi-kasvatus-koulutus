@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.comprehensive_school_subpage.field_liftup_image
     - field.field.node.comprehensive_school_subpage.field_lower_content
     - field.field.node.comprehensive_school_subpage.field_metatags
+    - field.field.node.comprehensive_school_subpage.field_school_parent
     - node.type.comprehensive_school_subpage
   module:
     - entity_reference_revisions
@@ -70,6 +71,7 @@ hidden:
   field_has_hero: true
   field_hero: true
   field_liftup_image: true
+  field_school_parent: true
   langcode: true
   published_at: true
   search_api_excerpt: true

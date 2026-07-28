@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\helfi_kasko_content\Kernel;
 
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
 use Drupal\helfi_kasko_content\Hook\EntityHooks;
@@ -243,6 +244,34 @@ class EntityHooksTest extends KernelTestBase {
     $this->assertFalse($form['field_announcement_service_pages']['#access']);
     $this->assertTrue($form['field_announcement_content_pages']['#disabled']);
     $this->assertTrue($form['field_announcement_unit_pages']['#disabled']);
+  }
+
+  /**
+   * Test that the parent field description replaces the linkit help text.
+   */
+  public function testFieldWidgetSingleElementFormAlter(): void {
+    FieldStorageConfig::create([
+      'field_name' => 'field_school_parent',
+      'entity_type' => 'tpr_unit',
+      'type' => 'link',
+    ])->save();
+    FieldConfig::create([
+      'field_name' => 'field_school_parent',
+      'entity_type' => 'tpr_unit',
+      'bundle' => 'tpr_unit',
+      'label' => 'Parent page',
+      'description' => 'Choose the parent page.',
+    ])->save();
+
+    $unit = Unit::create(['id' => 2, 'name' => 'Unit']);
+    $hooks = new EntityHooks($this->container->get('current_user'));
+    $formState = $this->createMock(FormStateInterface::class);
+    $help = 'Linkit help';
+
+    // Parent field description replaces the linkit help text.
+    $element = ['uri' => ['#description' => $help]];
+    $hooks->fieldWidgetSingleElementFormAlter($element, $formState, ['items' => $unit->get('field_school_parent')]);
+    $this->assertSame('Choose the parent page.', $element['uri']['#description']);
   }
 
 }

@@ -5,13 +5,16 @@ core_version_requirement: ^10 || ^11
 configure: helfi_kasko_content.admin_form
 dependencies:
   - allowed_formats:allowed_formats
+  - config_rewrite:config_rewrite
   - drupal:content_translation
   - drupal:language
+  - drupal:link
   - drupal:taxonomy
   - drupal:user
   - drupal:path
   - drupal:menu_ui
   - elasticsearch_connector:elasticsearch_connector
+  - linkit:linkit
   - helfi_platform_config:hdbt_admin_tools
   - helfi_platform_config:helfi_base_content
   - helfi_platform_config:helfi_media
