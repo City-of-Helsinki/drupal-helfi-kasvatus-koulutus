@@ -24,4 +24,9 @@ entity_type_groups:
       open_graph: open_graph
       twitter_cards: twitter_cards
       advanced: advanced
+    comprehensive_school_subpage:
+      basic: basic
+      open_graph: open_graph
+      twitter_cards: twitter_cards
+      advanced: advanced
 tag_trim_end: '|.,-:;/+&([{"'''

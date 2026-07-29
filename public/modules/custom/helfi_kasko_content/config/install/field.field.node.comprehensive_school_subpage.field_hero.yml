@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero
+    - node.type.comprehensive_school_subpage
+  module:
+    - entity_reference_revisions
+id: node.comprehensive_school_subpage.field_hero
+field_name: field_hero
+entity_type: node
+bundle: comprehensive_school_subpage
+label: Hero
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: {  }
+    negate: 0
+    target_bundles_drag_drop: {  }
+field_type: entity_reference_revisions

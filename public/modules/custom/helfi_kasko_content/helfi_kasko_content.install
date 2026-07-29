@@ -21,6 +21,9 @@ function helfi_kasko_content_install() : void {
   if (!Role::load('school_editor')) {
     Role::create(['id' => 'school_editor', 'label' => 'Upper secondary school editor'])->save();
   }
+  if (!Role::load('comprehensive_school_editor')) {
+    Role::create(['id' => 'comprehensive_school_editor', 'label' => 'Comprehensive school editor'])->save();
+  }
 }
 
 /**
