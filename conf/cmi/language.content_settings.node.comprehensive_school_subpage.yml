@@ -1,0 +1,18 @@
+uuid: cae3d0e1-712b-463a-8e5e-dfcc46a879c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.comprehensive_school_subpage
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+_core:
+  default_config_hash: 88s4AMOQ4O6V08W2CxEKhZllKvdp7ge1H4SKVbfySAs
+id: node.comprehensive_school_subpage
+target_entity_type_id: node
+target_bundle: comprehensive_school_subpage
+default_langcode: fi
+language_alterable: true

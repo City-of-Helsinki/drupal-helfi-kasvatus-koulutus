@@ -1,0 +1,21 @@
+uuid: 710eb55c-c3d2-4524-a413-e0c082902cd9
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+_core:
+  default_config_hash: d2ev9WIpNW6b5SOvk2ifI_j8U-P9zDcinlcHfbv906o
+id: node.field_school_parent
+field_name: field_school_parent
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,7 @@
+dependencies:
+  config:
+    - node.type.comprehensive_school_subpage
+settings:
+  handler_settings:
+    target_bundles:
+      comprehensive_school_subpage: comprehensive_school_subpage

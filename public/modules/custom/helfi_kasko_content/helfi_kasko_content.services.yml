@@ -21,6 +21,10 @@ services:
     arguments:
       - '@language_manager'
 
+  Drupal\helfi_kasko_content\Hook\TokenHooks:
+    arguments:
+      $aliasManager: '@?path_alias.manager'
+
   Drupal\helfi_kasko_content\CrossInstitutionalStudies\Client: ~
   Drupal\helfi_kasko_content\CrossInstitutionalStudies\Controller\SearchController: ~
 

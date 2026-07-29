@@ -1,0 +1,25 @@
+uuid: 95faf98a-ca35-4f6c-addd-a814f48286ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_school_parent
+    - node.type.comprehensive_school_subpage
+  module:
+    - link
+_core:
+  default_config_hash: '-dS_xIdysT5XIQCQRw3ucPns5VuUam-sjMZ1Q6BnUNM'
+id: node.comprehensive_school_subpage.field_school_parent
+field_name: field_school_parent
+entity_type: node
+bundle: comprehensive_school_subpage
+label: 'Parent page'
+description: 'Start typing part of the title of a comprehensive school unit page or a comprehensive school subpage, and select the correct page from the suggestions. The selected page determines this page URL address and breadcrumb.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

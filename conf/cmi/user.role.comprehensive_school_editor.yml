@@ -11,6 +11,7 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - node.type.announcement
+    - node.type.comprehensive_school_subpage
   module:
     - content_translation
     - editoria11y
@@ -42,6 +43,7 @@ permissions:
   - 'cancel account'
   - 'change own username'
   - 'create announcement content'
+  - 'create comprehensive_school_subpage content'
   - 'create file media'
   - 'create hel_map media'
   - 'create helfi_chart media'
@@ -50,6 +52,7 @@ permissions:
   - 'create remote_video media'
   - 'delete media'
   - 'delete own announcement content'
+  - 'delete own comprehensive_school_subpage content'
   - 'delete own file media'
   - 'delete own files'
   - 'delete own hel_map media'
@@ -57,7 +60,9 @@ permissions:
   - 'delete own image media'
   - 'delete own remote_video media'
   - 'disable own tfa'
+  - 'edit any comprehensive_school_subpage content'
   - 'edit own announcement content'
+  - 'edit own comprehensive_school_subpage content'
   - 'edit own file media'
   - 'edit own hel_map media'
   - 'edit own helfi_chart media'
@@ -65,10 +70,13 @@ permissions:
   - 'edit own remote_video media'
   - 'mark as hidden in editoria11y'
   - 'revert announcement revisions'
+  - 'revert comprehensive_school_subpage revisions'
   - 'schedule publishing of nodes'
   - 'set announcement published on date'
   - 'set any published on date'
+  - 'set comprehensive_school_subpage published on date'
   - 'setup own tfa'
+  - 'translate comprehensive_school_subpage node'
   - 'translate editable entities'
   - 'update any tpr_unit'
   - 'update media'
@@ -77,6 +85,8 @@ permissions:
   - 'view all media revisions'
   - 'view announcement revisions'
   - 'view any unpublished announcement content'
+  - 'view any unpublished comprehensive_school_subpage content'
+  - 'view comprehensive_school_subpage revisions'
   - 'view editoria11y checker'
   - 'view own unpublished content'
   - 'view own unpublished media'
