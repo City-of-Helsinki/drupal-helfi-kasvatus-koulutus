@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - node.type.announcement
+    - node.type.comprehensive_school_subpage
     - node.type.landing_page
     - node.type.news_item
     - node.type.page
@@ -25,6 +26,7 @@ permissions:
   - 'disable own tfa'
   - 'setup own tfa'
   - 'view any unpublished announcement content'
+  - 'view any unpublished comprehensive_school_subpage content'
   - 'view any unpublished landing_page content'
   - 'view any unpublished news_item content'
   - 'view any unpublished page content'

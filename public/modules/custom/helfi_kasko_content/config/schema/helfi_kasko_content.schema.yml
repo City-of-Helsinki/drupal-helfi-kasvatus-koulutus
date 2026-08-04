@@ -32,3 +32,11 @@ views.filter.high_school_language:
   type: views.filter.in_operator
   label: 'Allowed languages'
 
+# Schema for the comprehensive school unit linkit matcher.
+linkit.matcher.comprehensive_school_unit:
+  type: linkit.matcher.entity
+  label: 'Comprehensive school unit matcher'
+  mapping:
+    include_unpublished:
+      type: boolean
+

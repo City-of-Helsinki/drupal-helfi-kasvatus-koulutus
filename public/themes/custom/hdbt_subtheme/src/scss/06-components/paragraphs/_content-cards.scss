@@ -1,0 +1,5 @@
+// Handle margins and paddings if the content-cards with grey design is just before footer on comprehensive school subpage.
+.page-type--comprehensive-school-subpage .layout-main-wrapper > *:last-child .components--lower > .component--content-cards-grey:last-child {
+  margin-bottom: -115px; // Enough to get the block under the footer.
+  padding-bottom: 96px; // Leave enough room between the last card and footer.
+}

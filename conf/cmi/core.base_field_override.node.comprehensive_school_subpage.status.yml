@@ -1,0 +1,24 @@
+uuid: 6b48c0b7-223c-4970-9a63-da597a1c322a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.comprehensive_school_subpage
+_core:
+  default_config_hash: GXRg8BzVQyZjYirOJzEDrl9EshrQeDfyw64jFc9miq8
+id: node.comprehensive_school_subpage.status
+field_name: status
+entity_type: node
+bundle: comprehensive_school_subpage
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

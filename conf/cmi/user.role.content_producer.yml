@@ -11,6 +11,7 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - node.type.announcement
+    - node.type.comprehensive_school_subpage
     - node.type.landing_page
     - node.type.news_item
     - node.type.page
@@ -19,9 +20,11 @@ dependencies:
     - content_translation
     - editoria11y
     - entity_usage
+    - external_entities
     - file
     - filter
     - group
+    - helfi_ai
     - helfi_api_base
     - helfi_tpr
     - media
@@ -60,6 +63,7 @@ permissions:
   - 'cancel account'
   - 'change own username'
   - 'create announcement content'
+  - 'create comprehensive_school_subpage content'
   - 'create file media'
   - 'create hel_map media'
   - 'create helfi_chart media'
@@ -77,6 +81,7 @@ permissions:
   - 'delete any tpr_unit'
   - 'delete media'
   - 'delete own announcement content'
+  - 'delete own comprehensive_school_subpage content'
   - 'delete own file media'
   - 'delete own files'
   - 'delete own hel_map media'
@@ -91,6 +96,7 @@ permissions:
   - 'delete own tpr_unit'
   - 'disable own tfa'
   - 'edit any announcement content'
+  - 'edit any comprehensive_school_subpage content'
   - 'edit any file media'
   - 'edit any hel_map media'
   - 'edit any helfi_chart media'
@@ -100,6 +106,7 @@ permissions:
   - 'edit any page content'
   - 'edit any remote_video media'
   - 'edit own announcement content'
+  - 'edit own comprehensive_school_subpage content'
   - 'edit own file media'
   - 'edit own hel_map media'
   - 'edit own helfi_chart media'
@@ -113,15 +120,18 @@ permissions:
   - 'mark as hidden in editoria11y'
   - 'rebuild node access permissions'
   - 'revert announcement revisions'
+  - 'revert comprehensive_school_subpage revisions'
   - 'revert landing_page revisions'
   - 'revert news_item revisions'
   - 'revert page revisions'
   - 'schedule publishing of nodes'
   - 'set announcement published on date'
+  - 'set comprehensive_school_subpage published on date'
   - 'set landing_page published on date'
   - 'set news_item published on date'
   - 'set page published on date'
   - 'setup own tfa'
+  - 'translate comprehensive_school_subpage node'
   - 'translate editable entities'
   - 'translate file media'
   - 'translate image media'
@@ -134,9 +144,12 @@ permissions:
   - 'translate tpr_unit'
   - 'update any tpr_service'
   - 'update any tpr_unit'
+  - 'update linkedevents_event external entity'
   - 'update media'
   - 'update own tpr_service'
   - 'update own tpr_unit'
+  - 'use helfi ai title suggestion'
+  - 'use helfi ai tone check'
   - 'use text format full_html'
   - 'use text format minimal'
   - 'view all media revisions'
@@ -144,11 +157,15 @@ permissions:
   - 'view all tpr_service revisions'
   - 'view all tpr_unit revisions'
   - 'view announcement revisions'
+  - 'view any unpublished comprehensive_school_subpage content'
   - 'view any unpublished content'
   - 'view any unpublished landing_page content'
   - 'view any unpublished page content'
+  - 'view comprehensive_school_subpage revisions'
   - 'view editoria11y checker'
   - 'view landing_page revisions'
+  - 'view linkedevents_event external entity'
+  - 'view linkedevents_event external entity collection'
   - 'view news_item revisions'
   - 'view own unpublished content'
   - 'view own unpublished media'

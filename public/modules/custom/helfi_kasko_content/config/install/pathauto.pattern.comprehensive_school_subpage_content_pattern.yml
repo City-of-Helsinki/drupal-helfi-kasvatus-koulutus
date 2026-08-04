@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.comprehensive_school_subpage
+  module:
+    - node
+id: comprehensive_school_subpage_content_pattern
+label: 'Comprehensive school subpage content pattern'
+type: 'canonical_entities:node'
+pattern: '[node:school-parent-path]/[node:title]'
+selection_criteria:
+  a3f1c9d2-7b64-4e28-9c3a-1d2e5f6a7b8c:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      comprehensive_school_subpage: comprehensive_school_subpage
+selection_logic: and
+weight: -5
+relationships: {  }

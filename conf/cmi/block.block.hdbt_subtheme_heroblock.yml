@@ -27,5 +27,6 @@ visibility:
     context_mapping:
       node: '@node.node_route_context:node'
     bundles:
+      comprehensive_school_subpage: comprehensive_school_subpage
       landing_page: landing_page
       page: page

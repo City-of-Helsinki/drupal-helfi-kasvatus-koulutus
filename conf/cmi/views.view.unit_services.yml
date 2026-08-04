@@ -8,7 +8,7 @@ dependencies:
     - helfi_tpr
     - user
 _core:
-  default_config_hash: eARAnuC6-HpIkyzPvr9cTXbeyM0i-vaiPItVHK7PGDY
+  default_config_hash: yWT6lpHMWt8BKUIPvWgYT1lUzoZa0oOFNYwUKKqQcuQ
 id: unit_services
 label: 'Unit services'
 module: views
@@ -19,7 +19,7 @@ base_field: id
 display:
   default:
     id: default
-    display_title: Master
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
@@ -293,10 +293,7 @@ display:
         - url
         - user
         - user.permissions
-      tags:
-        - 'config:core.entity_view_display.tpr_service.tpr_service.default'
-        - 'config:core.entity_view_display.tpr_service.tpr_service.teaser'
-        - 'config:core.entity_view_display.tpr_service.tpr_service.teaser_search_result'
+      tags: {  }
   unit_services:
     id: unit_services
     display_title: Block
@@ -312,7 +309,4 @@ display:
         - url
         - user
         - user.permissions
-      tags:
-        - 'config:core.entity_view_display.tpr_service.tpr_service.default'
-        - 'config:core.entity_view_display.tpr_service.tpr_service.teaser'
-        - 'config:core.entity_view_display.tpr_service.tpr_service.teaser_search_result'
+      tags: {  }

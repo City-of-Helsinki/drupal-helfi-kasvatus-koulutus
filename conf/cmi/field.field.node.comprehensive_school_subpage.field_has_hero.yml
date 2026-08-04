@@ -1,0 +1,25 @@
+uuid: f961b805-dc46-4bc0-b304-dcb3f8910234
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_hero
+    - node.type.comprehensive_school_subpage
+_core:
+  default_config_hash: 1ImPqFO3DKo8QzyQx5Ld8g5FuuVj3Cn72hNqPEqSn5k
+id: node.comprehensive_school_subpage.field_has_hero
+field_name: field_has_hero
+entity_type: node
+bundle: comprehensive_school_subpage
+label: Hero
+description: 'Select to use a hero component. The hero component is not recommended for a comprehensive school subpage. Selecting it hides the sidebar navigation.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean
