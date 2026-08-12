@@ -1,0 +1,23 @@
+uuid: 297931fd-47a7-4591-942b-cfdd5251ab51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.comprehensive_school_subpage
+  module:
+    - metatag
+_core:
+  default_config_hash: 0qkvSA7idf5CK9o_TcwY0IA3dyOps2Zm4urUjy06w2U
+id: node.comprehensive_school_subpage.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: comprehensive_school_subpage
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

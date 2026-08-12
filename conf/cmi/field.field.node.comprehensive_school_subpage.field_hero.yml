@@ -1,0 +1,33 @@
+uuid: 2841a79f-ec78-4371-8553-8c4c6a092ab4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero
+    - node.type.comprehensive_school_subpage
+    - paragraphs.paragraphs_type.hero
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: dJgzIQl8WuXCQWmFWXMFDzGwLbl3C4MGvkyrhdE7bgw
+id: node.comprehensive_school_subpage.field_hero
+field_name: field_hero
+entity_type: node
+bundle: comprehensive_school_subpage
+label: Hero
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      hero: hero
+    negate: 0
+    target_bundles_drag_drop:
+      hero:
+        weight: 0
+        enabled: true
+field_type: entity_reference_revisions

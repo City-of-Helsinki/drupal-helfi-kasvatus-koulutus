@@ -1,0 +1,24 @@
+uuid: a97867b7-0166-4b01-b2bb-1f9e052fe9d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.comprehensive_school_subpage
+_core:
+  default_config_hash: RWTViAyxBjxo9-ZrSpk_bluZN1KG-kzfAwqKNdPpLQM
+id: node.comprehensive_school_subpage.promote
+field_name: promote
+entity_type: node
+bundle: comprehensive_school_subpage
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

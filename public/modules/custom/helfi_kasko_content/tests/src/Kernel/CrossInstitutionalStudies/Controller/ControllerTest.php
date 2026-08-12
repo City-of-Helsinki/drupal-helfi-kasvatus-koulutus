@@ -8,6 +8,7 @@ use Drupal\Component\Datetime\TimeInterface;
 use Drupal\Core\Cache\MemoryBackend;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Datetime\Entity\DateFormat;
+use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Url;
 use Drupal\helfi_kasko_content\CrossInstitutionalStudies\Client;
 use Drupal\helfi_kasko_content\Hook\CrossInstitutionalStudies;
@@ -166,7 +167,10 @@ class ControllerTest extends KernelTestBase {
       $this->container->get(ConfigFactoryInterface::class),
     );
 
-    $hook = new CrossInstitutionalStudies($client);
+    $hook = new CrossInstitutionalStudies(
+      $client,
+      $this->createMock(RouteMatchInterface::class),
+    );
 
     $links = [
       'fi' => [],

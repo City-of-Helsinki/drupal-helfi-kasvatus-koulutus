@@ -198,6 +198,12 @@ function hdbt_subtheme_preprocess_page(&$variables) {
       _hdbt_subtheme_sidebar_menu_visibility($variables, $entity);
     }
 
+    // Handle first and second sidebar visibility for the Comprehensive
+    // school subpage content type.
+    if ($entity->getType() === 'comprehensive_school_subpage') {
+      _hdbt_subtheme_sidebar_menu_visibility($variables, $entity);
+    }
+
     // Show the section navigation on mobile with group content.
     if (!empty(GroupUtility::getGroup($entity))) {
       $variables['has_section_nav'] = TRUE;

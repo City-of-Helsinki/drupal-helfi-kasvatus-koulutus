@@ -1,0 +1,34 @@
+uuid: 43e81d6c-bf95-4a9b-9d7e-9f68c87786d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: true
+    show_message_after_update: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+_core:
+  default_config_hash: VP_JkNN-72H3C5XUgoMktcVcxKUZM9qsCerUICzKgwI
+name: 'Comprehensive school subpage'
+type: comprehensive_school_subpage
+description: 'Content type for comprehensive school subpages.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

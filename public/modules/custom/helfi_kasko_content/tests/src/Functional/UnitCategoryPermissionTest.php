@@ -21,7 +21,7 @@ class UnitCategoryPermissionTest extends MigrationTestBase {
    * {@inheritdoc}
    */
   protected static $modules = [
-    'helfi_kasko_content',
+    'helfi_paragraphs_content_cards',
     'options',
   ];
 
@@ -30,6 +30,10 @@ class UnitCategoryPermissionTest extends MigrationTestBase {
    */
   public function setUp(): void {
     parent::setUp();
+
+    // Install after content cards so config_rewrite can extend its field.
+    $this->container->get('module_installer')->install(['helfi_kasko_content']);
+    $this->rebuildContainer();
 
     // Show Categories at the browser output.
     \Drupal::service('entity_display.repository')
