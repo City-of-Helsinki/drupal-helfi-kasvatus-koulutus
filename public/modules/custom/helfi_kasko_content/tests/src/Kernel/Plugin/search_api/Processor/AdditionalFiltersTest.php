@@ -50,6 +50,7 @@ class AdditionalFiltersTest extends KernelTestBase {
     'text',
     'filter',
     'system',
+    'diff',
   ];
 
   /**

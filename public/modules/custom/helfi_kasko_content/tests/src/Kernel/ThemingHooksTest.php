@@ -24,6 +24,7 @@ class ThemingHooksTest extends KernelTestBase {
     'helfi_kasko_content',
     'system',
     'user',
+    'diff',
   ];
 
   /**

@@ -31,6 +31,7 @@ class UnitCategorySubscriberTest extends KernelTestBase {
     'helfi_tpr',
     'helfi_api_base',
     'user',
+    'diff',
   ];
 
   /**
