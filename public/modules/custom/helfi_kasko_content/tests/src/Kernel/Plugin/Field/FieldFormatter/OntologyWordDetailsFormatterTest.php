@@ -47,6 +47,7 @@ class OntologyWordDetailsFormatterTest extends KernelTestBase {
     'image',
     'file',
     'menu_link_content',
+    'diff',
   ];
 
   /**

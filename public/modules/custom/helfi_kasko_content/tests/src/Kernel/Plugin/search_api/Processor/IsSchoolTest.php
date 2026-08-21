@@ -37,6 +37,7 @@ class IsSchoolTest extends ProcessorTestBase {
     'telephone',
     'menu_link_content',
     'media',
+    'diff',
   ];
 
   /**

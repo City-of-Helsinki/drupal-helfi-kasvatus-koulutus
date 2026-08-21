@@ -49,6 +49,7 @@ class EntityHooksTest extends KernelTestBase {
     'options',
     'entity',
     'flexible_permissions',
+    'diff',
   ];
 
   /**
