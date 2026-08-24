@@ -175,3 +175,26 @@ msgstr "Anmäl dig"
 msgctxt "Cross institutional studies"
 msgid "Other options for completing the study unit"
 msgstr "Andra alternativ att avlägga studieavsnittet"
+
+msgid "Unit search @id"
+msgstr "Enhetssökning @id"
+
+msgctxt "High school search form aria label"
+msgid "High school search"
+msgstr "Gymnasiesökning"
+
+msgctxt "Municipal daycare centre search form aria label"
+msgid "Municipal daycare centre search"
+msgstr "Kommunala daghem sökning"
+
+msgctxt "After school activity search form aria label"
+msgid "After school activity search"
+msgstr "Verksamhetsställen för eftermiddagsverksamhet sökning"
+
+msgctxt "Playgrounds and family house search form aria label"
+msgid "Playgrounds and family house search"
+msgstr "Lekparker och familjehus sökning"
+
+msgctxt "Vocational school search form aria label"
+msgid "Vocational school search"
+msgstr "Yrkesutbildningar sökning"

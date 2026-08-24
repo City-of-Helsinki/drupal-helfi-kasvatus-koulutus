@@ -184,3 +184,26 @@ msgstr "Ilmoittaudu"
 msgctxt "Cross institutional studies"
 msgid "Other options for completing the study unit"
 msgstr "Opintojakson muut suoritusvaihtoehdot"
+
+msgid "Unit search @id"
+msgstr "Toimipistehaku @id"
+
+msgctxt "High school search form aria label"
+msgid "High school search"
+msgstr "Lukiohaku"
+
+msgctxt "Municipal daycare centre search form aria label"
+msgid "Municipal daycare centre search"
+msgstr "Kunnallisten päiväkotien haku"
+
+msgctxt "After school activity search form aria label"
+msgid "After school activity search"
+msgstr "Iltapäivätoiminnan haku"
+
+msgctxt "Playgrounds and family house search form aria label"
+msgid "Playgrounds and family house search"
+msgstr "Leikkipuistojen ja perhetalojen haku"
+
+msgctxt "Vocational school search form aria label"
+msgid "Vocational school search"
+msgstr "Ammatillisen koulutuksen haku"
