@@ -49,6 +49,7 @@ class TokenHooksTest extends KernelTestBase {
     'options',
     'entity',
     'flexible_permissions',
+    'diff',
   ];
 
   /**

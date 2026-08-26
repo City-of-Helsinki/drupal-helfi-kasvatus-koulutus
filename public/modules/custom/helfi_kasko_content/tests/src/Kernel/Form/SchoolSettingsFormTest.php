@@ -27,6 +27,7 @@ class SchoolSettingsFormTest extends KernelTestBase {
     'helfi_api_base',
     'helfi_kasko_content',
     'system',
+    'diff',
   ];
 
   /**
