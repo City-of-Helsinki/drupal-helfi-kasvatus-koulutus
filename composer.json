@@ -24,7 +24,6 @@
         "drupal/helfi_tunnistamo": "^3",
         "drupal/override_node_options": "^2.6",
         "drupal/redis": "^1.5",
-        "drupal/variationcache": "^1.4",
         "mglaman/composer-drupal-lenient": "*"
     },
     "require-dev": {
