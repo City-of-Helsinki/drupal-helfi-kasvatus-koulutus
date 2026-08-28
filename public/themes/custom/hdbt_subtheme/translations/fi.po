@@ -176,9 +176,6 @@ msgctxt "Cross institutional studies"
 msgid "Other options for completing the study unit"
 msgstr "Opintojakson muut suoritusvaihtoehdot"
 
-msgid "Unit search @id"
-msgstr "Toimipistehaku @id"
-
 msgctxt "High school search form aria label"
 msgid "High school search"
 msgstr "Lukiohaku"

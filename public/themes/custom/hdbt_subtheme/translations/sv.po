@@ -167,9 +167,6 @@ msgctxt "Cross institutional studies"
 msgid "Other options for completing the study unit"
 msgstr "Andra alternativ att avlägga studieavsnittet"
 
-msgid "Unit search @id"
-msgstr "Enhetssökning @id"
-
 msgctxt "High school search form aria label"
 msgid "High school search"
 msgstr "Gymnasiesökning"
