@@ -32,6 +32,7 @@ class SchoolParentConstraintValidatorTest extends KernelTestBase {
     'linkit',
     'helfi_api_base',
     'helfi_kasko_content',
+    'diff',
   ];
 
   /**

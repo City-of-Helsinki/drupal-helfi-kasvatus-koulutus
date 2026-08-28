@@ -43,6 +43,7 @@ class ViewsHooksTest extends KernelTestBase {
     'file',
     'menu_link_content',
     'language',
+    'diff',
   ];
 
   /**
