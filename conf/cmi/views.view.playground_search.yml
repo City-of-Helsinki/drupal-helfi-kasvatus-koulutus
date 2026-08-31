@@ -209,7 +209,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: "<p class=\"unit-search__no-results-title\">No playground locations were found with the selected filters.</p>\r\n<p class=\"unit-search__no-results-desc\">Please try another selection.</p>"
+            value: "<p>No playground locations were found with the selected filters.</p><p>Please try another selection.</p>"
             format: full_html
           tokenize: false
       sorts:
