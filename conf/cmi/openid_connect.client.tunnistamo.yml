@@ -17,3 +17,4 @@ settings:
   environment_url: ''
   client_scopes: 'openid,email'
   client_roles: {  }
+  provider_slug: ''
