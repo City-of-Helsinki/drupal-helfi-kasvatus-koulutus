@@ -18,15 +18,6 @@ msgid_plural "units"
 msgstr[0] "enhet"
 msgstr[1] "enheter"
 
-msgid "View in a map"
-msgstr "Visa på kartan"
-
-msgid "View as a list"
-msgstr "Visa som lista"
-
-msgid "Open large version of the map"
-msgstr "Öppna den stora versionen av kartan"
-
 msgctxt "Daycare search count"
 msgid "daycare centre"
 msgid_plural "daycare centres"
@@ -175,3 +166,23 @@ msgstr "Anmäl dig"
 msgctxt "Cross institutional studies"
 msgid "Other options for completing the study unit"
 msgstr "Andra alternativ att avlägga studieavsnittet"
+
+msgctxt "High school search form aria label"
+msgid "High school search"
+msgstr "Gymnasiesökning"
+
+msgctxt "Municipal daycare centre search form aria label"
+msgid "Municipal daycare centre search"
+msgstr "Kommunala daghem sökning"
+
+msgctxt "After school activity search form aria label"
+msgid "After school activity search"
+msgstr "Verksamhetsställen för eftermiddagsverksamhet sökning"
+
+msgctxt "Playgrounds and family house search form aria label"
+msgid "Playgrounds and family house search"
+msgstr "Lekparker och familjehus sökning"
+
+msgctxt "Vocational school search form aria label"
+msgid "Vocational school search"
+msgstr "Yrkesutbildningar sökning"
