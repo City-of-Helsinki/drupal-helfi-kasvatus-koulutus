@@ -1,1 +1,3 @@
-{% include '@hdbt/form/form--unit-search.html.twig' %}
+{% include '@hdbt/form/form--filterable-list-form.html.twig' with {
+  search_label: 'Vocational school search'|t({}, {'context': 'Vocational school search form aria label'}),
+} %}

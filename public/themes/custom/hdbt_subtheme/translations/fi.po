@@ -27,15 +27,6 @@ msgid_plural "units"
 msgstr[0] "toimipaikka"
 msgstr[1] "toimipaikkaa"
 
-msgid "View in a map"
-msgstr "Näytä kartalla"
-
-msgid "View as a list"
-msgstr "Näytä listana"
-
-msgid "Open large version of the map"
-msgstr "Avaa suurempi versio kartasta"
-
 msgctxt "Daycare search count"
 msgid "daycare centre"
 msgid_plural "daycare centres"
@@ -184,3 +175,23 @@ msgstr "Ilmoittaudu"
 msgctxt "Cross institutional studies"
 msgid "Other options for completing the study unit"
 msgstr "Opintojakson muut suoritusvaihtoehdot"
+
+msgctxt "High school search form aria label"
+msgid "High school search"
+msgstr "Lukiohaku"
+
+msgctxt "Municipal daycare centre search form aria label"
+msgid "Municipal daycare centre search"
+msgstr "Kunnallisten päiväkotien haku"
+
+msgctxt "After school activity search form aria label"
+msgid "After school activity search"
+msgstr "Iltapäivätoiminnan haku"
+
+msgctxt "Playgrounds and family house search form aria label"
+msgid "Playgrounds and family house search"
+msgstr "Leikkipuistojen ja perhetalojen haku"
+
+msgctxt "Vocational school search form aria label"
+msgid "Vocational school search"
+msgstr "Ammatillisen koulutuksen haku"

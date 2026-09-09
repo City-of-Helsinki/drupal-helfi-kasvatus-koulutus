@@ -9,7 +9,6 @@ declare(strict_types=1);
 
 use Drupal\Core\Entity\EntityStorageException;
 use Drupal\helfi_kasko_content\SchoolUtility;
-use Drupal\path_alias\Entity\PathAlias;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\taxonomy\Entity\Vocabulary;
 use Drupal\user\Entity\Role;
@@ -151,9 +150,9 @@ function helfi_kasko_content_update_11001(): void {
 }
 
 /**
- * UHF-12620: Cross institutional studies search path aliases.
+ * UHF-12621: Fix cross institutional studies search path aliases.
  */
-function helfi_kasko_content_update_11002(): void {
+function helfi_kasko_content_update_11003(): void {
   $paths = [
     [
       'path' => '/cross-institutional-studies-search',
@@ -162,12 +161,30 @@ function helfi_kasko_content_update_11002(): void {
     ],
     [
       'path' => '/cross-institutional-studies-search',
-      'alias' => '/korsstudiersök',
+      'alias' => '/korsstudiersok',
       'langcode' => 'sv',
     ],
   ];
 
+  $storage = \Drupal::entityTypeManager()->getStorage('path_alias');
+
   foreach ($paths as $path) {
-    PathAlias::create($path)->save();
+    $existing = $storage->loadByProperties([
+      'path' => $path['path'],
+      'langcode' => $path['langcode'],
+    ]);
+
+    if (!$existing) {
+      $storage->create($path)->save();
+      continue;
+    }
+
+    // Keep one alias per language and drop the extras.
+    $alias = array_shift($existing);
+    $storage->delete($existing);
+
+    if ($alias->getAlias() !== $path['alias']) {
+      $alias->setAlias($path['alias'])->save();
+    }
   }
 }
