@@ -21,6 +21,7 @@ dependencies:
     - taxonomy.vocabulary.news_tags
     - taxonomy.vocabulary.vocational_studies
   module:
+    - ai
     - block
     - config_translation
     - content_lock
@@ -32,7 +33,6 @@ dependencies:
     - filter
     - group
     - group_content_menu
-    - hdbt_cookie_banner
     - helfi_ai
     - helfi_api_base
     - helfi_kasko_content
@@ -85,13 +85,13 @@ permissions:
   - 'administer blocks'
   - 'administer group'
   - 'administer group content menu types'
-  - 'administer hdbt_cookie_banner'
   - 'administer helfi_search'
   - 'administer menu'
   - 'administer nodes'
   - 'administer paragraphs library'
   - 'administer pathauto'
   - 'administer redirects'
+  - 'administer site configuration'
   - 'administer sitemap settings'
   - 'administer tpr_ontology_word_details'
   - 'administer tpr_service'
@@ -199,6 +199,7 @@ permissions:
   - 'edit terms in news_neighbourhoods'
   - 'edit terms in news_tags'
   - 'edit terms in vocational_studies'
+  - 'manage ai prompts'
   - 'mark as hidden in editoria11y'
   - 'rebuild node access permissions'
   - 'revert all revisions'
