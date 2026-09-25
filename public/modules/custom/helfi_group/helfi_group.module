@@ -16,7 +16,6 @@ use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
-use Drupal\node\NodeInterface;
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -172,91 +171,6 @@ function helfi_group_form_menu_link_content_form_alter(&$form, FormStateInterfac
   $form['menu_parent']['#type'] = 'hidden';
   $menu_parent = sprintf('%s:%s', $menu_name, $entity->get('parent')->value);
   $form['menu_parent']['#value'] = $menu_parent;
-}
-
-/**
- * Implements hook_module_implements_alter().
- *
- * #UHF-8926 the form alter must be run after group content menu's alter.
- * Otherwise, the changes made in "menu"-render array would be overridden.
- */
-function helfi_group_module_implements_alter(&$implementations, $hook) : void {
-  if ($hook === 'form_alter' && isset($implementations['helfi_group'])) {
-    $group = $implementations['helfi_group'];
-    unset($implementations['helfi_group']);
-    $implementations['helfi_group'] = $group;
-  }
-}
-
-/**
- * Implements hook_form_node_form_alter().
- */
-function helfi_group_form_node_form_alter(
-  array &$form,
-  FormStateInterface $form_state,
-): void {
-  $form['actions']['submit']['#submit'][] = 'helfi_group_menuitem_set_content_translation_status';
-
-  $formObject = $form_state->getFormObject();
-  assert($formObject instanceof EntityFormInterface);
-  $entity = $formObject->getEntity();
-
-  if (isset($form['menu']) && array_key_exists('link', $form['menu'])) {
-    if ($entity instanceof NodeInterface) {
-      /** @var \Drupal\node\NodeTypeInterface $type */
-      $type = $entity->get('type')
-        ->entity;
-
-      $type_menus_ids = $type
-        ->getThirdPartySetting('menu_ui', 'available_menus', ['main']);
-
-      if (empty($type_menus_ids)) {
-        // Hide menu selector if node type has no available menus.
-        $form['menu']['#access'] = FALSE;
-
-        return;
-      }
-    }
-    $menu_parent = $form['menu']['link']['menu_parent']['#default_value'];
-
-    if (!$menu_parent) {
-      return;
-    }
-
-    $menu_name = explode(':', $menu_parent)[0];
-    if (!str_contains($menu_name, 'group')) {
-      return;
-    }
-
-    $result = \Drupal::entityQuery('menu_link_content')
-      ->condition('link.uri', "entity:node/{$entity->id()}")
-      ->condition('menu_name', [$menu_name], 'IN')
-      ->sort('id', 'ASC')
-      ->accessCheck(FALSE)
-      ->range(0, 1)
-      ->execute();
-
-    if (!$result) {
-      return;
-    }
-
-    $current_language = $entity
-      ->language()
-      ->getId();
-
-    $menu_link_content_id = reset($result);
-    $menu_link_content = MenuLinkContent::load($menu_link_content_id);
-    if (!$menu_link_content || !$menu_link_content->hasTranslation($current_language)) {
-      return;
-    }
-
-    $menu_link_content = $menu_link_content->getTranslation($current_language);
-    $status = $menu_link_content->get('content_translation_status')->value;
-    $form['menu']['content_translation_status']['#default_value'] = $status;
-    // @phpcs:ignore
-    $form['menu']['content_translation_status']['#description'] = 'Tämä arvo muuttuu automaattisesti tallentaessa sisällön julkaisutilan mukaan.';
-  }
-
 }
 
 /**
