@@ -1,3 +1,10 @@
+{% set modes_of_study_url = path('entity.node.canonical', {'node': 23}) %}
+{% set component_description %}
+  <p>{{ 'Search for study units and courses according to subject, topic or name of the study unit. You can also search studies by national examinations, such as the Valintakoe A (‘Entrance examination A’).'|t({}, {'context': 'Cross institutional studies'}) }}</p>
+  <p>{{ 'You can filter the search results by starting time, mode of study and language of instruction.'|t({}, {'context': 'Cross institutional studies'}) }}</p>
+  <p>{{ 'Learn more about the modes of study on the <a href=":url">Helsinki Online Upper Secondary School</a> webpage.'|t({':url': modes_of_study_url}, {'context': 'Cross institutional studies'}) }}</p>
+{% endset %}
+
 <article>
   <div class="components components--computed components--cross-institutional-studies-search">
     {% embed "@hdbt/misc/component.twig" with
@@ -7,8 +14,8 @@
           'component--event-list',
           'component--full-width',
         ],
-        component_title: 'Search for online and distance studies in general upper secondary schools'|t({}, {'context': 'Cross institutional studies'}),
-        component_description: 'Use this search tool to find online and distance courses offered by the City of Helsinki. You can search for courses by name. You can also filter the results by start time, mode of teaching, level of study, or language of instruction.'|t({}, {'context': 'Cross institutional studies'}),
+        component_title: 'Search studies'|t({}, {'context': 'Cross institutional studies'}),
+        component_description: component_description,
       }
     %}
       {% block component_content %}

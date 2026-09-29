@@ -137,12 +137,20 @@ msgid "You must enable JavaScript in your browser for search to work"
 msgstr "Haun toimimiseksi sinun tulee sallia JavaScript selaimessasi"
 
 msgctxt "Cross institutional studies"
-msgid "Search for online and distance studies in general upper secondary schools"
-msgstr "Etsi lukioiden verkko- ja etäopetusta"
+msgid "Search studies"
+msgstr "Etsi opintoja"
 
 msgctxt "Cross institutional studies"
-msgid "Use this search tool to find online and distance courses offered by the City of Helsinki. You can search for courses by name. You can also filter the results by start time, mode of teaching, level of study, or language of instruction."
-msgstr "Löydät hausta Helsingin kaupungin verkko- ja etäkurssit. Voit hakea hakusanalla kurssien nimiä. Voit myös rajata tuloksia aloitusajankohdan, opiskelumuodon, opintojen tason tai opetuskielen mukaan."
+msgid "Search for study units and courses according to subject, topic or name of the study unit. You can also search studies by national examinations, such as the Valintakoe A (‘Entrance examination A’)."
+msgstr "Etsi opintojaksoja ja kursseja oppiaineen, opintojakson nimen tai aiheen perusteella. Voit myös etsiä opintoja kansallisten valintakokeiden perusteella, esimerkiksi valintakoe A:n mukaan."
+
+msgctxt "Cross institutional studies"
+msgid "You can filter the search results by starting time, mode of study and language of instruction."
+msgstr "Voit rajata hakutuloksia aloitusajankohdan, opiskelumuodon ja opetuskielen mukaan."
+
+msgctxt "Cross institutional studies"
+msgid "Learn more about the modes of study on the <a href=\":url\">Helsinki Online Upper Secondary School</a> webpage."
+msgstr "Lisätietoa opiskelumuodoista löydät <a href=\":url\">Helsingin verkkolukion</a> sivuilta."
 
 msgctxt "Cross institutional studies"
 msgid "Study unit description"
