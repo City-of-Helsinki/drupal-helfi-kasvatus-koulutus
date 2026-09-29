@@ -2,6 +2,10 @@ uuid: 2942768d-963a-4b47-a623-1068a7b1bc6b
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.paragraph.field_group_news_archive
+    - node.type.page
+    - paragraphs.paragraphs_type.group_news
   enforced:
     config:
       - field.storage.paragraph.field_group_news_archive
@@ -12,7 +16,7 @@ field_name: field_group_news_archive
 entity_type: paragraph
 bundle: group_news
 label: 'Group news archive location'
-description: 'Select here the landing page containing the group news archive paragraph.'
+description: 'Select here the standard page containing the group news archive paragraph.'
 required: false
 translatable: false
 default_value: {  }
@@ -21,7 +25,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      landing_page: landing_page
+      page: page
     sort:
       field: _none
       direction: ASC
