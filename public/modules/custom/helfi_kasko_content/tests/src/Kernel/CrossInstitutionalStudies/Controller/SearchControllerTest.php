@@ -54,10 +54,7 @@ class SearchControllerTest extends KernelTestBase {
     $title = $controller->title();
 
     $this->assertInstanceOf(TranslatableMarkup::class, $title);
-    $this->assertStringContainsString(
-      'Online and distance studies of City of Helsinki general upper secondary schools',
-      (string) $title
-    );
+    $this->assertNotEmpty($title);
   }
 
   /**

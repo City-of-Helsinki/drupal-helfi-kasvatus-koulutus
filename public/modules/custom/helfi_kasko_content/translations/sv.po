@@ -255,8 +255,8 @@ msgid "remote learning"
 msgstr "distansundervisning"
 
 msgctxt "Cross institutional studies"
-msgid "Online and distance studies of City of Helsinki general upper secondary schools"
-msgstr "Webb- och distansundervisning vid Helsingfors stads gymnasier"
+msgid "City of Helsinki upper secondary schools’ cross-institutional studies"
+msgstr "Gemensamt studieutbud för elever på andra stadiet vid Helsingfors stads läroinrättningar"
 
 msgid "A page cannot be its own parent."
 msgstr "En sida kan inte vara sin egen överordnade sida."
