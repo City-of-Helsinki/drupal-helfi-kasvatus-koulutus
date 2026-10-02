@@ -33,7 +33,6 @@ class PermissionsHooks {
         'view comprehensive_school_subpage revisions',
       ],
       'comprehensive_school_editor' => [
-        'create comprehensive_school_subpage content',
         'delete own comprehensive_school_subpage content',
         'edit any comprehensive_school_subpage content',
         'edit own comprehensive_school_subpage content',
