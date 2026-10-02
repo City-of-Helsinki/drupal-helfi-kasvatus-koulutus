@@ -71,6 +71,8 @@ class GroupMenuBlockTest extends KernelTestBase {
     'group',
     'group_content_menu',
     'helfi_group',
+    'helfi_api_base',
+    'diff',
     'helfi_tpr',
     'language',
     'locale',
