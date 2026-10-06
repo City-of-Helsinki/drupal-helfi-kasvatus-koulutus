@@ -141,7 +141,7 @@ msgstr "Du kan filtrera sökresultaten efter starttidpunkt, studieform och under
 
 msgctxt "Cross institutional studies"
 msgid "Learn more about the modes of study on the <a href=\":url\">Helsinki Online Upper Secondary School</a> webpage."
-msgstr "Mer information hittar du på webbsidan <a href=\":url\">Webbstudier</a>."
+msgstr "Mer information om studieformer hittar du på webbsidan <a href=\":url\">Webbstudier</a>."
 
 msgctxt "Cross institutional studies"
 msgid "Study unit description"
