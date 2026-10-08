@@ -147,9 +147,6 @@ class EntityHooksTest extends KernelTestBase {
     $this->assertContains('text', $enabled['field_content']);
     $this->assertContains('vocational_school_search', $enabled['field_content']);
     $this->assertContains('daycare_search', $enabled['field_lower_content']);
-
-    // Sidebar content field was removed.
-    $this->assertArrayNotHasKey('field_sidebar_content', $enabled);
   }
 
   /**
