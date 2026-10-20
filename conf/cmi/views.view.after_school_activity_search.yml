@@ -316,7 +316,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Address
+            label: 'Home address'
             description: 'Enter street name and house number'
             use_operator: false
             operator: address_search_op
@@ -514,7 +514,7 @@ display:
             value: 'The locations are listed based on the address you provided.'
             format: minimal
           failed:
-            value: 'Given address was not found. Please check the address. The results are now in alphabetical order.'
+            value: 'Address not found. Please check that the address you have entered is correct. The search function suggests alternatives as you start typing. Results are listed now in alphabetical order.'
             format: minimal
       footer: {  }
       display_extenders: {  }

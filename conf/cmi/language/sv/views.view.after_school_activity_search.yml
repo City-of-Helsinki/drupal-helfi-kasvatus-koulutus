@@ -28,7 +28,7 @@ display:
       filters:
         address_search:
           expose:
-            label: Adress
+            label: Hemadress
             description: 'Ange gatunamnet och husnumret'
         tpr_provided_languages:
           expose:
@@ -39,5 +39,5 @@ display:
             value: '<p>Verksamhetsställena står listade efter adressen du sökte på.</p>'
             format: minimal
           failed:
-            value: '<p>Tyvärr kunde adressen du sökte inte hittas. Kontrollera adressen du uppgav.&nbsp;Resultaten är nu i alfabetisk ordning.</p>'
+            value: 'Adressen hittades inte. Kontrollera att adressen är korrekt. Sökningen föreslår alternativ när du börjar skriva in adressen. Resultaten är nu i alfabetisk ordning.'
             format: minimal
