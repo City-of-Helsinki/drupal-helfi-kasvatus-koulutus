@@ -49,6 +49,7 @@ dependencies:
     - path
     - pathauto
     - publication_date
+    - quick_node_clone
     - redirect
     - role_delegation
     - scheduler
@@ -108,6 +109,8 @@ permissions:
   - 'break content lock'
   - 'cancel account'
   - 'change own username'
+  - 'clone landing_page content'
+  - 'clone page content'
   - 'create announcement content'
   - 'create comprehensive_school_subpage content'
   - 'create content translations'
