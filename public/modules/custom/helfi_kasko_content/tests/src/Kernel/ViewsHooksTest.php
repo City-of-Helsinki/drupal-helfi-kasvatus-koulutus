@@ -9,6 +9,7 @@ use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
+use Drupal\helfi_address_search\Plugin\views\area\AddressSearchInfo;
 use Drupal\helfi_kasko_content\Hook\ViewsHooks;
 use Drupal\helfi_tpr\Entity\Unit;
 use Drupal\KernelTests\KernelTestBase;
@@ -174,6 +175,52 @@ class ViewsHooksTest extends KernelTestBase {
     $hook->viewsExposedFormAlter($form, $formState);
 
     $this->assertEquals('Search now', $form['actions']['submit']['#value']);
+  }
+
+  /**
+   * Build a view mock with a failed or successful address search.
+   */
+  private function createAddressSearchView(?bool $succeed): ViewExecutable {
+    $info = $this->createMock(AddressSearchInfo::class);
+    $info->options = [
+      'failed' => ['value' => '<p>Address not found.&nbsp;Results are in alphabetical order.</p>'],
+    ];
+
+    $view = $this->createMock(ViewExecutable::class);
+    $view->element = $succeed === NULL ? [] : ['#address_search_succeed' => $succeed];
+    $view->header = ['area_address_search_info' => $info];
+    $view->exposed_widgets = [
+      'address_search' => [
+        '#attributes' => ['aria-describedby' => 'edit-address-search--description'],
+      ],
+    ];
+    return $view;
+  }
+
+  /**
+   * Test that a failed address search error is moved under the address field.
+   */
+  public function testViewsPreRenderAddressNotFound(): void {
+    $view = $this->createAddressSearchView(FALSE);
+    $this->createHook('fi')->viewsPreRender($view);
+
+    $element = $view->exposed_widgets['address_search'];
+    $this->assertEquals("Address not found.\u{00A0}Results are in alphabetical order.", $element['#errors']);
+    $this->assertEquals('address-search-error edit-address-search--description', $element['#attributes']['aria-describedby']);
+    $this->assertArrayNotHasKey('area_address_search_info', $view->header);
+  }
+
+  /**
+   * Test that successful or missing address searches are left untouched.
+   */
+  public function testViewsPreRenderAddressFound(): void {
+    foreach ([TRUE, NULL] as $succeed) {
+      $view = $this->createAddressSearchView($succeed);
+      $this->createHook('fi')->viewsPreRender($view);
+
+      $this->assertArrayNotHasKey('#errors', $view->exposed_widgets['address_search']);
+      $this->assertArrayHasKey('area_address_search_info', $view->header);
+    }
   }
 
 }
