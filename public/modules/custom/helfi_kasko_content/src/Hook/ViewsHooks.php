@@ -4,13 +4,16 @@ declare(strict_types=1);
 
 namespace Drupal\helfi_kasko_content\Hook;
 
+use Drupal\Component\Utility\Html;
 use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Hook\Attribute\Hook;
+use Drupal\Core\Hook\Order\OrderAfter;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Drupal\helfi_address_search\Plugin\views\area\AddressSearchInfo;
 use Drupal\views\ResultRow;
 use Drupal\views\ViewExecutable;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
@@ -71,6 +74,40 @@ class ViewsHooks {
         return $first_name <=> $second_name;
       }
     );
+  }
+
+  /**
+   * Implements hook_views_pre_render().
+   *
+   * Shows the "address not found" message of the address search info header
+   * as an error under the address field instead of an alert above the form.
+   */
+  #[Hook('views_pre_render', order: new OrderAfter(modules: ['helfi_address_search']))]
+  public function viewsPreRender(ViewExecutable $view): void {
+    if (
+      ($view->element['#address_search_succeed'] ?? NULL) !== FALSE ||
+      !isset($view->exposed_widgets['address_search'])
+    ) {
+      return;
+    }
+
+    foreach ($view->header as $id => $handler) {
+      if (!$handler instanceof AddressSearchInfo) {
+        continue;
+      }
+      $message = trim(Html::decodeEntities(strip_tags($handler->options['failed']['value'] ?? '')));
+      unset($view->header[$id]);
+    }
+
+    if (empty($message)) {
+      return;
+    }
+
+    $element = &$view->exposed_widgets['address_search'];
+    $element['#errors'] = $message;
+
+    $describedBy = $element['#attributes']['aria-describedby'] ?? '';
+    $element['#attributes']['aria-describedby'] = trim("address-search-error $describedBy");
   }
 
   /**

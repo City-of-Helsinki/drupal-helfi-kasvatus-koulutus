@@ -32,10 +32,10 @@ display:
       header:
         area_address_search_info:
           failed:
-            value: '<p>Voi harmi. Hakemaasi osoitetta ei löytynyt. Tarkista syöttämäsi osoite. Tulokset on nyt järjestetty aakkosjärjestykseen.</p>'
+            value: 'Osoitetta ei löytynyt. Varmista, että osoite on oikein. Haku ehdottaa osoitteita, kun alat kirjoittaa. Tulokset on nyt järjestetty aakkosjärjestykseen.'
             format: minimal
       filters:
         address_search:
           expose:
-            label: Osoite
+            label: Kotiosoite
             description: 'Kirjoita kadunnimi ja talonumero'
