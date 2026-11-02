@@ -26,6 +26,7 @@ dependencies:
     - group
     - helfi_api_base
     - helfi_tpr
+    - helfi_users
     - media
     - menu_link_content
     - node
@@ -150,6 +151,7 @@ permissions:
   - 'update media'
   - 'update own tpr_service'
   - 'update own tpr_unit'
+  - 'use favorites'
   - 'use text format full_html'
   - 'use text format minimal'
   - 'view all media revisions'
