@@ -21,7 +21,6 @@ dependencies:
     - taxonomy.vocabulary.news_tags
     - taxonomy.vocabulary.vocational_studies
   module:
-    - ai
     - block
     - config_translation
     - content_lock
@@ -203,7 +202,6 @@ permissions:
   - 'edit terms in news_neighbourhoods'
   - 'edit terms in news_tags'
   - 'edit terms in vocational_studies'
-  - 'manage ai prompts'
   - 'mark as hidden in editoria11y'
   - 'rebuild node access permissions'
   - 'revert all revisions'
