@@ -6,6 +6,29 @@ display:
           content:
             format: plain_text
             value: 'Ei tuloksia.'
+      fields:
+        helfi_favorite:
+          label: Suosikki
+        id:
+          label: ID
+          separator: ', '
+        name:
+          label: Nimi
+          separator: ', '
+        langcode:
+          label: Kieli
+          separator: ', '
+        content_translation_status:
+          label: Tila
+          settings:
+            format_custom_true: Julkaistu
+            format_custom_false: Julkaisematon
+          separator: ', '
+        content_translation_changed:
+          label: Päivitetty
+          separator: ', '
+        operations:
+          label: Toimenpiteet
       filters:
         content_translation_status:
           group_info:
@@ -39,27 +62,6 @@ display:
             items_per_page_label: 'Merkintöjä sivua kohti'
             items_per_page_options_all_label: '- Kaikki -'
             offset_label: Offset
-      fields:
-        id:
-          label: ID
-          separator: ', '
-        name:
-          label: Nimi
-          separator: ', '
-        langcode:
-          label: Kieli
-          separator: ', '
-        content_translation_status:
-          label: Tila
-          settings:
-            format_custom_true: Julkaistu
-            format_custom_false: Julkaisematon
-          separator: ', '
-        content_translation_changed:
-          label: Päivitetty
-          separator: ', '
-        operations:
-          label: Toimenpiteet
       title: 'TPR Toimipisteet'
       header:
         result:
