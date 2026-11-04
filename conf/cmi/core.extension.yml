@@ -4,8 +4,6 @@ module:
   address: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
-  ai: 0
-  ai_provider_azure: 0
   allowed_formats: 0
   basic_auth: 0
   better_exposed_filters: 0
