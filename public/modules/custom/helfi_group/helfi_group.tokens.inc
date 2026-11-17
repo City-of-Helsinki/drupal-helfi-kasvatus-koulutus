@@ -7,7 +7,6 @@
 
 declare(strict_types=1);
 
-use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Render\BubbleableMetadata;
 use Drupal\helfi_group\GroupUtility;
 
@@ -65,17 +64,17 @@ function helfi_group_tokens($type, $tokens, array $data, array $options, Bubblea
           break;
         }
 
-        // Use news parent translation that matches the current language.
-        $langcode = \Drupal::languageManager()
-          ->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)
-          ->getId();
+        // Use the language of the node being aliased. Pathauto passes it in
+        // $options['langcode'].
+        $langcode = $options['langcode'] ?? $data['node']->language()->getId();
         /** @var \Drupal\Core\Entity\ContentEntityInterface $newsParent */
         if ($newsParent->hasTranslation($langcode)) {
           $newsParent = $newsParent->getTranslation($langcode);
         }
         else {
-          $replacements[$original] = '';
-          break;
+          // Keep the parent's own translation so the news item still sits
+          // under that page when the parent has no matching translation.
+          $langcode = $newsParent->language()->getId();
         }
 
         // Resolve the path to its alias so the token works in both normal
