@@ -27,6 +27,8 @@ class EntityHooks {
   use AutowireTrait;
   use StringTranslationTrait;
 
+  private const string PLAYGROUND_UNIT_TYPE = '10';
+
   public function __construct(
     private readonly AccountProxyInterface $currentUser,
   ) {
@@ -47,6 +49,18 @@ class EntityHooks {
         }
       }
 
+      // In case of playgrounds, the field_categories might be missing.
+      // We can still check the unit-type.
+      $allowEditPlayground = FALSE;
+      if ($entity->hasField('field_unit_type')) {
+        foreach ($entity->get('field_unit_type')->getValue() as $value) {
+          if (!empty($value['target_id']) && $value['target_id'] === self::PLAYGROUND_UNIT_TYPE) {
+            $allowEditPlayground = TRUE;
+            break;
+          }
+        }
+      }
+
       if (in_array(UnitCategoryUtility::DAYCARE, $unit_categories)) {
         return AccessResult::allowedIfHasPermission($account, 'admin daycare units');
       }
@@ -55,7 +69,7 @@ class EntityHooks {
         return AccessResult::allowedIfHasPermission($account, 'admin comprehensive school units');
       }
 
-      if (in_array(UnitCategoryUtility::PLAYGROUND, $unit_categories)) {
+      if (in_array(UnitCategoryUtility::PLAYGROUND, $unit_categories) || $allowEditPlayground) {
         return AccessResult::allowedIfHasPermission($account, 'admin playground units');
       }
     }
