@@ -296,8 +296,8 @@ class EntityHooksTest extends KernelTestBase {
     $unit = Unit::create([
       'id' => 1,
       'name' => 'Unit',
-      'field_unit_type' => [['target_id' => 10]],
-      'field_categories' => array_map(fn(string $category) => ['value' => $category], []),
+      'field_unit_type' => [['target_id' => '10']],
+      'field_categories' => [],
     ]);
     $unit->save();
 
