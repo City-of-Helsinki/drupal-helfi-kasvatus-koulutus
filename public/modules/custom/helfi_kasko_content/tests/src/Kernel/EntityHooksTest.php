@@ -50,7 +50,7 @@ class EntityHooksTest extends KernelTestBase {
     'entity',
     'flexible_permissions',
     'diff',
-    'taxonomy'
+    'taxonomy',
   ];
 
   /**
@@ -312,4 +312,5 @@ class EntityHooksTest extends KernelTestBase {
     $access = EntityHooks::tprUnitAccess($unit, 'update', $user);
     $this->assertTrue($access->isAllowed());
   }
+
 }
