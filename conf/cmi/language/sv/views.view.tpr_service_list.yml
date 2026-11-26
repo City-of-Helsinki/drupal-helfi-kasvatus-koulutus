@@ -2,11 +2,27 @@ display:
   default:
     display_options:
       fields:
-        helfi_favorite:
-          label: Favorit
-        tpr_service_bulk_form:
+        views_bulk_operations_bulk_form:
+          selected_actions:
+            -
+              preconfiguration:
+                label_override: 'Lägg till som favorit'
+            -
+              preconfiguration:
+                label_override: 'Ta bort från favoriter'
+            -
+              preconfiguration:
+                label_override: 'Publicera innehåll'
+            -
+              preconfiguration:
+                label_override: 'Avpublicera inlägg'
+            -
+              preconfiguration:
+                label_override: Uppdatera
           label: Massuppdatera
           action_title: Åtgärd
+        helfi_favorite:
+          label: Favorit
         id:
           label: ID
           separator: ', '

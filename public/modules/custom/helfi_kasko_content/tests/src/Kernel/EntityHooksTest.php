@@ -50,6 +50,7 @@ class EntityHooksTest extends KernelTestBase {
     'entity',
     'flexible_permissions',
     'diff',
+    'taxonomy',
   ];
 
   /**
@@ -75,6 +76,22 @@ class EntityHooksTest extends KernelTestBase {
       'bundle' => 'tpr_unit',
       'label' => 'Categories',
     ])->save();
+
+    FieldStorageConfig::create([
+      'field_name' => 'field_unit_type',
+      'entity_type' => 'tpr_unit',
+      'type' => 'entity_reference',
+      'cardinality' => -1,
+      'settings' => ['target_type' => 'taxonomy_term'],
+    ])->save();
+
+    FieldConfig::create([
+      'field_name' => 'field_unit_type',
+      'entity_type' => 'tpr_unit',
+      'bundle' => 'tpr_unit',
+      'label' => 'Unit type',
+    ])->save();
+    $this->createUser();
   }
 
   /**
@@ -270,6 +287,30 @@ class EntityHooksTest extends KernelTestBase {
     $element = ['uri' => ['#description' => $help]];
     $hooks->fieldWidgetSingleElementFormAlter($element, $formState, ['items' => $unit->get('field_school_parent')]);
     $this->assertSame('Choose the parent page.', $element['uri']['#description']);
+  }
+
+  /**
+   * Test that playground editor can update a unit with playground unit type.
+   */
+  public function testPlaygroundEditorCanUpdatePlaygroundUnitType(): void {
+    $unit = Unit::create([
+      'id' => 1,
+      'name' => 'Unit',
+      'field_unit_type' => [['target_id' => '10']],
+      'field_categories' => [],
+    ]);
+    $unit->save();
+
+    $role = Role::create(['id' => 'playground_editor', 'label' => 'Playground editor']);
+    $role->grantPermission('admin playground units');
+    $role->save();
+
+    $user = $this->createUser();
+    $user->addRole('playground_editor');
+    $user->save();
+
+    $access = EntityHooks::tprUnitAccess($unit, 'update', $user);
+    $this->assertTrue($access->isAllowed());
   }
 
 }
